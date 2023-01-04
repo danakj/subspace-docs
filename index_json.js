@@ -1425,14 +1425,14 @@ var JsonIndex = `
           ]
         },
         {
-          "USR": "6CE0FE350CC97FB115C68A37728ADE25B13E5309",
+          "USR": "CDCFDC10C280DD40D8672907DC2BB42A24C6255C",
           "Name": "BeforeThanCompare",
           "RefType": "record",
           "Path": "clang",
           "Children": []
         },
         {
-          "USR": "CDCFDC10C280DD40D8672907DC2BB42A24C6255C",
+          "USR": "6CE0FE350CC97FB115C68A37728ADE25B13E5309",
           "Name": "BeforeThanCompare",
           "RefType": "record",
           "Path": "clang",
@@ -1707,84 +1707,7 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "F3CB81F72D2D68F598D7B7382DD7F5A605BCBC6A",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "8EECDC6754B6CE37DB04C6F200782ED3FAECDB43",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "F5C7D4F8AF29452D0F444DD1785BFFD09966A8D0",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "406DB67FF3AB8A72EC77F24F4A5838B33AF93716",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "15F45AA3E9B1AE57C74385A54AA45AAC686255B9",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "A369874C3A4E7F8C72D7B2EEF5D5A608B4B48EE9",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "FBDA6392E14B16E7B1AC48952BF46A521025F23F",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "D4A0AC18B1D11E336F6471ED03D7B0577E2A8E9E",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "7BC3BC84639FDCE153DE95FAF02B29535690AEC5",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "7E2F4327125A962C90C76357BD6C261CA625FC08",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "2C2F1C7C7649770BD0F11777231F66E72E8B12C3",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "2E86DD47FEA1A24F50A750C7089E1EBB8C0D34A0",
+          "USR": "9CD9B3D55E86FC54FD3D693594898DA3C4C88055",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -1798,84 +1721,7 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "E6B71FFEC492A219A22D10E418C6A28793A4385A",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "9CD9B3D55E86FC54FD3D693594898DA3C4C88055",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "BB2592633CE33BBA823909B35FD27D5E80AE74DA",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "E4B084C43456B168F405B52EB7AD055926A92FD9",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "B72F60D4ACDC5C10ECD3942FDB81C19334AD5B32",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "0F1D12EB0093F8F91259F80A4AE602487AA22AAE",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "C774BEE8D00EA8843B0ED7A7286DF0D4CD8E6CCE",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "80E50E82AF7919A787A3AAA2BA67B96EC561873A",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "933D44954D4E182A1764D02D5D955873089D5E7B",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "260FAB9DBBC06312C2060ED024CF0227C40BD46A",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "E6E194C6C352F51B3609B122FCC9C73D4A9355AC",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "BB4FFEA28F5DE5AE5D2902FA5CCD7DE270F1BC20",
+          "USR": "F5C7D4F8AF29452D0F444DD1785BFFD09966A8D0",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -1889,7 +1735,49 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "13D96C35FA878F824A5CF3B5E2FD23F898B20811",
+          "USR": "2C2F1C7C7649770BD0F11777231F66E72E8B12C3",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "E6E194C6C352F51B3609B122FCC9C73D4A9355AC",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "FBDA6392E14B16E7B1AC48952BF46A521025F23F",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "B72F60D4ACDC5C10ECD3942FDB81C19334AD5B32",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "15F45AA3E9B1AE57C74385A54AA45AAC686255B9",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "8EECDC6754B6CE37DB04C6F200782ED3FAECDB43",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "BB2592633CE33BBA823909B35FD27D5E80AE74DA",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -1897,6 +1785,118 @@ var JsonIndex = `
         },
         {
           "USR": "62D55542DB394327F03114654EE9FC472CB80FFD",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "406DB67FF3AB8A72EC77F24F4A5838B33AF93716",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "7BC3BC84639FDCE153DE95FAF02B29535690AEC5",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "C774BEE8D00EA8843B0ED7A7286DF0D4CD8E6CCE",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "0F1D12EB0093F8F91259F80A4AE602487AA22AAE",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "F3CB81F72D2D68F598D7B7382DD7F5A605BCBC6A",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "A369874C3A4E7F8C72D7B2EEF5D5A608B4B48EE9",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "7E2F4327125A962C90C76357BD6C261CA625FC08",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "933D44954D4E182A1764D02D5D955873089D5E7B",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "E4B084C43456B168F405B52EB7AD055926A92FD9",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "BB4FFEA28F5DE5AE5D2902FA5CCD7DE270F1BC20",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "260FAB9DBBC06312C2060ED024CF0227C40BD46A",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "E6B71FFEC492A219A22D10E418C6A28793A4385A",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "80E50E82AF7919A787A3AAA2BA67B96EC561873A",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "D4A0AC18B1D11E336F6471ED03D7B0577E2A8E9E",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "13D96C35FA878F824A5CF3B5E2FD23F898B20811",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "2E86DD47FEA1A24F50A750C7089E1EBB8C0D34A0",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -5338,7 +5338,7 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "2DF00CBD042948B2E4818F831D23B5D8335579F6",
+          "USR": "C695B4B610EFC4BBE46E409133415D264597BD8C",
           "Name": "IsResultPtrLowBitFree",
           "RefType": "record",
           "Path": "clang",
@@ -5352,13 +5352,6 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "A66508DB000731BDD3F61C5B2A916A2F408F6289",
-          "Name": "IsResultPtrLowBitFree",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
           "USR": "220BBABE473F548BFB63304BBE0B60C06EB949D4",
           "Name": "IsResultPtrLowBitFree",
           "RefType": "record",
@@ -5366,7 +5359,14 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "C695B4B610EFC4BBE46E409133415D264597BD8C",
+          "USR": "2DF00CBD042948B2E4818F831D23B5D8335579F6",
+          "Name": "IsResultPtrLowBitFree",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "A66508DB000731BDD3F61C5B2A916A2F408F6289",
           "Name": "IsResultPtrLowBitFree",
           "RefType": "record",
           "Path": "clang",
