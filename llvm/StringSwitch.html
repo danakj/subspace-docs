@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StringSwitch</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StringSwitch</h1>
+    <p>Defined at line 44 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+    <div>
+      <div>
+        <p> A switch()-like statement whose cases are string literals.</p>
+        <p> The StringSwitch class is a simple form of a switch() statement that determines whether the given string matches one of the given string literals. The template type parameter  is the type of the value that will be returned from the string-switch expression. For example, the following code switches on the name of a color in </p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2C80F0CDDCA5DB6FFE5F4E00C5DEA75DC8C3630F">StringSwitch&lt;T, R&gt;</h3>
+      <p>
+        public void StringSwitch&lt;T, R&gt;(
+        <a href="StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 53 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="E0ADEEF940D08268DB08D83C518F9656DA05A118">StringSwitch&lt;T, R&gt;</h3>
+      <p>public void StringSwitch&lt;T, R&gt;(const StringSwitch&lt;T, R&gt; &amp; )</p>
+      <p>Defined at line 57 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <div>
+        <div>
+          <p> StringSwitch is not copyable.</p>
+        </div>
+      </div>
+      <h3 id="912A5DC5094D34842DEF44AA6C986B053A220399">operator=</h3>
+      <p>public void operator=(const StringSwitch&lt;T, R&gt; &amp; )</p>
+      <p>Defined at line 60 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <div>
+        <div>
+          <p> StringSwitch is not assignable due to &apos;Str&apos; being &apos;const&apos;.</p>
+        </div>
+      </div>
+      <h3 id="F4F8CCBFA916C2896F538FC6E4D72D7761219607">operator=</h3>
+      <p>public void operator=(StringSwitch&lt;T, R&gt; &amp;&amp; other)</p>
+      <p>Defined at line 61 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="8375C0814D89DFA1D0AF8CC3D60F5DC068465D63">StringSwitch&lt;T, R&gt;</h3>
+      <p>public void StringSwitch&lt;T, R&gt;(StringSwitch&lt;T, R&gt; &amp;&amp; other)</p>
+      <p>Defined at line 63 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="F27DC04ADDC91F57C6E669C684019794A6B495BD">~StringSwitch&lt;T, R&gt;</h3>
+      <p>public void ~StringSwitch&lt;T, R&gt;()</p>
+      <p>Defined at line 66 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="3CC95CDD68FD871F30CC4C623B136914BB0674DD">Case</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; Case(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S, T Value)
+      </p>
+      <p>Defined at line 69 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <div>
+        <div>
+          <p> Case-sensitive case matchers</p>
+        </div>
+      </div>
+      <h3 id="C02696102AB277FA6B5D00BD84291F568B3A56F3">EndsWith</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; EndsWith(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S, T Value)
+      </p>
+      <p>Defined at line 76 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="071DFAE89821C25C23D32F9420CD93D661B5AF60">StartsWith</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; StartsWith(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S, T Value)
+      </p>
+      <p>Defined at line 83 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="7BEC95A6E4007AE12F734E11A7D34D0C261B4A59">Cases</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; Cases(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, T Value)
+      </p>
+      <p>Defined at line 90 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="E902EA7CCD45569C149CEB297E3E8C73F86E4A97">Cases</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; Cases(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, T Value)
+      </p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="99259871007845BA7459FFE3570BDB4AC8427264">Cases</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; Cases(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S3, T Value)
+      </p>
+      <p>Defined at line 99 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="08A08FBCE9ED1713C517DE8BFD7F143F383E3220">Cases</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; Cases(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S3, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S4, T Value)
+      </p>
+      <p>Defined at line 104 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="7478291C0B7CD39B61E5E8FCDE5C1B2284A587D1">Cases</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; Cases(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S3, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S4, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S5, T Value)
+      </p>
+      <p>Defined at line 109 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="9E9D15FDE979053F0E51FFB84F40B21B0ED64974">Cases</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; Cases(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S3, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S4, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S5, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S6, T Value)
+      </p>
+      <p>Defined at line 115 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="89C535E6AA898A1CA003453F2C753A793FD076EE">Cases</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; Cases(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S3, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S4, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S5, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S6, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S7, T Value)
+      </p>
+      <p>Defined at line 121 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="3CC68A4171505EEFC3DED1D0465649E8FFDAF091">Cases</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; Cases(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S3, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S4, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S5, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S6, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S7, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S8, T Value)
+      </p>
+      <p>Defined at line 127 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="90C715B9C0D94C46A1E0541B3DF757F8FADAA2E1">Cases</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; Cases(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S3, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S4, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S5, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S6, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S7, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S8, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S9, T Value)
+      </p>
+      <p>Defined at line 134 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="97AAD39FBCA777924D5B4B70EC23CECA97A35786">CaseLower</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; CaseLower(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S, T Value)
+      </p>
+      <p>Defined at line 142 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <div>
+        <div>
+          <p> Case-insensitive case matchers.</p>
+        </div>
+      </div>
+      <h3 id="1A91246E04103FB5F4F9DEA980B2BFE47909F6A6">EndsWithLower</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; EndsWithLower(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S, T Value)
+      </p>
+      <p>Defined at line 149 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="626BD3DF6479BCC22A12AF157984B0432367C3E9">StartsWithLower</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; StartsWithLower(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S, T Value)
+      </p>
+      <p>Defined at line 156 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="F5992321FCFD67097AC20EE4E4FB995D0E3CC03E">CasesLower</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; CasesLower(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, T Value)
+      </p>
+      <p>Defined at line 163 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="1FE60658C27DE160135DB3871DD4AE517D52B4E4">CasesLower</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; CasesLower(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, T Value)
+      </p>
+      <p>Defined at line 167 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="86F6DD2BE41643E28F4723ABF061D916DC684751">CasesLower</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; CasesLower(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S3, T Value)
+      </p>
+      <p>Defined at line 172 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="B0B06DE72DC9BCDA92D8E2D7972598E1B5AE9081">CasesLower</h3>
+      <p>
+        public StringSwitch&lt;T, R&gt; &amp; CasesLower(
+        <a href="StringLiteral.html">StringLiteral</a>
+         S0, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S1, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S2, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S3, 
+        <a href="StringLiteral.html">StringLiteral</a>
+         S4, T Value)
+      </p>
+      <p>Defined at line 177 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="087F869B590806FAC55D11BEDCBC12693206E57A">Default</h3>
+      <p>public R Default(T Value)</p>
+      <p>Defined at line 182 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+      <h3 id="DD5684F76C5203753DEB60ED60388B6B0E506D0B">operator type-parameter-0-1</h3>
+      <p>public R operator type-parameter-0-1()</p>
+      <p>Defined at line 188 of file /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2C80F0CDDCA5DB6FFE5F4E00C5DEA75DC8C3630F">StringSwitch&lt;T, R&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0ADEEF940D08268DB08D83C518F9656DA05A118">StringSwitch&lt;T, R&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#912A5DC5094D34842DEF44AA6C986B053A220399">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4F8CCBFA916C2896F538FC6E4D72D7761219607">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8375C0814D89DFA1D0AF8CC3D60F5DC068465D63">StringSwitch&lt;T, R&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F27DC04ADDC91F57C6E669C684019794A6B495BD">~StringSwitch&lt;T, R&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3CC95CDD68FD871F30CC4C623B136914BB0674DD">Case</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C02696102AB277FA6B5D00BD84291F568B3A56F3">EndsWith</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#071DFAE89821C25C23D32F9420CD93D661B5AF60">StartsWith</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BEC95A6E4007AE12F734E11A7D34D0C261B4A59">Cases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E902EA7CCD45569C149CEB297E3E8C73F86E4A97">Cases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99259871007845BA7459FFE3570BDB4AC8427264">Cases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08A08FBCE9ED1713C517DE8BFD7F143F383E3220">Cases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7478291C0B7CD39B61E5E8FCDE5C1B2284A587D1">Cases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9E9D15FDE979053F0E51FFB84F40B21B0ED64974">Cases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89C535E6AA898A1CA003453F2C753A793FD076EE">Cases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3CC68A4171505EEFC3DED1D0465649E8FFDAF091">Cases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90C715B9C0D94C46A1E0541B3DF757F8FADAA2E1">Cases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97AAD39FBCA777924D5B4B70EC23CECA97A35786">CaseLower</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1A91246E04103FB5F4F9DEA980B2BFE47909F6A6">EndsWithLower</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#626BD3DF6479BCC22A12AF157984B0432367C3E9">StartsWithLower</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F5992321FCFD67097AC20EE4E4FB995D0E3CC03E">CasesLower</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FE60658C27DE160135DB3871DD4AE517D52B4E4">CasesLower</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86F6DD2BE41643E28F4723ABF061D916DC684751">CasesLower</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0B06DE72DC9BCDA92D8E2D7972598E1B5AE9081">CasesLower</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#087F869B590806FAC55D11BEDCBC12693206E57A">Default</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD5684F76C5203753DEB60ED60388B6B0E506D0B">operator type-parameter-0-1</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

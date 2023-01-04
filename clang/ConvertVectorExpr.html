@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ConvertVectorExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ConvertVectorExpr</h1>
+    <p>Defined at line 4471 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> ConvertVectorExpr - Clang builtin function __builtin_convertvector This AST node provides support for converting a vector type to another vector type of the same arity.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="EA9F4625FDD540C5092BE3242870411C97E0F194">ConvertVectorExpr</h3>
+      <p>
+        public void ConvertVectorExpr(Expr * SrcExpr, TypeSourceInfo * TI, 
+        <a href="QualType.html">QualType</a>
+         DstType, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         BuiltinLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParenLoc)
+      </p>
+      <p>Defined at line 4482 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="85E9C96E8ACC6878CD50A24F7CFDC5DC02D096F9">getSrcExpr</h3>
+      <p>public Expr * getSrcExpr()</p>
+      <p>Defined at line 4491 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getSrcExpr - Return the Expr to be converted.</p>
+        </div>
+      </div>
+      <h3 id="AB1FE1721D18D7A5C1F18449A6B4E154C821874E">getTypeSourceInfo</h3>
+      <p>public TypeSourceInfo * getTypeSourceInfo()</p>
+      <p>Defined at line 4494 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getTypeSourceInfo - Return the destination type.</p>
+        </div>
+      </div>
+      <h3 id="6C94DAEE4418FBBF2705A8FF0023FCF93E3C7B4B">setTypeSourceInfo</h3>
+      <p>public void setTypeSourceInfo(TypeSourceInfo * ti)</p>
+      <p>Defined at line 4497 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E1CD072FA95CD63A0BF5E4486DD18AB136E7FF85">getBuiltinLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBuiltinLoc()
+      </p>
+      <p>Defined at line 4502 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getBuiltinLoc - Return the location of the __builtin_convertvector token.</p>
+        </div>
+      </div>
+      <h3 id="D83D916AD32A59A88971C7014E1156C4D67E9559">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 4505 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getRParenLoc - Return the location of final right parenthesis.</p>
+        </div>
+      </div>
+      <h3 id="C97F3E44A79EBECFD375D1665ABE3317AC2C7A7F">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 4507 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B34BD6BC8DC0AA6818D6C3BECC462AEF1C32E340">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 4508 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9DF342DBB6F877AFBB5DD507C8035D49792DE272">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 4510 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="947634C6F6219E68D9AA9BFCD8C54860346DCC48">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4515 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="8AE165390B7760DE9AA9C9DFC477F7F2FC493D22">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4516 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#EA9F4625FDD540C5092BE3242870411C97E0F194">ConvertVectorExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85E9C96E8ACC6878CD50A24F7CFDC5DC02D096F9">getSrcExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB1FE1721D18D7A5C1F18449A6B4E154C821874E">getTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C94DAEE4418FBBF2705A8FF0023FCF93E3C7B4B">setTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1CD072FA95CD63A0BF5E4486DD18AB136E7FF85">getBuiltinLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D83D916AD32A59A88971C7014E1156C4D67E9559">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C97F3E44A79EBECFD375D1665ABE3317AC2C7A7F">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B34BD6BC8DC0AA6818D6C3BECC462AEF1C32E340">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9DF342DBB6F877AFBB5DD507C8035D49792DE272">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#947634C6F6219E68D9AA9BFCD8C54860346DCC48">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AE165390B7760DE9AA9C9DFC477F7F2FC493D22">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

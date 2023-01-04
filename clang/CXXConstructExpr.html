@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXConstructExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXConstructExpr</h1>
+    <p>Defined at line 1466 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a call to a C++ constructor.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7181E37FDDA00E9B581F5078F7502AB34822D3A6">CXXConstructExpr</h3>
+      <p>
+        protected void CXXConstructExpr(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="QualType.html">QualType</a>
+         Ty, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, CXXConstructorDecl * Ctor, _Bool Elidable, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, _Bool HadMultipleCandidates, _Bool ListInitialization, _Bool StdInitListInitialization, _Bool ZeroInitialization, 
+        <a href="../clang/CXXConstructExpr/ConstructionKind.html">ConstructionKind</a>
+         ConstructKind, 
+        <a href="SourceRange.html">SourceRange</a>
+         ParenOrBraceRange)
+      </p>
+      <div>
+        <div>
+          <p> Build a C++ construction expression.</p>
+        </div>
+      </div>
+      <h3 id="03305114C88E0D418B5DF4118CF32211EACA20E4">CXXConstructExpr</h3>
+      <p>
+        protected void CXXConstructExpr(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty, unsigned int NumArgs)
+      </p>
+      <div>
+        <div>
+          <p> Build an empty C++ construction expression.</p>
+        </div>
+      </div>
+      <h3 id="402825C77ECCECB8D8B1DDD40BB7FBA25203733A">sizeOfTrailingObjects</h3>
+      <p>protected unsigned int sizeOfTrailingObjects(unsigned int NumArgs)</p>
+      <p>Defined at line 1521 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Return the size in bytes of the trailing objects. Used by CXXTemporaryObjectExpr to allocate the right amount of storage.</p>
+        </div>
+      </div>
+      <h3 id="7D7ECC1DFFC1D196670D9CD18DA657DD52ECF67A">Create</h3>
+      <p>
+        public CXXConstructExpr * Create(const ASTContext &amp; Ctx, 
+        <a href="QualType.html">QualType</a>
+         Ty, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, CXXConstructorDecl * Ctor, _Bool Elidable, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, _Bool HadMultipleCandidates, _Bool ListInitialization, _Bool StdInitListInitialization, _Bool ZeroInitialization, 
+        <a href="../clang/CXXConstructExpr/ConstructionKind.html">ConstructionKind</a>
+         ConstructKind, 
+        <a href="SourceRange.html">SourceRange</a>
+         ParenOrBraceRange)
+      </p>
+      <div>
+        <div>
+          <p> Create a C++ construction expression.</p>
+        </div>
+      </div>
+      <h3 id="4C0758322655A8A2F66707E77E7076F90CE7440E">CreateEmpty</h3>
+      <p>public CXXConstructExpr * CreateEmpty(const ASTContext &amp; Ctx, unsigned int NumArgs)</p>
+      <div>
+        <div>
+          <p> Create an empty C++ construction expression.</p>
+        </div>
+      </div>
+      <h3 id="42192A9F41CEB8B32ED99BE0625497E5ABA664AE">getConstructor</h3>
+      <p>public CXXConstructorDecl * getConstructor()</p>
+      <p>Defined at line 1538 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the constructor that this expression will (ultimately) call.</p>
+        </div>
+      </div>
+      <h3 id="73C1F9311E80C2BB4269B41C0ABBF797D4065E1C">getLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 1540 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="D12D20C2799E4238CC79D5407039DA6A43DF086F">setLocation</h3>
+      <p>
+        public void setLocation(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1541 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="63974984A34500A7C1F6CB9FCC45F08377EBDC30">isElidable</h3>
+      <p>public _Bool isElidable()</p>
+      <p>Defined at line 1544 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Whether this construction is elidable.</p>
+        </div>
+      </div>
+      <h3 id="896E0827219CA13F9ECBC72E8EC1DC14AD8D6D62">setElidable</h3>
+      <p>public void setElidable(_Bool E)</p>
+      <p>Defined at line 1545 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="7F7BA496D9239CD58B760E1A923170BF23F1F1C9">hadMultipleCandidates</h3>
+      <p>public _Bool hadMultipleCandidates()</p>
+      <p>Defined at line 1549 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Whether the referred constructor was resolved from an overloaded set having size greater than 1.</p>
+        </div>
+      </div>
+      <h3 id="16774143E4A7201FD2F3C82D7274E936A17C41CE">setHadMultipleCandidates</h3>
+      <p>public void setHadMultipleCandidates(_Bool V)</p>
+      <p>Defined at line 1552 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="85E087170AC03BE161815550DEC970D11C7BDE99">isListInitialization</h3>
+      <p>public _Bool isListInitialization()</p>
+      <p>Defined at line 1557 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Whether this constructor call was written as list-initialization.</p>
+        </div>
+      </div>
+      <h3 id="69A225631DEC888E23DC09E20C53047870A07791">setListInitialization</h3>
+      <p>public void setListInitialization(_Bool V)</p>
+      <p>Defined at line 1560 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="466AA1BD7697BE6AFAFB50961520AC7485830C44">isStdInitListInitialization</h3>
+      <p>public _Bool isStdInitListInitialization()</p>
+      <p>Defined at line 1568 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Whether this constructor call was written as list-initialization, but was interpreted as forming a std::initializer_list&lt;T&gt; from the list and passing that as a single constructor argument. See C++11 [over.match.list]p1 bullet 1.</p>
+        </div>
+      </div>
+      <h3 id="044EFE8F801A48E178870B7DE32F70BF6995C40B">setStdInitListInitialization</h3>
+      <p>public void setStdInitListInitialization(_Bool V)</p>
+      <p>Defined at line 1571 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="E2C103B2B78CA77988B453F8DCF4147840A462C8">requiresZeroInitialization</h3>
+      <p>public _Bool requiresZeroInitialization()</p>
+      <p>Defined at line 1577 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Whether this construction first requires zero-initialization before the initializer is called.</p>
+        </div>
+      </div>
+      <h3 id="DF03F0F3160586E402439FB3CD9888F0E180510A">setRequiresZeroInitialization</h3>
+      <p>public void setRequiresZeroInitialization(_Bool ZeroInit)</p>
+      <p>Defined at line 1580 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="02878699DC58EB50FBDEF014F2D3C039BF6108C1">getConstructionKind</h3>
+      <p>
+        public 
+        <a href="../clang/CXXConstructExpr/ConstructionKind.html">ConstructionKind</a>
+         getConstructionKind()
+      </p>
+      <p>Defined at line 1586 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determine whether this constructor is actually constructing a base class (rather than a complete object).</p>
+        </div>
+      </div>
+      <h3 id="B80AFE8AD0BB1CAA3F5992454D21992C25F8B2F0">setConstructionKind</h3>
+      <p>
+        public void setConstructionKind(
+        <a href="../clang/CXXConstructExpr/ConstructionKind.html">ConstructionKind</a>
+         CK)
+      </p>
+      <p>Defined at line 1589 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B00BFB963775D0D1229128F6316DA31C19D8891C">arguments</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         arguments()
+      </p>
+      <p>Defined at line 1598 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B9E72E4C0759BF7ACE0399642F481BB8BBD74C0D">arguments</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         arguments()
+      </p>
+      <p>Defined at line 1599 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="F8785B232CCD0E5322D44D398458B676534AE648">arg_begin</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         arg_begin()
+      </p>
+      <p>Defined at line 1603 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="3166CFD8AF988B3580207F52BC58DA722352FEBE">arg_end</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         arg_end()
+      </p>
+      <p>Defined at line 1604 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="43ADC50D08BC66AD3448E5664E814B916AF4A22A">arg_begin</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         arg_begin()
+      </p>
+      <p>Defined at line 1605 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="8C7D5651AA6F3DCDF684D13075EFAB2966C49574">arg_end</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         arg_end()
+      </p>
+      <p>Defined at line 1606 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="DB703548FF850BCD00F1A9731F86954EED958C35">getArgs</h3>
+      <p>public Expr ** getArgs()</p>
+      <p>Defined at line 1608 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B5C7733F646320F915CA633A9343C5D269789795">getArgs</h3>
+      <p>public const Expr *const * getArgs()</p>
+      <p>Defined at line 1609 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="351A15DD5BA405828E613E7CA16555A4892F0494">getNumArgs</h3>
+      <p>public unsigned int getNumArgs()</p>
+      <p>Defined at line 1614 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Return the number of arguments to the constructor call.</p>
+        </div>
+      </div>
+      <h3 id="AA50DD737333A9CD75487AF0431144D02E986349">getArg</h3>
+      <p>public Expr * getArg(unsigned int Arg)</p>
+      <p>Defined at line 1617 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Return the specified argument.</p>
+        </div>
+      </div>
+      <h3 id="17C200806184911B17F42EB5643057E63041A1BF">getArg</h3>
+      <p>public const Expr * getArg(unsigned int Arg)</p>
+      <p>Defined at line 1621 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="A4F3BF3F3F08E8F8EC1A762E85EB9074E58A9F13">setArg</h3>
+      <p>public void setArg(unsigned int Arg, Expr * ArgExpr)</p>
+      <p>Defined at line 1627 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Set the specified argument.</p>
+        </div>
+      </div>
+      <h3 id="2BA16F31205D878EDC9415EABB4BCC6F23D14E4C">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <h3 id="0708B46681F0C345D961DAA4DA1C8648FE645E80">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <h3 id="5303AA42CDFFD7676C9DCB0C13CB7B1227737016">getParenOrBraceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getParenOrBraceRange()
+      </p>
+      <p>Defined at line 1634 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="17FDB27AD7103A96EB5A1D5DBCE67E4A094023D2">setParenOrBraceRange</h3>
+      <p>
+        public void setParenOrBraceRange(
+        <a href="SourceRange.html">SourceRange</a>
+         Range)
+      </p>
+      <p>Defined at line 1635 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="554F0C1AD38971A2B69A2CF90BE61899BBFFCBD8">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 1637 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="FA4F9BED2F69A4F71B114F7D54AEEAEC222A794C">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1643 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="1878178F381E8C3C0175FFEB6B3AC7A8F181097F">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1647 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="6EB5694ED5CEAC2BC1F1D7B388262BA5D56CDD9E">enum ConstructionKind</h3>
+      <ul>
+        <li>CK_Complete</li>
+        <li>CK_NonVirtualBase</li>
+        <li>CK_VirtualBase</li>
+        <li>CK_Delegating</li>
+      </ul>
+      <p>Defined at line 1470 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7181E37FDDA00E9B581F5078F7502AB34822D3A6">CXXConstructExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03305114C88E0D418B5DF4118CF32211EACA20E4">CXXConstructExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#402825C77ECCECB8D8B1DDD40BB7FBA25203733A">sizeOfTrailingObjects</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D7ECC1DFFC1D196670D9CD18DA657DD52ECF67A">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C0758322655A8A2F66707E77E7076F90CE7440E">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42192A9F41CEB8B32ED99BE0625497E5ABA664AE">getConstructor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73C1F9311E80C2BB4269B41C0ABBF797D4065E1C">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D12D20C2799E4238CC79D5407039DA6A43DF086F">setLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63974984A34500A7C1F6CB9FCC45F08377EBDC30">isElidable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#896E0827219CA13F9ECBC72E8EC1DC14AD8D6D62">setElidable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F7BA496D9239CD58B760E1A923170BF23F1F1C9">hadMultipleCandidates</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16774143E4A7201FD2F3C82D7274E936A17C41CE">setHadMultipleCandidates</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85E087170AC03BE161815550DEC970D11C7BDE99">isListInitialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69A225631DEC888E23DC09E20C53047870A07791">setListInitialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#466AA1BD7697BE6AFAFB50961520AC7485830C44">isStdInitListInitialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#044EFE8F801A48E178870B7DE32F70BF6995C40B">setStdInitListInitialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2C103B2B78CA77988B453F8DCF4147840A462C8">requiresZeroInitialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF03F0F3160586E402439FB3CD9888F0E180510A">setRequiresZeroInitialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02878699DC58EB50FBDEF014F2D3C039BF6108C1">getConstructionKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B80AFE8AD0BB1CAA3F5992454D21992C25F8B2F0">setConstructionKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B00BFB963775D0D1229128F6316DA31C19D8891C">arguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9E72E4C0759BF7ACE0399642F481BB8BBD74C0D">arguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8785B232CCD0E5322D44D398458B676534AE648">arg_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3166CFD8AF988B3580207F52BC58DA722352FEBE">arg_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#43ADC50D08BC66AD3448E5664E814B916AF4A22A">arg_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8C7D5651AA6F3DCDF684D13075EFAB2966C49574">arg_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB703548FF850BCD00F1A9731F86954EED958C35">getArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5C7733F646320F915CA633A9343C5D269789795">getArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#351A15DD5BA405828E613E7CA16555A4892F0494">getNumArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA50DD737333A9CD75487AF0431144D02E986349">getArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17C200806184911B17F42EB5643057E63041A1BF">getArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4F3BF3F3F08E8F8EC1A762E85EB9074E58A9F13">setArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BA16F31205D878EDC9415EABB4BCC6F23D14E4C">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0708B46681F0C345D961DAA4DA1C8648FE645E80">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5303AA42CDFFD7676C9DCB0C13CB7B1227737016">getParenOrBraceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17FDB27AD7103A96EB5A1D5DBCE67E4A094023D2">setParenOrBraceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#554F0C1AD38971A2B69A2CF90BE61899BBFFCBD8">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA4F9BED2F69A4F71B114F7D54AEEAEC222A794C">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1878178F381E8C3C0175FFEB6B3AC7A8F181097F">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6EB5694ED5CEAC2BC1F1D7B388262BA5D56CDD9E">ConstructionKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

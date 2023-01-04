@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SubstTemplateTypeParmType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SubstTemplateTypeParmType</h1>
+    <p>Defined at line 5081 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents the result of substituting a type for a template type parameter.</p>
+        <p> Within an instantiated template, all template type parameters have been replaced with these.  They are used solely to record that a type was originally written as a template type parameter; therefore they are never canonical.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+      , llvm::TrailingObjects&lt;SubstTemplateTypeParmType, QualType&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8EDBE64639898281DFEC7CCDB1E6119E2A90A265">getReplacementType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getReplacementType()
+      </p>
+      <p>Defined at line 5096 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Gets the type that was substituted for the template parameter.</p>
+        </div>
+      </div>
+      <h3 id="81B85F97E93515B75A7B0FD0689BCDC96F600C9C">getAssociatedDecl</h3>
+      <p>public Decl * getAssociatedDecl()</p>
+      <p>Defined at line 5105 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> A template-like entity which owns the whole pattern being substituted. This will usually own a set of template parameters, or in some cases might even be a template parameter itself.</p>
+        </div>
+      </div>
+      <h3 id="6D30EA9FE2510595BF9F7F8FDDCCA97226387E22">getReplacedParameter</h3>
+      <p>public const TemplateTypeParmDecl * getReplacedParameter()</p>
+      <div>
+        <div>
+          <p> Gets the template parameter declaration that was substituted for.</p>
+        </div>
+      </div>
+      <h3 id="9577839FB791040530E91D73C887C6D48FEEFD49">getIndex</h3>
+      <p>public unsigned int getIndex()</p>
+      <p>Defined at line 5112 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Returns the index of the replaced parameter in the associated declaration. This should match the result of `getReplacedParameter()-&gt;getIndex()`.</p>
+        </div>
+      </div>
+      <h3 id="17C6E569764099DDE8EF25953787F22A49808D06">getPackIndex</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getPackIndex()
+      </p>
+      <p>Defined at line 5114 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="FDE1778EF758393885474854C39A5FD1E6B6C0B6">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 5120 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="9300C83CAA3B2DF1A88569029DDE23B072437C3D">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 5121 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="CC1376E7E88F99FA9180E07E0B2F83510543D712">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 5123 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="B136D756D87A58F61B64E8159A2B88E0D9776307">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="QualType.html">QualType</a>
+         Replacement, const Decl * AssociatedDecl, unsigned int Index, 
+        <a href="../std/optional.html">optional</a>
+         PackIndex)
+      </p>
+      <p>Defined at line 5128 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="B4B3CB79F7B440CFE99B6CE11730B37D04717568">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 5137 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8EDBE64639898281DFEC7CCDB1E6119E2A90A265">getReplacementType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81B85F97E93515B75A7B0FD0689BCDC96F600C9C">getAssociatedDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D30EA9FE2510595BF9F7F8FDDCCA97226387E22">getReplacedParameter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9577839FB791040530E91D73C887C6D48FEEFD49">getIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17C6E569764099DDE8EF25953787F22A49808D06">getPackIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FDE1778EF758393885474854C39A5FD1E6B6C0B6">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9300C83CAA3B2DF1A88569029DDE23B072437C3D">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC1376E7E88F99FA9180E07E0B2F83510543D712">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B136D756D87A58F61B64E8159A2B88E0D9776307">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4B3CB79F7B440CFE99B6CE11730B37D04717568">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

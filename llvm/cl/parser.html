@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 1091 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;unsigned long long&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="6CEF0F5D7E8B447F8B27E19CABD37A8F31F7E7CA">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 1094 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="2EE070FB7996736D70840FD479284A42628D8F2F">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, unsigned long long &amp; Val)
+      </p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="D2B9239CD13F07316ED42535F3CAE7DEFEA0D1E8">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 1101 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="DE5DC9069A5DA0D98D1C608700C24A782CEA8F0B">printOptionDiff</h3>
+      <p>public void printOptionDiff(const Option &amp; O, unsigned long long V, OptVal Default, size_t GlobalWidth)</p>
+      <h3 id="A9B0AE01B6F340894EF316750E2707B560383D43">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6CEF0F5D7E8B447F8B27E19CABD37A8F31F7E7CA">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2EE070FB7996736D70840FD479284A42628D8F2F">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2B9239CD13F07316ED42535F3CAE7DEFEA0D1E8">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE5DC9069A5DA0D98D1C608700C24A782CEA8F0B">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9B0AE01B6F340894EF316750E2707B560383D43">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 1114 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;double&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3E21AA20217A229A816DF64A4A3AF532BF22AA21">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 1116 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="1EC2E6DA9DD56164D244068328122E7F73E62F50">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, double &amp; Val)
+      </p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="8AF7F98F6FA59C32C164FF81E4AEAA8AADD29F35">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 1122 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="3896FFE7C1CAC50461ECAB70BC8D169F604722B1">printOptionDiff</h3>
+      <p>public void printOptionDiff(const Option &amp; O, double V, OptVal Default, size_t GlobalWidth)</p>
+      <h3 id="7F8C8A724A474A31903814E602532938A36DA2E2">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3E21AA20217A229A816DF64A4A3AF532BF22AA21">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1EC2E6DA9DD56164D244068328122E7F73E62F50">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AF7F98F6FA59C32C164FF81E4AEAA8AADD29F35">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3896FFE7C1CAC50461ECAB70BC8D169F604722B1">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F8C8A724A474A31903814E602532938A36DA2E2">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 1156 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;std::string&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A7B44B1C77C956BCF138C1F5E121D6CA9F8AD85A">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 1158 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="6CBFC5C7083A7AF41BC30A3B93691B21A166994B">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; , 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         , 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, std::string &amp; Value)
+      </p>
+      <p>Defined at line 1161 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="64C5119D86BF990F3362F5699E4AEA17BB5B7715">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 1167 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="05D8A8C8633E2CDD686E2C0ECE01879B13013F6C">printOptionDiff</h3>
+      <p>
+        public void printOptionDiff(const Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         V, const OptVal &amp; Default, size_t GlobalWidth)
+      </p>
+      <h3 id="98873AF7474C016E18791B0DB5B433AAA3DACC6F">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A7B44B1C77C956BCF138C1F5E121D6CA9F8AD85A">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CBFC5C7083A7AF41BC30A3B93691B21A166994B">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64C5119D86BF990F3362F5699E4AEA17BB5B7715">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05D8A8C8633E2CDD686E2C0ECE01879B13013F6C">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98873AF7474C016E18791B0DB5B433AAA3DACC6F">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 815 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <div>
+      <div>
+        <p> Default parser implementation - This implementation depends on having a mapping of recognized options to values of some sort.  In addition to this, each entry in the mapping also tracks a help message that is printed with the command line option for -help.  Because this is a simple mapping parser, the data type can be any unsupported type.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="generic_parser_base.html">generic_parser_base</a>
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected SmallVector&lt;OptionInfo, 8&gt; Values</li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../llvm/cl/parser/OptionInfo.html">OptionInfo</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="1E122C9586D170DE7FAC0E601CB99F01729BA5F9">parser&lt;DataType&gt;</h3>
+      <p>public void parser&lt;DataType&gt;(Option &amp; O)</p>
+      <p>Defined at line 827 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="1755A8500A0346B8D4D83B4E35E5069443FAED49">getNumOptions</h3>
+      <p>public unsigned int getNumOptions()</p>
+      <p>Defined at line 832 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Implement virtual functions needed by generic_parser_base</p>
+        </div>
+      </div>
+      <h3 id="5F178B2848CFFD098A8AD2868683A6F4A94C1376">getOption</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getOption(unsigned int N)
+      </p>
+      <p>Defined at line 833 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="0FFD49515128694F678DB8FCE74250AAF0B0FDA1">getDescription</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getDescription(unsigned int N)
+      </p>
+      <p>Defined at line 834 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="F9A8F997E89CF2999FA572EF208E1D2921DFC244">getOptionValue</h3>
+      <p>public const GenericOptionValue &amp; getOptionValue(unsigned int N)</p>
+      <p>Defined at line 839 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Return the value of option name N.</p>
+        </div>
+      </div>
+      <h3 id="172F49B16F43746AE04452F85479E4F17D690B07">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, DataType &amp; V)
+      </p>
+      <p>Defined at line 844 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="D5ED38A10C4799BB00A43E14B0F1A5244D578B73">addLiteralOption</h3>
+      <p>
+        public void addLiteralOption(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Name, const DT &amp; V, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         HelpStr)
+      </p>
+      <p>Defined at line 863 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Add an entry to the mapping table.</p>
+        </div>
+      </div>
+      <h3 id="9261F936C5119E7F8FC649ED66D9F7BCC6D0A70C">removeLiteralOption</h3>
+      <p>
+        public void removeLiteralOption(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <p>Defined at line 872 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Remove the specified option.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#1E122C9586D170DE7FAC0E601CB99F01729BA5F9">parser&lt;DataType&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1755A8500A0346B8D4D83B4E35E5069443FAED49">getNumOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F178B2848CFFD098A8AD2868683A6F4A94C1376">getOption</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0FFD49515128694F678DB8FCE74250AAF0B0FDA1">getDescription</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9A8F997E89CF2999FA572EF208E1D2921DFC244">getOptionValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#172F49B16F43746AE04452F85479E4F17D690B07">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5ED38A10C4799BB00A43E14B0F1A5244D578B73">addLiteralOption</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9261F936C5119E7F8FC649ED66D9F7BCC6D0A70C">removeLiteralOption</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 933 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;_Bool&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7ABF3D6F4CFD12693D9ED217DA8CF1B2B11DE79E">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 935 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="BF30A1D89E65A2D76DFAAABBD6F65008B088A087">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, _Bool &amp; Val)
+      </p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="B4F8250D295B56CB121BBCB77B724129BE710C1A">initialize</h3>
+      <p>public void initialize()</p>
+      <p>Defined at line 940 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="1F8FDDF76ABABC1216C1EE481463EDF6AD7AE898">getValueExpectedFlagDefault</h3>
+      <p>
+        public 
+        <a href="ValueExpected.html">ValueExpected</a>
+         getValueExpectedFlagDefault()
+      </p>
+      <p>Defined at line 942 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="C84C654D739B1EEF965AEF6B1E131D9F6AD18DD7">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 947 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Do not print =&lt;value&gt; at all.</p>
+        </div>
+      </div>
+      <h3 id="A7756AA9C5A60CC7D7BE80375DE67F472A54B50A">printOptionDiff</h3>
+      <p>
+        public void printOptionDiff(const Option &amp; O, _Bool V, 
+        <a href="OptionValue.html">OptionValue</a>
+         Default, size_t GlobalWidth)
+      </p>
+      <h3 id="906024321E31A07EFEC91394BA31CBAB8483F610">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7ABF3D6F4CFD12693D9ED217DA8CF1B2B11DE79E">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF30A1D89E65A2D76DFAAABBD6F65008B088A087">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4F8250D295B56CB121BBCB77B724129BE710C1A">initialize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1F8FDDF76ABABC1216C1EE481463EDF6AD7AE898">getValueExpectedFlagDefault</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C84C654D739B1EEF965AEF6B1E131D9F6AD18DD7">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7756AA9C5A60CC7D7BE80375DE67F472A54B50A">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#906024321E31A07EFEC91394BA31CBAB8483F610">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 1027 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;long long&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="98F166CF47F83AE506B59A525E15DDD417DD6BD1">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 1029 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="C37174BC0C09EBA151FCAE462BDF046F7448B821">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, long long &amp; Val)
+      </p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="47FC2AF997E6E8E70F9A94554E58ECA6C0422818">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 1035 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="8AA216CDA0EDBFC895186065836E707598909844">printOptionDiff</h3>
+      <p>public void printOptionDiff(const Option &amp; O, long long V, OptVal Default, size_t GlobalWidth)</p>
+      <h3 id="8125368D194B7DF4762EB6F3548723FF87011B98">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#98F166CF47F83AE506B59A525E15DDD417DD6BD1">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C37174BC0C09EBA151FCAE462BDF046F7448B821">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47FC2AF997E6E8E70F9A94554E58ECA6C0422818">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AA216CDA0EDBFC895186065836E707598909844">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8125368D194B7DF4762EB6F3548723FF87011B98">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 985 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;int&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0915A82E1B90F168D2EF474CB945CF9CDD6DAFE6">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 987 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="2D14E039E259E34FC04783D23218AB2FA4572459">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, int &amp; Val)
+      </p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="026B9BB7091C28C6C7EE59FC6A5D03B85847D897">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 993 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="F6196812ACE5058C16619F740E7E6BB87B6029EA">printOptionDiff</h3>
+      <p>
+        public void printOptionDiff(const Option &amp; O, int V, 
+        <a href="OptionValue.html">OptionValue</a>
+         Default, size_t GlobalWidth)
+      </p>
+      <h3 id="FB3E5A89248AB2BA4F2FD6320BD74F6F14142F18">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0915A82E1B90F168D2EF474CB945CF9CDD6DAFE6">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D14E039E259E34FC04783D23218AB2FA4572459">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#026B9BB7091C28C6C7EE59FC6A5D03B85847D897">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6196812ACE5058C16619F740E7E6BB87B6029EA">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB3E5A89248AB2BA4F2FD6320BD74F6F14142F18">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 1069 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;unsigned long&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="25144BC257E491D85F6077D6461A6A83DCF987BC">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 1072 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="A53B3461B4C1271F3150528D50951E7406CBF8EF">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, unsigned long &amp; Val)
+      </p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="EBEEE6C5441D0BF0F9BFE2F24C22C91CD75B4F0C">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 1078 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="78765150754AD20732324793453657AE3161C89C">printOptionDiff</h3>
+      <p>public void printOptionDiff(const Option &amp; O, unsigned long V, OptVal Default, size_t GlobalWidth)</p>
+      <h3 id="24C886E4256E5C41EA23C720409E76EA9008A91F">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#25144BC257E491D85F6077D6461A6A83DCF987BC">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A53B3461B4C1271F3150528D50951E7406CBF8EF">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EBEEE6C5441D0BF0F9BFE2F24C22C91CD75B4F0C">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78765150754AD20732324793453657AE3161C89C">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24C886E4256E5C41EA23C720409E76EA9008A91F">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 960 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;boolOrDefault&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7581D77DC1595634E08A8A57440E6CF376139EF5">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 962 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="3C381026BFEC8F8A8B49A1917680BC1171BED6A7">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, boolOrDefault &amp; Val)
+      </p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="862F1EA1FB15D55E13E7D832A0EB644E594BBD1E">getValueExpectedFlagDefault</h3>
+      <p>
+        public 
+        <a href="ValueExpected.html">ValueExpected</a>
+         getValueExpectedFlagDefault()
+      </p>
+      <p>Defined at line 967 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="35287C9FDCDE7E7C069C2532E17AA41A8B0D7F1B">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 972 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Do not print =&lt;value&gt; at all.</p>
+        </div>
+      </div>
+      <h3 id="D0DB34A461A9AF455255CA763F252E97EC8769BA">printOptionDiff</h3>
+      <p>
+        public void printOptionDiff(const Option &amp; O, 
+        <a href="boolOrDefault.html">boolOrDefault</a>
+         V, 
+        <a href="OptionValue.html">OptionValue</a>
+         Default, size_t GlobalWidth)
+      </p>
+      <h3 id="3C32259C439939446A518DEA62467D362E2F3A81">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7581D77DC1595634E08A8A57440E6CF376139EF5">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C381026BFEC8F8A8B49A1917680BC1171BED6A7">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#862F1EA1FB15D55E13E7D832A0EB644E594BBD1E">getValueExpectedFlagDefault</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35287C9FDCDE7E7C069C2532E17AA41A8B0D7F1B">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0DB34A461A9AF455255CA763F252E97EC8769BA">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C32259C439939446A518DEA62467D362E2F3A81">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 1135 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;float&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="42776E1C0886F9A8D87675178298DEF42528F703">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 1137 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="744FD595B230FE0AA9BAFAD243264098DF23BB2E">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, float &amp; Val)
+      </p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="8FDFE0F3BC5FEC9A3BA51243900BC74401865250">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 1143 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="5BFE68FABE35B009885AF464B09D096EE1CEF2B7">printOptionDiff</h3>
+      <p>public void printOptionDiff(const Option &amp; O, float V, OptVal Default, size_t GlobalWidth)</p>
+      <h3 id="A0AF866F01E914BF543C7FFFC1C72A4519E1ACBD">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#42776E1C0886F9A8D87675178298DEF42528F703">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#744FD595B230FE0AA9BAFAD243264098DF23BB2E">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8FDFE0F3BC5FEC9A3BA51243900BC74401865250">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5BFE68FABE35B009885AF464B09D096EE1CEF2B7">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0AF866F01E914BF543C7FFFC1C72A4519E1ACBD">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 1048 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;unsigned int&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8DCA987E29C26244B092CF8A65F57A43AEFCC7B3">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 1050 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="A35A44A61F7A3003F30EA0C752925D3283A36D52">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, unsigned int &amp; Val)
+      </p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="1C0A226DA0B72E584F162B53072A8EFC6F7BD5F3">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 1056 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="CB316741CD367CD5B01594095288213C5877639A">printOptionDiff</h3>
+      <p>
+        public void printOptionDiff(const Option &amp; O, unsigned int V, 
+        <a href="OptionValue.html">OptionValue</a>
+         Default, size_t GlobalWidth)
+      </p>
+      <h3 id="0EA098FAA69B3C8039D67322F42E2BEC0406221B">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8DCA987E29C26244B092CF8A65F57A43AEFCC7B3">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A35A44A61F7A3003F30EA0C752925D3283A36D52">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C0A226DA0B72E584F162B53072A8EFC6F7BD5F3">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB316741CD367CD5B01594095288213C5877639A">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EA098FAA69B3C8039D67322F42E2BEC0406221B">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 113 of file /usr/lib/llvm-16/include/clang/Frontend/CommandLineSourceLoc.h</p>
+    <div>
+      <div>
+        <p> Command-line option parser that parses source locations.</p>
+        <p> Source locations are of the form filename:line:column.</p>
+      </div>
+    </div>
+    <p>Inherits from basic_parser&lt;clang::ParsedSourceLocation&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4AFC69434BB77B3521C16833106D4DB41B4CB1A2">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgValue, clang::ParsedSourceLocation &amp; Val)
+      </p>
+      <p>Defined at line 121 of file /usr/lib/llvm-16/include/clang/Frontend/CommandLineSourceLoc.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4AFC69434BB77B3521C16833106D4DB41B4CB1A2">parse</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 1006 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;long&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4E1A168066BC822291F98DB6B2FB25DB15BB0B58">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 1008 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="6E423FB85F238361C586550FBF959F9F90FA5E7E">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; O, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ArgName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, long &amp; Val)
+      </p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="22BD17682F46A18D6F26FC064CF4483C69EF28A4">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 1014 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="6DE521FC99806CB985DF337DC06D75086B2313A1">printOptionDiff</h3>
+      <p>public void printOptionDiff(const Option &amp; O, long V, OptVal Default, size_t GlobalWidth)</p>
+      <h3 id="4BA6CF4ACD20F66C222B532FA6142CD7BFB44D49">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4E1A168066BC822291F98DB6B2FB25DB15BB0B58">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E423FB85F238361C586550FBF959F9F90FA5E7E">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22BD17682F46A18D6F26FC064CF4483C69EF28A4">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DE521FC99806CB985DF337DC06D75086B2313A1">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4BA6CF4ACD20F66C222B532FA6142CD7BFB44D49">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class parser</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class parser</h1>
+    <p>Defined at line 1180 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <p>Inherits from basic_parser&lt;char&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2AFF24D704A5A66B429898217E5799359B48FC98">parser</h3>
+      <p>public void parser(Option &amp; O)</p>
+      <p>Defined at line 1182 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="8919E706AEDAFFCD7807F61AB0DCF5D45DBE86AF">parse</h3>
+      <p>
+        public _Bool parse(Option &amp; , 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         , 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg, char &amp; Value)
+      </p>
+      <p>Defined at line 1185 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Return true on error.</p>
+        </div>
+      </div>
+      <h3 id="C0100097F428124EEC313B9FF6BE490F279F4833">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 1191 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="018617B51C06E44852C1FC62BB474869A8DF0A23">printOptionDiff</h3>
+      <p>
+        public void printOptionDiff(const Option &amp; O, char V, 
+        <a href="OptionValue.html">OptionValue</a>
+         Default, size_t GlobalWidth)
+      </p>
+      <h3 id="2B382C771EF080A8792D12693FBCCFCB3674714C">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2AFF24D704A5A66B429898217E5799359B48FC98">parser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8919E706AEDAFFCD7807F61AB0DCF5D45DBE86AF">parse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0100097F428124EEC313B9FF6BE490F279F4833">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#018617B51C06E44852C1FC62BB474869A8DF0A23">printOptionDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B382C771EF080A8792D12693FBCCFCB3674714C">anchor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

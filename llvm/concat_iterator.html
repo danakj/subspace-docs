@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class concat_iterator</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class concat_iterator</h1>
+    <p>Defined at line 1052 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    <div>
+      <div>
+        <p> Iterator wrapper that concatenates sequences together.</p>
+        <p> This can concatenate different iterators, even with different types, into a single iterator provided the value types of all the concatenated iterators expose `reference` and `pointer` types that can be converted to `ValueT &amp;` and `ValueT *` respectively. It doesn&apos;t support more interesting/customized pointer or reference types.</p>
+        <p> Currently this only supports forward or higher iterator categories as inputs and always exposes a forward iterator interface.</p>
+      </div>
+    </div>
+    <p>Inherits from iterator_facade_base&lt;concat_iterator&lt;ValueT, IterTs...&gt;, std::forward_iterator_tag, ValueT&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7262284E31C59874B4FE7CB50B0CD913F7DFF293">concat_iterator&lt;ValueT, IterTs...&gt;</h3>
+      <p>public void concat_iterator&lt;ValueT, IterTs...&gt;(RangeTs &amp;&amp;... Ranges)</p>
+      <p>Defined at line 1131 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Constructs an iterator from a sequence of ranges.</p>
+          <p> We need the full range to know how to switch between each of the iterators.</p>
+        </div>
+      </div>
+      <h3 id="9FCC15E1BD88C392B8CAFF5BC6780C9D15953093">operator++</h3>
+      <p>public concat_iterator&lt;ValueT, IterTs...&gt; &amp; operator++()</p>
+      <p>Defined at line 1136 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="A9779F00CA7EE336DD183DB15832B883E0CD9ECF">operator*</h3>
+      <p>public ValueT &amp; operator*()</p>
+      <p>Defined at line 1141 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="8FC44875A1AE863C5CEDA3AA2A674BF768E76B0F">operator==</h3>
+      <p>public _Bool operator==(const concat_iterator&lt;ValueT, IterTs...&gt; &amp; RHS)</p>
+      <p>Defined at line 1145 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7262284E31C59874B4FE7CB50B0CD913F7DFF293">concat_iterator&lt;ValueT, IterTs...&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FCC15E1BD88C392B8CAFF5BC6780C9D15953093">operator++</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9779F00CA7EE336DD183DB15832B883E0CD9ECF">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8FC44875A1AE863C5CEDA3AA2A674BF768E76B0F">operator==</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

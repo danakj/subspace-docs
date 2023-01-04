@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace tuple_type</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/tuple_type" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace tuple_type</h1>
+    <h2 id="Namespaces">Namespaces</h2>
+    <ul>
+      <li>
+        <a href="__private/index.html">__private</a>
+      </li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="Tuple.html">Tuple</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F931A81A2E22644A17C274C207D4ECD7A19BB6FC">get</h3>
+      <p>decltype(auto) get(const Tuple&lt;Ts...&gt; &amp; t)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./tuple/tuple.h#237">237</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./tuple/tuple.h">tuple.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Support for structured binding.</p>
+        </div>
+      </div>
+      <h3 id="171EC43A5911329D9288E4867A88EEA0FE3FA4D1">get</h3>
+      <p>decltype(auto) get(Tuple&lt;Ts...&gt; &amp; t)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./tuple/tuple.h#241">241</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./tuple/tuple.h">tuple.h</a>
+      </p>
+      <h3 id="878711EE1699DB541D209E86FFD35546CCC62925">get</h3>
+      <p>decltype(auto) get(Tuple&lt;Ts...&gt; &amp;&amp; t)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./tuple/tuple.h#245">245</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./tuple/tuple.h">tuple.h</a>
+      </p>
+      <h3 id="A0B2C8A61C0570D2860D59809C184AF30CA1F433">tuple</h3>
+      <p>auto tuple(Ts &amp;&amp;... vs)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./tuple/tuple.h#281">281</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./tuple/tuple.h">tuple.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Used to construct a Tuple&lt;Ts...&gt; with the parameters as its values.</p>
+          <p> Calling tuple() produces a hint to make a Tuple&lt;Ts...&gt; but does not actually construct Tuple&lt;Ts...&gt;, as the types in `Ts...` are not known here.</p>
+          <p> Note: A marker type is used instead of explicitly constructing a tuple immediately in order to avoid redundantly having to specify `Ts...` when using the result of `sus::tuple()` as a function argument or return value.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Namespaces">Namespaces</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F931A81A2E22644A17C274C207D4ECD7A19BB6FC">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#171EC43A5911329D9288E4867A88EEA0FE3FA4D1">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#878711EE1699DB541D209E86FFD35546CCC62925">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0B2C8A61C0570D2860D59809C184AF30CA1F433">tuple</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

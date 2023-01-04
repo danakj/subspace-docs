@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class specific_decl_iterator</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/DeclContext" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class specific_decl_iterator</h1>
+    <p>Defined at line 2198 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+    <div>
+      <div>
+        <p> specific_decl_iterator - Iterates over a subrange of declarations stored in a DeclContext, providing only those that are of type SpecificDecl (or a class derived from it). This iterator is used, for example, to provide iteration over just the fields within a RecordDecl (with SpecificDecl = FieldDecl).</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="BD10BB229E36B73DB49982C056A82FC43E59F60D">specific_decl_iterator&lt;SpecificDecl&gt;</h3>
+      <p>public void specific_decl_iterator&lt;SpecificDecl&gt;()</p>
+      <p>Defined at line 2222 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="8EEC8251BB2B7AD824E4ACA8FA6996FEFFD41183">specific_decl_iterator&lt;SpecificDecl&gt;</h3>
+      <p>
+        public void specific_decl_iterator&lt;SpecificDecl&gt;(
+        <a href="decl_iterator.html">decl_iterator</a>
+         C)
+      </p>
+      <p>Defined at line 2232 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> specific_decl_iterator - Construct a new iterator over a subset of the declarations the range [C, end-of-declarations). If A is non-NULL, it is a pointer to a member function of SpecificDecl that should return true for all of the SpecificDecl instances that will be in the subset of iterators. For example, if you want Objective-C instance methods, SpecificDecl will be ObjCMethodDecl and A will be&amp;ObjCMethodDecl::isInstanceMethod.</p>
+        </div>
+      </div>
+      <h3 id="B9930036849250228EC2841E4B1344A4E835FF97">operator*</h3>
+      <p>public value_type operator*()</p>
+      <p>Defined at line 2236 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="168AD9CD29BA7DED5AC4A7EBA6B419127C6413ED">operator-&gt;</h3>
+      <p>public value_type operator-&gt;()</p>
+      <p>Defined at line 2239 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> This doesn&apos;t meet the iterator requirements, but it&apos;s convenient</p>
+        </div>
+      </div>
+      <h3 id="66A75A3DED3AA19CE0A258358A6C87A1F4DCAABE">operator++</h3>
+      <p>public specific_decl_iterator&lt;SpecificDecl&gt; &amp; operator++()</p>
+      <p>Defined at line 2241 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="A7900E039A952F8B044A80A9659F2DDE61205730">operator++</h3>
+      <p>
+        public 
+        <a href="specific_decl_iterator.html">specific_decl_iterator</a>
+         operator++(int )
+      </p>
+      <p>Defined at line 2247 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BD10BB229E36B73DB49982C056A82FC43E59F60D">specific_decl_iterator&lt;SpecificDecl&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8EEC8251BB2B7AD824E4ACA8FA6996FEFFD41183">specific_decl_iterator&lt;SpecificDecl&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9930036849250228EC2841E4B1344A4E835FF97">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#168AD9CD29BA7DED5AC4A7EBA6B419127C6413ED">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66A75A3DED3AA19CE0A258358A6C87A1F4DCAABE">operator++</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7900E039A952F8B044A80A9659F2DDE61205730">operator++</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

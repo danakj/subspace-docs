@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace fs</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/sys/fs" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace fs</h1>
+    <h2 id="Namespaces">Namespaces</h2>
+    <ul>
+      <li>
+        <a href="detail/index.html">detail</a>
+      </li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="FileLocker.html">FileLocker</a>
+      </li>
+      <li>
+        <a href="UniqueID.html">UniqueID</a>
+      </li>
+      <li>
+        <a href="space_info.html">space_info</a>
+      </li>
+      <li>
+        <a href="basic_file_status.html">basic_file_status</a>
+      </li>
+      <li>
+        <a href="file_status.html">file_status</a>
+      </li>
+      <li>
+        <a href="TempFile.html">TempFile</a>
+      </li>
+      <li>
+        <a href="mapped_file_region.html">mapped_file_region</a>
+      </li>
+      <li>
+        <a href="directory_entry.html">directory_entry</a>
+      </li>
+      <li>
+        <a href="directory_iterator.html">directory_iterator</a>
+      </li>
+      <li>
+        <a href="recursive_directory_iterator.html">recursive_directory_iterator</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8473090EED7BEB46482907C1925DC862B17BDBEF">operator|</h3>
+      <p>
+        <a href="perms.html">perms</a>
+         operator|(
+        <a href="perms.html">perms</a>
+         l, 
+        <a href="perms.html">perms</a>
+         r)
+      </p>
+      <p>Defined at line 112 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Helper functions so that you can use &amp; and | to manipulate perms bits:</p>
+        </div>
+      </div>
+      <h3 id="CF2BA54A77A9B23901FFB0AB3340CDAB48B4E57C">operator&amp;</h3>
+      <p>
+        <a href="perms.html">perms</a>
+         operator&amp;(
+        <a href="perms.html">perms</a>
+         l, 
+        <a href="perms.html">perms</a>
+         r)
+      </p>
+      <p>Defined at line 116 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="2AE170882445BEDA8FB4855AD617C4F1CCB49A1A">operator|=</h3>
+      <p>
+        perms &amp; operator|=(perms &amp; l, 
+        <a href="perms.html">perms</a>
+         r)
+      </p>
+      <p>Defined at line 120 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="83335547B771AA1117F9D293FFB110AF2D84E1D3">operator&amp;=</h3>
+      <p>
+        perms &amp; operator&amp;=(perms &amp; l, 
+        <a href="perms.html">perms</a>
+         r)
+      </p>
+      <p>Defined at line 124 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="B18BA7FCF3B07095D38CC637C1FD9A790977A0A2">operator~</h3>
+      <p>
+        <a href="perms.html">perms</a>
+         operator~(
+        <a href="perms.html">perms</a>
+         x)
+      </p>
+      <p>Defined at line 128 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="7D1B926E40DFCD678DCBEEBDDF157A1060777DC7">equivalent</h3>
+      <p>
+        _Bool equivalent(
+        <a href="file_status.html">file_status</a>
+         A, 
+        <a href="file_status.html">file_status</a>
+         B)
+      </p>
+      <div>
+        <div>
+          <p> Do file_status&apos;s represent the same thing?</p>
+          <p> assert(status_known(A) || status_known(B));</p>
+        </div>
+      </div>
+      <h3 id="AD1B10DC98D649409D56BE01ED6FDCB84F4E4EC9">make_absolute</h3>
+      <p>void make_absolute(const Twine &amp; current_directory, SmallVectorImpl&lt;char&gt; &amp; path)</p>
+      <div>
+        <div>
+          <p> Make  an absolute path.</p>
+          <p> Makes  absolute using the  if it is not already. An empty  will result in the </p>
+          <p> /absolute/path   =&gt; /absolute/path relative/../path =&gt; &lt;current-directory&gt;/relative/../path</p>
+        </div>
+      </div>
+      <h3 id="FF505D82F7C5D53F06E942915465A380C6D6C08D">make_absolute</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         make_absolute(SmallVectorImpl&lt;char&gt; &amp; path)
+      </p>
+      <div>
+        <div>
+          <p> Make  an absolute path.</p>
+          <p> Makes  absolute using the current directory if it is not already. An empty  will result in the current directory.</p>
+          <p> /absolute/path   =&gt; /absolute/path relative/../path =&gt; &lt;current-directory&gt;/relative/../path</p>
+        </div>
+      </div>
+      <h3 id="92E9916051DD3BBBF3A44D4902B6E66542A863FC">create_directories</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         create_directories(const Twine &amp; path, _Bool IgnoreExisting, 
+        <a href="perms.html">perms</a>
+         Perms)
+      </p>
+      <div>
+        <div>
+          <p> Create all the non-existent directories in path.</p>
+        </div>
+      </div>
+      <h3 id="B265DD72164B2BC6F1FBBA1A896B0E5A70AB9D7F">create_directory</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         create_directory(const Twine &amp; path, _Bool IgnoreExisting, 
+        <a href="perms.html">perms</a>
+         Perms)
+      </p>
+      <div>
+        <div>
+          <p> Create the directory in path.</p>
+        </div>
+      </div>
+      <h3 id="3D66DB1C4592B2D58E549FBF50CD1ACCCC534BAF">create_link</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         create_link(const Twine &amp; to, const Twine &amp; from)
+      </p>
+      <div>
+        <div>
+          <p> Create a link from  to </p>
+          <p> The link may be a soft or a hard link, depending on the platform. The caller may not assume which one. Currently on windows it creates a hard link since soft links require extra privileges. On unix, it creates a soft link since hard links don&apos;t work on SMB file systems.</p>
+        </div>
+      </div>
+      <h3 id="1D18FADD65A3AE572DA6E5229BA46171D86B2541">create_hard_link</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         create_hard_link(const Twine &amp; to, const Twine &amp; from)
+      </p>
+      <div>
+        <div>
+          <p> Create a hard link from  to  or return an error.</p>
+        </div>
+      </div>
+      <h3 id="2B101ED285235A8767AD17EA08D6C5CF22BFE70C">real_path</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         real_path(const Twine &amp; path, SmallVectorImpl&lt;char&gt; &amp; output, _Bool expand_tilde)
+      </p>
+      <div>
+        <div>
+          <p> Collapse all . and .. patterns, resolve all symlinks, and optionally        expand ~ expressions to the user&apos;s home directory.</p>
+        </div>
+      </div>
+      <h3 id="0D6995A74859AD3A9E5F228D3CD20674B303ACD5">expand_tilde</h3>
+      <p>void expand_tilde(const Twine &amp; path, SmallVectorImpl&lt;char&gt; &amp; output)</p>
+      <div>
+        <div>
+          <p> Expands ~ expressions to the user&apos;s home directory. On Unix ~user directories are resolved as well.</p>
+        </div>
+      </div>
+      <h3 id="B2B5BFEB2CDABE8BB5B068DB2A365F63157167F5">current_path</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         current_path(SmallVectorImpl&lt;char&gt; &amp; result)
+      </p>
+      <div>
+        <div>
+          <p> Get the current path.</p>
+        </div>
+      </div>
+      <h3 id="502E99255039642A6B2557991CCD0F7E37A587D5">set_current_path</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         set_current_path(const Twine &amp; path)
+      </p>
+      <div>
+        <div>
+          <p> Set the current path.</p>
+        </div>
+      </div>
+      <h3 id="0528DB6213A2C2CF9E8A1C5C26A1A7A489255EC9">remove</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         remove(const Twine &amp; path, _Bool IgnoreNonExisting)
+      </p>
+      <div>
+        <div>
+          <p> Remove path. Equivalent to POSIX remove().</p>
+        </div>
+      </div>
+      <h3 id="EAE92E3E95D839235070CD88314A97D49A3A9AC0">remove_directories</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         remove_directories(const Twine &amp; path, _Bool IgnoreErrors)
+      </p>
+      <div>
+        <div>
+          <p> Recursively delete a directory.</p>
+        </div>
+      </div>
+      <h3 id="F2288F1D83BCEDCC7A856791C2CAF3DAF5364B6B">rename</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         rename(const Twine &amp; from, const Twine &amp; to)
+      </p>
+      <div>
+        <div>
+          <p> Rename  to </p>
+          <p> Files are renamed as if by POSIX rename(), except that on Windows there may be a short interval of time during which the destination file does not exist.</p>
+        </div>
+      </div>
+      <h3 id="D6152267C624C43BCC439FCDC2A501B2507BF94D">copy_file</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         copy_file(const Twine &amp; From, const Twine &amp; To)
+      </p>
+      <div>
+        <div>
+          <p> Copy the contents of  to </p>
+        </div>
+      </div>
+      <h3 id="CD02322F407E3A2F1EBD2D012A6F800493D221B2">copy_file</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         copy_file(const Twine &amp; From, int ToFD)
+      </p>
+      <div>
+        <div>
+          <p> Copy the contents of  to </p>
+        </div>
+      </div>
+      <h3 id="BDA13C03D405007A89B890B3442BC5F980CE3FDE">resize_file</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         resize_file(int FD, uint64_t Size)
+      </p>
+      <div>
+        <div>
+          <p> Resize path to size. File is resized as if by POSIX truncate().</p>
+        </div>
+      </div>
+      <h3 id="21741AA57C5FFD4C96C281E197034E339EE58812">resize_file_before_mapping_readwrite</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         resize_file_before_mapping_readwrite(int FD, uint64_t Size)
+      </p>
+      <p>Defined at line 418 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Resize  to  before mapping  On non-Windows, this calls  On Windows, this is a no-op, since the subsequent mapping (via  automatically extends the file.</p>
+        </div>
+      </div>
+      <h3 id="B04A0C770B0BAA61EE9857E8ADFACFF768709B09">md5_contents</h3>
+      <p>ErrorOr&lt;MD5::MD5Result&gt; md5_contents(int FD)</p>
+      <div>
+        <div>
+          <p> Compute an MD5 hash of a file&apos;s contents.</p>
+        </div>
+      </div>
+      <h3 id="053C42B0F5F60AB1F647081F5A99036672D0ADF9">md5_contents</h3>
+      <p>ErrorOr&lt;MD5::MD5Result&gt; md5_contents(const Twine &amp; Path)</p>
+      <div>
+        <div>
+          <p> Version of compute_md5 that doesn&apos;t require an open file descriptor.</p>
+        </div>
+      </div>
+      <h3 id="54DD716E52B96376D3AC7ADC29966C49BECC269B">exists</h3>
+      <p>_Bool exists(const basic_file_status &amp; status)</p>
+      <div>
+        <div>
+          <p> Does file exist?</p>
+        </div>
+      </div>
+      <h3 id="9B5E8D722C563CA3AB66EDB15253DA51F39B82C4">access</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         access(const Twine &amp; Path, 
+        <a href="AccessMode.html">AccessMode</a>
+         Mode)
+      </p>
+      <div>
+        <div>
+          <p> Can the file be accessed?</p>
+        </div>
+      </div>
+      <h3 id="9BFCD146D455A6C4A4E8ADE579786E7589AB51DC">exists</h3>
+      <p>_Bool exists(const Twine &amp; Path)</p>
+      <p>Defined at line 463 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Does file exist?</p>
+        </div>
+      </div>
+      <h3 id="6932075143DE7351D2EBDE9C0B434D47878F8E6E">can_execute</h3>
+      <p>_Bool can_execute(const Twine &amp; Path)</p>
+      <div>
+        <div>
+          <p> Can we execute this file?</p>
+        </div>
+      </div>
+      <h3 id="2312941B0B4D1A55E30C73CAB3D61355891FABA4">can_write</h3>
+      <p>_Bool can_write(const Twine &amp; Path)</p>
+      <p>Defined at line 477 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Can we write this file?</p>
+        </div>
+      </div>
+      <h3 id="963A6D5A719FFCB42397F1E67CF15A77273A165F">equivalent</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         equivalent(const Twine &amp; A, const Twine &amp; B, _Bool &amp; result)
+      </p>
+      <div>
+        <div>
+          <p> Do paths represent the same thing?</p>
+          <p> assert(status_known(A) || status_known(B));</p>
+        </div>
+      </div>
+      <h3 id="4D5954FFC09204728F4552722B5D50ED203A1BEA">equivalent</h3>
+      <p>_Bool equivalent(const Twine &amp; A, const Twine &amp; B)</p>
+      <p>Defined at line 506 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Simpler version of equivalent for clients that don&apos;t need to        differentiate between an error and false.</p>
+        </div>
+      </div>
+      <h3 id="D0265AF02E1D61B85522D9DBAD3DCFCAA4039C20">is_local</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         is_local(const Twine &amp; path, _Bool &amp; result)
+      </p>
+      <div>
+        <div>
+          <p> Is the file mounted on a local filesystem?</p>
+        </div>
+      </div>
+      <h3 id="EE942C9CAA35A49BB122240346CA9D95F652FD4E">is_local</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         is_local(int FD, _Bool &amp; result)
+      </p>
+      <div>
+        <div>
+          <p> Version of is_local accepting an open file descriptor.</p>
+        </div>
+      </div>
+      <h3 id="BD873ABB73AF472F9AAC3A599013AD846F41A298">is_local</h3>
+      <p>_Bool is_local(const Twine &amp; Path)</p>
+      <p>Defined at line 525 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Simpler version of is_local for clients that don&apos;t need to        differentiate between an error and false.</p>
+        </div>
+      </div>
+      <h3 id="9623620A69709F7F3E69B81EFBE8FCB88798C6A9">is_local</h3>
+      <p>_Bool is_local(int FD)</p>
+      <p>Defined at line 532 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Simpler version of is_local accepting an open file descriptor for        clients that don&apos;t need to differentiate between an error and false.</p>
+        </div>
+      </div>
+      <h3 id="86246AB5C6A60539BA0A10DB5E70662CD7710AC1">get_file_type</h3>
+      <p>
+        <a href="file_type.html">file_type</a>
+         get_file_type(const Twine &amp; Path, _Bool Follow)
+      </p>
+      <div>
+        <div>
+          <p> Does status represent a directory?</p>
+        </div>
+      </div>
+      <h3 id="B77FA792B980CA86633045B336FD633E93694600">is_directory</h3>
+      <p>_Bool is_directory(const basic_file_status &amp; status)</p>
+      <div>
+        <div>
+          <p> Does status represent a directory?</p>
+        </div>
+      </div>
+      <h3 id="0C19B81D234A5B73A202171A3410CF32BF9169DF">is_directory</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         is_directory(const Twine &amp; path, _Bool &amp; result)
+      </p>
+      <div>
+        <div>
+          <p> Is path a directory?</p>
+        </div>
+      </div>
+      <h3 id="A34F59D4F452FD495C2B7C0632F68B31FC82F196">is_directory</h3>
+      <p>_Bool is_directory(const Twine &amp; Path)</p>
+      <p>Defined at line 562 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Simpler version of is_directory for clients that don&apos;t need to        differentiate between an error and false.</p>
+        </div>
+      </div>
+      <h3 id="A7CB2584D6D26AEB62C598EDE8E3576B87E63362">is_regular_file</h3>
+      <p>_Bool is_regular_file(const basic_file_status &amp; status)</p>
+      <div>
+        <div>
+          <p> Does status represent a regular file?</p>
+        </div>
+      </div>
+      <h3 id="2BB3BF887D80C2412D72C7B7F0D6FF2BEF9D4F32">is_regular_file</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         is_regular_file(const Twine &amp; path, _Bool &amp; result)
+      </p>
+      <div>
+        <div>
+          <p> Is path a regular file?</p>
+        </div>
+      </div>
+      <h3 id="D85E40A2EE104E4ED9B2212966FD233DDFECCA4A">is_regular_file</h3>
+      <p>_Bool is_regular_file(const Twine &amp; Path)</p>
+      <p>Defined at line 584 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Simpler version of is_regular_file for clients that don&apos;t need to        differentiate between an error and false.</p>
+        </div>
+      </div>
+      <h3 id="2E1C447F6F7563273C535DA349BDBF5CC0114C53">is_symlink_file</h3>
+      <p>_Bool is_symlink_file(const basic_file_status &amp; status)</p>
+      <div>
+        <div>
+          <p> Does status represent a symlink file?</p>
+        </div>
+      </div>
+      <h3 id="FA9139E73A255A2F4955A2790BE3F1578C1020DA">is_symlink_file</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         is_symlink_file(const Twine &amp; path, _Bool &amp; result)
+      </p>
+      <div>
+        <div>
+          <p> Is path a symlink file?</p>
+        </div>
+      </div>
+      <h3 id="F1E8C20D66C0E993B846CE27CEC06EA524F227C3">is_symlink_file</h3>
+      <p>_Bool is_symlink_file(const Twine &amp; Path)</p>
+      <p>Defined at line 608 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Simpler version of is_symlink_file for clients that don&apos;t need to        differentiate between an error and false.</p>
+        </div>
+      </div>
+      <h3 id="8370B7EE47B0FE3E498986370C10D7FAFAFFFDDD">is_other</h3>
+      <p>_Bool is_other(const basic_file_status &amp; status)</p>
+      <div>
+        <div>
+          <p> Does this status represent something that exists but is not a        directory or regular file?</p>
+        </div>
+      </div>
+      <h3 id="E9F2308651BDFFFF780DC03DD8250E176DC37808">is_other</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         is_other(const Twine &amp; path, _Bool &amp; result)
+      </p>
+      <div>
+        <div>
+          <p> Is path something that exists but is not a directory,        regular file, or symlink?</p>
+        </div>
+      </div>
+      <h3 id="55ED58DC387200023468B284367C8E11F60F9000">status</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         status(const Twine &amp; path, file_status &amp; result, _Bool follow)
+      </p>
+      <div>
+        <div>
+          <p> Get file status as if by POSIX stat().</p>
+        </div>
+      </div>
+      <h3 id="B31A4CCE6AD5609D7C7EBF5FED0A3BF0606F42C7">status</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         status(int FD, file_status &amp; Result)
+      </p>
+      <div>
+        <div>
+          <p> A version for when a file descriptor is already available.</p>
+        </div>
+      </div>
+      <h3 id="B6F5C68463121B0A5380174529B4C771D16BB7B2">getUmask</h3>
+      <p>unsigned int getUmask()</p>
+      <div>
+        <div>
+          <p> Get file creation mode mask of the process.</p>
+        </div>
+      </div>
+      <h3 id="542F163CE17DCFA5750D7FF7DACFABFDC59B533B">setPermissions</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         setPermissions(const Twine &amp; Path, 
+        <a href="perms.html">perms</a>
+         Permissions)
+      </p>
+      <div>
+        <div>
+          <p> Set file permissions.</p>
+        </div>
+      </div>
+      <h3 id="8DE50B6A3CDCB1C58BDB3E0E0A5063D3543B4745">setPermissions</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         setPermissions(int FD, 
+        <a href="perms.html">perms</a>
+         Permissions)
+      </p>
+      <div>
+        <div>
+          <p> Vesion of setPermissions accepting a file descriptor. TODO Delete the path based overload once we implement the FD based overload on Windows.</p>
+        </div>
+      </div>
+      <h3 id="83872F314AFC49081B2F06AA5BF29A6CC61C903D">getPermissions</h3>
+      <p>ErrorOr&lt;perms&gt; getPermissions(const Twine &amp; Path)</p>
+      <div>
+        <div>
+          <p> Get file permissions.</p>
+        </div>
+      </div>
+      <h3 id="9027808E3B8B7B25E46309E339F5CE898B2A1B4C">file_size</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         file_size(const Twine &amp; Path, uint64_t &amp; Result)
+      </p>
+      <p>Defined at line 691 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Get file size.</p>
+        </div>
+      </div>
+      <h3 id="A0FBB8803606720EC1106CF4A76D8A3C0017685B">setLastAccessAndModificationTime</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         setLastAccessAndModificationTime(int FD, 
+        <a href="../../../std/chrono/time_point.html">time_point</a>
+         AccessTime, 
+        <a href="../../../std/chrono/time_point.html">time_point</a>
+         ModificationTime)
+      </p>
+      <div>
+        <div>
+          <p> Set the file modification and access time.</p>
+        </div>
+      </div>
+      <h3 id="DD2B4C256A4093F9B52B90D32DD079C4AF3CA3F7">setLastAccessAndModificationTime</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         setLastAccessAndModificationTime(int FD, 
+        <a href="../../../std/chrono/time_point.html">time_point</a>
+         Time)
+      </p>
+      <p>Defined at line 710 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Simpler version that sets both file modification and access time to the same time.</p>
+        </div>
+      </div>
+      <h3 id="6F60C4DD6631EA21965939045D94FE2A9B89C1E1">status_known</h3>
+      <p>_Bool status_known(const basic_file_status &amp; s)</p>
+      <div>
+        <div>
+          <p> Is status available?</p>
+        </div>
+      </div>
+      <h3 id="F8637CF9340B091D91114B0BBDC0A00A0D6A3BAC">status_known</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         status_known(const Twine &amp; path, _Bool &amp; result)
+      </p>
+      <div>
+        <div>
+          <p> Is status available?</p>
+        </div>
+      </div>
+      <h3 id="1FB0DB2307A8013CB1CA6C53E0D3038B182A8915">createUniquePath</h3>
+      <p>void createUniquePath(const Twine &amp; Model, SmallVectorImpl&lt;char&gt; &amp; ResultPath, _Bool MakeAbsolute)</p>
+      <div>
+        <div>
+          <p> Create a potentially unique file name but does not create it.</p>
+          <p> Generates a unique path suitable for a temporary file but does not open or create the file. The name is based on  with &apos;%&apos; replaced by a random char in [0-9a-f]. If  is true then the system&apos;s temp directory is prepended first. If  is false the current directory will be used instead.</p>
+          <p> This function does not check if the file exists. If you want to be sure that the file does not yet exist, you should use use enough &apos;%&apos; characters in your model to ensure this. Each &apos;%&apos; gives 4-bits of entropy so you can use 32 of them to get 128 bits of entropy.</p>
+          <p> Example: clang-%%-%%-%%-%%-%%.s =&gt; clang-a0-b1-c2-d3-e4.s</p>
+        </div>
+      </div>
+      <h3 id="FB9534EE6B7B6101F82770FF4BB648892AF8FBD7">createUniqueFile</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         createUniqueFile(const Twine &amp; Model, int &amp; ResultFD, SmallVectorImpl&lt;char&gt; &amp; ResultPath, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags, unsigned int Mode)
+      </p>
+      <div>
+        <div>
+          <p> Create a uniquely named file.</p>
+          <p> Generates a unique path suitable for a temporary file and then opens it as a file. The name is based on  with &apos;%&apos; replaced by a random char in [0-9a-f]. If  is not an absolute path, the temporary file will be created in the current directory.</p>
+          <p> Example: clang-%%-%%-%%-%%-%%.s =&gt; clang-a0-b1-c2-d3-e4.s</p>
+          <p> This is an atomic operation. Either the file is created and opened, or the file system is left untouched.</p>
+          <p> The intended use is for files that are to be kept, possibly after renaming them. For example, when running &apos;clang -c foo.o&apos;, the file can be first created as foo-abc123.o and then renamed.</p>
+        </div>
+      </div>
+      <h3 id="B233B2F4008613F79F7A0D02B46E36B8B7B3B9DA">createUniqueFile</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         createUniqueFile(const Twine &amp; Model, SmallVectorImpl&lt;char&gt; &amp; ResultPath, unsigned int Mode)
+      </p>
+      <div>
+        <div>
+          <p> Simpler version for clients that don&apos;t want an open file. An empty file will still be created.</p>
+        </div>
+      </div>
+      <h3 id="AADDD7213698382E468B3675606003C7D432C9D3">createTemporaryFile</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         createTemporaryFile(const Twine &amp; Prefix, 
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         Suffix, int &amp; ResultFD, SmallVectorImpl&lt;char&gt; &amp; ResultPath, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags)
+      </p>
+      <div>
+        <div>
+          <p> Create a file in the system temporary directory.</p>
+          <p> The filename is of the form prefix-random_chars.suffix. Since the directory is not know to the caller, Prefix and Suffix cannot have path separators. The files are created with mode 0600.</p>
+          <p> This should be used for things like a temporary .s that is removed after running the assembler.</p>
+        </div>
+      </div>
+      <h3 id="58965E9FA218F8D10DFCF54E2FA413A2BB0D5268">createTemporaryFile</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         createTemporaryFile(const Twine &amp; Prefix, 
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         Suffix, SmallVectorImpl&lt;char&gt; &amp; ResultPath, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags)
+      </p>
+      <div>
+        <div>
+          <p> Simpler version for clients that don&apos;t want an open file. An empty file will still be created.</p>
+        </div>
+      </div>
+      <h3 id="EA8223CB03DE45D8907C1AC2A589F3C0FA7C9F65">createUniqueDirectory</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         createUniqueDirectory(const Twine &amp; Prefix, SmallVectorImpl&lt;char&gt; &amp; ResultPath)
+      </p>
+      <h3 id="C1094E7D07511390F53750E4F1B8CE4C6F60AC93">getPotentiallyUniqueFileName</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         getPotentiallyUniqueFileName(const Twine &amp; Model, SmallVectorImpl&lt;char&gt; &amp; ResultPath)
+      </p>
+      <div>
+        <div>
+          <p> Get a unique name, not currently exisiting in the filesystem. Subject to race conditions, prefer to use createUniqueFile instead.</p>
+          <p> Similar to createUniqueFile, but instead of creating a file only checks if it exists. This function is subject to race conditions, if you want to use the returned name to actually create a file, use createUniqueFile instead.</p>
+        </div>
+      </div>
+      <h3 id="FD83415B8645FBA76AB60F5F9F64F7CD5250F1EB">getPotentiallyUniqueTempFileName</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         getPotentiallyUniqueTempFileName(const Twine &amp; Prefix, 
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         Suffix, SmallVectorImpl&lt;char&gt; &amp; ResultPath)
+      </p>
+      <div>
+        <div>
+          <p> Get a unique temporary file name, not currently exisiting in the filesystem. Subject to race conditions, prefer to use createTemporaryFile instead.</p>
+          <p> Similar to createTemporaryFile, but instead of creating a file only checks if it exists. This function is subject to race conditions, if you want to use the returned name to actually create a file, use createTemporaryFile instead.</p>
+        </div>
+      </div>
+      <h3 id="D171BF9E9CC90C28F5E04A7889B2B1CC14CBE988">operator|</h3>
+      <p>
+        <a href="OpenFlags.html">OpenFlags</a>
+         operator|(
+        <a href="OpenFlags.html">OpenFlags</a>
+         A, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         B)
+      </p>
+      <p>Defined at line 931 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="A5C4D5640246ACF1C173ED7D4117A86860220E98">operator|=</h3>
+      <p>
+        OpenFlags &amp; operator|=(OpenFlags &amp; A, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         B)
+      </p>
+      <p>Defined at line 935 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="268AD10B99796E071AE05161B278AB0D4C2F4996">operator|</h3>
+      <p>
+        <a href="FileAccess.html">FileAccess</a>
+         operator|(
+        <a href="FileAccess.html">FileAccess</a>
+         A, 
+        <a href="FileAccess.html">FileAccess</a>
+         B)
+      </p>
+      <p>Defined at line 940 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="79B0E69F0C733D1CF8AD0CF991837DCB5C32AA96">operator|=</h3>
+      <p>
+        FileAccess &amp; operator|=(FileAccess &amp; A, 
+        <a href="FileAccess.html">FileAccess</a>
+         B)
+      </p>
+      <p>Defined at line 944 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="4A414D411745B29AFCC0097279D4030F1F7BE6F4">openFile</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         openFile(const Twine &amp; Name, int &amp; ResultFD, 
+        <a href="CreationDisposition.html">CreationDisposition</a>
+         Disp, 
+        <a href="FileAccess.html">FileAccess</a>
+         Access, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags, unsigned int Mode)
+      </p>
+      <div>
+        <div>
+          <p> The caller is responsible for closing the file descriptor once they are finished with it.</p>
+        </div>
+      </div>
+      <h3 id="A48D4ADA3D6A9BD1815E92515F869C5E688376DC">openNativeFile</h3>
+      <p>
+        <a href="../../../llvm/Expected.html">Expected</a>
+         openNativeFile(const Twine &amp; Name, 
+        <a href="CreationDisposition.html">CreationDisposition</a>
+         Disp, 
+        <a href="FileAccess.html">FileAccess</a>
+         Access, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags, unsigned int Mode)
+      </p>
+      <div>
+        <div>
+          <p> The caller is responsible for closing the file object once they are finished with it.</p>
+        </div>
+      </div>
+      <h3 id="57B4941CAF035C12C9566A5768CB94A6DFD2CAED">convertFDToNativeFile</h3>
+      <p>file_t convertFDToNativeFile(int FD)</p>
+      <p>Defined at line 993 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Converts from a Posix file descriptor number to a native file handle. On Windows, this retreives the underlying handle. On non-Windows, this is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="6C36F010C21EF093571CA69ED3E6A48439B3DD4C">getStdinHandle</h3>
+      <p>file_t getStdinHandle()</p>
+      <div>
+        <div>
+          <p> Return an open handle to standard in. On Unix, this is typically FD 0. Returns kInvalidFile when the stream is closed.</p>
+        </div>
+      </div>
+      <h3 id="637DEE9945EC33937337D34D05B657DBC7AE0607">getStdoutHandle</h3>
+      <p>file_t getStdoutHandle()</p>
+      <div>
+        <div>
+          <p> Return an open handle to standard out. On Unix, this is typically FD 1. Returns kInvalidFile when the stream is closed.</p>
+        </div>
+      </div>
+      <h3 id="A560F0B40EEDBC45E226AEBB32B038C2D212BBBB">getStderrHandle</h3>
+      <p>file_t getStderrHandle()</p>
+      <div>
+        <div>
+          <p> Return an open handle to standard error. On Unix, this is typically FD 2. Returns kInvalidFile when the stream is closed.</p>
+        </div>
+      </div>
+      <h3 id="565A59377063D25C25414DA26DEDF3D15D903615">readNativeFile</h3>
+      <p>
+        Expected&lt;size_t&gt; readNativeFile(file_t FileHandle, 
+        <a href="../../../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         Buf)
+      </p>
+      <div>
+        <div>
+          <p> Reads  bytes from  into  Returns the number of bytes actually read. On Unix, this is equivalent to `return ::read(FD, Buf.data(), Buf.size())`, with error reporting. Returns 0 when reaching EOF.</p>
+        </div>
+      </div>
+      <h3 id="088EEA9592B6D8927775BA4B603182FB510245DD">readNativeFileToEOF</h3>
+      <p>
+        <a href="../../../llvm/Error.html">Error</a>
+         readNativeFileToEOF(file_t FileHandle, SmallVectorImpl&lt;char&gt; &amp; Buffer, ssize_t ChunkSize)
+      </p>
+      <div>
+        <div>
+          <p> Reads from  until EOF, appending to  in chunks of size </p>
+          <p> This calls  in a loop. On Error, previous chunks that were read successfully are left in  and returned.</p>
+          <p> Note: For reading the final chunk at EOF,  capacity needs extra storage of </p>
+        </div>
+      </div>
+      <h3 id="EE1D4D66DD64F8C275609CD1B7ABB01DF3CE6F1F">readNativeFileSlice</h3>
+      <p>
+        Expected&lt;size_t&gt; readNativeFileSlice(file_t FileHandle, 
+        <a href="../../../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         Buf, uint64_t Offset)
+      </p>
+      <div>
+        <div>
+          <p> Reads  bytes from  at offset  into  If &apos;pread&apos; is available, this will use that, otherwise it will use &apos;lseek&apos;. Returns the number of bytes actually read. Returns 0 when reaching EOF.</p>
+        </div>
+      </div>
+      <h3 id="83CB16BEF8A1F725D10DD917032EC2BA74F84A9C">openFileForWrite</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         openFileForWrite(const Twine &amp; Name, int &amp; ResultFD, 
+        <a href="CreationDisposition.html">CreationDisposition</a>
+         Disp, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags, unsigned int Mode)
+      </p>
+      <p>Defined at line 1064 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> The caller is responsible for closing the file descriptor once they are finished with it.</p>
+        </div>
+      </div>
+      <h3 id="B4A6BC4362C79F4849498DB825A030C1D35A4AA3">openNativeFileForWrite</h3>
+      <p>
+        <a href="../../../llvm/Expected.html">Expected</a>
+         openNativeFileForWrite(const Twine &amp; Name, 
+        <a href="CreationDisposition.html">CreationDisposition</a>
+         Disp, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags, unsigned int Mode)
+      </p>
+      <p>Defined at line 1084 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> The caller is responsible for closing the freeing the file once they are finished with it.</p>
+        </div>
+      </div>
+      <h3 id="DBDC631EAB591DA7DD2267BB2723113BEAA9BA4E">openFileForReadWrite</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         openFileForReadWrite(const Twine &amp; Name, int &amp; ResultFD, 
+        <a href="CreationDisposition.html">CreationDisposition</a>
+         Disp, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags, unsigned int Mode)
+      </p>
+      <p>Defined at line 1106 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> The caller is responsible for closing the file descriptor once they are finished with it.</p>
+        </div>
+      </div>
+      <h3 id="7473C197762FA50871FA13195505B32EF62DD2AD">openNativeFileForReadWrite</h3>
+      <p>
+        <a href="../../../llvm/Expected.html">Expected</a>
+         openNativeFileForReadWrite(const Twine &amp; Name, 
+        <a href="CreationDisposition.html">CreationDisposition</a>
+         Disp, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags, unsigned int Mode)
+      </p>
+      <p>Defined at line 1126 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> The caller is responsible for closing the freeing the file once they are finished with it.</p>
+        </div>
+      </div>
+      <h3 id="69AB04D240C440E3618D3587CFA4889C227DE445">openFileForRead</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         openFileForRead(const Twine &amp; Name, int &amp; ResultFD, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags, SmallVectorImpl&lt;char&gt; * RealPath)
+      </p>
+      <div>
+        <div>
+          <p> The caller is responsible for closing the file descriptor once they are finished with it.</p>
+        </div>
+      </div>
+      <h3 id="3C8F87AC5E787D8D64D791523F7C5CFAEEDDB3A9">openNativeFileForRead</h3>
+      <p>
+        <a href="../../../llvm/Expected.html">Expected</a>
+         openNativeFileForRead(const Twine &amp; Name, 
+        <a href="OpenFlags.html">OpenFlags</a>
+         Flags, SmallVectorImpl&lt;char&gt; * RealPath)
+      </p>
+      <div>
+        <div>
+          <p> The caller is responsible for closing the freeing the file once they are finished with it.</p>
+        </div>
+      </div>
+      <h3 id="7628B6390DC46693C14932986419D8B5CF7065C0">tryLockFile</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         tryLockFile(int FD, 
+        <a href="../../../std/chrono/duration.html">duration</a>
+         Timeout)
+      </p>
+      <div>
+        <div>
+          <p> Try to locks the file during the specified time.</p>
+          <p> This function implements advisory locking on entire file. If it returnserrc::success, the file is locked by the calling process. Until the process unlocks the file by calling  all attempts to lock the same file will fail/block. The process that locked the file may assume that none of other processes read or write this file, provided that all processes lock the file prior to accessing its content.</p>
+        </div>
+      </div>
+      <h3 id="CCEBAAEC710CF772D7B6F49EF48BE90915090F65">lockFile</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         lockFile(int FD)
+      </p>
+      <div>
+        <div>
+          <p> Lock the file.</p>
+          <p> This function acts as  but it waits infinitely.</p>
+        </div>
+      </div>
+      <h3 id="17480B1FA60C3D45F1A92CD132BE11F045482FDE">unlockFile</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         unlockFile(int FD)
+      </p>
+      <div>
+        <div>
+          <p> Unlock the file.</p>
+        </div>
+      </div>
+      <h3 id="0E8A6CC78EAFF26F09E72596388638DE572FE3C1">closeFile</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         closeFile(file_t &amp; F)
+      </p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="5B93B02DE1410AAF4A87A79D633FE61701064D2D">changeFileOwnership</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         changeFileOwnership(int FD, uint32_t Owner, uint32_t Group)
+      </p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="B0D5CAFDE192322FEB3EDAF3613D8AB5DA163F89">getUniqueID</h3>
+      <p>
+        <a href="../../../std/error_code.html">error_code</a>
+         getUniqueID(
+        <a href="../../../llvm/Twine.html">Twine</a>
+         Path, UniqueID &amp; Result)
+      </p>
+      <h3 id="5CFB0E83DFA8BFE35C1F6C7A526482502868307B">disk_space</h3>
+      <p>ErrorOr&lt;space_info&gt; disk_space(const Twine &amp; Path)</p>
+      <div>
+        <div>
+          <p> Get disk space usage information.</p>
+          <p> Note: Users must be careful about &quot;Time Of Check, Time Of Use&quot; kind of bug. Note: Windows reports results according to the quota allocated to the user.</p>
+        </div>
+      </div>
+      <h3 id="ECA248B82F46FC68671690CB8276C09E1A322E10">getMainExecutable</h3>
+      <p>
+        <a href="../../../std/__cxx11/basic_string.html">basic_string</a>
+         getMainExecutable(const char * argv0, void * MainExecAddr)
+      </p>
+      <div>
+        <div>
+          <p> Return the path to the main executable, given the value of argv[0] from program startup and the address of main itself. In extremis, this function may fail and return an empty path.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="3A15BE9F939BEF412748460F942972204484BD65">enum FileAccess</h3>
+      <ul>
+        <li>FA_Read</li>
+        <li>FA_Write</li>
+      </ul>
+      <p>Defined at line 751 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="4FC2299A97F964EFAA0C172C62F6B5DB88AF4218">enum OpenFlags</h3>
+      <ul>
+        <li>OF_None</li>
+        <li>OF_Text</li>
+        <li>OF_CRLF</li>
+        <li>OF_TextWithCRLF</li>
+        <li>OF_Append</li>
+        <li>OF_Delete</li>
+        <li>OF_ChildInherit</li>
+        <li>OF_UpdateAtime</li>
+      </ul>
+      <p>Defined at line 756 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="C48E72CDE38B9E727D4E1B1FBEF2BF347601A169">enum CreationDisposition</h3>
+      <ul>
+        <li>CD_CreateAlways</li>
+        <li>CD_CreateNew</li>
+        <li>CD_OpenExisting</li>
+        <li>CD_OpenAlways</li>
+      </ul>
+      <p>Defined at line 729 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="A91B7D1FE7092B2F24C23862750AB7D1598231BC">enum class file_type</h3>
+      <ul>
+        <li>status_error</li>
+        <li>file_not_found</li>
+        <li>regular_file</li>
+        <li>directory_file</li>
+        <li>symlink_file</li>
+        <li>block_file</li>
+        <li>character_file</li>
+        <li>fifo_file</li>
+        <li>socket_file</li>
+        <li>type_unknown</li>
+      </ul>
+      <p>Defined at line 66 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> An enumeration for the file system&apos;s view of the type.</p>
+        </div>
+      </div>
+      <h3 id="E458033775A333A8D5B25794959A52098A3904C7">enum perms</h3>
+      <ul>
+        <li>no_perms</li>
+        <li>owner_read</li>
+        <li>owner_write</li>
+        <li>owner_exe</li>
+        <li>owner_all</li>
+        <li>group_read</li>
+        <li>group_write</li>
+        <li>group_exe</li>
+        <li>group_all</li>
+        <li>others_read</li>
+        <li>others_write</li>
+        <li>others_exe</li>
+        <li>others_all</li>
+        <li>all_read</li>
+        <li>all_write</li>
+        <li>all_exe</li>
+        <li>all_all</li>
+        <li>set_uid_on_exe</li>
+        <li>set_gid_on_exe</li>
+        <li>sticky_bit</li>
+        <li>all_perms</li>
+        <li>perms_not_known</li>
+      </ul>
+      <p>Defined at line 86 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="8AB1A1628AD6354C91E466D6BFDD359A3B86BE6A">enum class AccessMode</h3>
+      <ul>
+        <li>Exist</li>
+        <li>Write</li>
+        <li>Execute</li>
+      </ul>
+      <p>Defined at line 450 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Namespaces">Namespaces</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8473090EED7BEB46482907C1925DC862B17BDBEF">operator|</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF2BA54A77A9B23901FFB0AB3340CDAB48B4E57C">operator&amp;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2AE170882445BEDA8FB4855AD617C4F1CCB49A1A">operator|=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83335547B771AA1117F9D293FFB110AF2D84E1D3">operator&amp;=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B18BA7FCF3B07095D38CC637C1FD9A790977A0A2">operator~</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D1B926E40DFCD678DCBEEBDDF157A1060777DC7">equivalent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD1B10DC98D649409D56BE01ED6FDCB84F4E4EC9">make_absolute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF505D82F7C5D53F06E942915465A380C6D6C08D">make_absolute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92E9916051DD3BBBF3A44D4902B6E66542A863FC">create_directories</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B265DD72164B2BC6F1FBBA1A896B0E5A70AB9D7F">create_directory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D66DB1C4592B2D58E549FBF50CD1ACCCC534BAF">create_link</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D18FADD65A3AE572DA6E5229BA46171D86B2541">create_hard_link</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B101ED285235A8767AD17EA08D6C5CF22BFE70C">real_path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D6995A74859AD3A9E5F228D3CD20674B303ACD5">expand_tilde</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2B5BFEB2CDABE8BB5B068DB2A365F63157167F5">current_path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#502E99255039642A6B2557991CCD0F7E37A587D5">set_current_path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0528DB6213A2C2CF9E8A1C5C26A1A7A489255EC9">remove</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EAE92E3E95D839235070CD88314A97D49A3A9AC0">remove_directories</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2288F1D83BCEDCC7A856791C2CAF3DAF5364B6B">rename</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6152267C624C43BCC439FCDC2A501B2507BF94D">copy_file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD02322F407E3A2F1EBD2D012A6F800493D221B2">copy_file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDA13C03D405007A89B890B3442BC5F980CE3FDE">resize_file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21741AA57C5FFD4C96C281E197034E339EE58812">resize_file_before_mapping_readwrite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B04A0C770B0BAA61EE9857E8ADFACFF768709B09">md5_contents</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#053C42B0F5F60AB1F647081F5A99036672D0ADF9">md5_contents</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#54DD716E52B96376D3AC7ADC29966C49BECC269B">exists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B5E8D722C563CA3AB66EDB15253DA51F39B82C4">access</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BFCD146D455A6C4A4E8ADE579786E7589AB51DC">exists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6932075143DE7351D2EBDE9C0B434D47878F8E6E">can_execute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2312941B0B4D1A55E30C73CAB3D61355891FABA4">can_write</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#963A6D5A719FFCB42397F1E67CF15A77273A165F">equivalent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D5954FFC09204728F4552722B5D50ED203A1BEA">equivalent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0265AF02E1D61B85522D9DBAD3DCFCAA4039C20">is_local</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE942C9CAA35A49BB122240346CA9D95F652FD4E">is_local</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD873ABB73AF472F9AAC3A599013AD846F41A298">is_local</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9623620A69709F7F3E69B81EFBE8FCB88798C6A9">is_local</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86246AB5C6A60539BA0A10DB5E70662CD7710AC1">get_file_type</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B77FA792B980CA86633045B336FD633E93694600">is_directory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C19B81D234A5B73A202171A3410CF32BF9169DF">is_directory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A34F59D4F452FD495C2B7C0632F68B31FC82F196">is_directory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7CB2584D6D26AEB62C598EDE8E3576B87E63362">is_regular_file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BB3BF887D80C2412D72C7B7F0D6FF2BEF9D4F32">is_regular_file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D85E40A2EE104E4ED9B2212966FD233DDFECCA4A">is_regular_file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E1C447F6F7563273C535DA349BDBF5CC0114C53">is_symlink_file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA9139E73A255A2F4955A2790BE3F1578C1020DA">is_symlink_file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1E8C20D66C0E993B846CE27CEC06EA524F227C3">is_symlink_file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8370B7EE47B0FE3E498986370C10D7FAFAFFFDDD">is_other</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9F2308651BDFFFF780DC03DD8250E176DC37808">is_other</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#55ED58DC387200023468B284367C8E11F60F9000">status</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B31A4CCE6AD5609D7C7EBF5FED0A3BF0606F42C7">status</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B6F5C68463121B0A5380174529B4C771D16BB7B2">getUmask</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#542F163CE17DCFA5750D7FF7DACFABFDC59B533B">setPermissions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DE50B6A3CDCB1C58BDB3E0E0A5063D3543B4745">setPermissions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83872F314AFC49081B2F06AA5BF29A6CC61C903D">getPermissions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9027808E3B8B7B25E46309E339F5CE898B2A1B4C">file_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0FBB8803606720EC1106CF4A76D8A3C0017685B">setLastAccessAndModificationTime</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD2B4C256A4093F9B52B90D32DD079C4AF3CA3F7">setLastAccessAndModificationTime</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F60C4DD6631EA21965939045D94FE2A9B89C1E1">status_known</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8637CF9340B091D91114B0BBDC0A00A0D6A3BAC">status_known</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FB0DB2307A8013CB1CA6C53E0D3038B182A8915">createUniquePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB9534EE6B7B6101F82770FF4BB648892AF8FBD7">createUniqueFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B233B2F4008613F79F7A0D02B46E36B8B7B3B9DA">createUniqueFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AADDD7213698382E468B3675606003C7D432C9D3">createTemporaryFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58965E9FA218F8D10DFCF54E2FA413A2BB0D5268">createTemporaryFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA8223CB03DE45D8907C1AC2A589F3C0FA7C9F65">createUniqueDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1094E7D07511390F53750E4F1B8CE4C6F60AC93">getPotentiallyUniqueFileName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD83415B8645FBA76AB60F5F9F64F7CD5250F1EB">getPotentiallyUniqueTempFileName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D171BF9E9CC90C28F5E04A7889B2B1CC14CBE988">operator|</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A5C4D5640246ACF1C173ED7D4117A86860220E98">operator|=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#268AD10B99796E071AE05161B278AB0D4C2F4996">operator|</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79B0E69F0C733D1CF8AD0CF991837DCB5C32AA96">operator|=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A414D411745B29AFCC0097279D4030F1F7BE6F4">openFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A48D4ADA3D6A9BD1815E92515F869C5E688376DC">openNativeFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57B4941CAF035C12C9566A5768CB94A6DFD2CAED">convertFDToNativeFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C36F010C21EF093571CA69ED3E6A48439B3DD4C">getStdinHandle</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#637DEE9945EC33937337D34D05B657DBC7AE0607">getStdoutHandle</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A560F0B40EEDBC45E226AEBB32B038C2D212BBBB">getStderrHandle</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#565A59377063D25C25414DA26DEDF3D15D903615">readNativeFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#088EEA9592B6D8927775BA4B603182FB510245DD">readNativeFileToEOF</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE1D4D66DD64F8C275609CD1B7ABB01DF3CE6F1F">readNativeFileSlice</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83CB16BEF8A1F725D10DD917032EC2BA74F84A9C">openFileForWrite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4A6BC4362C79F4849498DB825A030C1D35A4AA3">openNativeFileForWrite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DBDC631EAB591DA7DD2267BB2723113BEAA9BA4E">openFileForReadWrite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7473C197762FA50871FA13195505B32EF62DD2AD">openNativeFileForReadWrite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69AB04D240C440E3618D3587CFA4889C227DE445">openFileForRead</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C8F87AC5E787D8D64D791523F7C5CFAEEDDB3A9">openNativeFileForRead</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7628B6390DC46693C14932986419D8B5CF7065C0">tryLockFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CCEBAAEC710CF772D7B6F49EF48BE90915090F65">lockFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17480B1FA60C3D45F1A92CD132BE11F045482FDE">unlockFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E8A6CC78EAFF26F09E72596388638DE572FE3C1">closeFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B93B02DE1410AAF4A87A79D633FE61701064D2D">changeFileOwnership</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0D5CAFDE192322FEB3EDAF3613D8AB5DA163F89">getUniqueID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5CFB0E83DFA8BFE35C1F6C7A526482502868307B">disk_space</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ECA248B82F46FC68671690CB8276C09E1A322E10">getMainExecutable</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3A15BE9F939BEF412748460F942972204484BD65">FileAccess</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FC2299A97F964EFAA0C172C62F6B5DB88AF4218">OpenFlags</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C48E72CDE38B9E727D4E1B1FBEF2BF347601A169">CreationDisposition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A91B7D1FE7092B2F24C23862750AB7D1598231BC">file_type</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E458033775A333A8D5B25794959A52098A3904C7">perms</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AB1A1628AD6354C91E466D6BFDD359A3B86BE6A">AccessMode</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ArrayRef</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ArrayRef</h1>
+    <p>Defined at line 41 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+    <div>
+      <div>
+        <p> ArrayRef - Represent a constant reference to an array (0 or more elements consecutively in memory), i.e. a start pointer and a length.  It allows various APIs to take consecutive elements easily and conveniently.</p>
+        <p> This class does not own the underlying data, it is expected to be used in situations where the data resides in some other buffer, whose lifetime extends past that of the ArrayRef. For this reason, it is not in general safe to store an ArrayRef.</p>
+        <p> This is intended to be trivially copyable, so it should be passed by value.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E96F7EBC0BDC18CCB47D99FD449A810ADA61A5A8">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;()</p>
+      <p>Defined at line 67 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Construct an empty ArrayRef.implicit</p>
+        </div>
+      </div>
+      <h3 id="DE801B52643CFD8995B0C7EE9242D00CCF42F0E2">ArrayRef&lt;T&gt;</h3>
+      <p>
+        public void ArrayRef&lt;T&gt;(
+        <a href="../std/nullopt_t.html">nullopt_t</a>
+         )
+      </p>
+      <p>Defined at line 70 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Construct an empty ArrayRef from std::nullopt.implicit</p>
+        </div>
+      </div>
+      <h3 id="BB022698DDDE2F32FA0E133FCDFA26D25F43D20D">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const T &amp; OneElt)</p>
+      <p>Defined at line 73 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Construct an ArrayRef from a single element.implicit</p>
+        </div>
+      </div>
+      <h3 id="D0FC9518053ED30A29319B2F52641E5DD163EE22">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const T * data, size_t length)</p>
+      <p>Defined at line 77 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <h3 id="6718E230C0ED4948206065499C9397B9EA91B4B4">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const T * begin, const T * end)</p>
+      <p>Defined at line 81 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Construct an ArrayRef from a range.</p>
+        </div>
+      </div>
+      <h3 id="68897DB29780A34E5E82ED388724AAA9FFE4BFC5">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const SmallVectorTemplateCommon&lt;T, U&gt; &amp; Vec)</p>
+      <p>Defined at line 88 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p>implicit</p>
+        </div>
+      </div>
+      <h3 id="39BD2EF436DD6FB6ECCACE7D116A56BE1E7942C3">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const std::vector&lt;T, A&gt; &amp; Vec)</p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p>implicit</p>
+        </div>
+      </div>
+      <h3 id="E38CB6C56E8D6E84AD8345889FF9C50EEC9D4591">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const std::array&lt;T, N&gt; &amp; Arr)</p>
+      <p>Defined at line 99 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p>implicit</p>
+        </div>
+      </div>
+      <h3 id="C33BDBBA77057C147DE81CA777582D8A31E97D00">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const T (&amp;)[N] Arr)</p>
+      <p>Defined at line 104 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p>implicit</p>
+        </div>
+      </div>
+      <h3 id="9C8672F25221037DEA1F44A5F7DF436598CDBA55">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const std::initializer_list&lt;T&gt; &amp; Vec)</p>
+      <p>Defined at line 114 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <h3 id="67EAB476F5096C78B78B4A59393E42E192CBCFE0">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const ArrayRef&lt;U *&gt; &amp; A, std::enable_if_t&lt;std::is_convertible&lt;U *const *, const T *&gt;::value&gt; * )</p>
+      <p>Defined at line 124 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Construct an ArrayRef&lt;const T*&gt; from ArrayRef&lt;T*&gt;. This uses SFINAE to ensure that only ArrayRefs of pointers can be converted.</p>
+        </div>
+      </div>
+      <h3 id="E37BC75C8BA866CE8E82AEC1971F36ED74F6AB61">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const SmallVectorTemplateCommon&lt;U *, DummyT&gt; &amp; Vec, std::enable_if_t&lt;std::is_convertible&lt;U *const *, const T *&gt;::value&gt; * )</p>
+      <p>Defined at line 133 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p>implicit</p>
+        </div>
+      </div>
+      <h3 id="6690CCF310F748691A84CFD65158EFC9E37FC387">ArrayRef&lt;T&gt;</h3>
+      <p>public void ArrayRef&lt;T&gt;(const std::vector&lt;U *, A&gt; &amp; Vec, std::enable_if_t&lt;std::is_convertible&lt;U *const *, const T *&gt;::value&gt; * )</p>
+      <p>Defined at line 142 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Construct an ArrayRef&lt;const T*&gt; from std::vector&lt;T*&gt;. This uses SFINAE to ensure that only vectors of pointers can be converted.</p>
+        </div>
+      </div>
+      <h3 id="BBA7CB0B11F8A254D5578369FBE639585C7483A4">begin</h3>
+      <p>public iterator begin()</p>
+      <p>Defined at line 151 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p>@}</p>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="3C2978C7DB86D7BD7341B88B4C35C6EC6D450936">end</h3>
+      <p>public iterator end()</p>
+      <p>Defined at line 152 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <h3 id="42E5BB22E313DA7B8AA6680BB0E6BC2B5F699CE2">rbegin</h3>
+      <p>public reverse_iterator rbegin()</p>
+      <p>Defined at line 154 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <h3 id="FED2167EC1F896434B391DB40AF94A49C983C25F">rend</h3>
+      <p>public reverse_iterator rend()</p>
+      <p>Defined at line 155 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <h3 id="472505810B25F6CDD0FD35448DF4E63CC77543D5">empty</h3>
+      <p>public _Bool empty()</p>
+      <p>Defined at line 158 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> empty - Check if the array is empty.</p>
+        </div>
+      </div>
+      <h3 id="68DC4E1CC1892AB6CDF12D61369C29D599924A1E">data</h3>
+      <p>public const T * data()</p>
+      <p>Defined at line 160 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <h3 id="D3D36DCDA5C69E75618CD0EC7132D074C3D94446">size</h3>
+      <p>public size_t size()</p>
+      <p>Defined at line 163 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> size - Get the array size.</p>
+        </div>
+      </div>
+      <h3 id="4A9C173C5FFB3FE6AF714E382B6F89C320989BA7">front</h3>
+      <p>public const T &amp; front()</p>
+      <p>Defined at line 166 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> front - Get the first element.</p>
+        </div>
+      </div>
+      <h3 id="60BD5444DD0F1CEB3AFA010920EC1617315DDC77">back</h3>
+      <p>public const T &amp; back()</p>
+      <p>Defined at line 172 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> back - Get the last element.</p>
+        </div>
+      </div>
+      <h3 id="FE5ED161267E6B4401E5FF4A03874A16C048F454">copy</h3>
+      <p>public MutableArrayRef&lt;T&gt; copy(Allocator &amp; A)</p>
+      <p>Defined at line 178 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> copy - Allocate copy in Allocator and return ArrayRef&lt;T&gt; to it.</p>
+        </div>
+      </div>
+      <h3 id="FC2C10D0935A009C742FCBBF95ADA241628E2C2F">equals</h3>
+      <p>
+        public _Bool equals(
+        <a href="ArrayRef.html">ArrayRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 185 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> equals - Check for element-wise equality.</p>
+        </div>
+      </div>
+      <h3 id="2CF8145CCFC1218254D654F8ED865B6C9C8C96F7">slice</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         slice(size_t N, size_t M)
+      </p>
+      <p>Defined at line 193 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> slice(n, m) - Chop off the first N elements of the array, and keep M elements in the array.</p>
+        </div>
+      </div>
+      <h3 id="229F1E6D1C4B48A3066744E0EAB58F08342B80A7">slice</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         slice(size_t N)
+      </p>
+      <p>Defined at line 199 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> slice(n) - Chop off the first N elements of the array.</p>
+        </div>
+      </div>
+      <h3 id="4E3E9C2042CF9E3AA10F39E740A9D7ACCB18808C">drop_front</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         drop_front(size_t N)
+      </p>
+      <p>Defined at line 202 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Drop the first  elements of the array.</p>
+        </div>
+      </div>
+      <h3 id="2091DC2303DE4C2EBB02143322173DE9244D6156">drop_back</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         drop_back(size_t N)
+      </p>
+      <p>Defined at line 208 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Drop the last  elements of the array.</p>
+        </div>
+      </div>
+      <h3 id="1DACA8086932635862FF34EC8AFB0ABCAC971EC6">drop_while</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         drop_while(PredicateT Pred)
+      </p>
+      <p>Defined at line 215 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Return a copy of *this with the first N elements satisfying the given predicate removed.</p>
+        </div>
+      </div>
+      <h3 id="90425EEC501709E2FEE4045C9D8A67D655E1E837">drop_until</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         drop_until(PredicateT Pred)
+      </p>
+      <p>Defined at line 221 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Return a copy of *this with the first N elements not satisfying the given predicate removed.</p>
+        </div>
+      </div>
+      <h3 id="4A412B976D2849B045DA8EFF46FAF66FD5E3387C">take_front</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         take_front(size_t N)
+      </p>
+      <p>Defined at line 226 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Return a copy of *this with only the first  elements.</p>
+        </div>
+      </div>
+      <h3 id="6B2533BE4D4A91A849738685D9E0368D9269B380">take_back</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         take_back(size_t N)
+      </p>
+      <p>Defined at line 233 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Return a copy of *this with only the last  elements.</p>
+        </div>
+      </div>
+      <h3 id="DBCFA15BAED32C8898F2EDB87FCE77AB80F746AB">take_while</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         take_while(PredicateT Pred)
+      </p>
+      <p>Defined at line 241 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Return the first N elements of this Array that satisfy the given predicate.</p>
+        </div>
+      </div>
+      <h3 id="7BA478B392BB6A0A8AB150C8519112D806F973AE">take_until</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         take_until(PredicateT Pred)
+      </p>
+      <p>Defined at line 247 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Return the first N elements of this Array that don&apos;t satisfy the given predicate.</p>
+        </div>
+      </div>
+      <h3 id="A67DE47EE5556C55BDF8540DE9FA37D2EE9A8660">operator[]</h3>
+      <p>public const T &amp; operator[](size_t Index)</p>
+      <p>Defined at line 254 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p>@}</p>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="86FC192F821D581F93B8770EF84B6CA00DBD3012">operator=</h3>
+      <p>public std::enable_if_t&lt;std::is_same&lt;U, T&gt;::value, ArrayRef&lt;T&gt; &gt; &amp; operator=(U &amp;&amp; Temporary)</p>
+      <p>Defined at line 264 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Disallow accidental assignment from a temporary.</p>
+          <p> The declaration here is extra complicated so that &quot;arrayRef = {}&quot; continues to select the move assignment operator.</p>
+        </div>
+      </div>
+      <h3 id="218011F7609047E6E77AE03BB9727B2216B6E3E6">operator=</h3>
+      <p>public std::enable_if_t&lt;std::is_same&lt;U, T&gt;::value, ArrayRef&lt;T&gt; &gt; &amp; operator=(std::initializer_list&lt;U&gt; )</p>
+      <p>Defined at line 272 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p> Disallow accidental assignment from a temporary.</p>
+          <p> The declaration here is extra complicated so that &quot;arrayRef = {}&quot; continues to select the move assignment operator.</p>
+        </div>
+      </div>
+      <h3 id="C1F09F0CB910AC0213C9128B8755ACF68629CA13">vec</h3>
+      <p>public std::vector&lt;T&gt; vec()</p>
+      <p>Defined at line 278 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p>@}</p>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="05D355D1EAFE5B3208E964ACB17A3FC745EB703D">operator vector&lt;type-parameter-0-0, allocator&lt;type-parameter-0-0&gt; &gt;</h3>
+      <p>public std::vector&lt;T&gt; operator vector&lt;type-parameter-0-0, allocator&lt;type-parameter-0-0&gt; &gt;()</p>
+      <p>Defined at line 285 of file /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h</p>
+      <div>
+        <div>
+          <p>@}</p>
+          <p>@{</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E96F7EBC0BDC18CCB47D99FD449A810ADA61A5A8">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE801B52643CFD8995B0C7EE9242D00CCF42F0E2">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB022698DDDE2F32FA0E133FCDFA26D25F43D20D">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0FC9518053ED30A29319B2F52641E5DD163EE22">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6718E230C0ED4948206065499C9397B9EA91B4B4">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68897DB29780A34E5E82ED388724AAA9FFE4BFC5">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39BD2EF436DD6FB6ECCACE7D116A56BE1E7942C3">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E38CB6C56E8D6E84AD8345889FF9C50EEC9D4591">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C33BDBBA77057C147DE81CA777582D8A31E97D00">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C8672F25221037DEA1F44A5F7DF436598CDBA55">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67EAB476F5096C78B78B4A59393E42E192CBCFE0">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E37BC75C8BA866CE8E82AEC1971F36ED74F6AB61">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6690CCF310F748691A84CFD65158EFC9E37FC387">ArrayRef&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBA7CB0B11F8A254D5578369FBE639585C7483A4">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C2978C7DB86D7BD7341B88B4C35C6EC6D450936">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42E5BB22E313DA7B8AA6680BB0E6BC2B5F699CE2">rbegin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FED2167EC1F896434B391DB40AF94A49C983C25F">rend</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#472505810B25F6CDD0FD35448DF4E63CC77543D5">empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68DC4E1CC1892AB6CDF12D61369C29D599924A1E">data</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3D36DCDA5C69E75618CD0EC7132D074C3D94446">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A9C173C5FFB3FE6AF714E382B6F89C320989BA7">front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#60BD5444DD0F1CEB3AFA010920EC1617315DDC77">back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE5ED161267E6B4401E5FF4A03874A16C048F454">copy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC2C10D0935A009C742FCBBF95ADA241628E2C2F">equals</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2CF8145CCFC1218254D654F8ED865B6C9C8C96F7">slice</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#229F1E6D1C4B48A3066744E0EAB58F08342B80A7">slice</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E3E9C2042CF9E3AA10F39E740A9D7ACCB18808C">drop_front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2091DC2303DE4C2EBB02143322173DE9244D6156">drop_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1DACA8086932635862FF34EC8AFB0ABCAC971EC6">drop_while</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90425EEC501709E2FEE4045C9D8A67D655E1E837">drop_until</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A412B976D2849B045DA8EFF46FAF66FD5E3387C">take_front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B2533BE4D4A91A849738685D9E0368D9269B380">take_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DBCFA15BAED32C8898F2EDB87FCE77AB80F746AB">take_while</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BA478B392BB6A0A8AB150C8519112D806F973AE">take_until</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A67DE47EE5556C55BDF8540DE9FA37D2EE9A8660">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86FC192F821D581F93B8770EF84B6CA00DBD3012">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#218011F7609047E6E77AE03BB9727B2216B6E3E6">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1F09F0CB910AC0213C9128B8755ACF68629CA13">vec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05D355D1EAFE5B3208E964ACB17A3FC745EB703D">operator vector&lt;type-parameter-0-0, allocator&lt;type-parameter-0-0&gt; &gt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

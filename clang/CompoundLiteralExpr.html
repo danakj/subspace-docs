@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CompoundLiteralExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CompoundLiteralExpr</h1>
+    <p>Defined at line 3411 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> CompoundLiteralExpr - [C99 6.5.2.5]</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="BC871955D4CD19C333374DD2BA6605001BF54362">CompoundLiteralExpr</h3>
+      <p>
+        public void CompoundLiteralExpr(
+        <a href="SourceLocation.html">SourceLocation</a>
+         lparenloc, TypeSourceInfo * tinfo, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, Expr * init, _Bool fileScope)
+      </p>
+      <p>Defined at line 3423 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8A5B7699A6517805E701A39CA0630B6A37BAFFCC">CompoundLiteralExpr</h3>
+      <p>
+        public void CompoundLiteralExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 3431 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Construct an empty compound literal.</p>
+        </div>
+      </div>
+      <h3 id="B7B37CA19584147BE7DB0524E8667F764B3A76ED">getInitializer</h3>
+      <p>public const Expr * getInitializer()</p>
+      <p>Defined at line 3434 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="54FF2429787B2865DF2E27EB85E9BC404C7ED4AA">getInitializer</h3>
+      <p>public Expr * getInitializer()</p>
+      <p>Defined at line 3435 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="743380A7992F634FCCB5D77E8E0D295B5B5D91A4">setInitializer</h3>
+      <p>public void setInitializer(Expr * E)</p>
+      <p>Defined at line 3436 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="DC10EF2686978A80B78C55E151C08C6793BA0A9A">isFileScope</h3>
+      <p>public _Bool isFileScope()</p>
+      <p>Defined at line 3438 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2F5A312429B53F0C30BB852F591C40FCBE2BC064">setFileScope</h3>
+      <p>public void setFileScope(_Bool FS)</p>
+      <p>Defined at line 3439 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2B93188B321FF718087BB8E153781DB53FBD17EE">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 3441 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7DF7F1B60946199D1C9F27331C289A27E96C415B">setLParenLoc</h3>
+      <p>
+        public void setLParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 3442 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="CD66B6A8F25C592F0FAAE22E00908FF2696D3E73">getTypeSourceInfo</h3>
+      <p>public TypeSourceInfo * getTypeSourceInfo()</p>
+      <p>Defined at line 3444 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="1227C42A2A0D1DCFBD1109195F766C424304A4BE">setTypeSourceInfo</h3>
+      <p>public void setTypeSourceInfo(TypeSourceInfo * tinfo)</p>
+      <p>Defined at line 3447 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="948210C47A8EC2888E6D0A23602F2032713AC203">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 3451 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="FD5A88725373DE020D33AD674A3CC25B38C04332">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 3459 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="403A6B1D3B9D91146B819E4489E2A55353CD135D">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 3466 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="310079A180D50DCFB4F4E9D9E23B94914B4894C5">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3471 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="4A07D62D7286E81BEF65858B3449765B1D35FB44">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3472 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BC871955D4CD19C333374DD2BA6605001BF54362">CompoundLiteralExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A5B7699A6517805E701A39CA0630B6A37BAFFCC">CompoundLiteralExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7B37CA19584147BE7DB0524E8667F764B3A76ED">getInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#54FF2429787B2865DF2E27EB85E9BC404C7ED4AA">getInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#743380A7992F634FCCB5D77E8E0D295B5B5D91A4">setInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC10EF2686978A80B78C55E151C08C6793BA0A9A">isFileScope</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F5A312429B53F0C30BB852F591C40FCBE2BC064">setFileScope</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B93188B321FF718087BB8E153781DB53FBD17EE">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7DF7F1B60946199D1C9F27331C289A27E96C415B">setLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD66B6A8F25C592F0FAAE22E00908FF2696D3E73">getTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1227C42A2A0D1DCFBD1109195F766C424304A4BE">setTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#948210C47A8EC2888E6D0A23602F2032713AC203">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD5A88725373DE020D33AD674A3CC25B38C04332">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#403A6B1D3B9D91146B819E4489E2A55353CD135D">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#310079A180D50DCFB4F4E9D9E23B94914B4894C5">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A07D62D7286E81BEF65858B3449765B1D35FB44">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

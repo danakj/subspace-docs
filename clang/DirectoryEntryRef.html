@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DirectoryEntryRef</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DirectoryEntryRef</h1>
+    <p>Defined at line 53 of file /usr/lib/llvm-16/include/clang/Basic/DirectoryEntry.h</p>
+    <div>
+      <div>
+        <p> A reference to a   that includes the name of the directory as it was accessed by the FileManager&apos;s client.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5C026EA1F8A4AC2C56FDC3839168A7BD789CD153">getDirEntry</h3>
+      <p>public const DirectoryEntry &amp; getDirEntry()</p>
+      <p>Defined at line 55 of file /usr/lib/llvm-16/include/clang/Basic/DirectoryEntry.h</p>
+      <h3 id="9C792A0F2DD7F7590879281D412327E9E55C06DF">getName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getName()
+      </p>
+      <p>Defined at line 57 of file /usr/lib/llvm-16/include/clang/Basic/DirectoryEntry.h</p>
+      <h3 id="0A5B8CE838D8A5D1511A9B1B8784557DF02971B4">getMapEntry</h3>
+      <p>public const MapEntry &amp; getMapEntry()</p>
+      <p>Defined at line 67 of file /usr/lib/llvm-16/include/clang/Basic/DirectoryEntry.h</p>
+      <h3 id="99FA5153684B06CD6AB7F9756D27220F7C9DA700">isSameRef</h3>
+      <p>
+        public _Bool isSameRef(
+        <a href="DirectoryEntryRef.html">DirectoryEntryRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 70 of file /usr/lib/llvm-16/include/clang/Basic/DirectoryEntry.h</p>
+      <div>
+        <div>
+          <p> Check if RHS referenced the file in exactly the same way.</p>
+        </div>
+      </div>
+      <h3 id="11DEC79D60AF078FBF970051DF36735EE3D6FEBE">DirectoryEntryRef</h3>
+      <p>public void DirectoryEntryRef()</p>
+      <p>Defined at line 72 of file /usr/lib/llvm-16/include/clang/Basic/DirectoryEntry.h</p>
+      <h3 id="595C1B304CB2107E9B197D4CEC72CA7EFD407CDE">DirectoryEntryRef</h3>
+      <p>public void DirectoryEntryRef(const MapEntry &amp; ME)</p>
+      <p>Defined at line 73 of file /usr/lib/llvm-16/include/clang/Basic/DirectoryEntry.h</p>
+      <h3 id="7571E2DCCB8BC4A6219ABDB2C7AC547C3E4C9980">operator const clang::DirectoryEntry *</h3>
+      <p>public const DirectoryEntry * operator const clang::DirectoryEntry *()</p>
+      <p>Defined at line 92 of file /usr/lib/llvm-16/include/clang/Basic/DirectoryEntry.h</p>
+      <div>
+        <div>
+          <p> Allow DirectoryEntryRef to degrade into &apos;const DirectoryEntry*&apos; to facilitate incremental adoption.</p>
+          <p> The goal is to avoid code churn due to dances like the following:</p>
+          <p> FIXME: Once DirectoryEntryRef is &quot;everywhere&quot; and DirectoryEntry::getName has been deleted, delete this implicit conversion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5C026EA1F8A4AC2C56FDC3839168A7BD789CD153">getDirEntry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C792A0F2DD7F7590879281D412327E9E55C06DF">getName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A5B8CE838D8A5D1511A9B1B8784557DF02971B4">getMapEntry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99FA5153684B06CD6AB7F9756D27220F7C9DA700">isSameRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11DEC79D60AF078FBF970051DF36735EE3D6FEBE">DirectoryEntryRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#595C1B304CB2107E9B197D4CEC72CA7EFD407CDE">DirectoryEntryRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7571E2DCCB8BC4A6219ABDB2C7AC547C3E4C9980">operator const clang::DirectoryEntry *</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class LifetimeExtendedTemporaryDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class LifetimeExtendedTemporaryDecl</h1>
+    <p>Defined at line 3141 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> Implicit declaration of a temporary that was materialized by a MaterializeTemporaryExpr and lifetime-extended by a declaration</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Decl.html">Decl</a>
+      , Mergeable&lt;LifetimeExtendedTemporaryDecl&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0005E278B5B87D8D89D02F9929442525D2A670EB">Create</h3>
+      <p>public LifetimeExtendedTemporaryDecl * Create(Expr * Temp, ValueDecl * EDec, unsigned int Mangling)</p>
+      <p>Defined at line 3168 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="79D108896BC2D85C449370DB5B13D88358A34E27">CreateDeserialized</h3>
+      <p>public LifetimeExtendedTemporaryDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <p>Defined at line 3173 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="D54CBE7B3D4C7C839F6533E6FA005B2D7172E17F">getExtendingDecl</h3>
+      <p>public ValueDecl * getExtendingDecl()</p>
+      <p>Defined at line 3178 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="A42F471F644175FB485BA6AAC8F939D3FD42DD19">getExtendingDecl</h3>
+      <p>public const ValueDecl * getExtendingDecl()</p>
+      <p>Defined at line 3179 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="532DA6BC1DDBF482F2A1CAC01643038BC8F44EAD">getStorageDuration</h3>
+      <p>
+        public 
+        <a href="StorageDuration.html">StorageDuration</a>
+         getStorageDuration()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the storage duration for the materialized temporary.</p>
+        </div>
+      </div>
+      <h3 id="DA19DA318922ABB3BA48A4FE0DEFBA54EB645301">getTemporaryExpr</h3>
+      <p>public Expr * getTemporaryExpr()</p>
+      <p>Defined at line 3189 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the expression to which the temporary materialization conversion was applied. This isn&apos;t necessarily the initializer of the temporary due to the C++98 delayed materialization rules, but skipRValueSubobjectAdjustments can be used to find said initializer within the subexpression.</p>
+        </div>
+      </div>
+      <h3 id="38C0E7595720FC4D0FCE9716FC4DFF31A8AD06AD">getTemporaryExpr</h3>
+      <p>public const Expr * getTemporaryExpr()</p>
+      <p>Defined at line 3190 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="1906D17768A9240BC82DD40C28C8BC61BC59A299">getManglingNumber</h3>
+      <p>public unsigned int getManglingNumber()</p>
+      <p>Defined at line 3192 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="608EA5416C351094A7F2A2E0304B155D4DC2DE97">getOrCreateValue</h3>
+      <p>public APValue * getOrCreateValue(_Bool MayCreate)</p>
+      <div>
+        <div>
+          <p> Get the storage for the constant value of a materialized temporary of static storage duration.</p>
+        </div>
+      </div>
+      <h3 id="23A7A733671768A8DD939BD64D569A5ABC6177CD">getValue</h3>
+      <p>public APValue * getValue()</p>
+      <p>Defined at line 3198 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="12E16170446A3FCE642527D6CA977A4270AAAD00">childrenExpr</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         childrenExpr()
+      </p>
+      <p>Defined at line 3201 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="CC9FE3248B8C66369511A193CC7217652E5CF973">childrenExpr</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         childrenExpr()
+      </p>
+      <p>Defined at line 3205 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="DCF4C5F0DB31901F2C26168DA9DD0163C53CA9B3">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3209 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="21A16C7402C6D1718DA8B4454674EADE226CB358">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3210 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0005E278B5B87D8D89D02F9929442525D2A670EB">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79D108896BC2D85C449370DB5B13D88358A34E27">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D54CBE7B3D4C7C839F6533E6FA005B2D7172E17F">getExtendingDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A42F471F644175FB485BA6AAC8F939D3FD42DD19">getExtendingDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#532DA6BC1DDBF482F2A1CAC01643038BC8F44EAD">getStorageDuration</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA19DA318922ABB3BA48A4FE0DEFBA54EB645301">getTemporaryExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38C0E7595720FC4D0FCE9716FC4DFF31A8AD06AD">getTemporaryExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1906D17768A9240BC82DD40C28C8BC61BC59A299">getManglingNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#608EA5416C351094A7F2A2E0304B155D4DC2DE97">getOrCreateValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23A7A733671768A8DD939BD64D569A5ABC6177CD">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12E16170446A3FCE642527D6CA977A4270AAAD00">childrenExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC9FE3248B8C66369511A193CC7217652E5CF973">childrenExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DCF4C5F0DB31901F2C26168DA9DD0163C53CA9B3">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21A16C7402C6D1718DA8B4454674EADE226CB358">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

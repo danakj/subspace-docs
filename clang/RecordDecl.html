@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class RecordDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class RecordDecl</h1>
+    <p>Defined at line 3987 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    <div>
+      <div>
+        <p> Represents a struct/union/class.  For example:   struct X;                  // Forward declaration, no &quot;body&quot;.   union Y { int A, B; };     // Has body with members A and B (FieldDecls). This decl will be marked invalid if *any* members are invalid.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TagDecl.html">TagDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="588D8FB5FDCEAFCC97F34438BBA562EBE8D8898A">RecordDecl</h3>
+      <p>
+        protected void RecordDecl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, 
+        <a href="TagTypeKind.html">TagTypeKind</a>
+         TK, const ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, IdentifierInfo * Id, RecordDecl * PrevDecl)
+      </p>
+      <h3 id="363470BD85D71D4A7A41866EACED1005AB9F90D7">Create</h3>
+      <p>
+        public RecordDecl * Create(const ASTContext &amp; C, 
+        <a href="TagTypeKind.html">TagTypeKind</a>
+         TK, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, IdentifierInfo * Id, RecordDecl * PrevDecl)
+      </p>
+      <h3 id="09AA3C267BB20C0F0F30F0DE78DBB438921348E6">CreateDeserialized</h3>
+      <p>public RecordDecl * CreateDeserialized(const ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="9D7CDF751E4756D7F92DDB92B0658D5F833A0CA0">getPreviousDecl</h3>
+      <p>public RecordDecl * getPreviousDecl()</p>
+      <p>Defined at line 4026 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="BC17547EF6AFA4253E031F55700B4EAF8143223A">getPreviousDecl</h3>
+      <p>public const RecordDecl * getPreviousDecl()</p>
+      <p>Defined at line 4030 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="3882F5B870EB4157F47D67FE4EF17E93399BD68B">getMostRecentDecl</h3>
+      <p>public RecordDecl * getMostRecentDecl()</p>
+      <p>Defined at line 4034 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="BF5C64FE848083396307F199FC213495CD63DC44">getMostRecentDecl</h3>
+      <p>public const RecordDecl * getMostRecentDecl()</p>
+      <p>Defined at line 4037 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="856423742C97249F55A38F6B51D8F0EB00F9291F">hasFlexibleArrayMember</h3>
+      <p>public _Bool hasFlexibleArrayMember()</p>
+      <p>Defined at line 4041 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="286616C42CAD67C433CCA2CCA95C8CADFCFE74A5">setHasFlexibleArrayMember</h3>
+      <p>public void setHasFlexibleArrayMember(_Bool V)</p>
+      <p>Defined at line 4045 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="7017EDFB9C44996B37497CDDF577B0791A3AACCE">isAnonymousStructOrUnion</h3>
+      <p>public _Bool isAnonymousStructOrUnion()</p>
+      <p>Defined at line 4060 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Whether this is an anonymous struct or union. To be an anonymous struct or union, it must have been declared without a name and there must be no objects of this type declared, e.g.,</p>
+          <p> is an anonymous union but neither of the following are:</p>
+        </div>
+      </div>
+      <h3 id="C827E2A1088A7F1FE2A29EB1952C3EDC3BA14DD1">setAnonymousStructOrUnion</h3>
+      <p>public void setAnonymousStructOrUnion(_Bool Anon)</p>
+      <p>Defined at line 4064 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="34BFB4D4F1746B71832189B37BCB2C888F186C12">hasObjectMember</h3>
+      <p>public _Bool hasObjectMember()</p>
+      <p>Defined at line 4068 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="6DB3E35DA432C3801F06FFA659A69D5788B52F85">setHasObjectMember</h3>
+      <p>public void setHasObjectMember(_Bool val)</p>
+      <p>Defined at line 4069 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="8CFFDF87040064B7D43885B77F34B145C05AE77D">hasVolatileMember</h3>
+      <p>public _Bool hasVolatileMember()</p>
+      <p>Defined at line 4071 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="9A9037339DAE4B64C73C2F4F89B5E3E51F6C0AB1">setHasVolatileMember</h3>
+      <p>public void setHasVolatileMember(_Bool val)</p>
+      <p>Defined at line 4073 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="6C6B4F4B34A0B8E94F7D806D6C202295ED18F798">hasLoadedFieldsFromExternalStorage</h3>
+      <p>public _Bool hasLoadedFieldsFromExternalStorage()</p>
+      <p>Defined at line 4077 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="7516440F1603B81B7DEC781879DB013FB29B80F8">setHasLoadedFieldsFromExternalStorage</h3>
+      <p>public void setHasLoadedFieldsFromExternalStorage(_Bool val)</p>
+      <p>Defined at line 4081 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="08CC3F8BE5DF2C299215C25B9EE20841F76CA0F3">isNonTrivialToPrimitiveDefaultInitialize</h3>
+      <p>public _Bool isNonTrivialToPrimitiveDefaultInitialize()</p>
+      <p>Defined at line 4086 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Functions to query basic properties of non-trivial C structs.</p>
+        </div>
+      </div>
+      <h3 id="C79E79549C0632A7BC97892178D7FA7620C654AA">setNonTrivialToPrimitiveDefaultInitialize</h3>
+      <p>public void setNonTrivialToPrimitiveDefaultInitialize(_Bool V)</p>
+      <p>Defined at line 4090 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="64BC3CE896694C0FB186EE29DB855BC49FEF1566">isNonTrivialToPrimitiveCopy</h3>
+      <p>public _Bool isNonTrivialToPrimitiveCopy()</p>
+      <p>Defined at line 4094 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="CD0DE6D502E9FBEAC137E648E3FE61EFB3068276">setNonTrivialToPrimitiveCopy</h3>
+      <p>public void setNonTrivialToPrimitiveCopy(_Bool V)</p>
+      <p>Defined at line 4098 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="13E6CA650DB16243449969E38394131DC8B31309">isNonTrivialToPrimitiveDestroy</h3>
+      <p>public _Bool isNonTrivialToPrimitiveDestroy()</p>
+      <p>Defined at line 4102 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="3FFFC55953F9C6C10EAC6DC7B0520B68E3191440">setNonTrivialToPrimitiveDestroy</h3>
+      <p>public void setNonTrivialToPrimitiveDestroy(_Bool V)</p>
+      <p>Defined at line 4106 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="18FA5721A1A06AC5A1B009AE0D0ADA69E3C0F0B5">hasNonTrivialToPrimitiveDefaultInitializeCUnion</h3>
+      <p>public _Bool hasNonTrivialToPrimitiveDefaultInitializeCUnion()</p>
+      <p>Defined at line 4110 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="F9A6B906DAD5A09C51D2B957E80E281FE3134941">setHasNonTrivialToPrimitiveDefaultInitializeCUnion</h3>
+      <p>public void setHasNonTrivialToPrimitiveDefaultInitializeCUnion(_Bool V)</p>
+      <p>Defined at line 4114 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="E0830FE6C322FC56E74A7633EAD9FCA821914D48">hasNonTrivialToPrimitiveDestructCUnion</h3>
+      <p>public _Bool hasNonTrivialToPrimitiveDestructCUnion()</p>
+      <p>Defined at line 4118 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="B2BEDEA3C14426477EB3687865E338418194E348">setHasNonTrivialToPrimitiveDestructCUnion</h3>
+      <p>public void setHasNonTrivialToPrimitiveDestructCUnion(_Bool V)</p>
+      <p>Defined at line 4122 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="80DE43280E7EB521F558A8287066005F6181C940">hasNonTrivialToPrimitiveCopyCUnion</h3>
+      <p>public _Bool hasNonTrivialToPrimitiveCopyCUnion()</p>
+      <p>Defined at line 4126 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="B654183A08CEAC18C626D1920BF410910C388F1C">setHasNonTrivialToPrimitiveCopyCUnion</h3>
+      <p>public void setHasNonTrivialToPrimitiveCopyCUnion(_Bool V)</p>
+      <p>Defined at line 4130 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="24993B991F74A826342502ABF7A88D38C0F9E33D">canPassInRegisters</h3>
+      <p>public _Bool canPassInRegisters()</p>
+      <p>Defined at line 4137 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Determine whether this class can be passed in registers. In C++ mode, it must have at least one trivial, non-deleted copy or move constructor. FIXME: This should be set as part of completeDefinition.</p>
+        </div>
+      </div>
+      <h3 id="DC9B2DAC7E73EE9D711F062BC94AAE2FE5B739DD">getArgPassingRestrictions</h3>
+      <p>
+        public 
+        <a href="../clang/RecordDecl/ArgPassingKind.html">ArgPassingKind</a>
+         getArgPassingRestrictions()
+      </p>
+      <p>Defined at line 4141 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="4D7EB8F1CAE8E4A28D23B6891E91CF1452E3D7E3">setArgPassingRestrictions</h3>
+      <p>
+        public void setArgPassingRestrictions(
+        <a href="../clang/RecordDecl/ArgPassingKind.html">ArgPassingKind</a>
+         Kind)
+      </p>
+      <p>Defined at line 4145 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="355C4EE0A90C3244E4E0B77C5DE4F598EC37A52D">isParamDestroyedInCallee</h3>
+      <p>public _Bool isParamDestroyedInCallee()</p>
+      <p>Defined at line 4149 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="DE5652A1F5088FDDCE03D2F94402D9809E9FFFF2">setParamDestroyedInCallee</h3>
+      <p>public void setParamDestroyedInCallee(_Bool V)</p>
+      <p>Defined at line 4153 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="639E8A2CD7AEA09627F9F217154FBF584F2370F0">isRandomized</h3>
+      <p>public _Bool isRandomized()</p>
+      <p>Defined at line 4157 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="0D8C59EEBE04AD851FC70EB0A76EA0B5912A0486">setIsRandomized</h3>
+      <p>public void setIsRandomized(_Bool V)</p>
+      <p>Defined at line 4159 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="76394C55F5C32303DC4F10846E26ED78E517758D">reorderDecls</h3>
+      <p>public void reorderDecls(const SmallVectorImpl&lt;Decl *&gt; &amp; Decls)</p>
+      <h3 id="C3C67E9F6E84C43DE852F714378A51CBDA722467">isInjectedClassName</h3>
+      <p>public _Bool isInjectedClassName()</p>
+      <div>
+        <div>
+          <p> Determines whether this declaration represents the injected class name.</p>
+          <p> The injected class name in C++ is the name of the class that appears inside the class itself. For example:</p>
+        </div>
+      </div>
+      <h3 id="3C737A55C9E1281892347784254C5B1EADA73634">isLambda</h3>
+      <p>public _Bool isLambda()</p>
+      <div>
+        <div>
+          <p> Determine whether this record is a class describing a lambda function object.</p>
+        </div>
+      </div>
+      <h3 id="88E0D26A3DE92823188FA1023CBA084EC567A6B5">isCapturedRecord</h3>
+      <p>public _Bool isCapturedRecord()</p>
+      <div>
+        <div>
+          <p> Determine whether this record is a record for captured variables in CapturedStmt construct.</p>
+        </div>
+      </div>
+      <h3 id="CE6C2F225D22AE78FF8DE07052F35B74B4624331">setCapturedRecord</h3>
+      <p>public void setCapturedRecord()</p>
+      <div>
+        <div>
+          <p> Mark the record as a record for captured variables in CapturedStmt construct.</p>
+        </div>
+      </div>
+      <h3 id="D63EE41874D91390C6C5BD63EA98DE66C9E1EC5E">getDefinition</h3>
+      <p>public RecordDecl * getDefinition()</p>
+      <p>Defined at line 4198 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Returns the RecordDecl that actually defines  this struct/union/class.  When determining whether or not a  struct/union/class is completely defined, one should use this  method as opposed to &apos;isCompleteDefinition&apos;.  &apos;isCompleteDefinition&apos; indicates whether or not a specific  RecordDecl is a completed definition, not whether or not the  record type is defined.  This method returns NULL if there is  no RecordDecl that defines the struct/union/tag.</p>
+        </div>
+      </div>
+      <h3 id="7F01C01816FDEA0AB1F8B473632A0C1F019C8137">isOrContainsUnion</h3>
+      <p>public _Bool isOrContainsUnion()</p>
+      <div>
+        <div>
+          <p> Returns whether this record is a union, or contains (at any nesting level) a union member. This is used by CMSE to warn about possible information leaks.</p>
+        </div>
+      </div>
+      <h3 id="F2FC02794B98F55D5E07E1D5ADE4F03B238B7AA0">fields</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         fields()
+      </p>
+      <p>Defined at line 4213 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="507260F81457885D9CACC5D17673C89AEC156091">field_begin</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         field_begin()
+      </p>
+      <h3 id="01D0048C607A6C49DD0DD876B0AACCC38E5757A3">field_end</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         field_end()
+      </p>
+      <p>Defined at line 4216 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="2F270E97F35FA87C3EDE83E2DCA95E0D7C43460D">field_empty</h3>
+      <p>public _Bool field_empty()</p>
+      <p>Defined at line 4221 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Whether there are any fields (non-static data members) in this record.</p>
+        </div>
+      </div>
+      <h3 id="8CDC4B7868A4CB3AD47D664043239EA19FA13284">completeDefinition</h3>
+      <p>public void completeDefinition()</p>
+      <div>
+        <div>
+          <p> Note that the definition of this type is now complete.</p>
+        </div>
+      </div>
+      <h3 id="99A38039AB75F539736D5FFB2CB82484B4C44E4D">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 4228 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="E330922DDD8C95611058534D0F4E516B27859AD2">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 4229 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="D14B13E2FA46658CAE3F3670C61B78ADC5C4577F">isMsStruct</h3>
+      <p>public _Bool isMsStruct(const ASTContext &amp; C)</p>
+      <div>
+        <div>
+          <p> Get whether or not this is an ms_struct which can be turned on with an attribute, pragma, or -mms-bitfields commandline option.</p>
+        </div>
+      </div>
+      <h3 id="24C93706AC9F998339281F45AB1062CC1BB9CB00">mayInsertExtraPadding</h3>
+      <p>public _Bool mayInsertExtraPadding(_Bool EmitRemark)</p>
+      <div>
+        <div>
+          <p> Whether we are allowed to insert extra padding between fields. These padding are added to help AddressSanitizer detect intra-object-overflow bugs.</p>
+        </div>
+      </div>
+      <h3 id="8379565DC440BFFD87F5D04548D084B1EF836859">findFirstNamedDataMember</h3>
+      <p>public const FieldDecl * findFirstNamedDataMember()</p>
+      <div>
+        <div>
+          <p> Finds the first data member which has a name. nullptr is returned if no named data member exists.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="809A55C63B9D954CC4212085DC1D1191D9700F06">enum ArgPassingKind</h3>
+      <ul>
+        <li>APK_CanPassInRegs</li>
+        <li>APK_CannotPassInRegs</li>
+        <li>APK_CanNeverPassInRegs</li>
+      </ul>
+      <p>Defined at line 3996 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Enum that represents the different ways arguments are passed to and returned from function calls. This takes into account the target-specific and version-specific rules along with the rules determined by the language.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#588D8FB5FDCEAFCC97F34438BBA562EBE8D8898A">RecordDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#363470BD85D71D4A7A41866EACED1005AB9F90D7">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#09AA3C267BB20C0F0F30F0DE78DBB438921348E6">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D7CDF751E4756D7F92DDB92B0658D5F833A0CA0">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC17547EF6AFA4253E031F55700B4EAF8143223A">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3882F5B870EB4157F47D67FE4EF17E93399BD68B">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF5C64FE848083396307F199FC213495CD63DC44">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#856423742C97249F55A38F6B51D8F0EB00F9291F">hasFlexibleArrayMember</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#286616C42CAD67C433CCA2CCA95C8CADFCFE74A5">setHasFlexibleArrayMember</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7017EDFB9C44996B37497CDDF577B0791A3AACCE">isAnonymousStructOrUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C827E2A1088A7F1FE2A29EB1952C3EDC3BA14DD1">setAnonymousStructOrUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#34BFB4D4F1746B71832189B37BCB2C888F186C12">hasObjectMember</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DB3E35DA432C3801F06FFA659A69D5788B52F85">setHasObjectMember</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CFFDF87040064B7D43885B77F34B145C05AE77D">hasVolatileMember</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A9037339DAE4B64C73C2F4F89B5E3E51F6C0AB1">setHasVolatileMember</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C6B4F4B34A0B8E94F7D806D6C202295ED18F798">hasLoadedFieldsFromExternalStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7516440F1603B81B7DEC781879DB013FB29B80F8">setHasLoadedFieldsFromExternalStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08CC3F8BE5DF2C299215C25B9EE20841F76CA0F3">isNonTrivialToPrimitiveDefaultInitialize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C79E79549C0632A7BC97892178D7FA7620C654AA">setNonTrivialToPrimitiveDefaultInitialize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64BC3CE896694C0FB186EE29DB855BC49FEF1566">isNonTrivialToPrimitiveCopy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD0DE6D502E9FBEAC137E648E3FE61EFB3068276">setNonTrivialToPrimitiveCopy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13E6CA650DB16243449969E38394131DC8B31309">isNonTrivialToPrimitiveDestroy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3FFFC55953F9C6C10EAC6DC7B0520B68E3191440">setNonTrivialToPrimitiveDestroy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#18FA5721A1A06AC5A1B009AE0D0ADA69E3C0F0B5">hasNonTrivialToPrimitiveDefaultInitializeCUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9A6B906DAD5A09C51D2B957E80E281FE3134941">setHasNonTrivialToPrimitiveDefaultInitializeCUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0830FE6C322FC56E74A7633EAD9FCA821914D48">hasNonTrivialToPrimitiveDestructCUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2BEDEA3C14426477EB3687865E338418194E348">setHasNonTrivialToPrimitiveDestructCUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#80DE43280E7EB521F558A8287066005F6181C940">hasNonTrivialToPrimitiveCopyCUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B654183A08CEAC18C626D1920BF410910C388F1C">setHasNonTrivialToPrimitiveCopyCUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24993B991F74A826342502ABF7A88D38C0F9E33D">canPassInRegisters</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC9B2DAC7E73EE9D711F062BC94AAE2FE5B739DD">getArgPassingRestrictions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D7EB8F1CAE8E4A28D23B6891E91CF1452E3D7E3">setArgPassingRestrictions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#355C4EE0A90C3244E4E0B77C5DE4F598EC37A52D">isParamDestroyedInCallee</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE5652A1F5088FDDCE03D2F94402D9809E9FFFF2">setParamDestroyedInCallee</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#639E8A2CD7AEA09627F9F217154FBF584F2370F0">isRandomized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D8C59EEBE04AD851FC70EB0A76EA0B5912A0486">setIsRandomized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76394C55F5C32303DC4F10846E26ED78E517758D">reorderDecls</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3C67E9F6E84C43DE852F714378A51CBDA722467">isInjectedClassName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C737A55C9E1281892347784254C5B1EADA73634">isLambda</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88E0D26A3DE92823188FA1023CBA084EC567A6B5">isCapturedRecord</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE6C2F225D22AE78FF8DE07052F35B74B4624331">setCapturedRecord</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D63EE41874D91390C6C5BD63EA98DE66C9E1EC5E">getDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F01C01816FDEA0AB1F8B473632A0C1F019C8137">isOrContainsUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2FC02794B98F55D5E07E1D5ADE4F03B238B7AA0">fields</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#507260F81457885D9CACC5D17673C89AEC156091">field_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01D0048C607A6C49DD0DD876B0AACCC38E5757A3">field_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F270E97F35FA87C3EDE83E2DCA95E0D7C43460D">field_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CDC4B7868A4CB3AD47D664043239EA19FA13284">completeDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99A38039AB75F539736D5FFB2CB82484B4C44E4D">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E330922DDD8C95611058534D0F4E516B27859AD2">classofKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D14B13E2FA46658CAE3F3670C61B78ADC5C4577F">isMsStruct</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24C93706AC9F998339281F45AB1062CC1BB9CB00">mayInsertExtraPadding</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8379565DC440BFFD87F5D04548D084B1EF836859">findFirstNamedDataMember</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#809A55C63B9D954CC4212085DC1D1191D9700F06">ArgPassingKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

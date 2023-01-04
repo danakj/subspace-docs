@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPLastprivateClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPLastprivateClause</h1>
+    <p>Defined at line 2770 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents clause &apos;lastprivate&apos; in the &apos;#pragma omp ...&apos; directives.</p>
+        <p> In this example directive &apos;#pragma omp simd&apos; has clause &apos;lastprivate&apos; with the variables &apos;a&apos; and &apos;b&apos;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from OMPVarListClause&lt;OMPLastprivateClause&gt;, 
+      <a href="OMPClauseWithPostUpdate.html">OMPClauseWithPostUpdate</a>
+      , llvm::TrailingObjects&lt;OMPLastprivateClause, Expr *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9A6BD36166A899B7B926DB30B717549F3F44EF4A">Create</h3>
+      <p>
+        public OMPLastprivateClause * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         VL, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         SrcExprs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         DstExprs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         AssignmentOps, 
+        <a href="OpenMPLastprivateModifier.html">OpenMPLastprivateModifier</a>
+         LPKind, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LPKindLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ColonLoc, Stmt * PreInit, Expr * PostUpdate)
+      </p>
+      <div>
+        <div>
+          <p> Creates clause with a list of variables </p>
+          <p> Required for proper codegen of final assignment performed by the lastprivate clause.</p>
+        </div>
+      </div>
+      <h3 id="C192248D8FF2FF9F82502C09873F9728658AE2BF">CreateEmpty</h3>
+      <p>public OMPLastprivateClause * CreateEmpty(const ASTContext &amp; C, unsigned int N)</p>
+      <div>
+        <div>
+          <p> Creates an empty clause with the place for  variables.</p>
+        </div>
+      </div>
+      <h3 id="2B9B7CA0DCFB2C6A8D5EA020C6B86A9F11E5457F">getKind</h3>
+      <p>
+        public 
+        <a href="OpenMPLastprivateModifier.html">OpenMPLastprivateModifier</a>
+         getKind()
+      </p>
+      <p>Defined at line 2924 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Lastprivate kind.</p>
+        </div>
+      </div>
+      <h3 id="44837F8D336B0CE524AAC34D70ED4FF59343B7E7">getKindLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getKindLoc()
+      </p>
+      <p>Defined at line 2926 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the location of the lastprivate kind.</p>
+        </div>
+      </div>
+      <h3 id="07B7022B817820D039AAE7FA22E8D682197F0814">getColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getColonLoc()
+      </p>
+      <p>Defined at line 2928 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the location of the &apos;:&apos; symbol, if any.</p>
+        </div>
+      </div>
+      <h3 id="30695424871FD4C2F46C0B689A7BC2D5D566585C">setPrivateCopies</h3>
+      <p>
+        public void setPrivateCopies(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         PrivateCopies)
+      </p>
+      <div>
+        <div>
+          <p> Set list of helper expressions, required for generation of private copies of original lastprivate variables.</p>
+        </div>
+      </div>
+      <h3 id="074D61A618083BA42A0CD019F89BFB939F45BBCD">private_copies</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         private_copies()
+      </p>
+      <p>Defined at line 2940 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="A496B8166071167254F491D2FBA392A5E43E614D">private_copies</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         private_copies()
+      </p>
+      <p>Defined at line 2945 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="88CE632EF5229EBE33B0610B5C8B38A1E8E37674">source_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         source_exprs()
+      </p>
+      <p>Defined at line 2950 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="A7612FFB172A676E10D727EE516A5E1745AAE486">source_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         source_exprs()
+      </p>
+      <p>Defined at line 2955 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="3CC0B4944061D4E55D30CEEE04D1E2A189126463">destination_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         destination_exprs()
+      </p>
+      <p>Defined at line 2959 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="FB2D7A06EFB421359EC0A19648C7136BDF629988">destination_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         destination_exprs()
+      </p>
+      <p>Defined at line 2964 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="9060875B44BB91FA92F491A2D3A2FDA312CA4319">assignment_ops</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         assignment_ops()
+      </p>
+      <p>Defined at line 2969 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="4A4735CB66713ED40CEA41EB31026B079DFEB08D">assignment_ops</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         assignment_ops()
+      </p>
+      <p>Defined at line 2974 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="7B8091DEE7420BF2843B9263F2255AF42F7064E8">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2979 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="94C1E16D17B3C5F2A2CB45594CBF23C125078737">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2984 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="D50D02503FE2E1C41015269FD5165FEAEBA19C31">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 2989 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="F77AC549D0E0CB783D04A3740327D988509E1C7F">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 2992 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="63B28946F7D60C56BE933C9A0572126AB7222639">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 2996 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9A6BD36166A899B7B926DB30B717549F3F44EF4A">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C192248D8FF2FF9F82502C09873F9728658AE2BF">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B9B7CA0DCFB2C6A8D5EA020C6B86A9F11E5457F">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44837F8D336B0CE524AAC34D70ED4FF59343B7E7">getKindLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07B7022B817820D039AAE7FA22E8D682197F0814">getColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30695424871FD4C2F46C0B689A7BC2D5D566585C">setPrivateCopies</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#074D61A618083BA42A0CD019F89BFB939F45BBCD">private_copies</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A496B8166071167254F491D2FBA392A5E43E614D">private_copies</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88CE632EF5229EBE33B0610B5C8B38A1E8E37674">source_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7612FFB172A676E10D727EE516A5E1745AAE486">source_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3CC0B4944061D4E55D30CEEE04D1E2A189126463">destination_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB2D7A06EFB421359EC0A19648C7136BDF629988">destination_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9060875B44BB91FA92F491A2D3A2FDA312CA4319">assignment_ops</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A4735CB66713ED40CEA41EB31026B079DFEB08D">assignment_ops</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B8091DEE7420BF2843B9263F2255AF42F7064E8">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#94C1E16D17B3C5F2A2CB45594CBF23C125078737">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D50D02503FE2E1C41015269FD5165FEAEBA19C31">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F77AC549D0E0CB783D04A3740327D988509E1C7F">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63B28946F7D60C56BE933C9A0572126AB7222639">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

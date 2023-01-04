@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CharUnits</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CharUnits</h1>
+    <p>Defined at line 38 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+    <div>
+      <div>
+        <p> CharUnits - This is an opaque type for sizes expressed in character units. Instances of this type represent a quantity as a multiple of the size of the standard C type, char, on the target architecture. As an opaque type, CharUnits protects you from accidentally combining operations on quantities in bit units and character units.</p>
+        <p> In both C and C++, an object of type &apos;char&apos;, &apos;signed char&apos;, or &apos;unsigned char&apos; occupies exactly one byte, so &apos;character unit&apos; and &apos;byte&apos; refer to the same quantity of storage. However, we use the term &apos;character unit&apos; rather than &apos;byte&apos; to avoid an implication that a character unit is exactly 8 bits.</p>
+        <p> For portability, never assume that a target character is 8 bits wide. Use CharUnit values wherever you calculate sizes, offsets, or alignments in character units.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A335E74B20D42CEBD0DEAD5CBEF22D8165E5554D">CharUnits</h3>
+      <p>public void CharUnits()</p>
+      <p>Defined at line 50 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> CharUnits - A default constructor.</p>
+        </div>
+      </div>
+      <h3 id="3ECE8FD2487B61578C6EBF97E1FA635E26513103">Zero</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         Zero()
+      </p>
+      <p>Defined at line 53 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> Zero - Construct a CharUnits quantity of zero.</p>
+        </div>
+      </div>
+      <h3 id="CA6D4C3EC99EBFC5BCB1F28F8EBE0A9F36CF362C">One</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         One()
+      </p>
+      <p>Defined at line 58 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> One - Construct a CharUnits quantity of one.</p>
+        </div>
+      </div>
+      <h3 id="2E8F3D2FE3ADFAAED5D23AF6B43E56C8B249EF2D">fromQuantity</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         fromQuantity(QuantityType Quantity)
+      </p>
+      <p>Defined at line 63 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> fromQuantity - Construct a CharUnits quantity from a raw integer type.</p>
+        </div>
+      </div>
+      <h3 id="364A30D6662B9773D91154B0EC730810177A7A74">operator+=</h3>
+      <p>public CharUnits &amp; operator+=(const CharUnits &amp; Other)</p>
+      <p>Defined at line 68 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> Compound assignment.</p>
+        </div>
+      </div>
+      <h3 id="F25BBDC08925C2C0257924D4935503BFD77E4110">operator++</h3>
+      <p>public CharUnits &amp; operator++()</p>
+      <p>Defined at line 72 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="FB6F90D7452EC245C7CB258FDD5E0B32FF15EBAA">operator++</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         operator++(int )
+      </p>
+      <p>Defined at line 76 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="F06FE77718A6FC9FDB25D1B05E4C781B8406AD21">operator-=</h3>
+      <p>public CharUnits &amp; operator-=(const CharUnits &amp; Other)</p>
+      <p>Defined at line 79 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="6C9F9B6FF560822134D35A0FED5CD7ACC846FC8C">operator--</h3>
+      <p>public CharUnits &amp; operator--()</p>
+      <p>Defined at line 83 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="131CB33813080C8E7F114B34E6891848CFAF0244">operator--</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         operator--(int )
+      </p>
+      <p>Defined at line 87 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="D31CE780CE5FBD9392862E615BBC5EB5C9EF58F2">operator==</h3>
+      <p>public _Bool operator==(const CharUnits &amp; Other)</p>
+      <p>Defined at line 92 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> Comparison operators.</p>
+        </div>
+      </div>
+      <h3 id="0698E836A17BF218B69706A58407B406A14CAC79">operator!=</h3>
+      <p>public _Bool operator!=(const CharUnits &amp; Other)</p>
+      <p>Defined at line 95 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="1B88EBA8FA2C486A99F33480095CFB501A4B82F3">operator&lt;</h3>
+      <p>public _Bool operator&lt;(const CharUnits &amp; Other)</p>
+      <p>Defined at line 100 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> Relational operators.</p>
+        </div>
+      </div>
+      <h3 id="C43D81B2F92940B73A037C54E428003FDA83D1DA">operator&lt;=</h3>
+      <p>public _Bool operator&lt;=(const CharUnits &amp; Other)</p>
+      <p>Defined at line 103 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="BC784A4E18F0C86E9BA8ACEBF7A9B42BB1720C4D">operator&gt;</h3>
+      <p>public _Bool operator&gt;(const CharUnits &amp; Other)</p>
+      <p>Defined at line 106 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="6C79E186E68E5C2743972550F96257EA0A05AE3D">operator&gt;=</h3>
+      <p>public _Bool operator&gt;=(const CharUnits &amp; Other)</p>
+      <p>Defined at line 109 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="95AB3586D794430AEC5B22937DAA8DC63976E98E">isZero</h3>
+      <p>public _Bool isZero()</p>
+      <p>Defined at line 116 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> isZero - Test whether the quantity equals zero.</p>
+        </div>
+      </div>
+      <h3 id="49F08F1089E5CE59F3DA17205830DEB04BDC1AD1">isOne</h3>
+      <p>public _Bool isOne()</p>
+      <p>Defined at line 119 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> isOne - Test whether the quantity equals one.</p>
+        </div>
+      </div>
+      <h3 id="D82B6ABD8FB3F7A56131D2D1F96AD7D102F474B7">isPositive</h3>
+      <p>public _Bool isPositive()</p>
+      <p>Defined at line 122 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> isPositive - Test whether the quantity is greater than zero.</p>
+        </div>
+      </div>
+      <h3 id="CB3EA0871A459938F0283BE0FA61ADB9C4A20F7E">isNegative</h3>
+      <p>public _Bool isNegative()</p>
+      <p>Defined at line 125 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> isNegative - Test whether the quantity is less than zero.</p>
+        </div>
+      </div>
+      <h3 id="D740970A155636FD8EEAE3E1844E16E19C385277">isPowerOfTwo</h3>
+      <p>public _Bool isPowerOfTwo()</p>
+      <p>Defined at line 129 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> isPowerOfTwo - Test whether the quantity is a power of two. Zero is not a power of two.</p>
+        </div>
+      </div>
+      <h3 id="361DCD01D3BCDFB5A5312FDF8058FA2CD8BC9895">isMultipleOf</h3>
+      <p>
+        public _Bool isMultipleOf(
+        <a href="CharUnits.html">CharUnits</a>
+         N)
+      </p>
+      <p>Defined at line 137 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> Test whether this is a multiple of the other value.</p>
+          <p> Among other things, this promises that self.alignTo(N) will just return self.</p>
+        </div>
+      </div>
+      <h3 id="23CD6736C84DF12D5DFB7CC1B1141964A635FAD0">operator*</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         operator*(QuantityType N)
+      </p>
+      <p>Defined at line 142 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> Arithmetic operators.</p>
+        </div>
+      </div>
+      <h3 id="9B47FE88936E01E2040DFE34F21469CF4A97BB39">operator*=</h3>
+      <p>public CharUnits &amp; operator*=(QuantityType N)</p>
+      <p>Defined at line 145 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="7C1951D4DAFF57AF80578F4EA277951EA5C68010">operator/</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         operator/(QuantityType N)
+      </p>
+      <p>Defined at line 149 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="C98FCEB043863D5A1DDF84B85064087D7F39D8F7">operator/=</h3>
+      <p>public CharUnits &amp; operator/=(QuantityType N)</p>
+      <p>Defined at line 152 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="25FD57304305BE312252C5AFD21FBAB94B35FA8C">operator/</h3>
+      <p>public QuantityType operator/(const CharUnits &amp; Other)</p>
+      <p>Defined at line 156 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="F930A6D86D52B344639FCAD82B2752F34F10EFA6">operator%</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         operator%(QuantityType N)
+      </p>
+      <p>Defined at line 159 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="97EDD849874A685DAD06D71DDE0A87595A9EF7CE">operator%</h3>
+      <p>public QuantityType operator%(const CharUnits &amp; Other)</p>
+      <p>Defined at line 162 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="1BD6FE544883314B78C05F5109534DF5E7DCC9FD">operator+</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         operator+(const CharUnits &amp; Other)
+      </p>
+      <p>Defined at line 165 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="59C77C15A7C9519B136C5EEBE9BF3F7EEC79C441">operator-</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         operator-(const CharUnits &amp; Other)
+      </p>
+      <p>Defined at line 168 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="CDCD12DFEC326239FF62A80D94E5C8F548647851">operator-</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         operator-()
+      </p>
+      <p>Defined at line 171 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <h3 id="3ED95CED591236A8073F260F79F0BDF938245082">getQuantity</h3>
+      <p>public QuantityType getQuantity()</p>
+      <p>Defined at line 179 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> getQuantity - Get the raw integer representation of this quantity.</p>
+        </div>
+      </div>
+      <h3 id="02282B10D2215CBA2904CDC7DED778332CA90C02">getAsAlign</h3>
+      <p>
+        public 
+        <a href="../llvm/Align.html">Align</a>
+         getAsAlign()
+      </p>
+      <p>Defined at line 183 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> getAsAlign - Returns Quantity as a valid llvm::Align, Beware llvm::Align assumes power of two 8-bit bytes.</p>
+        </div>
+      </div>
+      <h3 id="B7E2AE1BA6F8191619ACD544742A6AD9CCE118A5">getAsMaybeAlign</h3>
+      <p>
+        public 
+        <a href="../llvm/MaybeAlign.html">MaybeAlign</a>
+         getAsMaybeAlign()
+      </p>
+      <p>Defined at line 188 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> getAsMaybeAlign - Returns Quantity as a valid llvm::Align or std::nullopt, Beware llvm::MaybeAlign assumes power of two 8-bit bytes.</p>
+        </div>
+      </div>
+      <h3 id="EB486568FC6CF5D50D223932BBD0957D1F8AF717">alignTo</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         alignTo(const CharUnits &amp; Align)
+      </p>
+      <p>Defined at line 195 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> alignTo - Returns the next integer (mod 2**64) that is greater than or equal to this quantity and is a multiple of  Align must be non-zero.</p>
+        </div>
+      </div>
+      <h3 id="C11AC0A3A1BCB0B707145A99B0181CAD6F184C12">alignmentAtOffset</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         alignmentAtOffset(
+        <a href="CharUnits.html">CharUnits</a>
+         offset)
+      </p>
+      <p>Defined at line 201 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> Given that this is a non-zero alignment value, what is the alignment at the given offset?</p>
+        </div>
+      </div>
+      <h3 id="EE0D5400D4D851399B7FA8B77ABBA8F17036018F">alignmentOfArrayElement</h3>
+      <p>
+        public 
+        <a href="CharUnits.html">CharUnits</a>
+         alignmentOfArrayElement(
+        <a href="CharUnits.html">CharUnits</a>
+         elementSize)
+      </p>
+      <p>Defined at line 208 of file /usr/lib/llvm-16/include/clang/AST/CharUnits.h</p>
+      <div>
+        <div>
+          <p> Given that this is the alignment of the first element of an array, return the minimum alignment of any element in the array.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A335E74B20D42CEBD0DEAD5CBEF22D8165E5554D">CharUnits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3ECE8FD2487B61578C6EBF97E1FA635E26513103">Zero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA6D4C3EC99EBFC5BCB1F28F8EBE0A9F36CF362C">One</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E8F3D2FE3ADFAAED5D23AF6B43E56C8B249EF2D">fromQuantity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#364A30D6662B9773D91154B0EC730810177A7A74">operator+=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F25BBDC08925C2C0257924D4935503BFD77E4110">operator++</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB6F90D7452EC245C7CB258FDD5E0B32FF15EBAA">operator++</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F06FE77718A6FC9FDB25D1B05E4C781B8406AD21">operator-=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C9F9B6FF560822134D35A0FED5CD7ACC846FC8C">operator--</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#131CB33813080C8E7F114B34E6891848CFAF0244">operator--</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D31CE780CE5FBD9392862E615BBC5EB5C9EF58F2">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0698E836A17BF218B69706A58407B406A14CAC79">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B88EBA8FA2C486A99F33480095CFB501A4B82F3">operator&lt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C43D81B2F92940B73A037C54E428003FDA83D1DA">operator&lt;=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC784A4E18F0C86E9BA8ACEBF7A9B42BB1720C4D">operator&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C79E186E68E5C2743972550F96257EA0A05AE3D">operator&gt;=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95AB3586D794430AEC5B22937DAA8DC63976E98E">isZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49F08F1089E5CE59F3DA17205830DEB04BDC1AD1">isOne</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D82B6ABD8FB3F7A56131D2D1F96AD7D102F474B7">isPositive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB3EA0871A459938F0283BE0FA61ADB9C4A20F7E">isNegative</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D740970A155636FD8EEAE3E1844E16E19C385277">isPowerOfTwo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#361DCD01D3BCDFB5A5312FDF8058FA2CD8BC9895">isMultipleOf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23CD6736C84DF12D5DFB7CC1B1141964A635FAD0">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B47FE88936E01E2040DFE34F21469CF4A97BB39">operator*=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C1951D4DAFF57AF80578F4EA277951EA5C68010">operator/</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C98FCEB043863D5A1DDF84B85064087D7F39D8F7">operator/=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25FD57304305BE312252C5AFD21FBAB94B35FA8C">operator/</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F930A6D86D52B344639FCAD82B2752F34F10EFA6">operator%</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97EDD849874A685DAD06D71DDE0A87595A9EF7CE">operator%</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BD6FE544883314B78C05F5109534DF5E7DCC9FD">operator+</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59C77C15A7C9519B136C5EEBE9BF3F7EEC79C441">operator-</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDCD12DFEC326239FF62A80D94E5C8F548647851">operator-</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3ED95CED591236A8073F260F79F0BDF938245082">getQuantity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02282B10D2215CBA2904CDC7DED778332CA90C02">getAsAlign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7E2AE1BA6F8191619ACD544742A6AD9CCE118A5">getAsMaybeAlign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB486568FC6CF5D50D223932BBD0957D1F8AF717">alignTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C11AC0A3A1BCB0B707145A99B0181CAD6F184C12">alignmentAtOffset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE0D5400D4D851399B7FA8B77ABBA8F17036018F">alignmentOfArrayElement</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class basic_file_status</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/sys/fs" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class basic_file_status</h1>
+    <p>Defined at line 137 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+    <div>
+      <div>
+        <p> Represents the result of a call to directory_iterator::status(). This is a subset of the information returned by a regular sys::fs::status() call, and represents the information provided by Windows FileFirstFile/FindNextFile.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected time_t fs_st_atime</li>
+      <li>protected time_t fs_st_mtime</li>
+      <li>protected uint32_t fs_st_atime_nsec</li>
+      <li>protected uint32_t fs_st_mtime_nsec</li>
+      <li>protected uid_t fs_st_uid</li>
+      <li>protected gid_t fs_st_gid</li>
+      <li>protected off_t fs_st_size</li>
+      <li>
+        protected 
+        <a href="file_type.html">file_type</a>
+         Type
+      </li>
+      <li>
+        protected 
+        <a href="perms.html">perms</a>
+         Perms
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="45BADB7BE02D2047B75B34315FA0A00ECB2717E3">basic_file_status</h3>
+      <p>public void basic_file_status()</p>
+      <p>Defined at line 159 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="A634690EC4AA0DABE7F35B0D35CFCFFD570B5618">basic_file_status</h3>
+      <p>
+        public void basic_file_status(
+        <a href="file_type.html">file_type</a>
+         Type)
+      </p>
+      <p>Defined at line 161 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="C0CE5E772EB8C7F87DC76AC71B89805A926E52A1">basic_file_status</h3>
+      <p>
+        public void basic_file_status(
+        <a href="file_type.html">file_type</a>
+         Type, 
+        <a href="perms.html">perms</a>
+         Perms, time_t ATime, uint32_t ATimeNSec, time_t MTime, uint32_t MTimeNSec, uid_t UID, gid_t GID, off_t Size)
+      </p>
+      <p>Defined at line 164 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="0710AED8F8682ECC1909DF49A601670CA69DEC0C">type</h3>
+      <p>
+        public 
+        <a href="file_type.html">file_type</a>
+         type()
+      </p>
+      <p>Defined at line 184 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> getters</p>
+        </div>
+      </div>
+      <h3 id="CA21C9EAEE71C9438917C925D8D12DCC3279DEC1">permissions</h3>
+      <p>
+        public 
+        <a href="perms.html">perms</a>
+         permissions()
+      </p>
+      <p>Defined at line 185 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="6A432A74DDD54460C524C83F1330E0DA52139884">getLastAccessedTime</h3>
+      <p>
+        public 
+        <a href="../../../std/chrono/time_point.html">time_point</a>
+         getLastAccessedTime()
+      </p>
+      <div>
+        <div>
+          <p> The file access time as reported from the underlying file system.</p>
+          <p> Also see comments on  related to the precision of the returned value.</p>
+        </div>
+      </div>
+      <h3 id="7AA17A0C604F293A5BDC40DA9D8D4D78B8446DF2">getLastModificationTime</h3>
+      <p>
+        public 
+        <a href="../../../std/chrono/time_point.html">time_point</a>
+         getLastModificationTime()
+      </p>
+      <div>
+        <div>
+          <p> The file modification time as reported from the underlying file system.</p>
+          <p> The returned value allows for nanosecond precision but the actual resolution is an implementation detail of the underlying file system. There is no guarantee for what kind of resolution you can expect, the resolution can differ across platforms and even across mountpoints on the same machine.</p>
+        </div>
+      </div>
+      <h3 id="CEE0911FED14AD0980FDC6124EDBF8CDB249753A">getUser</h3>
+      <p>public uint32_t getUser()</p>
+      <p>Defined at line 203 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="2A28489952AF4F609381C3904E86717DB1273469">getGroup</h3>
+      <p>public uint32_t getGroup()</p>
+      <p>Defined at line 204 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="5B86D223D5CC1792AF4C13757AE70F55CAD3F25E">getSize</h3>
+      <p>public uint64_t getSize()</p>
+      <p>Defined at line 205 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="C84FF9857B8B6D23B18D6118245F03C89A3EEE88">type</h3>
+      <p>
+        public void type(
+        <a href="file_type.html">file_type</a>
+         v)
+      </p>
+      <p>Defined at line 221 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> setters</p>
+        </div>
+      </div>
+      <h3 id="CDD7226EBD7422E4C0A6C0E7E13E8B15974C2915">permissions</h3>
+      <p>
+        public void permissions(
+        <a href="perms.html">perms</a>
+         p)
+      </p>
+      <p>Defined at line 222 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#45BADB7BE02D2047B75B34315FA0A00ECB2717E3">basic_file_status</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A634690EC4AA0DABE7F35B0D35CFCFFD570B5618">basic_file_status</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0CE5E772EB8C7F87DC76AC71B89805A926E52A1">basic_file_status</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0710AED8F8682ECC1909DF49A601670CA69DEC0C">type</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA21C9EAEE71C9438917C925D8D12DCC3279DEC1">permissions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A432A74DDD54460C524C83F1330E0DA52139884">getLastAccessedTime</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7AA17A0C604F293A5BDC40DA9D8D4D78B8446DF2">getLastModificationTime</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CEE0911FED14AD0980FDC6124EDBF8CDB249753A">getUser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A28489952AF4F609381C3904E86717DB1273469">getGroup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B86D223D5CC1792AF4C13757AE70F55CAD3F25E">getSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C84FF9857B8B6D23B18D6118245F03C89A3EEE88">type</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDD7226EBD7422E4C0A6C0E7E13E8B15974C2915">permissions</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPTileDirective</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPTileDirective</h1>
+    <p>Defined at line 5492 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+    <div>
+      <div>
+        <p> This represents the &apos;#pragma omp tile&apos; loop transformation directive.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPLoopTransformationDirective.html">OMPLoopTransformationDirective</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="15EE664776141AC4C1658B1C68B8147561C8FD0E">Create</h3>
+      <p>
+        public OMPTileDirective * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Clauses, unsigned int NumLoops, Stmt * AssociatedStmt, Stmt * TransformedStmt, Stmt * PreInits)
+      </p>
+      <div>
+        <div>
+          <p> Create a new AST node representation for &apos;#pragma omp tile&apos;.</p>
+        </div>
+      </div>
+      <h3 id="6080DB2D7F6B7CE82A45FAE931B4276DFB4AE74D">CreateEmpty</h3>
+      <p>public OMPTileDirective * CreateEmpty(const ASTContext &amp; C, unsigned int NumClauses, unsigned int NumLoops)</p>
+      <div>
+        <div>
+          <p> Build an empty &apos;#pragma omp tile&apos; AST node for deserialization.</p>
+        </div>
+      </div>
+      <h3 id="67359ED946F59D95F26A046D236DB248B5918127">getTransformedStmt</h3>
+      <p>public Stmt * getTransformedStmt()</p>
+      <p>Defined at line 5556 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Gets/sets the associated loops after tiling.</p>
+          <p> This is in de-sugared format stored as a CompoundStmt.</p>
+          <p> Note that if the generated loops a become associated loops of another directive, they may need to be hoisted before them.</p>
+        </div>
+      </div>
+      <h3 id="90A27C00C38552695EF2D19CDBAC647FBB2CD229">getPreInits</h3>
+      <p>public Stmt * getPreInits()</p>
+      <p>Defined at line 5561 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Return preinits statement.</p>
+        </div>
+      </div>
+      <h3 id="210403F455FEB46B6028BE6EF60022DA51168D11">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 5563 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#15EE664776141AC4C1658B1C68B8147561C8FD0E">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6080DB2D7F6B7CE82A45FAE931B4276DFB4AE74D">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67359ED946F59D95F26A046D236DB248B5918127">getTransformedStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90A27C00C38552695EF2D19CDBAC647FBB2CD229">getPreInits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#210403F455FEB46B6028BE6EF60022DA51168D11">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

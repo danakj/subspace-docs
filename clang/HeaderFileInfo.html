@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct HeaderFileInfo</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct HeaderFileInfo</h1>
+    <p>Defined at line 58 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+    <div>
+      <div>
+        <p> The preprocessor keeps track of this information for each file that is #included.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public unsigned int isImport</li>
+      <li>public unsigned int isPragmaOnce</li>
+      <li>public unsigned int DirInfo</li>
+      <li>public unsigned int External</li>
+      <li>public unsigned int isModuleHeader</li>
+      <li>public unsigned int isCompilingModuleHeader</li>
+      <li>public unsigned int Resolved</li>
+      <li>public unsigned int IndexHeaderMapHeader</li>
+      <li>public unsigned int IsValid</li>
+      <li>public unsigned int ControllingMacroID</li>
+      <li>public const IdentifierInfo * ControllingMacro</li>
+      <li>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Framework
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3CCE0DBBE699955B5A648DCEF5BE01C8FAACBA48">HeaderFileInfo</h3>
+      <p>public void HeaderFileInfo()</p>
+      <p>Defined at line 120 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="8F4A4D0A0B21A28FC040F4D66C648047153A586A">getControllingMacro</h3>
+      <p>public const IdentifierInfo * getControllingMacro(ExternalPreprocessorSource * External)</p>
+      <div>
+        <div>
+          <p> Retrieve the controlling macro for this header file, if any.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3CCE0DBBE699955B5A648DCEF5BE01C8FAACBA48">HeaderFileInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F4A4D0A0B21A28FC040F4D66C648047153A586A">getControllingMacro</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

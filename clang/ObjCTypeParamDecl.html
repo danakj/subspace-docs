@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCTypeParamDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCTypeParamDecl</h1>
+    <p>Defined at line 580 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    <div>
+      <div>
+        <p> Represents the declaration of an Objective-C type parameter.</p>
+        <p> In the example above, both  and  are represented by has an explicit bound of  while  gets an implicit bound of </p>
+        <p> Objective-C type parameters are typedef-names in the grammar,</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TypedefNameDecl.html">TypedefNameDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="375F226CF41766B5FCBA49CDCD0C873CC59EE296">Create</h3>
+      <p>
+        public ObjCTypeParamDecl * Create(ASTContext &amp; ctx, DeclContext * dc, 
+        <a href="ObjCTypeParamVariance.html">ObjCTypeParamVariance</a>
+         variance, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         varianceLoc, unsigned int index, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         nameLoc, IdentifierInfo * name, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         colonLoc, TypeSourceInfo * boundInfo)
+      </p>
+      <h3 id="3B27C1E52E019A425EA62AA39D9B73CFDF9B2B2C">CreateDeserialized</h3>
+      <p>public ObjCTypeParamDecl * CreateDeserialized(ASTContext &amp; ctx, unsigned int ID)</p>
+      <h3 id="6D79494592797E14BEB62FC9CB7C0AF0C70C2D5C">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <h3 id="D2F580FD95198450EFCF083E048213134631EDB1">getVariance</h3>
+      <p>
+        public 
+        <a href="ObjCTypeParamVariance.html">ObjCTypeParamVariance</a>
+         getVariance()
+      </p>
+      <p>Defined at line 623 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Determine the variance of this type parameter.</p>
+        </div>
+      </div>
+      <h3 id="13DA543A1D3AFE34A88736337B2F45CCBE6D2B39">setVariance</h3>
+      <p>
+        public void setVariance(
+        <a href="ObjCTypeParamVariance.html">ObjCTypeParamVariance</a>
+         variance)
+      </p>
+      <p>Defined at line 628 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Set the variance of this type parameter.</p>
+        </div>
+      </div>
+      <h3 id="1C39097CE5E36235CEED781ECAC383EDB5C1F5B2">getVarianceLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getVarianceLoc()
+      </p>
+      <p>Defined at line 633 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the variance keyword.</p>
+        </div>
+      </div>
+      <h3 id="5F3E701A608AE93FB90D2B8D4611FD016883292C">getIndex</h3>
+      <p>public unsigned int getIndex()</p>
+      <p>Defined at line 636 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the index into its type parameter list.</p>
+        </div>
+      </div>
+      <h3 id="F6A4677E55A1843E1B354D14B6B551222B9C8E44">hasExplicitBound</h3>
+      <p>public _Bool hasExplicitBound()</p>
+      <p>Defined at line 640 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Whether this type parameter has an explicitly-written type bound, e.g., &quot;T : NSView&quot;.</p>
+        </div>
+      </div>
+      <h3 id="0D90E0F8EB484DB4D91A52011BC3B1797453C865">getColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getColonLoc()
+      </p>
+      <p>Defined at line 644 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the &apos;:&apos; separating the type parameter name from the explicitly-specified bound.</p>
+        </div>
+      </div>
+      <h3 id="F488BD39AC0126179B65598BAA84CC6AAA4CFB87">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 647 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="A0AEAC1F08F1CF8CB30BAB764C647BFDAAC515A0">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 648 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#375F226CF41766B5FCBA49CDCD0C873CC59EE296">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B27C1E52E019A425EA62AA39D9B73CFDF9B2B2C">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D79494592797E14BEB62FC9CB7C0AF0C70C2D5C">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2F580FD95198450EFCF083E048213134631EDB1">getVariance</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13DA543A1D3AFE34A88736337B2F45CCBE6D2B39">setVariance</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C39097CE5E36235CEED781ECAC383EDB5C1F5B2">getVarianceLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F3E701A608AE93FB90D2B8D4611FD016883292C">getIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6A4677E55A1843E1B354D14B6B551222B9C8E44">hasExplicitBound</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D90E0F8EB484DB4D91A52011BC3B1797453C865">getColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F488BD39AC0126179B65598BAA84CC6AAA4CFB87">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0AEAC1F08F1CF8CB30BAB764C647BFDAAC515A0">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

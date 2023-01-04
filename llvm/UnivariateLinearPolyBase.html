@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UnivariateLinearPolyBase</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UnivariateLinearPolyBase</h1>
+    <p>Defined at line 165 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+    <div>
+      <div>
+        <p> UnivariateLinearPolyBase is a base class for ElementCount and TypeSize. Like LinearPolyBase it tries to represent a linear polynomial where only one dimension can be set at any time, e.g.   0 * scale0 + 0 * scale1 + ... + cJ * scaleJ + ... + 0 * scaleK The dimension that is set is the univariate dimension.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected ScalarTy Value</li>
+      <li>protected unsigned int UnivariateDim</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="91BFEC8179E5B7D7F79407A296958131408ED220">UnivariateLinearPolyBase&lt;LeafTy&gt;</h3>
+      <p>protected void UnivariateLinearPolyBase&lt;LeafTy&gt;(ScalarTy Val, unsigned int UnivariateDim)</p>
+      <p>Defined at line 176 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="7515453B8EE11C948F6B15459CE97DE66F8DD9AB">operator==</h3>
+      <p>public _Bool operator==(const UnivariateLinearPolyBase&lt;LeafTy&gt; &amp; RHS)</p>
+      <p>Defined at line 221 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="AF6769D5E577F781E12F468717345E5F76E558B0">operator!=</h3>
+      <p>public _Bool operator!=(const UnivariateLinearPolyBase&lt;LeafTy&gt; &amp; RHS)</p>
+      <p>Defined at line 225 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="BC7B6C977C820F83E61A4CE72F6F89117BEF2F20">isZero</h3>
+      <p>public _Bool isZero()</p>
+      <p>Defined at line 229 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="640B42C1CA3AD797112C66078C7F3F5BE4118E5B">isNonZero</h3>
+      <p>public _Bool isNonZero()</p>
+      <p>Defined at line 230 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="FB3A483CD70175BE87F3F7DADFFFAA4258C565B7">operator bool</h3>
+      <p>public _Bool operator bool()</p>
+      <p>Defined at line 231 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="7BA337D2FD157468774C447F837097D95A89BBD0">getValue</h3>
+      <p>public ScalarTy getValue(unsigned int Dim)</p>
+      <p>Defined at line 232 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="25C1591ED2523A21FA73AF0303326246281FA4C9">getWithIncrement</h3>
+      <p>public LeafTy getWithIncrement(ScalarTy RHS)</p>
+      <p>Defined at line 237 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <div>
+        <div>
+          <p> Add  to the value at the univariate dimension.</p>
+        </div>
+      </div>
+      <h3 id="48395C396DD4CAC5F7D93A61DC26555C8E71C868">getWithDecrement</h3>
+      <p>public LeafTy getWithDecrement(ScalarTy RHS)</p>
+      <p>Defined at line 243 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <div>
+        <div>
+          <p> Subtract  from the value at the univariate dimension.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#91BFEC8179E5B7D7F79407A296958131408ED220">UnivariateLinearPolyBase&lt;LeafTy&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7515453B8EE11C948F6B15459CE97DE66F8DD9AB">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF6769D5E577F781E12F468717345E5F76E558B0">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC7B6C977C820F83E61A4CE72F6F89117BEF2F20">isZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#640B42C1CA3AD797112C66078C7F3F5BE4118E5B">isNonZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB3A483CD70175BE87F3F7DADFFFAA4258C565B7">operator bool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BA337D2FD157468774C447F837097D95A89BBD0">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25C1591ED2523A21FA73AF0303326246281FA4C9">getWithIncrement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48395C396DD4CAC5F7D93A61DC26555C8E71C868">getWithDecrement</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

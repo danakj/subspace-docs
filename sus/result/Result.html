@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Result</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/result" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Result</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#59">59</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A016ADB2D54529679C81E7BE81D1D67D2AEEE7BE">with</h3>
+      <p>
+        public 
+        <a href="Result.html">Result</a>
+         with(const T &amp; t)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#70">70</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Construct an Result that is holding the given success value.</p>
+        </div>
+      </div>
+      <h3 id="2FB067C38F6DCC400721C304EB9266D4131966B3">with</h3>
+      <p>
+        public 
+        <a href="Result.html">Result</a>
+         with(T &amp;&amp; t)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#76">76</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Construct an Result that is holding the given success value.</p>
+        </div>
+      </div>
+      <h3 id="0D961EB1BA5ED395003022514CD936233C3750AD">with_err</h3>
+      <p>
+        public 
+        <a href="Result.html">Result</a>
+         with_err(const E &amp; e)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#83">83</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Construct an Result that is holding the given error value.</p>
+        </div>
+      </div>
+      <h3 id="06ED09872723CF6DEC5EB5ABDBAF94CAA3899466">with_err</h3>
+      <p>
+        public 
+        <a href="Result.html">Result</a>
+         with_err(E &amp;&amp; e)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#89">89</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Construct an Result that is holding the given error value.</p>
+        </div>
+      </div>
+      <h3 id="E129F4737750FEA2AAA4556DB6C760E6B81D6347">from_iter</h3>
+      <p>
+        public 
+        <a href="Result.html">Result</a>
+         from_iter(::sus::iter::IteratorBase&lt;Result&lt;U, E&gt; &gt; &amp;&amp; iter)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#101">101</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Takes each element in the Iterator: if it is an Err, no further elements are taken, and the Err is returned. Should no Err occur, a container with the values of each Result is returned.</p>
+          <p> sus::iter::FromIterator trait.</p>
+        </div>
+      </div>
+      <h3 id="52B8B792CC9188C881DC31C346CA86B7646F1951">~Result&lt;T, E&gt;</h3>
+      <p>public void ~Result&lt;T, E&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#120">120</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Destructor for the Result.</p>
+          <p> Destroys the Ok or Err value contained within the Result.</p>
+        </div>
+        <div>
+          <p> Destructor for the Result.</p>
+          <p> If T and E can be trivially destroyed, we don&apos;t need to explicitly destroy them, so we can use the default destructor, which allows Result&lt;T, E&gt; to also be trivially destroyed.</p>
+        </div>
+      </div>
+      <h3 id="A24A152BB88126824932EA66658F9869D2531599">Result&lt;T, E&gt;</h3>
+      <p>public void Result&lt;T, E&gt;(Result&lt;T, E&gt; &amp;&amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#141">141</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> If T and E can be trivially move-constructed, Result&lt;T, E&gt; can also be trivially move-constructed.</p>
+        </div>
+      </div>
+      <h3 id="722D9BAE242278D0558156091E84AC617ABB9908">operator=</h3>
+      <p>public Result&lt;T, E&gt; &amp; operator=(Result&lt;T, E&gt; &amp;&amp; o)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#169">169</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> If T and E can be trivially move-assigned, Result&lt;T, E&gt; can also be trivially move-assigned.</p>
+        </div>
+      </div>
+      <h3 id="3312F8F287450A5E9524EEA8A40A65678A0CF0E3">clone</h3>
+      <p>
+        public 
+        <a href="Result.html">Result</a>
+         clone()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#224">224</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <h3 id="9BC917F543909FA680737238AFC9E3C4E2E89635">clone_from</h3>
+      <p>public void clone_from(const Result&lt;T, E&gt; &amp; source)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#238">238</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <h3 id="0817BDDB31C68B6F751A1C89E8641BC09093A608">is_ok</h3>
+      <p>public _Bool is_ok()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#258">258</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if the result is `Ok`.</p>
+        </div>
+      </div>
+      <h3 id="29AD1A8FBE2349FF110252B1879F27CBF4DDA28E">is_err</h3>
+      <p>public _Bool is_err()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#264">264</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if the result is `Err`.</p>
+        </div>
+      </div>
+      <h3 id="F0C7F2928F6E194E015C028551F3701C24BA42EF">operator sus::result::State</h3>
+      <p>
+        public 
+        <a href="State.html">State</a>
+         operator sus::result::State()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#285">285</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> An operator which returns the state of the Result, either #Ok or #Err.</p>
+          <p> This supports the use of an Result in a `switch()`, allowing it to act as a tagged union between &quot;success&quot; and &quot;error&quot;.</p>
+          <p> # Example</p>
+          <p> ```cpp auto x = Result&lt;int, char&gt;::with(2); switch (x) {  case Ok:   return sus::move(x).unwrap_unchecked(::sus::marker::unsafe_fn);  case Err:   return -1; } ```</p>
+        </div>
+      </div>
+      <h3 id="91CB89471BE9076B69A45DA22B73AC4AA4500575">ok</h3>
+      <p>public Option&lt;T&gt; ok()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#294">294</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Converts from `Result&lt;T, E&gt;` to `Option&lt;T&gt;`.</p>
+          <p> Converts self into an `Option&lt;T&gt;`, consuming self, and discarding the error, if any.</p>
+        </div>
+      </div>
+      <h3 id="7C50F38D75670BB018A2C69ADEFFF85D27EBC27B">err</h3>
+      <p>public Option&lt;E&gt; err()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#312">312</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Converts from `Result&lt;T, E&gt;` to `Option&lt;E&gt;`.</p>
+          <p> Converts self into an `Option&lt;E&gt;`, consuming self, and discarding the success value, if any.</p>
+        </div>
+      </div>
+      <h3 id="D168FF640C624A02DCC6F48D4E4BBB868C47BE65">unwrap</h3>
+      <p>public T unwrap()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#335">335</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the contained `Ok` value, consuming the self value.</p>
+          <p> Because this function may panic, its use is generally discouraged. Instead, prefer to use pattern matching and handle the `Err` case explicitly, or call `unwrap_or()`, `unwrap_or_else()`, or `unwrap_or_default()`.</p>
+          <p> # Panics Panics if the value is an `Err`.</p>
+        </div>
+      </div>
+      <h3 id="F25DF64203AAD8160F0751423DE27BB611B84A59">unwrap_unchecked</h3>
+      <p>
+        public T unwrap_unchecked(
+        <a href="../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         )
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#347">347</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the contained `Ok` value, consuming the self value, without checking that the value is not an `Err`.</p>
+          <p> # Safety Calling this method on an `Err` is Undefined Behavior.</p>
+        </div>
+      </div>
+      <h3 id="829617307FF016AA9B14192928E70123910B251F">unwrap_err</h3>
+      <p>public E unwrap_err()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#357">357</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the contained `Err` value, consuming the self value.</p>
+          <p> # Panics Panics if the value is an `Ok`.</p>
+        </div>
+      </div>
+      <h3 id="2D29E20D129C7F26EE47199523ED9E0144824F5A">unwrap_err_unchecked</h3>
+      <p>
+        public E unwrap_err_unchecked(
+        <a href="../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         )
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#369">369</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the contained `Err` value, consuming the self value, without checking that the value is not an `Ok`.</p>
+          <p> # Safety Calling this method on an `Ok` is Undefined Behavior.</p>
+        </div>
+      </div>
+      <h3 id="739BCD1ECCBFA7ABBA873D39707444CFCA381AC6">iter</h3>
+      <p>public Iterator&lt;Once&lt;const T &amp;&gt; &gt; iter()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#375">375</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <h3 id="BACC01A8EFD7322E6E32129DE71803A2E88D5235">iter</h3>
+      <p>public Iterator&lt;Once&lt;const T &amp;&gt; &gt; iter()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#382">382</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <h3 id="3EED4251F849229593B07636D37BD783DD56672C">iter_mut</h3>
+      <p>public Iterator&lt;Once&lt;T &amp;&gt; &gt; iter_mut()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#384">384</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+      <h3 id="B7F09A2D048BED770C3AB3DBAB96378C8A45C195">into_iter</h3>
+      <p>public Iterator&lt;Once&lt;T&gt; &gt; into_iter()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h#392">392</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./result/result.h">result.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A016ADB2D54529679C81E7BE81D1D67D2AEEE7BE">with</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FB067C38F6DCC400721C304EB9266D4131966B3">with</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D961EB1BA5ED395003022514CD936233C3750AD">with_err</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#06ED09872723CF6DEC5EB5ABDBAF94CAA3899466">with_err</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E129F4737750FEA2AAA4556DB6C760E6B81D6347">from_iter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52B8B792CC9188C881DC31C346CA86B7646F1951">~Result&lt;T, E&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A24A152BB88126824932EA66658F9869D2531599">Result&lt;T, E&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#722D9BAE242278D0558156091E84AC617ABB9908">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3312F8F287450A5E9524EEA8A40A65678A0CF0E3">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BC917F543909FA680737238AFC9E3C4E2E89635">clone_from</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0817BDDB31C68B6F751A1C89E8641BC09093A608">is_ok</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#29AD1A8FBE2349FF110252B1879F27CBF4DDA28E">is_err</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F0C7F2928F6E194E015C028551F3701C24BA42EF">operator sus::result::State</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#91CB89471BE9076B69A45DA22B73AC4AA4500575">ok</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C50F38D75670BB018A2C69ADEFFF85D27EBC27B">err</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D168FF640C624A02DCC6F48D4E4BBB868C47BE65">unwrap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F25DF64203AAD8160F0751423DE27BB611B84A59">unwrap_unchecked</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#829617307FF016AA9B14192928E70123910B251F">unwrap_err</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D29E20D129C7F26EE47199523ED9E0144824F5A">unwrap_err_unchecked</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#739BCD1ECCBFA7ABBA873D39707444CFCA381AC6">iter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BACC01A8EFD7322E6E32129DE71803A2E88D5235">iter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EED4251F849229593B07636D37BD783DD56672C">iter_mut</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7F09A2D048BED770C3AB3DBAB96378C8A45C195">into_iter</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

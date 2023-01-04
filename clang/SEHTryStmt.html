@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SEHTryStmt</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SEHTryStmt</h1>
+    <p>Defined at line 3444 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    <p>
+      Inherits from 
+      <a href="Stmt.html">Stmt</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="581C5A5D3DFB7A12A6426FAE17AEDA4DF5C97275">Create</h3>
+      <p>
+        public SEHTryStmt * Create(const ASTContext &amp; C, _Bool isCXXTry, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TryLoc, Stmt * TryBlock, Stmt * Handler)
+      </p>
+      <h3 id="EE3F6FA5C95798D08384D90E2381022F961C3C32">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 3466 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="AF142DF20C4A6FD6BAA4A8F1DF97C382266B7225">getTryLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTryLoc()
+      </p>
+      <p>Defined at line 3468 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="EA0FA2CE523ABE4B452109CCD8BE1E13DA181963">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 3469 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="05F9BBFA6C1711602A1035974DA9741B360688ED">getIsCXXTry</h3>
+      <p>public _Bool getIsCXXTry()</p>
+      <p>Defined at line 3471 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="6637064FCEA9479E96B8B62020AD03E4C06ECA15">getTryBlock</h3>
+      <p>public CompoundStmt * getTryBlock()</p>
+      <p>Defined at line 3473 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="F5BED89F17E4894280507B2EB1410C84FE4B3C63">getHandler</h3>
+      <p>public Stmt * getHandler()</p>
+      <p>Defined at line 3477 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="4367DE4B0B0A63BCD82ACF6780FC231CA7E5132E">getExceptHandler</h3>
+      <p>public SEHExceptStmt * getExceptHandler()</p>
+      <div>
+        <div>
+          <p> Returns 0 if not defined</p>
+        </div>
+      </div>
+      <h3 id="DAD73FC8286A9DF17E8E1E10D635293FBD75F01E">getFinallyHandler</h3>
+      <p>public SEHFinallyStmt * getFinallyHandler()</p>
+      <h3 id="B603D80BA1CB24580696A8B550E49A4D1D7FDFE2">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3483 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="4D19E42DB5173A9103C080CA925BE3453F10FEE3">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3487 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="0E605A716F4DA170CA98F1F3F344157797F29143">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 3491 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#581C5A5D3DFB7A12A6426FAE17AEDA4DF5C97275">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE3F6FA5C95798D08384D90E2381022F961C3C32">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF142DF20C4A6FD6BAA4A8F1DF97C382266B7225">getTryLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA0FA2CE523ABE4B452109CCD8BE1E13DA181963">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05F9BBFA6C1711602A1035974DA9741B360688ED">getIsCXXTry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6637064FCEA9479E96B8B62020AD03E4C06ECA15">getTryBlock</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F5BED89F17E4894280507B2EB1410C84FE4B3C63">getHandler</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4367DE4B0B0A63BCD82ACF6780FC231CA7E5132E">getExceptHandler</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAD73FC8286A9DF17E8E1E10D635293FBD75F01E">getFinallyHandler</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B603D80BA1CB24580696A8B550E49A4D1D7FDFE2">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D19E42DB5173A9103C080CA925BE3453F10FEE3">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E605A716F4DA170CA98F1F3F344157797F29143">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

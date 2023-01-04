@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TargetCXXABI</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TargetCXXABI</h1>
+    <p>Defined at line 28 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+    <div>
+      <div>
+        <p> The basic abstraction for the target C++ ABI.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D8EDBDDAC0DFED90251246160B91869942A2B8FE">getKind</h3>
+      <p>
+        public 
+        <a href="../clang/TargetCXXABI/Kind.html">Kind</a>
+         getKind(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <p>Defined at line 59 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <h3 id="C5D17EC62C49ABD816C6C3F83DF3C2E2062F7978">getSpelling</h3>
+      <p>
+        public class std::basic_string&lt;char&gt; const &amp; getSpelling(
+        <a href="../clang/TargetCXXABI/Kind.html">Kind</a>
+         ABIKind)
+      </p>
+      <p>Defined at line 60 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <h3 id="A87D097F922B64000FC415E2326530E34CADBA0A">isABI</h3>
+      <p>
+        public _Bool isABI(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <p>Defined at line 63 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <h3 id="901A74DABA4B816E519F8BE7857F1012DD67EB0C">usesRelativeVTables</h3>
+      <p>public _Bool usesRelativeVTables(const llvm::Triple &amp; T)</p>
+      <p>Defined at line 69 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> Return true if this target should use the relative vtables C++ ABI by default.</p>
+        </div>
+      </div>
+      <h3 id="2F3558310941BD7F9CEBE2437B40197DCCBE1A46">TargetCXXABI</h3>
+      <p>public void TargetCXXABI()</p>
+      <p>Defined at line 74 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> A bogus initialization of the platform ABI.</p>
+        </div>
+      </div>
+      <h3 id="477D3BA90AC3FE4833F95CE18469E469404453F4">TargetCXXABI</h3>
+      <p>
+        public void TargetCXXABI(
+        <a href="../clang/TargetCXXABI/Kind.html">Kind</a>
+         kind)
+      </p>
+      <p>Defined at line 76 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <h3 id="E835E4BF893BFCB532E7ABBB30EF9C01236D6923">set</h3>
+      <p>
+        public void set(
+        <a href="../clang/TargetCXXABI/Kind.html">Kind</a>
+         kind)
+      </p>
+      <p>Defined at line 78 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <h3 id="6FE7F2395FD55EFFD1143DD9CE405311D4449359">getKind</h3>
+      <p>
+        public 
+        <a href="../clang/TargetCXXABI/Kind.html">Kind</a>
+         getKind()
+      </p>
+      <p>Defined at line 82 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <h3 id="7D25B51ACDEE8FAC57644BF51B1B64B5B0DE24AC">isSupportedCXXABI</h3>
+      <p>
+        public _Bool isSupportedCXXABI(const llvm::Triple &amp; T, 
+        <a href="../clang/TargetCXXABI/Kind.html">Kind</a>
+         Kind)
+      </p>
+      <p>Defined at line 89 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> Check that the kind provided by the fc++-abi flag is supported on this target. Users who want to experiment using different ABIs on specific platforms can change this freely, but this function should be conservative enough such that not all ABIs are allowed on all platforms. For example, we probably don&apos;t want to allow usage of an ARM ABI on an x86 architecture.</p>
+        </div>
+      </div>
+      <h3 id="1C7DBBC6849B9268F442F5F3D2626D4D08560EBF">isItaniumFamily</h3>
+      <p>public _Bool isItaniumFamily()</p>
+      <p>Defined at line 124 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> Does this ABI generally fall into the Itanium family of ABIs?</p>
+        </div>
+      </div>
+      <h3 id="AE7D0FFB6E5A301064F4A1FBD1D35C18852B9649">isMicrosoft</h3>
+      <p>public _Bool isMicrosoft()</p>
+      <p>Defined at line 138 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> Is this ABI an MSVC-compatible ABI?</p>
+        </div>
+      </div>
+      <h3 id="25A3401D1197A8F5978F27AE85E64AFED558E813">areMemberFunctionsAligned</h3>
+      <p>public _Bool areMemberFunctionsAligned()</p>
+      <p>Defined at line 160 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> Are member functions differently aligned?</p>
+          <p> Many Itanium-style C++ ABIs require member functions to be aligned, so that a pointer to such a function is guaranteed to have a zero in the least significant bit, so that pointers to member functions can use that bit to distinguish between virtual and non-virtual functions. However, some Itanium-style C++ ABIs differentiate between virtual and non-virtual functions via other means, and consequently don&apos;t require that member functions be aligned.</p>
+        </div>
+      </div>
+      <h3 id="F660F09413F5AA27EDD6A5E5DE51E295BF63AB0D">areArgsDestroyedLeftToRightInCallee</h3>
+      <p>public _Bool areArgsDestroyedLeftToRightInCallee()</p>
+      <p>Defined at line 190 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> Are arguments to a call destroyed left to right in the callee? This is a fundamental language change, since it implies that objects passed by value do *not* live to the end of the full expression. Temporaries passed to a function taking a const reference live to the end of the full expression as usual.  Both the caller and the callee must have access to the destructor, while only the caller needs the destructor if this is false.</p>
+        </div>
+      </div>
+      <h3 id="D6F1A7A33B0C566AF22391C556D1FC6C4D48F9B3">hasConstructorVariants</h3>
+      <p>public _Bool hasConstructorVariants()</p>
+      <p>Defined at line 196 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> Does this ABI have different entrypoints for complete-object and base-subobject constructors?</p>
+        </div>
+      </div>
+      <h3 id="709944C7677FF5330C1CEE23690837814A88C349">hasPrimaryVBases</h3>
+      <p>public _Bool hasPrimaryVBases()</p>
+      <p>Defined at line 201 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> Does this ABI allow virtual bases to be primary base classes?</p>
+        </div>
+      </div>
+      <h3 id="3428A5F0ABBE4C3CD54D0B270F2894F2EC72ED68">hasKeyFunctions</h3>
+      <p>public _Bool hasKeyFunctions()</p>
+      <p>Defined at line 208 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> Does this ABI use key functions?  If so, class data such as the vtable is emitted with strong linkage by the TU containing the key function.</p>
+        </div>
+      </div>
+      <h3 id="2BE158B1C8399BBB7CF14B4DA5185ADF7E708DAE">canKeyFunctionBeInline</h3>
+      <p>public _Bool canKeyFunctionBeInline()</p>
+      <p>Defined at line 240 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> Can an out-of-line inline function serve as a key function?</p>
+          <p> This flag is only useful in ABIs where type data (for example, vtables and type_info objects) are emitted only after processing the definition of a special &quot;key&quot; virtual function.  (This is safe because the ODR requires that every virtual function be defined somewhere in a program.)  This usually permits such data to be emitted in only a single object file, as opposed to redundantly in every object file that requires it.</p>
+          <p> One simple and common definition of &quot;key function&quot; is the first virtual function in the class definition which is not defined there. This rule works very well when that function has a non-inline definition in some non-header file.  Unfortunately, when that function is defined inline, this rule requires the type data to be emitted weakly, as if there were no key function.</p>
+          <p> The ARM ABI observes that the ODR provides an additional guarantee: a virtual function is always ODR-used, so if it is defined inline, that definition must appear in every translation unit that defines the class.  Therefore, there is no reason to allow such functions to serve as key functions.</p>
+          <p> Because this changes the rules for emitting type data, it can cause type data to be emitted with both weak and strong linkage, which is not allowed on all platforms.  Therefore, exploiting this observation requires an ABI break and cannot be done on a generic Itanium platform.</p>
+        </div>
+      </div>
+      <h3 id="86C843F07068DB710C8AE61FD9333D74259FCB5F">getTailPaddingUseRules</h3>
+      <p>
+        public 
+        <a href="../clang/TargetCXXABI/TailPaddingUseRules.html">TailPaddingUseRules</a>
+         getTailPaddingUseRules()
+      </p>
+      <p>Defined at line 282 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="2C86429A4057B1485B3C7C3EB29344ED0A3912A9">enum Kind</h3>
+      <ul>
+        <li>GenericItanium</li>
+        <li>GenericARM</li>
+        <li>iOS</li>
+        <li>AppleARM64</li>
+        <li>WatchOS</li>
+        <li>GenericAArch64</li>
+        <li>GenericMIPS</li>
+        <li>WebAssembly</li>
+        <li>Fuchsia</li>
+        <li>XL</li>
+        <li>Microsoft</li>
+      </ul>
+      <p>Defined at line 31 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> The basic C++ ABI kind.</p>
+        </div>
+      </div>
+      <h3 id="6F690EC18968DCD806780EA5E4BAC896259C1523">enum TailPaddingUseRules</h3>
+      <ul>
+        <li>AlwaysUseTailPadding</li>
+        <li>UseTailPaddingUnlessPOD03</li>
+        <li>UseTailPaddingUnlessPOD11</li>
+      </ul>
+      <p>Defined at line 269 of file /usr/lib/llvm-16/include/clang/Basic/TargetCXXABI.h</p>
+      <div>
+        <div>
+          <p> When is record layout allowed to allocate objects in the tail padding of a base class?</p>
+          <p> This decision cannot be changed without breaking platform ABI compatibility. In ISO C++98, tail padding reuse was only permitted for non-POD base classes, but that restriction was removed retroactively by DR 43, and tail padding reuse is always permitted in all de facto C++ language modes. However, many platforms use a variant of the old C++98 rule for compatibility.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D8EDBDDAC0DFED90251246160B91869942A2B8FE">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5D17EC62C49ABD816C6C3F83DF3C2E2062F7978">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A87D097F922B64000FC415E2326530E34CADBA0A">isABI</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#901A74DABA4B816E519F8BE7857F1012DD67EB0C">usesRelativeVTables</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F3558310941BD7F9CEBE2437B40197DCCBE1A46">TargetCXXABI</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#477D3BA90AC3FE4833F95CE18469E469404453F4">TargetCXXABI</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E835E4BF893BFCB532E7ABBB30EF9C01236D6923">set</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6FE7F2395FD55EFFD1143DD9CE405311D4449359">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D25B51ACDEE8FAC57644BF51B1B64B5B0DE24AC">isSupportedCXXABI</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C7DBBC6849B9268F442F5F3D2626D4D08560EBF">isItaniumFamily</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE7D0FFB6E5A301064F4A1FBD1D35C18852B9649">isMicrosoft</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25A3401D1197A8F5978F27AE85E64AFED558E813">areMemberFunctionsAligned</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F660F09413F5AA27EDD6A5E5DE51E295BF63AB0D">areArgsDestroyedLeftToRightInCallee</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6F1A7A33B0C566AF22391C556D1FC6C4D48F9B3">hasConstructorVariants</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#709944C7677FF5330C1CEE23690837814A88C349">hasPrimaryVBases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3428A5F0ABBE4C3CD54D0B270F2894F2EC72ED68">hasKeyFunctions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BE158B1C8399BBB7CF14B4DA5185ADF7E708DAE">canKeyFunctionBeInline</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86C843F07068DB710C8AE61FD9333D74259FCB5F">getTailPaddingUseRules</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2C86429A4057B1485B3C7C3EB29344ED0A3912A9">Kind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F690EC18968DCD806780EA5E4BAC896259C1523">TailPaddingUseRules</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

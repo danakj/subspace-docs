@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class HasSubstrMatcher</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class HasSubstrMatcher</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#968">968</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Implements the polymorphic HasSubstr(substring) matcher, which can be used as a Matcher&lt;T&gt; as long as T can be converted to a string.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="55D07855992AE9048739F6A17D98260981751853">HasSubstrMatcher&lt;StringType&gt;</h3>
+      <p>public void HasSubstrMatcher&lt;StringType&gt;(const StringType &amp; substring)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#970">970</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="0790C9A5355BB8E2C3E77A41D7D599CEDC291295">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(const internal::StringView &amp; s, MatchResultListener * listener)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#974">974</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="DDC3FC8B88E1A2D705D6D657006FB757B3FAE5ED">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(CharType * s, MatchResultListener * listener)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#989">989</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Accepts pointer types, particularly:   const char*   char*   const wchar_t*   wchar_t*</p>
+        </div>
+      </div>
+      <h3 id="8A5811E75B4106827E0AA9A4BE932F7AE83AA820">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(const MatcheeStringType &amp; s, MatchResultListener * )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#998">998</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Matches anything that can convert to StringType.</p>
+          <p> This is a template, not just a plain function with const StringType&amp;, because StringView has some interfering non-explicit constructors.</p>
+        </div>
+      </div>
+      <h3 id="4CB17CA7F13E9667768D2EFA717F04F2CE678414">DescribeTo</h3>
+      <p>public void DescribeTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1004">1004</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Describes what this matcher matches.</p>
+        </div>
+      </div>
+      <h3 id="A0F5D0BC98889E34F1E6D3D8C613CC01625CEC87">DescribeNegationTo</h3>
+      <p>public void DescribeNegationTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1009">1009</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#55D07855992AE9048739F6A17D98260981751853">HasSubstrMatcher&lt;StringType&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0790C9A5355BB8E2C3E77A41D7D599CEDC291295">MatchAndExplain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DDC3FC8B88E1A2D705D6D657006FB757B3FAE5ED">MatchAndExplain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A5811E75B4106827E0AA9A4BE932F7AE83AA820">MatchAndExplain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CB17CA7F13E9667768D2EFA717F04F2CE678414">DescribeTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0F5D0BC98889E34F1E6D3D8C613CC01625CEC87">DescribeNegationTo</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

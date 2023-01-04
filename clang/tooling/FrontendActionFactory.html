@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FrontendActionFactory</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/tooling" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FrontendActionFactory</h1>
+    <p>Defined at line 98 of file /usr/lib/llvm-16/include/clang/Tooling/Tooling.h</p>
+    <div>
+      <div>
+        <p> Interface to generate clang::FrontendActions.</p>
+        <p> Having a factory interface allows, for example, a new FrontendAction to be created for each translation unit processed by ClangTool.  This class is also a ToolAction which uses the FrontendActions created by create() to process each translation unit.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ToolAction.html">ToolAction</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D8B84650011A1D5D4842DB371C9397C582E5CB98">~FrontendActionFactory</h3>
+      <p>public void ~FrontendActionFactory()</p>
+      <h3 id="EFECFBF188D1246B4E2D8742F9F594B05B9E87ED">runInvocation</h3>
+      <p>
+        public _Bool runInvocation(
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         Invocation, FileManager * Files, 
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         PCHContainerOps, DiagnosticConsumer * DiagConsumer)
+      </p>
+      <div>
+        <div>
+          <p> Invokes the compiler with a FrontendAction created by create().</p>
+        </div>
+      </div>
+      <h3 id="11FE758BF9E29D4782C295A9B113A86CCCA3771A">create</h3>
+      <p>
+        public 
+        <a href="../../std/unique_ptr.html">unique_ptr</a>
+         create()
+      </p>
+      <div>
+        <div>
+          <p> Returns a new clang::FrontendAction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D8B84650011A1D5D4842DB371C9397C582E5CB98">~FrontendActionFactory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFECFBF188D1246B4E2D8742F9F594B05B9E87ED">runInvocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11FE758BF9E29D4782C295A9B113A86CCCA3771A">create</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

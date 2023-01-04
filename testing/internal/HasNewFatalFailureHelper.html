@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class HasNewFatalFailureHelper</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class HasNewFatalFailureHelper</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#164">164</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+    </p>
+    <div>
+      <div>
+        <p> This helper class is used by {ASSERT|EXPECT}_NO_FATAL_FAILURE to check if a statement generates new fatal failures. To do so it registers itself as the current test part result reporter. Besides checking if fatal failures were reported, it only delegates the reporting to the former result reporter. The original result reporter is restored in the destructor. INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="../../testing/TestPartResultReporterInterface.html">TestPartResultReporterInterface</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7643FC6303839431451BCD12E78571F6FF4BEA8F">HasNewFatalFailureHelper</h3>
+      <p>public void HasNewFatalFailureHelper()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-test-part.cc#87">87</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-test-part.cc">gtest-test-part.cc</a>
+      </p>
+      <h3 id="8421542998F0E3C7A52285B74A6914DF56B61F15">~HasNewFatalFailureHelper</h3>
+      <p>public void ~HasNewFatalFailureHelper()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-test-part.cc#94">94</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-test-part.cc">gtest-test-part.cc</a>
+      </p>
+      <h3 id="2A17FDAAA388E1244DF4C0AE4DC9BC89137DE637">ReportTestPartResult</h3>
+      <p>public void ReportTestPartResult(const TestPartResult &amp; result)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-test-part.cc#99">99</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-test-part.cc">gtest-test-part.cc</a>
+      </p>
+      <h3 id="821E36E62E5659FCB397B72783DBBC3FB6EDE491">has_new_fatal_failure</h3>
+      <p>public _Bool has_new_fatal_failure()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#170">170</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7643FC6303839431451BCD12E78571F6FF4BEA8F">HasNewFatalFailureHelper</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8421542998F0E3C7A52285B74A6914DF56B61F15">~HasNewFatalFailureHelper</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A17FDAAA388E1244DF4C0AE4DC9BC89137DE637">ReportTestPartResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#821E36E62E5659FCB397B72783DBBC3FB6EDE491">has_new_fatal_failure</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

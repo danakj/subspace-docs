@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TestSuite</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TestSuite</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#842">842</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+    </p>
+    <div>
+      <div>
+        <p> A test suite, which consists of a vector of TestInfos.</p>
+        <p> TestSuite is not copyable.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7C66E396A5ACF91BFF4F23A45E63E111225441A0">TestSuite</h3>
+      <p>public void TestSuite(const char * name, const char * a_type_param, internal::SetUpTestSuiteFunc set_up_tc, internal::TearDownTestSuiteFunc tear_down_tc)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2954">2954</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Creates a TestSuite with the given name.</p>
+          <p> Arguments:</p>
+          <p>   a_name:       name of the test suite   a_type_param: the name of the test suite&apos;s type parameter, or NULL if                 this is not a typed or a type-parameterized test suite.   set_up_tc:    pointer to the function that sets up the test suite   tear_down_tc: pointer to the function that tears down the test suite</p>
+        </div>
+        <div>
+          <p> Creates a TestSuite with the given name.</p>
+          <p> TestSuite does NOT have a default constructor.  Always use this constructor to create a TestSuite object.</p>
+          <p> Arguments:</p>
+          <p>   name:         name of the test suite   a_type_param: the name of the test&apos;s type parameter, or NULL if                 this is not a type-parameterized test.   set_up_tc:    pointer to the function that sets up the test suite   tear_down_tc: pointer to the function that tears down the test suite</p>
+        </div>
+      </div>
+      <h3 id="70E139934EA891D166E7BCF34ACA0318D985930B">~TestSuite</h3>
+      <p>public void ~TestSuite()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2966">2966</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Destructor of TestSuite.</p>
+        </div>
+      </div>
+      <h3 id="33EC36437D3AB6CB5CA4ECD34BDE8D40BFB985FE">name</h3>
+      <p>public const char * name()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#864">864</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the name of the TestSuite.</p>
+        </div>
+      </div>
+      <h3 id="70982F8D025B8D3A1DF2EFBB39AC40BD61D0EB09">type_param</h3>
+      <p>public const char * type_param()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#868">868</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the name of the parameter type, or NULL if this is not a type-parameterized test suite.</p>
+        </div>
+      </div>
+      <h3 id="B0A991017B9DF758C5A6FE9561FC11F4DAE2E660">should_run</h3>
+      <p>public _Bool should_run()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#874">874</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if any test in this test suite should run.</p>
+        </div>
+      </div>
+      <h3 id="F8154214980FDBFBD9CEDF8CDB136D27437FF46E">successful_test_count</h3>
+      <p>public int successful_test_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2906">2906</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the number of successful tests in this test suite.</p>
+        </div>
+      </div>
+      <h3 id="2469BD06647596A8C8F4A8D3BE6B6AC9E6414759">skipped_test_count</h3>
+      <p>public int skipped_test_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2911">2911</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the number of skipped tests in this test suite.</p>
+        </div>
+        <div>
+          <p> Gets the number of successful tests in this test suite.</p>
+        </div>
+      </div>
+      <h3 id="69ECC64092E2153C18FE6DA1FE6602D2F775FF22">failed_test_count</h3>
+      <p>public int failed_test_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2916">2916</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the number of failed tests in this test suite.</p>
+        </div>
+      </div>
+      <h3 id="38ACF3877EBDD92D8973DC5447C391223088CAAD">reportable_disabled_test_count</h3>
+      <p>public int reportable_disabled_test_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2921">2921</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the number of disabled tests that will be reported in the XML report.</p>
+        </div>
+      </div>
+      <h3 id="0B98682D4F24E3BC35CCEAA29DACB17292545F76">disabled_test_count</h3>
+      <p>public int disabled_test_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2926">2926</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the number of disabled tests in this test suite.</p>
+        </div>
+      </div>
+      <h3 id="A94E103DB936CB2B6B75E782F2C5004E967C1D17">reportable_test_count</h3>
+      <p>public int reportable_test_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2931">2931</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the number of tests to be printed in the XML report.</p>
+        </div>
+      </div>
+      <h3 id="025564A73BE1C5E0C6EE06A0C6D8F62D7DE31D6B">test_to_run_count</h3>
+      <p>public int test_to_run_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2936">2936</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Get the number of tests in this test suite that should run.</p>
+        </div>
+      </div>
+      <h3 id="23B5E70EBDC0954E312D4F775C05D38A2D5649CC">total_test_count</h3>
+      <p>public int total_test_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2941">2941</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the number of all tests in this test suite.</p>
+        </div>
+        <div>
+          <p> Gets the number of all tests.</p>
+        </div>
+      </div>
+      <h3 id="D62D737C6B04EEF8AC0B7FCB65F367E9FF6BC700">Passed</h3>
+      <p>public _Bool Passed()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#901">901</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test suite passed.</p>
+        </div>
+      </div>
+      <h3 id="2FFB8CEBA612778E65FBFA65442AC0E4E9CA325E">Failed</h3>
+      <p>public _Bool Failed()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#904">904</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test suite failed.</p>
+        </div>
+      </div>
+      <h3 id="072F34E2ECC0C68CA55FA8995DC1CBC7C40AFA78">elapsed_time</h3>
+      <p>public TimeInMillis elapsed_time()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#909">909</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the elapsed time, in milliseconds.</p>
+        </div>
+      </div>
+      <h3 id="E3F16AB9808FEE33BBADAE57166ED37FB0DA7AA7">start_timestamp</h3>
+      <p>public TimeInMillis start_timestamp()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#913">913</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the time of the test suite start, in ms from the start of the UNIX epoch.</p>
+        </div>
+      </div>
+      <h3 id="7653D6C404388E99FABD08A7FFA46A5456FA8EA0">GetTestInfo</h3>
+      <p>public const TestInfo * GetTestInfo(int i)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2973">2973</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the i-th test among all the tests. i can range from 0 to total_test_count() - 1. If i is not in that range, returns NULL.</p>
+        </div>
+      </div>
+      <h3 id="39D83AE027D16C743F0EC2FEA38C5B944443DB2F">ad_hoc_test_result</h3>
+      <p>public const TestResult &amp; ad_hoc_test_result()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#921">921</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the TestResult that holds test properties recorded during execution of SetUpTestSuite and TearDownTestSuite.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7C66E396A5ACF91BFF4F23A45E63E111225441A0">TestSuite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70E139934EA891D166E7BCF34ACA0318D985930B">~TestSuite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33EC36437D3AB6CB5CA4ECD34BDE8D40BFB985FE">name</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70982F8D025B8D3A1DF2EFBB39AC40BD61D0EB09">type_param</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0A991017B9DF758C5A6FE9561FC11F4DAE2E660">should_run</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8154214980FDBFBD9CEDF8CDB136D27437FF46E">successful_test_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2469BD06647596A8C8F4A8D3BE6B6AC9E6414759">skipped_test_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69ECC64092E2153C18FE6DA1FE6602D2F775FF22">failed_test_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38ACF3877EBDD92D8973DC5447C391223088CAAD">reportable_disabled_test_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B98682D4F24E3BC35CCEAA29DACB17292545F76">disabled_test_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A94E103DB936CB2B6B75E782F2C5004E967C1D17">reportable_test_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#025564A73BE1C5E0C6EE06A0C6D8F62D7DE31D6B">test_to_run_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23B5E70EBDC0954E312D4F775C05D38A2D5649CC">total_test_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D62D737C6B04EEF8AC0B7FCB65F367E9FF6BC700">Passed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FFB8CEBA612778E65FBFA65442AC0E4E9CA325E">Failed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#072F34E2ECC0C68CA55FA8995DC1CBC7C40AFA78">elapsed_time</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E3F16AB9808FEE33BBADAE57166ED37FB0DA7AA7">start_timestamp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7653D6C404388E99FABD08A7FFA46A5456FA8EA0">GetTestInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39D83AE027D16C743F0EC2FEA38C5B944443DB2F">ad_hoc_test_result</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

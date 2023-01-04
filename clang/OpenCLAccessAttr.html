@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OpenCLAccessAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OpenCLAccessAttr</h1>
+    <p>Defined at line 8657 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="Attr.html">Attr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B34056F603B47C13D950AD30F20CC5AA1E5F977A">CreateImplicit</h3>
+      <p>public OpenCLAccessAttr * CreateImplicit(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="E5EF8B8F3CE3F6E9F4C789F6EEB60C041F5EBC44">Create</h3>
+      <p>public OpenCLAccessAttr * Create(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="2101E44FA706B4C25DB5DB07D9E54ECBAC4B1411">CreateImplicit</h3>
+      <p>
+        public OpenCLAccessAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax, 
+        <a href="../clang/OpenCLAccessAttr/Spelling.html">Spelling</a>
+         S)
+      </p>
+      <h3 id="21F081560B6561F69B5C171294B52D0DCFBFA70E">Create</h3>
+      <p>
+        public OpenCLAccessAttr * Create(ASTContext &amp; Ctx, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax, 
+        <a href="../clang/OpenCLAccessAttr/Spelling.html">Spelling</a>
+         S)
+      </p>
+      <h3 id="FA787C7D4394B64FCE4A8E74D20542C386DBDEE5">OpenCLAccessAttr</h3>
+      <p>public void OpenCLAccessAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="9A78057B770E190A3FB5FEC04BDB028B8C11DEFC">clone</h3>
+      <p>public OpenCLAccessAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="07A5437D3A39BA0606648229A456187EBE8AF961">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="9AA2C97F89E99A6ED681E2995BAD9DB6C70FCCEE">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="A509A64277C4D79E838C4BF8081BC7373C5A65E3">getSemanticSpelling</h3>
+      <p>
+        public 
+        <a href="../clang/OpenCLAccessAttr/Spelling.html">Spelling</a>
+         getSemanticSpelling()
+      </p>
+      <h3 id="68BCCAAF84CCD0834D411F5448170EFE1D4D080A">isReadOnly</h3>
+      <p>public _Bool isReadOnly()</p>
+      <p>Defined at line 8682 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="A9D7FCE020BF333F77A8861FEE6D169884A028DD">isReadWrite</h3>
+      <p>public _Bool isReadWrite()</p>
+      <p>Defined at line 8684 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="33EB1C2AA6A75AB04A0C33182F7376BB8538DE7E">isWriteOnly</h3>
+      <p>public _Bool isWriteOnly()</p>
+      <p>Defined at line 8686 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="45B2C0CD5B758DB8ED4FD206D65F649C5646DAF4">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 8690 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="75788E21283098C54E860422B968C32B2AF5FD94">enum Spelling</h3>
+      <ul>
+        <li>Keyword_read_only</li>
+        <li>Keyword_write_only</li>
+        <li>Keyword_read_write</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 8659 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B34056F603B47C13D950AD30F20CC5AA1E5F977A">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5EF8B8F3CE3F6E9F4C789F6EEB60C041F5EBC44">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2101E44FA706B4C25DB5DB07D9E54ECBAC4B1411">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21F081560B6561F69B5C171294B52D0DCFBFA70E">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA787C7D4394B64FCE4A8E74D20542C386DBDEE5">OpenCLAccessAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A78057B770E190A3FB5FEC04BDB028B8C11DEFC">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07A5437D3A39BA0606648229A456187EBE8AF961">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9AA2C97F89E99A6ED681E2995BAD9DB6C70FCCEE">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A509A64277C4D79E838C4BF8081BC7373C5A65E3">getSemanticSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68BCCAAF84CCD0834D411F5448170EFE1D4D080A">isReadOnly</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9D7FCE020BF333F77A8861FEE6D169884A028DD">isReadWrite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33EB1C2AA6A75AB04A0C33182F7376BB8538DE7E">isWriteOnly</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45B2C0CD5B758DB8ED4FD206D65F649C5646DAF4">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#75788E21283098C54E860422B968C32B2AF5FD94">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

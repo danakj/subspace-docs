@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MatcherAsPredicate</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MatcherAsPredicate</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1478">1478</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Used for implementing Matches(matcher), which turns a matcher into a predicate.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CED37511026257FCDC9C83F4E255A6EFC176180E">MatcherAsPredicate&lt;M&gt;</h3>
+      <p>public void MatcherAsPredicate&lt;M&gt;(M matcher)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1480">1480</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="AD40845AE475DF4D57079BCCB71830117A63233E">operator()</h3>
+      <p>public _Bool operator()(const T &amp; x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1489">1489</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> This template operator() allows Matches(m) to be used as a predicate on type T where m is a matcher on type T.</p>
+          <p> The argument x is passed by reference instead of by value, as some matcher may be interested in its address (e.g. as in Matches(Ref(n))(x)).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CED37511026257FCDC9C83F4E255A6EFC176180E">MatcherAsPredicate&lt;M&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD40845AE475DF4D57079BCCB71830117A63233E">operator()</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

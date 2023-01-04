@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct UniquePtrCast</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct UniquePtrCast</h1>
+    <p>Defined at line 344 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    <div>
+      <div>
+        <p> This cast trait provides std::unique_ptr casting. It has the semantics of moving the contents of the input unique_ptr into the output unique_ptr during the cast. It&apos;s also a good example of how to implement a move-only cast.</p>
+      </div>
+    </div>
+    <p>Inherits from CastIsPossible&lt;To, From *&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="80C5AC50FAFD1A5BBC858842E186A010909FC4CC">doCast</h3>
+      <p>public CastResultType doCast(std::unique_ptr&lt;From&gt; &amp;&amp; f)</p>
+      <p>Defined at line 349 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+      <h3 id="0094745C1D7BD7567C0F1991F3E1B040F29FFE8B">castFailed</h3>
+      <p>public CastResultType castFailed()</p>
+      <p>Defined at line 353 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+      <h3 id="AB02B1C9216C05271C8EDA1C689D78109927CB95">doCastIfPossible</h3>
+      <p>public CastResultType doCastIfPossible(std::unique_ptr&lt;From&gt; &amp;&amp; f)</p>
+      <p>Defined at line 355 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#80C5AC50FAFD1A5BBC858842E186A010909FC4CC">doCast</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0094745C1D7BD7567C0F1991F3E1B040F29FFE8B">castFailed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB02B1C9216C05271C8EDA1C689D78109927CB95">doCastIfPossible</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

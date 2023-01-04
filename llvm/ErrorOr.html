@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ErrorOr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ErrorOr</h1>
+    <p>Defined at line 56 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+    <div>
+      <div>
+        <p> Represents either an error or a value T.</p>
+        <p> ErrorOr&lt;T&gt; is a pointer-like class that represents the result of an operation. The result is either an error, or a value of type T. This is designed to emulate the usage of returning a pointer where nullptr indicates failure. However instead of just knowing that the operation failed, we also have an error_code and optional user data that describes why it failed.</p>
+        <p> It is used like the following.</p>
+        <p> Implicit conversion to bool returns true if there is a usable value. The unary * and -&gt; operators provide pointer like access to the value. Accessing the value when there is an error has undefined behavior.</p>
+        <p> When T is a reference type the behavior is slightly different. The reference is held in a std::reference_wrapper&lt;std::remove_reference&lt;T&gt;::type&gt;, and there is special handling to make operator -&gt; work as if T was not a reference.</p>
+        <p> T cannot be a rvalue reference.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="454C179DC664DB9480D768E47A83EF5C1A14D412">ErrorOr&lt;T&gt;</h3>
+      <p>public void ErrorOr&lt;T&gt;(E ErrorCode, std::enable_if_t&lt;std::is_error_code_enum&lt;E&gt;::value || std::is_error_condition_enum&lt;E&gt;::value, void *&gt; )</p>
+      <p>Defined at line 74 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="5EB74ACBDBC4128B12C8192D361FFBFA611284C3">ErrorOr&lt;T&gt;</h3>
+      <p>
+        public void ErrorOr&lt;T&gt;(
+        <a href="../std/error_code.html">error_code</a>
+         EC)
+      </p>
+      <p>Defined at line 82 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="1158EF2A77BEB40640AA3A36D72E8A99C69CD649">ErrorOr&lt;T&gt;</h3>
+      <p>public void ErrorOr&lt;T&gt;(OtherT &amp;&amp; Val, std::enable_if_t&lt;std::is_convertible&lt;OtherT, T&gt;::value&gt; * )</p>
+      <p>Defined at line 87 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="86705A8707D342C39DC97769476F4CEA7E007618">ErrorOr&lt;T&gt;</h3>
+      <p>public void ErrorOr&lt;T&gt;(const ErrorOr&lt;T&gt; &amp; Other)</p>
+      <p>Defined at line 93 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="2E0EC529D7F16A970F5E6DD756AF4008BE55517B">ErrorOr&lt;T&gt;</h3>
+      <p>public void ErrorOr&lt;T&gt;(const ErrorOr&lt;OtherT&gt; &amp; Other, std::enable_if_t&lt;std::is_convertible&lt;OtherT, T&gt;::value&gt; * )</p>
+      <p>Defined at line 98 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="14BC66972C551D16DBA070512925E7FF604E7126">ErrorOr&lt;T&gt;</h3>
+      <p>public void ErrorOr&lt;T&gt;(const ErrorOr&lt;OtherT&gt; &amp; Other, std::enable_if_t&lt;!std::is_convertible&lt;OtherT, const T &amp;&gt;::value&gt; * )</p>
+      <p>Defined at line 104 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="A8C659DE807156D210B0DA26BBBB065E0E98C3FA">ErrorOr&lt;T&gt;</h3>
+      <p>public void ErrorOr&lt;T&gt;(ErrorOr&lt;T&gt; &amp;&amp; Other)</p>
+      <p>Defined at line 111 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="E1288971CC3FAEC46C0BD9E9DCFC9923DC6491A1">ErrorOr&lt;T&gt;</h3>
+      <p>public void ErrorOr&lt;T&gt;(ErrorOr&lt;OtherT&gt; &amp;&amp; Other, std::enable_if_t&lt;std::is_convertible&lt;OtherT, T&gt;::value&gt; * )</p>
+      <p>Defined at line 116 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="9908CDE4005FB576CEA09E12587D0458F7246CFC">ErrorOr&lt;T&gt;</h3>
+      <p>public void ErrorOr&lt;T&gt;(ErrorOr&lt;OtherT&gt; &amp;&amp; Other, std::enable_if_t&lt;!std::is_convertible&lt;OtherT, T&gt;::value&gt; * )</p>
+      <p>Defined at line 124 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <div>
+        <div>
+          <p> This might eventually need SFINAE but it&apos;s more complex than is_convertible&amp; I&apos;m too lazy to write it right now.</p>
+        </div>
+      </div>
+      <h3 id="D3631539C5A41EC36D1903942E9263F53E5E3F34">operator=</h3>
+      <p>public ErrorOr&lt;T&gt; &amp; operator=(const ErrorOr&lt;T&gt; &amp; Other)</p>
+      <p>Defined at line 130 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="14BCA7E9C07CA8601A09D738FA2BE1D13AC9A2E7">operator=</h3>
+      <p>public ErrorOr&lt;T&gt; &amp; operator=(ErrorOr&lt;T&gt; &amp;&amp; Other)</p>
+      <p>Defined at line 135 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="B664319773E46D08C1622374B2162E35F0E6BA1C">~ErrorOr&lt;T&gt;</h3>
+      <p>public void ~ErrorOr&lt;T&gt;()</p>
+      <p>Defined at line 140 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="53417701588CD7E2E1DF9B6218A91D5210AE3FB6">operator bool</h3>
+      <p>public _Bool operator bool()</p>
+      <p>Defined at line 146 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <div>
+        <div>
+          <p> Return false if there is an error.</p>
+        </div>
+      </div>
+      <h3 id="19EEE58CBC153076111B172FF10D2BAC28CE5771">get</h3>
+      <p>public reference get()</p>
+      <p>Defined at line 150 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="C0C2FCB9A5B938B2C4962C5E3C642F24196EEF00">get</h3>
+      <p>public const_reference get()</p>
+      <p>Defined at line 151 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="F880F792D65F494BAA165D600FD98C382F434499">getError</h3>
+      <p>
+        public 
+        <a href="../std/error_code.html">error_code</a>
+         getError()
+      </p>
+      <p>Defined at line 153 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="5427948E43BB2487F3CEDCDAAB025EC778D9CC01">operator-&gt;</h3>
+      <p>public pointer operator-&gt;()</p>
+      <p>Defined at line 157 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="1F8F024FFC6F58C1B9A7B574F91512D9738A8A15">operator-&gt;</h3>
+      <p>public const_pointer operator-&gt;()</p>
+      <p>Defined at line 161 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="985AA8BE86E60E70A7819952592C7412C4D027B6">operator*</h3>
+      <p>public reference operator*()</p>
+      <p>Defined at line 163 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+      <h3 id="128F349E6CB230503A71421DFA742D1A8AA59F0E">operator*</h3>
+      <p>public const_reference operator*()</p>
+      <p>Defined at line 167 of file /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#454C179DC664DB9480D768E47A83EF5C1A14D412">ErrorOr&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5EB74ACBDBC4128B12C8192D361FFBFA611284C3">ErrorOr&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1158EF2A77BEB40640AA3A36D72E8A99C69CD649">ErrorOr&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86705A8707D342C39DC97769476F4CEA7E007618">ErrorOr&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E0EC529D7F16A970F5E6DD756AF4008BE55517B">ErrorOr&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14BC66972C551D16DBA070512925E7FF604E7126">ErrorOr&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8C659DE807156D210B0DA26BBBB065E0E98C3FA">ErrorOr&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1288971CC3FAEC46C0BD9E9DCFC9923DC6491A1">ErrorOr&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9908CDE4005FB576CEA09E12587D0458F7246CFC">ErrorOr&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3631539C5A41EC36D1903942E9263F53E5E3F34">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14BCA7E9C07CA8601A09D738FA2BE1D13AC9A2E7">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B664319773E46D08C1622374B2162E35F0E6BA1C">~ErrorOr&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53417701588CD7E2E1DF9B6218A91D5210AE3FB6">operator bool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#19EEE58CBC153076111B172FF10D2BAC28CE5771">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0C2FCB9A5B938B2C4962C5E3C642F24196EEF00">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F880F792D65F494BAA165D600FD98C382F434499">getError</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5427948E43BB2487F3CEDCDAAB025EC778D9CC01">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1F8F024FFC6F58C1B9A7B574F91512D9738A8A15">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#985AA8BE86E60E70A7819952592C7412C4D027B6">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#128F349E6CB230503A71421DFA742D1A8AA59F0E">operator*</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

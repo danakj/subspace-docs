@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ImplicitParamDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ImplicitParamDecl</h1>
+    <p>Defined at line 1648 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    <p>
+      Inherits from 
+      <a href="VarDecl.html">VarDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="31ECC81783DEB18BC10FB274AE96568EFFD82569">Create</h3>
+      <p>
+        public ImplicitParamDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, IdentifierInfo * Id, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="../clang/ImplicitParamDecl/ImplicitParamKind.html">ImplicitParamKind</a>
+         ParamKind)
+      </p>
+      <div>
+        <div>
+          <p> Create implicit parameter.</p>
+        </div>
+      </div>
+      <h3 id="B2296BBA2203ACD0D71F0E836E3C528245619223">Create</h3>
+      <p>
+        public ImplicitParamDecl * Create(ASTContext &amp; C, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="../clang/ImplicitParamDecl/ImplicitParamKind.html">ImplicitParamKind</a>
+         ParamKind)
+      </p>
+      <h3 id="9110ACBD0EA74F9B5B76B7BA3C3F1355D07FF7EC">CreateDeserialized</h3>
+      <p>public ImplicitParamDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="CE40ACCDAE2A79D839429F3F49B908B7B3D84C1B">ImplicitParamDecl</h3>
+      <p>
+        public void ImplicitParamDecl(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, IdentifierInfo * Id, 
+        <a href="QualType.html">QualType</a>
+         Type, 
+        <a href="../clang/ImplicitParamDecl/ImplicitParamKind.html">ImplicitParamKind</a>
+         ParamKind)
+      </p>
+      <p>Defined at line 1687 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="85E8EE343A521642134FD923DC0398F408D99343">ImplicitParamDecl</h3>
+      <p>
+        public void ImplicitParamDecl(ASTContext &amp; C, 
+        <a href="QualType.html">QualType</a>
+         Type, 
+        <a href="../clang/ImplicitParamDecl/ImplicitParamKind.html">ImplicitParamKind</a>
+         ParamKind)
+      </p>
+      <p>Defined at line 1696 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="0650271248CDEA64A1589B90AA0C5B6BE388C318">getParameterKind</h3>
+      <p>
+        public 
+        <a href="../clang/ImplicitParamDecl/ImplicitParamKind.html">ImplicitParamKind</a>
+         getParameterKind()
+      </p>
+      <p>Defined at line 1705 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Returns the implicit parameter kind.</p>
+        </div>
+      </div>
+      <h3 id="AF5D96C61F23373DADE557D74C2A9712B670FB73">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 1710 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="C9DFB55C304F002F6E7D0AF8A8A089A185980530">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 1711 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="098D9EF9A362F7EDD31F8073F43E701219DD9164">enum ImplicitParamKind</h3>
+      <ul>
+        <li>ObjCSelf</li>
+        <li>ObjCCmd</li>
+        <li>CXXThis</li>
+        <li>CXXVTT</li>
+        <li>CapturedContext</li>
+        <li>ThreadPrivateVar</li>
+        <li>Other</li>
+      </ul>
+      <p>Defined at line 1655 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Defines the kind of the implicit parameter: is this an implicit parameter with pointer to &apos;this&apos;, &apos;self&apos;, &apos;_cmd&apos;, virtual table pointers, captured context or something else.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#31ECC81783DEB18BC10FB274AE96568EFFD82569">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2296BBA2203ACD0D71F0E836E3C528245619223">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9110ACBD0EA74F9B5B76B7BA3C3F1355D07FF7EC">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE40ACCDAE2A79D839429F3F49B908B7B3D84C1B">ImplicitParamDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85E8EE343A521642134FD923DC0398F408D99343">ImplicitParamDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0650271248CDEA64A1589B90AA0C5B6BE388C318">getParameterKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF5D96C61F23373DADE557D74C2A9712B670FB73">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C9DFB55C304F002F6E7D0AF8A8A089A185980530">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#098D9EF9A362F7EDD31F8073F43E701219DD9164">ImplicitParamKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

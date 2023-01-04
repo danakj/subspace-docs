@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AttributedType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AttributedType</h1>
+    <p>Defined at line 4871 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> An attributed type is a type to which a type attribute has been applied.</p>
+        <p> The &quot;modified type&quot; is the fully-sugared type to which the attributed type was applied; generally it is not canonically equivalent to the attributed type. The &quot;equivalent type&quot; is the minimally-desugared type which the type is canonically equivalent to.</p>
+        <p> For example, in the following attributed type:     int32_t __attribute__((vector_size(16)))   - the modified type is the TypedefType for int32_t   - the equivalent type is VectorType(16, int32_t)   - the canonical type is VectorType(16, int)</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="64412C5ABD7FCF472E4C1177B719C2EA59C2BF34">getAttrKind</h3>
+      <p>
+        public 
+        <a href="../clang/attr/Kind.html">Kind</a>
+         getAttrKind()
+      </p>
+      <p>Defined at line 4889 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="F53260C2E744997A11B6B0CF2DD58C24B0DA24AF">getModifiedType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getModifiedType()
+      </p>
+      <p>Defined at line 4893 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="33930973A91C952BE520B7772F9BDF675B5C03AF">getEquivalentType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getEquivalentType()
+      </p>
+      <p>Defined at line 4894 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="EF675015FF6E41B74772D9B7C2579837444EE49B">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 4896 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="8DA6745A3B76F98604E606A4F975D5E9134124AC">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 4897 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="D23EB405C18986CE1DA77EEA9981CD644CE12211">isQualifier</h3>
+      <p>public _Bool isQualifier()</p>
+      <div>
+        <div>
+          <p> Does this attribute behave like a type qualifier?</p>
+          <p> A type qualifier adjusts a type to provide specialized rules for a specific object, like the standard const and volatile qualifiers. This includes attributes controlling things like nullability, address spaces, and ARC ownership.  The value of the object is still largely described by the modified type.</p>
+          <p> In contrast, many type attributes &quot;rewrite&quot; their modified type to produce a fundamentally different type, not necessarily related in any formalizable way to the original type.  For example, calling convention and vector attributes are not simple type qualifiers.</p>
+          <p> Type qualifiers are often, but not always, reflected in the canonical type.</p>
+        </div>
+      </div>
+      <h3 id="3132A5692AA9397BC7A4AF0637988A8B79E3EB3C">isMSTypeSpec</h3>
+      <p>public _Bool isMSTypeSpec()</p>
+      <h3 id="E5028F0DAC64C84FE380F84FCD61BC541C21623A">isCallingConv</h3>
+      <p>public _Bool isCallingConv()</p>
+      <h3 id="798A14FA49DE29E37031CC93007C21B4E7B235F5">getImmediateNullability</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getImmediateNullability()
+      </p>
+      <h3 id="51AA8ECA57F9CF316BF4744CF84EF9CD8518F511">getNullabilityAttrKind</h3>
+      <p>
+        public 
+        <a href="../clang/attr/Kind.html">Kind</a>
+         getNullabilityAttrKind(
+        <a href="NullabilityKind.html">NullabilityKind</a>
+         kind)
+      </p>
+      <p>Defined at line 4924 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Retrieve the attribute kind corresponding to the given nullability kind.</p>
+        </div>
+      </div>
+      <h3 id="BF8914F2008362A1FEFCC51E0E0052C28DED9306">stripOuterNullability</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         stripOuterNullability(QualType &amp; T)
+      </p>
+      <div>
+        <div>
+          <p> Strip off the top-level nullability annotation on the given type, if it&apos;s there.</p>
+        </div>
+      </div>
+      <h3 id="AADE691805EDA2A710C796F033156693D91C3552">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 4952 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="B8278762FD7B868F5F7594E0CCC47FA22E0DA7CC">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="../clang/attr/Kind.html">Kind</a>
+         attrKind, 
+        <a href="QualType.html">QualType</a>
+         modified, 
+        <a href="QualType.html">QualType</a>
+         equivalent)
+      </p>
+      <p>Defined at line 4956 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="FFE8AF0F740A1C7CBBA36661738B628478ECE80B">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 4963 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#64412C5ABD7FCF472E4C1177B719C2EA59C2BF34">getAttrKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F53260C2E744997A11B6B0CF2DD58C24B0DA24AF">getModifiedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33930973A91C952BE520B7772F9BDF675B5C03AF">getEquivalentType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF675015FF6E41B74772D9B7C2579837444EE49B">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DA6745A3B76F98604E606A4F975D5E9134124AC">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D23EB405C18986CE1DA77EEA9981CD644CE12211">isQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3132A5692AA9397BC7A4AF0637988A8B79E3EB3C">isMSTypeSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5028F0DAC64C84FE380F84FCD61BC541C21623A">isCallingConv</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#798A14FA49DE29E37031CC93007C21B4E7B235F5">getImmediateNullability</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#51AA8ECA57F9CF316BF4744CF84EF9CD8518F511">getNullabilityAttrKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF8914F2008362A1FEFCC51E0E0052C28DED9306">stripOuterNullability</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AADE691805EDA2A710C796F033156693D91C3552">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8278762FD7B868F5F7594E0CCC47FA22E0DA7CC">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FFE8AF0F740A1C7CBBA36661738B628478ECE80B">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

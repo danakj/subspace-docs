@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AbiTagAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AbiTagAttr</h1>
+    <p>Defined at line 371 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="Attr.html">Attr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="709C90582E029672B8E5F9FEDB29A1AFAD940B44">CreateImplicit</h3>
+      <p>public AbiTagAttr * CreateImplicit(ASTContext &amp; Ctx, StringRef * Tags, unsigned int TagsSize, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="7A7057C7C1D91AE8DB6C58DD9F366CFDC8ADB8EC">Create</h3>
+      <p>public AbiTagAttr * Create(ASTContext &amp; Ctx, StringRef * Tags, unsigned int TagsSize, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="5462BCEECCF5824C5823ADF96B4CC742A65927A0">CreateImplicit</h3>
+      <p>
+        public AbiTagAttr * CreateImplicit(ASTContext &amp; Ctx, StringRef * Tags, unsigned int TagsSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="F8ABDE58076EDEA41DB35A07C725A4979992159D">Create</h3>
+      <p>
+        public AbiTagAttr * Create(ASTContext &amp; Ctx, StringRef * Tags, unsigned int TagsSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="EBF9A1820D98C99FF9C06E16F4CB58BD3B9DC364">AbiTagAttr</h3>
+      <p>public void AbiTagAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, StringRef * Tags, unsigned int TagsSize)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="D63796008FF2FE6A094827ED89C4C78858E22F22">AbiTagAttr</h3>
+      <p>public void AbiTagAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="E9F82D1FAC9402D4675BA142DCF06BEE1EF8C380">clone</h3>
+      <p>public AbiTagAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="3936723A519A86A6E0C69BDEEBCC75D04BCDC0AC">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="DEC6AB8BCD880AAD449411275912FD8402729185">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="1AE636EC13DBE027C4B3EE9BEFB98974162F9A47">tags_begin</h3>
+      <p>public tags_iterator tags_begin()</p>
+      <p>Defined at line 401 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C3D2BD28E96D9491C11D4AC803A995739DCBC01C">tags_end</h3>
+      <p>public tags_iterator tags_end()</p>
+      <p>Defined at line 402 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="F9D1ED0CEA6C4E183AB248368595AE4231AD90CC">tags_size</h3>
+      <p>public unsigned int tags_size()</p>
+      <p>Defined at line 403 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="BFA63B6453B0864F9FB4CD9CB1C69EE791F4FC48">tags</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         tags()
+      </p>
+      <p>Defined at line 404 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="0575C283807A6B301EA09E52D966C200CB00857B">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 409 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="27F8210119F4203BF06DD60862367A8CDC9CB8FD">enum Spelling</h3>
+      <ul>
+        <li>GNU_abi_tag</li>
+        <li>CXX11_gnu_abi_tag</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 376 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#709C90582E029672B8E5F9FEDB29A1AFAD940B44">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A7057C7C1D91AE8DB6C58DD9F366CFDC8ADB8EC">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5462BCEECCF5824C5823ADF96B4CC742A65927A0">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8ABDE58076EDEA41DB35A07C725A4979992159D">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EBF9A1820D98C99FF9C06E16F4CB58BD3B9DC364">AbiTagAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D63796008FF2FE6A094827ED89C4C78858E22F22">AbiTagAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9F82D1FAC9402D4675BA142DCF06BEE1EF8C380">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3936723A519A86A6E0C69BDEEBCC75D04BCDC0AC">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEC6AB8BCD880AAD449411275912FD8402729185">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1AE636EC13DBE027C4B3EE9BEFB98974162F9A47">tags_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3D2BD28E96D9491C11D4AC803A995739DCBC01C">tags_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9D1ED0CEA6C4E183AB248368595AE4231AD90CC">tags_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BFA63B6453B0864F9FB4CD9CB1C69EE791F4FC48">tags</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0575C283807A6B301EA09E52D966C200CB00857B">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#27F8210119F4203BF06DD60862367A8CDC9CB8FD">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

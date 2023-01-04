@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace construct</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/construct" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace construct</h1>
+    <h2 id="Namespaces">Namespaces</h2>
+    <ul>
+      <li>
+        <a href="__private/index.html">__private</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C5E82F2A93AAFD5049F334C6B323882759734456">into</h3>
+      <p>auto into(FromType &amp;&amp; from)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h#81">81</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h">into.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Converts from the given value to whatever a receiver requires.</p>
+          <p> The result will be receivable if `Into&lt;GivenType, ReceiverType&gt;` is satisfied.</p>
+        </div>
+      </div>
+      <h3 id="DE3EE5A58331CDBEE60212F0281F4F6FDE52BD1B">into</h3>
+      <p>auto into(const FromType &amp; from)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h#89">89</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h">into.h</a>
+      </p>
+      <h3 id="03EA0D83F41E2B48CC005EEA253D45B3ADBAA933">into</h3>
+      <p>auto into(FromType &amp; from)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h#98">98</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h">into.h</a>
+      </p>
+      <h3 id="7409680579C0CB54A11E5FF9ED54C458409B8ABB">array_into</h3>
+      <p>auto array_into(FromType (&amp;)[N] from)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h#109">109</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h">into.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Converts from the given array to whatever a receiver requires.</p>
+          <p> The result will be receivable if `Into&lt;GivenType, ReceiverType[]&gt;` is satisfied.</p>
+        </div>
+      </div>
+      <h3 id="6CFB2CE5B035391E1841B5809FEFD477CBC31925">move_into</h3>
+      <p>auto move_into(FromType &amp; from)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h#125">125</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h">into.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Moves from and converts from the given value to whatever a receiver requires.</p>
+          <p> This is sugar for `sus::into(sus::move(x))`, which can be written as `sus::move_into(x)`.</p>
+          <p> The result will be receivable if `Into&lt;GivenType, ReceiverType&gt;` is satisfied.</p>
+        </div>
+      </div>
+      <h3 id="821E0901639474FAC1B5CB3F1AE827E5361CD359">move_into</h3>
+      <p>auto move_into(FromType &amp;&amp; from)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h#135">135</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./construct/into.h">into.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Namespaces">Namespaces</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C5E82F2A93AAFD5049F334C6B323882759734456">into</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE3EE5A58331CDBEE60212F0281F4F6FDE52BD1B">into</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03EA0D83F41E2B48CC005EEA253D45B3ADBAA933">into</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7409680579C0CB54A11E5FF9ED54C458409B8ABB">array_into</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CFB2CE5B035391E1841B5809FEFD477CBC31925">move_into</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#821E0901639474FAC1B5CB3F1AE827E5361CD359">move_into</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

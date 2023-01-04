@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ConceptDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ConceptDecl</h1>
+    <p>Defined at line 3259 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> Declaration of a C++20 concept.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TemplateDecl.html">TemplateDecl</a>
+      , Mergeable&lt;ConceptDecl&gt;
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected Expr * ConstraintExpr</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8591188FD0CF0A2BD506AFE1D67D020204EE7DF0">ConceptDecl</h3>
+      <p>
+        protected void ConceptDecl(DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params, Expr * ConstraintExpr)
+      </p>
+      <p>Defined at line 3263 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="6A6DD52500696776FD7EFB9D5153885B6F04EF53">Create</h3>
+      <p>
+        public ConceptDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params, Expr * ConstraintExpr)
+      </p>
+      <h3 id="BCD0E40430C03C3ACDD48903BC64C4018B970D9A">CreateDeserialized</h3>
+      <p>public ConceptDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="105D0FA0BD856CC6B88310E67D0DDA0CA1EF86ED">getConstraintExpr</h3>
+      <p>public Expr * getConstraintExpr()</p>
+      <p>Defined at line 3274 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="D21A152CD608810AEE72BC0B9C640804E63DD986">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 3278 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="06A56113FF99D406289090A6EBC82870DF33CAC8">isTypeConcept</h3>
+      <p>public _Bool isTypeConcept()</p>
+      <p>Defined at line 3283 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="D7E3EFD51A595086EF232ECE68B04D9CCA85EC1E">getCanonicalDecl</h3>
+      <p>public ConceptDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3287 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="A3D041474D23FE2D6EDE4701EF1E1B4482409A37">getCanonicalDecl</h3>
+      <p>public const ConceptDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3290 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="66C7652FC3ADD7EAD1D878D69AF0F44F327371B9">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3295 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="AE8A703B3CFDC85CF7AE88D9B8C60946B8EC6DC6">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3296 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8591188FD0CF0A2BD506AFE1D67D020204EE7DF0">ConceptDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A6DD52500696776FD7EFB9D5153885B6F04EF53">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BCD0E40430C03C3ACDD48903BC64C4018B970D9A">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#105D0FA0BD856CC6B88310E67D0DDA0CA1EF86ED">getConstraintExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D21A152CD608810AEE72BC0B9C640804E63DD986">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#06A56113FF99D406289090A6EBC82870DF33CAC8">isTypeConcept</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7E3EFD51A595086EF232ECE68B04D9CCA85EC1E">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3D041474D23FE2D6EDE4701EF1E1B4482409A37">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66C7652FC3ADD7EAD1D878D69AF0F44F327371B9">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE8A703B3CFDC85CF7AE88D9B8C60946B8EC6DC6">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SetVector</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SetVector</h1>
+    <p>Defined at line 40 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+    <div>
+      <div>
+        <p> A vector that has set insertion semantics.</p>
+        <p> This adapter class provides a way to keep a set of things that also has the property of a deterministic iteration order. The order of iteration is the order of insertion.</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../llvm/SetVector/TestAndEraseFromSet.html">TestAndEraseFromSet</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8A306E529E5CFF55892DD18B94A7C6646F571AA4">SetVector&lt;T, Vector, Set&gt;</h3>
+      <p>public void SetVector&lt;T, Vector, Set&gt;()</p>
+      <p>Defined at line 55 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Construct an empty SetVector</p>
+        </div>
+      </div>
+      <h3 id="585A5B88785EC1250D32A5D82F39140EE1A5E53E">SetVector&lt;T, Vector, Set&gt;</h3>
+      <p>public void SetVector&lt;T, Vector, Set&gt;(It Start, It End)</p>
+      <p>Defined at line 59 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Initialize a SetVector with a range of elements</p>
+        </div>
+      </div>
+      <h3 id="7AC779B39A4890E5EF432A806F0C500C672196D5">getArrayRef</h3>
+      <p>public ArrayRef&lt;T&gt; getArrayRef()</p>
+      <p>Defined at line 63 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <h3 id="929B00D9E12315EE9EE40F3F49815B342E0A72B4">takeVector</h3>
+      <p>public Vector takeVector()</p>
+      <p>Defined at line 66 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Clear the SetVector and return the underlying vector.</p>
+        </div>
+      </div>
+      <h3 id="AFC7DE5B57ADEEC14FD4A859DA826D5D3FD0C55F">empty</h3>
+      <p>public _Bool empty()</p>
+      <p>Defined at line 72 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Determine if the SetVector is empty or not.</p>
+        </div>
+      </div>
+      <h3 id="D96DFE036D784264A8BAC7A5B3028D31B9937360">size</h3>
+      <p>public size_type size()</p>
+      <p>Defined at line 77 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Determine the number of elements in the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="6AD5F3B53CB8EC3D6AFFECA249822ADEF247F16A">begin</h3>
+      <p>public iterator begin()</p>
+      <p>Defined at line 82 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Get an iterator to the beginning of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="0D9ED2FCF51DB2ABC4344A0E470863C800925DF3">begin</h3>
+      <p>public const_iterator begin()</p>
+      <p>Defined at line 87 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Get a const_iterator to the beginning of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="9D35E5339C1775262915C488AC9852E2642E3AEB">end</h3>
+      <p>public iterator end()</p>
+      <p>Defined at line 92 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Get an iterator to the end of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="1E5F755B721DED6B3F18650628DE4708CAE69EDC">end</h3>
+      <p>public const_iterator end()</p>
+      <p>Defined at line 97 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Get a const_iterator to the end of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="7843A3321E51A793A0894575A3FD1E4B8634A567">rbegin</h3>
+      <p>public reverse_iterator rbegin()</p>
+      <p>Defined at line 102 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Get an reverse_iterator to the end of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="991348B9D1C33DF2607E079CF5340EADB712BF84">rbegin</h3>
+      <p>public const_reverse_iterator rbegin()</p>
+      <p>Defined at line 107 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Get a const_reverse_iterator to the end of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="DEEAA9EA76ABF1AB66ABFC70EF2A907BA9A10A71">rend</h3>
+      <p>public reverse_iterator rend()</p>
+      <p>Defined at line 112 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Get a reverse_iterator to the beginning of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="DC09ED0E938A54EBBDEC642DBD3766F688775C82">rend</h3>
+      <p>public const_reverse_iterator rend()</p>
+      <p>Defined at line 117 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Get a const_reverse_iterator to the beginning of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="B8E2379FC8865260EE0E12A56F646694D5E2D2E8">front</h3>
+      <p>public const T &amp; front()</p>
+      <p>Defined at line 122 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Return the first element of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="6F0E54E89B05D7FD6A7ACA87168C2D59A074226C">back</h3>
+      <p>public const T &amp; back()</p>
+      <p>Defined at line 128 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Return the last element of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="12A9FDAC3D8DD84AB51E477F75D485F6D937C090">operator[]</h3>
+      <p>public const_reference operator[](size_type n)</p>
+      <p>Defined at line 134 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Index into the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="4638706E2F4A85481757FE2850E3BD024FF3EBDD">insert</h3>
+      <p>public _Bool insert(const value_type &amp; X)</p>
+      <p>Defined at line 141 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Insert a new element into the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="C99B7A7CF659A89640A45CFFB3F6C6D79EDA1499">insert</h3>
+      <p>public void insert(It Start, It End)</p>
+      <p>Defined at line 150 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Insert a range of elements into the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="46118A38B38240EC2729468D8C657EC032CB35D7">remove</h3>
+      <p>public _Bool remove(const value_type &amp; X)</p>
+      <p>Defined at line 157 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Remove an item from the set vector.</p>
+        </div>
+      </div>
+      <h3 id="C788C9E43AEA1301B26BFDE1E57DE313965795B2">erase</h3>
+      <p>public iterator erase(const_iterator I)</p>
+      <p>Defined at line 171 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Erase a single element from the set vector.</p>
+        </div>
+      </div>
+      <h3 id="804BAFF7A6472F8ABA86BC57A8B6EA0CF3702F60">remove_if</h3>
+      <p>public _Bool remove_if(UnaryPredicate P)</p>
+      <p>Defined at line 192 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Remove items from the set vector based on a predicate function.</p>
+          <p> This is intended to be equivalent to the following code, if we could write it:</p>
+          <p> However, SetVector doesn&apos;t expose non-const iterators, making any algorithm like remove_if impossible to use.</p>
+        </div>
+      </div>
+      <h3 id="A03D5BC295CA8056718D3801576AD61E6A51D57F">contains</h3>
+      <p>public _Bool contains(const key_type &amp; key)</p>
+      <p>Defined at line 202 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Check if the SetVector contains the given key.</p>
+        </div>
+      </div>
+      <h3 id="3A26DB9402C9C3D4B8EFF6DFBFE25076B84E0565">count</h3>
+      <p>public size_type count(const key_type &amp; key)</p>
+      <p>Defined at line 208 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Count the number of elements of a given key in the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="392AE56541DF6EA8EC9E77EDED8703062981DC71">clear</h3>
+      <p>public void clear()</p>
+      <p>Defined at line 213 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Completely clear the SetVector</p>
+        </div>
+      </div>
+      <h3 id="9831A74CF8B0A3998EDA3747255E34729B9C36A1">pop_back</h3>
+      <p>public void pop_back()</p>
+      <p>Defined at line 219 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Remove the last element of the SetVector.</p>
+        </div>
+      </div>
+      <h3 id="38FEF52AD16FEB6754F891F4C67CCA1DA5D378ED">pop_back_val</h3>
+      <p>public T pop_back_val()</p>
+      <p>Defined at line 225 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <h3 id="930027832E51EE948FCDF9C7C69E8441CDE272C6">operator==</h3>
+      <p>public _Bool operator==(const SetVector&lt;T, Vector, Set&gt; &amp; that)</p>
+      <p>Defined at line 231 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <h3 id="E8197F668CC19809D783B65F57F5F4110FF1EFC3">operator!=</h3>
+      <p>public _Bool operator!=(const SetVector&lt;T, Vector, Set&gt; &amp; that)</p>
+      <p>Defined at line 235 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <h3 id="6DB1EF0400BE079D8E8A12778E0ADCE75FCE5F2D">set_union</h3>
+      <p>public _Bool set_union(const STy &amp; S)</p>
+      <p>Defined at line 243 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Compute This := This u S, return whether &apos;This&apos; changed. TODO: We should be able to use set_union from SetOperations.h, but       SetVector interface is inconsistent with DenseSet.</p>
+        </div>
+      </div>
+      <h3 id="126AFD829841424826D0436BF1C5E1C0322D5829">set_subtract</h3>
+      <p>public void set_subtract(const STy &amp; S)</p>
+      <p>Defined at line 258 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+      <div>
+        <div>
+          <p> Compute This := This - B TODO: We should be able to use set_subtract from SetOperations.h, but       SetVector interface is inconsistent with DenseSet.</p>
+        </div>
+      </div>
+      <h3 id="B7558880B1BED2ED808E2A5EE06FB8AFC374F28C">swap</h3>
+      <p>public void swap(SetVector&lt;T, Vector, Set&gt; &amp; RHS)</p>
+      <p>Defined at line 264 of file /usr/lib/llvm-16/include/llvm/ADT/SetVector.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8A306E529E5CFF55892DD18B94A7C6646F571AA4">SetVector&lt;T, Vector, Set&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#585A5B88785EC1250D32A5D82F39140EE1A5E53E">SetVector&lt;T, Vector, Set&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7AC779B39A4890E5EF432A806F0C500C672196D5">getArrayRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#929B00D9E12315EE9EE40F3F49815B342E0A72B4">takeVector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFC7DE5B57ADEEC14FD4A859DA826D5D3FD0C55F">empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D96DFE036D784264A8BAC7A5B3028D31B9937360">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AD5F3B53CB8EC3D6AFFECA249822ADEF247F16A">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D9ED2FCF51DB2ABC4344A0E470863C800925DF3">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D35E5339C1775262915C488AC9852E2642E3AEB">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E5F755B721DED6B3F18650628DE4708CAE69EDC">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7843A3321E51A793A0894575A3FD1E4B8634A567">rbegin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#991348B9D1C33DF2607E079CF5340EADB712BF84">rbegin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEEAA9EA76ABF1AB66ABFC70EF2A907BA9A10A71">rend</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC09ED0E938A54EBBDEC642DBD3766F688775C82">rend</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8E2379FC8865260EE0E12A56F646694D5E2D2E8">front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F0E54E89B05D7FD6A7ACA87168C2D59A074226C">back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12A9FDAC3D8DD84AB51E477F75D485F6D937C090">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4638706E2F4A85481757FE2850E3BD024FF3EBDD">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C99B7A7CF659A89640A45CFFB3F6C6D79EDA1499">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#46118A38B38240EC2729468D8C657EC032CB35D7">remove</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C788C9E43AEA1301B26BFDE1E57DE313965795B2">erase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#804BAFF7A6472F8ABA86BC57A8B6EA0CF3702F60">remove_if</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A03D5BC295CA8056718D3801576AD61E6A51D57F">contains</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A26DB9402C9C3D4B8EFF6DFBFE25076B84E0565">count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#392AE56541DF6EA8EC9E77EDED8703062981DC71">clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9831A74CF8B0A3998EDA3747255E34729B9C36A1">pop_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38FEF52AD16FEB6754F891F4C67CCA1DA5D378ED">pop_back_val</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#930027832E51EE948FCDF9C7C69E8441CDE272C6">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8197F668CC19809D783B65F57F5F4110FF1EFC3">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DB1EF0400BE079D8E8A12778E0ADCE75FCE5F2D">set_union</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#126AFD829841424826D0436BF1C5E1C0322D5829">set_subtract</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7558880B1BED2ED808E2A5EE06FB8AFC374F28C">swap</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

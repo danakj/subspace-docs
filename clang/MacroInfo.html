@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MacroInfo</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MacroInfo</h1>
+    <p>Defined at line 39 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+    <div>
+      <div>
+        <p> Encapsulates the data about a macro definition (e.g. its tokens).</p>
+        <p> There&apos;s an instance of this class for every #define.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="DCC4E950648914320CADE92DEC83188572807012">getDefinitionLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getDefinitionLoc()
+      </p>
+      <p>Defined at line 125 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Return the location that the macro was defined at.</p>
+        </div>
+      </div>
+      <h3 id="5DCDAE66A7F9F136DEE3B9339861056314D558CF">setDefinitionEndLoc</h3>
+      <p>
+        public void setDefinitionEndLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 128 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Set the location of the last token in the macro.</p>
+        </div>
+      </div>
+      <h3 id="6FC0F4F4E616EBF7E8144AA5748A983A55B6BF04">getDefinitionEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getDefinitionEndLoc()
+      </p>
+      <p>Defined at line 131 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Return the location of the last token in the macro.</p>
+        </div>
+      </div>
+      <h3 id="78CD1DB2D526B3622C15D13EE5C0A74D7D3E5C9B">getDefinitionLength</h3>
+      <p>public unsigned int getDefinitionLength(const SourceManager &amp; SM)</p>
+      <p>Defined at line 134 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Get length in characters of the macro definition.</p>
+        </div>
+      </div>
+      <h3 id="63C489695BC306F525953A8FCD500DF048FDE26F">isIdenticalTo</h3>
+      <p>public _Bool isIdenticalTo(const MacroInfo &amp; Other, Preprocessor &amp; PP, _Bool Syntactically)</p>
+      <div>
+        <div>
+          <p> Return true if the specified macro definition is equal to this macro in spelling, arguments, and whitespace.</p>
+        </div>
+      </div>
+      <h3 id="7457980FB00F326D544BA48BCD77F0E3F8F6E526">setIsBuiltinMacro</h3>
+      <p>public void setIsBuiltinMacro(_Bool Val)</p>
+      <p>Defined at line 151 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Set or clear the isBuiltinMacro flag.</p>
+        </div>
+      </div>
+      <h3 id="4F071259A49B9BB68607AC1A0D4567881013155B">setIsUsed</h3>
+      <p>public void setIsUsed(_Bool Val)</p>
+      <p>Defined at line 154 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Set the value of the IsUsed flag.</p>
+        </div>
+      </div>
+      <h3 id="95B8D85C31B6CB7951AC1CB41D302062FF0BA4F5">setIsAllowRedefinitionsWithoutWarning</h3>
+      <p>public void setIsAllowRedefinitionsWithoutWarning(_Bool Val)</p>
+      <p>Defined at line 157 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Set the value of the IsAllowRedefinitionsWithoutWarning flag.</p>
+        </div>
+      </div>
+      <h3 id="D456A6E4BA05BEDA051F0D8D0EF444443D6595F6">setIsWarnIfUnused</h3>
+      <p>public void setIsWarnIfUnused(_Bool val)</p>
+      <p>Defined at line 162 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Set the value of the IsWarnIfUnused flag.</p>
+        </div>
+      </div>
+      <h3 id="024F122B9D1B0AF16B6C34A0151887B5CF6402CC">setParameterList</h3>
+      <p>
+        public void setParameterList(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         List, llvm::BumpPtrAllocator &amp; PPAllocator)
+      </p>
+      <p>Defined at line 166 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Set the specified list of identifiers as the parameter list for this macro.</p>
+        </div>
+      </div>
+      <h3 id="78A92D6A49E2D7B1611EB13E5D1092C675EDA2F9">param_empty</h3>
+      <p>public _Bool param_empty()</p>
+      <p>Defined at line 181 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="F73DDD7CF142C08EA87706112EDDB543ADEF99F7">param_begin</h3>
+      <p>public param_iterator param_begin()</p>
+      <p>Defined at line 182 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="F8A8B7DF0354438BE2D36D2943472117F1773E74">param_end</h3>
+      <p>public param_iterator param_end()</p>
+      <p>Defined at line 183 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="0B9079A41E79A82EEBC87E2338B6992C0C25502F">getNumParams</h3>
+      <p>public unsigned int getNumParams()</p>
+      <p>Defined at line 184 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="A4C0656572F2E642C8AE4ABF7A934909375A9713">params</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         params()
+      </p>
+      <p>Defined at line 185 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="7ECF8FE11EAAA4C4CA9ADE7FCE7DFD44B6EFE630">getParameterNum</h3>
+      <p>public int getParameterNum(const IdentifierInfo * Arg)</p>
+      <p>Defined at line 191 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Return the parameter number of the specified identifier, or -1 if the identifier is not a formal parameter identifier.</p>
+        </div>
+      </div>
+      <h3 id="D0F258DE2BDC48482AECAA40F81BE8760FD16883">setIsFunctionLike</h3>
+      <p>public void setIsFunctionLike()</p>
+      <p>Defined at line 200 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Function/Object-likeness.  Keep track of whether this macro has formal parameters.</p>
+        </div>
+      </div>
+      <h3 id="F5EE417530C185B355760B6C277EA27151F5CE2C">isFunctionLike</h3>
+      <p>public _Bool isFunctionLike()</p>
+      <p>Defined at line 201 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="1B97DE2B4EA5C78FB2B0F40AEA0F8B3E84FD53A6">isObjectLike</h3>
+      <p>public _Bool isObjectLike()</p>
+      <p>Defined at line 202 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="9AB2F31753FB7A26E7AB70CD91943AA44B60784F">setIsC99Varargs</h3>
+      <p>public void setIsC99Varargs()</p>
+      <p>Defined at line 205 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Varargs querying methods.  This can only be set for function-like macros.</p>
+        </div>
+      </div>
+      <h3 id="A7402B7BCD87FFF18F336A0D5613468D7D8ED9FF">setIsGNUVarargs</h3>
+      <p>public void setIsGNUVarargs()</p>
+      <p>Defined at line 206 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="3B7E42285E9A327DA90E7D45FC061CB757013C9A">isC99Varargs</h3>
+      <p>public _Bool isC99Varargs()</p>
+      <p>Defined at line 207 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="5663C72B43D8CC7ACEC040B8AF8B1D0D7F3A82B8">isGNUVarargs</h3>
+      <p>public _Bool isGNUVarargs()</p>
+      <p>Defined at line 208 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="30541E84D51199A3AD7CEF06A77EB3FF54B4BD35">isVariadic</h3>
+      <p>public _Bool isVariadic()</p>
+      <p>Defined at line 209 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="E00CEB46B3B17A9BC978692A06B778E092AE679C">isBuiltinMacro</h3>
+      <p>public _Bool isBuiltinMacro()</p>
+      <p>Defined at line 217 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Return true if this macro requires processing before expansion.</p>
+          <p> This is true only for builtin macro, such as \__LINE__, whose values are not given by fixed textual expansions.  Regular predefined macros from the &quot;&lt;built-in&gt;&quot; buffer are not reported as builtins by this function.</p>
+        </div>
+      </div>
+      <h3 id="7C463C3952DB648DAA3057C9BAE2207728273CB3">hasCommaPasting</h3>
+      <p>public _Bool hasCommaPasting()</p>
+      <p>Defined at line 219 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="6B1CA19B0B6819BDB702C92D624D39EB048D7A62">setHasCommaPasting</h3>
+      <p>public void setHasCommaPasting()</p>
+      <p>Defined at line 220 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="75180CDFAF7C9426487164BAE52A8DCD0A0125D6">isUsed</h3>
+      <p>public _Bool isUsed()</p>
+      <p>Defined at line 224 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Return false if this macro is defined in the main file and has not yet been used.</p>
+        </div>
+      </div>
+      <h3 id="D88D9F7E05C500B39052C8111BFB6E3E683CB4B7">isAllowRedefinitionsWithoutWarning</h3>
+      <p>public _Bool isAllowRedefinitionsWithoutWarning()</p>
+      <p>Defined at line 227 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Return true if this macro can be redefined without warning.</p>
+        </div>
+      </div>
+      <h3 id="4BD8DF4DD0DBD69497427B71594C3C4E9AC94C8F">isWarnIfUnused</h3>
+      <p>public _Bool isWarnIfUnused()</p>
+      <p>Defined at line 232 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Return true if we should emit a warning if the macro is unused.</p>
+        </div>
+      </div>
+      <h3 id="4B157EEC315106DDB654834871B07D8E6964E7A3">getNumTokens</h3>
+      <p>public unsigned int getNumTokens()</p>
+      <p>Defined at line 235 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Return the number of tokens that this macro expands to.</p>
+        </div>
+      </div>
+      <h3 id="CAA9A1CC94221AD1CD80E22D6C57F1A0437938D3">getReplacementToken</h3>
+      <p>public const Token &amp; getReplacementToken(unsigned int Tok)</p>
+      <p>Defined at line 237 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="A319340597770AAA3CE64088CC742EAAF7B20A87">tokens_begin</h3>
+      <p>public const_tokens_iterator tokens_begin()</p>
+      <p>Defined at line 244 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="45765E194C60D82C5E7C72ED9A724D4943E7B629">tokens_end</h3>
+      <p>public const_tokens_iterator tokens_end()</p>
+      <p>Defined at line 245 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="B96D0D06917FB0005A408981E7FA3D9B8ECA0D4D">tokens_empty</h3>
+      <p>public _Bool tokens_empty()</p>
+      <p>Defined at line 248 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="DB7FE0680CA9CFFF216AFEE62ED569C384C931E6">tokens</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         tokens()
+      </p>
+      <p>Defined at line 249 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="F80F791E73D6F2699C5EFFC67550042EA644057B">allocateTokens</h3>
+      <p>
+        public 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         allocateTokens(unsigned int NumTokens, llvm::BumpPtrAllocator &amp; PPAllocator)
+      </p>
+      <p>Defined at line 253 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="4AEDA0000E6EE83012B7DCCD9FE7D88C6D132046">setTokens</h3>
+      <p>
+        public void setTokens(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Tokens, llvm::BumpPtrAllocator &amp; PPAllocator)
+      </p>
+      <p>Defined at line 263 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="A8E2DEA0D96A1B403B9B5C43F0C056389A5711EA">isEnabled</h3>
+      <p>public _Bool isEnabled()</p>
+      <p>Defined at line 281 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Return true if this macro is enabled.</p>
+          <p> In other words, that we are not currently in an expansion of this macro.</p>
+        </div>
+      </div>
+      <h3 id="347AAFA70FD2F7633F4B6F22045B9BD58D23B225">EnableMacro</h3>
+      <p>public void EnableMacro()</p>
+      <p>Defined at line 283 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="DF72370115728D2D1B8E4C04CE77D31E3DF9D762">DisableMacro</h3>
+      <p>public void DisableMacro()</p>
+      <p>Defined at line 288 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="8F2E148509C911BAA374F36D3B9AEC7FCAF16AEC">isUsedForHeaderGuard</h3>
+      <p>public _Bool isUsedForHeaderGuard()</p>
+      <p>Defined at line 294 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <div>
+        <div>
+          <p> Determine whether this macro was used for a header guard.</p>
+        </div>
+      </div>
+      <h3 id="4CB8F028EAE3933DEA8824122493E3BFE74C05E3">setUsedForHeaderGuard</h3>
+      <p>public void setUsedForHeaderGuard(_Bool Val)</p>
+      <p>Defined at line 296 of file /usr/lib/llvm-16/include/clang/Lex/MacroInfo.h</p>
+      <h3 id="352CFD456A3C735F61A47548CB8C582172F3F4FD">dump</h3>
+      <p>public void dump()</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#DCC4E950648914320CADE92DEC83188572807012">getDefinitionLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5DCDAE66A7F9F136DEE3B9339861056314D558CF">setDefinitionEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6FC0F4F4E616EBF7E8144AA5748A983A55B6BF04">getDefinitionEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78CD1DB2D526B3622C15D13EE5C0A74D7D3E5C9B">getDefinitionLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63C489695BC306F525953A8FCD500DF048FDE26F">isIdenticalTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7457980FB00F326D544BA48BCD77F0E3F8F6E526">setIsBuiltinMacro</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F071259A49B9BB68607AC1A0D4567881013155B">setIsUsed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95B8D85C31B6CB7951AC1CB41D302062FF0BA4F5">setIsAllowRedefinitionsWithoutWarning</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D456A6E4BA05BEDA051F0D8D0EF444443D6595F6">setIsWarnIfUnused</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#024F122B9D1B0AF16B6C34A0151887B5CF6402CC">setParameterList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78A92D6A49E2D7B1611EB13E5D1092C675EDA2F9">param_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F73DDD7CF142C08EA87706112EDDB543ADEF99F7">param_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8A8B7DF0354438BE2D36D2943472117F1773E74">param_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B9079A41E79A82EEBC87E2338B6992C0C25502F">getNumParams</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4C0656572F2E642C8AE4ABF7A934909375A9713">params</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7ECF8FE11EAAA4C4CA9ADE7FCE7DFD44B6EFE630">getParameterNum</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0F258DE2BDC48482AECAA40F81BE8760FD16883">setIsFunctionLike</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F5EE417530C185B355760B6C277EA27151F5CE2C">isFunctionLike</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B97DE2B4EA5C78FB2B0F40AEA0F8B3E84FD53A6">isObjectLike</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9AB2F31753FB7A26E7AB70CD91943AA44B60784F">setIsC99Varargs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7402B7BCD87FFF18F336A0D5613468D7D8ED9FF">setIsGNUVarargs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B7E42285E9A327DA90E7D45FC061CB757013C9A">isC99Varargs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5663C72B43D8CC7ACEC040B8AF8B1D0D7F3A82B8">isGNUVarargs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30541E84D51199A3AD7CEF06A77EB3FF54B4BD35">isVariadic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E00CEB46B3B17A9BC978692A06B778E092AE679C">isBuiltinMacro</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C463C3952DB648DAA3057C9BAE2207728273CB3">hasCommaPasting</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B1CA19B0B6819BDB702C92D624D39EB048D7A62">setHasCommaPasting</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75180CDFAF7C9426487164BAE52A8DCD0A0125D6">isUsed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D88D9F7E05C500B39052C8111BFB6E3E683CB4B7">isAllowRedefinitionsWithoutWarning</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4BD8DF4DD0DBD69497427B71594C3C4E9AC94C8F">isWarnIfUnused</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B157EEC315106DDB654834871B07D8E6964E7A3">getNumTokens</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CAA9A1CC94221AD1CD80E22D6C57F1A0437938D3">getReplacementToken</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A319340597770AAA3CE64088CC742EAAF7B20A87">tokens_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45765E194C60D82C5E7C72ED9A724D4943E7B629">tokens_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B96D0D06917FB0005A408981E7FA3D9B8ECA0D4D">tokens_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB7FE0680CA9CFFF216AFEE62ED569C384C931E6">tokens</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F80F791E73D6F2699C5EFFC67550042EA644057B">allocateTokens</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AEDA0000E6EE83012B7DCCD9FE7D88C6D132046">setTokens</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8E2DEA0D96A1B403B9B5C43F0C056389A5711EA">isEnabled</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#347AAFA70FD2F7633F4B6F22045B9BD58D23B225">EnableMacro</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF72370115728D2D1B8E4C04CE77D31E3DF9D762">DisableMacro</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F2E148509C911BAA374F36D3B9AEC7FCAF16AEC">isUsedForHeaderGuard</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CB8F028EAE3933DEA8824122493E3BFE74C05E3">setUsedForHeaderGuard</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#352CFD456A3C735F61A47548CB8C582172F3F4FD">dump</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

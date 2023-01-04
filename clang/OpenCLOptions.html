@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OpenCLOptions</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OpenCLOptions</h1>
+    <p>Defined at line 69 of file /usr/lib/llvm-16/include/clang/Basic/OpenCLOptions.h</p>
+    <div>
+      <div>
+        <p> OpenCL supported extensions and optional core features</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/OpenCLOptions/OpenCLOptionInfo.html">OpenCLOptionInfo</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F74DA75AA80B6FD703A2C406B160AA490D67393A">areProgramScopeVariablesSupported</h3>
+      <p>public _Bool areProgramScopeVariablesSupported(const LangOptions &amp; Opts)</p>
+      <p>Defined at line 81 of file /usr/lib/llvm-16/include/clang/Basic/OpenCLOptions.h</p>
+      <div>
+        <div>
+          <p> OpenCL C v1.2 s6.5 - All program scope variables must be declared in the __constant address space. OpenCL C v2.0 s6.5.1 - Variables defined at program scope and static variables inside a function can also be declared in the global address space. OpenCL C v3.0 s6.7.1 - Variables at program scope or static or extern variables inside functions can be declared in global address space if the __opencl_c_program_scope_global_variables feature is supported C++ for OpenCL inherits rule from OpenCL C v2.0.</p>
+        </div>
+      </div>
+      <h3 id="E60BE45ABFAD940FB32E4EFACE87955ACF2466A9">isKnown</h3>
+      <p>
+        public _Bool isKnown(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext)
+      </p>
+      <h3 id="390C105388A6B1A4B4A5B93665DE1E7CEDF071BF">isAvailableOption</h3>
+      <p>
+        public _Bool isAvailableOption(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext, const LangOptions &amp; LO)
+      </p>
+      <div>
+        <div>
+          <p> For core or optional core feature check that it is supported by a target, for any other option (extension) check that it is enabled via pragma</p>
+        </div>
+      </div>
+      <h3 id="8F8F5EAE43C3FCFAFCF20FEB573568B6256E270F">isWithPragma</h3>
+      <p>
+        public _Bool isWithPragma(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext)
+      </p>
+      <h3 id="A85920F406285498E0CD0AAE5EFCBFB6E84B13C0">isSupported</h3>
+      <p>
+        public _Bool isSupported(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext, const LangOptions &amp; LO)
+      </p>
+      <div>
+        <div>
+          <p> Is supported as either an extension or an (optional) core feature for OpenCL version </p>
+        </div>
+      </div>
+      <h3 id="99C4DFC3C01B341D27D503BEF8E07711F334C7C5">isSupportedCore</h3>
+      <p>
+        public _Bool isSupportedCore(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext, const LangOptions &amp; LO)
+      </p>
+      <div>
+        <div>
+          <p> Is supported OpenCL core feature for OpenCL version  For supported extension, return false.</p>
+        </div>
+      </div>
+      <h3 id="3681E48B6FE952D8DC06A51C97286F1CA9AFC5E3">isSupportedOptionalCore</h3>
+      <p>
+        public _Bool isSupportedOptionalCore(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext, const LangOptions &amp; LO)
+      </p>
+      <div>
+        <div>
+          <p> Is supported optional core OpenCL feature for OpenCL version  For supported extension, return false.</p>
+        </div>
+      </div>
+      <h3 id="35E336D8173E5167B3C454E2B974A44A2E16ED90">isSupportedCoreOrOptionalCore</h3>
+      <p>
+        public _Bool isSupportedCoreOrOptionalCore(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext, const LangOptions &amp; LO)
+      </p>
+      <div>
+        <div>
+          <p> Is supported optional core or core OpenCL feature for OpenCL version  For supported extension, return false.</p>
+        </div>
+      </div>
+      <h3 id="6861EA51992FE8A693FE34078A69E6ACADC559BE">isSupportedExtension</h3>
+      <p>
+        public _Bool isSupportedExtension(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext, const LangOptions &amp; LO)
+      </p>
+      <div>
+        <div>
+          <p> Is supported OpenCL extension for OpenCL version  For supported core or optional core feature, return false.</p>
+        </div>
+      </div>
+      <h3 id="C2F7B3784C0A76C18E4779CEA619CE5C2450E1FA">acceptsPragma</h3>
+      <p>
+        public void acceptsPragma(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext, _Bool V)
+      </p>
+      <div>
+        <div>
+          <p> FIXME: Whether extension should accept pragma should not be reset dynamically. But it currently required when registering new extensions via pragmas.</p>
+        </div>
+      </div>
+      <h3 id="CA549BB2E67F369988F6005663E499D199560494">enable</h3>
+      <p>
+        public void enable(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext, _Bool V)
+      </p>
+      <h3 id="71A3442B83B652900FA7B525946E028EC2D0BA1C">support</h3>
+      <p>
+        public void support(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Ext, _Bool V)
+      </p>
+      <div>
+        <div>
+          <p> Enable or disable support for OpenCL extensions</p>
+        </div>
+      </div>
+      <h3 id="03F33119F0DC7DB0BB7C4D68D76EC0539DB2CA07">OpenCLOptions</h3>
+      <p>public void OpenCLOptions()</p>
+      <h3 id="7219AC04225ED4597847F8102543B68FC2E4EE0C">addSupport</h3>
+      <p>public void addSupport(const llvm::StringMap&lt;_Bool&gt; &amp; FeaturesMap, const LangOptions &amp; Opts)</p>
+      <div>
+        <div>
+          <p> Set supported options based on target settings and language version</p>
+        </div>
+      </div>
+      <h3 id="CD703463554B57E584808B69E9749E648A5870FA">disableAll</h3>
+      <p>public void disableAll()</p>
+      <div>
+        <div>
+          <p> Disable all extensions</p>
+        </div>
+      </div>
+      <h3 id="6DDC1566E3B16209973DDA8F3FCB532285065DE3">isOpenCLOptionCoreIn</h3>
+      <p>public _Bool isOpenCLOptionCoreIn(const LangOptions &amp; LO, Args &amp;&amp;... args)</p>
+      <p>Defined at line 190 of file /usr/lib/llvm-16/include/clang/Basic/OpenCLOptions.h</p>
+      <h3 id="1B843FEE17891A50C87A9D299445BC1031AFC3BB">isOpenCLOptionAvailableIn</h3>
+      <p>public _Bool isOpenCLOptionAvailableIn(const LangOptions &amp; LO, Args &amp;&amp;... args)</p>
+      <p>Defined at line 195 of file /usr/lib/llvm-16/include/clang/Basic/OpenCLOptions.h</p>
+      <h3 id="4D6A1B81CFD050A527DA4EE239487C0BAF413606">diagnoseUnsupportedFeatureDependencies</h3>
+      <p>public _Bool diagnoseUnsupportedFeatureDependencies(const TargetInfo &amp; TI, DiagnosticsEngine &amp; Diags)</p>
+      <div>
+        <div>
+          <p> Diagnose feature dependencies for OpenCL C 3.0. Return false if target doesn&apos;t follow these requirements.</p>
+        </div>
+      </div>
+      <h3 id="FBB46E33325E3787C4994E953FFE1A5201733D56">diagnoseFeatureExtensionDifferences</h3>
+      <p>public _Bool diagnoseFeatureExtensionDifferences(const TargetInfo &amp; TI, DiagnosticsEngine &amp; Diags)</p>
+      <div>
+        <div>
+          <p> Diagnose that features and equivalent extension are set to same values. Return false if target doesn&apos;t follow these requirements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F74DA75AA80B6FD703A2C406B160AA490D67393A">areProgramScopeVariablesSupported</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E60BE45ABFAD940FB32E4EFACE87955ACF2466A9">isKnown</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#390C105388A6B1A4B4A5B93665DE1E7CEDF071BF">isAvailableOption</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F8F5EAE43C3FCFAFCF20FEB573568B6256E270F">isWithPragma</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A85920F406285498E0CD0AAE5EFCBFB6E84B13C0">isSupported</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99C4DFC3C01B341D27D503BEF8E07711F334C7C5">isSupportedCore</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3681E48B6FE952D8DC06A51C97286F1CA9AFC5E3">isSupportedOptionalCore</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35E336D8173E5167B3C454E2B974A44A2E16ED90">isSupportedCoreOrOptionalCore</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6861EA51992FE8A693FE34078A69E6ACADC559BE">isSupportedExtension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2F7B3784C0A76C18E4779CEA619CE5C2450E1FA">acceptsPragma</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA549BB2E67F369988F6005663E499D199560494">enable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71A3442B83B652900FA7B525946E028EC2D0BA1C">support</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03F33119F0DC7DB0BB7C4D68D76EC0539DB2CA07">OpenCLOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7219AC04225ED4597847F8102543B68FC2E4EE0C">addSupport</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD703463554B57E584808B69E9749E648A5870FA">disableAll</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DDC1566E3B16209973DDA8F3FCB532285065DE3">isOpenCLOptionCoreIn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B843FEE17891A50C87A9D299445BC1031AFC3BB">isOpenCLOptionAvailableIn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D6A1B81CFD050A527DA4EE239487C0BAF413606">diagnoseUnsupportedFeatureDependencies</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBB46E33325E3787C4994E953FFE1A5201733D56">diagnoseFeatureExtensionDifferences</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

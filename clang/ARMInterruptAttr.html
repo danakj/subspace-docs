@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ARMInterruptAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ARMInterruptAttr</h1>
+    <p>Defined at line 263 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="67B2596C7EFF765ED17C107BD1A4AB4A5F7322FB">CreateImplicit</h3>
+      <p>
+        public ARMInterruptAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../clang/ARMInterruptAttr/InterruptType.html">InterruptType</a>
+         Interrupt, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="0C7E47671BE012ADEF96AFC101A9366E8C887A7B">Create</h3>
+      <p>
+        public ARMInterruptAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../clang/ARMInterruptAttr/InterruptType.html">InterruptType</a>
+         Interrupt, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="2A05CC9408205CABF8193D2355ABEC6DE9F1CE8C">CreateImplicit</h3>
+      <p>
+        public ARMInterruptAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../clang/ARMInterruptAttr/InterruptType.html">InterruptType</a>
+         Interrupt, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="A3E29142C18D53618A318AC6F1B9559A447F8521">Create</h3>
+      <p>
+        public ARMInterruptAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../clang/ARMInterruptAttr/InterruptType.html">InterruptType</a>
+         Interrupt, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="EBB7E05A9650BD2D3DF8A7CF55D889646380F4F7">ARMInterruptAttr</h3>
+      <p>
+        public void ARMInterruptAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../clang/ARMInterruptAttr/InterruptType.html">InterruptType</a>
+         Interrupt)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="4D93E87D3AAB775D01D790F286E4668689F7398F">ARMInterruptAttr</h3>
+      <p>public void ARMInterruptAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="D973E0023869A01E87D00D78F87FC8F15832843B">clone</h3>
+      <p>public ARMInterruptAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="A35D07651ABEA5FBAEE72FAE6A023E91C9C07060">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="FAE4E0CFF917FDC4A3F3028C96A91678FA1727F9">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="B14FBA1AD0D01AC77E55AB15BEB7565C39962A17">getInterrupt</h3>
+      <p>
+        public 
+        <a href="../clang/ARMInterruptAttr/InterruptType.html">InterruptType</a>
+         getInterrupt()
+      </p>
+      <p>Defined at line 302 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="F43FC00779174BCEC8057BAE6C0649034E21F2A8">ConvertStrToInterruptType</h3>
+      <p>
+        public _Bool ConvertStrToInterruptType(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Val, InterruptType &amp; Out)
+      </p>
+      <h3 id="A9F7F3EC7273534173D125C7F34471F69FABA8CB">ConvertInterruptTypeToStr</h3>
+      <p>
+        public const char * ConvertInterruptTypeToStr(
+        <a href="../clang/ARMInterruptAttr/InterruptType.html">InterruptType</a>
+         Val)
+      </p>
+      <h3 id="485668CDDD8B29841B018983C61D830D18F4F90D">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 310 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="463E659CD8E27865630F523A659448465B6BEE1D">enum InterruptType</h3>
+      <ul>
+        <li>IRQ</li>
+        <li>FIQ</li>
+        <li>SWI</li>
+        <li>ABORT</li>
+        <li>UNDEF</li>
+        <li>Generic</li>
+      </ul>
+      <p>Defined at line 265 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="3A0F1629E8822B12CD22EF7B726C9D640097ADCE">enum Spelling</h3>
+      <ul>
+        <li>GNU_interrupt</li>
+        <li>CXX11_gnu_interrupt</li>
+        <li>C2x_gnu_interrupt</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 277 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#67B2596C7EFF765ED17C107BD1A4AB4A5F7322FB">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C7E47671BE012ADEF96AFC101A9366E8C887A7B">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A05CC9408205CABF8193D2355ABEC6DE9F1CE8C">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3E29142C18D53618A318AC6F1B9559A447F8521">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EBB7E05A9650BD2D3DF8A7CF55D889646380F4F7">ARMInterruptAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D93E87D3AAB775D01D790F286E4668689F7398F">ARMInterruptAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D973E0023869A01E87D00D78F87FC8F15832843B">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A35D07651ABEA5FBAEE72FAE6A023E91C9C07060">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FAE4E0CFF917FDC4A3F3028C96A91678FA1727F9">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B14FBA1AD0D01AC77E55AB15BEB7565C39962A17">getInterrupt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F43FC00779174BCEC8057BAE6C0649034E21F2A8">ConvertStrToInterruptType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9F7F3EC7273534173D125C7F34471F69FABA8CB">ConvertInterruptTypeToStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#485668CDDD8B29841B018983C61D830D18F4F90D">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#463E659CD8E27865630F523A659448465B6BEE1D">InterruptType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A0F1629E8822B12CD22EF7B726C9D640097ADCE">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

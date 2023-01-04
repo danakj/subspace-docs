@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct zip_common</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/detail" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct zip_common</h1>
+    <p>Defined at line 759 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    <p>Inherits from zip_traits&lt;ZipType, Iters...&gt;</p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public std::tuple&lt;Iters...&gt; iterators</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8E0F89684D48F086EE8B9B8CFDFB7824F7348E99">deref</h3>
+      <p>protected value_type deref(std::index_sequence&lt;Ns...&gt; )</p>
+      <p>Defined at line 766 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="892471FF39280E226850B72340D72386A2FF003C">tup_inc</h3>
+      <p>protected decltype(iterators) tup_inc(std::index_sequence&lt;Ns...&gt; )</p>
+      <p>Defined at line 771 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="14D564D1FB3B128D9E853A084DFA2C5AC119983E">tup_dec</h3>
+      <p>protected decltype(iterators) tup_dec(std::index_sequence&lt;Ns...&gt; )</p>
+      <p>Defined at line 776 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="DCF0A0F500929E3268D3ADD5807CB76E72662B3E">test_all_equals</h3>
+      <p>protected _Bool test_all_equals(const zip_common&lt;ZipType, Iters...&gt; &amp; other, std::index_sequence&lt;Ns...&gt; )</p>
+      <p>Defined at line 781 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="CFDAB801F88327A088573BED9DE5D30E72ECA4B8">zip_common&lt;ZipType, Iters...&gt;</h3>
+      <p>public void zip_common&lt;ZipType, Iters...&gt;(Iters &amp;&amp;... ts)</p>
+      <p>Defined at line 789 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="99F4CE29687D14339195FE234D7C1456B95764F1">operator*</h3>
+      <p>public value_type operator*()</p>
+      <p>Defined at line 791 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="BD658E820FA9A9CEAB6F037CD10554276CB67C62">operator++</h3>
+      <p>public ZipType &amp; operator++()</p>
+      <p>Defined at line 795 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="D1A10837BE2F8D0724E90ED66CE8792F4F455AF0">operator--</h3>
+      <p>public ZipType &amp; operator--()</p>
+      <p>Defined at line 800 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="359EF0F11E9096AE36F89297D1DDFF174D8A0B14">all_equals</h3>
+      <p>public _Bool all_equals(zip_common&lt;ZipType, Iters...&gt; &amp; other)</p>
+      <p>Defined at line 808 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Return true if all the iterator are matching `other`&apos;s iterators.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8E0F89684D48F086EE8B9B8CFDFB7824F7348E99">deref</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#892471FF39280E226850B72340D72386A2FF003C">tup_inc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14D564D1FB3B128D9E853A084DFA2C5AC119983E">tup_dec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DCF0A0F500929E3268D3ADD5807CB76E72662B3E">test_all_equals</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CFDAB801F88327A088573BED9DE5D30E72ECA4B8">zip_common&lt;ZipType, Iters...&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99F4CE29687D14339195FE234D7C1456B95764F1">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD658E820FA9A9CEAB6F037CD10554276CB67C62">operator++</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D1A10837BE2F8D0724E90ED66CE8792F4F455AF0">operator--</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#359EF0F11E9096AE36F89297D1DDFF174D8A0B14">all_equals</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

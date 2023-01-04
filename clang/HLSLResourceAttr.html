@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class HLSLResourceAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class HLSLResourceAttr</h1>
+    <p>Defined at line 4615 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A57163895E2DE27DF5B11E0C20AC5B0F362C69D2">CreateImplicit</h3>
+      <p>
+        public HLSLResourceAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../clang/HLSLResourceAttr/ResourceClass.html">ResourceClass</a>
+         ResourceType, 
+        <a href="../clang/HLSLResourceAttr/ResourceKind.html">ResourceKind</a>
+         ResourceShape, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="3329867141A24C8F0615E757BF6B541504698071">Create</h3>
+      <p>
+        public HLSLResourceAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../clang/HLSLResourceAttr/ResourceClass.html">ResourceClass</a>
+         ResourceType, 
+        <a href="../clang/HLSLResourceAttr/ResourceKind.html">ResourceKind</a>
+         ResourceShape, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="1AE3D5D26341E2BBF027E46506614F1D0A45CEC0">CreateImplicit</h3>
+      <p>
+        public HLSLResourceAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../clang/HLSLResourceAttr/ResourceClass.html">ResourceClass</a>
+         ResourceType, 
+        <a href="../clang/HLSLResourceAttr/ResourceKind.html">ResourceKind</a>
+         ResourceShape, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="655AB056C5EE89F3C7E7D637B828B155672476B4">Create</h3>
+      <p>
+        public HLSLResourceAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../clang/HLSLResourceAttr/ResourceClass.html">ResourceClass</a>
+         ResourceType, 
+        <a href="../clang/HLSLResourceAttr/ResourceKind.html">ResourceKind</a>
+         ResourceShape, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="5942D2BB060371BCF2C4DA5D8A1BEA261EC6092D">HLSLResourceAttr</h3>
+      <p>
+        public void HLSLResourceAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../clang/HLSLResourceAttr/ResourceClass.html">ResourceClass</a>
+         ResourceType, 
+        <a href="../clang/HLSLResourceAttr/ResourceKind.html">ResourceKind</a>
+         ResourceShape)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="27D580306439527BBCB133B033248E498F0203C7">clone</h3>
+      <p>public HLSLResourceAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="ABC44937A55BCED9B9CF5C522AA90FDC7D36FB3A">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="68D71729D5C1EDEFA0524F412031610308555503">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="F7C34B01D92750E87490DBF6D7B3C4412959197D">getResourceType</h3>
+      <p>
+        public 
+        <a href="../clang/HLSLResourceAttr/ResourceClass.html">ResourceClass</a>
+         getResourceType()
+      </p>
+      <p>Defined at line 4667 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="A2BFB4DDF5DCA6B0C4F59DF30221400F0FDB2EAC">ConvertStrToResourceClass</h3>
+      <p>
+        public _Bool ConvertStrToResourceClass(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Val, ResourceClass &amp; Out)
+      </p>
+      <h3 id="5BF317A7F60764BD918CF2C62E41091D8FA4676A">ConvertResourceClassToStr</h3>
+      <p>
+        public const char * ConvertResourceClassToStr(
+        <a href="../clang/HLSLResourceAttr/ResourceClass.html">ResourceClass</a>
+         Val)
+      </p>
+      <h3 id="6BA593D78934ECC287FE23A85E048602F56E0A1C">getResourceShape</h3>
+      <p>
+        public 
+        <a href="../clang/HLSLResourceAttr/ResourceKind.html">ResourceKind</a>
+         getResourceShape()
+      </p>
+      <p>Defined at line 4673 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="F1749A31E14BC8751116B641AEB3C6C09C4468FF">ConvertStrToResourceKind</h3>
+      <p>
+        public _Bool ConvertStrToResourceKind(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Val, ResourceKind &amp; Out)
+      </p>
+      <h3 id="8A28D3896CC8A87935A35DEE9BB3E28EBB52A272">ConvertResourceKindToStr</h3>
+      <p>
+        public const char * ConvertResourceKindToStr(
+        <a href="../clang/HLSLResourceAttr/ResourceKind.html">ResourceKind</a>
+         Val)
+      </p>
+      <h3 id="3AD95EAF3F23CF397EF31E402749388F4383F2B3">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 4681 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="69B48A22855A88E6EB822A78AA11BE1EF356C1CA">enum ResourceClass</h3>
+      <ul>
+        <li>SRV</li>
+        <li>UAV</li>
+        <li>CBuffer</li>
+        <li>Sampler</li>
+      </ul>
+      <p>Defined at line 4617 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="7421343DF73704940A17D742305BFAAED157B6DA">enum ResourceKind</h3>
+      <ul>
+        <li>Texture1D</li>
+        <li>Texture2D</li>
+        <li>Texture2DMS</li>
+        <li>Texture3D</li>
+        <li>TextureCube</li>
+        <li>Texture1DArray</li>
+        <li>Texture2DArray</li>
+        <li>Texture2DMSArray</li>
+        <li>TextureCubeArray</li>
+        <li>TypedBuffer</li>
+        <li>RawBuffer</li>
+        <li>StructuredBuffer</li>
+        <li>CBufferKind</li>
+        <li>SamplerKind</li>
+        <li>TBuffer</li>
+        <li>RTAccelerationStructure</li>
+        <li>FeedbackTexture2D</li>
+        <li>FeedbackTexture2DArray</li>
+      </ul>
+      <p>Defined at line 4627 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A57163895E2DE27DF5B11E0C20AC5B0F362C69D2">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3329867141A24C8F0615E757BF6B541504698071">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1AE3D5D26341E2BBF027E46506614F1D0A45CEC0">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#655AB056C5EE89F3C7E7D637B828B155672476B4">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5942D2BB060371BCF2C4DA5D8A1BEA261EC6092D">HLSLResourceAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27D580306439527BBCB133B033248E498F0203C7">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ABC44937A55BCED9B9CF5C522AA90FDC7D36FB3A">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68D71729D5C1EDEFA0524F412031610308555503">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7C34B01D92750E87490DBF6D7B3C4412959197D">getResourceType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2BFB4DDF5DCA6B0C4F59DF30221400F0FDB2EAC">ConvertStrToResourceClass</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5BF317A7F60764BD918CF2C62E41091D8FA4676A">ConvertResourceClassToStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BA593D78934ECC287FE23A85E048602F56E0A1C">getResourceShape</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1749A31E14BC8751116B641AEB3C6C09C4468FF">ConvertStrToResourceKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A28D3896CC8A87935A35DEE9BB3E28EBB52A272">ConvertResourceKindToStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3AD95EAF3F23CF397EF31E402749388F4383F2B3">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#69B48A22855A88E6EB822A78AA11BE1EF356C1CA">ResourceClass</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7421343DF73704940A17D742305BFAAED157B6DA">ResourceKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

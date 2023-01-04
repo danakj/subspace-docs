@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FloatingPoint</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FloatingPoint</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#250">250</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+    </p>
+    <div>
+      <div>
+        <p> This template class represents an IEEE floating-point number (either single-precision or double-precision, depending on the template parameters).</p>
+        <p> The purpose of this class is to do more sophisticated number comparison.  (Due to round-off error, etc, it&apos;s very unlikely that two floating-points will be equal exactly.  Hence a naive comparison by the == operation often doesn&apos;t work.)</p>
+        <p> Format of IEEE floating-point:</p>
+        <p>   The most-significant bit being the leftmost, an IEEE   floating-point looks like</p>
+        <p>     sign_bit exponent_bits fraction_bits</p>
+        <p>   Here, sign_bit is a single bit that designates the sign of the   number.</p>
+        <p>   For float, there are 8 exponent bits and 23 fraction bits.</p>
+        <p>   For double, there are 11 exponent bits and 52 fraction bits.</p>
+        <p>   More details can be found at   http://en.wikipedia.org/wiki/IEEE_floating-point_standard.</p>
+        <p> Template parameter:</p>
+        <p>   RawType: the raw floating-point type (either float or double)</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9580BDF7052FE3D689065AEEA370758CFBE25C8D">FloatingPoint&lt;RawType&gt;</h3>
+      <p>public void FloatingPoint&lt;RawType&gt;(const RawType &amp; x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#298">298</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Constructs a FloatingPoint from a raw floating-point number.</p>
+          <p> On an Intel CPU, passing a non-normalized NAN (Not a Number) around may change its bits, although the new value is guaranteed to be also a NAN.  Therefore, don&apos;t expect this constructor to preserve the bits in x when x is a NAN.</p>
+        </div>
+      </div>
+      <h3 id="03C06749BCA2992683121F7D9D13CB1433ADAA33">ReinterpretBits</h3>
+      <p>public RawType ReinterpretBits(const Bits bits)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#305">305</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Reinterprets a bit pattern as a floating-point number.</p>
+          <p> This function is needed to test the AlmostEquals() method.</p>
+        </div>
+      </div>
+      <h3 id="DEA9DDE09306C2BB53074CE47975C30BE894EE3A">Infinity</h3>
+      <p>public RawType Infinity()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#312">312</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the floating-point number that represent positive infinity.</p>
+        </div>
+      </div>
+      <h3 id="286BA14841D1264D993E1238F6F720311B228C99">Max</h3>
+      <p>public RawType Max()</p>
+      <div>
+        <div>
+          <p> Returns the maximum representable finite floating-point number.</p>
+        </div>
+      </div>
+      <h3 id="8B64C326E5EBD227D82190F31ED48F8BC72B3832">bits</h3>
+      <p>public const Bits &amp; bits()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#322">322</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the bits that represents this number.</p>
+        </div>
+      </div>
+      <h3 id="0D16021EEE79B0919555146973C2423CCC914021">exponent_bits</h3>
+      <p>public Bits exponent_bits()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#325">325</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the exponent bits of this number.</p>
+        </div>
+      </div>
+      <h3 id="96FBE794DA2A91D4FBA6AFD831FC94581A06F193">fraction_bits</h3>
+      <p>public Bits fraction_bits()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#328">328</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the fraction bits of this number.</p>
+        </div>
+      </div>
+      <h3 id="C768294ED94465BABA15E98B2458FF1F360AD76E">sign_bit</h3>
+      <p>public Bits sign_bit()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#331">331</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the sign bit of this number.</p>
+        </div>
+      </div>
+      <h3 id="BF9DF0C9F163D75D3F8157DD5A1117990B0AC535">is_nan</h3>
+      <p>public _Bool is_nan()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#334">334</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if this is NAN (not a number).</p>
+        </div>
+      </div>
+      <h3 id="3737002054A0D081B13348A5E4FF5F5F35A0F78E">AlmostEquals</h3>
+      <p>public _Bool AlmostEquals(const FloatingPoint&lt;RawType&gt; &amp; rhs)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#346">346</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if this number is at most kMaxUlps ULP&apos;s away from rhs.  In particular, this function:</p>
+          <p>   - returns false if either number is (or both are) NAN.   - treats really large numbers as almost equal to infinity.   - thinks +0.0 and -0.0 are 0 DLP&apos;s apart.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9580BDF7052FE3D689065AEEA370758CFBE25C8D">FloatingPoint&lt;RawType&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03C06749BCA2992683121F7D9D13CB1433ADAA33">ReinterpretBits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEA9DDE09306C2BB53074CE47975C30BE894EE3A">Infinity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#286BA14841D1264D993E1238F6F720311B228C99">Max</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8B64C326E5EBD227D82190F31ED48F8BC72B3832">bits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D16021EEE79B0919555146973C2423CCC914021">exponent_bits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96FBE794DA2A91D4FBA6AFD831FC94581A06F193">fraction_bits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C768294ED94465BABA15E98B2458FF1F360AD76E">sign_bit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF9DF0C9F163D75D3F8157DD5A1117990B0AC535">is_nan</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3737002054A0D081B13348A5E4FF5F5F35A0F78E">AlmostEquals</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

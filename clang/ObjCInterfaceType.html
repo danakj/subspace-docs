@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCInterfaceType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCInterfaceType</h1>
+    <p>Defined at line 6221 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Interfaces are the core concept in Objective-C for object oriented design. They basically correspond to C++ classes.  There are two kinds of interface types: normal interfaces like `NSString`, and qualified interfaces, which are qualified with a protocol list like `NSString&lt;NSCopyable, NSAmazing&gt;`.</p>
+        <p> ObjCInterfaceType guarantees the following properties when considered as a subtype of its superclass, ObjCObjectType:   - There are no protocol qualifiers.  To reinforce this, code which     tries to invoke the protocol methods via an ObjCInterfaceType will     fail to compile.   - It is its own base type.  That is, if T is an ObjCInterfaceType*,     T-&gt;getBaseType() == QualType(T, 0).</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ObjCObjectType.html">ObjCObjectType</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F06408A4A8239CA68D540EF2CC2627F2E7D0BB5B">getDecl</h3>
+      <p>public ObjCInterfaceDecl * getDecl()</p>
+      <div>
+        <div>
+          <p> Get the declaration of this interface.</p>
+        </div>
+      </div>
+      <h3 id="195E35A9AD275FB67EA556643525AB1572A495C0">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 6236 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="44CD4F15FF2CE42A234619B1CD7D401DCE142D07">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 6237 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="EFC2F6BE1DFE149C19D957F92AA39431ED869E87">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 6239 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="3ECC052F018D183DED7BCE4B5ED84BE585DFD522">enum </h3>
+      <ul>
+        <li>qual_iterator</li>
+        <li>qual_begin</li>
+        <li>qual_end</li>
+        <li>getNumProtocols</li>
+        <li>getProtocol</li>
+      </ul>
+      <p>Defined at line 6247 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Nonsense to &quot;hide&quot; certain members of ObjCObjectType within this class.  People asking for protocols on an ObjCInterfaceType are not going to get what they want: ObjCInterfaceTypes are guaranteed to have no protocols.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F06408A4A8239CA68D540EF2CC2627F2E7D0BB5B">getDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#195E35A9AD275FB67EA556643525AB1572A495C0">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44CD4F15FF2CE42A234619B1CD7D401DCE142D07">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFC2F6BE1DFE149C19D957F92AA39431ED869E87">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3ECC052F018D183DED7BCE4B5ED84BE585DFD522">@nonymous_enum_3ECC052F018D183DED7BCE4B5ED84BE585DFD522</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

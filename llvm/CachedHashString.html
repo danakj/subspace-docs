@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CachedHashString</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CachedHashString</h1>
+    <p>Defined at line 72 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+    <div>
+      <div>
+        <p> A container which contains a string, which it owns, plus a precomputed hash.</p>
+        <p> We do not null-terminate the string.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="BE06E152D880835B9A8AC0788E24F686EC76AD56">CachedHashString</h3>
+      <p>public void CachedHashString(const char * S)</p>
+      <p>Defined at line 98 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <div>
+        <div>
+          <p> TODO: Use small-string optimization to avoid allocating.</p>
+        </div>
+      </div>
+      <h3 id="A9144D7F2DD531413FBE214BFC07210DD98E03DC">CachedHashString</h3>
+      <p>
+        public void CachedHashString(
+        <a href="StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 101 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <div>
+        <div>
+          <p> Explicit because copying and hashing a string isn&apos;t free.</p>
+        </div>
+      </div>
+      <h3 id="1AA81ED4EE3B24CA574D2AEF688EC3C002BB6A5D">CachedHashString</h3>
+      <p>
+        public void CachedHashString(
+        <a href="StringRef.html">StringRef</a>
+         S, uint32_t Hash)
+      </p>
+      <p>Defined at line 104 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <h3 id="694DB5EBA015C7F0397AE29AF83BEBCD4EC6C5E5">CachedHashString</h3>
+      <p>public void CachedHashString(const CachedHashString &amp; Other)</p>
+      <p>Defined at line 111 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <div>
+        <div>
+          <p> Ideally this class would not be copyable.  But SetVector requires copyable keys, and we want this to be usable there.</p>
+        </div>
+      </div>
+      <h3 id="0F78704CC4D8DA12F0496F78B4F84390940A31FE">operator=</h3>
+      <p>
+        public CachedHashString &amp; operator=(
+        <a href="CachedHashString.html">CachedHashString</a>
+         Other)
+      </p>
+      <p>Defined at line 121 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <h3 id="6183998788899F2BB442919FAAA97A149A3DFB9B">CachedHashString</h3>
+      <p>public void CachedHashString(CachedHashString &amp;&amp; Other)</p>
+      <p>Defined at line 126 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <h3 id="D843259F1C0DA9F453F6C01B6F9E17B2544BEA39">~CachedHashString</h3>
+      <p>public void ~CachedHashString()</p>
+      <p>Defined at line 131 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <h3 id="290824329B5731EADC83378EB05EBFA2F06BDC18">val</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         val()
+      </p>
+      <p>Defined at line 136 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <h3 id="24E358E88F547755C59D00BDE2860A98516E79BA">size</h3>
+      <p>public uint32_t size()</p>
+      <p>Defined at line 137 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <h3 id="24AD85F7BD83892AC2C2DD6E0E8D5155E2B5A74D">hash</h3>
+      <p>public uint32_t hash()</p>
+      <p>Defined at line 138 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <h3 id="3B0280080A119F51B8E03503592443283B012DE3">operator StringRef</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         operator StringRef()
+      </p>
+      <p>Defined at line 140 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+      <h3 id="E4F3B17DE677CA466AFDB794F8B76E2955A316B8">operator CachedHashStringRef</h3>
+      <p>
+        public 
+        <a href="CachedHashStringRef.html">CachedHashStringRef</a>
+         operator CachedHashStringRef()
+      </p>
+      <p>Defined at line 141 of file /usr/lib/llvm-16/include/llvm/ADT/CachedHashString.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BE06E152D880835B9A8AC0788E24F686EC76AD56">CachedHashString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9144D7F2DD531413FBE214BFC07210DD98E03DC">CachedHashString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1AA81ED4EE3B24CA574D2AEF688EC3C002BB6A5D">CachedHashString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#694DB5EBA015C7F0397AE29AF83BEBCD4EC6C5E5">CachedHashString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F78704CC4D8DA12F0496F78B4F84390940A31FE">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6183998788899F2BB442919FAAA97A149A3DFB9B">CachedHashString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D843259F1C0DA9F453F6C01B6F9E17B2544BEA39">~CachedHashString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#290824329B5731EADC83378EB05EBFA2F06BDC18">val</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24E358E88F547755C59D00BDE2860A98516E79BA">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24AD85F7BD83892AC2C2DD6E0E8D5155E2B5A74D">hash</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B0280080A119F51B8E03503592443283B012DE3">operator StringRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E4F3B17DE677CA466AFDB794F8B76E2955A316B8">operator CachedHashStringRef</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ActionResult</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ActionResult</h1>
+    <p>Defined at line 183 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+    <div>
+      <div>
+        <p> This ActionResult partial specialization places the &quot;invalid&quot; flag into the low bit of the pointer.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8514564530BE26F3CA6AF60C8A248A51A98B847B">ActionResult&lt;type-parameter-0-0, true&gt;</h3>
+      <p>public void ActionResult&lt;type-parameter-0-0, true&gt;(_Bool Invalid)</p>
+      <p>Defined at line 192 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="D98CB4B85E05DB0025D0E76364BE6174DD790FF9">ActionResult&lt;type-parameter-0-0, true&gt;</h3>
+      <p>public void ActionResult&lt;type-parameter-0-0, true&gt;(PtrTy V)</p>
+      <p>Defined at line 195 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="2927ED17726303B37C40049543EB45F39D9349AF">ActionResult&lt;type-parameter-0-0, true&gt;</h3>
+      <p>public void ActionResult&lt;type-parameter-0-0, true&gt;(const DiagnosticBuilder &amp; )</p>
+      <p>Defined at line 201 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="ADA58D32E331BCC51FCB1D86D3478EF24C398214">ActionResult&lt;type-parameter-0-0, true&gt;</h3>
+      <p>public void ActionResult&lt;type-parameter-0-0, true&gt;(const void * )</p>
+      <p>Defined at line 204 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <div>
+        <div>
+          <p> These two overloads prevent void* -&gt; bool conversions.</p>
+        </div>
+      </div>
+      <h3 id="70553CD88D9D5CED92FFC0C8B8352A5C5A61EC8F">ActionResult&lt;type-parameter-0-0, true&gt;</h3>
+      <p>public void ActionResult&lt;type-parameter-0-0, true&gt;(volatile void * )</p>
+      <p>Defined at line 205 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="9916512162122EA97804FADFA5EBCE3A2D09E03B">isInvalid</h3>
+      <p>public _Bool isInvalid()</p>
+      <p>Defined at line 207 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="4DA189C2D76E494C67A594C8E571840EAFD550C9">isUsable</h3>
+      <p>public _Bool isUsable()</p>
+      <p>Defined at line 208 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="1CA2565DFB917EB575E5BAD6C2D353890B3CC617">isUnset</h3>
+      <p>public _Bool isUnset()</p>
+      <p>Defined at line 209 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="E6DBFDD683BDD5165048308806A756E17E20D7C8">get</h3>
+      <p>public PtrTy get()</p>
+      <p>Defined at line 211 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="9A5FD63DCCB80DB26885DD5C98C275EBEA7F46C8">getAs</h3>
+      <p>public T * getAs()</p>
+      <p>Defined at line 216 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="9097B2E1003D9C1AB2402B43CA15E32FE1E516C8">set</h3>
+      <p>public void set(PtrTy V)</p>
+      <p>Defined at line 218 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="58A43A5F0695F7AA717DF71FB40BF435DD430068">operator=</h3>
+      <p>public const ActionResult&lt;type-parameter-0-0, true&gt; &amp; operator=(PtrTy RHS)</p>
+      <p>Defined at line 224 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="63551144EA21CED9CB00F40E90E51B0789A76BC1">getFromOpaquePointer</h3>
+      <p>
+        public 
+        <a href="ActionResult.html">ActionResult</a>
+         getFromOpaquePointer(void * P)
+      </p>
+      <p>Defined at line 233 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <div>
+        <div>
+          <p> For types where we can fit a flag in with the pointer, provide conversions to/from pointer type.</p>
+        </div>
+      </div>
+      <h3 id="27879880C5B5F35EA48D78760A1C4A90527289C0">getAsOpaquePointer</h3>
+      <p>public void * getAsOpaquePointer()</p>
+      <p>Defined at line 238 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8514564530BE26F3CA6AF60C8A248A51A98B847B">ActionResult&lt;type-parameter-0-0, true&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D98CB4B85E05DB0025D0E76364BE6174DD790FF9">ActionResult&lt;type-parameter-0-0, true&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2927ED17726303B37C40049543EB45F39D9349AF">ActionResult&lt;type-parameter-0-0, true&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ADA58D32E331BCC51FCB1D86D3478EF24C398214">ActionResult&lt;type-parameter-0-0, true&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70553CD88D9D5CED92FFC0C8B8352A5C5A61EC8F">ActionResult&lt;type-parameter-0-0, true&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9916512162122EA97804FADFA5EBCE3A2D09E03B">isInvalid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DA189C2D76E494C67A594C8E571840EAFD550C9">isUsable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1CA2565DFB917EB575E5BAD6C2D353890B3CC617">isUnset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6DBFDD683BDD5165048308806A756E17E20D7C8">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A5FD63DCCB80DB26885DD5C98C275EBEA7F46C8">getAs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9097B2E1003D9C1AB2402B43CA15E32FE1E516C8">set</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58A43A5F0695F7AA717DF71FB40BF435DD430068">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63551144EA21CED9CB00F40E90E51B0789A76BC1">getFromOpaquePointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27879880C5B5F35EA48D78760A1C4A90527289C0">getAsOpaquePointer</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ActionResult</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ActionResult</h1>
+    <p>Defined at line 152 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+    <div>
+      <div>
+        <p> ActionResult - This structure is used while parsing/acting on expressions, stmts, etc.  It encapsulates both the object returned by the action, plus a sense of whether or not it is valid. When CompressInvalid is true, the &quot;invalid&quot; flag will be stored in the low bit of the Val pointer.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="559A1BCA34DB22F417BF09FA74B6D2411310A7D0">ActionResult&lt;PtrTy, CompressInvalid&gt;</h3>
+      <p>public void ActionResult&lt;PtrTy, CompressInvalid&gt;(_Bool Invalid)</p>
+      <p>Defined at line 157 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="5C8038F623A552F76E5F3220E5F3D524316DD858">ActionResult&lt;PtrTy, CompressInvalid&gt;</h3>
+      <p>public void ActionResult&lt;PtrTy, CompressInvalid&gt;(PtrTy val)</p>
+      <p>Defined at line 158 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="D4D076F86E51E02D574E40E4EA63B7604660C2D9">ActionResult&lt;PtrTy, CompressInvalid&gt;</h3>
+      <p>public void ActionResult&lt;PtrTy, CompressInvalid&gt;(const DiagnosticBuilder &amp; )</p>
+      <p>Defined at line 159 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="AED225EADF30F8DB42ECAC01BF79FA828F0D2E45">ActionResult&lt;PtrTy, CompressInvalid&gt;</h3>
+      <p>public void ActionResult&lt;PtrTy, CompressInvalid&gt;(const void * )</p>
+      <p>Defined at line 162 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <div>
+        <div>
+          <p> These two overloads prevent void* -&gt; bool conversions.</p>
+        </div>
+      </div>
+      <h3 id="9B6576DC52B1E6416B2857C177E89648B6E43407">ActionResult&lt;PtrTy, CompressInvalid&gt;</h3>
+      <p>public void ActionResult&lt;PtrTy, CompressInvalid&gt;(volatile void * )</p>
+      <p>Defined at line 163 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="ACF5203A927CC63039EEDB12F84068877A31FE6D">isInvalid</h3>
+      <p>public _Bool isInvalid()</p>
+      <p>Defined at line 165 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="AD99CE43E2E166B05F590CBC3DEC48D0706D4CBB">isUsable</h3>
+      <p>public _Bool isUsable()</p>
+      <p>Defined at line 166 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="11EC03F704DB36247D502D0D7E5E5A90CD0B7B69">isUnset</h3>
+      <p>public _Bool isUnset()</p>
+      <p>Defined at line 167 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="D6E22001D59C84178AFBCC519C91F11F441728D5">get</h3>
+      <p>public PtrTy get()</p>
+      <p>Defined at line 169 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="4D0CCA5F75334C972785E675D1DA85A6ACB091B3">getAs</h3>
+      <p>public T * getAs()</p>
+      <p>Defined at line 170 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="ADAD52E67AC7123DFC36579D907FA95CE48B4320">set</h3>
+      <p>public void set(PtrTy V)</p>
+      <p>Defined at line 172 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+      <h3 id="B95BB44527516A8930C49D6E58D89395E71C1EFB">operator=</h3>
+      <p>public const ActionResult&lt;PtrTy, CompressInvalid&gt; &amp; operator=(PtrTy RHS)</p>
+      <p>Defined at line 174 of file /usr/lib/llvm-16/include/clang/Sema/Ownership.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#559A1BCA34DB22F417BF09FA74B6D2411310A7D0">ActionResult&lt;PtrTy, CompressInvalid&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5C8038F623A552F76E5F3220E5F3D524316DD858">ActionResult&lt;PtrTy, CompressInvalid&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4D076F86E51E02D574E40E4EA63B7604660C2D9">ActionResult&lt;PtrTy, CompressInvalid&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AED225EADF30F8DB42ECAC01BF79FA828F0D2E45">ActionResult&lt;PtrTy, CompressInvalid&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B6576DC52B1E6416B2857C177E89648B6E43407">ActionResult&lt;PtrTy, CompressInvalid&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ACF5203A927CC63039EEDB12F84068877A31FE6D">isInvalid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD99CE43E2E166B05F590CBC3DEC48D0706D4CBB">isUsable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11EC03F704DB36247D502D0D7E5E5A90CD0B7B69">isUnset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6E22001D59C84178AFBCC519C91F11F441728D5">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D0CCA5F75334C972785E675D1DA85A6ACB091B3">getAs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ADAD52E67AC7123DFC36579D907FA95CE48B4320">set</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B95BB44527516A8930C49D6E58D89395E71C1EFB">operator=</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

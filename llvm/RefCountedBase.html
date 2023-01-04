@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class RefCountedBase</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class RefCountedBase</h1>
+    <p>Defined at line 76 of file /usr/lib/llvm-16/include/llvm/ADT/IntrusiveRefCntPtr.h</p>
+    <div>
+      <div>
+        <p> A CRTP mixin class that adds reference counting to a type.</p>
+        <p> The lifetime of an object which inherits from RefCountedBase is managed by calls to Release() and Retain(), which increment and decrement the object&apos;s refcount, respectively.  When a Release() call decrements the refcount to 0, the object deletes itself.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E7E2564E6F862EFF2402E0AC923C8E907018A008">RefCountedBase&lt;Derived&gt;</h3>
+      <p>protected void RefCountedBase&lt;Derived&gt;()</p>
+      <p>Defined at line 80 of file /usr/lib/llvm-16/include/llvm/ADT/IntrusiveRefCntPtr.h</p>
+      <h3 id="37615F5180D3E4F4CED37B5125D2F4CAB037EE52">RefCountedBase&lt;Derived&gt;</h3>
+      <p>protected void RefCountedBase&lt;Derived&gt;(const RefCountedBase&lt;Derived&gt; &amp; )</p>
+      <p>Defined at line 81 of file /usr/lib/llvm-16/include/llvm/ADT/IntrusiveRefCntPtr.h</p>
+      <h3 id="B9A30BAF11F46B192EB566600F97A8307644E2B8">operator=</h3>
+      <p>protected RefCountedBase&lt;Derived&gt; &amp; operator=(const RefCountedBase&lt;Derived&gt; &amp; )</p>
+      <p>Defined at line 82 of file /usr/lib/llvm-16/include/llvm/ADT/IntrusiveRefCntPtr.h</p>
+      <h3 id="A7BA25E09FCAF4857B50D509C537FB9816E121E8">~RefCountedBase&lt;Derived&gt;</h3>
+      <p>protected void ~RefCountedBase&lt;Derived&gt;()</p>
+      <p>Defined at line 85 of file /usr/lib/llvm-16/include/llvm/ADT/IntrusiveRefCntPtr.h</p>
+      <h3 id="3C474CDC1797A3475C8A349BA2624E84B58706DA">Retain</h3>
+      <p>public void Retain()</p>
+      <p>Defined at line 96 of file /usr/lib/llvm-16/include/llvm/ADT/IntrusiveRefCntPtr.h</p>
+      <h3 id="8375D41E46BD60E9551F74AA20EBEC2948481364">Release</h3>
+      <p>public void Release()</p>
+      <p>Defined at line 98 of file /usr/lib/llvm-16/include/llvm/ADT/IntrusiveRefCntPtr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E7E2564E6F862EFF2402E0AC923C8E907018A008">RefCountedBase&lt;Derived&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37615F5180D3E4F4CED37B5125D2F4CAB037EE52">RefCountedBase&lt;Derived&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9A30BAF11F46B192EB566600F97A8307644E2B8">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7BA25E09FCAF4857B50D509C537FB9816E121E8">~RefCountedBase&lt;Derived&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C474CDC1797A3475C8A349BA2624E84B58706DA">Retain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8375D41E46BD60E9551F74AA20EBEC2948481364">Release</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

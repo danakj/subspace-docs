@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXPseudoDestructorExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXPseudoDestructorExpr</h1>
+    <p>Defined at line 2540 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a C++ pseudo-destructor (C++ [expr.pseudo]).</p>
+        <p> A pseudo-destructor is an expression that looks like a member access to a destructor of a scalar type, except that scalar types don&apos;t have destructors. For example:</p>
+        <p> Pseudo-destructors typically occur when instantiating templates such as:</p>
+        <p> for scalar types. A pseudo-destructor expression has no run-time semantics beyond evaluating the base expression.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="88ABBE19F6E34D3A2D20C1D0BED09F09DD9EE337">CXXPseudoDestructorExpr</h3>
+      <p>
+        public void CXXPseudoDestructorExpr(const ASTContext &amp; Context, Expr * Base, _Bool isArrow, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         OperatorLoc, 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         QualifierLoc, TypeSourceInfo * ScopeType, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ColonColonLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TildeLoc, 
+        <a href="PseudoDestructorTypeStorage.html">PseudoDestructorTypeStorage</a>
+         DestroyedType)
+      </p>
+      <h3 id="D70FAFD817B4A3CAFF7EE90A012D6618A7C55450">CXXPseudoDestructorExpr</h3>
+      <p>
+        public void CXXPseudoDestructorExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Shell)
+      </p>
+      <p>Defined at line 2580 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="A724A057D9F5A2C3148E3EF88365E2ABCC1AE80F">getBase</h3>
+      <p>public Expr * getBase()</p>
+      <p>Defined at line 2583 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="8003D0D5E0713EA9F1915670C10677440F58A098">hasQualifier</h3>
+      <p>public _Bool hasQualifier()</p>
+      <p>Defined at line 2588 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determines whether this member expression actually had a C++ nested-name-specifier prior to the name of the member, e.g., x-&gt;Base::foo.</p>
+        </div>
+      </div>
+      <h3 id="4B3A5845FBDED3A4B9DCCE6A6D0974D148F02D2B">getQualifierLoc</h3>
+      <p>
+        public 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         getQualifierLoc()
+      </p>
+      <p>Defined at line 2592 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieves the nested-name-specifier that qualifies the type name, with source-location information.</p>
+        </div>
+      </div>
+      <h3 id="964082C594DF7B2B19A5BAF04AD1C18D34BBEBA3">getQualifier</h3>
+      <p>public NestedNameSpecifier * getQualifier()</p>
+      <p>Defined at line 2597 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> If the member name was qualified, retrieves the nested-name-specifier that precedes the member name. Otherwise, returns null.</p>
+        </div>
+      </div>
+      <h3 id="A1E8B29026EB48E69E2EDA68974C1DAB1D000985">isArrow</h3>
+      <p>public _Bool isArrow()</p>
+      <p>Defined at line 2603 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determine whether this pseudo-destructor expression was written using an &apos;-&gt;&apos; (otherwise, it used a &apos;.&apos;).</p>
+        </div>
+      </div>
+      <h3 id="056B3EA79F80AB63035AA494AAE39AA4A898A37C">getOperatorLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getOperatorLoc()
+      </p>
+      <p>Defined at line 2606 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the &apos;.&apos; or &apos;-&gt;&apos; operator.</p>
+        </div>
+      </div>
+      <h3 id="F76784ACFB02C8F19053AA537098420255B90B49">getScopeTypeInfo</h3>
+      <p>public TypeSourceInfo * getScopeTypeInfo()</p>
+      <p>Defined at line 2617 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the scope type in a qualified pseudo-destructor expression.</p>
+          <p> Pseudo-destructor expressions can have extra qualification within them that is not part of the nested-name-specifier, e.g.,  Here, if the object type of the expression is (or may be) a scalar type, may also be a scalar type and, therefore, cannot be part of a nested-name-specifier. It is stored as the &quot;scope type&quot; of the pseudo- destructor expression.</p>
+        </div>
+      </div>
+      <h3 id="0776CA9CE9A2FB7913B62E3D3192E722F19C530A">getColonColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getColonColonLoc()
+      </p>
+      <p>Defined at line 2621 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the &apos;::&apos; in a qualified pseudo-destructor expression.</p>
+        </div>
+      </div>
+      <h3 id="6D063F3EAA4E470A029BE9603617ECF7D2AAA508">getTildeLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTildeLoc()
+      </p>
+      <p>Defined at line 2624 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the &apos;~&apos;.</p>
+        </div>
+      </div>
+      <h3 id="2183A53A6D01FFFBEF63C139741B2B0ECE97B382">getDestroyedTypeInfo</h3>
+      <p>public TypeSourceInfo * getDestroyedTypeInfo()</p>
+      <p>Defined at line 2633 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the source location information for the type being destroyed.</p>
+          <p> This type-source information is available for non-dependent pseudo-destructor expressions and some dependent pseudo-destructor expressions. Returns null if we only have the identifier for a dependent pseudo-destructor expression.</p>
+        </div>
+      </div>
+      <h3 id="A19F383ADBEF5254983BEF424DDA196C8C989BA8">getDestroyedTypeIdentifier</h3>
+      <p>public IdentifierInfo * getDestroyedTypeIdentifier()</p>
+      <p>Defined at line 2640 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> In a dependent pseudo-destructor expression for which we do not have full type information on the destroyed type, provides the name of the destroyed type.</p>
+        </div>
+      </div>
+      <h3 id="C1FBD07A27F4B94CE7B85B9C6967BAE5D42B3D39">getDestroyedType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getDestroyedType()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the type being destroyed.</p>
+        </div>
+      </div>
+      <h3 id="B0E4E1203F4D4CBA2E7EAF83CF1843672854009E">getDestroyedTypeLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getDestroyedTypeLoc()
+      </p>
+      <p>Defined at line 2648 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the starting location of the type being destroyed.</p>
+        </div>
+      </div>
+      <h3 id="FAA4A99E125DED0F160FF21FA2BF6217EADE5B83">setDestroyedType</h3>
+      <p>
+        public void setDestroyedType(IdentifierInfo * II, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 2654 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Set the name of destroyed type for a dependent pseudo-destructor expression.</p>
+        </div>
+      </div>
+      <h3 id="5F043431213780D429BB8B3DDACE95A3310B9C4F">setDestroyedType</h3>
+      <p>public void setDestroyedType(TypeSourceInfo * Info)</p>
+      <p>Defined at line 2659 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Set the destroyed type.</p>
+        </div>
+      </div>
+      <h3 id="B2729827F000475183B7593E6AA15D09DC404A67">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2663 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B14CE6A6A558ED1EFD3763B846AC7D1C426BBDB5">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <h3 id="D011B8CEC10E8FBD1271C1B6A1B2963A7AC566C2">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2668 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="E37BDA77ACEA905D8F8AC258680799212417FD9F">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2673 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="E7941DBCD768FAB6CC02CF7C7890A3C8ADC79923">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2675 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#88ABBE19F6E34D3A2D20C1D0BED09F09DD9EE337">CXXPseudoDestructorExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D70FAFD817B4A3CAFF7EE90A012D6618A7C55450">CXXPseudoDestructorExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A724A057D9F5A2C3148E3EF88365E2ABCC1AE80F">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8003D0D5E0713EA9F1915670C10677440F58A098">hasQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B3A5845FBDED3A4B9DCCE6A6D0974D148F02D2B">getQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#964082C594DF7B2B19A5BAF04AD1C18D34BBEBA3">getQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1E8B29026EB48E69E2EDA68974C1DAB1D000985">isArrow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#056B3EA79F80AB63035AA494AAE39AA4A898A37C">getOperatorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F76784ACFB02C8F19053AA537098420255B90B49">getScopeTypeInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0776CA9CE9A2FB7913B62E3D3192E722F19C530A">getColonColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D063F3EAA4E470A029BE9603617ECF7D2AAA508">getTildeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2183A53A6D01FFFBEF63C139741B2B0ECE97B382">getDestroyedTypeInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A19F383ADBEF5254983BEF424DDA196C8C989BA8">getDestroyedTypeIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1FBD07A27F4B94CE7B85B9C6967BAE5D42B3D39">getDestroyedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0E4E1203F4D4CBA2E7EAF83CF1843672854009E">getDestroyedTypeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FAA4A99E125DED0F160FF21FA2BF6217EADE5B83">setDestroyedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F043431213780D429BB8B3DDACE95A3310B9C4F">setDestroyedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2729827F000475183B7593E6AA15D09DC404A67">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B14CE6A6A558ED1EFD3763B846AC7D1C426BBDB5">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D011B8CEC10E8FBD1271C1B6A1B2963A7AC566C2">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E37BDA77ACEA905D8F8AC258680799212417FD9F">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E7941DBCD768FAB6CC02CF7C7890A3C8ADC79923">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

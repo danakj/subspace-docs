@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExplicitCastExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExplicitCastExpr</h1>
+    <p>Defined at line 3703 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> ExplicitCastExpr - An explicit cast written in the source code.</p>
+        <p> This class is effectively an abstract class, because it provides the basic representation of an explicitly-written cast without specifying which kind of cast (C cast, functional cast, static cast, etc.) was written; specific derived classes represent the particular style of cast and its location information.</p>
+        <p> Unlike implicit casts, explicit cast nodes have two different types: the type that was written into the source code, and the actual type of the expression as determined by semantic analysis. These types may differ slightly. For example, in C++ one can cast to a reference type, which indicates that the resulting expression will be an lvalue or xvalue. The reference type, however, will not be used as the type of the expression.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="CastExpr.html">CastExpr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2F10DF10013DE7D7E9921CB4E5CC40524E13F209">ExplicitCastExpr</h3>
+      <p>
+        protected void ExplicitCastExpr(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="QualType.html">QualType</a>
+         exprTy, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="CastKind.html">CastKind</a>
+         kind, Expr * op, unsigned int PathSize, _Bool HasFPFeatures, TypeSourceInfo * writtenTy)
+      </p>
+      <p>Defined at line 3709 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B96D6E487ED8D78897BA100FACD4DF5DCABFE9B0">ExplicitCastExpr</h3>
+      <p>
+        protected void ExplicitCastExpr(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Shell, unsigned int PathSize, _Bool HasFPFeatures)
+      </p>
+      <p>Defined at line 3718 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Construct an empty explicit cast.</p>
+        </div>
+      </div>
+      <h3 id="799D40331911DC30CC0FCC07794486931529A6FF">getTypeInfoAsWritten</h3>
+      <p>public TypeSourceInfo * getTypeInfoAsWritten()</p>
+      <p>Defined at line 3725 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getTypeInfoAsWritten - Returns the type source info for the type that this expression is casting to.</p>
+        </div>
+      </div>
+      <h3 id="52ACEF148A157A8B9D6473D439300E720B5F67D8">setTypeInfoAsWritten</h3>
+      <p>public void setTypeInfoAsWritten(TypeSourceInfo * writtenTy)</p>
+      <p>Defined at line 3726 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9B174CE22D0718F87796C41C747E1AAB3438C5C4">getTypeAsWritten</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getTypeAsWritten()
+      </p>
+      <p>Defined at line 3730 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getTypeAsWritten - Returns the type that this expression is casting to, as written in the source code.</p>
+        </div>
+      </div>
+      <h3 id="6AAB8F337B3F6748582B43FA89A1006192DDADD4">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 3732 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2F10DF10013DE7D7E9921CB4E5CC40524E13F209">ExplicitCastExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B96D6E487ED8D78897BA100FACD4DF5DCABFE9B0">ExplicitCastExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#799D40331911DC30CC0FCC07794486931529A6FF">getTypeInfoAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52ACEF148A157A8B9D6473D439300E720B5F67D8">setTypeInfoAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B174CE22D0718F87796C41C747E1AAB3438C5C4">getTypeAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AAB8F337B3F6748582B43FA89A1006192DDADD4">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FunctionReturnThunksAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FunctionReturnThunksAttr</h1>
+    <p>Defined at line 4395 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="13C339731B25E77785DA744EE90FB4EC4E1591F2">CreateImplicit</h3>
+      <p>
+        public FunctionReturnThunksAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../clang/FunctionReturnThunksAttr/Kind.html">Kind</a>
+         ThunkType, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="BDD77BDEDB3C8FDE4DC10598A6947C7642FC9908">Create</h3>
+      <p>
+        public FunctionReturnThunksAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../clang/FunctionReturnThunksAttr/Kind.html">Kind</a>
+         ThunkType, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="515AF15C4F24C96C4805593392DC03A738FA488A">CreateImplicit</h3>
+      <p>
+        public FunctionReturnThunksAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../clang/FunctionReturnThunksAttr/Kind.html">Kind</a>
+         ThunkType, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="7E15C22581F941D093B5F40EBEAC2F62BCEA39E4">Create</h3>
+      <p>
+        public FunctionReturnThunksAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../clang/FunctionReturnThunksAttr/Kind.html">Kind</a>
+         ThunkType, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="812A9F6EE0175CC7D9F366479795535900442C07">FunctionReturnThunksAttr</h3>
+      <p>
+        public void FunctionReturnThunksAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../clang/FunctionReturnThunksAttr/Kind.html">Kind</a>
+         ThunkType)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="17B9C14508558A1DB286981C9BD44E6F24AC0CE8">clone</h3>
+      <p>public FunctionReturnThunksAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="553DFD0E9782ABB1037E0CAA21F780A1025F9D0E">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="469662E0DA250EB3F0AD2641797FE84C06FF294B">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="CB34ED35EA47C5DD1590FEAA8EFBD19317356EC1">getThunkType</h3>
+      <p>
+        public 
+        <a href="../clang/FunctionReturnThunksAttr/Kind.html">Kind</a>
+         getThunkType()
+      </p>
+      <p>Defined at line 4428 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="3041CD800F789FDA89C7C6B6A5D61F2D6EC4241C">ConvertStrToKind</h3>
+      <p>
+        public _Bool ConvertStrToKind(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Val, Kind &amp; Out)
+      </p>
+      <h3 id="97D17EDFFDBD32438B7EB8EFEDE81426C7D3FA38">ConvertKindToStr</h3>
+      <p>
+        public const char * ConvertKindToStr(
+        <a href="../clang/FunctionReturnThunksAttr/Kind.html">Kind</a>
+         Val)
+      </p>
+      <h3 id="F55BC25C4497A2FB582C51076EC36E7C191EA8BB">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 4436 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="7B0286B55A1B725C172E07FBD495DC0A5329A725">enum Kind</h3>
+      <ul>
+        <li>Keep</li>
+        <li>Extern</li>
+      </ul>
+      <p>Defined at line 4397 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="4AD355254162F6CE29B36CDD19858756E687C50B">enum Spelling</h3>
+      <ul>
+        <li>GNU_function_return</li>
+        <li>CXX11_gnu_function_return</li>
+        <li>C2x_gnu_function_return</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 4405 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#13C339731B25E77785DA744EE90FB4EC4E1591F2">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDD77BDEDB3C8FDE4DC10598A6947C7642FC9908">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#515AF15C4F24C96C4805593392DC03A738FA488A">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E15C22581F941D093B5F40EBEAC2F62BCEA39E4">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#812A9F6EE0175CC7D9F366479795535900442C07">FunctionReturnThunksAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17B9C14508558A1DB286981C9BD44E6F24AC0CE8">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#553DFD0E9782ABB1037E0CAA21F780A1025F9D0E">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#469662E0DA250EB3F0AD2641797FE84C06FF294B">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB34ED35EA47C5DD1590FEAA8EFBD19317356EC1">getThunkType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3041CD800F789FDA89C7C6B6A5D61F2D6EC4241C">ConvertStrToKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97D17EDFFDBD32438B7EB8EFEDE81426C7D3FA38">ConvertKindToStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F55BC25C4497A2FB582C51076EC36E7C191EA8BB">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7B0286B55A1B725C172E07FBD495DC0A5329A725">Kind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AD355254162F6CE29B36CDD19858756E687C50B">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

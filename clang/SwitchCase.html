@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SwitchCase</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SwitchCase</h1>
+    <p>Defined at line 1558 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    <div>
+      <div>
+        <p> SwitchCase is the base class for CaseStmt and DefaultStmt,</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Stmt.html">Stmt</a>
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        protected 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ColonLoc
+      </li>
+      <li>protected SwitchCase * NextSwitchCase</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="354642643CF73F106A7FFADD125E598B0CF6F140">SwitchCase</h3>
+      <p>
+        protected void SwitchCase(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         KWLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ColonLoc)
+      </p>
+      <p>Defined at line 1570 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="27F72314ED8ECAE88052249C67E29E0CEE841F03">SwitchCase</h3>
+      <p>
+        protected void SwitchCase(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         )
+      </p>
+      <p>Defined at line 1575 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="BBFCAA8154C5B76FDA5B1ABC7058927607D3706E">getNextSwitchCase</h3>
+      <p>public const SwitchCase * getNextSwitchCase()</p>
+      <p>Defined at line 1578 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="1320C6AE90AB5C852333765F462105AC70B13CEB">getNextSwitchCase</h3>
+      <p>public SwitchCase * getNextSwitchCase()</p>
+      <p>Defined at line 1579 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="DBED054483210B63B4F744CA28DF3DBA58E7CD92">setNextSwitchCase</h3>
+      <p>public void setNextSwitchCase(SwitchCase * SC)</p>
+      <p>Defined at line 1580 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="AC2817C512DE2C1D0CAB567DFBAD892E92D03AD1">getKeywordLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getKeywordLoc()
+      </p>
+      <p>Defined at line 1582 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="FC68B6C9A5AABEE8FA855C2600956C62AFDD9185">setKeywordLoc</h3>
+      <p>
+        public void setKeywordLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 1583 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="DF9020BC55650536FC77C65559C33A1BD9A85362">getColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getColonLoc()
+      </p>
+      <p>Defined at line 1584 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="EA8833C22B5A279D42F493D808029595A5FE7172">setColonLoc</h3>
+      <p>
+        public void setColonLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 1585 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="DB921C1528B99EDD3CAEB0814E040BE87F37EAAF">getSubStmt</h3>
+      <p>public Stmt * getSubStmt()</p>
+      <p>Defined at line 1802 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="4739A5DDE9458CAD2BF04F480B71ADE8CC6EE315">getSubStmt</h3>
+      <p>public const Stmt * getSubStmt()</p>
+      <p>Defined at line 1588 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="CCF77EC2A47E9317742D6F4CD6D658F62AD93DDE">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1592 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="22888C23760664170D1862F69F6BA83831F105F7">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1794 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="18223461B71B3C6C66C9F381309208B0D4AF570D">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 1595 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#354642643CF73F106A7FFADD125E598B0CF6F140">SwitchCase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27F72314ED8ECAE88052249C67E29E0CEE841F03">SwitchCase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBFCAA8154C5B76FDA5B1ABC7058927607D3706E">getNextSwitchCase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1320C6AE90AB5C852333765F462105AC70B13CEB">getNextSwitchCase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DBED054483210B63B4F744CA28DF3DBA58E7CD92">setNextSwitchCase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC2817C512DE2C1D0CAB567DFBAD892E92D03AD1">getKeywordLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC68B6C9A5AABEE8FA855C2600956C62AFDD9185">setKeywordLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF9020BC55650536FC77C65559C33A1BD9A85362">getColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA8833C22B5A279D42F493D808029595A5FE7172">setColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB921C1528B99EDD3CAEB0814E040BE87F37EAAF">getSubStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4739A5DDE9458CAD2BF04F480B71ADE8CC6EE315">getSubStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CCF77EC2A47E9317742D6F4CD6D658F62AD93DDE">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22888C23760664170D1862F69F6BA83831F105F7">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#18223461B71B3C6C66C9F381309208B0D4AF570D">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TagTypeLoc</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TagTypeLoc</h1>
+    <p>Defined at line 716 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+    <div>
+      <div>
+        <p> Wrapper for source info for tag types.  Note that this only records source info for the name itself; a type written &apos;struct foo&apos; should be represented as an ElaboratedTypeLoc.  We currently only do that when C++ is enabled because of the expense of creating an ElaboratedType node for so many type references in C.</p>
+      </div>
+    </div>
+    <p>Inherits from InheritingConcreteTypeLoc&lt;TypeSpecTypeLoc, TagTypeLoc, TagType&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D3E8F40968D020E118634B7C763462E02164073D">getDecl</h3>
+      <p>public TagDecl * getDecl()</p>
+      <p>Defined at line 720 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="550915A7A3992790E6027475D81CBB799671C311">isDefinition</h3>
+      <p>public _Bool isDefinition()</p>
+      <div>
+        <div>
+          <p> True if the tag was defined in this type specifier.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D3E8F40968D020E118634B7C763462E02164073D">getDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#550915A7A3992790E6027475D81CBB799671C311">isDefinition</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

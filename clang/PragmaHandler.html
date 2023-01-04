@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class PragmaHandler</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class PragmaHandler</h1>
+    <p>Defined at line 65 of file /usr/lib/llvm-16/include/clang/Lex/Pragma.h</p>
+    <div>
+      <div>
+        <p> PragmaHandler - Instances of this interface defined to handle the various pragmas that the language front-end uses.  Each handler optionally has a name (e.g. &quot;pack&quot;) and the HandlePragma method is invoked when a pragma with that identifier is found.  If a handler does not match any of the declared pragmas the handler with a null identifier is invoked, if it exists.</p>
+        <p> Note that the PragmaNamespace class can be used to subdivide pragmas, e.g. we treat &quot;\#pragma STDC&quot; and &quot;\#pragma GCC&quot; as namespaces that contain other pragmas.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="494A1CC4913C3A3C89E8217101B7EA0ADD9E5674">PragmaHandler</h3>
+      <p>public void PragmaHandler()</p>
+      <p>Defined at line 69 of file /usr/lib/llvm-16/include/clang/Lex/Pragma.h</p>
+      <h3 id="3A1D9011C7FCCD746DA35BC27896A56571A05F18">PragmaHandler</h3>
+      <p>
+        public void PragmaHandler(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         name)
+      </p>
+      <p>Defined at line 70 of file /usr/lib/llvm-16/include/clang/Lex/Pragma.h</p>
+      <h3 id="87EAC47F583D6F8C98CDAD346474E3DC9EF25102">~PragmaHandler</h3>
+      <p>public void ~PragmaHandler()</p>
+      <h3 id="03DF004FAAEB8AE366CF2430B1D5439EC616F9C3">getName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getName()
+      </p>
+      <p>Defined at line 73 of file /usr/lib/llvm-16/include/clang/Lex/Pragma.h</p>
+      <h3 id="EFE9CF4881F89069552F5CB0A41994FC619EF037">HandlePragma</h3>
+      <p>
+        public void HandlePragma(Preprocessor &amp; PP, 
+        <a href="PragmaIntroducer.html">PragmaIntroducer</a>
+         Introducer, Token &amp; FirstToken)
+      </p>
+      <h3 id="BA5BA28BC66089471295ED16B9542F6DE98D413C">getIfNamespace</h3>
+      <p>public PragmaNamespace * getIfNamespace()</p>
+      <p>Defined at line 79 of file /usr/lib/llvm-16/include/clang/Lex/Pragma.h</p>
+      <div>
+        <div>
+          <p> getIfNamespace - If this is a namespace, return it.  This is equivalent to using a dynamic_cast, but doesn&apos;t require RTTI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#494A1CC4913C3A3C89E8217101B7EA0ADD9E5674">PragmaHandler</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A1D9011C7FCCD746DA35BC27896A56571A05F18">PragmaHandler</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87EAC47F583D6F8C98CDAD346474E3DC9EF25102">~PragmaHandler</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03DF004FAAEB8AE366CF2430B1D5439EC616F9C3">getName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFE9CF4881F89069552F5CB0A41994FC619EF037">HandlePragma</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA5BA28BC66089471295ED16B9542F6DE98D413C">getIfNamespace</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

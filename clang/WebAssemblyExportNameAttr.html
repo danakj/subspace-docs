@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class WebAssemblyExportNameAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class WebAssemblyExportNameAttr</h1>
+    <p>Defined at line 12816 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="80CCCE9FC0E400806186D8491C8CC881B1D0DE44">CreateImplicit</h3>
+      <p>
+        public WebAssemblyExportNameAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ExportName, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="4B79035BBA22EE92A2EE15B77DB720DF53D7C649">Create</h3>
+      <p>
+        public WebAssemblyExportNameAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ExportName, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="6729FB248397CE4E69EAA5776292D95EA3FB1D07">CreateImplicit</h3>
+      <p>
+        public WebAssemblyExportNameAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ExportName, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="6DFFCADDB45008946CC4A866E340E96E0E0B1C0B">Create</h3>
+      <p>
+        public WebAssemblyExportNameAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ExportName, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="714E50ACA4838285E174BBCEB400B66AD7502B69">WebAssemblyExportNameAttr</h3>
+      <p>
+        public void WebAssemblyExportNameAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ExportName)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="637086768B5A6932EFFF5EAFE0B0070C1F028FFC">clone</h3>
+      <p>public WebAssemblyExportNameAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="FB82B69AC16153CA2AE55A0F37520BD2E5A18A75">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="3764BC05EDAEF6E20756996F1A4A651EB13F20DF">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="A94CA442AC08F0CEA23C7A5604F04FC217CBBE40">getExportName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getExportName()
+      </p>
+      <p>Defined at line 12844 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="69EC9B4F8EE1ADC600302D851C47BF7D36882816">getExportNameLength</h3>
+      <p>public unsigned int getExportNameLength()</p>
+      <p>Defined at line 12847 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="AE080BCFAD670E04F3E4465B008853B907155298">setExportName</h3>
+      <p>
+        public void setExportName(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 12850 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="D9E58CB825DDBE47432E95E355D37964F83B956D">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 12859 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="88CFF88455114DA99E4D5D2E3B7FDC6D3E00474A">enum Spelling</h3>
+      <ul>
+        <li>GNU_export_name</li>
+        <li>CXX11_clang_export_name</li>
+        <li>C2x_clang_export_name</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 12821 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#80CCCE9FC0E400806186D8491C8CC881B1D0DE44">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B79035BBA22EE92A2EE15B77DB720DF53D7C649">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6729FB248397CE4E69EAA5776292D95EA3FB1D07">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DFFCADDB45008946CC4A866E340E96E0E0B1C0B">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#714E50ACA4838285E174BBCEB400B66AD7502B69">WebAssemblyExportNameAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#637086768B5A6932EFFF5EAFE0B0070C1F028FFC">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB82B69AC16153CA2AE55A0F37520BD2E5A18A75">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3764BC05EDAEF6E20756996F1A4A651EB13F20DF">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A94CA442AC08F0CEA23C7A5604F04FC217CBBE40">getExportName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69EC9B4F8EE1ADC600302D851C47BF7D36882816">getExportNameLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE080BCFAD670E04F3E4465B008853B907155298">setExportName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9E58CB825DDBE47432E95E355D37964F83B956D">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#88CFF88455114DA99E4D5D2E3B7FDC6D3E00474A">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

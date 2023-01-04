@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ReleaseHandleAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ReleaseHandleAttr</h1>
+    <p>Defined at line 10074 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableParamAttr.html">InheritableParamAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7648B7C12DF04C29D173CE27816FF029E1675AF1">CreateImplicit</h3>
+      <p>
+        public ReleaseHandleAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         HandleType, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="926D56650EC286B7B3CB5194A026C9AEC8FF1F94">Create</h3>
+      <p>
+        public ReleaseHandleAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         HandleType, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="66768A42175C964122B63FB47D90C37C02A500D7">CreateImplicit</h3>
+      <p>
+        public ReleaseHandleAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         HandleType, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="A4032A72E3E26D99CE741EC03141AF2F858AE461">Create</h3>
+      <p>
+        public ReleaseHandleAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         HandleType, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="E8676C7543B8161B887F15A85C1962DDD5DBBAED">ReleaseHandleAttr</h3>
+      <p>
+        public void ReleaseHandleAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         HandleType)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="B75DB43394857FC0F525C273811707EF0A4CB0D7">clone</h3>
+      <p>public ReleaseHandleAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="D5C1F208B48355226CF29D95490FB0E2689E1718">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="6E9325A02F35C83B7ED70818948265F0A082DB1F">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="FFADB057550FAB47277DC3001230C8B419780FB9">getHandleType</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getHandleType()
+      </p>
+      <p>Defined at line 10102 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="59993AC2B71C4B9FDF3BDC212BDAFCECA686B1AD">getHandleTypeLength</h3>
+      <p>public unsigned int getHandleTypeLength()</p>
+      <p>Defined at line 10105 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="8A377237D1099A8385FC37FCCE0F2F3EBB24503C">setHandleType</h3>
+      <p>
+        public void setHandleType(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 10108 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="7FE329ECE9A7C426CFD355222F1499348B29A982">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 10117 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="BD632A4E300E1172C1CAE549C31F6DAA3F63C85B">enum Spelling</h3>
+      <ul>
+        <li>GNU_release_handle</li>
+        <li>CXX11_clang_release_handle</li>
+        <li>C2x_clang_release_handle</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 10079 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7648B7C12DF04C29D173CE27816FF029E1675AF1">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#926D56650EC286B7B3CB5194A026C9AEC8FF1F94">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66768A42175C964122B63FB47D90C37C02A500D7">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4032A72E3E26D99CE741EC03141AF2F858AE461">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8676C7543B8161B887F15A85C1962DDD5DBBAED">ReleaseHandleAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B75DB43394857FC0F525C273811707EF0A4CB0D7">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5C1F208B48355226CF29D95490FB0E2689E1718">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E9325A02F35C83B7ED70818948265F0A082DB1F">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FFADB057550FAB47277DC3001230C8B419780FB9">getHandleType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59993AC2B71C4B9FDF3BDC212BDAFCECA686B1AD">getHandleTypeLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A377237D1099A8385FC37FCCE0F2F3EBB24503C">setHandleType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FE329ECE9A7C426CFD355222F1499348B29A982">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BD632A4E300E1172C1CAE549C31F6DAA3F63C85B">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

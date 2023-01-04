@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DependentTemplateName</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DependentTemplateName</h1>
+    <p>Defined at line 489 of file /usr/lib/llvm-16/include/clang/AST/TemplateName.h</p>
+    <div>
+      <div>
+        <p> Represents a dependent template name that cannot be resolved prior to template instantiation.</p>
+        <p> This kind of template name refers to a dependent template name, including its nested name specifier (if any). For example, DependentTemplateName can refer to &quot;MetaFun::template apply&quot;, where &quot;MetaFun::&quot; is the nested name specifier and &quot;apply&quot; is the template name referenced. The &quot;template&quot; keyword is implied.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="85641920E0976207F0B6BDA8684279E6F5BE1B06">getQualifier</h3>
+      <p>public NestedNameSpecifier * getQualifier()</p>
+      <p>Defined at line 545 of file /usr/lib/llvm-16/include/clang/AST/TemplateName.h</p>
+      <div>
+        <div>
+          <p> Return the nested name specifier that qualifies this name.</p>
+        </div>
+      </div>
+      <h3 id="EE14E25B2770C05DBEB2983559E7EC75E9459D88">isIdentifier</h3>
+      <p>public _Bool isIdentifier()</p>
+      <p>Defined at line 548 of file /usr/lib/llvm-16/include/clang/AST/TemplateName.h</p>
+      <div>
+        <div>
+          <p> Determine whether this template name refers to an identifier.</p>
+        </div>
+      </div>
+      <h3 id="07A5269705E43F12B44DDBE09AF5718F41A886EC">getIdentifier</h3>
+      <p>public const IdentifierInfo * getIdentifier()</p>
+      <p>Defined at line 551 of file /usr/lib/llvm-16/include/clang/AST/TemplateName.h</p>
+      <div>
+        <div>
+          <p> Returns the identifier to which this template name refers.</p>
+        </div>
+      </div>
+      <h3 id="93B8E13A38EA9C4CB0E5558F018456277B8F8015">isOverloadedOperator</h3>
+      <p>public _Bool isOverloadedOperator()</p>
+      <p>Defined at line 558 of file /usr/lib/llvm-16/include/clang/AST/TemplateName.h</p>
+      <div>
+        <div>
+          <p> Determine whether this template name refers to an overloaded operator.</p>
+        </div>
+      </div>
+      <h3 id="FA20B927D9104B26C4DB1169BF56606358CC5407">getOperator</h3>
+      <p>
+        public 
+        <a href="OverloadedOperatorKind.html">OverloadedOperatorKind</a>
+         getOperator()
+      </p>
+      <p>Defined at line 561 of file /usr/lib/llvm-16/include/clang/AST/TemplateName.h</p>
+      <div>
+        <div>
+          <p> Return the overloaded operator to which this template name refers.</p>
+        </div>
+      </div>
+      <h3 id="22D3B2EDF0F9DD7083E077E1F05AA13E3F96DCF3">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 567 of file /usr/lib/llvm-16/include/clang/AST/TemplateName.h</p>
+      <h3 id="919D08AA617A6519CA36ED06D52AFE25CBB82FB1">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID, NestedNameSpecifier * NNS, const IdentifierInfo * Identifier)</p>
+      <p>Defined at line 574 of file /usr/lib/llvm-16/include/clang/AST/TemplateName.h</p>
+      <h3 id="8F875A3E82AE4DED1DB65A7305E61EB5AD91B63B">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, NestedNameSpecifier * NNS, 
+        <a href="OverloadedOperatorKind.html">OverloadedOperatorKind</a>
+         Operator)
+      </p>
+      <p>Defined at line 581 of file /usr/lib/llvm-16/include/clang/AST/TemplateName.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#85641920E0976207F0B6BDA8684279E6F5BE1B06">getQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE14E25B2770C05DBEB2983559E7EC75E9459D88">isIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07A5269705E43F12B44DDBE09AF5718F41A886EC">getIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#93B8E13A38EA9C4CB0E5558F018456277B8F8015">isOverloadedOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA20B927D9104B26C4DB1169BF56606358CC5407">getOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22D3B2EDF0F9DD7083E077E1F05AA13E3F96DCF3">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#919D08AA617A6519CA36ED06D52AFE25CBB82FB1">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F875A3E82AE4DED1DB65A7305E61EB5AD91B63B">Profile</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

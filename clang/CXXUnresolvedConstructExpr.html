@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXUnresolvedConstructExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXUnresolvedConstructExpr</h1>
+    <p>Defined at line 3451 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Describes an explicit type conversion that uses functional notion but could not be resolved because one or more arguments are type-dependent.</p>
+        <p> The explicit type conversions expressed by CXXUnresolvedConstructExpr have the form T(a1, a2, ..., aN), where  is some type and  ...,  are values, and either  is a dependent type or one or more of the a&apos;s is type-dependent. For example, this would occur in a template such as:</p>
+        <p> When the returned expression is instantiated, it may resolve to a constructor call, conversion function call, or some kind of type conversion.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;CXXUnresolvedConstructExpr, Expr *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FBC84A7C9A98B3249982D9DDC2B608312CD9311A">Create</h3>
+      <p>
+        public CXXUnresolvedConstructExpr * Create(const ASTContext &amp; Context, 
+        <a href="QualType.html">QualType</a>
+         T, TypeSourceInfo * TSI, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParenLoc)
+      </p>
+      <h3 id="E5DBF0AAB151FE587621A2C9944514E7AC5FDF93">CreateEmpty</h3>
+      <p>public CXXUnresolvedConstructExpr * CreateEmpty(const ASTContext &amp; Context, unsigned int NumArgs)</p>
+      <h3 id="36BF531741FE9F6D02A9AE0C63E4BE2BBFB1CCFA">getTypeAsWritten</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getTypeAsWritten()
+      </p>
+      <p>Defined at line 3487 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the type that is being constructed, as specified in the source code.</p>
+        </div>
+      </div>
+      <h3 id="464B43AE04625FBEDB623754418671ADCBBD790C">getTypeSourceInfo</h3>
+      <p>public TypeSourceInfo * getTypeSourceInfo()</p>
+      <p>Defined at line 3491 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the type source information for the type being constructed.</p>
+        </div>
+      </div>
+      <h3 id="27089DE9F04A66D55BFB1FA300FD63F8C18879A5">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 3495 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the left parentheses (&apos;(&apos;) that precedes the argument list.</p>
+        </div>
+      </div>
+      <h3 id="05B68960C187E97ED7E4FA6E9DB9EF65C109CDB5">setLParenLoc</h3>
+      <p>
+        public void setLParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 3496 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="3BB7E393EC605E05F204F614B23527C06679EAE6">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 3500 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the right parentheses (&apos;)&apos;) that follows the argument list.</p>
+        </div>
+      </div>
+      <h3 id="A4A86CE21E9B154BAC35FCED2601972B22A5AE8D">setRParenLoc</h3>
+      <p>
+        public void setRParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 3501 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="6134950009CFEAFC9759BA42FFE34564C5987914">isListInitialization</h3>
+      <p>public _Bool isListInitialization()</p>
+      <p>Defined at line 3506 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determine whether this expression models list-initialization. If so, there will be exactly one subexpression, which will be an InitListExpr.</p>
+        </div>
+      </div>
+      <h3 id="04838BAF834F8B53B6467282CB5E9F70B4412B4A">getNumArgs</h3>
+      <p>public unsigned int getNumArgs()</p>
+      <p>Defined at line 3509 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the number of arguments.</p>
+        </div>
+      </div>
+      <h3 id="1B0FCBF4BC9126B9FE66E1C6A4EEE9EB6692CAAD">arg_begin</h3>
+      <p>public arg_iterator arg_begin()</p>
+      <p>Defined at line 3514 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="BA553953D231253A4DC0E17F02BFAE0EC97F6D54">arg_end</h3>
+      <p>public arg_iterator arg_end()</p>
+      <p>Defined at line 3515 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="958506026BDA9BC12D472D35AE6577DCEE0C7472">arguments</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         arguments()
+      </p>
+      <p>Defined at line 3516 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B4CC8C777124957A7F17B9AFC1F24622CAA30624">arg_begin</h3>
+      <p>public const_arg_iterator arg_begin()</p>
+      <p>Defined at line 3521 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="13E0C82C77FD1C06B694CD2349BEB1E696C2B0D6">arg_end</h3>
+      <p>public const_arg_iterator arg_end()</p>
+      <p>Defined at line 3522 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="3873FB71E508C84D485C29B8518974B5FD96A636">arguments</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         arguments()
+      </p>
+      <p>Defined at line 3523 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="D4B224D19C209881B3CA62671338C3BE4F4D622D">getArg</h3>
+      <p>public Expr * getArg(unsigned int I)</p>
+      <p>Defined at line 3527 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="A0CF7623E033223810B0CAF367EFB9B6B47B1170">getArg</h3>
+      <p>public const Expr * getArg(unsigned int I)</p>
+      <p>Defined at line 3532 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="2B3AFB14457E54881287836E2F38CFACF35E6748">setArg</h3>
+      <p>public void setArg(unsigned int I, Expr * E)</p>
+      <p>Defined at line 3537 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="85F7F40409698E20251A2D94727C0B7BA53EED18">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <h3 id="242BE6144083ADD02ADE32893BD904F6DBE0DCCA">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 3543 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="6A8CC06622A72CFD25C71BDD488A4FF6637ABDEB">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 3549 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="26D403CB8260ED909AF329995D2EB363AE7A0AD6">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3554 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="D2FAB7FDA4EA2E7B1862D88F42C5411F8B860702">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3559 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FBC84A7C9A98B3249982D9DDC2B608312CD9311A">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5DBF0AAB151FE587621A2C9944514E7AC5FDF93">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#36BF531741FE9F6D02A9AE0C63E4BE2BBFB1CCFA">getTypeAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#464B43AE04625FBEDB623754418671ADCBBD790C">getTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27089DE9F04A66D55BFB1FA300FD63F8C18879A5">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05B68960C187E97ED7E4FA6E9DB9EF65C109CDB5">setLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3BB7E393EC605E05F204F614B23527C06679EAE6">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4A86CE21E9B154BAC35FCED2601972B22A5AE8D">setRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6134950009CFEAFC9759BA42FFE34564C5987914">isListInitialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#04838BAF834F8B53B6467282CB5E9F70B4412B4A">getNumArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B0FCBF4BC9126B9FE66E1C6A4EEE9EB6692CAAD">arg_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA553953D231253A4DC0E17F02BFAE0EC97F6D54">arg_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#958506026BDA9BC12D472D35AE6577DCEE0C7472">arguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4CC8C777124957A7F17B9AFC1F24622CAA30624">arg_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13E0C82C77FD1C06B694CD2349BEB1E696C2B0D6">arg_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3873FB71E508C84D485C29B8518974B5FD96A636">arguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4B224D19C209881B3CA62671338C3BE4F4D622D">getArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0CF7623E033223810B0CAF367EFB9B6B47B1170">getArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B3AFB14457E54881287836E2F38CFACF35E6748">setArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85F7F40409698E20251A2D94727C0B7BA53EED18">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#242BE6144083ADD02ADE32893BD904F6DBE0DCCA">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A8CC06622A72CFD25C71BDD488A4FF6637ABDEB">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#26D403CB8260ED909AF329995D2EB363AE7A0AD6">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2FAB7FDA4EA2E7B1862D88F42C5411F8B860702">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

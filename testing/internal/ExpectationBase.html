@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExpectationBase</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExpectationBase</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#707">707</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Base class for expectations.</p>
+      </div>
+      <div>
+        <p> Base class for implementing expectations.</p>
+        <p> There are two reasons for having a type-agnostic base class for Expectation:</p>
+        <p>   1. We need to store collections of expectations of different   types (e.g. all pre-requisites of a particular expectation, all   expectations in a sequence).  Therefore these expectation objects   must share a common base class.</p>
+        <p>   2. We can avoid binary code bloat by moving methods not depending   on the template argument of Expectation to the base class.</p>
+        <p> This class is internal and mustn&apos;t be used by user code directly.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected const char * file_</li>
+      <li>protected int line_</li>
+      <li>
+        protected 
+        <a href="../../std/__cxx11/basic_string.html">basic_string</a>
+         source_text_
+      </li>
+      <li>protected _Bool cardinality_specified_</li>
+      <li>
+        protected 
+        <a href="../../testing/Cardinality.html">Cardinality</a>
+         cardinality_
+      </li>
+      <li>
+        protected 
+        <a href="../../testing/ExpectationSet.html">ExpectationSet</a>
+         immediate_prerequisites_
+      </li>
+      <li>protected int call_count_</li>
+      <li>protected _Bool retired_</li>
+      <li>
+        protected 
+        <a href="../../std/vector.html">vector</a>
+         untyped_actions_
+      </li>
+      <li>protected _Bool extra_matcher_specified_</li>
+      <li>protected _Bool repeated_action_specified_</li>
+      <li>protected _Bool retires_on_saturation_</li>
+      <li>
+        protected 
+        <a href="../../testing/internal/ExpectationBase/Clause.html">Clause</a>
+         last_clause_
+      </li>
+      <li>protected _Bool action_count_checked_</li>
+      <li>
+        protected 
+        <a href="Mutex.html">Mutex</a>
+         mutex_
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E3B1F079FAB455DD1041C5175D631787E8539C3C">ExpectationBase</h3>
+      <p>public void ExpectationBase(const char * file, int line, const std::string &amp; source_text)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#82">82</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Constructs an ExpectationBase object.</p>
+        </div>
+        <div>
+          <p> source_text is the EXPECT_CALL(...) source that created this Expectation.</p>
+        </div>
+      </div>
+      <h3 id="58D9BF9FE0C1DBE1B55CB4BA92380C84C96789DB">~ExpectationBase</h3>
+      <p>public void ~ExpectationBase()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#98">98</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Destructs an ExpectationBase object.</p>
+        </div>
+      </div>
+      <h3 id="C7E1E014039EAC9F39EF013AAD8A62A33B41791D">file</h3>
+      <p>public const char * file()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#715">715</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Where in the source file was the expectation spec defined?</p>
+        </div>
+      </div>
+      <h3 id="0433198C3B192BCF998022D942A12FB563B4F559">line</h3>
+      <p>public int line()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#716">716</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <h3 id="69C0086C0B2BE818D3DAD7A5EB19348908A680B8">source_text</h3>
+      <p>public const char * source_text()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#717">717</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <h3 id="505353B05ACADA4677A3543A4EA3FA7BF86A6146">cardinality</h3>
+      <p>public const Cardinality &amp; cardinality()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#719">719</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the cardinality specified in the expectation spec.</p>
+        </div>
+      </div>
+      <h3 id="4CD3D16542E1518525221E8DB13D2EDF8157BC8F">DescribeLocationTo</h3>
+      <p>public void DescribeLocationTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#722">722</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Describes the source file location of this expectation.</p>
+        </div>
+      </div>
+      <h3 id="348571AD3F5AFDEA11BC0BEFBB683C707B174437">DescribeCallCountTo</h3>
+      <p>public void DescribeCallCountTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#186">186</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Describes how many times a function call matching this expectation has occurred.</p>
+        </div>
+      </div>
+      <h3 id="25D93B02B1C306DF702FB75B6863548CF06EEEC8">MaybeDescribeExtraMatcherTo</h3>
+      <p>public void MaybeDescribeExtraMatcherTo(::std::ostream * os)</p>
+      <div>
+        <div>
+          <p> If this mock method has an extra matcher (i.e. .With(matcher)), describes it to the ostream.</p>
+        </div>
+      </div>
+      <h3 id="B301EE6CC8B54B1907CED3CF9432D009595025A3">GetHandle</h3>
+      <p>
+        protected 
+        <a href="../../testing/Expectation.html">Expectation</a>
+         GetHandle()
+      </p>
+      <div>
+        <div>
+          <p> Returns an Expectation object that references and co-owns this expectation.</p>
+        </div>
+      </div>
+      <h3 id="388BF207FBCBB0DE5F3D19ABF04FF126EBA8EC2E">AssertSpecProperty</h3>
+      <p>protected void AssertSpecProperty(_Bool property, const std::string &amp; failure_message)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#758">758</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Asserts that the EXPECT_CALL() statement has the given property.</p>
+        </div>
+      </div>
+      <h3 id="77BCA62F64A87BADB2A2F884985DC64D84A82DC2">ExpectSpecProperty</h3>
+      <p>protected void ExpectSpecProperty(_Bool property, const std::string &amp; failure_message)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#764">764</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Expects that the EXPECT_CALL() statement has the given property.</p>
+        </div>
+      </div>
+      <h3 id="864212BDCDA7153525E66FA54D2F55EA7126DD76">SpecifyCardinality</h3>
+      <p>protected void SpecifyCardinality(const Cardinality &amp; cardinality)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#102">102</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Explicitly specifies the cardinality of this expectation.  Used by the subclasses to implement the .Times() clause.</p>
+        </div>
+        <div>
+          <p> Explicitly specifies the cardinality of this expectation.  Used by the subclasses to implement the .Times() clause.</p>
+        </div>
+      </div>
+      <h3 id="93A8777888BAE78D91748CC43CBF2D9D5A988F7E">cardinality_specified</h3>
+      <p>protected _Bool cardinality_specified()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#775">775</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the user specified the cardinality explicitly using a .Times().</p>
+        </div>
+      </div>
+      <h3 id="7FC4340A033C58BD4036D5399125F31CF7EA5B41">set_cardinality</h3>
+      <p>protected void set_cardinality(const Cardinality &amp; a_cardinality)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#778">778</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Sets the cardinality of this expectation spec.</p>
+        </div>
+      </div>
+      <h3 id="2FE6D05A0D90B4398B492EB32210DC5B035C59D7">RetireAllPreRequisites</h3>
+      <p>protected void RetireAllPreRequisites()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#108">108</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Retires all pre-requisites of this expectation.</p>
+        </div>
+      </div>
+      <h3 id="E2BF44764829EA75033734889E4172B6ACA060A3">is_retired</h3>
+      <p>protected _Bool is_retired()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#791">791</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if this expectation is retired.</p>
+        </div>
+      </div>
+      <h3 id="CF07D7E946BED20BB3BB508E4FA837FD4C3BA9B8">Retire</h3>
+      <p>protected void Retire()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#798">798</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Retires this expectation.</p>
+        </div>
+      </div>
+      <h3 id="A8837A0E7E46EBCDBF5AFCD503CC4E228842F4FE">IsSatisfied</h3>
+      <p>protected _Bool IsSatisfied()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#805">805</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if this expectation is satisfied.</p>
+        </div>
+      </div>
+      <h3 id="28E16A80612E65321EC53785D0812433F07C2A1A">IsSaturated</h3>
+      <p>protected _Bool IsSaturated()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#812">812</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if this expectation is saturated.</p>
+        </div>
+      </div>
+      <h3 id="AA266BC22D6A4A1BCF872CCF9D46E68004B400EF">IsOverSaturated</h3>
+      <p>protected _Bool IsOverSaturated()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#819">819</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if this expectation is over-saturated.</p>
+        </div>
+      </div>
+      <h3 id="ACE7F54570BB47A309708738B5BCAB877431A793">AllPrerequisitesAreSatisfied</h3>
+      <p>protected _Bool AllPrerequisitesAreSatisfied()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#135">135</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if all pre-requisites of this expectation have been satisfied.</p>
+        </div>
+        <div>
+          <p> Returns true if and only if all pre-requisites of this expectation are satisfied.</p>
+        </div>
+      </div>
+      <h3 id="A440D67A3D18BEBF78405523EFE48FEB3BE1F726">FindUnsatisfiedPrerequisites</h3>
+      <p>protected void FindUnsatisfiedPrerequisites(ExpectationSet * result)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#155">155</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Adds unsatisfied pre-requisites of this expectation to &apos;result&apos;.</p>
+        </div>
+      </div>
+      <h3 id="14CD75C13C9C296EF5CBD4A86CDE7C372EE4E825">call_count</h3>
+      <p>protected int call_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#835">835</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the number this expectation has been invoked.</p>
+        </div>
+      </div>
+      <h3 id="A2597D45626312269ACCDA8B6EFA5172065FF444">IncrementCallCount</h3>
+      <p>protected void IncrementCallCount()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#842">842</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Increments the number this expectation has been invoked.</p>
+        </div>
+      </div>
+      <h3 id="4F1C2B905759EDF9ABF7A2978BBC937C7217F9C8">CheckActionCountIfNotDone</h3>
+      <p>protected void CheckActionCountIfNotDone()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#209">209</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Checks the action count (i.e. the number of WillOnce() and WillRepeatedly() clauses) against the cardinality if this hasn&apos;t been done before.  Prints a warning if there are too many or too few actions.</p>
+        </div>
+      </div>
+      <h3 id="A3114A3F97F225F8FEA97F2460114A0447E18C88">UntypedTimes</h3>
+      <p>protected void UntypedTimes(const Cardinality &amp; a_cardinality)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#261">261</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Implements the .Times() clause.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="13FA0F62EEAC9077CA6F54A1EC7265F4DFA7B399">enum Clause</h3>
+      <ul>
+        <li>kNone</li>
+        <li>kWith</li>
+        <li>kTimes</li>
+        <li>kInSequence</li>
+        <li>kAfter</li>
+        <li>kWillOnce</li>
+        <li>kWillRepeatedly</li>
+        <li>kRetiresOnSaturation</li>
+      </ul>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#739">739</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E3B1F079FAB455DD1041C5175D631787E8539C3C">ExpectationBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58D9BF9FE0C1DBE1B55CB4BA92380C84C96789DB">~ExpectationBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7E1E014039EAC9F39EF013AAD8A62A33B41791D">file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0433198C3B192BCF998022D942A12FB563B4F559">line</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69C0086C0B2BE818D3DAD7A5EB19348908A680B8">source_text</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#505353B05ACADA4677A3543A4EA3FA7BF86A6146">cardinality</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CD3D16542E1518525221E8DB13D2EDF8157BC8F">DescribeLocationTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#348571AD3F5AFDEA11BC0BEFBB683C707B174437">DescribeCallCountTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25D93B02B1C306DF702FB75B6863548CF06EEEC8">MaybeDescribeExtraMatcherTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B301EE6CC8B54B1907CED3CF9432D009595025A3">GetHandle</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#388BF207FBCBB0DE5F3D19ABF04FF126EBA8EC2E">AssertSpecProperty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77BCA62F64A87BADB2A2F884985DC64D84A82DC2">ExpectSpecProperty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#864212BDCDA7153525E66FA54D2F55EA7126DD76">SpecifyCardinality</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#93A8777888BAE78D91748CC43CBF2D9D5A988F7E">cardinality_specified</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FC4340A033C58BD4036D5399125F31CF7EA5B41">set_cardinality</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FE6D05A0D90B4398B492EB32210DC5B035C59D7">RetireAllPreRequisites</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2BF44764829EA75033734889E4172B6ACA060A3">is_retired</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF07D7E946BED20BB3BB508E4FA837FD4C3BA9B8">Retire</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8837A0E7E46EBCDBF5AFCD503CC4E228842F4FE">IsSatisfied</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28E16A80612E65321EC53785D0812433F07C2A1A">IsSaturated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA266BC22D6A4A1BCF872CCF9D46E68004B400EF">IsOverSaturated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ACE7F54570BB47A309708738B5BCAB877431A793">AllPrerequisitesAreSatisfied</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A440D67A3D18BEBF78405523EFE48FEB3BE1F726">FindUnsatisfiedPrerequisites</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14CD75C13C9C296EF5CBD4A86CDE7C372EE4E825">call_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2597D45626312269ACCDA8B6EFA5172065FF444">IncrementCallCount</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F1C2B905759EDF9ABF7A2978BBC937C7217F9C8">CheckActionCountIfNotDone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3114A3F97F225F8FEA97F2460114A0447E18C88">UntypedTimes</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#13FA0F62EEAC9077CA6F54A1EC7265F4DFA7B399">Clause</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

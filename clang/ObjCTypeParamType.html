@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCTypeParamType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCTypeParamType</h1>
+    <p>Defined at line 5946 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents a type parameter type in Objective C. It can take a list of protocols.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , ObjCProtocolQualifiers&lt;ObjCTypeParamType&gt;, 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7339F4A44916364ABF65B0D5330A90D38262F471">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 5977 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="2507AB7F0587302EF536B9F8C2B7E67F45633D57">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 5978 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="E1C97EDF7EC893DFC5A6C2BAD5FE722ECE37DD0E">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 5980 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="E76AC0B9478DA567DE6D3CDB8CD256866636F208">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <h3 id="26AC2AC6E80A290E562E8DB013FA039CCCD2548B">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, const ObjCTypeParamDecl * OTPDecl, 
+        <a href="QualType.html">QualType</a>
+         CanonicalType, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         protocols)
+      </p>
+      <h3 id="E44E53F0EA5162A4C25B44154A6D99AF060E1506">getDecl</h3>
+      <p>public ObjCTypeParamDecl * getDecl()</p>
+      <p>Defined at line 5990 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7339F4A44916364ABF65B0D5330A90D38262F471">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2507AB7F0587302EF536B9F8C2B7E67F45633D57">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1C97EDF7EC893DFC5A6C2BAD5FE722ECE37DD0E">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E76AC0B9478DA567DE6D3CDB8CD256866636F208">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#26AC2AC6E80A290E562E8DB013FA039CCCD2548B">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E44E53F0EA5162A4C25B44154A6D99AF060E1506">getDecl</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

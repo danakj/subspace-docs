@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TrailingObjects</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TrailingObjects</h1>
+    <p>Defined at line 212 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+    <div>
+      <div>
+        <p> See the file comment for details on the usage of the TrailingObjects type.</p>
+      </div>
+    </div>
+    <p>Inherits from trailing_objects_internal::TrailingObjectsImpl&lt;trailing_objects_internal::AlignmentCalcHelper&lt;TrailingTys...&gt;::Alignment, BaseTy, TrailingObjects&lt;BaseTy, TrailingTys...&gt;, BaseTy, TrailingTys...&gt;</p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../llvm/TrailingObjects/Foo.html">Foo</a>
+      </li>
+      <li>
+        <a href="../llvm/TrailingObjects/FixedSizeStorage.html">FixedSizeStorage</a>
+      </li>
+      <li>
+        <a href="../llvm/TrailingObjects/FixedSizeStorageOwner.html">FixedSizeStorageOwner</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="987B09CB4F3456FADAFBB6774E0FC6065CDA3C6D">getTrailingObjects</h3>
+      <p>public const T * getTrailingObjects()</p>
+      <p>Defined at line 285 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <div>
+        <div>
+          <p> Returns a pointer to the trailing object array of the given type (which must be one of those specified in the class template). The array may have zero or more elements in it.</p>
+        </div>
+      </div>
+      <h3 id="0F94EEB67073259C9BD672D3EC856B61921E2027">getTrailingObjects</h3>
+      <p>public T * getTrailingObjects()</p>
+      <p>Defined at line 297 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <div>
+        <div>
+          <p> Returns a pointer to the trailing object array of the given type (which must be one of those specified in the class template). The array may have zero or more elements in it.</p>
+        </div>
+      </div>
+      <h3 id="1342E77BDC7F3DB7215F421D990C103AD70EB067">additionalSizeToAlloc</h3>
+      <p>public std::enable_if_t&lt;std::is_same&lt;Foo&lt;TrailingTys...&gt;, Foo&lt;Tys...&gt; &gt;::value, size_t&gt; additionalSizeToAlloc(typename trailing_objects_internal::ExtractSecondType&lt;TrailingTys, size_t&gt;::type... Counts)</p>
+      <p>Defined at line 312 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <div>
+        <div>
+          <p> Returns the size of the trailing data, if an object were allocated with the given counts (The counts are in the same order as the template arguments). This does not include the size of the base object.  The template arguments must be the same as those used in the class; they are supplied here redundantly only so that it&apos;s clear what the counts are counting in callers.</p>
+        </div>
+      </div>
+      <h3 id="AD7A199065B6445562A9129F3DCB41102A573BA0">totalSizeToAlloc</h3>
+      <p>public std::enable_if_t&lt;std::is_same&lt;Foo&lt;TrailingTys...&gt;, Foo&lt;Tys...&gt; &gt;::value, size_t&gt; totalSizeToAlloc(typename trailing_objects_internal::ExtractSecondType&lt;TrailingTys, size_t&gt;::type... Counts)</p>
+      <p>Defined at line 324 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <div>
+        <div>
+          <p> Returns the total size of an object if it were allocated with the given trailing object counts. This is the same as additionalSizeToAlloc, except it *does* include the size of the base object.</p>
+        </div>
+      </div>
+      <h3 id="74C1FFAD424387CAA82FCBB933663FF6F2267990">TrailingObjects&lt;BaseTy, TrailingTys...&gt;</h3>
+      <p>public void TrailingObjects&lt;BaseTy, TrailingTys...&gt;()</p>
+      <p>Defined at line 331 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <h3 id="489D2DF5A82DFC3057B17779E01CFB71E3C12001">TrailingObjects&lt;BaseTy, TrailingTys...&gt;</h3>
+      <p>public void TrailingObjects&lt;BaseTy, TrailingTys...&gt;(const TrailingObjects&lt;BaseTy, TrailingTys...&gt; &amp; )</p>
+      <p>Defined at line 332 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <h3 id="2EECB56BC4D2EF776F7140651DC6DF85A537EF52">TrailingObjects&lt;BaseTy, TrailingTys...&gt;</h3>
+      <p>public void TrailingObjects&lt;BaseTy, TrailingTys...&gt;(TrailingObjects&lt;BaseTy, TrailingTys...&gt; &amp;&amp; )</p>
+      <p>Defined at line 333 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <h3 id="69F4A43040BF420058DA606BE2BFBE0CF0CC090B">operator=</h3>
+      <p>public TrailingObjects&lt;BaseTy, TrailingTys...&gt; &amp; operator=(const TrailingObjects&lt;BaseTy, TrailingTys...&gt; &amp; )</p>
+      <p>Defined at line 334 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <h3 id="DE2AFBE9A7A84DA40334EED91000434D7A111CC1">operator=</h3>
+      <p>public TrailingObjects&lt;BaseTy, TrailingTys...&gt; &amp; operator=(TrailingObjects&lt;BaseTy, TrailingTys...&gt; &amp;&amp; )</p>
+      <p>Defined at line 335 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#987B09CB4F3456FADAFBB6774E0FC6065CDA3C6D">getTrailingObjects</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F94EEB67073259C9BD672D3EC856B61921E2027">getTrailingObjects</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1342E77BDC7F3DB7215F421D990C103AD70EB067">additionalSizeToAlloc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD7A199065B6445562A9129F3DCB41102A573BA0">totalSizeToAlloc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#74C1FFAD424387CAA82FCBB933663FF6F2267990">TrailingObjects&lt;BaseTy, TrailingTys...&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#489D2DF5A82DFC3057B17779E01CFB71E3C12001">TrailingObjects&lt;BaseTy, TrailingTys...&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2EECB56BC4D2EF776F7140651DC6DF85A537EF52">TrailingObjects&lt;BaseTy, TrailingTys...&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69F4A43040BF420058DA606BE2BFBE0CF0CC090B">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE2AFBE9A7A84DA40334EED91000434D7A111CC1">operator=</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

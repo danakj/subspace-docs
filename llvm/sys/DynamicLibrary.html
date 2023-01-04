@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DynamicLibrary</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/sys" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DynamicLibrary</h1>
+    <p>Defined at line 33 of file /usr/lib/llvm-16/include/llvm/Support/DynamicLibrary.h</p>
+    <div>
+      <div>
+        <p> This class provides a portable interface to dynamic libraries which also might be known as shared libraries, shared objects, dynamic shared objects, or dynamic link libraries. Regardless of the terminology or the operating system interface, this class provides a portable interface that allows dynamic libraries to be loaded and searched for externally defined symbols. This is typically used to provide &quot;plug-in&quot; support. It also allows for symbols to be defined which don&apos;t live in any library, but rather the main program itself, useful on Windows where the main executable cannot be searched.</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../llvm/sys/DynamicLibrary/HandleSet.html">HandleSet</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E90800916CF7174CB137ABA6FA6DE93CB1C71E6B">DynamicLibrary</h3>
+      <p>public void DynamicLibrary(void * data)</p>
+      <p>Defined at line 43 of file /usr/lib/llvm-16/include/llvm/Support/DynamicLibrary.h</p>
+      <h3 id="294AC922035C233EF998BC79C3DDBB5C0F0B5D8E">getOSSpecificHandle</h3>
+      <p>public void * getOSSpecificHandle()</p>
+      <p>Defined at line 46 of file /usr/lib/llvm-16/include/llvm/Support/DynamicLibrary.h</p>
+      <div>
+        <div>
+          <p> Return the OS specific handle value.</p>
+        </div>
+      </div>
+      <h3 id="F3A1245C6DF423FC18A33859BD2922174F167C42">isValid</h3>
+      <p>public _Bool isValid()</p>
+      <p>Defined at line 49 of file /usr/lib/llvm-16/include/llvm/Support/DynamicLibrary.h</p>
+      <div>
+        <div>
+          <p> Returns true if the object refers to a valid library.</p>
+        </div>
+      </div>
+      <h3 id="FB8AC144089E2123160E1C2B6E3D4BF4377D543A">getAddressOfSymbol</h3>
+      <p>public void * getAddressOfSymbol(const char * symbolName)</p>
+      <div>
+        <div>
+          <p> Searches through the library for the symbol  If it is found, the address of that symbol is returned. If not, NULL is returned. Note that NULL will also be returned if the library failed to load. Use isValid() to distinguish these cases if it is important. Note that this will  search symbols explicitly registered by AddSymbol().</p>
+        </div>
+      </div>
+      <h3 id="D88E5C587D49DD396C1D140A19322F2C471E704E">getPermanentLibrary</h3>
+      <p>
+        public 
+        <a href="DynamicLibrary.html">DynamicLibrary</a>
+         getPermanentLibrary(const char * filename, std::string * errMsg)
+      </p>
+      <div>
+        <div>
+          <p> This function permanently loads the dynamic library at the given path using the library load operation from the host operating system. The library instance will only be closed when global destructors run, and there is no guarantee when the library will be unloaded.</p>
+          <p> This returns a valid DynamicLibrary instance on success and an invalid instance on failure (see isValid()).  will only be modified if the library fails to load.</p>
+          <p> It is safe to call this function multiple times for the same library. Open a dynamic library permanently.</p>
+        </div>
+      </div>
+      <h3 id="2F9B0993A9A49BA4FB33615A5354E47B17F4941D">addPermanentLibrary</h3>
+      <p>
+        public 
+        <a href="DynamicLibrary.html">DynamicLibrary</a>
+         addPermanentLibrary(void * handle, std::string * errMsg)
+      </p>
+      <div>
+        <div>
+          <p> Registers an externally loaded library. The library will be unloaded when the program terminates.</p>
+          <p> It is safe to call this function multiple times for the same library, though ownership is only taken if there was no error.</p>
+        </div>
+      </div>
+      <h3 id="4D5FFD860A67AF0475D7DD5454C0ED244CA83C7F">LoadLibraryPermanently</h3>
+      <p>public _Bool LoadLibraryPermanently(const char * Filename, std::string * ErrMsg)</p>
+      <p>Defined at line 86 of file /usr/lib/llvm-16/include/llvm/Support/DynamicLibrary.h</p>
+      <div>
+        <div>
+          <p> This function permanently loads the dynamic library at the given path. Use this instead of getPermanentLibrary() when you won&apos;t need to get symbols from the library itself.</p>
+          <p> It is safe to call this function multiple times for the same library.</p>
+        </div>
+      </div>
+      <h3 id="344BF7F07F12E55DA6957ADA827A7A9A295E8BD9">getLibrary</h3>
+      <p>
+        public 
+        <a href="DynamicLibrary.html">DynamicLibrary</a>
+         getLibrary(const char * FileName, std::string * Err)
+      </p>
+      <div>
+        <div>
+          <p> This function loads the dynamic library at the given path, using the library load operation from the host operating system. The library instance will be closed when closeLibrary is called or global destructors are run, but there is no guarantee when the library will be unloaded.</p>
+          <p> This returns a valid DynamicLibrary instance on success and an invalid instance on failure (see isValid()).  will only be modified if the library fails to load.</p>
+          <p> It is safe to call this function multiple times for the same library.</p>
+        </div>
+      </div>
+      <h3 id="5B624FFCABBEEBD6D48298C89F05378734FEDB69">closeLibrary</h3>
+      <p>public void closeLibrary(DynamicLibrary &amp; Lib)</p>
+      <div>
+        <div>
+          <p> This function closes the dynamic library at the given path, using the library close operation of the host operating system, and there is no guarantee if or when this will cause the the library to be unloaded.</p>
+          <p> This function should be called only if the library was loaded using the getLibrary() function.</p>
+        </div>
+      </div>
+      <h3 id="96A3F39F8995CE0989229A1881BD1D5EA2F14AB4">SearchForAddressOfSymbol</h3>
+      <p>public void * SearchForAddressOfSymbol(const char * symbolName)</p>
+      <div>
+        <div>
+          <p> This function will search through all previously loaded dynamic libraries for the symbol  If it is found, the address of that symbol is returned. If not, null is returned. Note that this will search permanently loaded libraries (getPermanentLibrary()) as well as explicitly registered symbols (AddSymbol()).</p>
+        </div>
+      </div>
+      <h3 id="2423970FEDFAFC45A51BCCF3445D17CA26751F81">SearchForAddressOfSymbol</h3>
+      <p>public void * SearchForAddressOfSymbol(const std::string &amp; symbolName)</p>
+      <p>Defined at line 138 of file /usr/lib/llvm-16/include/llvm/Support/DynamicLibrary.h</p>
+      <div>
+        <div>
+          <p> Convenience function for C++ophiles.</p>
+        </div>
+      </div>
+      <h3 id="7DB443FEE5FBD76FB9C227CF63605CCABD729C43">AddSymbol</h3>
+      <p>
+        public void AddSymbol(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         symbolName, void * symbolValue)
+      </p>
+      <div>
+        <div>
+          <p> This functions permanently adds the symbol  with the value   These symbols are searched before any libraries. Add searchable symbol/value pair.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="7FF826E86ACB862405A41162C4CBA89FA21CD822">enum SearchOrdering</h3>
+      <ul>
+        <li>SO_Linker</li>
+        <li>SO_LoadedFirst</li>
+        <li>SO_LoadedLast</li>
+        <li>SO_LoadOrder</li>
+      </ul>
+      <p>Defined at line 112 of file /usr/lib/llvm-16/include/llvm/Support/DynamicLibrary.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E90800916CF7174CB137ABA6FA6DE93CB1C71E6B">DynamicLibrary</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#294AC922035C233EF998BC79C3DDBB5C0F0B5D8E">getOSSpecificHandle</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F3A1245C6DF423FC18A33859BD2922174F167C42">isValid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB8AC144089E2123160E1C2B6E3D4BF4377D543A">getAddressOfSymbol</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D88E5C587D49DD396C1D140A19322F2C471E704E">getPermanentLibrary</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F9B0993A9A49BA4FB33615A5354E47B17F4941D">addPermanentLibrary</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D5FFD860A67AF0475D7DD5454C0ED244CA83C7F">LoadLibraryPermanently</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#344BF7F07F12E55DA6957ADA827A7A9A295E8BD9">getLibrary</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B624FFCABBEEBD6D48298C89F05378734FEDB69">closeLibrary</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96A3F39F8995CE0989229A1881BD1D5EA2F14AB4">SearchForAddressOfSymbol</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2423970FEDFAFC45A51BCCF3445D17CA26751F81">SearchForAddressOfSymbol</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7DB443FEE5FBD76FB9C227CF63605CCABD729C43">AddSymbol</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7FF826E86ACB862405A41162C4CBA89FA21CD822">SearchOrdering</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

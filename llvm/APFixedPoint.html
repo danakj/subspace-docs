@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class APFixedPoint</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class APFixedPoint</h1>
+    <p>Defined at line 154 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+    <div>
+      <div>
+        <p> The APFixedPoint class works similarly to APInt/APSInt in that it is a functional replacement for a scaled integer. It supports a wide range of semantics including the one used by fixed point types proposed in ISO/IEC JTC1 SC22 WG14 N1169. The class carries the value and semantics of a fixed point, and provides different operations that would normally be performed on fixed point types.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="6931A18507D248F0B97BFB2C86DE6CAE82A3DF67">APFixedPoint</h3>
+      <p>public void APFixedPoint(const APInt &amp; Val, const FixedPointSemantics &amp; Sema)</p>
+      <p>Defined at line 156 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="D0BB8D4890343BEF1EC496ADA1E95D32D94F6C5C">APFixedPoint</h3>
+      <p>public void APFixedPoint(uint64_t Val, const FixedPointSemantics &amp; Sema)</p>
+      <p>Defined at line 162 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="681BF1CF568FEA3A11FF7A10331EE15EDD7E236A">APFixedPoint</h3>
+      <p>public void APFixedPoint(const FixedPointSemantics &amp; Sema)</p>
+      <p>Defined at line 166 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <div>
+        <div>
+          <p> Zero initialization.</p>
+        </div>
+      </div>
+      <h3 id="76A480026C0FA8D6B01419B081D2127D1A33EC9F">getValue</h3>
+      <p>
+        public 
+        <a href="APSInt.html">APSInt</a>
+         getValue()
+      </p>
+      <p>Defined at line 168 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="0F935D558A33FD3835BFD8B5330071BBF205466B">getWidth</h3>
+      <p>public unsigned int getWidth()</p>
+      <p>Defined at line 169 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="7BD26EF1F9CE5CBD03E99E7C69437E99E7B6504C">getScale</h3>
+      <p>public unsigned int getScale()</p>
+      <p>Defined at line 170 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="8078F2511E755080CCC27604FD147DC7508C0B3A">getLsbWeight</h3>
+      <p>public int getLsbWeight()</p>
+      <p>Defined at line 171 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="CB3BA64327C6A0C50D9AB9E51C4802E19F3A3DE6">getMsbWeight</h3>
+      <p>public int getMsbWeight()</p>
+      <p>Defined at line 172 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="AC03CF95822A3D521A375A0B44A4F2CF2AA18033">isSaturated</h3>
+      <p>public _Bool isSaturated()</p>
+      <p>Defined at line 173 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="F811B3F5AB3869354A64051D9C1703F94024A162">isSigned</h3>
+      <p>public _Bool isSigned()</p>
+      <p>Defined at line 174 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="BE639BB85F11B2406EEBA4BB6A5B6C8877560859">hasPadding</h3>
+      <p>public _Bool hasPadding()</p>
+      <p>Defined at line 175 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="E455E094E244639200F3B17B8688C74450A0720F">getSemantics</h3>
+      <p>
+        public 
+        <a href="FixedPointSemantics.html">FixedPointSemantics</a>
+         getSemantics()
+      </p>
+      <p>Defined at line 176 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="225261F4352DB5B32772BD0681AE49AB9C96F602">getBoolValue</h3>
+      <p>public _Bool getBoolValue()</p>
+      <p>Defined at line 178 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="984D3B33C377145C00626B327032F53A82034D7D">convert</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         convert(const FixedPointSemantics &amp; DstSema, _Bool * Overflow)
+      </p>
+      <div>
+        <div>
+          <p> Convert this number to match the semantics provided. If the overflow parameter is provided, set this value to true or false to indicate if this operation results in an overflow.</p>
+        </div>
+      </div>
+      <h3 id="52A589CA49E31E59486CB73FA4DF9C66C8402748">add</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         add(const APFixedPoint &amp; Other, _Bool * Overflow)
+      </p>
+      <div>
+        <div>
+          <p> Perform binary operations on a fixed point type. The resulting fixed point value will be in the common, full precision semantics that can represent the precision and ranges of both input values. See convert() for an explanation of the Overflow parameter.</p>
+        </div>
+      </div>
+      <h3 id="3BE0446AD0E7C018FBCAA0E00FC68D1D14FFDCAE">sub</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         sub(const APFixedPoint &amp; Other, _Bool * Overflow)
+      </p>
+      <h3 id="A1AC7176935B979360390BCC491924BBFCA0E709">mul</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         mul(const APFixedPoint &amp; Other, _Bool * Overflow)
+      </p>
+      <h3 id="2DB9AF8C8F8FDAAB5D5E952DF9EAE50F9199ACDB">div</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         div(const APFixedPoint &amp; Other, _Bool * Overflow)
+      </p>
+      <h3 id="12FC73C6B9CC7A42F0EFBAB40C0ED45124A6B27C">shl</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         shl(unsigned int Amt, _Bool * Overflow)
+      </p>
+      <div>
+        <div>
+          <p> Perform shift operations on a fixed point type. Unlike the other binary operations, the resulting fixed point value will be in the original semantic.</p>
+        </div>
+      </div>
+      <h3 id="ACC9675A7F5C6CCFDCC6A71FF6DAD39A965A2DA0">shr</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         shr(unsigned int Amt, _Bool * Overflow)
+      </p>
+      <p>Defined at line 199 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="A3C45B9A015C71B042FAFEC54F409AE1CB5F6413">negate</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         negate(_Bool * Overflow)
+      </p>
+      <div>
+        <div>
+          <p> Perform a unary negation (-X) on this fixed point type, taking into account saturation if applicable.</p>
+        </div>
+      </div>
+      <h3 id="A55C29B7066052E72DF4784748A5D07ACECB645B">getIntPart</h3>
+      <p>
+        public 
+        <a href="APSInt.html">APSInt</a>
+         getIntPart()
+      </p>
+      <p>Defined at line 212 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <div>
+        <div>
+          <p> Return the integral part of this fixed point number, rounded towards zero. (-2.5k -&gt; -2)</p>
+        </div>
+      </div>
+      <h3 id="824B85956DA498D86B614207F0572D0F9F282592">convertToInt</h3>
+      <p>
+        public 
+        <a href="APSInt.html">APSInt</a>
+         convertToInt(unsigned int DstWidth, _Bool DstSign, _Bool * Overflow)
+      </p>
+      <div>
+        <div>
+          <p> Return the integral part of this fixed point number, rounded towards zero. The value is stored into an APSInt with the provided width and sign. If the overflow parameter is provided, and the integral value is not able to be fully stored in the provided width and sign, the overflow parameter is set to true.</p>
+        </div>
+      </div>
+      <h3 id="9E88BD17A93DE8BB83A4F6778F3F4CC0124EB005">convertToFloat</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         convertToFloat(const fltSemantics &amp; FloatSema)
+      </p>
+      <div>
+        <div>
+          <p> Convert this fixed point number to a floating point value with the provided semantics.</p>
+        </div>
+      </div>
+      <h3 id="C88DE6ED8BE642F7D9526D77E7B420673644C616">toString</h3>
+      <p>public void toString(SmallVectorImpl&lt;char&gt; &amp; Str)</p>
+      <h3 id="5315F12F1DA17F1C0A6488C51CD693C2A8C44BC7">toString</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         toString()
+      </p>
+      <p>Defined at line 235 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="ED41416406AFE706C489998604E6797F10D44712">print</h3>
+      <p>public void print(raw_ostream &amp; )</p>
+      <h3 id="047F8D519D22955DF2CE35A67BC60C6EEF227CF3">dump</h3>
+      <p>public void dump()</p>
+      <h3 id="8CE51ED01FAA1E73F733BCD4F9B66B744FCC03CA">compare</h3>
+      <p>public int compare(const APFixedPoint &amp; Other)</p>
+      <div>
+        <div>
+          <p> If LHS &gt; RHS, return 1. If LHS == RHS, return 0. If LHS &lt; RHS, return -1.</p>
+        </div>
+      </div>
+      <h3 id="C95BE54594E47312E77ECF04335A080445DD2706">operator==</h3>
+      <p>public _Bool operator==(const APFixedPoint &amp; Other)</p>
+      <p>Defined at line 246 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="B5F83E401727E2EA0E83D2E8DC2BE187B59AE318">operator!=</h3>
+      <p>public _Bool operator!=(const APFixedPoint &amp; Other)</p>
+      <p>Defined at line 249 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="7DA1A44B61F2E1ECF651A5AC0742B9DDB942A3F8">operator&gt;</h3>
+      <p>public _Bool operator&gt;(const APFixedPoint &amp; Other)</p>
+      <p>Defined at line 252 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="C6B6B60EFE9FFA0BB9A54F6BF23AD26BCD95D08D">operator&lt;</h3>
+      <p>public _Bool operator&lt;(const APFixedPoint &amp; Other)</p>
+      <p>Defined at line 253 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="D5A054033399DB83D1106E2A7D327D31AE31BD70">operator&gt;=</h3>
+      <p>public _Bool operator&gt;=(const APFixedPoint &amp; Other)</p>
+      <p>Defined at line 254 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="906745ADA65786EDAF4E5A75E095F5857B2837F1">operator&lt;=</h3>
+      <p>public _Bool operator&lt;=(const APFixedPoint &amp; Other)</p>
+      <p>Defined at line 257 of file /usr/lib/llvm-16/include/llvm/ADT/APFixedPoint.h</p>
+      <h3 id="97F53A0CA48D49B3AACFFAD8387A4911D1486F56">getMax</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         getMax(const FixedPointSemantics &amp; Sema)
+      </p>
+      <h3 id="C2F55BFB3D5FE1EB2723E91FB0EDF1F4EDB2B715">getMin</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         getMin(const FixedPointSemantics &amp; Sema)
+      </p>
+      <h3 id="8F5608ADDC70EAB143292BD0053DC02A643002CA">promoteFloatSemantics</h3>
+      <p>public const fltSemantics * promoteFloatSemantics(const fltSemantics * S)</p>
+      <div>
+        <div>
+          <p> Given a floating point semantic, return the next floating point semantic with a larger exponent and larger or equal mantissa.</p>
+        </div>
+      </div>
+      <h3 id="061AFB6BC26D36ABCCD31CEC430D6FC97C89D572">getFromIntValue</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         getFromIntValue(const APSInt &amp; Value, const FixedPointSemantics &amp; DstFXSema, _Bool * Overflow)
+      </p>
+      <div>
+        <div>
+          <p> Create an APFixedPoint with a value equal to that of the provided integer, and in the same semantics as the provided target semantics. If the value is not able to fit in the specified fixed point semantics, and the overflow parameter is provided, it is set to true.</p>
+        </div>
+      </div>
+      <h3 id="D0AE9AEF29E6A2426B0E5EF1955163C74FB52692">getFromFloatValue</h3>
+      <p>
+        public 
+        <a href="APFixedPoint.html">APFixedPoint</a>
+         getFromFloatValue(const APFloat &amp; Value, const FixedPointSemantics &amp; DstFXSema, _Bool * Overflow)
+      </p>
+      <div>
+        <div>
+          <p> Create an APFixedPoint with a value equal to that of the provided floating point value, in the provided target semantics. If the value is not able to fit in the specified fixed point semantics and the overflow parameter is specified, it is set to true. For NaN, the Overflow flag is always set. For +inf and -inf, if the semantic is saturating, the value saturates. Otherwise, the Overflow flag is set.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6931A18507D248F0B97BFB2C86DE6CAE82A3DF67">APFixedPoint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0BB8D4890343BEF1EC496ADA1E95D32D94F6C5C">APFixedPoint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#681BF1CF568FEA3A11FF7A10331EE15EDD7E236A">APFixedPoint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76A480026C0FA8D6B01419B081D2127D1A33EC9F">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F935D558A33FD3835BFD8B5330071BBF205466B">getWidth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BD26EF1F9CE5CBD03E99E7C69437E99E7B6504C">getScale</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8078F2511E755080CCC27604FD147DC7508C0B3A">getLsbWeight</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB3BA64327C6A0C50D9AB9E51C4802E19F3A3DE6">getMsbWeight</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC03CF95822A3D521A375A0B44A4F2CF2AA18033">isSaturated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F811B3F5AB3869354A64051D9C1703F94024A162">isSigned</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE639BB85F11B2406EEBA4BB6A5B6C8877560859">hasPadding</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E455E094E244639200F3B17B8688C74450A0720F">getSemantics</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#225261F4352DB5B32772BD0681AE49AB9C96F602">getBoolValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#984D3B33C377145C00626B327032F53A82034D7D">convert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52A589CA49E31E59486CB73FA4DF9C66C8402748">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3BE0446AD0E7C018FBCAA0E00FC68D1D14FFDCAE">sub</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1AC7176935B979360390BCC491924BBFCA0E709">mul</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2DB9AF8C8F8FDAAB5D5E952DF9EAE50F9199ACDB">div</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12FC73C6B9CC7A42F0EFBAB40C0ED45124A6B27C">shl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ACC9675A7F5C6CCFDCC6A71FF6DAD39A965A2DA0">shr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3C45B9A015C71B042FAFEC54F409AE1CB5F6413">negate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A55C29B7066052E72DF4784748A5D07ACECB645B">getIntPart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#824B85956DA498D86B614207F0572D0F9F282592">convertToInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9E88BD17A93DE8BB83A4F6778F3F4CC0124EB005">convertToFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C88DE6ED8BE642F7D9526D77E7B420673644C616">toString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5315F12F1DA17F1C0A6488C51CD693C2A8C44BC7">toString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED41416406AFE706C489998604E6797F10D44712">print</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#047F8D519D22955DF2CE35A67BC60C6EEF227CF3">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CE51ED01FAA1E73F733BCD4F9B66B744FCC03CA">compare</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C95BE54594E47312E77ECF04335A080445DD2706">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5F83E401727E2EA0E83D2E8DC2BE187B59AE318">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7DA1A44B61F2E1ECF651A5AC0742B9DDB942A3F8">operator&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6B6B60EFE9FFA0BB9A54F6BF23AD26BCD95D08D">operator&lt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5A054033399DB83D1106E2A7D327D31AE31BD70">operator&gt;=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#906745ADA65786EDAF4E5A75E095F5857B2837F1">operator&lt;=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97F53A0CA48D49B3AACFFAD8387A4911D1486F56">getMax</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2F55BFB3D5FE1EB2723E91FB0EDF1F4EDB2B715">getMin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F5608ADDC70EAB143292BD0053DC02A643002CA">promoteFloatSemantics</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#061AFB6BC26D36ABCCD31CEC430D6FC97C89D572">getFromIntValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0AE9AEF29E6A2426B0E5EF1955163C74FB52692">getFromFloatValue</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

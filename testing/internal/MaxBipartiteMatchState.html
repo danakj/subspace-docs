@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MaxBipartiteMatchState</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MaxBipartiteMatchState</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc#121">121</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc">gmock-matchers.cc</a>
+    </p>
+    <div>
+      <div>
+        <p> FindMaxBipartiteMatching and its helper class.</p>
+        <p> Uses the well-known Ford-Fulkerson max flow method to find a maximum bipartite matching. Flow is considered to be from left to right. There is an implicit source node that is connected to all of the left nodes, and an implicit sink node that is connected to all of the right nodes. All edges have unit capacity.</p>
+        <p> Neither the flow graph nor the residual flow graph are represented explicitly. Instead, they are implied by the information in &apos;graph&apos; and a vector&lt;int&gt; called &apos;left_&apos; whose elements are initialized to the value kUnused. This represents the initial state of the algorithm, where the flow graph is empty, and the residual flow graph has the following edges:   - An edge from source to each left_ node   - An edge from each right_ node to sink   - An edge from each left_ node to each right_ node, if the     corresponding edge exists in &apos;graph&apos;.</p>
+        <p> When the TryAugment() method adds a flow, it sets left_[l] = r for some nodes l and r. This induces the following changes:   - The edges (source, l), (l, r), and (r, sink) are added to the     flow graph.   - The same three edges are removed from the residual flow graph.   - The reverse edges (l, source), (r, l), and (sink, r) are added     to the residual flow graph, which is a directional graph     representing unused flow capacity.</p>
+        <p> When the method augments a flow (moving left_[l] from some r1 to some other r2), this can be thought of as &quot;undoing&quot; the above steps with respect to r1 and &quot;redoing&quot; them with respect to r2.</p>
+        <p> It bears repeating that the flow graph and residual flow graph are never represented explicitly, but can be derived by looking at the information in &apos;graph&apos; and in left_.</p>
+        <p> As an optimization, there is a second vector&lt;int&gt; called right_ which does not provide any new information. Instead, it enables more efficient queries about edges entering or leaving the right-side nodes of the flow or residual flow graphs. The following invariants are maintained:</p>
+        <p> left[l] == kUnused or right[left[l]] == l right[r] == kUnused or left[right[r]] == r</p>
+        <p> . [ source ]                                        . .   |||                                             . .   |||                                             . .   ||\--&gt; left[0]=1  ---\    right[0]=-1 ----\     . .   ||                   |                    |     . .   |\---&gt; left[1]=-1    \--&gt; right[1]=0  ---\|     . .   |                                        ||     . .   \----&gt; left[2]=2  ------&gt; right[2]=2  --\||     . .                                           |||     . .         elements           matchers       vvv     . .                                         [ sink ]  .</p>
+        <p> See Also:   [1] Cormen, et al (2001). &quot;Section 26.2: The Ford-Fulkerson method&quot;.       &quot;Introduction to Algorithms (Second ed.)&quot;, pp. 651-664.   [2] &quot;Ford-Fulkerson algorithm&quot;, Wikipedia,       &apos;http://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm&apos;</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="11B80DE38F890DECFAFB73049A1C9B7587AB9C4D">MaxBipartiteMatchState</h3>
+      <p>public void MaxBipartiteMatchState(const MatchMatrix &amp; graph)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc#123">123</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc">gmock-matchers.cc</a>
+      </p>
+      <h3 id="AE06AFE62DA054A7B81D853E63E80CC51C218496">Compute</h3>
+      <p>
+        public 
+        <a href="../../std/vector.html">vector</a>
+         Compute()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc#129">129</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc">gmock-matchers.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the edges of a maximal match, each in the form {left, right}.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#11B80DE38F890DECFAFB73049A1C9B7587AB9C4D">MaxBipartiteMatchState</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE06AFE62DA054A7B81D853E63E80CC51C218496">Compute</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

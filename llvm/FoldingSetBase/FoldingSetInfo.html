@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct FoldingSetInfo</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/FoldingSetBase" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct FoldingSetInfo</h1>
+    <p>Defined at line 170 of file /usr/lib/llvm-16/include/llvm/ADT/FoldingSet.h</p>
+    <div>
+      <div>
+        <p> Functions provided by the derived class to compute folding properties. This is effectively a vtable for FoldingSetBase, except that we don&apos;t actually store a pointer to it in the object.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public void (*)(const FoldingSetBase *, Node *, FoldingSetNodeID &amp;) GetNodeProfile</li>
+      <li>public _Bool (*)(const FoldingSetBase *, Node *, const FoldingSetNodeID &amp;, unsigned int, FoldingSetNodeID &amp;) NodeEquals</li>
+      <li>public unsigned int (*)(const FoldingSetBase *, Node *, FoldingSetNodeID &amp;) ComputeNodeHash</li>
+    </ul>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

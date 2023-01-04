@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AlwaysInlineAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AlwaysInlineAttr</h1>
+    <p>Defined at line 901 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="DeclOrStmtAttr.html">DeclOrStmtAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0EBE3AEC743CD77AD2D24168E63E6AABDB06FFD4">CreateImplicit</h3>
+      <p>public AlwaysInlineAttr * CreateImplicit(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="3F5F77E630ECE0BDC57E5F1FFF922B95E4FABBEE">Create</h3>
+      <p>public AlwaysInlineAttr * Create(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="E42C9827264EC2A2870F729A33D32910152C3DA2">CreateImplicit</h3>
+      <p>
+        public AlwaysInlineAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax, 
+        <a href="../clang/AlwaysInlineAttr/Spelling.html">Spelling</a>
+         S)
+      </p>
+      <h3 id="BDD4A55F12E086D0967C6CDB7768E6766C15B578">Create</h3>
+      <p>
+        public AlwaysInlineAttr * Create(ASTContext &amp; Ctx, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax, 
+        <a href="../clang/AlwaysInlineAttr/Spelling.html">Spelling</a>
+         S)
+      </p>
+      <h3 id="A0CDACAACFB2EE75D0BBDE4A223E1A51B287FD8F">AlwaysInlineAttr</h3>
+      <p>public void AlwaysInlineAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="639338F2F8A4221D32D713CB1FFDF0D76E0F113F">clone</h3>
+      <p>public AlwaysInlineAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="D28FBF615D8C8C7F296E3194A5E44EECDDA0295D">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="89153739B2BFD781C57E4F0C824A101B5208E73C">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="0A929DF944664DDC669CA50F6AF30C56009570D9">getSemanticSpelling</h3>
+      <p>
+        public 
+        <a href="../clang/AlwaysInlineAttr/Spelling.html">Spelling</a>
+         getSemanticSpelling()
+      </p>
+      <h3 id="907AE35F5BE89B4F2EDA6F120E84644C59677CE1">isClangAlwaysInline</h3>
+      <p>public _Bool isClangAlwaysInline()</p>
+      <p>Defined at line 929 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C72CFE2627E4A4BDFBDD52891B392BF9A22F0604">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 933 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="A353FE27947BFEA5605D9AD8318136EB8C2C565E">enum Spelling</h3>
+      <ul>
+        <li>GNU_always_inline</li>
+        <li>CXX11_gnu_always_inline</li>
+        <li>C2x_gnu_always_inline</li>
+        <li>CXX11_clang_always_inline</li>
+        <li>C2x_clang_always_inline</li>
+        <li>Keyword_forceinline</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 903 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0EBE3AEC743CD77AD2D24168E63E6AABDB06FFD4">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F5F77E630ECE0BDC57E5F1FFF922B95E4FABBEE">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E42C9827264EC2A2870F729A33D32910152C3DA2">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDD4A55F12E086D0967C6CDB7768E6766C15B578">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0CDACAACFB2EE75D0BBDE4A223E1A51B287FD8F">AlwaysInlineAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#639338F2F8A4221D32D713CB1FFDF0D76E0F113F">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D28FBF615D8C8C7F296E3194A5E44EECDDA0295D">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89153739B2BFD781C57E4F0C824A101B5208E73C">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A929DF944664DDC669CA50F6AF30C56009570D9">getSemanticSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#907AE35F5BE89B4F2EDA6F120E84644C59677CE1">isClangAlwaysInline</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C72CFE2627E4A4BDFBDD52891B392BF9A22F0604">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A353FE27947BFEA5605D9AD8318136EB8C2C565E">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct Align</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct Align</h1>
+    <p>Defined at line 39 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+    <div>
+      <div>
+        <p> This struct is a compact representation of a valid (non-zero power of two) alignment. It is suitable for use as static global constants.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9CC52CEC87CA2678576AD60443050CD97A297E40">Align</h3>
+      <p>public void Align()</p>
+      <p>Defined at line 68 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <div>
+        <div>
+          <p> Default is byte-aligned.</p>
+        </div>
+      </div>
+      <h3 id="67E4C029FF7D1817B4925EBD46D4030ABDB61E80">Align</h3>
+      <p>public void Align(const Align &amp; Other)</p>
+      <p>Defined at line 71 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <div>
+        <div>
+          <p> Do not perform checks in case of copy/move construct/assign, because the checks have been performed when building `Other`.</p>
+        </div>
+      </div>
+      <h3 id="A65D34BC3F2BD4D970B1E604B6DA458E5A781354">Align</h3>
+      <p>public void Align(Align &amp;&amp; Other)</p>
+      <p>Defined at line 72 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <h3 id="B814A89F7529EFB3F54CB9AC84CDC56A91058983">operator=</h3>
+      <p>public Align &amp; operator=(const Align &amp; Other)</p>
+      <p>Defined at line 73 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <h3 id="D54B05A0A81F66F0CFA63A8C949F5DEBD65E4817">operator=</h3>
+      <p>public Align &amp; operator=(Align &amp;&amp; Other)</p>
+      <p>Defined at line 74 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <h3 id="8A6CF971CFC6A646C6E9DE9528401DBD53BB7F4F">Align</h3>
+      <p>public void Align(uint64_t Value)</p>
+      <p>Defined at line 76 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <h3 id="553FF362046C25E93584C4F6D6F4797B130EB1A4">value</h3>
+      <p>public uint64_t value()</p>
+      <p>Defined at line 85 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <div>
+        <div>
+          <p> This is a hole in the type system and should not be abused. Needed to interact with C for instance.</p>
+        </div>
+      </div>
+      <h3 id="419DBB51A53BB769319988E644FECF94AB39935A">previous</h3>
+      <p>
+        public 
+        <a href="Align.html">Align</a>
+         previous()
+      </p>
+      <p>Defined at line 88 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <div>
+        <div>
+          <p> Returns the previous alignment.</p>
+        </div>
+      </div>
+      <h3 id="503336837417B5E5143766B9CD1FB9FF485C7E12">Constant</h3>
+      <p>
+        public 
+        <a href="Align.html">Align</a>
+         Constant()
+      </p>
+      <p>Defined at line 96 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <div>
+        <div>
+          <p> Allow constructions of constexpr Align.</p>
+        </div>
+      </div>
+      <h3 id="B8D10C6764EDDA8E28B88F86833B3DA71BB0ADCE">Of</h3>
+      <p>
+        public 
+        <a href="Align.html">Align</a>
+         Of()
+      </p>
+      <p>Defined at line 102 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <div>
+        <div>
+          <p> Allow constructions of constexpr Align from types. Compile time equivalent to Align(alignof(T)).</p>
+        </div>
+      </div>
+      <h3 id="F9279C0E30338A77D927163EA67B9ECA3732E9A1">Align</h3>
+      <p>
+        public void Align(
+        <a href="../llvm/Align/LogValue.html">LogValue</a>
+         CA)
+      </p>
+      <p>Defined at line 107 of file /usr/lib/llvm-16/include/llvm/Support/Alignment.h</p>
+      <div>
+        <div>
+          <p> Constexpr constructor from LogValue type.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9CC52CEC87CA2678576AD60443050CD97A297E40">Align</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67E4C029FF7D1817B4925EBD46D4030ABDB61E80">Align</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A65D34BC3F2BD4D970B1E604B6DA458E5A781354">Align</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B814A89F7529EFB3F54CB9AC84CDC56A91058983">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D54B05A0A81F66F0CFA63A8C949F5DEBD65E4817">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A6CF971CFC6A646C6E9DE9528401DBD53BB7F4F">Align</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#553FF362046C25E93584C4F6D6F4797B130EB1A4">value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#419DBB51A53BB769319988E644FECF94AB39935A">previous</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#503336837417B5E5143766B9CD1FB9FF485C7E12">Constant</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8D10C6764EDDA8E28B88F86833B3DA71BB0ADCE">Of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9279C0E30338A77D927163EA67B9ECA3732E9A1">Align</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

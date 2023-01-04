@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPDeclareReductionDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPDeclareReductionDecl</h1>
+    <p>Defined at line 171 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;#pragma omp declare reduction ...&apos; directive. For example, in the following, declared reduction &apos;foo&apos; for types &apos;int&apos; and &apos;float&apos;:</p>
+        <p> Here &apos;omp_out += omp_in&apos; is a combiner and &apos;omp_priv = 0&apos; is an initializer.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ValueDecl.html">ValueDecl</a>
+      , 
+      <a href="DeclContext.html">DeclContext</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="BB9844CAD96E4C1C238F51DC88DD4C2E2D1B7E8D">Create</h3>
+      <p>
+        public OMPDeclareReductionDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, 
+        <a href="QualType.html">QualType</a>
+         T, OMPDeclareReductionDecl * PrevDeclInScope)
+      </p>
+      <div>
+        <div>
+          <p> Create declare reduction node.</p>
+        </div>
+      </div>
+      <h3 id="2361D90601F3B240EB602253B850FCFD2935C546">CreateDeserialized</h3>
+      <p>public OMPDeclareReductionDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <div>
+        <div>
+          <p> Create deserialized declare reduction node.</p>
+        </div>
+      </div>
+      <h3 id="ECA688EB2A47BE9CEC473FB61ABBF24BCD831E51">getCombiner</h3>
+      <p>public Expr * getCombiner()</p>
+      <p>Defined at line 221 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get combiner expression of the declare reduction construct.</p>
+        </div>
+      </div>
+      <h3 id="6BC85F754C1EDB0554D74EEFEDED41E98E9FD261">getCombiner</h3>
+      <p>public const Expr * getCombiner()</p>
+      <p>Defined at line 222 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="98488446ADD7C8EE6D815ABF8D031E4E2EE2B7A6">getCombinerIn</h3>
+      <p>public Expr * getCombinerIn()</p>
+      <p>Defined at line 224 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get In variable of the combiner.</p>
+        </div>
+      </div>
+      <h3 id="0CA440E274CE79EB09C4E902AA235FBF4CD8ECA4">getCombinerIn</h3>
+      <p>public const Expr * getCombinerIn()</p>
+      <p>Defined at line 225 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="71CB146E31574F9F1744B430E378ECCF48AA5FA4">getCombinerOut</h3>
+      <p>public Expr * getCombinerOut()</p>
+      <p>Defined at line 227 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get Out variable of the combiner.</p>
+        </div>
+      </div>
+      <h3 id="E430798985A8532C8D19BF3984E1D2F8F70B5856">getCombinerOut</h3>
+      <p>public const Expr * getCombinerOut()</p>
+      <p>Defined at line 228 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="5FC080EEB01DA98DE08B10DDEEB28DFBB4CEC031">setCombiner</h3>
+      <p>public void setCombiner(Expr * E)</p>
+      <p>Defined at line 230 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Set combiner expression for the declare reduction construct.</p>
+        </div>
+      </div>
+      <h3 id="8DFB8F6FE5A0433485F9245F7BEF80F95319547D">setCombinerData</h3>
+      <p>public void setCombinerData(Expr * InE, Expr * OutE)</p>
+      <p>Defined at line 232 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Set combiner In and Out vars.</p>
+        </div>
+      </div>
+      <h3 id="4BE7C3B51C7D28844A9E3E97A231233EEC8BB46B">getInitializer</h3>
+      <p>public Expr * getInitializer()</p>
+      <p>Defined at line 239 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get initializer expression (if specified) of the declare reduction construct.</p>
+        </div>
+      </div>
+      <h3 id="29FA5BE87FF2569935999B9810BA89138DCBE9E2">getInitializer</h3>
+      <p>public const Expr * getInitializer()</p>
+      <p>Defined at line 240 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="C119325AB13317D3E7B520503562F4CAFECE3BD8">getInitializerKind</h3>
+      <p>
+        public 
+        <a href="../clang/OMPDeclareReductionDecl/InitKind.html">InitKind</a>
+         getInitializerKind()
+      </p>
+      <p>Defined at line 242 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get initializer kind.</p>
+        </div>
+      </div>
+      <h3 id="52B45E338494125036BCF1F3F4C8990131AAA96F">getInitOrig</h3>
+      <p>public Expr * getInitOrig()</p>
+      <p>Defined at line 246 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get Orig variable of the initializer.</p>
+        </div>
+      </div>
+      <h3 id="FD84FD052CAD75D71E784D339A3C64B406C60A59">getInitOrig</h3>
+      <p>public const Expr * getInitOrig()</p>
+      <p>Defined at line 247 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="D3910663F9CACE296B95A2B2DF834B970060AC8D">getInitPriv</h3>
+      <p>public Expr * getInitPriv()</p>
+      <p>Defined at line 249 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get Priv variable of the initializer.</p>
+        </div>
+      </div>
+      <h3 id="294C69124F8E525066CD9CDEDDB10CA675279B96">getInitPriv</h3>
+      <p>public const Expr * getInitPriv()</p>
+      <p>Defined at line 250 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="90F5495593E9CC30CC35358C1AD191CF91E2C720">setInitializer</h3>
+      <p>
+        public void setInitializer(Expr * E, 
+        <a href="../clang/OMPDeclareReductionDecl/InitKind.html">InitKind</a>
+         IK)
+      </p>
+      <p>Defined at line 252 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Set initializer expression for the declare reduction construct.</p>
+        </div>
+      </div>
+      <h3 id="97DE0348DE47F3F3CBA95220C9DD3B95C35D809E">setInitializerData</h3>
+      <p>public void setInitializerData(Expr * OrigE, Expr * PrivE)</p>
+      <p>Defined at line 257 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Set initializer Orig and Priv vars.</p>
+        </div>
+      </div>
+      <h3 id="EFE29B39900F8C0F8C49F3212B328ABF32D7F6FD">getPrevDeclInScope</h3>
+      <p>public OMPDeclareReductionDecl * getPrevDeclInScope()</p>
+      <div>
+        <div>
+          <p> Get reference to previous declare reduction construct in the same scope with the same name.</p>
+        </div>
+      </div>
+      <h3 id="A138C98EA3784ECEAAB4605FCB4B9822E84D8696">getPrevDeclInScope</h3>
+      <p>public const OMPDeclareReductionDecl * getPrevDeclInScope()</p>
+      <h3 id="D3C80651F4396A5A615CB37E638B248D1ECC95B1">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 267 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="D4DCEE9E6D14743A658C0628703A84461DF17307">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 268 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="E11E9EE79512C1FAFCD35677A4CF9EED708B9028">castToDeclContext</h3>
+      <p>public DeclContext * castToDeclContext(const OMPDeclareReductionDecl * D)</p>
+      <p>Defined at line 269 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="C1C525FFEE17C441D93464F800F999BCAE5A9645">castFromDeclContext</h3>
+      <p>public OMPDeclareReductionDecl * castFromDeclContext(const DeclContext * DC)</p>
+      <p>Defined at line 272 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="F5F46268930110234444667A1807931D69DD099C">enum InitKind</h3>
+      <ul>
+        <li>CallInit</li>
+        <li>DirectInit</li>
+        <li>CopyInit</li>
+      </ul>
+      <p>Defined at line 175 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> This class stores some data in DeclContext::OMPDeclareReductionDeclBits to save some space. Use the provided accessors to access it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BB9844CAD96E4C1C238F51DC88DD4C2E2D1B7E8D">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2361D90601F3B240EB602253B850FCFD2935C546">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ECA688EB2A47BE9CEC473FB61ABBF24BCD831E51">getCombiner</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BC85F754C1EDB0554D74EEFEDED41E98E9FD261">getCombiner</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98488446ADD7C8EE6D815ABF8D031E4E2EE2B7A6">getCombinerIn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0CA440E274CE79EB09C4E902AA235FBF4CD8ECA4">getCombinerIn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71CB146E31574F9F1744B430E378ECCF48AA5FA4">getCombinerOut</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E430798985A8532C8D19BF3984E1D2F8F70B5856">getCombinerOut</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FC080EEB01DA98DE08B10DDEEB28DFBB4CEC031">setCombiner</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DFB8F6FE5A0433485F9245F7BEF80F95319547D">setCombinerData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4BE7C3B51C7D28844A9E3E97A231233EEC8BB46B">getInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#29FA5BE87FF2569935999B9810BA89138DCBE9E2">getInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C119325AB13317D3E7B520503562F4CAFECE3BD8">getInitializerKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52B45E338494125036BCF1F3F4C8990131AAA96F">getInitOrig</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD84FD052CAD75D71E784D339A3C64B406C60A59">getInitOrig</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3910663F9CACE296B95A2B2DF834B970060AC8D">getInitPriv</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#294C69124F8E525066CD9CDEDDB10CA675279B96">getInitPriv</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90F5495593E9CC30CC35358C1AD191CF91E2C720">setInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97DE0348DE47F3F3CBA95220C9DD3B95C35D809E">setInitializerData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFE29B39900F8C0F8C49F3212B328ABF32D7F6FD">getPrevDeclInScope</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A138C98EA3784ECEAAB4605FCB4B9822E84D8696">getPrevDeclInScope</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3C80651F4396A5A615CB37E638B248D1ECC95B1">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4DCEE9E6D14743A658C0628703A84461DF17307">classofKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E11E9EE79512C1FAFCD35677A4CF9EED708B9028">castToDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1C525FFEE17C441D93464F800F999BCAE5A9645">castFromDeclContext</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F5F46268930110234444667A1807931D69DD099C">InitKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

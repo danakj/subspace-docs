@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CodeGenOptions</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CodeGenOptions</h1>
+    <p>Defined at line 49 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+    <div>
+      <div>
+        <p> CodeGenOptions - Track various options which control how the code is optimized and passed to the backend.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="CodeGenOptionsBase.html">CodeGenOptionsBase</a>
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         BBSections
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         BinutilsVersion
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         CodeModel
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         CoverageDataFile
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         CoverageNotesFile
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ProfileFilterFiles
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ProfileExcludeFiles
+      </li>
+      <li>public char[4] CoverageVersion</li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         DebugPass
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         DebugCompilationDir
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         CoverageCompilationDir
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         DwarfDebugFlags
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         RecordCommandLine
+      </li>
+      <li>
+        public 
+        <a href="../std/map.html">map</a>
+         DebugPrefixMap
+      </li>
+      <li>
+        public 
+        <a href="../std/map.html">map</a>
+         CoveragePrefixMap
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         FloatABI
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         DIBugsReportFilePath
+      </li>
+      <li>
+        public 
+        <a href="../llvm/DenormalMode.html">DenormalMode</a>
+         FPDenormalMode
+      </li>
+      <li>
+        public 
+        <a href="../llvm/DenormalMode.html">DenormalMode</a>
+         FP32DenormalMode
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         LimitFloatPrecision
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         LinkBitcodeFiles
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         MainFileName
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         SplitDwarfFile
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         SplitDwarfOutput
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ObjectFilenameForDebug
+      </li>
+      <li>
+        public 
+        <a href="../llvm/Reloc/Model.html">Model</a>
+         RelocationModel
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         TrapFuncName
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         DependentLibraries
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         LinkerOptions
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         InstrProfileOutput
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         SampleProfileFile
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         MemoryProfileOutput
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ProfileInstrumentUsePath
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ProfileRemappingFile
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ThinLTOIndexFile
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ThinLinkBitcodeFile
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         SaveTempsFilePrefix
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         CudaGpuBinaryFileName
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         OffloadObjects
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         OptRecordFile
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         OptRecordPasses
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         OptRecordFormat
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         SymbolPartition
+      </li>
+      <li>
+        public 
+        <a href="../clang/CodeGenOptions/OptRemark.html">OptRemark</a>
+         OptimizationRemark
+      </li>
+      <li>
+        public 
+        <a href="../clang/CodeGenOptions/OptRemark.html">OptRemark</a>
+         OptimizationRemarkMissed
+      </li>
+      <li>
+        public 
+        <a href="../clang/CodeGenOptions/OptRemark.html">OptRemark</a>
+         OptimizationRemarkAnalysis
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         RewriteMapFiles
+      </li>
+      <li>
+        public 
+        <a href="SanitizerSet.html">SanitizerSet</a>
+         SanitizeRecover
+      </li>
+      <li>
+        public 
+        <a href="SanitizerSet.html">SanitizerSet</a>
+         SanitizeTrap
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         CmdArgs
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         NoBuiltinFuncs
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         Reciprocals
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         PreferVectorWidth
+      </li>
+      <li>
+        public 
+        <a href="XRayInstrSet.html">XRayInstrSet</a>
+         XRayInstrumentationBundle
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         DefaultFunctionAttrs
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         PassPlugins
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         SanitizeCoverageAllowlistFiles
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         StackProtectorGuard
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         StackProtectorGuardReg
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         StackProtectorGuardSymbol
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         SanitizeCoverageIgnorelistFiles
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         StackUsageOutput
+      </li>
+      <li>public const char * Argv0</li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         CommandLineArgs
+      </li>
+      <li>
+        public 
+        <a href="../std/optional.html">optional</a>
+         DiagnosticsHotnessThreshold
+      </li>
+      <li>
+        public 
+        <a href="../std/optional.html">optional</a>
+         DiagnosticsMisExpectTolerance
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         AsSecureLogFile
+      </li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/CodeGenOptions/BitcodeFileToLink.html">BitcodeFileToLink</a>
+      </li>
+      <li>
+        <a href="../clang/CodeGenOptions/OptRemark.html">OptRemark</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7AE84906FB168B6709373C25D71C31A304210FF2">getCompressDebugSections</h3>
+      <p>
+        public 
+        <a href="../llvm/DebugCompressionType.html">DebugCompressionType</a>
+         getCompressDebugSections()
+      </p>
+      <p>Defined at line 31 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="E43C39D951399B639E6B478DC826BA6C23C267C5">setCompressDebugSections</h3>
+      <p>
+        public void setCompressDebugSections(
+        <a href="../llvm/DebugCompressionType.html">DebugCompressionType</a>
+         Value)
+      </p>
+      <p>Defined at line 31 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="A2F0F4C2C534E00618E5F640C8CF581766602A5A">getFramePointer</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/FramePointerKind.html">FramePointerKind</a>
+         getFramePointer()
+      </p>
+      <p>Defined at line 55 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="16FC4BF7814CAA4641D5B5BD69089CD440CC49DC">setFramePointer</h3>
+      <p>
+        public void setFramePointer(
+        <a href="../clang/CodeGenOptions/FramePointerKind.html">FramePointerKind</a>
+         Value)
+      </p>
+      <p>Defined at line 55 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="228D0A9D7C347D3EE95DF43B69EA67E238774610">getEmbedBitcode</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/EmbedBitcodeKind.html">EmbedBitcodeKind</a>
+         getEmbedBitcode()
+      </p>
+      <p>Defined at line 92 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="CEADC2B3718AB34E4FAD886590CF5D8B965F9271">setEmbedBitcode</h3>
+      <p>
+        public void setEmbedBitcode(
+        <a href="../clang/CodeGenOptions/EmbedBitcodeKind.html">EmbedBitcodeKind</a>
+         Value)
+      </p>
+      <p>Defined at line 92 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="7E649B1F80C9547DBAD1128176B2CE093998035B">getInlineAsmDialect</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/InlineAsmDialectKind.html">InlineAsmDialectKind</a>
+         getInlineAsmDialect()
+      </p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="B754A953318BD3384FFE88F9A72EC0D903E61CAC">setInlineAsmDialect</h3>
+      <p>
+        public void setInlineAsmDialect(
+        <a href="../clang/CodeGenOptions/InlineAsmDialectKind.html">InlineAsmDialectKind</a>
+         Value)
+      </p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="EF1F72A021450BAFDEFCEC7819DA86A2912D2ADA">getEmitDwarfUnwind</h3>
+      <p>
+        public 
+        <a href="../llvm/EmitDwarfUnwindType.html">EmitDwarfUnwindType</a>
+         getEmitDwarfUnwind()
+      </p>
+      <p>Defined at line 119 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="A1D792826AEEFA1DB007AFBF4E76FBE650DB781B">setEmitDwarfUnwind</h3>
+      <p>
+        public void setEmitDwarfUnwind(
+        <a href="../llvm/EmitDwarfUnwindType.html">EmitDwarfUnwindType</a>
+         Value)
+      </p>
+      <p>Defined at line 119 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="C7993EDD0BDE3BC5772AEB539D2D5796C011863C">getObjCDispatchMethod</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/ObjCDispatchMethodKind.html">ObjCDispatchMethodKind</a>
+         getObjCDispatchMethod()
+      </p>
+      <p>Defined at line 203 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="2AF0E434B9091AAE4951FCD8E2F33E119847F3F4">setObjCDispatchMethod</h3>
+      <p>
+        public void setObjCDispatchMethod(
+        <a href="../clang/CodeGenOptions/ObjCDispatchMethodKind.html">ObjCDispatchMethodKind</a>
+         Value)
+      </p>
+      <p>Defined at line 203 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="2C8663F2F6CA117F356B466752D827F1558E4456">getProfileInstr</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/ProfileInstrKind.html">ProfileInstrKind</a>
+         getProfileInstr()
+      </p>
+      <p>Defined at line 213 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="8EF4D4B5B2CD3D4D2847505E18A890F1D888B854">setProfileInstr</h3>
+      <p>
+        public void setProfileInstr(
+        <a href="../clang/CodeGenOptions/ProfileInstrKind.html">ProfileInstrKind</a>
+         Value)
+      </p>
+      <p>Defined at line 213 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="603870134EB96D2D1BB140AA8D1FCB0AE5BA3A6B">getProfileUse</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/ProfileInstrKind.html">ProfileInstrKind</a>
+         getProfileUse()
+      </p>
+      <p>Defined at line 215 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="96CC617C13A016F8247456AE78720EEF0434CBC9">setProfileUse</h3>
+      <p>
+        public void setProfileUse(
+        <a href="../clang/CodeGenOptions/ProfileInstrKind.html">ProfileInstrKind</a>
+         Value)
+      </p>
+      <p>Defined at line 215 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="C13867B06F3B8CD0B2005AFD3C472E5AEF421B37">getStructReturnConvention</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/StructReturnConventionKind.html">StructReturnConventionKind</a>
+         getStructReturnConvention()
+      </p>
+      <p>Defined at line 226 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="DBD85F4C6D4787F5B28A3215D7040BBBAC215C6B">setStructReturnConvention</h3>
+      <p>
+        public void setStructReturnConvention(
+        <a href="../clang/CodeGenOptions/StructReturnConventionKind.html">StructReturnConventionKind</a>
+         Value)
+      </p>
+      <p>Defined at line 226 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="C4D0400A5F818F041952A4CBE1EAE48B1941EFDA">getSanitizeAddressUseAfterReturn</h3>
+      <p>
+        public 
+        <a href="../llvm/AsanDetectStackUseAfterReturnMode.html">AsanDetectStackUseAfterReturnMode</a>
+         getSanitizeAddressUseAfterReturn()
+      </p>
+      <p>Defined at line 235 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="B6C0B32510AD6F1B9295264424FE06006CB4A4C2">setSanitizeAddressUseAfterReturn</h3>
+      <p>
+        public void setSanitizeAddressUseAfterReturn(
+        <a href="../llvm/AsanDetectStackUseAfterReturnMode.html">AsanDetectStackUseAfterReturnMode</a>
+         Value)
+      </p>
+      <p>Defined at line 235 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="3C2299B7409934E662C38197BDB575E3797B26D8">getSanitizeAddressDtor</h3>
+      <p>
+        public 
+        <a href="../llvm/AsanDtorKind.html">AsanDtorKind</a>
+         getSanitizeAddressDtor()
+      </p>
+      <p>Defined at line 247 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="66F39F4F39254EBE63A313873996E93393D0C07F">setSanitizeAddressDtor</h3>
+      <p>
+        public void setSanitizeAddressDtor(
+        <a href="../llvm/AsanDtorKind.html">AsanDtorKind</a>
+         Value)
+      </p>
+      <p>Defined at line 247 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="E095C750041877EB39AB27EA80517F1134B8294D">getFiniteLoops</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/FiniteLoopsKind.html">FiniteLoopsKind</a>
+         getFiniteLoops()
+      </p>
+      <p>Defined at line 313 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="753186759E2241470285E5D4F773097E2F3BF830">setFiniteLoops</h3>
+      <p>
+        public void setFiniteLoops(
+        <a href="../clang/CodeGenOptions/FiniteLoopsKind.html">FiniteLoopsKind</a>
+         Value)
+      </p>
+      <p>Defined at line 313 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="3EDD0910468017A4CC62077323E5F76B5779A5E6">getDebugSrcHash</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/DebugSrcHashKind.html">DebugSrcHashKind</a>
+         getDebugSrcHash()
+      </p>
+      <p>Defined at line 350 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="C0BDAE2BE8894F82FF523A0313F638BA5C307EA2">setDebugSrcHash</h3>
+      <p>
+        public void setDebugSrcHash(
+        <a href="../clang/CodeGenOptions/DebugSrcHashKind.html">DebugSrcHashKind</a>
+         Value)
+      </p>
+      <p>Defined at line 350 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="AE45D2FB9D08BA1B88689616C3237B939E37DF8C">getDebugSimpleTemplateNames</h3>
+      <p>
+        public 
+        <a href="../clang/codegenoptions/DebugTemplateNamesKind.html">DebugTemplateNamesKind</a>
+         getDebugSimpleTemplateNames()
+      </p>
+      <p>Defined at line 359 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="63D28FFFFFF019D38E734F21385DB9FD5628B83E">setDebugSimpleTemplateNames</h3>
+      <p>
+        public void setDebugSimpleTemplateNames(
+        <a href="../clang/codegenoptions/DebugTemplateNamesKind.html">DebugTemplateNamesKind</a>
+         Value)
+      </p>
+      <p>Defined at line 359 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="B3AC0B810A83E354CC374B1CC020C58293E391A7">getDebugInfo</h3>
+      <p>
+        public 
+        <a href="../clang/codegenoptions/DebugInfoKind.html">DebugInfoKind</a>
+         getDebugInfo()
+      </p>
+      <p>Defined at line 389 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="6598068A97E7CD0DCD9D9572621E8BD922C483FB">setDebugInfo</h3>
+      <p>
+        public void setDebugInfo(
+        <a href="../clang/codegenoptions/DebugInfoKind.html">DebugInfoKind</a>
+         Value)
+      </p>
+      <p>Defined at line 389 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="D7EFA0691D53A1A3FDC2DEAF77E4309BED50A83E">getDebuggerTuning</h3>
+      <p>
+        public 
+        <a href="../llvm/DebuggerKind.html">DebuggerKind</a>
+         getDebuggerTuning()
+      </p>
+      <p>Defined at line 395 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="B3D6B68B4018180ED039E11DF7B1294D908B5946">setDebuggerTuning</h3>
+      <p>
+        public void setDebuggerTuning(
+        <a href="../llvm/DebuggerKind.html">DebuggerKind</a>
+         Value)
+      </p>
+      <p>Defined at line 395 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="926CD780DDD17AD018AC983D5DF7F876D3E65F5F">getInlining</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/InliningMethod.html">InliningMethod</a>
+         getInlining()
+      </p>
+      <p>Defined at line 413 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="76A9450F00CB96E7715EC440D94C7620F6A75317">setInlining</h3>
+      <p>
+        public void setInlining(
+        <a href="../clang/CodeGenOptions/InliningMethod.html">InliningMethod</a>
+         Value)
+      </p>
+      <p>Defined at line 413 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="AFB15C30D8D299183AAE60F3A5733C463EDF3AB7">getVecLib</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/VectorLibrary.html">VectorLibrary</a>
+         getVecLib()
+      </p>
+      <p>Defined at line 419 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="9C81B3C0257543E282C84D8BBC1F185C2AC05563">setVecLib</h3>
+      <p>
+        public void setVecLib(
+        <a href="../clang/CodeGenOptions/VectorLibrary.html">VectorLibrary</a>
+         Value)
+      </p>
+      <p>Defined at line 419 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="BDED3C012BB1740BE1EAEAF0CF03F8E38E466687">getDefaultTLSModel</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/TLSModel.html">TLSModel</a>
+         getDefaultTLSModel()
+      </p>
+      <p>Defined at line 422 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="F16D7463D54BAB07F51002896F2E2CF07BD0583B">setDefaultTLSModel</h3>
+      <p>
+        public void setDefaultTLSModel(
+        <a href="../clang/CodeGenOptions/TLSModel.html">TLSModel</a>
+         Value)
+      </p>
+      <p>Defined at line 422 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="23155BD0E60DD35C89B5D2CA9B0EC73B56324EF5">getSwiftAsyncFramePointer</h3>
+      <p>
+        public 
+        <a href="../clang/CodeGenOptions/SwiftAsyncFramePointerKind.html">SwiftAsyncFramePointerKind</a>
+         getSwiftAsyncFramePointer()
+      </p>
+      <p>Defined at line 490 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="C623432A55373F5BC6AB6F6B609F98D783F47A5A">setSwiftAsyncFramePointer</h3>
+      <p>
+        public void setSwiftAsyncFramePointer(
+        <a href="../clang/CodeGenOptions/SwiftAsyncFramePointerKind.html">SwiftAsyncFramePointerKind</a>
+         Value)
+      </p>
+      <p>Defined at line 490 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="22258FED8801DE9422B4AB038EF3FAD359C1FC91">getZeroCallUsedRegs</h3>
+      <p>
+        public 
+        <a href="../llvm/ZeroCallUsedRegs/ZeroCallUsedRegsKind.html">ZeroCallUsedRegsKind</a>
+         getZeroCallUsedRegs()
+      </p>
+      <p>Defined at line 497 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="DDD75DD759D4DAFB6CF558BB277553F84A20865F">setZeroCallUsedRegs</h3>
+      <p>
+        public void setZeroCallUsedRegs(
+        <a href="../llvm/ZeroCallUsedRegs/ZeroCallUsedRegsKind.html">ZeroCallUsedRegsKind</a>
+         Value)
+      </p>
+      <p>Defined at line 497 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.def</p>
+      <h3 id="F68AE27EA9C9EA94ADC6C2739D9557CD632502F1">CodeGenOptions</h3>
+      <p>public void CodeGenOptions()</p>
+      <h3 id="7A9DDC5E710F3C4D0B89D90CB4798CEFC347D4CD">getNoBuiltinFuncs</h3>
+      <p>public const std::vector&lt;std::string&gt; &amp; getNoBuiltinFuncs()</p>
+      <p>Defined at line 448 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="B0319F106B8F68362CF91B7E633CB6CCC6ACC967">hasProfileClangInstr</h3>
+      <p>public _Bool hasProfileClangInstr()</p>
+      <p>Defined at line 453 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Check if Clang profile instrumenation is on.</p>
+        </div>
+      </div>
+      <h3 id="F042617CB604C9011B4C87FB7E2F140751EBBD4D">hasProfileIRInstr</h3>
+      <p>public _Bool hasProfileIRInstr()</p>
+      <p>Defined at line 458 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Check if IR level profile instrumentation is on.</p>
+        </div>
+      </div>
+      <h3 id="EEB3FF598DCE3C232FDB18DE65ACF121F1BAAAAE">hasProfileCSIRInstr</h3>
+      <p>public _Bool hasProfileCSIRInstr()</p>
+      <p>Defined at line 463 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Check if CS IR level profile instrumentation is on.</p>
+        </div>
+      </div>
+      <h3 id="ED187DC52B590DEBF0194636C3F6D1FFB83114C5">hasProfileClangUse</h3>
+      <p>public _Bool hasProfileClangUse()</p>
+      <p>Defined at line 468 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Check if Clang profile use is on.</p>
+        </div>
+      </div>
+      <h3 id="EE9FF3EEEEAF44AD26FF8B5DFD8AAC99FCD5F5CA">hasProfileIRUse</h3>
+      <p>public _Bool hasProfileIRUse()</p>
+      <p>Defined at line 473 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Check if IR level profile use is on.</p>
+        </div>
+      </div>
+      <h3 id="843567A9CE184F685380E4C7A25EE23EBC389D76">hasProfileCSIRUse</h3>
+      <p>public _Bool hasProfileCSIRUse()</p>
+      <p>Defined at line 479 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Check if CSIR profile use is on.</p>
+        </div>
+      </div>
+      <h3 id="0D25A5DA88D760A95A40CCBF906EED6A3C337BE7">hasReducedDebugInfo</h3>
+      <p>public _Bool hasReducedDebugInfo()</p>
+      <p>Defined at line 482 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Check if type and variable info should be emitted.</p>
+        </div>
+      </div>
+      <h3 id="8CE7CEEC0D30688CD56ECE2B62526DF9C2066B67">hasMaybeUnusedDebugInfo</h3>
+      <p>public _Bool hasMaybeUnusedDebugInfo()</p>
+      <p>Defined at line 487 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Check if maybe unused type info should be emitted.</p>
+        </div>
+      </div>
+      <h3 id="B4C7EEB8C8B3464702D7501E1D290B047212E201">hasSanitizeCoverage</h3>
+      <p>public _Bool hasSanitizeCoverage()</p>
+      <p>Defined at line 492 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Check if any one of SanitizeCoverage* is enabled.</p>
+        </div>
+      </div>
+      <h3 id="EB761CB698DAE110E739DA4FDA997DA93248C552">hasSanitizeBinaryMetadata</h3>
+      <p>public _Bool hasSanitizeBinaryMetadata()</p>
+      <p>Defined at line 499 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Check if any one of SanitizeBinaryMetadata* is enabled.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="9FFFD0B22A21D3492BAB50BD9820AD864ED4FE9D">enum InliningMethod</h3>
+      <ul>
+        <li>NormalInlining</li>
+        <li>OnlyHintInlining</li>
+        <li>OnlyAlwaysInlining</li>
+      </ul>
+      <p>Defined at line 51 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="E6DEA5301E23BECA3D60DAE3C9D6921BFB823A29">enum VectorLibrary</h3>
+      <ul>
+        <li>NoLibrary</li>
+        <li>Accelerate</li>
+        <li>LIBMVEC</li>
+        <li>MASSV</li>
+        <li>SVML</li>
+        <li>Darwin_libsystem_m</li>
+      </ul>
+      <p>Defined at line 57 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="9EF64A48EBD1301A0A4A42964F95C892C8C8010F">enum ObjCDispatchMethodKind</h3>
+      <ul>
+        <li>Legacy</li>
+        <li>NonLegacy</li>
+        <li>Mixed</li>
+      </ul>
+      <p>Defined at line 66 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="0734DD6EBB12F716FC736B34A1B63F1FE820615B">enum TLSModel</h3>
+      <ul>
+        <li>GeneralDynamicTLSModel</li>
+        <li>LocalDynamicTLSModel</li>
+        <li>InitialExecTLSModel</li>
+        <li>LocalExecTLSModel</li>
+      </ul>
+      <p>Defined at line 72 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="34A0CD95AB4CDFDFBCFB715BE130BDE794EFD827">enum StructReturnConventionKind</h3>
+      <ul>
+        <li>SRCK_Default</li>
+        <li>SRCK_OnStack</li>
+        <li>SRCK_InRegs</li>
+      </ul>
+      <p>Defined at line 79 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="4A36510F9678D47DF1C7D848E385493515CC68A7">enum ProfileInstrKind</h3>
+      <ul>
+        <li>ProfileNone</li>
+        <li>ProfileClangInstr</li>
+        <li>ProfileIRInstr</li>
+        <li>ProfileCSIRInstr</li>
+      </ul>
+      <p>Defined at line 85 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="3721B55E50455D5F181333929D39473E17032B75">enum EmbedBitcodeKind</h3>
+      <ul>
+        <li>Embed_Off</li>
+        <li>Embed_All</li>
+        <li>Embed_Bitcode</li>
+        <li>Embed_Marker</li>
+      </ul>
+      <p>Defined at line 93 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="C20C0940F278648E82018C0DD401E7A736FA7B05">enum InlineAsmDialectKind</h3>
+      <ul>
+        <li>IAD_ATT</li>
+        <li>IAD_Intel</li>
+      </ul>
+      <p>Defined at line 100 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="BBC06BBD37D83999B46D09E21F0067929564DF12">enum DebugSrcHashKind</h3>
+      <ul>
+        <li>DSH_MD5</li>
+        <li>DSH_SHA1</li>
+        <li>DSH_SHA256</li>
+      </ul>
+      <p>Defined at line 105 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="F003C3DDCE02A697F31D45C2526E3FBB03F237F6">enum class FramePointerKind</h3>
+      <ul>
+        <li>None</li>
+        <li>NonLeaf</li>
+        <li>All</li>
+      </ul>
+      <p>Defined at line 133 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="DA1489F2990E93EB98C24DF177D39945E4DAB349">enum class SwiftAsyncFramePointerKind</h3>
+      <ul>
+        <li>Auto</li>
+        <li>Always</li>
+        <li>Never</li>
+        <li>Default</li>
+      </ul>
+      <p>Defined at line 139 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="B6F65D34009817D55FE7EBD7BD8D22C648DBAEC6">enum FiniteLoopsKind</h3>
+      <ul>
+        <li>Language</li>
+        <li>Always</li>
+        <li>Never</li>
+      </ul>
+      <p>Defined at line 146 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <h3 id="771EFD29BDA2D432B3018056613193D42DC6D3B3">enum RemarkKind</h3>
+      <ul>
+        <li>RK_Missing</li>
+        <li>RK_Enabled</li>
+        <li>RK_EnabledEverything</li>
+        <li>RK_Disabled</li>
+        <li>RK_DisabledEverything</li>
+        <li>RK_WithPattern</li>
+      </ul>
+      <p>Defined at line 304 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7AE84906FB168B6709373C25D71C31A304210FF2">getCompressDebugSections</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E43C39D951399B639E6B478DC826BA6C23C267C5">setCompressDebugSections</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2F0F4C2C534E00618E5F640C8CF581766602A5A">getFramePointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16FC4BF7814CAA4641D5B5BD69089CD440CC49DC">setFramePointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#228D0A9D7C347D3EE95DF43B69EA67E238774610">getEmbedBitcode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CEADC2B3718AB34E4FAD886590CF5D8B965F9271">setEmbedBitcode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E649B1F80C9547DBAD1128176B2CE093998035B">getInlineAsmDialect</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B754A953318BD3384FFE88F9A72EC0D903E61CAC">setInlineAsmDialect</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF1F72A021450BAFDEFCEC7819DA86A2912D2ADA">getEmitDwarfUnwind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1D792826AEEFA1DB007AFBF4E76FBE650DB781B">setEmitDwarfUnwind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7993EDD0BDE3BC5772AEB539D2D5796C011863C">getObjCDispatchMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2AF0E434B9091AAE4951FCD8E2F33E119847F3F4">setObjCDispatchMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2C8663F2F6CA117F356B466752D827F1558E4456">getProfileInstr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8EF4D4B5B2CD3D4D2847505E18A890F1D888B854">setProfileInstr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#603870134EB96D2D1BB140AA8D1FCB0AE5BA3A6B">getProfileUse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96CC617C13A016F8247456AE78720EEF0434CBC9">setProfileUse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C13867B06F3B8CD0B2005AFD3C472E5AEF421B37">getStructReturnConvention</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DBD85F4C6D4787F5B28A3215D7040BBBAC215C6B">setStructReturnConvention</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4D0400A5F818F041952A4CBE1EAE48B1941EFDA">getSanitizeAddressUseAfterReturn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B6C0B32510AD6F1B9295264424FE06006CB4A4C2">setSanitizeAddressUseAfterReturn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C2299B7409934E662C38197BDB575E3797B26D8">getSanitizeAddressDtor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66F39F4F39254EBE63A313873996E93393D0C07F">setSanitizeAddressDtor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E095C750041877EB39AB27EA80517F1134B8294D">getFiniteLoops</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#753186759E2241470285E5D4F773097E2F3BF830">setFiniteLoops</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EDD0910468017A4CC62077323E5F76B5779A5E6">getDebugSrcHash</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0BDAE2BE8894F82FF523A0313F638BA5C307EA2">setDebugSrcHash</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE45D2FB9D08BA1B88689616C3237B939E37DF8C">getDebugSimpleTemplateNames</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63D28FFFFFF019D38E734F21385DB9FD5628B83E">setDebugSimpleTemplateNames</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3AC0B810A83E354CC374B1CC020C58293E391A7">getDebugInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6598068A97E7CD0DCD9D9572621E8BD922C483FB">setDebugInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7EFA0691D53A1A3FDC2DEAF77E4309BED50A83E">getDebuggerTuning</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3D6B68B4018180ED039E11DF7B1294D908B5946">setDebuggerTuning</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#926CD780DDD17AD018AC983D5DF7F876D3E65F5F">getInlining</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76A9450F00CB96E7715EC440D94C7620F6A75317">setInlining</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFB15C30D8D299183AAE60F3A5733C463EDF3AB7">getVecLib</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C81B3C0257543E282C84D8BBC1F185C2AC05563">setVecLib</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDED3C012BB1740BE1EAEAF0CF03F8E38E466687">getDefaultTLSModel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F16D7463D54BAB07F51002896F2E2CF07BD0583B">setDefaultTLSModel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23155BD0E60DD35C89B5D2CA9B0EC73B56324EF5">getSwiftAsyncFramePointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C623432A55373F5BC6AB6F6B609F98D783F47A5A">setSwiftAsyncFramePointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22258FED8801DE9422B4AB038EF3FAD359C1FC91">getZeroCallUsedRegs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DDD75DD759D4DAFB6CF558BB277553F84A20865F">setZeroCallUsedRegs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F68AE27EA9C9EA94ADC6C2739D9557CD632502F1">CodeGenOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A9DDC5E710F3C4D0B89D90CB4798CEFC347D4CD">getNoBuiltinFuncs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0319F106B8F68362CF91B7E633CB6CCC6ACC967">hasProfileClangInstr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F042617CB604C9011B4C87FB7E2F140751EBBD4D">hasProfileIRInstr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EEB3FF598DCE3C232FDB18DE65ACF121F1BAAAAE">hasProfileCSIRInstr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED187DC52B590DEBF0194636C3F6D1FFB83114C5">hasProfileClangUse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE9FF3EEEEAF44AD26FF8B5DFD8AAC99FCD5F5CA">hasProfileIRUse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#843567A9CE184F685380E4C7A25EE23EBC389D76">hasProfileCSIRUse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D25A5DA88D760A95A40CCBF906EED6A3C337BE7">hasReducedDebugInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CE7CEEC0D30688CD56ECE2B62526DF9C2066B67">hasMaybeUnusedDebugInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4C7EEB8C8B3464702D7501E1D290B047212E201">hasSanitizeCoverage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB761CB698DAE110E739DA4FDA997DA93248C552">hasSanitizeBinaryMetadata</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9FFFD0B22A21D3492BAB50BD9820AD864ED4FE9D">InliningMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6DEA5301E23BECA3D60DAE3C9D6921BFB823A29">VectorLibrary</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EF64A48EBD1301A0A4A42964F95C892C8C8010F">ObjCDispatchMethodKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0734DD6EBB12F716FC736B34A1B63F1FE820615B">TLSModel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#34A0CD95AB4CDFDFBCFB715BE130BDE794EFD827">StructReturnConventionKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A36510F9678D47DF1C7D848E385493515CC68A7">ProfileInstrKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3721B55E50455D5F181333929D39473E17032B75">EmbedBitcodeKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C20C0940F278648E82018C0DD401E7A736FA7B05">InlineAsmDialectKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBC06BBD37D83999B46D09E21F0067929564DF12">DebugSrcHashKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F003C3DDCE02A697F31D45C2526E3FBB03F237F6">FramePointerKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA1489F2990E93EB98C24DF177D39945E4DAB349">SwiftAsyncFramePointerKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B6F65D34009817D55FE7EBD7BD8D22C648DBAEC6">FiniteLoopsKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#771EFD29BDA2D432B3018056613193D42DC6D3B3">RemarkKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

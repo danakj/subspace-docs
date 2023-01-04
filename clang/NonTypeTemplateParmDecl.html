@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class NonTypeTemplateParmDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class NonTypeTemplateParmDecl</h1>
+    <p>Defined at line 1407 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> NonTypeTemplateParmDecl - Declares a non-type template parameter, e.g., &quot;Size&quot; in</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="DeclaratorDecl.html">DeclaratorDecl</a>
+      , 
+      <a href="TemplateParmPosition.html">TemplateParmPosition</a>
+      , llvm::TrailingObjects&lt;NonTypeTemplateParmDecl, std::pair&lt;QualType, TypeSourceInfo *&gt;, Expr *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C1868C42AF1356479E88C0BE83FA8471079B6815">Create</h3>
+      <p>
+        public NonTypeTemplateParmDecl * Create(const ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, unsigned int D, unsigned int P, IdentifierInfo * Id, 
+        <a href="QualType.html">QualType</a>
+         T, _Bool ParameterPack, TypeSourceInfo * TInfo)
+      </p>
+      <h3 id="F29B0A89700D04FF72AC948D4A77A8D20AD0EDA9">Create</h3>
+      <p>
+        public NonTypeTemplateParmDecl * Create(const ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, unsigned int D, unsigned int P, IdentifierInfo * Id, 
+        <a href="QualType.html">QualType</a>
+         T, TypeSourceInfo * TInfo, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         ExpandedTypes, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         ExpandedTInfos)
+      </p>
+      <h3 id="D9236656D857CCB59BEB9C4FA73691D0EC222D12">CreateDeserialized</h3>
+      <p>public NonTypeTemplateParmDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID, _Bool HasTypeConstraint)</p>
+      <h3 id="3767E230019D394F98D7D4AE44A77FD0CC85BCD0">CreateDeserialized</h3>
+      <p>public NonTypeTemplateParmDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID, unsigned int NumExpandedTypes, _Bool HasTypeConstraint)</p>
+      <h3 id="485A5DE6E9704C0A53C3CD7233926EEE4F2785C9">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <h3 id="03D1E264D323AFCF6F21B8D6462CC9C0D796488A">getDefaultArgStorage</h3>
+      <p>public const DefArgStorage &amp; getDefaultArgStorage()</p>
+      <p>Defined at line 1482 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="01A180F7CDBC9A0024E8F8110455A0ED58FAF5F5">hasDefaultArgument</h3>
+      <p>public _Bool hasDefaultArgument()</p>
+      <p>Defined at line 1486 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Determine whether this template parameter has a default argument.</p>
+        </div>
+      </div>
+      <h3 id="7499154DB1A2BEB06EFD17F2AD7E49A81AE138B6">getDefaultArgument</h3>
+      <p>public Expr * getDefaultArgument()</p>
+      <p>Defined at line 1489 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the default argument, if any.</p>
+        </div>
+      </div>
+      <h3 id="EAA1DB4EF1D63FA77177F0B768F04954234B0959">getDefaultArgumentLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getDefaultArgumentLoc()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the location of the default argument, if any.</p>
+        </div>
+      </div>
+      <h3 id="A6A7B0D65334DCF6A1F84C5121534E9F7704ED98">defaultArgumentWasInherited</h3>
+      <p>public _Bool defaultArgumentWasInherited()</p>
+      <p>Defined at line 1496 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Determines whether the default argument was inherited from a previous declaration of this template.</p>
+        </div>
+      </div>
+      <h3 id="C137ADE15F19C1020DC2CE3F342D268F0FABE961">setDefaultArgument</h3>
+      <p>public void setDefaultArgument(Expr * DefArg)</p>
+      <p>Defined at line 1503 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Set the default argument for this template parameter, and whether that default argument was inherited from another declaration.</p>
+        </div>
+      </div>
+      <h3 id="A1124102200790A1DA0082C23EED9862F5A6B4C0">setInheritedDefaultArgument</h3>
+      <p>public void setInheritedDefaultArgument(const ASTContext &amp; C, NonTypeTemplateParmDecl * Parm)</p>
+      <p>Defined at line 1504 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="B30FE3A5B082DCC2095BF04D8A6453D642BA830F">removeDefaultArgument</h3>
+      <p>public void removeDefaultArgument()</p>
+      <p>Defined at line 1510 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Removes the default argument of this template parameter.</p>
+        </div>
+      </div>
+      <h3 id="21DF9E1BD9E8941EBFAA8AAE36698434C9D5B926">isParameterPack</h3>
+      <p>public _Bool isParameterPack()</p>
+      <p>Defined at line 1521 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Whether this parameter is a non-type template parameter pack.</p>
+          <p> If the parameter is a parameter pack, the type may be a In the following example, the  parameter is a parameter pack (whose type is &apos;unsigned&apos;).</p>
+        </div>
+      </div>
+      <h3 id="BA572138CF8AA59916209159F00B1DAAE1A3C654">isPackExpansion</h3>
+      <p>public _Bool isPackExpansion()</p>
+      <p>Defined at line 1528 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Whether this parameter pack is a pack expansion.</p>
+          <p> A non-type template parameter pack is a pack expansion if its type contains an unexpanded parameter pack. In this case, we will have built a PackExpansionType wrapping the type.</p>
+        </div>
+      </div>
+      <h3 id="C2BDFEA96A1E0EDB6F18788FDDBDD3337F339A22">isExpandedParameterPack</h3>
+      <p>public _Bool isExpandedParameterPack()</p>
+      <p>Defined at line 1556 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Whether this parameter is a non-type template parameter pack that has a known list of different types at different positions.</p>
+          <p> A parameter pack is an expanded parameter pack when the original parameter pack&apos;s type was itself a pack expansion, and that expansion has already been expanded. For example, given:</p>
+          <p> The parameter pack  has a  as its type, which expands  When  is supplied with template arguments by instantiating  the instantiation of  becomes an expanded parameter pack. For example, instantiating unsigned int&gt; results in  being an expanded parameter pack with expansion types  and  int.</p>
+          <p> The  and  functions return the expansion types.</p>
+        </div>
+      </div>
+      <h3 id="E4823858483BA36938A701A9AB2C284A2A6B476E">getNumExpansionTypes</h3>
+      <p>public unsigned int getNumExpansionTypes()</p>
+      <p>Defined at line 1560 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieves the number of expansion types in an expanded parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="72714DBA4070694064319B00306AB7E9C2A2D97C">getExpansionType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getExpansionType(unsigned int I)
+      </p>
+      <p>Defined at line 1567 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve a particular expansion type within an expanded parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="3BEA937C3C44692E41B6ABFE15CE3818447A41E5">getExpansionTypeSourceInfo</h3>
+      <p>public TypeSourceInfo * getExpansionTypeSourceInfo(unsigned int I)</p>
+      <p>Defined at line 1576 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve a particular expansion type source info within an expanded parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="F339802CFC686DD32604BB69C81796089EF3E156">getPlaceholderTypeConstraint</h3>
+      <p>public Expr * getPlaceholderTypeConstraint()</p>
+      <p>Defined at line 1585 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Return the constraint introduced by the placeholder type of this non-type template parameter (if any).</p>
+        </div>
+      </div>
+      <h3 id="BF10CA6403367845095ABF2DA61FE2AFB4F8B5B6">setPlaceholderTypeConstraint</h3>
+      <p>public void setPlaceholderTypeConstraint(Expr * E)</p>
+      <p>Defined at line 1590 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="D410F6239DC35EB87041779EA700B3D8E1FC8884">hasPlaceholderTypeConstraint</h3>
+      <p>public _Bool hasPlaceholderTypeConstraint()</p>
+      <p>Defined at line 1596 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Determine whether this non-type template parameter&apos;s type has a placeholder with a type-constraint.</p>
+        </div>
+      </div>
+      <h3 id="90D429A92E35973253233959379D22239BA3362B">getAssociatedConstraints</h3>
+      <p>public void getAssociatedConstraints(llvm::SmallVectorImpl&lt;const Expr *&gt; &amp; AC)</p>
+      <p>Defined at line 1607 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Use this instead of getPlaceholderImmediatelyDeclaredConstraint for concepts APIs that accept an ArrayRef of constraint expressions.</p>
+        </div>
+      </div>
+      <h3 id="C406715F25EB9CF17970BE2A530A6F3BDE912B1F">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 1613 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="FF994AEFCDCA60E8D6A27338BAA675C79603CB9C">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 1614 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C1868C42AF1356479E88C0BE83FA8471079B6815">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F29B0A89700D04FF72AC948D4A77A8D20AD0EDA9">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9236656D857CCB59BEB9C4FA73691D0EC222D12">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3767E230019D394F98D7D4AE44A77FD0CC85BCD0">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#485A5DE6E9704C0A53C3CD7233926EEE4F2785C9">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03D1E264D323AFCF6F21B8D6462CC9C0D796488A">getDefaultArgStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01A180F7CDBC9A0024E8F8110455A0ED58FAF5F5">hasDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7499154DB1A2BEB06EFD17F2AD7E49A81AE138B6">getDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EAA1DB4EF1D63FA77177F0B768F04954234B0959">getDefaultArgumentLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6A7B0D65334DCF6A1F84C5121534E9F7704ED98">defaultArgumentWasInherited</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C137ADE15F19C1020DC2CE3F342D268F0FABE961">setDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1124102200790A1DA0082C23EED9862F5A6B4C0">setInheritedDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B30FE3A5B082DCC2095BF04D8A6453D642BA830F">removeDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21DF9E1BD9E8941EBFAA8AAE36698434C9D5B926">isParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA572138CF8AA59916209159F00B1DAAE1A3C654">isPackExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2BDFEA96A1E0EDB6F18788FDDBDD3337F339A22">isExpandedParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E4823858483BA36938A701A9AB2C284A2A6B476E">getNumExpansionTypes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#72714DBA4070694064319B00306AB7E9C2A2D97C">getExpansionType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3BEA937C3C44692E41B6ABFE15CE3818447A41E5">getExpansionTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F339802CFC686DD32604BB69C81796089EF3E156">getPlaceholderTypeConstraint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF10CA6403367845095ABF2DA61FE2AFB4F8B5B6">setPlaceholderTypeConstraint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D410F6239DC35EB87041779EA700B3D8E1FC8884">hasPlaceholderTypeConstraint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90D429A92E35973253233959379D22239BA3362B">getAssociatedConstraints</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C406715F25EB9CF17970BE2A530A6F3BDE912B1F">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF994AEFCDCA60E8D6A27338BAA675C79603CB9C">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

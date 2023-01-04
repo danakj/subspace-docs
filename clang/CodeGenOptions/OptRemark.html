@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct OptRemark</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/CodeGenOptions" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct OptRemark</h1>
+    <p>Defined at line 314 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+    <div>
+      <div>
+        <p> Optimization remark with an optional regular expression pattern.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        public 
+        <a href="RemarkKind.html">RemarkKind</a>
+         Kind
+      </li>
+      <li>
+        public 
+        <a href="../../std/__cxx11/basic_string.html">basic_string</a>
+         Pattern
+      </li>
+      <li>
+        public 
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         Regex
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="59188C25CD183B5FA93B98510D741D9850035253">OptRemark</h3>
+      <p>public void OptRemark()</p>
+      <p>Defined at line 320 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> By default, optimization remark is missing.</p>
+        </div>
+      </div>
+      <h3 id="28BDD4FB23D1AB230155DEA4D4A78BC3A0E30FD2">hasValidPattern</h3>
+      <p>public _Bool hasValidPattern()</p>
+      <p>Defined at line 324 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Returns true iff the optimization remark holds a valid regular expression.</p>
+        </div>
+      </div>
+      <h3 id="9E0F3C880A09F4E0A1B106F7E284D9ABCB5C686A">patternMatches</h3>
+      <p>
+        public _Bool patternMatches(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         String)
+      </p>
+      <p>Defined at line 327 of file /usr/lib/llvm-16/include/clang/Basic/CodeGenOptions.h</p>
+      <div>
+        <div>
+          <p> Matches the given string against the regex, if there is some.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#59188C25CD183B5FA93B98510D741D9850035253">OptRemark</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28BDD4FB23D1AB230155DEA4D4A78BC3A0E30FD2">hasValidPattern</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9E0F3C880A09F4E0A1B106F7E284D9ABCB5C686A">patternMatches</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

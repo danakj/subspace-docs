@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class HeaderSearch</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class HeaderSearch</h1>
+    <p>Defined at line 223 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+    <div>
+      <div>
+        <p> Encapsulates the information needed to find the file referenced by a #include or #include_next, (sub-)framework lookup, etc.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D8166B9784AE5C15328E9F2B1AA811519DC5D61B">HeaderSearch</h3>
+      <p>
+        public void HeaderSearch(
+        <a href="../std/shared_ptr.html">shared_ptr</a>
+         HSOpts, SourceManager &amp; SourceMgr, DiagnosticsEngine &amp; Diags, const LangOptions &amp; LangOpts, const TargetInfo * Target)
+      </p>
+      <h3 id="13D038925BB809FBA86C17A50D73C09C385E7F93">HeaderSearch</h3>
+      <p>public void HeaderSearch(const HeaderSearch &amp; )</p>
+      <p>Defined at line 349 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="239878B60202B202BF8A60B83E52119B92BF7878">operator=</h3>
+      <p>public HeaderSearch &amp; operator=(const HeaderSearch &amp; )</p>
+      <p>Defined at line 350 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="61206C39926D0F25004573D20B3DA6CB33CE6F5E">getHeaderSearchOpts</h3>
+      <p>public HeaderSearchOptions &amp; getHeaderSearchOpts()</p>
+      <p>Defined at line 354 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Retrieve the header-search options with which this header search was initialized.</p>
+        </div>
+      </div>
+      <h3 id="47949BE56E476475523198A55DF3A06A687F5F4D">getFileMgr</h3>
+      <p>public FileManager &amp; getFileMgr()</p>
+      <p>Defined at line 356 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="37AC70D708195E29143BDFE614DB6E7F47318B34">getDiags</h3>
+      <p>public DiagnosticsEngine &amp; getDiags()</p>
+      <p>Defined at line 358 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="7A8FD5C7F03950E036824E542B56E49E6EAE0969">SetSearchPaths</h3>
+      <p>
+        public void SetSearchPaths(
+        <a href="../std/vector.html">vector</a>
+         dirs, unsigned int angledDirIdx, unsigned int systemDirIdx, _Bool noCurDirSearch, 
+        <a href="../llvm/DenseMap.html">DenseMap</a>
+         searchDirToHSEntry)
+      </p>
+      <div>
+        <div>
+          <p> Interface for setting the file search paths.</p>
+        </div>
+      </div>
+      <h3 id="C5B24353C327A65831D9361D683ECE9B8D377587">AddSearchPath</h3>
+      <p>public void AddSearchPath(const DirectoryLookup &amp; dir, _Bool isAngled)</p>
+      <div>
+        <div>
+          <p> Add an additional search path.</p>
+        </div>
+      </div>
+      <h3 id="5AC054F8949FCA1D8AA0AD8FBECB27A2D76AD5A2">AddSystemSearchPath</h3>
+      <p>public void AddSystemSearchPath(const DirectoryLookup &amp; dir)</p>
+      <p>Defined at line 369 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Add an additional system search path.</p>
+        </div>
+      </div>
+      <h3 id="70E645C54E4E6A629C3CF97D4C55CFC10F746FEA">SetSystemHeaderPrefixes</h3>
+      <p>
+        public void SetSystemHeaderPrefixes(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         P)
+      </p>
+      <p>Defined at line 375 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Set the list of system header prefixes.</p>
+        </div>
+      </div>
+      <h3 id="5FBCEAC6EFFD459DFAA9506AA5B40708AF96E014">HasIncludeAliasMap</h3>
+      <p>public _Bool HasIncludeAliasMap()</p>
+      <p>Defined at line 380 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Checks whether the map exists or not.</p>
+        </div>
+      </div>
+      <h3 id="63A47B7A16B048C464D61582F00AE3F9644F26FB">AddIncludeAlias</h3>
+      <p>
+        public void AddIncludeAlias(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Source, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Dest)
+      </p>
+      <p>Defined at line 386 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Map the source include name to the dest include name.</p>
+          <p> The Source should include the angle brackets or quotes, the dest should not.  This allows for distinction between &lt;&gt; and &quot;&quot; headers.</p>
+        </div>
+      </div>
+      <h3 id="95A3171F4F7368226D90E481FF51E5A8A330739D">MapHeaderToIncludeAlias</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         MapHeaderToIncludeAlias(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Source)
+      </p>
+      <p>Defined at line 396 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Maps one header file name to a different header file name, for use with the include_alias pragma.  Note that the source file name should include the angle brackets or quotes.  Returns StringRef as null if the header cannot be mapped.</p>
+        </div>
+      </div>
+      <h3 id="4CDAB005329D72E6151623CCA0B31548E6E4D401">setModuleHash</h3>
+      <p>
+        public void setModuleHash(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Hash)
+      </p>
+      <p>Defined at line 407 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Set the hash to use for module cache paths.</p>
+        </div>
+      </div>
+      <h3 id="CED66371FEC17AAC0021ABEA95A06B7645B70645">setModuleCachePath</h3>
+      <p>
+        public void setModuleCachePath(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         CachePath)
+      </p>
+      <p>Defined at line 410 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Set the path to the module cache.</p>
+        </div>
+      </div>
+      <h3 id="CA6466DD73B7CE0FE5C30509A5602E3B32A9AB14">getModuleHash</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getModuleHash()
+      </p>
+      <p>Defined at line 415 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Retrieve the module hash.</p>
+        </div>
+      </div>
+      <h3 id="279807BD9E6052DEEF9A59243181B6E2568E1527">getModuleCachePath</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getModuleCachePath()
+      </p>
+      <p>Defined at line 418 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Retrieve the path to the module cache.</p>
+        </div>
+      </div>
+      <h3 id="3EEF9E75F29E0AE04B7120C748DB197B9A4AEDD9">setDirectoryHasModuleMap</h3>
+      <p>public void setDirectoryHasModuleMap(const DirectoryEntry * Dir)</p>
+      <p>Defined at line 421 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Consider modules when including files from this directory.</p>
+        </div>
+      </div>
+      <h3 id="AFCD857182BC759DD8F0E791150B83825CAC2B64">ClearFileInfo</h3>
+      <p>public void ClearFileInfo()</p>
+      <p>Defined at line 426 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Forget everything we know about headers so far.</p>
+        </div>
+      </div>
+      <h3 id="16E0F6CB6433E8FBE53B01E2D57E9A072A231A35">SetExternalLookup</h3>
+      <p>public void SetExternalLookup(ExternalPreprocessorSource * EPS)</p>
+      <p>Defined at line 430 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="C8A46D5709681E40967F44F2DEB94762CE079048">getExternalLookup</h3>
+      <p>public ExternalPreprocessorSource * getExternalLookup()</p>
+      <p>Defined at line 434 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="4A8EA8581DED7F6BF3A53758B1EB09ADE9994A35">SetExternalSource</h3>
+      <p>public void SetExternalSource(ExternalHeaderFileInfoSource * ES)</p>
+      <p>Defined at line 439 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Set the external source of header information.</p>
+        </div>
+      </div>
+      <h3 id="486A76B83439197791D1EB24D9DFA05241FA42BB">setTarget</h3>
+      <p>public void setTarget(const TargetInfo &amp; Target)</p>
+      <div>
+        <div>
+          <p> Set the target information for the header search, if not already known.</p>
+        </div>
+      </div>
+      <h3 id="18F9851FAA17D53DD0F90E4DCBC0A27CA14DDB47">LookupFile</h3>
+      <p>
+        public 
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         LookupFile(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Filename, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IncludeLoc, _Bool isAngled, 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         FromDir, ConstSearchDirIterator * CurDir, ArrayRef&lt;std::pair&lt;const FileEntry *, const DirectoryEntry *&gt; &gt; Includers, SmallVectorImpl&lt;char&gt; * SearchPath, SmallVectorImpl&lt;char&gt; * RelativePath, Module * RequestingModule, class ModuleMap::KnownHeader * SuggestedModule, _Bool * IsMapped, _Bool * IsFrameworkFound, _Bool SkipCache, _Bool BuildSystemModule, _Bool OpenFile, _Bool CacheFailures)
+      </p>
+      <div>
+        <div>
+          <p> Given a &quot;foo&quot; or &lt;foo&gt; reference, look up the indicated file, return null on failure.</p>
+        </div>
+      </div>
+      <h3 id="DEE85E83B03BB8DD091B93E7972C626550824E72">LookupSubframeworkHeader</h3>
+      <p>
+        public 
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         LookupSubframeworkHeader(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Filename, const FileEntry * ContextFileEnt, SmallVectorImpl&lt;char&gt; * SearchPath, SmallVectorImpl&lt;char&gt; * RelativePath, Module * RequestingModule, class ModuleMap::KnownHeader * SuggestedModule)
+      </p>
+      <div>
+        <div>
+          <p> Look up a subframework for the specified #include file.</p>
+          <p> For example, if #include&apos;ing &lt;HIToolbox/HIToolbox.h&gt; from within &quot;.../Carbon.framework/Headers/Carbon.h&quot;, check to see if HIToolbox is a subframework within Carbon.framework.  If so, return the FileEntry for the designated file, otherwise return null.</p>
+        </div>
+      </div>
+      <h3 id="0CF2F24E3024F6F8F0DF7F94776D64EE246A2AB6">LookupFrameworkCache</h3>
+      <p>
+        public FrameworkCacheEntry &amp; LookupFrameworkCache(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         FWName)
+      </p>
+      <p>Defined at line 505 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Look up the specified framework name in our framework cache.</p>
+        </div>
+      </div>
+      <h3 id="5B3781EFB0F51FC727E3408F52C3784B257FD347">ShouldEnterIncludeFile</h3>
+      <p>public _Bool ShouldEnterIncludeFile(Preprocessor &amp; PP, const FileEntry * File, _Bool isImport, _Bool ModulesEnabled, Module * M, _Bool &amp; IsFirstIncludeOfFile)</p>
+      <div>
+        <div>
+          <p> Mark the specified file as a target of a #include,#include_next, or #import directive.</p>
+        </div>
+      </div>
+      <h3 id="A3BEDBE3B41A58E70DD80A9A1B5ADA263BBCE95A">getFileDirFlavor</h3>
+      <p>
+        public 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         getFileDirFlavor(const FileEntry * File)
+      </p>
+      <p>Defined at line 520 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Return whether the specified file is a normal header, a system header, or a C++ friendly system header.</p>
+        </div>
+      </div>
+      <h3 id="71D6441DD248B1107C02EE4441738D508D719929">MarkFileIncludeOnce</h3>
+      <p>public void MarkFileIncludeOnce(const FileEntry * File)</p>
+      <p>Defined at line 526 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Mark the specified file as a &quot;once only&quot; file due to#pragma once.</p>
+        </div>
+      </div>
+      <h3 id="DAF948972AC89FEC0354B67D3D5ED09EE759F0C6">MarkFileSystemHeader</h3>
+      <p>public void MarkFileSystemHeader(const FileEntry * File)</p>
+      <p>Defined at line 533 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Mark the specified file as a system header, e.g. due to#pragma GCC system_header.</p>
+        </div>
+      </div>
+      <h3 id="F0BE8CCF90DD08735CF638E560DBA011FA9B7BD3">MarkFileModuleHeader</h3>
+      <p>
+        public void MarkFileModuleHeader(const FileEntry * FE, 
+        <a href="../clang/ModuleMap/ModuleHeaderRole.html">ModuleHeaderRole</a>
+         Role, _Bool isCompilingModuleHeader)
+      </p>
+      <div>
+        <div>
+          <p> Mark the specified file as part of a module.</p>
+        </div>
+      </div>
+      <h3 id="7D708E36334113C3B825791C2E0427BBB40BD552">SetFileControllingMacro</h3>
+      <p>public void SetFileControllingMacro(const FileEntry * File, const IdentifierInfo * ControllingMacro)</p>
+      <p>Defined at line 546 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Mark the specified file as having a controlling macro.</p>
+          <p> This is used by the multiple-include optimization to eliminate no-op #includes.</p>
+        </div>
+      </div>
+      <h3 id="E6B16DEC0DD9A69D82A8F01B8247A4F0E5F5C170">isFileMultipleIncludeGuarded</h3>
+      <p>public _Bool isFileMultipleIncludeGuarded(const FileEntry * File)</p>
+      <div>
+        <div>
+          <p> Determine whether this file is intended to be safe from multiple inclusions, e.g., it has #pragma once or a controlling macro.</p>
+          <p> This routine does not consider the effect of #import</p>
+        </div>
+      </div>
+      <h3 id="C3A2990AAF6367DBBBA9337690440A0AC138C41E">hasFileBeenImported</h3>
+      <p>public _Bool hasFileBeenImported(const FileEntry * File)</p>
+      <p>Defined at line 559 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Determine whether the given file is known to have ever been #imported.</p>
+        </div>
+      </div>
+      <h3 id="880C3546BF05E5CB9AE1B68D31610E3C756B6E42">computeUserEntryUsage</h3>
+      <p>
+        public 
+        <a href="../std/vector.html">vector</a>
+         computeUserEntryUsage()
+      </p>
+      <div>
+        <div>
+          <p> Determine which HeaderSearchOptions::UserEntries have been successfully used so far and mark their index with &apos;true&apos; in the resulting bit vector. Note: implicit module maps don&apos;t contribute to entry usage.</p>
+        </div>
+      </div>
+      <h3 id="5629221855E15103D8F5C5619C5256264190983A">CreateHeaderMap</h3>
+      <p>public const HeaderMap * CreateHeaderMap(const FileEntry * FE)</p>
+      <div>
+        <div>
+          <p> This method returns a HeaderMap for the specified FileEntry, uniquing them through the &apos;HeaderMaps&apos; datastructure.</p>
+        </div>
+      </div>
+      <h3 id="0B13D5DA17CF6D37B55D832B267A8108263A7B62">getHeaderMapFileNames</h3>
+      <p>public void getHeaderMapFileNames(SmallVectorImpl&lt;std::string&gt; &amp; Names)</p>
+      <div>
+        <div>
+          <p> Get filenames for all registered header maps.</p>
+        </div>
+      </div>
+      <h3 id="897E9A6D1F38EB9B3BB54693062BF32CD2DAE2E9">getCachedModuleFileName</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getCachedModuleFileName(Module * Module)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the name of the cached module file that should be used to load the given module.</p>
+        </div>
+      </div>
+      <h3 id="D51457B64C7DA00053044CF662AB9896DD5798A8">getPrebuiltModuleFileName</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getPrebuiltModuleFileName(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ModuleName, _Bool FileMapOnly)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the name of the prebuilt module file that should be used to load a module with the given name.</p>
+        </div>
+      </div>
+      <h3 id="504730C24BC50CE9CCEFD1F8858586013B3D67EE">getPrebuiltImplicitModuleFileName</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getPrebuiltImplicitModuleFileName(Module * Module)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the name of the prebuilt module file that should be used to load the given module.</p>
+        </div>
+      </div>
+      <h3 id="890EB85B06DEB4942AAACB93FD0E2DF0E9FA1F9C">getCachedModuleFileName</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getCachedModuleFileName(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ModuleName, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ModuleMapPath)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the name of the (to-be-)cached module file that should be used to load a module with the given name.</p>
+        </div>
+      </div>
+      <h3 id="714C0FF1F762B80BED99CB43C6B09DE770DA7A0E">lookupModule</h3>
+      <p>
+        public Module * lookupModule(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ModuleName, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ImportLoc, _Bool AllowSearch, _Bool AllowExtraModuleMapSearch)
+      </p>
+      <div>
+        <div>
+          <p> Lookup a module Search for a module with the given name.</p>
+        </div>
+      </div>
+      <h3 id="7A0521A46EA749A057FAC63F5AE93E6BEED4FF3F">lookupModuleMapFile</h3>
+      <p>public const FileEntry * lookupModuleMapFile(const DirectoryEntry * Dir, _Bool IsFramework)</p>
+      <div>
+        <div>
+          <p> Try to find a module map file in the given directory, returning if none is found.</p>
+        </div>
+      </div>
+      <h3 id="A9752E51A0C4AFC4429161B3279DDFAAF3773304">hasModuleMap</h3>
+      <p>
+        public _Bool hasModuleMap(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Filename, const DirectoryEntry * Root, _Bool IsSystem)
+      </p>
+      <div>
+        <div>
+          <p> Determine whether there is a module map that may map the header with the given file name to a (sub)module. Always returns false if modules are disabled.</p>
+        </div>
+      </div>
+      <h3 id="38DED2A50EDEDFD8E4CDBAA960358D0FCA075927">findModuleForHeader</h3>
+      <p>
+        public 
+        <a href="../clang/ModuleMap/KnownHeader.html">KnownHeader</a>
+         findModuleForHeader(const FileEntry * File, _Bool AllowTextual, _Bool AllowExcluded)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the module that corresponds to the given file, if any.</p>
+        </div>
+      </div>
+      <h3 id="5442EBBF84B89B6267B3D4CE9076F9EB830CFEAC">findAllModulesForHeader</h3>
+      <p>public ArrayRef&lt;ModuleMap::KnownHeader&gt; findAllModulesForHeader(const FileEntry * File)</p>
+      <div>
+        <div>
+          <p> Retrieve all the modules corresponding to the given file.</p>
+          <p> should typically be used instead of this.</p>
+        </div>
+      </div>
+      <h3 id="B96FBE4631A6F3A5A61A7F04DE8B4335F227ED77">loadModuleMapFile</h3>
+      <p>
+        public _Bool loadModuleMapFile(const FileEntry * File, _Bool IsSystem, 
+        <a href="FileID.html">FileID</a>
+         ID, unsigned int * Offset, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         OriginalModuleMapFile)
+      </p>
+      <div>
+        <div>
+          <p> Read the contents of the given module map file.</p>
+        </div>
+      </div>
+      <h3 id="4CFEEF57FD0EA46EF43884752BCDA47783536C52">collectAllModules</h3>
+      <p>public void collectAllModules(SmallVectorImpl&lt;Module *&gt; &amp; Modules)</p>
+      <div>
+        <div>
+          <p> Collect the set of all known, top-level modules.</p>
+        </div>
+      </div>
+      <h3 id="5AD15B4480759F8184A2ACC086C345EFFD91A9F8">loadTopLevelSystemModules</h3>
+      <p>public void loadTopLevelSystemModules()</p>
+      <div>
+        <div>
+          <p> Load all known, top-level system modules.</p>
+        </div>
+      </div>
+      <h3 id="794BD89BE1BF13EFF806142886FF4F5185347667">getModuleMap</h3>
+      <p>public ModuleMap &amp; getModuleMap()</p>
+      <p>Defined at line 791 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Retrieve the module map.</p>
+        </div>
+      </div>
+      <h3 id="CBA7B8D24CC178589B2E15331F7F0E9FB944B8E3">getModuleMap</h3>
+      <p>public const ModuleMap &amp; getModuleMap()</p>
+      <p>Defined at line 794 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <div>
+        <div>
+          <p> Retrieve the module map.</p>
+        </div>
+      </div>
+      <h3 id="2AAAD877FC969389A0BAEDF84851D77E6169AB6F">header_file_size</h3>
+      <p>public unsigned int header_file_size()</p>
+      <p>Defined at line 796 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="28C2A4CA748C2A6F7F1EEBC10D737E093F60977A">getFileInfo</h3>
+      <p>public HeaderFileInfo &amp; getFileInfo(const FileEntry * FE)</p>
+      <div>
+        <div>
+          <p> Return the HeaderFileInfo structure for the specified FileEntry, in preparation for updating it in some way.</p>
+        </div>
+      </div>
+      <h3 id="853BA7CA6E576C01B9F711CAE4CD94091E71389A">getExistingFileInfo</h3>
+      <p>public const HeaderFileInfo * getExistingFileInfo(const FileEntry * FE, _Bool WantExternal)</p>
+      <div>
+        <div>
+          <p> Return the HeaderFileInfo structure for the specified FileEntry, if it has ever been filled in.</p>
+        </div>
+      </div>
+      <h3 id="B9B51B12808374305403502079C035DA55A1F6C7">search_dir_begin</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         search_dir_begin()
+      </p>
+      <p>Defined at line 809 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="9B11E7DDDC2F632468DC144497B57A504D469A40">search_dir_end</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         search_dir_end()
+      </p>
+      <p>Defined at line 810 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="CDA689967685D6299D2F4775CF2B95842471C7DC">search_dir_range</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         search_dir_range()
+      </p>
+      <p>Defined at line 811 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="6613B5DDCE5C530C1994FAE67D433928EAFCA1D9">search_dir_begin</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         search_dir_begin()
+      </p>
+      <p>Defined at line 815 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="6D9BDE631DCB6A0A3457C9391A134DE2C7518BC0">search_dir_nth</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         search_dir_nth(size_t n)
+      </p>
+      <p>Defined at line 816 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="8C61CC36FFE9DBD028F9D970322062B51570D8C8">search_dir_end</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         search_dir_end()
+      </p>
+      <p>Defined at line 820 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="DF0F094839E88D3855EF04B998D690E22B9A3F72">search_dir_range</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         search_dir_range()
+      </p>
+      <p>Defined at line 821 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="C201C250193897109B23F7290BD4B5514D427B3D">search_dir_size</h3>
+      <p>public unsigned int search_dir_size()</p>
+      <p>Defined at line 825 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="764C41B3DF4C1548C52746AB0B76783BBF78522D">quoted_dir_begin</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         quoted_dir_begin()
+      </p>
+      <p>Defined at line 827 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="95CAD390E0CF08BF5A8DACF75769D5AA0404A31A">quoted_dir_end</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         quoted_dir_end()
+      </p>
+      <p>Defined at line 828 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="2AA375616B258A38D7381CC5F477710DA841E3D1">angled_dir_begin</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         angled_dir_begin()
+      </p>
+      <p>Defined at line 830 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="B1FBC090B97CAD9521988BB297BC6ED741E8DAE3">angled_dir_end</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         angled_dir_end()
+      </p>
+      <p>Defined at line 833 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="28F7DAB2A7487437AB01BD0C0CDADD09719C2445">system_dir_begin</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         system_dir_begin()
+      </p>
+      <p>Defined at line 835 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="5095321D371B13DD0EAFAADCBF28FFDA8887D50E">system_dir_end</h3>
+      <p>
+        public 
+        <a href="../clang/detail/SearchDirIteratorImpl.html">SearchDirIteratorImpl</a>
+         system_dir_end()
+      </p>
+      <p>Defined at line 838 of file /usr/lib/llvm-16/include/clang/Lex/HeaderSearch.h</p>
+      <h3 id="0B03504CF05446B3B1B9434BAEC1813102AE8D7E">searchDirIdx</h3>
+      <p>public unsigned int searchDirIdx(const DirectoryLookup &amp; DL)</p>
+      <div>
+        <div>
+          <p> Get the index of the given search directory.</p>
+        </div>
+      </div>
+      <h3 id="379E09D862B0D3329BD9FB9191E8AD0024111075">getUniqueFrameworkName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getUniqueFrameworkName(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Framework)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve a uniqued framework name.</p>
+        </div>
+      </div>
+      <h3 id="4E78F9B5A3589C6BFCD63A40B4368CBC53E3061F">getIncludeNameForHeader</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getIncludeNameForHeader(const FileEntry * File)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the include name for the header.</p>
+        </div>
+      </div>
+      <h3 id="E6DC5EA1ECA5DFB787030E505E7E113B578D1430">suggestPathToFileForDiagnostics</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         suggestPathToFileForDiagnostics(const FileEntry * File, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         MainFile, _Bool * IsSystem)
+      </p>
+      <div>
+        <div>
+          <p> Suggest a path by which the specified file could be found, for use in diagnostics to suggest a #include. Returned path will only contain forward slashes as separators. MainFile is the absolute path of the file that we are generating the diagnostics for. It will try to shorten the path using MainFile location, if none of the include search directories were prefix of File.</p>
+        </div>
+      </div>
+      <h3 id="C8D4A3631DEC379E2F5A74BAE903396BB153143C">suggestPathToFileForDiagnostics</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         suggestPathToFileForDiagnostics(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         File, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         WorkingDir, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         MainFile, _Bool * IsSystem)
+      </p>
+      <div>
+        <div>
+          <p> Suggest a path by which the specified file could be found, for use in diagnostics to suggest a #include. Returned path will only contain forward slashes as separators. MainFile is the absolute path of the file that we are generating the diagnostics for. It will try to shorten the path using MainFile location, if none of the include search directories were prefix of File.</p>
+        </div>
+      </div>
+      <h3 id="2E4BD67E528C8DA750B4A0ADF481B095BC49F2C9">PrintStats</h3>
+      <p>public void PrintStats()</p>
+      <h3 id="69D0AD944AEC6643C12792EBD76E7D77FD556C53">getTotalMemory</h3>
+      <p>public size_t getTotalMemory()</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D8166B9784AE5C15328E9F2B1AA811519DC5D61B">HeaderSearch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13D038925BB809FBA86C17A50D73C09C385E7F93">HeaderSearch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#239878B60202B202BF8A60B83E52119B92BF7878">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61206C39926D0F25004573D20B3DA6CB33CE6F5E">getHeaderSearchOpts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47949BE56E476475523198A55DF3A06A687F5F4D">getFileMgr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37AC70D708195E29143BDFE614DB6E7F47318B34">getDiags</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A8FD5C7F03950E036824E542B56E49E6EAE0969">SetSearchPaths</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5B24353C327A65831D9361D683ECE9B8D377587">AddSearchPath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AC054F8949FCA1D8AA0AD8FBECB27A2D76AD5A2">AddSystemSearchPath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70E645C54E4E6A629C3CF97D4C55CFC10F746FEA">SetSystemHeaderPrefixes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FBCEAC6EFFD459DFAA9506AA5B40708AF96E014">HasIncludeAliasMap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63A47B7A16B048C464D61582F00AE3F9644F26FB">AddIncludeAlias</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95A3171F4F7368226D90E481FF51E5A8A330739D">MapHeaderToIncludeAlias</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CDAB005329D72E6151623CCA0B31548E6E4D401">setModuleHash</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CED66371FEC17AAC0021ABEA95A06B7645B70645">setModuleCachePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA6466DD73B7CE0FE5C30509A5602E3B32A9AB14">getModuleHash</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#279807BD9E6052DEEF9A59243181B6E2568E1527">getModuleCachePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EEF9E75F29E0AE04B7120C748DB197B9A4AEDD9">setDirectoryHasModuleMap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFCD857182BC759DD8F0E791150B83825CAC2B64">ClearFileInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16E0F6CB6433E8FBE53B01E2D57E9A072A231A35">SetExternalLookup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C8A46D5709681E40967F44F2DEB94762CE079048">getExternalLookup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A8EA8581DED7F6BF3A53758B1EB09ADE9994A35">SetExternalSource</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#486A76B83439197791D1EB24D9DFA05241FA42BB">setTarget</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#18F9851FAA17D53DD0F90E4DCBC0A27CA14DDB47">LookupFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEE85E83B03BB8DD091B93E7972C626550824E72">LookupSubframeworkHeader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0CF2F24E3024F6F8F0DF7F94776D64EE246A2AB6">LookupFrameworkCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B3781EFB0F51FC727E3408F52C3784B257FD347">ShouldEnterIncludeFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3BEDBE3B41A58E70DD80A9A1B5ADA263BBCE95A">getFileDirFlavor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71D6441DD248B1107C02EE4441738D508D719929">MarkFileIncludeOnce</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAF948972AC89FEC0354B67D3D5ED09EE759F0C6">MarkFileSystemHeader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F0BE8CCF90DD08735CF638E560DBA011FA9B7BD3">MarkFileModuleHeader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D708E36334113C3B825791C2E0427BBB40BD552">SetFileControllingMacro</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6B16DEC0DD9A69D82A8F01B8247A4F0E5F5C170">isFileMultipleIncludeGuarded</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3A2990AAF6367DBBBA9337690440A0AC138C41E">hasFileBeenImported</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#880C3546BF05E5CB9AE1B68D31610E3C756B6E42">computeUserEntryUsage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5629221855E15103D8F5C5619C5256264190983A">CreateHeaderMap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B13D5DA17CF6D37B55D832B267A8108263A7B62">getHeaderMapFileNames</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#897E9A6D1F38EB9B3BB54693062BF32CD2DAE2E9">getCachedModuleFileName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D51457B64C7DA00053044CF662AB9896DD5798A8">getPrebuiltModuleFileName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#504730C24BC50CE9CCEFD1F8858586013B3D67EE">getPrebuiltImplicitModuleFileName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#890EB85B06DEB4942AAACB93FD0E2DF0E9FA1F9C">getCachedModuleFileName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#714C0FF1F762B80BED99CB43C6B09DE770DA7A0E">lookupModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A0521A46EA749A057FAC63F5AE93E6BEED4FF3F">lookupModuleMapFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9752E51A0C4AFC4429161B3279DDFAAF3773304">hasModuleMap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38DED2A50EDEDFD8E4CDBAA960358D0FCA075927">findModuleForHeader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5442EBBF84B89B6267B3D4CE9076F9EB830CFEAC">findAllModulesForHeader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B96FBE4631A6F3A5A61A7F04DE8B4335F227ED77">loadModuleMapFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CFEEF57FD0EA46EF43884752BCDA47783536C52">collectAllModules</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AD15B4480759F8184A2ACC086C345EFFD91A9F8">loadTopLevelSystemModules</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#794BD89BE1BF13EFF806142886FF4F5185347667">getModuleMap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CBA7B8D24CC178589B2E15331F7F0E9FB944B8E3">getModuleMap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2AAAD877FC969389A0BAEDF84851D77E6169AB6F">header_file_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28C2A4CA748C2A6F7F1EEBC10D737E093F60977A">getFileInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#853BA7CA6E576C01B9F711CAE4CD94091E71389A">getExistingFileInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9B51B12808374305403502079C035DA55A1F6C7">search_dir_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B11E7DDDC2F632468DC144497B57A504D469A40">search_dir_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDA689967685D6299D2F4775CF2B95842471C7DC">search_dir_range</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6613B5DDCE5C530C1994FAE67D433928EAFCA1D9">search_dir_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D9BDE631DCB6A0A3457C9391A134DE2C7518BC0">search_dir_nth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8C61CC36FFE9DBD028F9D970322062B51570D8C8">search_dir_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF0F094839E88D3855EF04B998D690E22B9A3F72">search_dir_range</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C201C250193897109B23F7290BD4B5514D427B3D">search_dir_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#764C41B3DF4C1548C52746AB0B76783BBF78522D">quoted_dir_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95CAD390E0CF08BF5A8DACF75769D5AA0404A31A">quoted_dir_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2AA375616B258A38D7381CC5F477710DA841E3D1">angled_dir_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B1FBC090B97CAD9521988BB297BC6ED741E8DAE3">angled_dir_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28F7DAB2A7487437AB01BD0C0CDADD09719C2445">system_dir_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5095321D371B13DD0EAFAADCBF28FFDA8887D50E">system_dir_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B03504CF05446B3B1B9434BAEC1813102AE8D7E">searchDirIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#379E09D862B0D3329BD9FB9191E8AD0024111075">getUniqueFrameworkName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E78F9B5A3589C6BFCD63A40B4368CBC53E3061F">getIncludeNameForHeader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6DC5EA1ECA5DFB787030E505E7E113B578D1430">suggestPathToFileForDiagnostics</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C8D4A3631DEC379E2F5A74BAE903396BB153143C">suggestPathToFileForDiagnostics</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E4BD67E528C8DA750B4A0ADF481B095BC49F2C9">PrintStats</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69D0AD944AEC6643C12792EBD76E7D77FD556C53">getTotalMemory</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

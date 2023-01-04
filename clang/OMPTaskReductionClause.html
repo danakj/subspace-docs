@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPTaskReductionClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPTaskReductionClause</h1>
+    <p>Defined at line 3417 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents clause &apos;task_reduction&apos; in the &apos;#pragma omp taskgroup&apos; directives.</p>
+        <p> In this example directive &apos;#pragma omp taskgroup&apos; has clause &apos;task_reduction&apos; with operator &apos;+&apos; and the variables &apos;a&apos; and &apos;b&apos;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from OMPVarListClause&lt;OMPTaskReductionClause&gt;, 
+      <a href="OMPClauseWithPostUpdate.html">OMPClauseWithPostUpdate</a>
+      , llvm::TrailingObjects&lt;OMPTaskReductionClause, Expr *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7B6DF465E391CC5CD717FE0B3A438091C20A10AE">Create</h3>
+      <p>
+        public OMPTaskReductionClause * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ColonLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         VL, 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         QualifierLoc, const DeclarationNameInfo &amp; NameInfo, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Privates, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         LHSExprs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         RHSExprs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         ReductionOps, Stmt * PreInit, Expr * PostUpdate)
+      </p>
+      <div>
+        <div>
+          <p> Creates clause with a list of variables </p>
+          <p> Required for proper codegen of final reduction operation performed by the reduction clause.</p>
+        </div>
+      </div>
+      <h3 id="884E8C3D53F48CB41D292917592B973B07CFB702">CreateEmpty</h3>
+      <p>public OMPTaskReductionClause * CreateEmpty(const ASTContext &amp; C, unsigned int N)</p>
+      <div>
+        <div>
+          <p> Creates an empty clause with the place for  variables.</p>
+        </div>
+      </div>
+      <h3 id="522B8E6A54D33DDFDDCD5FB2D880A099334CBF60">getColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getColonLoc()
+      </p>
+      <p>Defined at line 3571 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Gets location of &apos;:&apos; symbol in clause.</p>
+        </div>
+      </div>
+      <h3 id="383081B3F87847B95924659594B77EAE8E7B00CA">getNameInfo</h3>
+      <p>public const DeclarationNameInfo &amp; getNameInfo()</p>
+      <p>Defined at line 3574 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Gets the name info for specified reduction identifier.</p>
+        </div>
+      </div>
+      <h3 id="98AF74958569A5BA922EE0BCDF4B9AD4E0D4E370">getQualifierLoc</h3>
+      <p>
+        public 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         getQualifierLoc()
+      </p>
+      <p>Defined at line 3577 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Gets the nested name specifier.</p>
+        </div>
+      </div>
+      <h3 id="C02B678D4C9F5D189E12BDDA947197E433B36FC8">privates</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         privates()
+      </p>
+      <p>Defined at line 3585 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="4BBAF263894051A7FC11253D7844AE9894904D5C">privates</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         privates()
+      </p>
+      <p>Defined at line 3589 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="BDD68D2BAB806F5F5354AAFD2CD1140F28158470">lhs_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         lhs_exprs()
+      </p>
+      <p>Defined at line 3593 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="593A1C3EA367094BD466E185FE20E264F55BBB25">lhs_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         lhs_exprs()
+      </p>
+      <p>Defined at line 3597 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="0B2DFFFC5BF73AB6D1A0A4DC233AE6C9CFABB07A">rhs_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         rhs_exprs()
+      </p>
+      <p>Defined at line 3601 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="8BD803D60DFA845BCA14DA417069C3E5AEA54184">rhs_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         rhs_exprs()
+      </p>
+      <p>Defined at line 3605 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="9C8D0FC7437CBB8CB530665B8F769F53DF9125D6">reduction_ops</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         reduction_ops()
+      </p>
+      <p>Defined at line 3609 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="B08FF3B8AD08A43DA437B24B7BBBBA55482A0900">reduction_ops</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         reduction_ops()
+      </p>
+      <p>Defined at line 3614 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="77AB0608BA0E780506DE3BA13A0454AEA59582B8">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3619 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="47B281937B13B573D647143CBBD8AFC23EB66859">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3624 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="75133C707502C23EEFDEEED3DF3F9C0C529D105A">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 3629 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="1938A8D9C2C757031B36B04C348689E0C99E57C8">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 3632 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="0CE9FD38785C927F817AAA0D2BCB64ABB69404A3">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 3636 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7B6DF465E391CC5CD717FE0B3A438091C20A10AE">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#884E8C3D53F48CB41D292917592B973B07CFB702">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#522B8E6A54D33DDFDDCD5FB2D880A099334CBF60">getColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#383081B3F87847B95924659594B77EAE8E7B00CA">getNameInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98AF74958569A5BA922EE0BCDF4B9AD4E0D4E370">getQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C02B678D4C9F5D189E12BDDA947197E433B36FC8">privates</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4BBAF263894051A7FC11253D7844AE9894904D5C">privates</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDD68D2BAB806F5F5354AAFD2CD1140F28158470">lhs_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#593A1C3EA367094BD466E185FE20E264F55BBB25">lhs_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B2DFFFC5BF73AB6D1A0A4DC233AE6C9CFABB07A">rhs_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8BD803D60DFA845BCA14DA417069C3E5AEA54184">rhs_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C8D0FC7437CBB8CB530665B8F769F53DF9125D6">reduction_ops</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B08FF3B8AD08A43DA437B24B7BBBBA55482A0900">reduction_ops</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77AB0608BA0E780506DE3BA13A0454AEA59582B8">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47B281937B13B573D647143CBBD8AFC23EB66859">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75133C707502C23EEFDEEED3DF3F9C0C529D105A">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1938A8D9C2C757031B36B04C348689E0C99E57C8">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0CE9FD38785C927F817AAA0D2BCB64ABB69404A3">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

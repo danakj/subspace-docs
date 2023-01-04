@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ModuleLoader</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ModuleLoader</h1>
+    <p>Defined at line 82 of file /usr/lib/llvm-16/include/clang/Lex/ModuleLoader.h</p>
+    <div>
+      <div>
+        <p> Abstract interface for a module loader.</p>
+        <p> This abstract interface describes a module loader, which is responsible for resolving a module name (e.g., &quot;std&quot;) to an actual module file, and then loading that module.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public _Bool HadFatalFailure</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3B9F0FBF8B3773437DA32BBC13B8CDB173A97BDB">ModuleLoader</h3>
+      <p>public void ModuleLoader(_Bool BuildingModule)</p>
+      <p>Defined at line 87 of file /usr/lib/llvm-16/include/clang/Lex/ModuleLoader.h</p>
+      <h3 id="87DC6CDF2B94F1AFCF0BDDAB3434C06B4444F303">~ModuleLoader</h3>
+      <p>public void ~ModuleLoader()</p>
+      <h3 id="428BC465105B6851C82A6B3B93E85961DF4AA011">buildingModule</h3>
+      <p>public _Bool buildingModule()</p>
+      <p>Defined at line 93 of file /usr/lib/llvm-16/include/clang/Lex/ModuleLoader.h</p>
+      <div>
+        <div>
+          <p> Returns true if this instance is building a module.</p>
+        </div>
+      </div>
+      <h3 id="8787043B8CC2BA624611004179FEB0EA007C9E49">setBuildingModule</h3>
+      <p>public void setBuildingModule(_Bool BuildingModuleFlag)</p>
+      <p>Defined at line 98 of file /usr/lib/llvm-16/include/clang/Lex/ModuleLoader.h</p>
+      <div>
+        <div>
+          <p> Flag indicating whether this instance is building a module.</p>
+        </div>
+      </div>
+      <h3 id="BA7362E878231AF553289418C48DE74350BEE3FB">loadModule</h3>
+      <p>
+        public 
+        <a href="ModuleLoadResult.html">ModuleLoadResult</a>
+         loadModule(
+        <a href="SourceLocation.html">SourceLocation</a>
+         ImportLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Path, 
+        <a href="../clang/Module/NameVisibilityKind.html">NameVisibilityKind</a>
+         Visibility, _Bool IsInclusionDirective)
+      </p>
+      <div>
+        <div>
+          <p> Attempt to load the given module.</p>
+          <p> This routine attempts to load the module described by the given parameters.  If there is a module cache, this may implicitly compile the module before loading it.</p>
+        </div>
+      </div>
+      <h3 id="5731D138E569FAB9B0BBE1BD50ABFCB92553C927">createModuleFromSource</h3>
+      <p>
+        public void createModuleFromSource(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ModuleName, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Source)
+      </p>
+      <div>
+        <div>
+          <p> Attempt to create the given module from the specified source buffer. Does not load the module or make any submodule visible; for that, use loadModule and makeModuleVisible.</p>
+        </div>
+      </div>
+      <h3 id="59721057BCF85C9560729DB4FE7D4446814F7C54">makeModuleVisible</h3>
+      <p>
+        public void makeModuleVisible(Module * Mod, 
+        <a href="../clang/Module/NameVisibilityKind.html">NameVisibilityKind</a>
+         Visibility, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ImportLoc)
+      </p>
+      <div>
+        <div>
+          <p> Make the given module visible.</p>
+        </div>
+      </div>
+      <h3 id="82D0C5BB1CA41ECA7C39A4C7013885C1E71B8A04">loadGlobalModuleIndex</h3>
+      <p>
+        public GlobalModuleIndex * loadGlobalModuleIndex(
+        <a href="SourceLocation.html">SourceLocation</a>
+         TriggerLoc)
+      </p>
+      <div>
+        <div>
+          <p> Load, create, or return global module. This function returns an existing global module index, if one had already been loaded or created, or loads one if it exists, or creates one if it doesn&apos;t exist. Also, importantly, if the index doesn&apos;t cover all the modules in the module map, it will be update to do so here, because of its use in searching for needed module imports and associated fixit messages.</p>
+        </div>
+      </div>
+      <h3 id="C3C9544430A2070D74666877A17289FD2AC1B389">lookupMissingImports</h3>
+      <p>
+        public _Bool lookupMissingImports(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TriggerLoc)
+      </p>
+      <div>
+        <div>
+          <p> Check global module index for missing imports.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3B9F0FBF8B3773437DA32BBC13B8CDB173A97BDB">ModuleLoader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87DC6CDF2B94F1AFCF0BDDAB3434C06B4444F303">~ModuleLoader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#428BC465105B6851C82A6B3B93E85961DF4AA011">buildingModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8787043B8CC2BA624611004179FEB0EA007C9E49">setBuildingModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA7362E878231AF553289418C48DE74350BEE3FB">loadModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5731D138E569FAB9B0BBE1BD50ABFCB92553C927">createModuleFromSource</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59721057BCF85C9560729DB4FE7D4446814F7C54">makeModuleVisible</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82D0C5BB1CA41ECA7C39A4C7013885C1E71B8A04">loadGlobalModuleIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3C9544430A2070D74666877A17289FD2AC1B389">lookupMissingImports</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

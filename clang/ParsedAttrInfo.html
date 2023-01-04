@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct ParsedAttrInfo</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct ParsedAttrInfo</h1>
+    <p>Defined at line 44 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public unsigned int AttrKind</li>
+      <li>public unsigned int NumArgs</li>
+      <li>public unsigned int OptArgs</li>
+      <li>public unsigned int NumArgMembers</li>
+      <li>public unsigned int HasCustomParsing</li>
+      <li>public unsigned int AcceptsExprPack</li>
+      <li>public unsigned int IsTargetSpecific</li>
+      <li>public unsigned int IsType</li>
+      <li>public unsigned int IsStmt</li>
+      <li>public unsigned int IsKnownToGCC</li>
+      <li>public unsigned int IsSupportedByPragmaAttribute</li>
+      <li>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Spellings
+      </li>
+      <li>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         ArgNames
+      </li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/ParsedAttrInfo/Spelling.html">Spelling</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5809174F2F5557E5D3D9644D1B6C79FC4580E3F7">ParsedAttrInfo</h3>
+      <p>
+        protected void ParsedAttrInfo(
+        <a href="../clang/AttributeCommonInfo/Kind.html">Kind</a>
+         AttrKind)
+      </p>
+      <p>Defined at line 77 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="C7CFB113B38EDC3AF1EE800C78B7765926D74674">ParsedAttrInfo</h3>
+      <p>
+        protected void ParsedAttrInfo(
+        <a href="../clang/AttributeCommonInfo/Kind.html">Kind</a>
+         AttrKind, unsigned int NumArgs, unsigned int OptArgs, unsigned int NumArgMembers, unsigned int HasCustomParsing, unsigned int AcceptsExprPack, unsigned int IsTargetSpecific, unsigned int IsType, unsigned int IsStmt, unsigned int IsKnownToGCC, unsigned int IsSupportedByPragmaAttribute, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Spellings, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         ArgNames)
+      </p>
+      <p>Defined at line 83 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="A13760A0FBF3BD59D561C016A0554A958FCA0241">~ParsedAttrInfo</h3>
+      <p>public void ~ParsedAttrInfo()</p>
+      <p>Defined at line 99 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="84E541BDC42A0D4438DFE40A7E7C791D9F8C580A">diagAppertainsToDecl</h3>
+      <p>public _Bool diagAppertainsToDecl(Sema &amp; S, const ParsedAttr &amp; Attr, const Decl * D)</p>
+      <p>Defined at line 102 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Check if this attribute appertains to D, and issue a diagnostic if not.</p>
+        </div>
+      </div>
+      <h3 id="6E2B791B21129B9448DD7A162093D15FAAC9D862">diagAppertainsToStmt</h3>
+      <p>public _Bool diagAppertainsToStmt(Sema &amp; S, const ParsedAttr &amp; Attr, const Stmt * St)</p>
+      <p>Defined at line 107 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Check if this attribute appertains to St, and issue a diagnostic if not.</p>
+        </div>
+      </div>
+      <h3 id="6342674E77283B7C1BC36BBFD52E19F1FE9E9C38">diagMutualExclusion</h3>
+      <p>public _Bool diagMutualExclusion(Sema &amp; S, const ParsedAttr &amp; A, const Decl * D)</p>
+      <p>Defined at line 113 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Check if the given attribute is mutually exclusive with other attributes already applied to the given declaration.</p>
+        </div>
+      </div>
+      <h3 id="5AFA135607960CAF5D8393000B4D1E32C49D8D63">acceptsLangOpts</h3>
+      <p>public _Bool acceptsLangOpts(const LangOptions &amp; LO)</p>
+      <p>Defined at line 118 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Check if this attribute is allowed by the language we are compiling.</p>
+        </div>
+      </div>
+      <h3 id="235240A41B44B5A4C63CF546359E4DC9A543A3FA">existsInTarget</h3>
+      <p>public _Bool existsInTarget(const TargetInfo &amp; Target)</p>
+      <p>Defined at line 121 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Check if this attribute is allowed when compiling for the given target.</p>
+        </div>
+      </div>
+      <h3 id="65CAB31CDC011C30099D3E1418A170CC3BF06A50">spellingIndexToSemanticSpelling</h3>
+      <p>public unsigned int spellingIndexToSemanticSpelling(const ParsedAttr &amp; Attr)</p>
+      <p>Defined at line 125 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Convert the spelling index of Attr to a semantic spelling enum value.</p>
+        </div>
+      </div>
+      <h3 id="A93C17BEC489E8F84CB625D9D2E5AD564B2500E7">isParamExpr</h3>
+      <p>public _Bool isParamExpr(size_t N)</p>
+      <p>Defined at line 132 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Returns true if the specified parameter index for this attribute in Attr.td is an ExprArgument or VariadicExprArgument, or a subclass thereof; returns false otherwise.</p>
+        </div>
+      </div>
+      <h3 id="758021E7060925FAD79504630F2EFFE59E91CCD1">getPragmaAttributeMatchRules</h3>
+      <p>public void getPragmaAttributeMatchRules(llvm::SmallVectorImpl&lt;std::pair&lt;attr::SubjectMatchRule, _Bool&gt; &gt; &amp; Rules, const LangOptions &amp; LangOpts)</p>
+      <p>Defined at line 134 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Populate Rules with the match rules of this attribute.</p>
+        </div>
+      </div>
+      <h3 id="22E72B31B358D9D3038147BCD1C3E3E3668DB8A7">handleDeclAttribute</h3>
+      <p>
+        public 
+        <a href="../clang/ParsedAttrInfo/AttrHandling.html">AttrHandling</a>
+         handleDeclAttribute(Sema &amp; S, Decl * D, const ParsedAttr &amp; Attr)
+      </p>
+      <p>Defined at line 146 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> If this ParsedAttrInfo knows how to handle this ParsedAttr applied to this Decl then do so and return either AttributeApplied if it was applied or AttributeNotApplied if it wasn&apos;t. Otherwise return NotHandled.</p>
+        </div>
+      </div>
+      <h3 id="D3F10EF66797E582719BB102B20DF79C0CFF990F">get</h3>
+      <p>public const ParsedAttrInfo &amp; get(const AttributeCommonInfo &amp; A)</p>
+      <h3 id="33AB41920AAA8F449BFEE81522AE31B4F3CABDE9">getAllBuiltin</h3>
+      <p>public ArrayRef&lt;const ParsedAttrInfo *&gt; getAllBuiltin()</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="3DCAD8A7E803D20BD0DF79259D1922159A61A79F">enum AttrHandling</h3>
+      <ul>
+        <li>NotHandled</li>
+        <li>AttributeApplied</li>
+        <li>AttributeNotApplied</li>
+      </ul>
+      <p>Defined at line 138 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5809174F2F5557E5D3D9644D1B6C79FC4580E3F7">ParsedAttrInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7CFB113B38EDC3AF1EE800C78B7765926D74674">ParsedAttrInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A13760A0FBF3BD59D561C016A0554A958FCA0241">~ParsedAttrInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84E541BDC42A0D4438DFE40A7E7C791D9F8C580A">diagAppertainsToDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E2B791B21129B9448DD7A162093D15FAAC9D862">diagAppertainsToStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6342674E77283B7C1BC36BBFD52E19F1FE9E9C38">diagMutualExclusion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AFA135607960CAF5D8393000B4D1E32C49D8D63">acceptsLangOpts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#235240A41B44B5A4C63CF546359E4DC9A543A3FA">existsInTarget</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65CAB31CDC011C30099D3E1418A170CC3BF06A50">spellingIndexToSemanticSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A93C17BEC489E8F84CB625D9D2E5AD564B2500E7">isParamExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#758021E7060925FAD79504630F2EFFE59E91CCD1">getPragmaAttributeMatchRules</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22E72B31B358D9D3038147BCD1C3E3E3668DB8A7">handleDeclAttribute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3F10EF66797E582719BB102B20DF79C0CFF990F">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33AB41920AAA8F449BFEE81522AE31B4F3CABDE9">getAllBuiltin</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3DCAD8A7E803D20BD0DF79259D1922159A61A79F">AttrHandling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

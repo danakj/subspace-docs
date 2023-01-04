@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExtInfo</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/FunctionType" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExtInfo</h1>
+    <p>Defined at line 3786 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> A class which abstracts out some details necessary for making a call.</p>
+        <p> It is not actually used directly for storing this information in a FunctionType, although FunctionType does currently use the same bit-pattern.</p>
+        <p> If you add a field (say Foo), other than the obvious places (both, constructors, compile failures), what you need to update is * Operator== * getFoo * withFoo * functionType. Add Foo, getFoo. * ASTContext::getFooType * ASTContext::mergeFunctionTypes * FunctionNoProtoType::Profile * FunctionProtoType::Profile * TypePrinter::PrintFunctionProto * AST read and write * Codegen</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A80EC908EF57BB8BCDCF7BE00DBB1E077F6FAB78">ExtInfo</h3>
+      <p>
+        public void ExtInfo(_Bool noReturn, _Bool hasRegParm, unsigned int regParm, 
+        <a href="../../clang/CallingConv.html">CallingConv</a>
+         cc, _Bool producesResult, _Bool noCallerSavedRegs, _Bool NoCfCheck, _Bool cmseNSCall)
+      </p>
+      <p>Defined at line 3814 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Constructor with no defaults. Use this when you know that you have all the elements (when reading an AST file for example).</p>
+        </div>
+      </div>
+      <h3 id="7CC0141107CE3CC977943DE9B2324407F15B60D7">ExtInfo</h3>
+      <p>public void ExtInfo()</p>
+      <p>Defined at line 3828 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Constructor with all defaults. Use when for example creating a function known to use defaults.</p>
+        </div>
+      </div>
+      <h3 id="ADF7828F4B89FD9346A0954FDEAC55FE7D028204">ExtInfo</h3>
+      <p>
+        public void ExtInfo(
+        <a href="../../clang/CallingConv.html">CallingConv</a>
+         CC)
+      </p>
+      <p>Defined at line 3832 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Constructor with just the calling convention, which is an important part of the canonical type.</p>
+        </div>
+      </div>
+      <h3 id="9C5C0B271053E715CD6ADB6E6E0DE7FAC0321ABE">getNoReturn</h3>
+      <p>public _Bool getNoReturn()</p>
+      <p>Defined at line 3834 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="8852B650389EBDCCA26C32AAD196AD6A74AF1C2E">getProducesResult</h3>
+      <p>public _Bool getProducesResult()</p>
+      <p>Defined at line 3835 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="C45A85B504FC763B34BEF4A8C8DD4A1CC298A05D">getCmseNSCall</h3>
+      <p>public _Bool getCmseNSCall()</p>
+      <p>Defined at line 3836 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="6D1B4100FD16970D54F9044526CC2B5AED140526">getNoCallerSavedRegs</h3>
+      <p>public _Bool getNoCallerSavedRegs()</p>
+      <p>Defined at line 3837 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="892C57F2063E9D16E85786700A408EA1DE44305F">getNoCfCheck</h3>
+      <p>public _Bool getNoCfCheck()</p>
+      <p>Defined at line 3838 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="BB16E4687E5310F1694D6B789D04C77B4AE21C4F">getHasRegParm</h3>
+      <p>public _Bool getHasRegParm()</p>
+      <p>Defined at line 3839 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="85259A42B121E892AF06B3C06740FEF6DED39A15">getRegParm</h3>
+      <p>public unsigned int getRegParm()</p>
+      <p>Defined at line 3841 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="04594F30818FA317A4D6BBB82286AF015666B563">getCC</h3>
+      <p>
+        public 
+        <a href="../../clang/CallingConv.html">CallingConv</a>
+         getCC()
+      </p>
+      <p>Defined at line 3848 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="6DD927B1EC4A42B2D5CA1D034B9DC81BB1ACE2A9">operator==</h3>
+      <p>
+        public _Bool operator==(
+        <a href="ExtInfo.html">ExtInfo</a>
+         Other)
+      </p>
+      <p>Defined at line 3850 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="CB38D884C7A7F86D41D6A622025402E936E0FCC3">operator!=</h3>
+      <p>
+        public _Bool operator!=(
+        <a href="ExtInfo.html">ExtInfo</a>
+         Other)
+      </p>
+      <p>Defined at line 3853 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="C95D7E4BBC740FF273A652CF068AAA431AEF709F">withNoReturn</h3>
+      <p>
+        public 
+        <a href="ExtInfo.html">ExtInfo</a>
+         withNoReturn(_Bool noReturn)
+      </p>
+      <p>Defined at line 3860 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Note that we don&apos;t have setters. That is by design, use the following with methods instead of mutating these objects.</p>
+        </div>
+      </div>
+      <h3 id="0EF589A0B8CD18A2D05BCA7AB9241892CBCFF7FD">withProducesResult</h3>
+      <p>
+        public 
+        <a href="ExtInfo.html">ExtInfo</a>
+         withProducesResult(_Bool producesResult)
+      </p>
+      <p>Defined at line 3867 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="B794B3B45BA9A3A9FCC8557DAB8010C643D3DCF5">withCmseNSCall</h3>
+      <p>
+        public 
+        <a href="ExtInfo.html">ExtInfo</a>
+         withCmseNSCall(_Bool cmseNSCall)
+      </p>
+      <p>Defined at line 3874 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="33FC49F51AA16961B2C46E07551E5D2F71CA2ACF">withNoCallerSavedRegs</h3>
+      <p>
+        public 
+        <a href="ExtInfo.html">ExtInfo</a>
+         withNoCallerSavedRegs(_Bool noCallerSavedRegs)
+      </p>
+      <p>Defined at line 3881 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="5B205E3B00CAC62CF691D69F53B1CFF58FC89145">withNoCfCheck</h3>
+      <p>
+        public 
+        <a href="ExtInfo.html">ExtInfo</a>
+         withNoCfCheck(_Bool noCfCheck)
+      </p>
+      <p>Defined at line 3888 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="1936E539CE6F48B392D2CFBE6F2ABDCC91E049FC">withRegParm</h3>
+      <p>
+        public 
+        <a href="ExtInfo.html">ExtInfo</a>
+         withRegParm(unsigned int RegParm)
+      </p>
+      <p>Defined at line 3895 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="3313734C8A4B469B3A230532A04BE5A1CBCB7466">withCallingConv</h3>
+      <p>
+        public 
+        <a href="ExtInfo.html">ExtInfo</a>
+         withCallingConv(
+        <a href="../../clang/CallingConv.html">CallingConv</a>
+         cc)
+      </p>
+      <p>Defined at line 3901 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="3EFCB3CDBF257342FCFBF58A6FB563173FFAD20A">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 3905 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A80EC908EF57BB8BCDCF7BE00DBB1E077F6FAB78">ExtInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7CC0141107CE3CC977943DE9B2324407F15B60D7">ExtInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ADF7828F4B89FD9346A0954FDEAC55FE7D028204">ExtInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C5C0B271053E715CD6ADB6E6E0DE7FAC0321ABE">getNoReturn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8852B650389EBDCCA26C32AAD196AD6A74AF1C2E">getProducesResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C45A85B504FC763B34BEF4A8C8DD4A1CC298A05D">getCmseNSCall</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D1B4100FD16970D54F9044526CC2B5AED140526">getNoCallerSavedRegs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#892C57F2063E9D16E85786700A408EA1DE44305F">getNoCfCheck</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB16E4687E5310F1694D6B789D04C77B4AE21C4F">getHasRegParm</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85259A42B121E892AF06B3C06740FEF6DED39A15">getRegParm</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#04594F30818FA317A4D6BBB82286AF015666B563">getCC</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DD927B1EC4A42B2D5CA1D034B9DC81BB1ACE2A9">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB38D884C7A7F86D41D6A622025402E936E0FCC3">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C95D7E4BBC740FF273A652CF068AAA431AEF709F">withNoReturn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EF589A0B8CD18A2D05BCA7AB9241892CBCFF7FD">withProducesResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B794B3B45BA9A3A9FCC8557DAB8010C643D3DCF5">withCmseNSCall</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33FC49F51AA16961B2C46E07551E5D2F71CA2ACF">withNoCallerSavedRegs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B205E3B00CAC62CF691D69F53B1CFF58FC89145">withNoCfCheck</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1936E539CE6F48B392D2CFBE6F2ABDCC91E049FC">withRegParm</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3313734C8A4B469B3A230532A04BE5A1CBCB7466">withCallingConv</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EFCB3CDBF257342FCFBF58A6FB563173FFAD20A">Profile</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

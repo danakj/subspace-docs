@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ClangTool</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/tooling" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ClangTool</h1>
+    <p>Defined at line 308 of file /usr/lib/llvm-16/include/clang/Tooling/Tooling.h</p>
+    <div>
+      <div>
+        <p> Utility to run a FrontendAction over a set of files.</p>
+        <p> This class is written to be usable for command line utilities. By default the class uses ClangSyntaxOnlyAdjuster to modify command line arguments before the arguments are used to run a frontend action. One could install an additional command line arguments adjuster by calling the appendArgumentsAdjuster() method.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FFE23F43132882267E52257A25BBEA21F62A74DD">ClangTool</h3>
+      <p>
+        public void ClangTool(const CompilationDatabase &amp; Compilations, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         SourcePaths, 
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         PCHContainerOps, 
+        <a href="../../llvm/IntrusiveRefCntPtr.html">IntrusiveRefCntPtr</a>
+         BaseFS, 
+        <a href="../../llvm/IntrusiveRefCntPtr.html">IntrusiveRefCntPtr</a>
+         Files)
+      </p>
+      <div>
+        <div>
+          <p> Constructs a clang tool to run over a list of files.</p>
+        </div>
+      </div>
+      <h3 id="5850B86CBB7A099CE7A2FE97A3DEA5CE91F08DDD">~ClangTool</h3>
+      <p>public void ~ClangTool()</p>
+      <h3 id="D8B4B4B56AB22EDB561BB7155EF6E126B8E86C8F">setDiagnosticConsumer</h3>
+      <p>public void setDiagnosticConsumer(DiagnosticConsumer * DiagConsumer)</p>
+      <p>Defined at line 333 of file /usr/lib/llvm-16/include/clang/Tooling/Tooling.h</p>
+      <div>
+        <div>
+          <p> Set a  to use during parsing.</p>
+        </div>
+      </div>
+      <h3 id="8CF3AAC1FAB53CAAEC9303A0A058F772702BE25A">mapVirtualFile</h3>
+      <p>
+        public void mapVirtualFile(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         FilePath, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Content)
+      </p>
+      <div>
+        <div>
+          <p> Map a virtual file to be used while running the tool.</p>
+        </div>
+      </div>
+      <h3 id="58BE7BE026D8710569B96EBBC94C45C1C4A71A1C">appendArgumentsAdjuster</h3>
+      <p>
+        public void appendArgumentsAdjuster(
+        <a href="../../std/function.html">function</a>
+         Adjuster)
+      </p>
+      <div>
+        <div>
+          <p> Append a command line arguments adjuster to the adjuster chain.</p>
+        </div>
+      </div>
+      <h3 id="5FFA178925A70D6B3814B016E39512518A71D43C">clearArgumentsAdjusters</h3>
+      <p>public void clearArgumentsAdjusters()</p>
+      <div>
+        <div>
+          <p> Clear the command line arguments adjuster chain.</p>
+        </div>
+      </div>
+      <h3 id="35B4D0B85AFF0960777D0C93A1077168CC868AE3">run</h3>
+      <p>public int run(ToolAction * Action)</p>
+      <div>
+        <div>
+          <p> Runs an action over all files specified in the command line.</p>
+        </div>
+      </div>
+      <h3 id="DEDCA162BA9ADFA82782D66E1D62A4D99D3D76D2">buildASTs</h3>
+      <p>public int buildASTs(std::vector&lt;std::unique_ptr&lt;ASTUnit&gt; &gt; &amp; ASTs)</p>
+      <div>
+        <div>
+          <p> Create an AST for each file specified in the command line and append them to ASTs.</p>
+        </div>
+      </div>
+      <h3 id="44F394B0A91F71A2802EC969ED4685C9C219DDD4">setRestoreWorkingDir</h3>
+      <p>public void setRestoreWorkingDir(_Bool RestoreCWD)</p>
+      <div>
+        <div>
+          <p> Sets whether working directory should be restored after calling run(). By default, working directory is restored. However, it could be useful to turn this off when running on multiple threads to avoid the raciness.</p>
+        </div>
+      </div>
+      <h3 id="AA4C39B45CFAC694D063CC43B60C67FA55FA3532">setPrintErrorMessage</h3>
+      <p>public void setPrintErrorMessage(_Bool PrintErrorMessage)</p>
+      <div>
+        <div>
+          <p> Sets whether an error message should be printed out if an action fails. By default, if an action fails, a message is printed out to stderr.</p>
+        </div>
+      </div>
+      <h3 id="EDD3E40FA6C6A0A9367772C89AD9F660DBE06961">getFiles</h3>
+      <p>public FileManager &amp; getFiles()</p>
+      <p>Defined at line 376 of file /usr/lib/llvm-16/include/clang/Tooling/Tooling.h</p>
+      <div>
+        <div>
+          <p> Returns the file manager used in the tool.</p>
+          <p> The file manager is shared between all translation units.</p>
+        </div>
+      </div>
+      <h3 id="11BC160BCB5814C1DA38F758F3083BCE2A682229">getSourcePaths</h3>
+      <p>
+        public 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         getSourcePaths()
+      </p>
+      <p>Defined at line 378 of file /usr/lib/llvm-16/include/clang/Tooling/Tooling.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FFE23F43132882267E52257A25BBEA21F62A74DD">ClangTool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5850B86CBB7A099CE7A2FE97A3DEA5CE91F08DDD">~ClangTool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8B4B4B56AB22EDB561BB7155EF6E126B8E86C8F">setDiagnosticConsumer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CF3AAC1FAB53CAAEC9303A0A058F772702BE25A">mapVirtualFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58BE7BE026D8710569B96EBBC94C45C1C4A71A1C">appendArgumentsAdjuster</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FFA178925A70D6B3814B016E39512518A71D43C">clearArgumentsAdjusters</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35B4D0B85AFF0960777D0C93A1077168CC868AE3">run</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEDCA162BA9ADFA82782D66E1D62A4D99D3D76D2">buildASTs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44F394B0A91F71A2802EC969ED4685C9C219DDD4">setRestoreWorkingDir</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA4C39B45CFAC694D063CC43B60C67FA55FA3532">setPrintErrorMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EDD3E40FA6C6A0A9367772C89AD9F660DBE06961">getFiles</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11BC160BCB5814C1DA38F758F3083BCE2A682229">getSourcePaths</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

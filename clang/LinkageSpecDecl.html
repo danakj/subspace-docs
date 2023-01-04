@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class LinkageSpecDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class LinkageSpecDecl</h1>
+    <p>Defined at line 2844 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a linkage specification.</p>
+        <p> For example:</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Decl.html">Decl</a>
+      , 
+      <a href="DeclContext.html">DeclContext</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F870D6EF7F0924F3E0F7150C7061F48758A10F29">Create</h3>
+      <p>
+        public LinkageSpecDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ExternLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LangLoc, 
+        <a href="../clang/LinkageSpecDecl/LanguageIDs.html">LanguageIDs</a>
+         Lang, _Bool HasBraces)
+      </p>
+      <h3 id="3E579933063966EEBF21E78B61B04C347FA808CD">CreateDeserialized</h3>
+      <p>public LinkageSpecDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="03673280998116E9E1B91064F8E604BAF25D898A">getLanguage</h3>
+      <p>
+        public 
+        <a href="../clang/LinkageSpecDecl/LanguageIDs.html">LanguageIDs</a>
+         getLanguage()
+      </p>
+      <p>Defined at line 2873 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Return the language specified by this linkage specification.</p>
+        </div>
+      </div>
+      <h3 id="AC81F51FA51B89DD01E6D2C7E7F5851EDFA096F1">setLanguage</h3>
+      <p>
+        public void setLanguage(
+        <a href="../clang/LinkageSpecDecl/LanguageIDs.html">LanguageIDs</a>
+         L)
+      </p>
+      <p>Defined at line 2878 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Set the language specified by this linkage specification.</p>
+        </div>
+      </div>
+      <h3 id="02315D2F66797FB157FAEF18F06A332015C79354">hasBraces</h3>
+      <p>public _Bool hasBraces()</p>
+      <p>Defined at line 2882 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Determines whether this linkage specification had braces in its syntactic form.</p>
+        </div>
+      </div>
+      <h3 id="EAC2ACB35EADE5431EE8663E5D2514C3A2E5FDC1">getExternLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExternLoc()
+      </p>
+      <p>Defined at line 2887 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="C706E3C0E4794782B4A246FB4340C2A0F56B0F51">getRBraceLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRBraceLoc()
+      </p>
+      <p>Defined at line 2888 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="40860A5852ECAA1D4D333096152F00AAB1CA0841">setExternLoc</h3>
+      <p>
+        public void setExternLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2889 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="786E22D196CEDFB03B8FC51861DC055456EF80CD">setRBraceLoc</h3>
+      <p>
+        public void setRBraceLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2890 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="CACBA562EA6F976812678CD6C3E722630844708B">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2895 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="865072F684A72B926F412324E78C7F35C464CF81">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 2903 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="F53B191EB509A9A79C19C57C3A03781923A8755D">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 2907 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="E39586E47FEB4CD41126AE3112C4AF78F6C50C5A">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 2908 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="E9921637EE17C362FD762A22C122612637747008">castToDeclContext</h3>
+      <p>public DeclContext * castToDeclContext(const LinkageSpecDecl * D)</p>
+      <p>Defined at line 2910 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="0EB04B1BB835761358090BC44861DB59FC3E51C6">castFromDeclContext</h3>
+      <p>public LinkageSpecDecl * castFromDeclContext(const DeclContext * DC)</p>
+      <p>Defined at line 2914 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="A95FFDBB96FC8A1A1B931D3F23800A2E75505AF7">enum LanguageIDs</h3>
+      <ul>
+        <li>lang_c</li>
+        <li>lang_cxx</li>
+      </ul>
+      <p>Defined at line 2853 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Represents the language in a linkage specification.</p>
+          <p> The values are part of the serialization ABI for ASTs and cannot be changed without altering that ABI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F870D6EF7F0924F3E0F7150C7061F48758A10F29">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3E579933063966EEBF21E78B61B04C347FA808CD">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03673280998116E9E1B91064F8E604BAF25D898A">getLanguage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC81F51FA51B89DD01E6D2C7E7F5851EDFA096F1">setLanguage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02315D2F66797FB157FAEF18F06A332015C79354">hasBraces</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EAC2ACB35EADE5431EE8663E5D2514C3A2E5FDC1">getExternLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C706E3C0E4794782B4A246FB4340C2A0F56B0F51">getRBraceLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#40860A5852ECAA1D4D333096152F00AAB1CA0841">setExternLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#786E22D196CEDFB03B8FC51861DC055456EF80CD">setRBraceLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CACBA562EA6F976812678CD6C3E722630844708B">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#865072F684A72B926F412324E78C7F35C464CF81">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F53B191EB509A9A79C19C57C3A03781923A8755D">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E39586E47FEB4CD41126AE3112C4AF78F6C50C5A">classofKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9921637EE17C362FD762A22C122612637747008">castToDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EB04B1BB835761358090BC44861DB59FC3E51C6">castFromDeclContext</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A95FFDBB96FC8A1A1B931D3F23800A2E75505AF7">LanguageIDs</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

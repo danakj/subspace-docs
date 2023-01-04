@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPSeverityClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPSeverityClause</h1>
+    <p>Defined at line 1491 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;severity&apos; clause in the &apos;#pragma omp error&apos; directive</p>
+        <p> In this example directive &apos;#pragma omp error&apos; has simple &apos;severity&apos; clause with kind &apos;fatal&apos;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPClause.html">OMPClause</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CCC39B5BB294D3B95A24F5BF0E52350DCF152F5F">OMPSeverityClause</h3>
+      <p>
+        public void OMPSeverityClause(
+        <a href="OpenMPSeverityClauseKind.html">OpenMPSeverityClauseKind</a>
+         A, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ALoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 1524 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build &apos;severity&apos; clause with argument  (&apos;fatal&apos; or &apos;warning&apos;).</p>
+        </div>
+      </div>
+      <h3 id="E619BE8B5F66907C54E149443A39456EE72DFD31">OMPSeverityClause</h3>
+      <p>public void OMPSeverityClause()</p>
+      <p>Defined at line 1531 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build an empty clause.</p>
+        </div>
+      </div>
+      <h3 id="A3F091DB091AF28CF2F9029C9D0B2126D377F152">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 1536 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the locaiton of &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="7932BCFF9016EEF985AF4F8C75581FCF45548428">getSeverityKind</h3>
+      <p>
+        public 
+        <a href="OpenMPSeverityClauseKind.html">OpenMPSeverityClauseKind</a>
+         getSeverityKind()
+      </p>
+      <p>Defined at line 1539 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns kind of the clause.</p>
+        </div>
+      </div>
+      <h3 id="4AB9BBA10DD4158B7DCFF43AC08CD010BC26A643">getSeverityKindKwLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getSeverityKindKwLoc()
+      </p>
+      <p>Defined at line 1542 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns location of clause kind.</p>
+        </div>
+      </div>
+      <h3 id="FC5923431DE25233D361F7D886F67369EB5781B3">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1544 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="CB3427786FE3B128947E1958620FB8C48C73C0DD">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1548 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="17B9F5F25AABC534EB2290B490428E5D35920809">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 1552 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="AFAE94123F051BD6EAC0D94DF6A0E7E5E9D67F5B">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 1555 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="0D151F23698A7164DDA66E1A197E1CA8FD51A968">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 1559 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CCC39B5BB294D3B95A24F5BF0E52350DCF152F5F">OMPSeverityClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E619BE8B5F66907C54E149443A39456EE72DFD31">OMPSeverityClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3F091DB091AF28CF2F9029C9D0B2126D377F152">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7932BCFF9016EEF985AF4F8C75581FCF45548428">getSeverityKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AB9BBA10DD4158B7DCFF43AC08CD010BC26A643">getSeverityKindKwLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC5923431DE25233D361F7D886F67369EB5781B3">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB3427786FE3B128947E1958620FB8C48C73C0DD">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17B9F5F25AABC534EB2290B490428E5D35920809">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFAE94123F051BD6EAC0D94DF6A0E7E5E9D67F5B">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D151F23698A7164DDA66E1A197E1CA8FD51A968">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

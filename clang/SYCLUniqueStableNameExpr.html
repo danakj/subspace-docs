@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SYCLUniqueStableNameExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SYCLUniqueStableNameExpr</h1>
+    <p>Defined at line 2066 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> This represents a use of the __builtin_sycl_unique_stable_name, which takes a type-id, and at CodeGen time emits a unique string representation of the type in a way that permits us to properly encode information about the SYCL kernels.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="74A67BB983531D4BB8D803A16D0F51851C5FD641">getTypeSourceInfo</h3>
+      <p>public TypeSourceInfo * getTypeSourceInfo()</p>
+      <p>Defined at line 2083 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="1B5257E3B6CF585797EEC41B003FD3F05D82C648">getTypeSourceInfo</h3>
+      <p>public const TypeSourceInfo * getTypeSourceInfo()</p>
+      <p>Defined at line 2085 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C243E3054B69FD5346918B7C37BB64752B03A121">Create</h3>
+      <p>
+        public SYCLUniqueStableNameExpr * Create(const ASTContext &amp; Ctx, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         OpLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParen, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParen, TypeSourceInfo * TSI)
+      </p>
+      <h3 id="F565AED3683E10614A504E2899ECAEEA8F325A0D">CreateEmpty</h3>
+      <p>public SYCLUniqueStableNameExpr * CreateEmpty(const ASTContext &amp; Ctx)</p>
+      <h3 id="14334375D63F37654F2516405B0A944632A2BC75">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2093 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="EC8D87C053EC85E88B7ED0A59446C9684E86C883">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2094 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="5BBB54E39CCAD1D3CC88B757A4CC700D5EF6CA56">getLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 2095 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D4C3FABB1406EC45D80B0B216A0D2FE5C0099143">getLParenLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLocation()
+      </p>
+      <p>Defined at line 2096 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="70A7F0A6F71E0E325356B579F05C4F55584E6042">getRParenLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLocation()
+      </p>
+      <p>Defined at line 2097 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B5D7361F202EB6420B5C6E102C075C62718888B3">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2099 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="DE635BC102EC40F2391C8FFA443AF2CCBA8CD4CB">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2104 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="129AC33203D05674502137A80819F22F93AD2F78">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2108 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9BF2F1C28DA36D3713A4751F2AE635B72EA41F20">ComputeName</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ComputeName(ASTContext &amp; Context)
+      </p>
+      <div>
+        <div>
+          <p> Convenience function to generate the name of the currently stored type.</p>
+        </div>
+      </div>
+      <h3 id="4704CC4BC6BEC2723BDFC9963D02E750647CEC86">ComputeName</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ComputeName(ASTContext &amp; Context, 
+        <a href="QualType.html">QualType</a>
+         Ty)
+      </p>
+      <div>
+        <div>
+          <p> Get the generated name of the type.  Note that this only works after all kernels have been instantiated.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#74A67BB983531D4BB8D803A16D0F51851C5FD641">getTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B5257E3B6CF585797EEC41B003FD3F05D82C648">getTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C243E3054B69FD5346918B7C37BB64752B03A121">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F565AED3683E10614A504E2899ECAEEA8F325A0D">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14334375D63F37654F2516405B0A944632A2BC75">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC8D87C053EC85E88B7ED0A59446C9684E86C883">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5BBB54E39CCAD1D3CC88B757A4CC700D5EF6CA56">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4C3FABB1406EC45D80B0B216A0D2FE5C0099143">getLParenLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70A7F0A6F71E0E325356B579F05C4F55584E6042">getRParenLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5D7361F202EB6420B5C6E102C075C62718888B3">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE635BC102EC40F2391C8FFA443AF2CCBA8CD4CB">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#129AC33203D05674502137A80819F22F93AD2F78">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BF2F1C28DA36D3713A4751F2AE635B72EA41F20">ComputeName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4704CC4BC6BEC2723BDFC9963D02E750647CEC86">ComputeName</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

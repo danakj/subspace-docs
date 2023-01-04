@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CommandTraits</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/comments" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CommandTraits</h1>
+    <p>Defined at line 127 of file /usr/lib/llvm-16/include/clang/AST/CommentCommandTraits.h</p>
+    <div>
+      <div>
+        <p> This class provides information about commands that can be used in comments.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7A7067D5FF57F1502CD0DD1D33737C4CB81F2D16">CommandTraits</h3>
+      <p>public void CommandTraits(llvm::BumpPtrAllocator &amp; Allocator, const CommentOptions &amp; CommentOptions)</p>
+      <h3 id="57DA486D1AF55D9DE67ED97CBCD9F8B66E0AE43C">registerCommentOptions</h3>
+      <p>public void registerCommentOptions(const CommentOptions &amp; CommentOptions)</p>
+      <h3 id="A1DEBC7C46CEF104E9092C49068C3CDFFFA1B8FD">getCommandInfoOrNULL</h3>
+      <p>
+        public const CommandInfo * getCommandInfoOrNULL(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="9799DD4692B4DF8E21C6E03430BF6527DBB77587">getCommandInfo</h3>
+      <p>
+        public const CommandInfo * getCommandInfo(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <p>Defined at line 145 of file /usr/lib/llvm-16/include/clang/AST/CommentCommandTraits.h</p>
+      <h3 id="97792BAD61E81B927AC422550E738CAB0F36DF6C">getTypoCorrectCommandInfo</h3>
+      <p>
+        public const CommandInfo * getTypoCorrectCommandInfo(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Typo)
+      </p>
+      <h3 id="5F65F8FBEB1824E28133B90A6BEB1BC8D367BDBC">getCommandInfo</h3>
+      <p>public const CommandInfo * getCommandInfo(unsigned int CommandID)</p>
+      <h3 id="093332E80B71714BF0FED099A8D928CBCE34C4BC">registerUnknownCommand</h3>
+      <p>
+        public const CommandInfo * registerUnknownCommand(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         CommandName)
+      </p>
+      <h3 id="0B88E315335EE833FFA6CEF2CC73E405E5C47018">registerBlockCommand</h3>
+      <p>
+        public const CommandInfo * registerBlockCommand(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         CommandName)
+      </p>
+      <h3 id="7931AD2F8636656CF7AD718B408C439F25979583">getBuiltinCommandInfo</h3>
+      <p>
+        public const CommandInfo * getBuiltinCommandInfo(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="6919E86C3C3F2E4EDD573841A823AB297A93F1CA">getBuiltinCommandInfo</h3>
+      <p>public const CommandInfo * getBuiltinCommandInfo(unsigned int CommandID)</p>
+      <div>
+        <div></div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="5862588A4B61C1D14BA8012A28DE685F2C5CFC2C">enum KnownCommandIDs</h3>
+      <ul>
+        <li>KCI_a</li>
+        <li>KCI_abstract</li>
+        <li>KCI_addindex</li>
+        <li>KCI_addtogroup</li>
+        <li>KCI_anchor</li>
+        <li>KCI_arg</li>
+        <li>KCI_attention</li>
+        <li>KCI_author</li>
+        <li>KCI_authors</li>
+        <li>KCI_b</li>
+        <li>KCI_brief</li>
+        <li>KCI_bug</li>
+        <li>KCI_c</li>
+        <li>KCI_callgraph</li>
+        <li>KCI_callback</li>
+        <li>KCI_callergraph</li>
+        <li>KCI_category</li>
+        <li>KCI_cite</li>
+        <li>KCI_class</li>
+        <li>KCI_classdesign</li>
+        <li>KCI_coclass</li>
+        <li>KCI_code</li>
+        <li>KCI_endcode</li>
+        <li>KCI_concept</li>
+        <li>KCI_cond</li>
+        <li>KCI_const</li>
+        <li>KCI_constant</li>
+        <li>KCI_copybrief</li>
+        <li>KCI_copydetails</li>
+        <li>KCI_copydoc</li>
+        <li>KCI_copyright</li>
+        <li>KCI_date</li>
+        <li>KCI_def</li>
+        <li>KCI_defgroup</li>
+        <li>KCI_dependency</li>
+        <li>KCI_deprecated</li>
+        <li>KCI_details</li>
+        <li>KCI_diafile</li>
+        <li>KCI_dir</li>
+        <li>KCI_discussion</li>
+        <li>KCI_docbookinclude</li>
+        <li>KCI_docbookonly</li>
+        <li>KCI_enddocbookonly</li>
+        <li>KCI_dontinclude</li>
+        <li>KCI_dot</li>
+        <li>KCI_enddot</li>
+        <li>KCI_dotfile</li>
+        <li>KCI_e</li>
+        <li>KCI_else</li>
+        <li>KCI_elseif</li>
+        <li>KCI_em</li>
+        <li>KCI_emoji</li>
+        <li>KCI_endcond</li>
+        <li>KCI_endif</li>
+        <li>KCI_enum</li>
+        <li>KCI_example</li>
+        <li>KCI_exception</li>
+        <li>KCI_extends</li>
+        <li>KCI_flbrace</li>
+        <li>KCI_frbrace</li>
+        <li>KCI_flsquare</li>
+        <li>KCI_frsquare</li>
+        <li>KCI_fdollar</li>
+        <li>KCI_flparen</li>
+        <li>KCI_frparen</li>
+        <li>KCI_file</li>
+        <li>KCI_fn</li>
+        <li>KCI_function</li>
+        <li>KCI_functiongroup</li>
+        <li>KCI_headerfile</li>
+        <li>KCI_helper</li>
+        <li>KCI_helperclass</li>
+        <li>KCI_helps</li>
+        <li>KCI_hidecallgraph</li>
+        <li>KCI_hidecallergraph</li>
+        <li>KCI_hideinitializer</li>
+        <li>KCI_hiderefby</li>
+        <li>KCI_hiderefs</li>
+        <li>KCI_htmlinclude</li>
+        <li>KCI_htmlonly</li>
+        <li>KCI_endhtmlonly</li>
+        <li>KCI_idlexcept</li>
+        <li>KCI_if</li>
+        <li>KCI_ifnot</li>
+        <li>KCI_image</li>
+        <li>KCI_implements</li>
+        <li>KCI_include</li>
+        <li>KCI_ingroup</li>
+        <li>KCI_instancesize</li>
+        <li>KCI_interface</li>
+        <li>KCI_internal</li>
+        <li>KCI_endinternal</li>
+        <li>KCI_invariant</li>
+        <li>KCI_latexinclude</li>
+        <li>KCI_latexonly</li>
+        <li>KCI_endlatexonly</li>
+        <li>KCI_li</li>
+        <li>KCI_line</li>
+        <li>KCI_link</li>
+        <li>KCI_slashlink</li>
+        <li>KCI_mainpage</li>
+        <li>KCI_maninclude</li>
+        <li>KCI_manonly</li>
+        <li>KCI_endmanonly</li>
+        <li>KCI_memberof</li>
+        <li>KCI_method</li>
+        <li>KCI_methodgroup</li>
+        <li>KCI_msc</li>
+        <li>KCI_endmsc</li>
+        <li>KCI_mscfile</li>
+        <li>KCI_n</li>
+        <li>KCI_name</li>
+        <li>KCI_namespace</li>
+        <li>KCI_noop</li>
+        <li>KCI_nosubgrouping</li>
+        <li>KCI_note</li>
+        <li>KCI_overload</li>
+        <li>KCI_ownership</li>
+        <li>KCI_p</li>
+        <li>KCI_page</li>
+        <li>KCI_par</li>
+        <li>KCI_parblock</li>
+        <li>KCI_endparblock</li>
+        <li>KCI_paragraph</li>
+        <li>KCI_param</li>
+        <li>KCI_performance</li>
+        <li>KCI_post</li>
+        <li>KCI_pre</li>
+        <li>KCI_private</li>
+        <li>KCI_privatesection</li>
+        <li>KCI_property</li>
+        <li>KCI_protected</li>
+        <li>KCI_protectedsection</li>
+        <li>KCI_protocol</li>
+        <li>KCI_public</li>
+        <li>KCI_publicsection</li>
+        <li>KCI_pure</li>
+        <li>KCI_ref</li>
+        <li>KCI_refitem</li>
+        <li>KCI_related</li>
+        <li>KCI_relatedalso</li>
+        <li>KCI_relates</li>
+        <li>KCI_relatesalso</li>
+        <li>KCI_remark</li>
+        <li>KCI_remarks</li>
+        <li>KCI_result</li>
+        <li>KCI_return</li>
+        <li>KCI_returns</li>
+        <li>KCI_retval</li>
+        <li>KCI_rtfinclude</li>
+        <li>KCI_rtfonly</li>
+        <li>KCI_endrtfonly</li>
+        <li>KCI_sa</li>
+        <li>KCI_secreflist</li>
+        <li>KCI_endsecreflist</li>
+        <li>KCI_section</li>
+        <li>KCI_security</li>
+        <li>KCI_see</li>
+        <li>KCI_seealso</li>
+        <li>KCI_short</li>
+        <li>KCI_showinitializer</li>
+        <li>KCI_showrefby</li>
+        <li>KCI_showrefs</li>
+        <li>KCI_since</li>
+        <li>KCI_skip</li>
+        <li>KCI_skipline</li>
+        <li>KCI_snippet</li>
+        <li>KCI_static</li>
+        <li>KCI_struct</li>
+        <li>KCI_subpage</li>
+        <li>KCI_subsection</li>
+        <li>KCI_subsubsection</li>
+        <li>KCI_superclass</li>
+        <li>KCI_tableofcontents</li>
+        <li>KCI_template</li>
+        <li>KCI_templatefield</li>
+        <li>KCI_test</li>
+        <li>KCI_textblock</li>
+        <li>KCI_slashtextblock</li>
+        <li>KCI_throw</li>
+        <li>KCI_throws</li>
+        <li>KCI_todo</li>
+        <li>KCI_tparam</li>
+        <li>KCI_typedef</li>
+        <li>KCI_startuml</li>
+        <li>KCI_enduml</li>
+        <li>KCI_union</li>
+        <li>KCI_until</li>
+        <li>KCI_var</li>
+        <li>KCI_verbinclude</li>
+        <li>KCI_verbatim</li>
+        <li>KCI_endverbatim</li>
+        <li>KCI_version</li>
+        <li>KCI_warning</li>
+        <li>KCI_weakgroup</li>
+        <li>KCI_xrefitem</li>
+        <li>KCI_xmlinclude</li>
+        <li>KCI_xmlonly</li>
+        <li>KCI_endxmlonly</li>
+        <li>KCI_Last</li>
+      </ul>
+      <p>Defined at line 129 of file /usr/lib/llvm-16/include/clang/AST/CommentCommandTraits.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7A7067D5FF57F1502CD0DD1D33737C4CB81F2D16">CommandTraits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57DA486D1AF55D9DE67ED97CBCD9F8B66E0AE43C">registerCommentOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1DEBC7C46CEF104E9092C49068C3CDFFFA1B8FD">getCommandInfoOrNULL</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9799DD4692B4DF8E21C6E03430BF6527DBB77587">getCommandInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97792BAD61E81B927AC422550E738CAB0F36DF6C">getTypoCorrectCommandInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F65F8FBEB1824E28133B90A6BEB1BC8D367BDBC">getCommandInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#093332E80B71714BF0FED099A8D928CBCE34C4BC">registerUnknownCommand</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B88E315335EE833FFA6CEF2CC73E405E5C47018">registerBlockCommand</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7931AD2F8636656CF7AD718B408C439F25979583">getBuiltinCommandInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6919E86C3C3F2E4EDD573841A823AB297A93F1CA">getBuiltinCommandInfo</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5862588A4B61C1D14BA8012A28DE685F2C5CFC2C">KnownCommandIDs</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

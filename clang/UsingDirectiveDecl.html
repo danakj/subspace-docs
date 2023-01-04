@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UsingDirectiveDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UsingDirectiveDecl</h1>
+    <p>Defined at line 2929 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> Represents C++ using-directive.</p>
+        <p> For example:</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="NamedDecl.html">NamedDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="DDBD35A4A92CB902E9F5AF7A615B7532D308A239">getQualifierLoc</h3>
+      <p>
+        public 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         getQualifierLoc()
+      </p>
+      <p>Defined at line 2974 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the nested-name-specifier that qualifies the name of the namespace, with source-location information.</p>
+        </div>
+      </div>
+      <h3 id="D2D721ABADB5713E0517CB3DAB4F3DB749E0FB9B">getQualifier</h3>
+      <p>public NestedNameSpecifier * getQualifier()</p>
+      <p>Defined at line 2978 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the nested-name-specifier that qualifies the name of the namespace.</p>
+        </div>
+      </div>
+      <h3 id="A870E1D83D6C634963BF6D0ED24087D7C5FDBEF5">getNominatedNamespaceAsWritten</h3>
+      <p>public NamedDecl * getNominatedNamespaceAsWritten()</p>
+      <p>Defined at line 2982 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="8FCFFAB21C95D929F3B87700948EB79D7683A632">getNominatedNamespaceAsWritten</h3>
+      <p>public const NamedDecl * getNominatedNamespaceAsWritten()</p>
+      <p>Defined at line 2983 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="8BCF5A7683CAF3B4F9C1D292ABD757B47E45AF6B">getNominatedNamespace</h3>
+      <p>public NamespaceDecl * getNominatedNamespace()</p>
+      <div>
+        <div>
+          <p> Returns the namespace nominated by this using-directive.</p>
+        </div>
+      </div>
+      <h3 id="FB11316630DB2F2355777AF0E364D855A079C8F5">getNominatedNamespace</h3>
+      <p>public const NamespaceDecl * getNominatedNamespace()</p>
+      <p>Defined at line 2990 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="326D3D8015559C39F5CCB61857A858B9A9755F40">getCommonAncestor</h3>
+      <p>public DeclContext * getCommonAncestor()</p>
+      <p>Defined at line 2996 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Returns the common ancestor context of this using-directive and its nominated namespace.</p>
+        </div>
+      </div>
+      <h3 id="7E112BDB8AA36A56F51759851587A253CDE42954">getCommonAncestor</h3>
+      <p>public const DeclContext * getCommonAncestor()</p>
+      <p>Defined at line 2997 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="1B7A4A63082AB636E3DC2EE821FEA305B5119F12">getUsingLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getUsingLoc()
+      </p>
+      <p>Defined at line 3000 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Return the location of the  keyword.</p>
+        </div>
+      </div>
+      <h3 id="E586549B5696A1DF8BC5B15D1CA1A456AED840C8">getNamespaceKeyLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getNamespaceKeyLocation()
+      </p>
+      <p>Defined at line 3004 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> FIXME: Could omit &apos;Key&apos; in name. Returns the location of the  keyword.</p>
+        </div>
+      </div>
+      <h3 id="05BC8BCF4CF4F0FD43EB909A6EEE9722BC917A12">getIdentLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getIdentLocation()
+      </p>
+      <p>Defined at line 3007 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Returns the location of this using declaration&apos;s identifier.</p>
+        </div>
+      </div>
+      <h3 id="DB65CCCFED451513AB793B1BAA8B1EC1BFAEDDF4">Create</h3>
+      <p>
+        public UsingDirectiveDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         UsingLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         NamespaceLoc, 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         QualifierLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdentLoc, NamedDecl * Nominated, DeclContext * CommonAncestor)
+      </p>
+      <h3 id="601370BB6C93AEBFA63DA8E47E078B52F1429AAA">CreateDeserialized</h3>
+      <p>public UsingDirectiveDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="D53C7DA2A4F5FA8DBE4D5F8532912771AE91914B">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 3018 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="F1F8A600B35803B55BC9B06E9401DB83B348BF67">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3022 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="752BC0BC3FFBD6415CFFAAD703878561FEBBA082">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3023 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#DDBD35A4A92CB902E9F5AF7A615B7532D308A239">getQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2D721ABADB5713E0517CB3DAB4F3DB749E0FB9B">getQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A870E1D83D6C634963BF6D0ED24087D7C5FDBEF5">getNominatedNamespaceAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8FCFFAB21C95D929F3B87700948EB79D7683A632">getNominatedNamespaceAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8BCF5A7683CAF3B4F9C1D292ABD757B47E45AF6B">getNominatedNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB11316630DB2F2355777AF0E364D855A079C8F5">getNominatedNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#326D3D8015559C39F5CCB61857A858B9A9755F40">getCommonAncestor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E112BDB8AA36A56F51759851587A253CDE42954">getCommonAncestor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B7A4A63082AB636E3DC2EE821FEA305B5119F12">getUsingLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E586549B5696A1DF8BC5B15D1CA1A456AED840C8">getNamespaceKeyLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05BC8BCF4CF4F0FD43EB909A6EEE9722BC917A12">getIdentLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB65CCCFED451513AB793B1BAA8B1EC1BFAEDDF4">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#601370BB6C93AEBFA63DA8E47E078B52F1429AAA">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D53C7DA2A4F5FA8DBE4D5F8532912771AE91914B">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1F8A600B35803B55BC9B06E9401DB83B348BF67">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#752BC0BC3FFBD6415CFFAAD703878561FEBBA082">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

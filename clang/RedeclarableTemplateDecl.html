@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class RedeclarableTemplateDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class RedeclarableTemplateDecl</h1>
+    <p>Defined at line 763 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> Declaration of a redeclarable template.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TemplateDecl.html">TemplateDecl</a>
+      , Redeclarable&lt;RedeclarableTemplateDecl&gt;
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected CommonBase * Common</li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/RedeclarableTemplateDecl/SpecEntryTraits.html">SpecEntryTraits</a>
+      </li>
+      <li>
+        <a href="../clang/RedeclarableTemplateDecl/SpecIterator.html">SpecIterator</a>
+      </li>
+      <li>
+        <a href="../clang/RedeclarableTemplateDecl/CommonBase.html">CommonBase</a>
+      </li>
+      <li>
+        <a href="../clang/RedeclarableTemplateDecl/SpecEntryTraits.html">SpecEntryTraits</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D32B544EA6F220777198A340608B7AA8E3078C91">makeSpecIterator</h3>
+      <p>protected SpecIterator&lt;EntryType&gt; makeSpecIterator(llvm::FoldingSetVector&lt;EntryType&gt; &amp; Specs, _Bool isEnd)</p>
+      <p>Defined at line 816 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="0BEC1427486FFB4877C6CD24E03E1699BF8099CE">loadLazySpecializationsImpl</h3>
+      <p>protected void loadLazySpecializationsImpl()</p>
+      <h3 id="B71B879F23425710892759E4C0FD1B61EF5301E1">findSpecializationImpl</h3>
+      <p>protected typename SpecEntryTraits&lt;EntryType&gt;::DeclType * findSpecializationImpl(llvm::FoldingSetVector&lt;EntryType&gt; &amp; Specs, void *&amp; InsertPos, ProfileArguments &amp;&amp;... ProfileArgs)</p>
+      <h3 id="EB7B3D25D95C1188370A4B83C2595269E0F54446">addSpecializationImpl</h3>
+      <p>protected void addSpecializationImpl(llvm::FoldingSetVector&lt;EntryType&gt; &amp; Specs, EntryType * Entry, void * InsertPos)</p>
+      <h3 id="CC4EBFA0879AC3FAB9C2F46660BBD6FB1888A772">getCommonPtr</h3>
+      <p>protected CommonBase * getCommonPtr()</p>
+      <div>
+        <div>
+          <p> Retrieves the &quot;common&quot; pointer shared by all (re-)declarations of the same template. Calling this routine may implicitly allocate memory for the common pointer.</p>
+        </div>
+      </div>
+      <h3 id="E9E929E70D1B6F99FA4E06DB980A3998CB8A890B">newCommon</h3>
+      <p>protected CommonBase * newCommon(ASTContext &amp; C)</p>
+      <h3 id="345E9DFFEFCBE3F1DDBECC924D7A543EAB364B51">RedeclarableTemplateDecl</h3>
+      <p>
+        protected void RedeclarableTemplateDecl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params, NamedDecl * Decl)
+      </p>
+      <p>Defined at line 872 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Construct a template decl with name, parameters, and templated element.</p>
+        </div>
+      </div>
+      <h3 id="88900308C2B3D6903D1F9E61E7F7C8AAB17B9E26">getCanonicalDecl</h3>
+      <p>public RedeclarableTemplateDecl * getCanonicalDecl()</p>
+      <p>Defined at line 884 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieves the canonical declaration of this template.</p>
+        </div>
+      </div>
+      <h3 id="0B4106E987F4E7DCB41AB3325196DB83431F38EE">getCanonicalDecl</h3>
+      <p>public const RedeclarableTemplateDecl * getCanonicalDecl()</p>
+      <p>Defined at line 887 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="167DEF5D9C2C7349D0D516404B1964F820BD017D">isMemberSpecialization</h3>
+      <p>public _Bool isMemberSpecialization()</p>
+      <p>Defined at line 909 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Determines whether this template was a specialization of a member template.</p>
+          <p> In the following example, the function template  and the member template  are member specializations.</p>
+        </div>
+      </div>
+      <h3 id="81FDB66E06DC349F6D37AD94057CB073095A0534">setMemberSpecialization</h3>
+      <p>public void setMemberSpecialization()</p>
+      <p>Defined at line 914 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Note that this member template is a specialization.</p>
+        </div>
+      </div>
+      <h3 id="BB564D4EBA61C5BD7A986ECD99FA4C5C8173782E">getInstantiatedFromMemberTemplate</h3>
+      <p>public RedeclarableTemplateDecl * getInstantiatedFromMemberTemplate()</p>
+      <p>Defined at line 956 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the member template from which this template was instantiated, or nullptr if this template was not instantiated from a member template.</p>
+          <p> A template is instantiated from a member template when the member template itself is part of a class template (or member thereof). For example, given</p>
+          <p> is a FunctionTemplateDecl that describes the function template</p>
+          <p> which was itself created during the instantiation of  Calling getInstantiatedFromMemberTemplate() on this FunctionTemplateDecl will retrieve the FunctionTemplateDecl for the original template  within the class template  i.e.,</p>
+        </div>
+      </div>
+      <h3 id="A85363CD18D18FC154FFE58FF3060DF972256776">setInstantiatedFromMemberTemplate</h3>
+      <p>public void setInstantiatedFromMemberTemplate(RedeclarableTemplateDecl * TD)</p>
+      <p>Defined at line 960 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="3AA189C5999F9916EB45146921565685A40D9449">getInjectedTemplateArgs</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getInjectedTemplateArgs()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the &quot;injected&quot; template arguments that correspond to the template parameters of this template.</p>
+          <p> Although the C++ standard has no notion of the &quot;injected&quot; template arguments for a template, the notion is convenient when we need to perform substitutions inside the definition of a template.</p>
+        </div>
+      </div>
+      <h3 id="B5AA14E59620D650B99354521D76CFC2820E32E0">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 984 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="CDA9F360122F24C68BEFB53C25206602CB4D3525">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 986 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D32B544EA6F220777198A340608B7AA8E3078C91">makeSpecIterator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0BEC1427486FFB4877C6CD24E03E1699BF8099CE">loadLazySpecializationsImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B71B879F23425710892759E4C0FD1B61EF5301E1">findSpecializationImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB7B3D25D95C1188370A4B83C2595269E0F54446">addSpecializationImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC4EBFA0879AC3FAB9C2F46660BBD6FB1888A772">getCommonPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9E929E70D1B6F99FA4E06DB980A3998CB8A890B">newCommon</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#345E9DFFEFCBE3F1DDBECC924D7A543EAB364B51">RedeclarableTemplateDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88900308C2B3D6903D1F9E61E7F7C8AAB17B9E26">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B4106E987F4E7DCB41AB3325196DB83431F38EE">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#167DEF5D9C2C7349D0D516404B1964F820BD017D">isMemberSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81FDB66E06DC349F6D37AD94057CB073095A0534">setMemberSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB564D4EBA61C5BD7A986ECD99FA4C5C8173782E">getInstantiatedFromMemberTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A85363CD18D18FC154FFE58FF3060DF972256776">setInstantiatedFromMemberTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3AA189C5999F9916EB45146921565685A40D9449">getInjectedTemplateArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5AA14E59620D650B99354521D76CFC2820E32E0">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDA9F360122F24C68BEFB53C25206602CB4D3525">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

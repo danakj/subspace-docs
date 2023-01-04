@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct CastIterator</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/Stmt" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct CastIterator</h1>
+    <p>Defined at line 1125 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    <div>
+      <div>
+        <p> Iterator for iterating over Stmt * arrays that contain only T *.</p>
+        <p> This is needed because AST nodes use Stmt* arrays to store references to children (to be compatible with StmtIterator).</p>
+      </div>
+    </div>
+    <p>Inherits from llvm::iterator_adaptor_base&lt;CastIterator&lt;T, TPtr, StmtPtr&gt;, StmtPtr *, std::random_access_iterator_tag, TPtr&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FB5A1B9DD0AFCCBFC3BF2495AB71B35AF4686FDA">CastIterator&lt;T, TPtr, StmtPtr&gt;</h3>
+      <p>public void CastIterator&lt;T, TPtr, StmtPtr&gt;()</p>
+      <p>Defined at line 1130 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="26F4086E7CDF3FBB1503932D3E163E49A9613F2F">CastIterator&lt;T, TPtr, StmtPtr&gt;</h3>
+      <p>public void CastIterator&lt;T, TPtr, StmtPtr&gt;(StmtPtr * I)</p>
+      <p>Defined at line 1131 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="920BB40B7B1FD623A527F94943EE4726C9A1BB7B">operator*</h3>
+      <p>public typename Base::value_type operator*()</p>
+      <p>Defined at line 1133 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FB5A1B9DD0AFCCBFC3BF2495AB71B35AF4686FDA">CastIterator&lt;T, TPtr, StmtPtr&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#26F4086E7CDF3FBB1503932D3E163E49A9613F2F">CastIterator&lt;T, TPtr, StmtPtr&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#920BB40B7B1FD623A527F94943EE4726C9A1BB7B">operator*</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

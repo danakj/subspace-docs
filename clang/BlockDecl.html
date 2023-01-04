@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class BlockDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class BlockDecl</h1>
+    <p>Defined at line 4315 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    <div>
+      <div>
+        <p> Represents a block literal declaration, which is like an unnamed FunctionDecl.  For example: ^{ statement-body }   or   ^(int arg1, float arg2){ statement-body }</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Decl.html">Decl</a>
+      , 
+      <a href="DeclContext.html">DeclContext</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/BlockDecl/Capture.html">Capture</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4FD6E61414D51FB5A84D5944C15ADF37A1008B35">BlockDecl</h3>
+      <p>
+        protected void BlockDecl(DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         CaretLoc)
+      </p>
+      <h3 id="FD834864C065A02707A85007033DEF167309230C">Create</h3>
+      <p>
+        public BlockDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <h3 id="AC49388172AD10DF15F644F5FF7A67AFF976F627">CreateDeserialized</h3>
+      <p>public BlockDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="896FC88932E4852AE84E4CEC70B17D57EB2C7835">getCaretLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getCaretLocation()
+      </p>
+      <p>Defined at line 4388 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="39C7A60C43002468623A1E01CDC3BAB245D6EF5C">isVariadic</h3>
+      <p>public _Bool isVariadic()</p>
+      <p>Defined at line 4390 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="B99A5719C2C9B5A71F03D5187F1F1DB53E954A71">setIsVariadic</h3>
+      <p>public void setIsVariadic(_Bool value)</p>
+      <p>Defined at line 4391 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="9B706C1C3F3A5CD7F7B5C02BE01F7D501E56E406">getCompoundBody</h3>
+      <p>public CompoundStmt * getCompoundBody()</p>
+      <p>Defined at line 4393 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="DEB961D3253A0465FDC306333ECF38117095EC75">getBody</h3>
+      <p>public Stmt * getBody()</p>
+      <p>Defined at line 4394 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="BFFF58748A638A1E845EBC93FADC88D0AAFA25AF">setBody</h3>
+      <p>public void setBody(CompoundStmt * B)</p>
+      <p>Defined at line 4395 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="65E755FA7AA6885185F409B7727B1B95865E1734">setSignatureAsWritten</h3>
+      <p>public void setSignatureAsWritten(TypeSourceInfo * Sig)</p>
+      <p>Defined at line 4397 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="2B531284FF2C1C6682BCF62D7719E663B30403BD">getSignatureAsWritten</h3>
+      <p>public TypeSourceInfo * getSignatureAsWritten()</p>
+      <p>Defined at line 4398 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="D39FB0B879BAF3F8E7E549070BA7B45AAF856DD1">parameters</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         parameters()
+      </p>
+      <p>Defined at line 4401 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> ArrayRef access to formal parameters.</p>
+        </div>
+      </div>
+      <h3 id="CDAA99D7D125AB12BBB1D45CD464E3E191D78964">parameters</h3>
+      <p>
+        public 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         parameters()
+      </p>
+      <p>Defined at line 4404 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="ADF571DD0A06F4F5D0842382213CC127A074FFC9">param_empty</h3>
+      <p>public _Bool param_empty()</p>
+      <p>Defined at line 4412 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="0F61A6DA32F307C8CF1C5611CD9470466B2158EC">param_begin</h3>
+      <p>public param_iterator param_begin()</p>
+      <p>Defined at line 4413 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="8F2FBF7FDE8BE2EE3C47C3D42D64AF1075D5522F">param_end</h3>
+      <p>public param_iterator param_end()</p>
+      <p>Defined at line 4414 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="EB3C0FE3CCFAFEE3DBCCFB0278767D32F7019C58">param_begin</h3>
+      <p>public param_const_iterator param_begin()</p>
+      <p>Defined at line 4415 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="AC3DC0F5F7E0325E29A4B78F6C77E841BBE924A4">param_end</h3>
+      <p>public param_const_iterator param_end()</p>
+      <p>Defined at line 4416 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="7927F95C22D2CC54417678A09E9C46632B6CF95E">param_size</h3>
+      <p>public size_t param_size()</p>
+      <p>Defined at line 4417 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="4E9E87107F301084C86DC5461161607BF3F7CA98">getNumParams</h3>
+      <p>public unsigned int getNumParams()</p>
+      <p>Defined at line 4419 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="E864E00599679457E9C1DEDBF2AA56BEBCBB54BD">getParamDecl</h3>
+      <p>public const ParmVarDecl * getParamDecl(unsigned int i)</p>
+      <p>Defined at line 4421 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="899A70B7CA8A1BC09C4BEB634725551C6CC5B263">getParamDecl</h3>
+      <p>public ParmVarDecl * getParamDecl(unsigned int i)</p>
+      <p>Defined at line 4425 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="82ED5A84C0E4F339D0D680F5C5417E402D2F5256">setParams</h3>
+      <p>
+        public void setParams(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         NewParamInfo)
+      </p>
+      <h3 id="9D4C1A0DCD781FA74451D122691C33EC7832B35E">hasCaptures</h3>
+      <p>public _Bool hasCaptures()</p>
+      <p>Defined at line 4434 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this block (or its nested blocks) captures anything of local storage from its enclosing scopes.</p>
+        </div>
+      </div>
+      <h3 id="B5C4DBD4F6BADF9E5F52D74A2EC353726D989016">getNumCaptures</h3>
+      <p>public unsigned int getNumCaptures()</p>
+      <p>Defined at line 4438 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Returns the number of captured variables. Does not include an entry for &apos;this&apos;.</p>
+        </div>
+      </div>
+      <h3 id="CF7925E1BCDA2C80271F18B004EB2FA4189CA442">captures</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         captures()
+      </p>
+      <p>Defined at line 4442 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="1D476D5D1AED922BB127DEF2E80390C72553305C">capture_begin</h3>
+      <p>public capture_const_iterator capture_begin()</p>
+      <p>Defined at line 4444 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="8121A9278DACF0AAA0181596A87876EB49074FC6">capture_end</h3>
+      <p>public capture_const_iterator capture_end()</p>
+      <p>Defined at line 4445 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="C8E556D15EB5CC899F87C97D1A3D20FBFB46155F">capturesCXXThis</h3>
+      <p>public _Bool capturesCXXThis()</p>
+      <p>Defined at line 4447 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="E16D73358DCDD8CFD5A85699D49EC17AB614B4D5">setCapturesCXXThis</h3>
+      <p>public void setCapturesCXXThis(_Bool B)</p>
+      <p>Defined at line 4448 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="6190B4624582263DDDE4AA82D44243FF9B96DCE7">blockMissingReturnType</h3>
+      <p>public _Bool blockMissingReturnType()</p>
+      <p>Defined at line 4450 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="FBDB35EED85147A81A2F201D0E248CAC5F31CD7B">setBlockMissingReturnType</h3>
+      <p>public void setBlockMissingReturnType(_Bool val)</p>
+      <p>Defined at line 4454 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="3681BE30A571DA181E537DA01793F97A1BFD3927">isConversionFromLambda</h3>
+      <p>public _Bool isConversionFromLambda()</p>
+      <p>Defined at line 4458 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="5A9CC942DC023129156F26A199E6C7C1EC51EAF0">setIsConversionFromLambda</h3>
+      <p>public void setIsConversionFromLambda(_Bool val)</p>
+      <p>Defined at line 4462 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="91BB451E3E05930A5428209F4231C6E410B57B89">doesNotEscape</h3>
+      <p>public _Bool doesNotEscape()</p>
+      <p>Defined at line 4466 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="F6E5EF98DC922DF5051744E254BCE3545E24D460">setDoesNotEscape</h3>
+      <p>public void setDoesNotEscape(_Bool B)</p>
+      <p>Defined at line 4467 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="2EB3A39D49DD1E29E977A5B5E6C6A36D078FB957">canAvoidCopyToHeap</h3>
+      <p>public _Bool canAvoidCopyToHeap()</p>
+      <p>Defined at line 4469 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="E84B1257DD0B260456DF93EA23EB7681AEE69BBC">setCanAvoidCopyToHeap</h3>
+      <p>public void setCanAvoidCopyToHeap(_Bool B)</p>
+      <p>Defined at line 4472 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="9F8672557E851B3099493C5085CAC007252866AC">capturesVariable</h3>
+      <p>public _Bool capturesVariable(const VarDecl * var)</p>
+      <h3 id="2FF198030CB8E5A2D790FED7E38A6262ABE12B40">setCaptures</h3>
+      <p>
+        public void setCaptures(ASTContext &amp; Context, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Captures, _Bool CapturesCXXThis)
+      </p>
+      <h3 id="93A0FD315A43550A8AEB2C56293A11D2369A94A9">getBlockManglingNumber</h3>
+      <p>public unsigned int getBlockManglingNumber()</p>
+      <p>Defined at line 4481 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="DF48E0A181DEACBB55364798D8AF21BD22089F76">getBlockManglingContextDecl</h3>
+      <p>public Decl * getBlockManglingContextDecl()</p>
+      <p>Defined at line 4483 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="21D2198E3C17AF47DF4CC0062AE2A3B4380F7FAE">setBlockMangling</h3>
+      <p>public void setBlockMangling(unsigned int Number, Decl * Ctx)</p>
+      <p>Defined at line 4485 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="23F3423264303AB7B7107B8A3A233890ABAF1C9C">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <h3 id="D4DF7E27E22A7387AD94A2A9CE9FCB7F1CDEF30F">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 4493 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="5D4E2CBC83D6C4334E444B3855F552A00ACE2811">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 4494 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="2633E42678DD276F419109A8C84DE8245669757B">castToDeclContext</h3>
+      <p>public DeclContext * castToDeclContext(const BlockDecl * D)</p>
+      <p>Defined at line 4495 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="E042F2CF2771E9A90E7E9B80BE3D730136F386A8">castFromDeclContext</h3>
+      <p>public BlockDecl * castFromDeclContext(const DeclContext * DC)</p>
+      <p>Defined at line 4498 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4FD6E61414D51FB5A84D5944C15ADF37A1008B35">BlockDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD834864C065A02707A85007033DEF167309230C">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC49388172AD10DF15F644F5FF7A67AFF976F627">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#896FC88932E4852AE84E4CEC70B17D57EB2C7835">getCaretLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39C7A60C43002468623A1E01CDC3BAB245D6EF5C">isVariadic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B99A5719C2C9B5A71F03D5187F1F1DB53E954A71">setIsVariadic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B706C1C3F3A5CD7F7B5C02BE01F7D501E56E406">getCompoundBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEB961D3253A0465FDC306333ECF38117095EC75">getBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BFFF58748A638A1E845EBC93FADC88D0AAFA25AF">setBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65E755FA7AA6885185F409B7727B1B95865E1734">setSignatureAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B531284FF2C1C6682BCF62D7719E663B30403BD">getSignatureAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D39FB0B879BAF3F8E7E549070BA7B45AAF856DD1">parameters</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDAA99D7D125AB12BBB1D45CD464E3E191D78964">parameters</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ADF571DD0A06F4F5D0842382213CC127A074FFC9">param_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F61A6DA32F307C8CF1C5611CD9470466B2158EC">param_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F2FBF7FDE8BE2EE3C47C3D42D64AF1075D5522F">param_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB3C0FE3CCFAFEE3DBCCFB0278767D32F7019C58">param_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC3DC0F5F7E0325E29A4B78F6C77E841BBE924A4">param_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7927F95C22D2CC54417678A09E9C46632B6CF95E">param_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E9E87107F301084C86DC5461161607BF3F7CA98">getNumParams</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E864E00599679457E9C1DEDBF2AA56BEBCBB54BD">getParamDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#899A70B7CA8A1BC09C4BEB634725551C6CC5B263">getParamDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82ED5A84C0E4F339D0D680F5C5417E402D2F5256">setParams</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D4C1A0DCD781FA74451D122691C33EC7832B35E">hasCaptures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5C4DBD4F6BADF9E5F52D74A2EC353726D989016">getNumCaptures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF7925E1BCDA2C80271F18B004EB2FA4189CA442">captures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D476D5D1AED922BB127DEF2E80390C72553305C">capture_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8121A9278DACF0AAA0181596A87876EB49074FC6">capture_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C8E556D15EB5CC899F87C97D1A3D20FBFB46155F">capturesCXXThis</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E16D73358DCDD8CFD5A85699D49EC17AB614B4D5">setCapturesCXXThis</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6190B4624582263DDDE4AA82D44243FF9B96DCE7">blockMissingReturnType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBDB35EED85147A81A2F201D0E248CAC5F31CD7B">setBlockMissingReturnType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3681BE30A571DA181E537DA01793F97A1BFD3927">isConversionFromLambda</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A9CC942DC023129156F26A199E6C7C1EC51EAF0">setIsConversionFromLambda</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#91BB451E3E05930A5428209F4231C6E410B57B89">doesNotEscape</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6E5EF98DC922DF5051744E254BCE3545E24D460">setDoesNotEscape</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2EB3A39D49DD1E29E977A5B5E6C6A36D078FB957">canAvoidCopyToHeap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E84B1257DD0B260456DF93EA23EB7681AEE69BBC">setCanAvoidCopyToHeap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F8672557E851B3099493C5085CAC007252866AC">capturesVariable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FF198030CB8E5A2D790FED7E38A6262ABE12B40">setCaptures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#93A0FD315A43550A8AEB2C56293A11D2369A94A9">getBlockManglingNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF48E0A181DEACBB55364798D8AF21BD22089F76">getBlockManglingContextDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21D2198E3C17AF47DF4CC0062AE2A3B4380F7FAE">setBlockMangling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23F3423264303AB7B7107B8A3A233890ABAF1C9C">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4DF7E27E22A7387AD94A2A9CE9FCB7F1CDEF30F">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D4E2CBC83D6C4334E444B3855F552A00ACE2811">classofKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2633E42678DD276F419109A8C84DE8245669757B">castToDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E042F2CF2771E9A90E7E9B80BE3D730136F386A8">castFromDeclContext</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

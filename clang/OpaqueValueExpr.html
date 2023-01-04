@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OpaqueValueExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OpaqueValueExpr</h1>
+    <p>Defined at line 1145 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> OpaqueValueExpr - An expression referring to an opaque object of a fixed type and value class.  These don&apos;t correspond to concrete syntax; instead they&apos;re used to express operations (usually copy operations) on values whose source is generally obvious from context.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A52F8C59B78AA3D06FC0ABB9441067867FD0DDBC">OpaqueValueExpr</h3>
+      <p>
+        public void OpaqueValueExpr(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, Expr * SourceExpr)
+      </p>
+      <p>Defined at line 1150 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D1F60116251EB9B63101CD0FDFCFD4ADCCA40F80">findInCopyConstruct</h3>
+      <p>public const OpaqueValueExpr * findInCopyConstruct(const Expr * expr)</p>
+      <div>
+        <div>
+          <p> Given an expression which invokes a copy constructor --- i.e.  a CXXConstructExpr, possibly wrapped in an ExprWithCleanups --- find the OpaqueValueExpr that&apos;s the source of the construction.</p>
+        </div>
+      </div>
+      <h3 id="C1AC821A9D4D7CB834399C4677C44C8A7AB66A00">OpaqueValueExpr</h3>
+      <p>
+        public void OpaqueValueExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 1163 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7BD0CB0B88B3B2371BD346A6893CD254B660D831">getLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 1167 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of this expression.</p>
+        </div>
+      </div>
+      <h3 id="CE775685CCBA901CD1C98E8B09E65EA3A41B9E12">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1169 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="377FEF2ECC80A65369DE57345776883B73F8E752">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1172 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D4C8C631A4FB598D5459F9318863DA3218BC766C">getExprLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExprLoc()
+      </p>
+      <p>Defined at line 1175 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A26B62DC026F858E354F01F1EFC4CAAD38C6629E">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1179 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0F88044C6C500739CD151637034CF2606A584624">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1183 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2060786BC5F29E85653B5C458C9B810ACD92BE32">getSourceExpr</h3>
+      <p>public Expr * getSourceExpr()</p>
+      <p>Defined at line 1195 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> The source expression of an opaque value expression is the expression which originally generated the value.  This is provided as a convenience for analyses that don&apos;t wish to precisely model the execution behavior of the program.</p>
+          <p> The source expression is typically set when building the expression which binds the opaque value expression in the first place.</p>
+        </div>
+      </div>
+      <h3 id="2FB2DF18CDE24B7CCCF1F0C12A81E28223B79AB3">setIsUnique</h3>
+      <p>public void setIsUnique(_Bool V)</p>
+      <p>Defined at line 1197 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="DE1B78E1C8D2473E9D814F766A7741B02B59D13D">isUnique</h3>
+      <p>public _Bool isUnique()</p>
+      <p>Defined at line 1203 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="F528159A79D30E17D807214050E84C27B525EA66">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 1205 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A52F8C59B78AA3D06FC0ABB9441067867FD0DDBC">OpaqueValueExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D1F60116251EB9B63101CD0FDFCFD4ADCCA40F80">findInCopyConstruct</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1AC821A9D4D7CB834399C4677C44C8A7AB66A00">OpaqueValueExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BD0CB0B88B3B2371BD346A6893CD254B660D831">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE775685CCBA901CD1C98E8B09E65EA3A41B9E12">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#377FEF2ECC80A65369DE57345776883B73F8E752">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4C8C631A4FB598D5459F9318863DA3218BC766C">getExprLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A26B62DC026F858E354F01F1EFC4CAAD38C6629E">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F88044C6C500739CD151637034CF2606A584624">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2060786BC5F29E85653B5C458C9B810ACD92BE32">getSourceExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FB2DF18CDE24B7CCCF1F0C12A81E28223B79AB3">setIsUnique</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE1B78E1C8D2473E9D814F766A7741B02B59D13D">isUnique</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F528159A79D30E17D807214050E84C27B525EA66">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

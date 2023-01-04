@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UnitTestOptions</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UnitTestOptions</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#383">383</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Class UnitTestOptions.</p>
+        <p> This class contains functions for processing options the user specifies when running the tests.  It has only static members.</p>
+        <p> In most cases, the user can specify an option using either an environment variable or a command line flag.  E.g. you can set the test filter using either GTEST_FILTER or --gtest_filter.  If both the variable and the flag are present, the latter overrides the former.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="64267F6AD78EDA66BC301664E4360D1FBECFDCA0">GetOutputFormat</h3>
+      <p>
+        public 
+        <a href="../../std/__cxx11/basic_string.html">basic_string</a>
+         GetOutputFormat()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#608">608</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the output format, or &quot;&quot; for normal printed output.</p>
+        </div>
+      </div>
+      <h3 id="55B5198CF07648D197F6318AE58F7108880D0577">GetAbsolutePathToOutputFile</h3>
+      <p>
+        public 
+        <a href="../../std/__cxx11/basic_string.html">basic_string</a>
+         GetAbsolutePathToOutputFile()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#619">619</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the absolute path of the requested output file, or the default (test_detail.xml in the original working directory) if none was explicitly specified.</p>
+        </div>
+        <div>
+          <p> Returns the name of the requested output file, or the default if none was explicitly specified.</p>
+        </div>
+      </div>
+      <h3 id="1CD3E48D409AE858C89DE865E3F8311A9376D641">FilterMatchesTest</h3>
+      <p>public _Bool FilterMatchesTest(const std::string &amp; test_suite_name, const std::string &amp; test_name)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#729">729</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the user-specified filter matches the test suite name and the test name.</p>
+        </div>
+      </div>
+      <h3 id="4C751ED63055BB982DE3EB4CEEFCA11AAF3AA6B5">MatchesFilter</h3>
+      <p>public _Bool MatchesFilter(const std::string &amp; name, const char * filter)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#702">702</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if &quot;name&quot; matches the &apos;:&apos; separated list of glob-style filters in &quot;filter&quot;.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#64267F6AD78EDA66BC301664E4360D1FBECFDCA0">GetOutputFormat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#55B5198CF07648D197F6318AE58F7108880D0577">GetAbsolutePathToOutputFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1CD3E48D409AE858C89DE865E3F8311A9376D641">FilterMatchesTest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C751ED63055BB982DE3EB4CEEFCA11AAF3AA6B5">MatchesFilter</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

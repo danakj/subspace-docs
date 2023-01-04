@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct hash_combine_recursive_helper</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/hashing/detail" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct hash_combine_recursive_helper</h1>
+    <p>Defined at line 502 of file /usr/lib/llvm-16/include/llvm/ADT/Hashing.h</p>
+    <div>
+      <div>
+        <p> Helper class to manage the recursive combining of hash_combine arguments.</p>
+        <p> This class exists to manage the state and various calls involved in the recursive combining of arguments used in hash_combine. It is particularly useful at minimizing the code in the recursive calls to ease the pain caused by a lack of variadic functions.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public char[64] buffer</li>
+      <li>
+        public 
+        <a href="hash_state.html">hash_state</a>
+         state
+      </li>
+      <li>public const uint64_t seed</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="550592C2E54FE6FF26C6EF50AB2B79CF6E9D0C32">hash_combine_recursive_helper</h3>
+      <p>public void hash_combine_recursive_helper()</p>
+      <p>Defined at line 512 of file /usr/lib/llvm-16/include/llvm/ADT/Hashing.h</p>
+      <div>
+        <div>
+          <p> Construct a recursive hash combining helper.</p>
+          <p> This sets up the state for a recursive hash combine, including getting the seed and buffer setup.</p>
+        </div>
+      </div>
+      <h3 id="EA7800434AB6C602B603204DE5D25141C231E9F7">combine_data</h3>
+      <p>public char * combine_data(size_t &amp; length, char * buffer_ptr, char * buffer_end, T data)</p>
+      <p>Defined at line 522 of file /usr/lib/llvm-16/include/llvm/ADT/Hashing.h</p>
+      <div>
+        <div>
+          <p> Combine one chunk of data into the current in-flight hash.</p>
+          <p> This merges one chunk of data into the hash. First it tries to buffer the data. If the buffer is full, it hashes the buffer into its hash_state, empties it, and then merges the new chunk in. This also handles cases where the data straddles the end of the buffer.</p>
+        </div>
+      </div>
+      <h3 id="226421B8FF3BE06596B96F43883A9EAC7B67198C">combine</h3>
+      <p>
+        public 
+        <a href="../../../llvm/hash_code.html">hash_code</a>
+         combine(size_t length, char * buffer_ptr, char * buffer_end, const T &amp; arg, const Ts &amp;... args)
+      </p>
+      <p>Defined at line 561 of file /usr/lib/llvm-16/include/llvm/ADT/Hashing.h</p>
+      <div>
+        <div>
+          <p> Recursive, variadic combining method.</p>
+          <p> This function recurses through each argument, combining that argument into a single hash.</p>
+        </div>
+      </div>
+      <h3 id="BC9C809658969D67AE0F09ADC2FBB6D1BBFFC07C">combine</h3>
+      <p>
+        public 
+        <a href="../../../llvm/hash_code.html">hash_code</a>
+         combine(size_t length, char * buffer_ptr, char * buffer_end)
+      </p>
+      <p>Defined at line 574 of file /usr/lib/llvm-16/include/llvm/ADT/Hashing.h</p>
+      <div>
+        <div>
+          <p> Base case for recursive, variadic combining.</p>
+          <p> The base case when combining arguments recursively is reached when all arguments have been handled. It flushes the remaining buffer and constructs a hash_code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#550592C2E54FE6FF26C6EF50AB2B79CF6E9D0C32">hash_combine_recursive_helper</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA7800434AB6C602B603204DE5D25141C231E9F7">combine_data</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#226421B8FF3BE06596B96F43883A9EAC7B67198C">combine</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC9C809658969D67AE0F09ADC2FBB6D1BBFFC07C">combine</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

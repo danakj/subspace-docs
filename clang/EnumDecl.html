@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class EnumDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class EnumDecl</h1>
+    <p>Defined at line 3709 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    <div>
+      <div>
+        <p> Represents an enum.  In C++11, enums can be forward-declared with a fixed underlying type, and in C we allow them to be forward-declared with no underlying type as an extension.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TagDecl.html">TagDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F0CA21234F4FC414C160FE7B10EF50F833B1A5B5">setScoped</h3>
+      <p>public void setScoped(_Bool Scoped)</p>
+      <p>Defined at line 3768 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this tag declaration is a scoped enumeration. Only possible in C++11 mode.</p>
+        </div>
+      </div>
+      <h3 id="A952150903EB3C2512FE7D371E90A88DDA531103">setScopedUsingClassTag</h3>
+      <p>public void setScopedUsingClassTag(_Bool ScopedUCT)</p>
+      <p>Defined at line 3774 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> If this tag declaration is a scoped enum, then this is true if the scoped enum was declared using the class tag, false if it was declared with the struct tag. No meaning is associated if this tag declaration is not a scoped enum.</p>
+        </div>
+      </div>
+      <h3 id="CB58598E60E6AB8C40FEA83368EE9975F475D34C">setFixed</h3>
+      <p>public void setFixed(_Bool Fixed)</p>
+      <p>Defined at line 3780 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this is an Objective-C, C++11, or Microsoft-style enumeration with a fixed underlying type.</p>
+        </div>
+      </div>
+      <h3 id="723B215A1D9A5B3562A6852586BE4BEDE6D4F14A">getCanonicalDecl</h3>
+      <p>public EnumDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3790 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="D51444E455CC29BBA6C88CE9EE879CCB85D0BDF4">getCanonicalDecl</h3>
+      <p>public const EnumDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3793 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="6D87B985AEE6A3F637F120B887121F654389BEBA">getPreviousDecl</h3>
+      <p>public EnumDecl * getPreviousDecl()</p>
+      <p>Defined at line 3797 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="76C90CB5F2286A8EC4269C65E91A2585EF2FBB38">getPreviousDecl</h3>
+      <p>public const EnumDecl * getPreviousDecl()</p>
+      <p>Defined at line 3801 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="4F65BB03B7F6A1F6FE098BA14CD613582BD7B54A">getMostRecentDecl</h3>
+      <p>public EnumDecl * getMostRecentDecl()</p>
+      <p>Defined at line 3805 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="B43ECD3531E133915FD90DC5E467FAD523EB8BE1">getMostRecentDecl</h3>
+      <p>public const EnumDecl * getMostRecentDecl()</p>
+      <p>Defined at line 3808 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="113D521A3642C1D58B509BC503F5984EEC0A095B">getDefinition</h3>
+      <p>public EnumDecl * getDefinition()</p>
+      <p>Defined at line 3812 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="9CFF19A25FDE862D9B2FD4381BCA0F59F3037BDC">Create</h3>
+      <p>
+        public EnumDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, IdentifierInfo * Id, EnumDecl * PrevDecl, _Bool IsScoped, _Bool IsScopedUsingClassTag, _Bool IsFixed)
+      </p>
+      <h3 id="CBBF875F96733A44FBBAD888FA905F315EA5C9DF">CreateDeserialized</h3>
+      <p>public EnumDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="2013A939B5AE47557FF55381C4A8965468F317E9">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <div>
+        <div>
+          <p> Overrides to provide correct range when there&apos;s an enum-base specifier with forward declarations.</p>
+        </div>
+      </div>
+      <h3 id="9099BF5BE4CC18389C834EA722D1452B7CBDD2DD">completeDefinition</h3>
+      <p>
+        public void completeDefinition(
+        <a href="QualType.html">QualType</a>
+         NewType, 
+        <a href="QualType.html">QualType</a>
+         PromotionType, unsigned int NumPositiveBits, unsigned int NumNegativeBits)
+      </p>
+      <div>
+        <div>
+          <p> When created, the EnumDecl corresponds to a forward-declared enum. This method is used to mark the declaration as being defined; its enumerators have already been added (via DeclContext::addDecl). NewType is the new underlying type of the enumeration type.</p>
+        </div>
+      </div>
+      <h3 id="964BCBCBDF22DB43200452862F0CF7E63506AF69">enumerators</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         enumerators()
+      </p>
+      <p>Defined at line 3842 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="D4AC06FA5BC038513D3DFF4D9CBA2A6543071D07">enumerator_begin</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         enumerator_begin()
+      </p>
+      <p>Defined at line 3846 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="6F8B293107F0F6C593D2FBB8D2E01286CC4A8D16">enumerator_end</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         enumerator_end()
+      </p>
+      <p>Defined at line 3853 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="29763113BD3CD15863088FFF280D2C9318A69494">getPromotionType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getPromotionType()
+      </p>
+      <p>Defined at line 3861 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Return the integer type that enumerators should promote to.</p>
+        </div>
+      </div>
+      <h3 id="47089095B0D612C859043CE97AD66B56AA845751">setPromotionType</h3>
+      <p>
+        public void setPromotionType(
+        <a href="QualType.html">QualType</a>
+         T)
+      </p>
+      <p>Defined at line 3864 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Set the promotion type.</p>
+        </div>
+      </div>
+      <h3 id="89B57C7E95C8BE8DD3452822C79629638D70D988">getIntegerType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getIntegerType()
+      </p>
+      <p>Defined at line 3869 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Return the integer type this enum decl corresponds to. This returns a null QualType for an enum forward definition with no fixed underlying type.</p>
+        </div>
+      </div>
+      <h3 id="70F5106269B93F7EF749DE79295FD613E6BFFAE6">setIntegerType</h3>
+      <p>
+        public void setIntegerType(
+        <a href="QualType.html">QualType</a>
+         T)
+      </p>
+      <p>Defined at line 3878 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Set the underlying integer type.</p>
+        </div>
+      </div>
+      <h3 id="FDD3A41A5347EC4A03BB24C3C3109D0C977FC168">setIntegerTypeSourceInfo</h3>
+      <p>public void setIntegerTypeSourceInfo(TypeSourceInfo * TInfo)</p>
+      <p>Defined at line 3881 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Set the underlying integer type source info.</p>
+        </div>
+      </div>
+      <h3 id="DFB28A275FEC7949EF74CFC639EC96054E344D7A">getIntegerTypeSourceInfo</h3>
+      <p>public TypeSourceInfo * getIntegerTypeSourceInfo()</p>
+      <p>Defined at line 3885 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Return the type source info for the underlying integer type, if no type source info exists, return 0.</p>
+        </div>
+      </div>
+      <h3 id="01951596BECE56A4C9DEB1173F219B5B246789D8">getIntegerTypeRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getIntegerTypeRange()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the source range that covers the underlying type if specified.</p>
+        </div>
+      </div>
+      <h3 id="B0D7FDF9E547CD15FA048976B8079D85A2DE5288">getNumPositiveBits</h3>
+      <p>public unsigned int getNumPositiveBits()</p>
+      <p>Defined at line 3895 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Returns the width in bits required to store all the non-negative enumerators of this enum.</p>
+        </div>
+      </div>
+      <h3 id="6CFBA7B3A22FA62D7CE353F9457CAF693C7A7DC2">getNumNegativeBits</h3>
+      <p>public unsigned int getNumNegativeBits()</p>
+      <p>Defined at line 3906 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Returns the width in bits required to store all the negative enumerators of this enum.  These widths include the rightmost leading 1;  that is:</p>
+          <p> MOST NEGATIVE ENUMERATOR     PATTERN     NUM NEGATIVE BITS ------------------------     -------     -----------------                       -1     1111111                     1                      -10     1110110                     5                     -101     1001011                     8</p>
+        </div>
+      </div>
+      <h3 id="BBD09024DB9865C3B9F6933B288054E121FAEE9F">getValueRange</h3>
+      <p>public void getValueRange(llvm::APInt &amp; Max, llvm::APInt &amp; Min)</p>
+      <div>
+        <div>
+          <p> Calculates the [Min,Max) values the enum can store based on the NumPositiveBits and NumNegativeBits. This matters for enums that do not have a fixed underlying type.</p>
+        </div>
+      </div>
+      <h3 id="FE37637F50914DE5FC49052419D61510D81E2443">isScoped</h3>
+      <p>public _Bool isScoped()</p>
+      <p>Defined at line 3914 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Returns true if this is a C++11 scoped enumeration.</p>
+        </div>
+      </div>
+      <h3 id="3EC5E68629607B134311AF2E07113B688E492CEA">isScopedUsingClassTag</h3>
+      <p>public _Bool isScopedUsingClassTag()</p>
+      <p>Defined at line 3917 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Returns true if this is a C++11 scoped enumeration.</p>
+        </div>
+      </div>
+      <h3 id="47B78A880AAD0123DC20E7EF18FC6D4274468250">isFixed</h3>
+      <p>public _Bool isFixed()</p>
+      <p>Defined at line 3923 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Returns true if this is an Objective-C, C++11, or Microsoft-style enumeration with a fixed underlying type.</p>
+        </div>
+      </div>
+      <h3 id="2D4C491FBC60837A143004475E55D3FA277897FB">getODRHash</h3>
+      <p>public unsigned int getODRHash()</p>
+      <h3 id="21FA760466933D0F99E6ADF2A4AA49E88BEC8A0B">isComplete</h3>
+      <p>public _Bool isComplete()</p>
+      <p>Defined at line 3928 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Returns true if this can be considered a complete type.</p>
+        </div>
+      </div>
+      <h3 id="9CDF822464140E375BD6DEB91B0855B6D2DF8FAB">isClosed</h3>
+      <p>public _Bool isClosed()</p>
+      <div>
+        <div>
+          <p> Returns true if this enum is either annotated with enum_extensibility(closed) or isn&apos;t annotated with enum_extensibility.</p>
+        </div>
+      </div>
+      <h3 id="2B8D94FB765A28CBBB4F8DEAA98197FD9F95F6D8">isClosedFlag</h3>
+      <p>public _Bool isClosedFlag()</p>
+      <div>
+        <div>
+          <p> Returns true if this enum is annotated with flag_enum and isn&apos;t annotated with enum_extensibility(open).</p>
+        </div>
+      </div>
+      <h3 id="1E740E2C661FD1325B30727D6478140C5BB0EF9C">isClosedNonFlag</h3>
+      <p>public _Bool isClosedNonFlag()</p>
+      <div>
+        <div>
+          <p> Returns true if this enum is annotated with neither flag_enum nor enum_extensibility(open).</p>
+        </div>
+      </div>
+      <h3 id="89865B15CCAF33927E15324AC67C11CCB4B00786">getTemplateInstantiationPattern</h3>
+      <p>public EnumDecl * getTemplateInstantiationPattern()</p>
+      <div>
+        <div>
+          <p> Retrieve the enum definition from which this enumeration could be instantiated, if it is an instantiation (rather than a non-template).</p>
+        </div>
+      </div>
+      <h3 id="418341929FD4757FADF426BAA32FF2475FD48675">getInstantiatedFromMemberEnum</h3>
+      <p>public EnumDecl * getInstantiatedFromMemberEnum()</p>
+      <div>
+        <div>
+          <p> Returns the enumeration (declared within the template) from which this enumeration type was instantiated, or NULL if this enumeration was not instantiated from any template.</p>
+        </div>
+      </div>
+      <h3 id="3A3E68D3BDAA91C0556D37BDE1EF70D45FBDF7C9">getTemplateSpecializationKind</h3>
+      <p>
+        public 
+        <a href="TemplateSpecializationKind.html">TemplateSpecializationKind</a>
+         getTemplateSpecializationKind()
+      </p>
+      <div>
+        <div>
+          <p> If this enumeration is a member of a specialization of a templated class, determine what kind of template specialization or instantiation this is.</p>
+        </div>
+      </div>
+      <h3 id="365E3C9CF39A55AAD9D90F3E895A84BC04D45ECF">setTemplateSpecializationKind</h3>
+      <p>
+        public void setTemplateSpecializationKind(
+        <a href="TemplateSpecializationKind.html">TemplateSpecializationKind</a>
+         TSK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         PointOfInstantiation)
+      </p>
+      <div>
+        <div>
+          <p> For an enumeration member that was instantiated from a member enumeration of a templated class, set the template specialiation kind.</p>
+        </div>
+      </div>
+      <h3 id="558917D9A4C6B5E2093B53EFA1A3A605AD54C05D">getMemberSpecializationInfo</h3>
+      <p>public MemberSpecializationInfo * getMemberSpecializationInfo()</p>
+      <p>Defined at line 3968 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> If this enumeration is an instantiation of a member enumeration of a class template specialization, retrieves the member specialization information.</p>
+        </div>
+      </div>
+      <h3 id="F694030F7B26F069451760000901A3C5FE134BD4">setInstantiationOfMemberEnum</h3>
+      <p>
+        public void setInstantiationOfMemberEnum(EnumDecl * ED, 
+        <a href="TemplateSpecializationKind.html">TemplateSpecializationKind</a>
+         TSK)
+      </p>
+      <p>Defined at line 3974 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Specify that this enumeration is an instantiation of the member enumeration ED.</p>
+        </div>
+      </div>
+      <h3 id="66BEA0E490C30E06E0144314C21B74AF170B7052">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3979 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="1A2A4865AE589D92D1866173EB36D7703E652FCC">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3980 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F0CA21234F4FC414C160FE7B10EF50F833B1A5B5">setScoped</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A952150903EB3C2512FE7D371E90A88DDA531103">setScopedUsingClassTag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB58598E60E6AB8C40FEA83368EE9975F475D34C">setFixed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#723B215A1D9A5B3562A6852586BE4BEDE6D4F14A">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D51444E455CC29BBA6C88CE9EE879CCB85D0BDF4">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D87B985AEE6A3F637F120B887121F654389BEBA">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76C90CB5F2286A8EC4269C65E91A2585EF2FBB38">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F65BB03B7F6A1F6FE098BA14CD613582BD7B54A">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B43ECD3531E133915FD90DC5E467FAD523EB8BE1">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#113D521A3642C1D58B509BC503F5984EEC0A095B">getDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9CFF19A25FDE862D9B2FD4381BCA0F59F3037BDC">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CBBF875F96733A44FBBAD888FA905F315EA5C9DF">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2013A939B5AE47557FF55381C4A8965468F317E9">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9099BF5BE4CC18389C834EA722D1452B7CBDD2DD">completeDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#964BCBCBDF22DB43200452862F0CF7E63506AF69">enumerators</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4AC06FA5BC038513D3DFF4D9CBA2A6543071D07">enumerator_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F8B293107F0F6C593D2FBB8D2E01286CC4A8D16">enumerator_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#29763113BD3CD15863088FFF280D2C9318A69494">getPromotionType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47089095B0D612C859043CE97AD66B56AA845751">setPromotionType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89B57C7E95C8BE8DD3452822C79629638D70D988">getIntegerType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70F5106269B93F7EF749DE79295FD613E6BFFAE6">setIntegerType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FDD3A41A5347EC4A03BB24C3C3109D0C977FC168">setIntegerTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DFB28A275FEC7949EF74CFC639EC96054E344D7A">getIntegerTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01951596BECE56A4C9DEB1173F219B5B246789D8">getIntegerTypeRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0D7FDF9E547CD15FA048976B8079D85A2DE5288">getNumPositiveBits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CFBA7B3A22FA62D7CE353F9457CAF693C7A7DC2">getNumNegativeBits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBD09024DB9865C3B9F6933B288054E121FAEE9F">getValueRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE37637F50914DE5FC49052419D61510D81E2443">isScoped</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EC5E68629607B134311AF2E07113B688E492CEA">isScopedUsingClassTag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47B78A880AAD0123DC20E7EF18FC6D4274468250">isFixed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D4C491FBC60837A143004475E55D3FA277897FB">getODRHash</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21FA760466933D0F99E6ADF2A4AA49E88BEC8A0B">isComplete</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9CDF822464140E375BD6DEB91B0855B6D2DF8FAB">isClosed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B8D94FB765A28CBBB4F8DEAA98197FD9F95F6D8">isClosedFlag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E740E2C661FD1325B30727D6478140C5BB0EF9C">isClosedNonFlag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89865B15CCAF33927E15324AC67C11CCB4B00786">getTemplateInstantiationPattern</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#418341929FD4757FADF426BAA32FF2475FD48675">getInstantiatedFromMemberEnum</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A3E68D3BDAA91C0556D37BDE1EF70D45FBDF7C9">getTemplateSpecializationKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#365E3C9CF39A55AAD9D90F3E895A84BC04D45ECF">setTemplateSpecializationKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#558917D9A4C6B5E2093B53EFA1A3A605AD54C05D">getMemberSpecializationInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F694030F7B26F069451760000901A3C5FE134BD4">setInstantiationOfMemberEnum</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66BEA0E490C30E06E0144314C21B74AF170B7052">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1A2A4865AE589D92D1866173EB36D7703E652FCC">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

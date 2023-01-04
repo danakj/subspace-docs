@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Selector</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Selector</h1>
+    <p>Defined at line 759 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+    <div>
+      <div>
+        <p> Smart pointer class that efficiently represents Objective-C method names.</p>
+        <p> This class will either point to an IdentifierInfo or a MultiKeywordSelector (which is private). This enables us to optimize selectors that take no arguments and selectors that take 1 argument, which accounts for 78% of all selectors in Cocoa.h.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B3E35D4867823DB62D458119998F219DA0F90F33">Selector</h3>
+      <p>public void Selector()</p>
+      <p>Defined at line 813 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> The default ctor should only be used when creating data structures that  will contain selectors.</p>
+        </div>
+      </div>
+      <h3 id="250F3A337F25045B14EDFD8CD776A5EA4328B2D4">Selector</h3>
+      <p>public void Selector(uintptr_t V)</p>
+      <p>Defined at line 814 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="D63A564368CE429A1A67AA0578B7C1F37EE15CF3">operator==</h3>
+      <p>
+        public _Bool operator==(
+        <a href="Selector.html">Selector</a>
+         RHS)
+      </p>
+      <p>Defined at line 817 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> operator==/!= - Indicate whether the specified selectors are identical.</p>
+        </div>
+      </div>
+      <h3 id="A21C2E2D1AC1F67D304A26FB296E45F69F2532F1">operator!=</h3>
+      <p>
+        public _Bool operator!=(
+        <a href="Selector.html">Selector</a>
+         RHS)
+      </p>
+      <p>Defined at line 820 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="8D5E35253FAB4247FE6DC061DBCB5DE965F39323">getAsOpaquePtr</h3>
+      <p>public void * getAsOpaquePtr()</p>
+      <p>Defined at line 824 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="A4E39ADBFC14D0316D35E46FCFCF94F9CE405B8E">isNull</h3>
+      <p>public _Bool isNull()</p>
+      <p>Defined at line 829 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> Determine whether this is the empty selector.</p>
+        </div>
+      </div>
+      <h3 id="51BD1E9645793401F9B51CEABA93BF48A78CA8E5">isKeywordSelector</h3>
+      <p>public _Bool isKeywordSelector()</p>
+      <p>Defined at line 832 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> Predicates to identify the selector type.</p>
+        </div>
+      </div>
+      <h3 id="151448A73922144760ED18F14D89306D75521F9D">isUnarySelector</h3>
+      <p>public _Bool isUnarySelector()</p>
+      <p>Defined at line 836 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="52EDA9F2F26E7C29E10557444E5FB2F47616C07F">isKeywordSelector</h3>
+      <p>
+        public _Bool isKeywordSelector(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Names)
+      </p>
+      <div>
+        <div>
+          <p> If this selector is the specific keyword selector described by Names.</p>
+        </div>
+      </div>
+      <h3 id="65355098AE361CC13A83BBB197E8752B81807DB1">isUnarySelector</h3>
+      <p>
+        public _Bool isUnarySelector(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <div>
+        <div>
+          <p> If this selector is the specific unary selector described by Name.</p>
+        </div>
+      </div>
+      <h3 id="D8E8C1D97C75004D8A4AA78CC602A7FCD9766D64">getNumArgs</h3>
+      <p>public unsigned int getNumArgs()</p>
+      <h3 id="47F065BDE5809E8AFA2097DF59107A3BC6B357DE">getIdentifierInfoForSlot</h3>
+      <p>public IdentifierInfo * getIdentifierInfoForSlot(unsigned int argIndex)</p>
+      <div>
+        <div>
+          <p> Retrieve the identifier at a given position in the selector.</p>
+          <p> Note that the identifier pointer returned may be NULL. Clients that only care about the text of the identifier string, and not the specific, uniqued identifier pointer, should use  which returns an empty string when the identifier pointer would be NULL.</p>
+        </div>
+      </div>
+      <h3 id="76B380E9B88ABF5F5DD76CBC92EFD90A7F41B46F">getNameForSlot</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getNameForSlot(unsigned int argIndex)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the name at a given position in the selector.</p>
+        </div>
+      </div>
+      <h3 id="037563EAC9F8E531FD5760AB4DFFFEC25E1FCC65">getAsString</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getAsString()
+      </p>
+      <div>
+        <div>
+          <p> Derive the full selector name (e.g. &quot;foo:bar:&quot;) and return it as an std::string.</p>
+        </div>
+      </div>
+      <h3 id="F08684B3EE79CD0B385B7675B27A9CCDE62FE9BB">print</h3>
+      <p>public void print(llvm::raw_ostream &amp; OS)</p>
+      <div>
+        <div>
+          <p> Prints the full selector name (e.g. &quot;foo:bar:&quot;).</p>
+        </div>
+      </div>
+      <h3 id="C79417D680F6DC51E224C15F4A4F096571859ED7">dump</h3>
+      <p>public void dump()</p>
+      <h3 id="4C0D04F9107F7812B91D6ED4687705476DF9B1BD">getMethodFamily</h3>
+      <p>
+        public 
+        <a href="ObjCMethodFamily.html">ObjCMethodFamily</a>
+         getMethodFamily()
+      </p>
+      <p>Defined at line 883 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> Derive the conventional family of this method.</p>
+        </div>
+      </div>
+      <h3 id="5DAB7FA102A7CC057F6CD8E566A304A88B2F7198">getStringFormatFamily</h3>
+      <p>
+        public 
+        <a href="ObjCStringFormatFamily.html">ObjCStringFormatFamily</a>
+         getStringFormatFamily()
+      </p>
+      <p>Defined at line 887 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="A5F6BF53D0863A3F3A3E3C7A06FEC2BD7C1943E8">getEmptyMarker</h3>
+      <p>
+        public 
+        <a href="Selector.html">Selector</a>
+         getEmptyMarker()
+      </p>
+      <p>Defined at line 891 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="A39B11FE2A7E18E3F97487DB713303FC94951E86">getTombstoneMarker</h3>
+      <p>
+        public 
+        <a href="Selector.html">Selector</a>
+         getTombstoneMarker()
+      </p>
+      <p>Defined at line 895 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="DA3B92ED9A6E83650E996C6564AE6D339319AA54">getInstTypeMethodFamily</h3>
+      <p>
+        public 
+        <a href="ObjCInstanceTypeFamily.html">ObjCInstanceTypeFamily</a>
+         getInstTypeMethodFamily(
+        <a href="Selector.html">Selector</a>
+         sel)
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B3E35D4867823DB62D458119998F219DA0F90F33">Selector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#250F3A337F25045B14EDFD8CD776A5EA4328B2D4">Selector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D63A564368CE429A1A67AA0578B7C1F37EE15CF3">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A21C2E2D1AC1F67D304A26FB296E45F69F2532F1">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D5E35253FAB4247FE6DC061DBCB5DE965F39323">getAsOpaquePtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4E39ADBFC14D0316D35E46FCFCF94F9CE405B8E">isNull</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#51BD1E9645793401F9B51CEABA93BF48A78CA8E5">isKeywordSelector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#151448A73922144760ED18F14D89306D75521F9D">isUnarySelector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52EDA9F2F26E7C29E10557444E5FB2F47616C07F">isKeywordSelector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65355098AE361CC13A83BBB197E8752B81807DB1">isUnarySelector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8E8C1D97C75004D8A4AA78CC602A7FCD9766D64">getNumArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47F065BDE5809E8AFA2097DF59107A3BC6B357DE">getIdentifierInfoForSlot</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76B380E9B88ABF5F5DD76CBC92EFD90A7F41B46F">getNameForSlot</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#037563EAC9F8E531FD5760AB4DFFFEC25E1FCC65">getAsString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F08684B3EE79CD0B385B7675B27A9CCDE62FE9BB">print</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C79417D680F6DC51E224C15F4A4F096571859ED7">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C0D04F9107F7812B91D6ED4687705476DF9B1BD">getMethodFamily</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5DAB7FA102A7CC057F6CD8E566A304A88B2F7198">getStringFormatFamily</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A5F6BF53D0863A3F3A3E3C7A06FEC2BD7C1943E8">getEmptyMarker</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A39B11FE2A7E18E3F97487DB713303FC94951E86">getTombstoneMarker</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA3B92ED9A6E83650E996C6564AE6D339319AA54">getInstTypeMethodFamily</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

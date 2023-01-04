@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExternalSourceSymbolAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExternalSourceSymbolAttr</h1>
+    <p>Defined at line 4087 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="1F6E1CEB277E95E727AF86624076E4BAE1FADA16">CreateImplicit</h3>
+      <p>
+        public ExternalSourceSymbolAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Language, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         DefinedIn, _Bool GeneratedDeclaration, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="7E6061A97D2A009209ADBA3EF2685BBC433FA82D">Create</h3>
+      <p>
+        public ExternalSourceSymbolAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Language, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         DefinedIn, _Bool GeneratedDeclaration, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="F98339C946349F2F22BB2A3488852A6F66AB8877">CreateImplicit</h3>
+      <p>
+        public ExternalSourceSymbolAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Language, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         DefinedIn, _Bool GeneratedDeclaration, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="13595EA7A8DC53BF49428AE70D56D80E4EFE4F35">Create</h3>
+      <p>
+        public ExternalSourceSymbolAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Language, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         DefinedIn, _Bool GeneratedDeclaration, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="36852A9EA8FF5EF68A7AF887F6B02D2491A4E739">ExternalSourceSymbolAttr</h3>
+      <p>
+        public void ExternalSourceSymbolAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Language, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         DefinedIn, _Bool GeneratedDeclaration)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="394D7044AD57EF7BBACF2F4BCADE5C5076969A09">ExternalSourceSymbolAttr</h3>
+      <p>public void ExternalSourceSymbolAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="EEC575E046FE0E31BB039968A40ED2CE8312CE74">clone</h3>
+      <p>public ExternalSourceSymbolAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="A4D7A534A052077FDDE6C5462C081EE8FB194465">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="18D5A2912BBA748EF23A96D6D846BD0164893BD9">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="866B67C81F190609D028866106641573240EBC94">getLanguage</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getLanguage()
+      </p>
+      <p>Defined at line 4124 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="752CE0149346091901F9D07C233EB7E101B674F0">getLanguageLength</h3>
+      <p>public unsigned int getLanguageLength()</p>
+      <p>Defined at line 4127 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="AD81113060F33336768DE516BF8E50813C41FD25">setLanguage</h3>
+      <p>
+        public void setLanguage(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 4130 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="428C6A6CF05A286E9A9B1A636E61D118EB5BE6F7">getDefinedIn</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getDefinedIn()
+      </p>
+      <p>Defined at line 4137 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="F358AD76B8F4ECDCA6E718DCBBAE6047DEC0BC74">getDefinedInLength</h3>
+      <p>public unsigned int getDefinedInLength()</p>
+      <p>Defined at line 4140 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="E06EE1BEF8A991A7390A0F68B523ED07F40CBE7E">setDefinedIn</h3>
+      <p>
+        public void setDefinedIn(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 4143 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="87F5F376FE9E0E00E5C2254650A697B0EEBE3CFB">getGeneratedDeclaration</h3>
+      <p>public _Bool getGeneratedDeclaration()</p>
+      <p>Defined at line 4150 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="63FA6C01E9EF0512355702F408AF177852D02AA7">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 4156 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="4D085A0E582BD80D9C60435B9738C9C7ED05C8C9">enum Spelling</h3>
+      <ul>
+        <li>GNU_external_source_symbol</li>
+        <li>CXX11_clang_external_source_symbol</li>
+        <li>C2x_clang_external_source_symbol</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 4097 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#1F6E1CEB277E95E727AF86624076E4BAE1FADA16">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E6061A97D2A009209ADBA3EF2685BBC433FA82D">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F98339C946349F2F22BB2A3488852A6F66AB8877">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13595EA7A8DC53BF49428AE70D56D80E4EFE4F35">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#36852A9EA8FF5EF68A7AF887F6B02D2491A4E739">ExternalSourceSymbolAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#394D7044AD57EF7BBACF2F4BCADE5C5076969A09">ExternalSourceSymbolAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EEC575E046FE0E31BB039968A40ED2CE8312CE74">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4D7A534A052077FDDE6C5462C081EE8FB194465">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#18D5A2912BBA748EF23A96D6D846BD0164893BD9">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#866B67C81F190609D028866106641573240EBC94">getLanguage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#752CE0149346091901F9D07C233EB7E101B674F0">getLanguageLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD81113060F33336768DE516BF8E50813C41FD25">setLanguage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#428C6A6CF05A286E9A9B1A636E61D118EB5BE6F7">getDefinedIn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F358AD76B8F4ECDCA6E718DCBBAE6047DEC0BC74">getDefinedInLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E06EE1BEF8A991A7390A0F68B523ED07F40CBE7E">setDefinedIn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87F5F376FE9E0E00E5C2254650A697B0EEBE3CFB">getGeneratedDeclaration</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63FA6C01E9EF0512355702F408AF177852D02AA7">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4D085A0E582BD80D9C60435B9738C9C7ED05C8C9">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

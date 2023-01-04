@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UnresolvedUsingIfExistsDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UnresolvedUsingIfExistsDecl</h1>
+    <p>Defined at line 3953 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> This node is generated when a using-declaration that was annotated with __attribute__((using_if_exists)) failed to resolve to a known declaration. In that case, Sema builds a UsingShadowDecl whose target is an instance of this declaration, adding it to the current scope. Referring to this declaration in any way is an error.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="NamedDecl.html">NamedDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="05F00642541D3E10816F979420266191C2F7F89D">Create</h3>
+      <p>
+        public UnresolvedUsingIfExistsDecl * Create(ASTContext &amp; Ctx, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name)
+      </p>
+      <h3 id="8F246DCED3650DEA5625627D1FA82B0B6CDA4CEF">CreateDeserialized</h3>
+      <p>public UnresolvedUsingIfExistsDecl * CreateDeserialized(ASTContext &amp; Ctx, unsigned int ID)</p>
+      <h3 id="35B515086EDF153177E912B69E537CD16AA7F90A">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3966 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="E360BF6006098C33D3001ADF5B0061F08B53EEC5">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3967 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#05F00642541D3E10816F979420266191C2F7F89D">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F246DCED3650DEA5625627D1FA82B0B6CDA4CEF">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35B515086EDF153177E912B69E537CD16AA7F90A">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E360BF6006098C33D3001ADF5B0061F08B53EEC5">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

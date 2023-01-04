@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct OptionalValueCast</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct OptionalValueCast</h1>
+    <p>Defined at line 366 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    <div>
+      <div>
+        <p> This cast trait provides std::optional&lt;T&gt; casting. This means that if you have a value type, you can cast it to another value type and have dyn_cast return an std::optional&lt;T&gt;.</p>
+      </div>
+    </div>
+    <p>Inherits from CastIsPossible&lt;To, From&gt;, DefaultDoCastIfPossible&lt;std::optional&lt;To&gt;, From, detail::SelfType&lt;Derived, OptionalValueCast&lt;To, From&gt; &gt; &gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3A9ECEAD6627BC3F933C905C0E782ACE2BA45C5A">castFailed</h3>
+      <p>public std::optional&lt;To&gt; castFailed()</p>
+      <p>Defined at line 371 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+      <h3 id="5D58CB5B5E0F5C3FA0C83E363E5D91CAE88C02DF">doCast</h3>
+      <p>public std::optional&lt;To&gt; doCast(const From &amp; f)</p>
+      <p>Defined at line 373 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3A9ECEAD6627BC3F933C905C0E782ACE2BA45C5A">castFailed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D58CB5B5E0F5C3FA0C83E363E5D91CAE88C02DF">doCast</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

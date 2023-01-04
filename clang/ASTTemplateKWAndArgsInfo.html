@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct ASTTemplateKWAndArgsInfo</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct ASTTemplateKWAndArgsInfo</h1>
+    <p>Defined at line 667 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+    <div>
+      <div>
+        <p> Represents an explicit template argument list in C++, e.g., the &quot;&lt;int&gt;&quot; in &quot;sort&lt;int&gt;&quot;.</p>
+        <p> It is intended to be used as a trailing object on AST nodes, and as such, doesn&apos;t contain the array of TemplateArgumentLoc itself, but expects the containing object to also provide storage for that.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LAngleLoc
+      </li>
+      <li>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RAngleLoc
+      </li>
+      <li>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TemplateKWLoc
+      </li>
+      <li>public unsigned int NumTemplateArgs</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="1352A26143C7BDC1EB27DE1C5929CF31BC8F3266">initializeFrom</h3>
+      <p>
+        public void initializeFrom(
+        <a href="SourceLocation.html">SourceLocation</a>
+         TemplateKWLoc, const TemplateArgumentListInfo &amp; List, TemplateArgumentLoc * OutArgArray)
+      </p>
+      <h3 id="B3B8925034AC548D8C0DBA213205EC3E5447D1AA">initializeFrom</h3>
+      <p>
+        public void initializeFrom(
+        <a href="SourceLocation.html">SourceLocation</a>
+         TemplateKWLoc, const TemplateArgumentListInfo &amp; List, TemplateArgumentLoc * OutArgArray, TemplateArgumentDependence &amp; Deps)
+      </p>
+      <div>
+        <div>
+          <p> FIXME: The parameter Deps is the result populated by this method, the caller doesn&apos;t need it since it is populated by computeDependence. remove it.</p>
+        </div>
+      </div>
+      <h3 id="41D667D54A42980C904A133AF354734A43440F67">initializeFrom</h3>
+      <p>
+        public void initializeFrom(
+        <a href="SourceLocation.html">SourceLocation</a>
+         TemplateKWLoc)
+      </p>
+      <h3 id="C31324E90BF942EEF466D4CA58A2E439932A252E">copyInto</h3>
+      <p>public void copyInto(const TemplateArgumentLoc * ArgArray, TemplateArgumentListInfo &amp; List)</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#1352A26143C7BDC1EB27DE1C5929CF31BC8F3266">initializeFrom</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3B8925034AC548D8C0DBA213205EC3E5447D1AA">initializeFrom</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#41D667D54A42980C904A133AF354734A43440F67">initializeFrom</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C31324E90BF942EEF466D4CA58A2E439932A252E">copyInto</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

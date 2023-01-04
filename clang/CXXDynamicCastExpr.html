@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXDynamicCastExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXDynamicCastExpr</h1>
+    <p>Defined at line 476 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> A C++  expression (C++ [expr.dynamic.cast]).</p>
+        <p> This expression node represents a dynamic cast, e.g., Such a cast may perform a run-time check to determine how to perform the type conversion.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="CXXNamedCastExpr.html">CXXNamedCastExpr</a>
+      , llvm::TrailingObjects&lt;CXXDynamicCastExpr, CXXBaseSpecifier *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A348E55E78A8D4F0EE39E1495EE750F9A6959AAE">Create</h3>
+      <p>
+        public CXXDynamicCastExpr * Create(const ASTContext &amp; Context, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="CastKind.html">CastKind</a>
+         Kind, Expr * Op, const CXXCastPath * Path, TypeSourceInfo * Written, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParenLoc, 
+        <a href="SourceRange.html">SourceRange</a>
+         AngleBrackets)
+      </p>
+      <h3 id="88065514156DEF7DE722DD790303A27813E430DE">CreateEmpty</h3>
+      <p>public CXXDynamicCastExpr * CreateEmpty(const ASTContext &amp; Context, unsigned int pathSize)</p>
+      <h3 id="B9F40603389C0EF61DDFF31111FB553B90114C49">isAlwaysNull</h3>
+      <p>public _Bool isAlwaysNull()</p>
+      <h3 id="1CC3F7DDA86996DF7F0CB61E6D466CF887E7212D">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 507 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A348E55E78A8D4F0EE39E1495EE750F9A6959AAE">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88065514156DEF7DE722DD790303A27813E430DE">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9F40603389C0EF61DDFF31111FB553B90114C49">isAlwaysNull</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1CC3F7DDA86996DF7F0CB61E6D466CF887E7212D">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPTaskgroupDirective</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPTaskgroupDirective</h1>
+    <p>Defined at line 2669 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;#pragma omp taskgroup&apos; directive.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPExecutableDirective.html">OMPExecutableDirective</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="DFF054AFE776B02148C1BE3F738AB3AC52912213">Create</h3>
+      <p>
+        public OMPTaskgroupDirective * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Clauses, Stmt * AssociatedStmt, Expr * ReductionRef)
+      </p>
+      <div>
+        <div>
+          <p> Creates directive.</p>
+        </div>
+      </div>
+      <h3 id="4765E6F5E930FC53CC1B2909CC8512F3C250B24A">CreateEmpty</h3>
+      <p>
+        public OMPTaskgroupDirective * CreateEmpty(const ASTContext &amp; C, unsigned int NumClauses, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         )
+      </p>
+      <div>
+        <div>
+          <p> Creates an empty directive.</p>
+        </div>
+      </div>
+      <h3 id="B6989D6D2D994B0BD0BBCCBBC64EA82DFFA1DB1E">getReductionRef</h3>
+      <p>public const Expr * getReductionRef()</p>
+      <p>Defined at line 2716 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Returns reference to the task_reduction return variable.</p>
+        </div>
+      </div>
+      <h3 id="7B68423161D97D24540656B09DC7376F33652948">getReductionRef</h3>
+      <p>public Expr * getReductionRef()</p>
+      <p>Defined at line 2719 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <h3 id="BADBC89EC8B96555C9BC164E5A54E86213DF838B">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2721 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#DFF054AFE776B02148C1BE3F738AB3AC52912213">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4765E6F5E930FC53CC1B2909CC8512F3C250B24A">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B6989D6D2D994B0BD0BBCCBBC64EA82DFFA1DB1E">getReductionRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B68423161D97D24540656B09DC7376F33652948">getReductionRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BADBC89EC8B96555C9BC164E5A54E86213DF838B">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXTypeidExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXTypeidExpr</h1>
+    <p>Defined at line 845 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> A C++  expression (C++ [expr.typeid]), which gets the  that corresponds to the supplied type, or the (possibly dynamic) type of the supplied expression.</p>
+        <p> This represents code like  or </p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5C8A15B59C1624905BC589281D5B3E7CA708CC14">CXXTypeidExpr</h3>
+      <p>
+        public void CXXTypeidExpr(
+        <a href="QualType.html">QualType</a>
+         Ty, TypeSourceInfo * Operand, 
+        <a href="SourceRange.html">SourceRange</a>
+         R)
+      </p>
+      <p>Defined at line 853 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="3F8E866A91C7CD3498E3BA5FEFB0AA687F922FE5">CXXTypeidExpr</h3>
+      <p>
+        public void CXXTypeidExpr(
+        <a href="QualType.html">QualType</a>
+         Ty, Expr * Operand, 
+        <a href="SourceRange.html">SourceRange</a>
+         R)
+      </p>
+      <p>Defined at line 859 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="9A16BF5F4BAD57FA3660FE8F8FB52DF61A391B63">CXXTypeidExpr</h3>
+      <p>
+        public void CXXTypeidExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty, _Bool isExpr)
+      </p>
+      <p>Defined at line 865 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="5DBE774D08BD8490611CEB4C89168F9AAB0253CB">isPotentiallyEvaluated</h3>
+      <p>public _Bool isPotentiallyEvaluated()</p>
+      <div>
+        <div>
+          <p> Determine whether this typeid has a type operand which is potentially evaluated, per C++11 [expr.typeid]p3.</p>
+        </div>
+      </div>
+      <h3 id="BC7BB7ACF15790FD5338034677221993B9C017D1">isMostDerived</h3>
+      <p>public _Bool isMostDerived(ASTContext &amp; Context)</p>
+      <div>
+        <div>
+          <p> Best-effort check if the expression operand refers to a most derived object. This is not a strong guarantee.</p>
+        </div>
+      </div>
+      <h3 id="5E83105970C1D65260F5AFD23FD773D8A7CF76A5">isTypeOperand</h3>
+      <p>public _Bool isTypeOperand()</p>
+      <p>Defined at line 881 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="9BEA3895DE39644BDC1AC4DA23EE915DD744B0E7">getTypeOperand</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getTypeOperand(ASTContext &amp; Context)
+      </p>
+      <div>
+        <div>
+          <p> Retrieves the type operand of this typeid() expression after various required adjustments (removing reference types, cv-qualifiers).</p>
+        </div>
+      </div>
+      <h3 id="041B5065CB3E9559DD11F0C9DB023DB1C6737932">getTypeOperandSourceInfo</h3>
+      <p>public TypeSourceInfo * getTypeOperandSourceInfo()</p>
+      <p>Defined at line 888 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve source information for the type operand.</p>
+        </div>
+      </div>
+      <h3 id="E61DD5FD9738E1C23C34F142F83040D0B36A8576">getExprOperand</h3>
+      <p>public Expr * getExprOperand()</p>
+      <p>Defined at line 892 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B72806F6507136F7712D4698E4ED01A8A4D84C52">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 897 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="7E6A96A3F5AEEF3955666458770AA86F601388DB">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 898 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B5BC8C3D190D7746B6C64C61F9D9A593CBD4251D">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 899 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="2F259BF0DC1911045253CE56E38E5F448DA96666">setSourceRange</h3>
+      <p>
+        public void setSourceRange(
+        <a href="SourceRange.html">SourceRange</a>
+         R)
+      </p>
+      <p>Defined at line 900 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="D332D58683E0A46ED757CA3B7438A6471954093A">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 902 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="AA7461E8641E2DEBED85022AD778C59206E16358">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 907 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="ECB9F66A3D1DFCC8F455E1DAB59D8A1AF6C1A876">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 914 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5C8A15B59C1624905BC589281D5B3E7CA708CC14">CXXTypeidExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F8E866A91C7CD3498E3BA5FEFB0AA687F922FE5">CXXTypeidExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A16BF5F4BAD57FA3660FE8F8FB52DF61A391B63">CXXTypeidExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5DBE774D08BD8490611CEB4C89168F9AAB0253CB">isPotentiallyEvaluated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC7BB7ACF15790FD5338034677221993B9C017D1">isMostDerived</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E83105970C1D65260F5AFD23FD773D8A7CF76A5">isTypeOperand</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BEA3895DE39644BDC1AC4DA23EE915DD744B0E7">getTypeOperand</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#041B5065CB3E9559DD11F0C9DB023DB1C6737932">getTypeOperandSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E61DD5FD9738E1C23C34F142F83040D0B36A8576">getExprOperand</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B72806F6507136F7712D4698E4ED01A8A4D84C52">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E6A96A3F5AEEF3955666458770AA86F601388DB">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5BC8C3D190D7746B6C64C61F9D9A593CBD4251D">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F259BF0DC1911045253CE56E38E5F448DA96666">setSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D332D58683E0A46ED757CA3B7438A6471954093A">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA7461E8641E2DEBED85022AD778C59206E16358">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ECB9F66A3D1DFCC8F455E1DAB59D8A1AF6C1A876">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

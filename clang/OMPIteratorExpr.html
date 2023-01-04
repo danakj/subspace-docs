@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPIteratorExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPIteratorExpr</h1>
+    <p>Defined at line 272 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+    <div>
+      <div>
+        <p> OpenMP 5.0 [2.1.6 Iterators] Iterators are identifiers that expand to multiple values in the clause on which they appear. The syntax of the iterator modifier is as follows:</p>
+        <p> where iterators-definition is one of the following:</p>
+        <p> where iterator-specifier is one of the following:</p>
+        <p> where identifier is a base language identifier. iterator-type is a type name. range-specification is of the form begin:end[:step], where begin and end are expressions for which their types can be converted to iterator-type and step is an integral expression. In an iterator-specifier, if the iterator-type is not specified then the type of that iterator is of int type. The iterator-type must be an integral or pointer type. The iterator-type must not be const qualified.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;OMPIteratorExpr, Decl *, Expr *, SourceLocation, OMPIteratorHelperData&gt;
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/OMPIteratorExpr/IteratorRange.html">IteratorRange</a>
+      </li>
+      <li>
+        <a href="../clang/OMPIteratorExpr/IteratorDefinition.html">IteratorDefinition</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="770DC1CB73921F78FC5DDEC66E06894BFAE7E9DC">Create</h3>
+      <p>
+        public OMPIteratorExpr * Create(const ASTContext &amp; Context, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IteratorKwLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         R, ArrayRef&lt;IteratorDefinition&gt; Data, ArrayRef&lt;OMPIteratorHelperData&gt; Helpers)
+      </p>
+      <h3 id="84EB3FC689795B3E06507ABE584BA88E69B5CD66">CreateEmpty</h3>
+      <p>public OMPIteratorExpr * CreateEmpty(const ASTContext &amp; Context, unsigned int NumIterators)</p>
+      <h3 id="EF9B8621C4840EAAAEC4EAC4DC994349B584BF86">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 366 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="F2EE06AEB5625614A816AD731E70BA9C9C778FC7">setLParenLoc</h3>
+      <p>
+        public void setLParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 367 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="E935CD19AC3D8C2C6B9956F57981DA18A93DB17B">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 369 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="222B55E149438E2F2A58F36C5E108973C51BEB1E">setRParenLoc</h3>
+      <p>
+        public void setRParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 370 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="62D660B2ABC51CC2F607155DA1F1BFF90353193F">getIteratorKwLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getIteratorKwLoc()
+      </p>
+      <p>Defined at line 372 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="DEB5C1990ED8F903F623BE1C3FC2B17E70BFCD94">setIteratorKwLoc</h3>
+      <p>
+        public void setIteratorKwLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 373 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="D6D4EFDBF7F85C1CC46E0FEBF074C170775502FA">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 374 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="E2BDAACAE593D6C2F555058AC7CFEEEBCE012FE5">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 375 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="EC749FB3CAF4206B0FAA19101CC3DDC4CEFF3766">getIteratorDecl</h3>
+      <p>public Decl * getIteratorDecl(unsigned int I)</p>
+      <div>
+        <div>
+          <p> Gets the iterator declaration for the given iterator.</p>
+        </div>
+      </div>
+      <h3 id="CEA10033A40A5BBDBDD9987B5E15E00F358503C8">getIteratorDecl</h3>
+      <p>public const Decl * getIteratorDecl(unsigned int I)</p>
+      <p>Defined at line 379 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="1203DA155518527006A8B669E616C9FB92AF2835">getIteratorRange</h3>
+      <p>
+        public 
+        <a href="../clang/OMPIteratorExpr/IteratorRange.html">IteratorRange</a>
+         getIteratorRange(unsigned int I)
+      </p>
+      <div>
+        <div>
+          <p> Gets the iterator range for the given iterator.</p>
+        </div>
+      </div>
+      <h3 id="66C703799A96722F0811EC61F80487FEA62906E8">getIteratorRange</h3>
+      <p>
+        public 
+        <a href="../clang/OMPIteratorExpr/IteratorRange.html">IteratorRange</a>
+         getIteratorRange(unsigned int I)
+      </p>
+      <p>Defined at line 385 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="F8B2B9C69A26949F0DC0EEC268C2896B7B49091B">getAssignLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAssignLoc(unsigned int I)
+      </p>
+      <div>
+        <div>
+          <p> Gets the location of &apos;=&apos; for the given iterator definition.</p>
+        </div>
+      </div>
+      <h3 id="62D0B57C69A6D0275BABC80C9513C3FDAD8C0567">getColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getColonLoc(unsigned int I)
+      </p>
+      <div>
+        <div>
+          <p> Gets the location of the first &apos;:&apos; in the range for the given iterator definition.</p>
+        </div>
+      </div>
+      <h3 id="7EE825A387AD1B5BF2D5690FEE56A8B099EF3F49">getSecondColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getSecondColonLoc(unsigned int I)
+      </p>
+      <div>
+        <div>
+          <p> Gets the location of the second &apos;:&apos; (if any) in the range for the given iteratori definition.</p>
+        </div>
+      </div>
+      <h3 id="1D72BEF1D88F8699B202922125B1D8720E7676BB">numOfIterators</h3>
+      <p>public unsigned int numOfIterators()</p>
+      <p>Defined at line 399 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <div>
+        <div>
+          <p> Returns number of iterator definitions.</p>
+        </div>
+      </div>
+      <h3 id="717515EE7316B54B5B2ADC5B414E7AB81202E7F9">getHelper</h3>
+      <p>public OMPIteratorHelperData &amp; getHelper(unsigned int I)</p>
+      <div>
+        <div>
+          <p> Fetches helper data for the specified iteration space.</p>
+        </div>
+      </div>
+      <h3 id="A4526EECC66E9BBC0E53632BFC183DA7A93EFFDD">getHelper</h3>
+      <p>public const OMPIteratorHelperData &amp; getHelper(unsigned int I)</p>
+      <h3 id="8B22BACB7FF933D81F82B27D99C7E9BAA6960678">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 405 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <h3 id="B28BD15C8A6583D180EB3B431547BF08B55B54D2">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 410 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="188F22BAE1CF07231584CEA14C4978297707E044">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 415 of file /usr/lib/llvm-16/include/clang/AST/ExprOpenMP.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#770DC1CB73921F78FC5DDEC66E06894BFAE7E9DC">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84EB3FC689795B3E06507ABE584BA88E69B5CD66">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF9B8621C4840EAAAEC4EAC4DC994349B584BF86">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2EE06AEB5625614A816AD731E70BA9C9C778FC7">setLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E935CD19AC3D8C2C6B9956F57981DA18A93DB17B">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#222B55E149438E2F2A58F36C5E108973C51BEB1E">setRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#62D660B2ABC51CC2F607155DA1F1BFF90353193F">getIteratorKwLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEB5C1990ED8F903F623BE1C3FC2B17E70BFCD94">setIteratorKwLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6D4EFDBF7F85C1CC46E0FEBF074C170775502FA">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2BDAACAE593D6C2F555058AC7CFEEEBCE012FE5">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC749FB3CAF4206B0FAA19101CC3DDC4CEFF3766">getIteratorDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CEA10033A40A5BBDBDD9987B5E15E00F358503C8">getIteratorDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1203DA155518527006A8B669E616C9FB92AF2835">getIteratorRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66C703799A96722F0811EC61F80487FEA62906E8">getIteratorRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8B2B9C69A26949F0DC0EEC268C2896B7B49091B">getAssignLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#62D0B57C69A6D0275BABC80C9513C3FDAD8C0567">getColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7EE825A387AD1B5BF2D5690FEE56A8B099EF3F49">getSecondColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D72BEF1D88F8699B202922125B1D8720E7676BB">numOfIterators</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#717515EE7316B54B5B2ADC5B414E7AB81202E7F9">getHelper</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4526EECC66E9BBC0E53632BFC183DA7A93EFFDD">getHelper</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8B22BACB7FF933D81F82B27D99C7E9BAA6960678">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B28BD15C8A6583D180EB3B431547BF08B55B54D2">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#188F22BAE1CF07231584CEA14C4978297707E044">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

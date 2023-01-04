@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StmtExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StmtExpr</h1>
+    <p>Defined at line 4355 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> StmtExpr - This is the GNU Statement Expression extension: ({int X=4; X;}). The StmtExpr contains a single CompoundStmt node, which it evaluates and takes the value of the last subexpression.</p>
+        <p> A StmtExpr is always an r-value; values &quot;returned&quot; out of a StmtExpr will be copied.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="54C751A2B15D22B9118BB53EC3182B4E9CFBB873">StmtExpr</h3>
+      <p>
+        public void StmtExpr(CompoundStmt * SubStmt, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParenLoc, unsigned int TemplateDepth)
+      </p>
+      <p>Defined at line 4359 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="1128315FDC3F4E63F685BD6CD5CA6292255B511F">StmtExpr</h3>
+      <p>
+        public void StmtExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 4370 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Build an empty statement expression.</p>
+        </div>
+      </div>
+      <h3 id="1CAEB01CFCA40F368BBCF1B2B6D475285416BBAA">getSubStmt</h3>
+      <p>public CompoundStmt * getSubStmt()</p>
+      <p>Defined at line 4372 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="FE035952A2C6FE2BA0972617C76FABC894FAFC70">getSubStmt</h3>
+      <p>public const CompoundStmt * getSubStmt()</p>
+      <p>Defined at line 4373 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="755034E2BD92AA1C59DFEA62604FA150D32D56AC">setSubStmt</h3>
+      <p>public void setSubStmt(CompoundStmt * S)</p>
+      <p>Defined at line 4374 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7CA1F21E04F8281D3559EF5306500F6D5A70E523">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 4376 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="68C31B47F60D2AAB575EECFD0338F437B5BD501A">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 4377 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D938252D2F779AD61CF2B45564CE4619F739357E">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 4379 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="BC46EDA32734325323838F736DA0C4C57F4815C5">setLParenLoc</h3>
+      <p>
+        public void setLParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 4380 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="BBFB5A94E8215B75426115E91FD53DA9A28C3E56">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 4381 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A9EE379B99033A52B76A8E1E201FF88375FC183C">setRParenLoc</h3>
+      <p>
+        public void setRParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 4382 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9B931DEE8C38C20A84C0E7FDE8B184C5D4FA8449">getTemplateDepth</h3>
+      <p>public unsigned int getTemplateDepth()</p>
+      <p>Defined at line 4384 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9DC98B161217651C0FF7E2E7C4D15251F6ECF7EE">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 4386 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="BD1611E3B67338527BF42FE37C13BD896CA585B8">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4391 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="739E64BBE80C4808477B8E34873336C5C4AB4227">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4392 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#54C751A2B15D22B9118BB53EC3182B4E9CFBB873">StmtExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1128315FDC3F4E63F685BD6CD5CA6292255B511F">StmtExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1CAEB01CFCA40F368BBCF1B2B6D475285416BBAA">getSubStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE035952A2C6FE2BA0972617C76FABC894FAFC70">getSubStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#755034E2BD92AA1C59DFEA62604FA150D32D56AC">setSubStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7CA1F21E04F8281D3559EF5306500F6D5A70E523">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68C31B47F60D2AAB575EECFD0338F437B5BD501A">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D938252D2F779AD61CF2B45564CE4619F739357E">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC46EDA32734325323838F736DA0C4C57F4815C5">setLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBFB5A94E8215B75426115E91FD53DA9A28C3E56">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9EE379B99033A52B76A8E1E201FF88375FC183C">setRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B931DEE8C38C20A84C0E7FDE8B184C5D4FA8449">getTemplateDepth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9DC98B161217651C0FF7E2E7C4D15251F6ECF7EE">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD1611E3B67338527BF42FE37C13BD896CA585B8">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#739E64BBE80C4808477B8E34873336C5C4AB4227">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

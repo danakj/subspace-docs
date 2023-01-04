@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StmtIteratorBase</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StmtIteratorBase</h1>
+    <p>Defined at line 27 of file /usr/lib/llvm-16/include/clang/AST/StmtIterator.h</p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        protected 
+        <a href="../clang/StmtIteratorBase/.html"></a>
+         
+      </li>
+      <li>protected uintptr_t RawVAPtr</li>
+      <li>protected Decl ** DGE</li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/StmtIteratorBase/.html"></a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="AAD1EC679FE36131C3954B323D2259CF90DD5B6B">StmtIteratorBase</h3>
+      <p>protected void StmtIteratorBase(Stmt ** s)</p>
+      <p>Defined at line 43 of file /usr/lib/llvm-16/include/clang/AST/StmtIterator.h</p>
+      <h3 id="E657DFE4793B3996BAB66ADF36B051FC395D19D0">StmtIteratorBase</h3>
+      <p>protected void StmtIteratorBase(const VariableArrayType * t)</p>
+      <h3 id="8EB44256332C1F3D786ADA5D92727BE661A1D866">StmtIteratorBase</h3>
+      <p>protected void StmtIteratorBase(Decl ** dgi, Decl ** dge)</p>
+      <h3 id="8D381C12DF09180CC2D9575A3774841007666274">StmtIteratorBase</h3>
+      <p>protected void StmtIteratorBase()</p>
+      <p>Defined at line 46 of file /usr/lib/llvm-16/include/clang/AST/StmtIterator.h</p>
+      <h3 id="E2873C0394CC83448B2CB95D675A800EB40D41C1">inDeclGroup</h3>
+      <p>protected _Bool inDeclGroup()</p>
+      <p>Defined at line 48 of file /usr/lib/llvm-16/include/clang/AST/StmtIterator.h</p>
+      <h3 id="BE76E2A83BE90511F94D36CEDFBFD253283CDD97">inSizeOfTypeVA</h3>
+      <p>protected _Bool inSizeOfTypeVA()</p>
+      <p>Defined at line 52 of file /usr/lib/llvm-16/include/clang/AST/StmtIterator.h</p>
+      <h3 id="61EA71CD86E9919D732824D1B42F918565114B54">inStmt</h3>
+      <p>protected _Bool inStmt()</p>
+      <p>Defined at line 56 of file /usr/lib/llvm-16/include/clang/AST/StmtIterator.h</p>
+      <h3 id="4AC439C510B495794B119D813328A557213E48BB">getVAPtr</h3>
+      <p>protected const VariableArrayType * getVAPtr()</p>
+      <p>Defined at line 60 of file /usr/lib/llvm-16/include/clang/AST/StmtIterator.h</p>
+      <h3 id="1678D3D987E3415577BF714F576A3FDFE3318AFB">setVAPtr</h3>
+      <p>protected void setVAPtr(const VariableArrayType * P)</p>
+      <p>Defined at line 64 of file /usr/lib/llvm-16/include/clang/AST/StmtIterator.h</p>
+      <h3 id="2669C936F53B31FF6F2CECAD765B83944157217F">NextDecl</h3>
+      <p>protected void NextDecl(_Bool ImmediateAdvance)</p>
+      <h3 id="F31A4E649C15ADD27C80499C718C7A3CF7DA550D">HandleDecl</h3>
+      <p>protected _Bool HandleDecl(Decl * D)</p>
+      <h3 id="315433A309D82E88AA6B2ED7E13C8E4E9FF5D28D">NextVA</h3>
+      <p>protected void NextVA()</p>
+      <h3 id="280D630FAD4172B9FCB2324C8E35A22CBDCE5B83">GetDeclExpr</h3>
+      <p>protected Stmt *&amp; GetDeclExpr()</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="9F2703EE6C7473973BCE308F87CE0A5E9194C76E">enum </h3>
+      <ul>
+        <li>StmtMode</li>
+        <li>SizeOfTypeVAMode</li>
+        <li>DeclGroupMode</li>
+        <li>Flags</li>
+      </ul>
+      <p>Defined at line 29 of file /usr/lib/llvm-16/include/clang/AST/StmtIterator.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#AAD1EC679FE36131C3954B323D2259CF90DD5B6B">StmtIteratorBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E657DFE4793B3996BAB66ADF36B051FC395D19D0">StmtIteratorBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8EB44256332C1F3D786ADA5D92727BE661A1D866">StmtIteratorBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D381C12DF09180CC2D9575A3774841007666274">StmtIteratorBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2873C0394CC83448B2CB95D675A800EB40D41C1">inDeclGroup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE76E2A83BE90511F94D36CEDFBFD253283CDD97">inSizeOfTypeVA</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61EA71CD86E9919D732824D1B42F918565114B54">inStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AC439C510B495794B119D813328A557213E48BB">getVAPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1678D3D987E3415577BF714F576A3FDFE3318AFB">setVAPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2669C936F53B31FF6F2CECAD765B83944157217F">NextDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F31A4E649C15ADD27C80499C718C7A3CF7DA550D">HandleDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#315433A309D82E88AA6B2ED7E13C8E4E9FF5D28D">NextVA</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#280D630FAD4172B9FCB2324C8E35A22CBDCE5B83">GetDeclExpr</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9F2703EE6C7473973BCE308F87CE0A5E9194C76E">@nonymous_enum_9F2703EE6C7473973BCE308F87CE0A5E9194C76E</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

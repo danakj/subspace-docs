@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MCTargetOptions</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MCTargetOptions</h1>
+    <p>Defined at line 37 of file /usr/lib/llvm-16/include/llvm/MC/MCTargetOptions.h</p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public _Bool MCRelaxAll</li>
+      <li>public _Bool MCNoExecStack</li>
+      <li>public _Bool MCFatalWarnings</li>
+      <li>public _Bool MCNoWarn</li>
+      <li>public _Bool MCNoDeprecatedWarn</li>
+      <li>public _Bool MCNoTypeCheck</li>
+      <li>public _Bool MCSaveTempLabels</li>
+      <li>public _Bool MCIncrementalLinkerCompatible</li>
+      <li>public _Bool ShowMCEncoding</li>
+      <li>public _Bool ShowMCInst</li>
+      <li>public _Bool AsmVerbose</li>
+      <li>public _Bool PreserveAsmComments</li>
+      <li>public _Bool Dwarf64</li>
+      <li>
+        public 
+        <a href="EmitDwarfUnwindType.html">EmitDwarfUnwindType</a>
+         EmitDwarfUnwind
+      </li>
+      <li>public int DwarfVersion</li>
+      <li>
+        public 
+        <a href="../llvm/MCTargetOptions/DwarfDirectory.html">DwarfDirectory</a>
+         MCUseDwarfDirectory
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ABIName
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         AssemblyLanguage
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         SplitDwarfFile
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         AsSecureLogFile
+      </li>
+      <li>public const char * Argv0</li>
+      <li>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         CommandLineArgs
+      </li>
+      <li>
+        public 
+        <a href="../std/vector.html">vector</a>
+         IASSearchPaths
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="014F9A97BC47F476DA163EC4A2780D2314CF7714">MCTargetOptions</h3>
+      <p>public void MCTargetOptions()</p>
+      <h3 id="BA10FBCDB4A2E710DB07FBB5A04CF361122620A6">getABIName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getABIName()
+      </p>
+      <div>
+        <div>
+          <p> getABIName - If this returns a non-empty string this represents the textual name of the ABI that we want the backend to use, e.g. o32, or aapcs-linux.</p>
+        </div>
+      </div>
+      <h3 id="ACE876C0EE001E5D939A00ACDFD6FFE2916AFF64">getAssemblyLanguage</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getAssemblyLanguage()
+      </p>
+      <div>
+        <div>
+          <p> getAssemblyLanguage - If this returns a non-empty string this represents the textual name of the assembly language that we will use for this target, e.g. masm.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="305751ED1B9EAB16C4123CD952CF53D015B371AB">enum AsmInstrumentation</h3>
+      <ul>
+        <li>AsmInstrumentationNone</li>
+        <li>AsmInstrumentationAddress</li>
+      </ul>
+      <p>Defined at line 39 of file /usr/lib/llvm-16/include/llvm/MC/MCTargetOptions.h</p>
+      <h3 id="CBC0F27F147A85EC779E61408FDE94CA40FD235A">enum DwarfDirectory</h3>
+      <ul>
+        <li>DisableDwarfDirectory</li>
+        <li>EnableDwarfDirectory</li>
+        <li>DefaultDwarfDirectory</li>
+      </ul>
+      <p>Defined at line 65 of file /usr/lib/llvm-16/include/llvm/MC/MCTargetOptions.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#014F9A97BC47F476DA163EC4A2780D2314CF7714">MCTargetOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA10FBCDB4A2E710DB07FBB5A04CF361122620A6">getABIName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ACE876C0EE001E5D939A00ACDFD6FFE2916AFF64">getAssemblyLanguage</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#305751ED1B9EAB16C4123CD952CF53D015B371AB">AsmInstrumentation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CBC0F27F147A85EC779E61408FDE94CA40FD235A">DwarfDirectory</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

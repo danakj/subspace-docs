@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OptTable</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/opt" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OptTable</h1>
+    <p>Defined at line 41 of file /usr/lib/llvm-16/include/llvm/Option/OptTable.h</p>
+    <div>
+      <div>
+        <p> Provide access to the Option info table.</p>
+        <p> The OptTable class provides a layer of indirection which allows Option instance to be created lazily. In the common case, only a few options will be needed at runtime; the OptTable class maintains enough information to parse command lines without instantiating Options, while letting other parts of the driver still use Option instances where convenient.</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../llvm/opt/OptTable/Info.html">Info</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="72F1576FD55F1A1C0DADEF21C1D6BF7BB0541AF6">OptTable</h3>
+      <p>protected void OptTable(ArrayRef&lt;Info&gt; OptionInfos, _Bool IgnoreCase)</p>
+      <h3 id="3EA353327F46AB6012641BC23C6E735FA23B14F7">~OptTable</h3>
+      <p>public void ~OptTable()</p>
+      <h3 id="4B3C80AB55A6992AB50F9C5E38FCFC0A8495DF8E">getNumOptions</h3>
+      <p>public unsigned int getNumOptions()</p>
+      <p>Defined at line 97 of file /usr/lib/llvm-16/include/llvm/Option/OptTable.h</p>
+      <div>
+        <div>
+          <p> Return the total number of option classes.</p>
+        </div>
+      </div>
+      <h3 id="F31522C91BABBF116196FC453725B49DAFB0F75F">getOption</h3>
+      <p>
+        public 
+        <a href="Option.html">Option</a>
+         getOption(
+        <a href="OptSpecifier.html">OptSpecifier</a>
+         Opt)
+      </p>
+      <div>
+        <div>
+          <p> Get the given Opt&apos;s Option instance, lazily creating it if necessary.</p>
+        </div>
+      </div>
+      <h3 id="0BA73080A31C12B378B42EF56C9DBD61CA6DDE6A">getOptionName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getOptionName(
+        <a href="OptSpecifier.html">OptSpecifier</a>
+         id)
+      </p>
+      <p>Defined at line 106 of file /usr/lib/llvm-16/include/llvm/Option/OptTable.h</p>
+      <div>
+        <div>
+          <p> Lookup the name of the given option.</p>
+        </div>
+      </div>
+      <h3 id="ECD564DF0CD125DC0D6735AF075FC13D1CB2D483">getOptionKind</h3>
+      <p>
+        public unsigned int getOptionKind(
+        <a href="OptSpecifier.html">OptSpecifier</a>
+         id)
+      </p>
+      <p>Defined at line 109 of file /usr/lib/llvm-16/include/llvm/Option/OptTable.h</p>
+      <div>
+        <div>
+          <p> Get the kind of the given option.</p>
+        </div>
+      </div>
+      <h3 id="1700226E236ABF5A9C975D21E4EA0D6148A8AB85">getOptionGroupID</h3>
+      <p>
+        public unsigned int getOptionGroupID(
+        <a href="OptSpecifier.html">OptSpecifier</a>
+         id)
+      </p>
+      <p>Defined at line 114 of file /usr/lib/llvm-16/include/llvm/Option/OptTable.h</p>
+      <div>
+        <div>
+          <p> Get the group id for the given option.</p>
+        </div>
+      </div>
+      <h3 id="C3CA6CCDD0E283CB5FF0DE6F55CA8FDFE5742DAF">getOptionHelpText</h3>
+      <p>
+        public const char * getOptionHelpText(
+        <a href="OptSpecifier.html">OptSpecifier</a>
+         id)
+      </p>
+      <p>Defined at line 119 of file /usr/lib/llvm-16/include/llvm/Option/OptTable.h</p>
+      <div>
+        <div>
+          <p> Get the help text to use to describe this option.</p>
+        </div>
+      </div>
+      <h3 id="AB321489D9321D480BE4381583AF2B288C834F10">getOptionMetaVar</h3>
+      <p>
+        public const char * getOptionMetaVar(
+        <a href="OptSpecifier.html">OptSpecifier</a>
+         id)
+      </p>
+      <p>Defined at line 125 of file /usr/lib/llvm-16/include/llvm/Option/OptTable.h</p>
+      <div>
+        <div>
+          <p> Get the meta-variable name to use when describing this options values in the help text.</p>
+        </div>
+      </div>
+      <h3 id="F553C5771B8D523CEE11741704C0BCA1DA871DB3">setInitialOptionsFromEnvironment</h3>
+      <p>public void setInitialOptionsFromEnvironment(const char * E)</p>
+      <p>Defined at line 130 of file /usr/lib/llvm-16/include/llvm/Option/OptTable.h</p>
+      <div>
+        <div>
+          <p> Specify the environment variable where initial options should be read.</p>
+        </div>
+      </div>
+      <h3 id="4E7AA13F19F3E666C307FD8318D1E72A88E8B87E">setGroupedShortOptions</h3>
+      <p>public void setGroupedShortOptions(_Bool Value)</p>
+      <p>Defined at line 133 of file /usr/lib/llvm-16/include/llvm/Option/OptTable.h</p>
+      <div>
+        <div>
+          <p> Support grouped short options. e.g. -ab represents -a -b.</p>
+        </div>
+      </div>
+      <h3 id="D44961D54A048DBD510642F945E475AF28FF952B">suggestValueCompletions</h3>
+      <p>
+        public 
+        <a href="../../std/vector.html">vector</a>
+         suggestValueCompletions(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Option, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Arg)
+      </p>
+      <div>
+        <div>
+          <p> Find possible value for given flags. This is used for shell autocompletion.</p>
+        </div>
+      </div>
+      <h3 id="62CF805CA062704C1B9585874BE8C2C3454EE1CD">findByPrefix</h3>
+      <p>
+        public 
+        <a href="../../std/vector.html">vector</a>
+         findByPrefix(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Cur, unsigned int DisableFlags)
+      </p>
+      <div>
+        <div>
+          <p> Find flags from OptTable which starts with Cur.</p>
+        </div>
+      </div>
+      <h3 id="B11AA3727018214E334DDD315DBFF8BD9CB36B8A">findNearest</h3>
+      <p>
+        public unsigned int findNearest(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Option, std::string &amp; NearestString, unsigned int FlagsToInclude, unsigned int FlagsToExclude, unsigned int MinimumLength)
+      </p>
+      <div>
+        <div>
+          <p> Find the OptTable option that most closely matches the given string.</p>
+        </div>
+      </div>
+      <h3 id="139715855B9AF8184469A9F72EF0D61E91CD55B1">addValues</h3>
+      <p>
+        public _Bool addValues(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Option, const char * Values)
+      </p>
+      <div>
+        <div>
+          <p> Add Values to Option&apos;s Values class</p>
+        </div>
+      </div>
+      <h3 id="9AFBA62033754F2D35BCE9A835B385EB5E58EBD1">ParseOneArg</h3>
+      <p>public std::unique_ptr&lt;Arg&gt; ParseOneArg(const ArgList &amp; Args, unsigned int &amp; Index, unsigned int FlagsToInclude, unsigned int FlagsToExclude)</p>
+      <div>
+        <div>
+          <p> Parse a single argument; returning the new argument and updating Index.</p>
+        </div>
+      </div>
+      <h3 id="134CDDD79F90BEE404C7F78505A9DCED650BF598">ParseArgs</h3>
+      <p>
+        public InputArgList ParseArgs(
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         Args, unsigned int &amp; MissingArgIndex, unsigned int &amp; MissingArgCount, unsigned int FlagsToInclude, unsigned int FlagsToExclude)
+      </p>
+      <div>
+        <div>
+          <p> Parse an list of arguments into an InputArgList.</p>
+          <p> The resulting InputArgList will reference the strings in [ and their lifetime should extend past that of the returned InputArgList.</p>
+          <p> The only error that can occur in this routine is if an argument is missing values; in this case  will be non-zero.</p>
+        </div>
+      </div>
+      <h3 id="0163BB75A43754E0FA315620CD30399D9BF44D46">parseArgs</h3>
+      <p>
+        public InputArgList parseArgs(int Argc, char *const * Argv, 
+        <a href="OptSpecifier.html">OptSpecifier</a>
+         Unknown, StringSaver &amp; Saver, function_ref&lt;void (StringRef)&gt; ErrorFn)
+      </p>
+      <div>
+        <div>
+          <p> A convenience helper which handles optional initial options populated from an environment variable, expands response files recursively and parses options.</p>
+        </div>
+      </div>
+      <h3 id="06F52030946044070103943B03CA5DA6D2D9C7D0">printHelp</h3>
+      <p>public void printHelp(raw_ostream &amp; OS, const char * Usage, const char * Title, unsigned int FlagsToInclude, unsigned int FlagsToExclude, _Bool ShowAllAliases)</p>
+      <div>
+        <div>
+          <p> Render the help text for an option table.</p>
+        </div>
+      </div>
+      <h3 id="E71A6A8963CF3BCF0EEA6EE20C890C646CABC2C9">printHelp</h3>
+      <p>public void printHelp(raw_ostream &amp; OS, const char * Usage, const char * Title, _Bool ShowHidden, _Bool ShowAllAliases)</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#72F1576FD55F1A1C0DADEF21C1D6BF7BB0541AF6">OptTable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EA353327F46AB6012641BC23C6E735FA23B14F7">~OptTable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B3C80AB55A6992AB50F9C5E38FCFC0A8495DF8E">getNumOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F31522C91BABBF116196FC453725B49DAFB0F75F">getOption</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0BA73080A31C12B378B42EF56C9DBD61CA6DDE6A">getOptionName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ECD564DF0CD125DC0D6735AF075FC13D1CB2D483">getOptionKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1700226E236ABF5A9C975D21E4EA0D6148A8AB85">getOptionGroupID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3CA6CCDD0E283CB5FF0DE6F55CA8FDFE5742DAF">getOptionHelpText</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB321489D9321D480BE4381583AF2B288C834F10">getOptionMetaVar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F553C5771B8D523CEE11741704C0BCA1DA871DB3">setInitialOptionsFromEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E7AA13F19F3E666C307FD8318D1E72A88E8B87E">setGroupedShortOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D44961D54A048DBD510642F945E475AF28FF952B">suggestValueCompletions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#62CF805CA062704C1B9585874BE8C2C3454EE1CD">findByPrefix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B11AA3727018214E334DDD315DBFF8BD9CB36B8A">findNearest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#139715855B9AF8184469A9F72EF0D61E91CD55B1">addValues</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9AFBA62033754F2D35BCE9A835B385EB5E58EBD1">ParseOneArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#134CDDD79F90BEE404C7F78505A9DCED650BF598">ParseArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0163BB75A43754E0FA315620CD30399D9BF44D46">parseArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#06F52030946044070103943B03CA5DA6D2D9C7D0">printHelp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E71A6A8963CF3BCF0EEA6EE20C890C646CABC2C9">printHelp</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

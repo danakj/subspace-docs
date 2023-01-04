@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FPOptions</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FPOptions</h1>
+    <p>Defined at line 654 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="31029936C92BD9C4DE9AAE60D8F2830A2FCC9AB1">FPOptions</h3>
+      <p>public void FPOptions()</p>
+      <p>Defined at line 686 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="D0F9E679F58205D8584D2A694F0E79BDA0546A31">FPOptions</h3>
+      <p>public void FPOptions(const LangOptions &amp; LO)</p>
+      <p>Defined at line 691 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="4B2822071DB4E5E98F3EEA8F6170979D8E8780C4">allowFPContractWithinStatement</h3>
+      <p>public _Bool allowFPContractWithinStatement()</p>
+      <p>Defined at line 719 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="9C1DFFE29C1276916C26E8D7E6E26252F2892DBF">setAllowFPContractWithinStatement</h3>
+      <p>public void setAllowFPContractWithinStatement()</p>
+      <p>Defined at line 722 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="2A6C5BE52DA6082B0671829A31B8849996AED468">allowFPContractAcrossStatement</h3>
+      <p>public _Bool allowFPContractAcrossStatement()</p>
+      <p>Defined at line 726 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="3375F41735A072CD563632FB14832A07EDB87B38">setAllowFPContractAcrossStatement</h3>
+      <p>public void setAllowFPContractAcrossStatement()</p>
+      <p>Defined at line 729 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="632F1F185EB89BB9C4E793100C223A85A827962E">isFPConstrained</h3>
+      <p>public _Bool isFPConstrained()</p>
+      <p>Defined at line 733 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="BA4F7B69E37568F2BDE585C12C5AFD882EBA9A95">getRoundingMode</h3>
+      <p>
+        public 
+        <a href="../llvm/RoundingMode.html">RoundingMode</a>
+         getRoundingMode()
+      </p>
+      <p>Defined at line 739 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="4AFE9C2A636831DDD96023856891D2F98CCF66BE">getExceptionMode</h3>
+      <p>
+        public 
+        <a href="../clang/LangOptions/FPExceptionModeKind.html">FPExceptionModeKind</a>
+         getExceptionMode()
+      </p>
+      <p>Defined at line 751 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="17D1FB2D6E2D330894A328CB568A272FFB4575E6">operator==</h3>
+      <p>
+        public _Bool operator==(
+        <a href="FPOptions.html">FPOptions</a>
+         other)
+      </p>
+      <p>Defined at line 762 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="D335FB8865114B22768973AE06B12AFBA8A856D1">defaultWithoutTrailingStorage</h3>
+      <p>
+        public 
+        <a href="FPOptions.html">FPOptions</a>
+         defaultWithoutTrailingStorage(const LangOptions &amp; LO)
+      </p>
+      <div>
+        <div>
+          <p> Return the default value of FPOptions that&apos;s used when trailing storage isn&apos;t required.</p>
+        </div>
+      </div>
+      <h3 id="D220311961A822A1EC11F3CFA9CEC0BB33963CC1">getAsOpaqueInt</h3>
+      <p>public storage_type getAsOpaqueInt()</p>
+      <p>Defined at line 768 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="75534ADFB21C7BC9F6C1E873F739C5B0735E0EE8">getFromOpaqueInt</h3>
+      <p>
+        public 
+        <a href="FPOptions.html">FPOptions</a>
+         getFromOpaqueInt(storage_type Value)
+      </p>
+      <p>Defined at line 769 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="E4BE75367F657676CB55DDB2EC7D67EE3C807FEB">getChangesFrom</h3>
+      <p>
+        public 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         getChangesFrom(const FPOptions &amp; Base)
+      </p>
+      <p>Defined at line 908 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <div>
+        <div>
+          <p> Return difference with the given option set.</p>
+        </div>
+      </div>
+      <h3 id="C30617EE56ACDADD9AF6C3CC583E022F98A284E4">getFPContractMode</h3>
+      <p>
+        public 
+        <a href="../clang/LangOptions/FPModeKind.html">FPModeKind</a>
+         getFPContractMode()
+      </p>
+      <p>Defined at line 16 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="E1E4E5C8F6F05B6C88B828A34422B8CD92DE6871">setFPContractMode</h3>
+      <p>
+        public void setFPContractMode(
+        <a href="../clang/LangOptions/FPModeKind.html">FPModeKind</a>
+         value)
+      </p>
+      <p>Defined at line 16 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="6907047AF167BA5BDC6923F977E5A66E6AA1ACA2">getRoundingMath</h3>
+      <p>public _Bool getRoundingMath()</p>
+      <p>Defined at line 17 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="7C4E43B0AB0CF57C2D020614DDEC334766495A04">setRoundingMath</h3>
+      <p>public void setRoundingMath(_Bool value)</p>
+      <p>Defined at line 17 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="BF56379E5031CA775F8CD1EF067078BDE52B0F5C">getConstRoundingMode</h3>
+      <p>
+        public 
+        <a href="../llvm/RoundingMode.html">RoundingMode</a>
+         getConstRoundingMode()
+      </p>
+      <p>Defined at line 18 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="F07A9B8098B209BA0FD5EEA4DF0BFEE4D02EA251">setConstRoundingMode</h3>
+      <p>
+        public void setConstRoundingMode(
+        <a href="../llvm/RoundingMode.html">RoundingMode</a>
+         value)
+      </p>
+      <p>Defined at line 18 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="CEE759498CA2CDE2D9700947F3A0049BB21045F5">getSpecifiedExceptionMode</h3>
+      <p>
+        public 
+        <a href="../clang/LangOptions/FPExceptionModeKind.html">FPExceptionModeKind</a>
+         getSpecifiedExceptionMode()
+      </p>
+      <p>Defined at line 19 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="888C45DA0AA6B9AE11F6C09A984695A2652BD05B">setSpecifiedExceptionMode</h3>
+      <p>
+        public void setSpecifiedExceptionMode(
+        <a href="../clang/LangOptions/FPExceptionModeKind.html">FPExceptionModeKind</a>
+         value)
+      </p>
+      <p>Defined at line 19 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="35F093E08D9EEEA18CA2E778DA76B29F0266F401">getAllowFEnvAccess</h3>
+      <p>public _Bool getAllowFEnvAccess()</p>
+      <p>Defined at line 20 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="591A548B861E52344B72C541904B877C0D015C02">setAllowFEnvAccess</h3>
+      <p>public void setAllowFEnvAccess(_Bool value)</p>
+      <p>Defined at line 20 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="A16F3D675DDC59F7E3B0595AF9B87608A0F4DAD7">getAllowFPReassociate</h3>
+      <p>public _Bool getAllowFPReassociate()</p>
+      <p>Defined at line 21 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="DDE50EDBCD612378DBCDA0E3F83B36B6025DA774">setAllowFPReassociate</h3>
+      <p>public void setAllowFPReassociate(_Bool value)</p>
+      <p>Defined at line 21 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="12E025098FEA02555FBA88D4D5F4F099487EDDD3">getNoHonorNaNs</h3>
+      <p>public _Bool getNoHonorNaNs()</p>
+      <p>Defined at line 22 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="9B6089ECA25E80CC14C2417B1A93F8716015DC67">setNoHonorNaNs</h3>
+      <p>public void setNoHonorNaNs(_Bool value)</p>
+      <p>Defined at line 22 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="68C37113A60B9FFF28EEF3DF30A17D3581E3B7E5">getNoHonorInfs</h3>
+      <p>public _Bool getNoHonorInfs()</p>
+      <p>Defined at line 23 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="ED68569A1AD424B895374D1A618A6E44AF2D100D">setNoHonorInfs</h3>
+      <p>public void setNoHonorInfs(_Bool value)</p>
+      <p>Defined at line 23 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="1339F6EDA8988257DF4BE087607007FA6ADA4842">getNoSignedZero</h3>
+      <p>public _Bool getNoSignedZero()</p>
+      <p>Defined at line 24 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="80778D8ED27B6C8A192D1A4E5B82491EDE084CB8">setNoSignedZero</h3>
+      <p>public void setNoSignedZero(_Bool value)</p>
+      <p>Defined at line 24 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="A9A6E2431F49825A2DE420C907F5FFA5020581F4">getAllowReciprocal</h3>
+      <p>public _Bool getAllowReciprocal()</p>
+      <p>Defined at line 25 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="7E1B5E3451618EED1FE829910521C32E391DC3D6">setAllowReciprocal</h3>
+      <p>public void setAllowReciprocal(_Bool value)</p>
+      <p>Defined at line 25 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="222CF08B2EF70E7C5E1B74ED1B398637D8FD904D">getAllowApproxFunc</h3>
+      <p>public _Bool getAllowApproxFunc()</p>
+      <p>Defined at line 26 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="F8EEEB2DB047C67AE2453B23D3778E9483BB898F">setAllowApproxFunc</h3>
+      <p>public void setAllowApproxFunc(_Bool value)</p>
+      <p>Defined at line 26 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="C1006351D25577D417A96FABC60B7C8065908997">getFPEvalMethod</h3>
+      <p>
+        public 
+        <a href="../clang/LangOptions/FPEvalMethodKind.html">FPEvalMethodKind</a>
+         getFPEvalMethod()
+      </p>
+      <p>Defined at line 27 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="78D98D35F71BEE65A4645888CDB8E24E5416CB58">setFPEvalMethod</h3>
+      <p>
+        public void setFPEvalMethod(
+        <a href="../clang/LangOptions/FPEvalMethodKind.html">FPEvalMethodKind</a>
+         value)
+      </p>
+      <p>Defined at line 27 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="EBF580CD64B965C4A4FFD1F4760B0CED23B2974E">dump</h3>
+      <p>public void dump()</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#31029936C92BD9C4DE9AAE60D8F2830A2FCC9AB1">FPOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0F9E679F58205D8584D2A694F0E79BDA0546A31">FPOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B2822071DB4E5E98F3EEA8F6170979D8E8780C4">allowFPContractWithinStatement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C1DFFE29C1276916C26E8D7E6E26252F2892DBF">setAllowFPContractWithinStatement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A6C5BE52DA6082B0671829A31B8849996AED468">allowFPContractAcrossStatement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3375F41735A072CD563632FB14832A07EDB87B38">setAllowFPContractAcrossStatement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#632F1F185EB89BB9C4E793100C223A85A827962E">isFPConstrained</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA4F7B69E37568F2BDE585C12C5AFD882EBA9A95">getRoundingMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AFE9C2A636831DDD96023856891D2F98CCF66BE">getExceptionMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17D1FB2D6E2D330894A328CB568A272FFB4575E6">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D335FB8865114B22768973AE06B12AFBA8A856D1">defaultWithoutTrailingStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D220311961A822A1EC11F3CFA9CEC0BB33963CC1">getAsOpaqueInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75534ADFB21C7BC9F6C1E873F739C5B0735E0EE8">getFromOpaqueInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E4BE75367F657676CB55DDB2EC7D67EE3C807FEB">getChangesFrom</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C30617EE56ACDADD9AF6C3CC583E022F98A284E4">getFPContractMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1E4E5C8F6F05B6C88B828A34422B8CD92DE6871">setFPContractMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6907047AF167BA5BDC6923F977E5A66E6AA1ACA2">getRoundingMath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C4E43B0AB0CF57C2D020614DDEC334766495A04">setRoundingMath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF56379E5031CA775F8CD1EF067078BDE52B0F5C">getConstRoundingMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F07A9B8098B209BA0FD5EEA4DF0BFEE4D02EA251">setConstRoundingMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CEE759498CA2CDE2D9700947F3A0049BB21045F5">getSpecifiedExceptionMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#888C45DA0AA6B9AE11F6C09A984695A2652BD05B">setSpecifiedExceptionMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35F093E08D9EEEA18CA2E778DA76B29F0266F401">getAllowFEnvAccess</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#591A548B861E52344B72C541904B877C0D015C02">setAllowFEnvAccess</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A16F3D675DDC59F7E3B0595AF9B87608A0F4DAD7">getAllowFPReassociate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DDE50EDBCD612378DBCDA0E3F83B36B6025DA774">setAllowFPReassociate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12E025098FEA02555FBA88D4D5F4F099487EDDD3">getNoHonorNaNs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B6089ECA25E80CC14C2417B1A93F8716015DC67">setNoHonorNaNs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68C37113A60B9FFF28EEF3DF30A17D3581E3B7E5">getNoHonorInfs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED68569A1AD424B895374D1A618A6E44AF2D100D">setNoHonorInfs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1339F6EDA8988257DF4BE087607007FA6ADA4842">getNoSignedZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#80778D8ED27B6C8A192D1A4E5B82491EDE084CB8">setNoSignedZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9A6E2431F49825A2DE420C907F5FFA5020581F4">getAllowReciprocal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E1B5E3451618EED1FE829910521C32E391DC3D6">setAllowReciprocal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#222CF08B2EF70E7C5E1B74ED1B398637D8FD904D">getAllowApproxFunc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8EEEB2DB047C67AE2453B23D3778E9483BB898F">setAllowApproxFunc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1006351D25577D417A96FABC60B7C8065908997">getFPEvalMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78D98D35F71BEE65A4645888CDB8E24E5416CB58">setFPEvalMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EBF580CD64B965C4A4FFD1F4760B0CED23B2974E">dump</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

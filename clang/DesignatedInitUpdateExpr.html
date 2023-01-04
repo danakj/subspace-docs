@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DesignatedInitUpdateExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DesignatedInitUpdateExpr</h1>
+    <p>Defined at line 5373 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> In cases like:   struct Q { int a, b, c; };   Q *getQ();   void foo() {     struct A { Q q; } a = { *getQ(), .q.b = 3 };   }</p>
+        <p> We will have an InitListExpr for a, with type A, and then a DesignatedInitUpdateExpr for &quot;a.q&quot; with type Q. The &quot;base&quot; for this DIUE is the call expression *getQ(); the &quot;updater&quot; for the DIUE is &quot;.q.b = 3&quot;</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="30C72A58961CD9EA5C2D9481C17C8BDF59A5182E">DesignatedInitUpdateExpr</h3>
+      <p>
+        public void DesignatedInitUpdateExpr(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         lBraceLoc, Expr * baseExprs, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         rBraceLoc)
+      </p>
+      <h3 id="C87F040D15496EB3B1EDC68D85F9948606B7BFB6">DesignatedInitUpdateExpr</h3>
+      <p>
+        public void DesignatedInitUpdateExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 5382 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2764CC6ECD214A679DF7401342A817A2EF4FB481">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <h3 id="5C49DF7ED1B78DE105E9C714A967D259DC590E5D">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <h3 id="977C8A4898F0A8EFF9D4D0689A8BBC9C9B6F8347">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 5388 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C22A553FE17A14BD0B12322EE961F7CBEE565D77">getBase</h3>
+      <p>public Expr * getBase()</p>
+      <p>Defined at line 5392 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="36A8238C6BBC66D67D8D6EA093506D93F5EACFC0">setBase</h3>
+      <p>public void setBase(Expr * Base)</p>
+      <p>Defined at line 5393 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B7B5F63242BEEA94B66C2A908C3BD981E739ED44">getUpdater</h3>
+      <p>public InitListExpr * getUpdater()</p>
+      <p>Defined at line 5395 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E2051766B02F7B91FE5BDAF041B8962CF04DF296">setUpdater</h3>
+      <p>public void setUpdater(Expr * Updater)</p>
+      <p>Defined at line 5398 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="43A8D1DB413C025705F5BD35CE0BFA6133EB178B">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 5402 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators children = the base and the updater</p>
+        </div>
+      </div>
+      <h3 id="0218525FFA854939DEF6C3EC31EF036D452CB048">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 5405 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#30C72A58961CD9EA5C2D9481C17C8BDF59A5182E">DesignatedInitUpdateExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C87F040D15496EB3B1EDC68D85F9948606B7BFB6">DesignatedInitUpdateExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2764CC6ECD214A679DF7401342A817A2EF4FB481">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5C49DF7ED1B78DE105E9C714A967D259DC590E5D">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#977C8A4898F0A8EFF9D4D0689A8BBC9C9B6F8347">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C22A553FE17A14BD0B12322EE961F7CBEE565D77">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#36A8238C6BBC66D67D8D6EA093506D93F5EACFC0">setBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7B5F63242BEEA94B66C2A908C3BD981E739ED44">getUpdater</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2051766B02F7B91FE5BDAF041B8962CF04DF296">setUpdater</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#43A8D1DB413C025705F5BD35CE0BFA6133EB178B">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0218525FFA854939DEF6C3EC31EF036D452CB048">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

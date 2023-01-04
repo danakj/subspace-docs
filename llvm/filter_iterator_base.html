@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class filter_iterator_base</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class filter_iterator_base</h1>
+    <p>Defined at line 509 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    <div>
+      <div>
+        <p> An iterator adaptor that filters the elements of given inner iterators.</p>
+        <p> The predicate parameter should be a callable object that accepts the wrapped iterator&apos;s reference type and returns a bool. When incrementing or decrementing the iterator, it will call the predicate on each element and skip any where it returns false.</p>
+        <p> Note: filter_iterator_base implements support for forward iteration. filter_iterator_impl exists to provide support for bidirectional iteration, conditional on whether the wrapped iterator supports it.</p>
+      </div>
+    </div>
+    <p>Inherits from iterator_adaptor_base&lt;filter_iterator_base&lt;WrappedIteratorT, PredicateT, IterTag&gt;, WrappedIteratorT, std::common_type_t&lt;IterTag, typename std::iterator_traits&lt;WrappedIteratorT&gt;::iterator_category&gt; &gt;</p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected WrappedIteratorT End</li>
+      <li>protected PredicateT Pred</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="1C732AFC7953A64CB0E5C8F1AF43E444D1BFA47B">findNextValid</h3>
+      <p>protected void findNextValid()</p>
+      <p>Defined at line 522 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="CF404EE23CE2C111A287DF5686D5C007DEFD9CB0">filter_iterator_base&lt;WrappedIteratorT, PredicateT, IterTag&gt;</h3>
+      <p>protected void filter_iterator_base&lt;WrappedIteratorT, PredicateT, IterTag&gt;(WrappedIteratorT Begin, WrappedIteratorT End, PredicateT Pred)</p>
+      <p>Defined at line 530 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Construct the iterator. The begin iterator needs to know where the end is, so that it can properly stop when it gets there. The end iterator only needs the predicate to support bidirectional iteration.</p>
+        </div>
+      </div>
+      <h3 id="0F47D67DE44559AC5DED20A7ED363DF4240E495C">operator++</h3>
+      <p>public filter_iterator_base&lt;WrappedIteratorT, PredicateT, IterTag&gt; &amp; operator++()</p>
+      <p>Defined at line 539 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="2465AC83F9D9AF0165F739CF28FCC34C640DA440">operator*</h3>
+      <p>public decltype(auto) operator*()</p>
+      <p>Defined at line 545 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="0E1358334F6B6B1F63B31696C9FFCCC6F2F4F19A">operator-&gt;</h3>
+      <p>public decltype(auto) operator-&gt;()</p>
+      <p>Defined at line 550 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#1C732AFC7953A64CB0E5C8F1AF43E444D1BFA47B">findNextValid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF404EE23CE2C111A287DF5686D5C007DEFD9CB0">filter_iterator_base&lt;WrappedIteratorT, PredicateT, IterTag&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F47D67DE44559AC5DED20A7ED363DF4240E495C">operator++</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2465AC83F9D9AF0165F739CF28FCC34C640DA440">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E1358334F6B6B1F63B31696C9FFCCC6F2F4F19A">operator-&gt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

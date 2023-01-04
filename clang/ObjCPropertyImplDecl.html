@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCPropertyImplDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCPropertyImplDecl</h1>
+    <p>Defined at line 2769 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    <div>
+      <div>
+        <p> ObjCPropertyImplDecl - Represents implementation declaration of a property in a class or category implementation block. For example:@synthesize prop1 = ivar1;</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Decl.html">Decl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="6D0D87D96039F02BB8BC95A7EED5B5AEFABD02AF">Create</h3>
+      <p>
+        public ObjCPropertyImplDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         atLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, ObjCPropertyDecl * property, 
+        <a href="../clang/ObjCPropertyImplDecl/Kind.html">Kind</a>
+         PK, ObjCIvarDecl * ivarDecl, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ivarLoc)
+      </p>
+      <h3 id="ED5F79AC349C06C8CE8138664B1152ECE9D586BC">CreateDeserialized</h3>
+      <p>public ObjCPropertyImplDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="99EF33FA04562A64BA8EBCBF51F53E322372F94E">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <h3 id="A11C9E5A7B04F5C67DF2E0536C2CD05830A7217B">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2830 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="ACAC085B9D426E34207A261F512B9E217D94D2FC">setAtLoc</h3>
+      <p>
+        public void setAtLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 2831 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="FCD113C9CEC92D92071FCAE6F911C3B2606BFAFB">getPropertyDecl</h3>
+      <p>public ObjCPropertyDecl * getPropertyDecl()</p>
+      <p>Defined at line 2833 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="6847DDF9E126FA1CE1AFC2926EE43ECB3AB81052">setPropertyDecl</h3>
+      <p>public void setPropertyDecl(ObjCPropertyDecl * Prop)</p>
+      <p>Defined at line 2836 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="60790BF135FE4AA1190E85E7867DCC055F6EAB7C">getPropertyImplementation</h3>
+      <p>
+        public 
+        <a href="../clang/ObjCPropertyImplDecl/Kind.html">Kind</a>
+         getPropertyImplementation()
+      </p>
+      <p>Defined at line 2838 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="83ED0890E05197D2E78FC6DAFE27DB0562246B94">getPropertyIvarDecl</h3>
+      <p>public ObjCIvarDecl * getPropertyIvarDecl()</p>
+      <p>Defined at line 2842 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="E29055FFB6D0970EF8E13D63CCD281CA97E2E109">getPropertyIvarDeclLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getPropertyIvarDeclLoc()
+      </p>
+      <p>Defined at line 2845 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="E65027499AB4F8416C3A5E3E1BE16A8168E8CD46">setPropertyIvarDecl</h3>
+      <p>
+        public void setPropertyIvarDecl(ObjCIvarDecl * Ivar, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IvarLoc)
+      </p>
+      <p>Defined at line 2847 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="C4ECB6DA79C051125255EEA73990403E8A6C16EF">isIvarNameSpecified</h3>
+      <p>public _Bool isIvarNameSpecified()</p>
+      <p>Defined at line 2860 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> For @synthesize, returns true if an ivar name was explicitly specified.</p>
+        </div>
+      </div>
+      <h3 id="2338ECC9EF8787BCF0070728A46EEC6A3BD9B729">getGetterMethodDecl</h3>
+      <p>public ObjCMethodDecl * getGetterMethodDecl()</p>
+      <p>Defined at line 2864 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="37A5C92452BBFD6849B8123BBC6AFDCA4FAD2CF1">setGetterMethodDecl</h3>
+      <p>public void setGetterMethodDecl(ObjCMethodDecl * MD)</p>
+      <p>Defined at line 2865 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="A5ACC35E3A3F131D2D1A7F64CDFDA8190F696901">getSetterMethodDecl</h3>
+      <p>public ObjCMethodDecl * getSetterMethodDecl()</p>
+      <p>Defined at line 2867 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="474A207A9D3333F8288E390BB9A3F597A50AFAC3">setSetterMethodDecl</h3>
+      <p>public void setSetterMethodDecl(ObjCMethodDecl * MD)</p>
+      <p>Defined at line 2868 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="C5BBFD9958DD349711A8C347EE8DE7E2E398F90C">getGetterCXXConstructor</h3>
+      <p>public Expr * getGetterCXXConstructor()</p>
+      <p>Defined at line 2870 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="B449C4241F1894A804340F922D440DACD606C5BD">setGetterCXXConstructor</h3>
+      <p>public void setGetterCXXConstructor(Expr * getterCXXConstructor)</p>
+      <p>Defined at line 2874 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="5A4F3F3FA15A6523452C296E3818496BD25A1169">getSetterCXXAssignment</h3>
+      <p>public Expr * getSetterCXXAssignment()</p>
+      <p>Defined at line 2878 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="C68834F4D8284734B4BBFA0BC4985BD551FF394B">setSetterCXXAssignment</h3>
+      <p>public void setSetterCXXAssignment(Expr * setterCXXAssignment)</p>
+      <p>Defined at line 2882 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="B0404BABE9DE42E0E3E37F333C70989DB53D8C27">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 2886 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="FCF2BE230CDCB432815AF99A2195303167832E78">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 2887 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="348BD1D105D1449E03AE6F53BC2AFFB9438DCC29">enum Kind</h3>
+      <ul>
+        <li>Synthesize</li>
+        <li>Dynamic</li>
+      </ul>
+      <p>Defined at line 2771 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6D0D87D96039F02BB8BC95A7EED5B5AEFABD02AF">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED5F79AC349C06C8CE8138664B1152ECE9D586BC">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99EF33FA04562A64BA8EBCBF51F53E322372F94E">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A11C9E5A7B04F5C67DF2E0536C2CD05830A7217B">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ACAC085B9D426E34207A261F512B9E217D94D2FC">setAtLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCD113C9CEC92D92071FCAE6F911C3B2606BFAFB">getPropertyDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6847DDF9E126FA1CE1AFC2926EE43ECB3AB81052">setPropertyDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#60790BF135FE4AA1190E85E7867DCC055F6EAB7C">getPropertyImplementation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83ED0890E05197D2E78FC6DAFE27DB0562246B94">getPropertyIvarDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E29055FFB6D0970EF8E13D63CCD281CA97E2E109">getPropertyIvarDeclLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E65027499AB4F8416C3A5E3E1BE16A8168E8CD46">setPropertyIvarDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4ECB6DA79C051125255EEA73990403E8A6C16EF">isIvarNameSpecified</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2338ECC9EF8787BCF0070728A46EEC6A3BD9B729">getGetterMethodDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37A5C92452BBFD6849B8123BBC6AFDCA4FAD2CF1">setGetterMethodDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A5ACC35E3A3F131D2D1A7F64CDFDA8190F696901">getSetterMethodDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#474A207A9D3333F8288E390BB9A3F597A50AFAC3">setSetterMethodDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5BBFD9958DD349711A8C347EE8DE7E2E398F90C">getGetterCXXConstructor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B449C4241F1894A804340F922D440DACD606C5BD">setGetterCXXConstructor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A4F3F3FA15A6523452C296E3818496BD25A1169">getSetterCXXAssignment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C68834F4D8284734B4BBFA0BC4985BD551FF394B">setSetterCXXAssignment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0404BABE9DE42E0E3E37F333C70989DB53D8C27">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCF2BE230CDCB432815AF99A2195303167832E78">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#348BD1D105D1449E03AE6F53BC2AFFB9438DCC29">Kind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

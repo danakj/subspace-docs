@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MemberSpecializationInfo</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MemberSpecializationInfo</h1>
+    <p>Defined at line 630 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> Provides information a specialization of a member of a class template, which may be a member function, static data member, member class or member enumeration.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="18E6644EE533A0B0F91686769FCBC6575BDBC34F">MemberSpecializationInfo</h3>
+      <p>
+        public void MemberSpecializationInfo(NamedDecl * IF, 
+        <a href="TemplateSpecializationKind.html">TemplateSpecializationKind</a>
+         TSK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         POI)
+      </p>
+      <p>Defined at line 639 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="192C2F2EBB6FB4C8E0D0AD334F03019E20680F79">getInstantiatedFrom</h3>
+      <p>public NamedDecl * getInstantiatedFrom()</p>
+      <p>Defined at line 649 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the member declaration from which this member was instantiated.</p>
+        </div>
+      </div>
+      <h3 id="2801B4828C4D7945B1004AE38ED662F05DD5F955">getTemplateSpecializationKind</h3>
+      <p>
+        public 
+        <a href="TemplateSpecializationKind.html">TemplateSpecializationKind</a>
+         getTemplateSpecializationKind()
+      </p>
+      <p>Defined at line 652 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Determine what kind of template specialization this is.</p>
+        </div>
+      </div>
+      <h3 id="B69D88408C18CD594D84E2D092A4D84C911690FF">isExplicitSpecialization</h3>
+      <p>public _Bool isExplicitSpecialization()</p>
+      <p>Defined at line 656 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="EBD3E0CC808CA5B56419B29E67FF0E080154E6FF">setTemplateSpecializationKind</h3>
+      <p>
+        public void setTemplateSpecializationKind(
+        <a href="TemplateSpecializationKind.html">TemplateSpecializationKind</a>
+         TSK)
+      </p>
+      <p>Defined at line 661 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Set the template specialization kind.</p>
+        </div>
+      </div>
+      <h3 id="38F5CACC5C16F0533BFB9B89BFD6066537636759">getPointOfInstantiation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getPointOfInstantiation()
+      </p>
+      <p>Defined at line 670 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the first point of instantiation of this member. If the point of instantiation is an invalid location, then this member has not yet been instantiated.</p>
+        </div>
+      </div>
+      <h3 id="78E97AD1C0E1EF264E4B28030F245B06368021F3">setPointOfInstantiation</h3>
+      <p>
+        public void setPointOfInstantiation(
+        <a href="SourceLocation.html">SourceLocation</a>
+         POI)
+      </p>
+      <p>Defined at line 675 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Set the first point of instantiation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#18E6644EE533A0B0F91686769FCBC6575BDBC34F">MemberSpecializationInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#192C2F2EBB6FB4C8E0D0AD334F03019E20680F79">getInstantiatedFrom</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2801B4828C4D7945B1004AE38ED662F05DD5F955">getTemplateSpecializationKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B69D88408C18CD594D84E2D092A4D84C911690FF">isExplicitSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EBD3E0CC808CA5B56419B29E67FF0E080154E6FF">setTemplateSpecializationKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38F5CACC5C16F0533BFB9B89BFD6066537636759">getPointOfInstantiation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78E97AD1C0E1EF264E4B28030F245B06368021F3">setPointOfInstantiation</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

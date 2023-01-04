@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ScopedFakeTestPartResultReporter</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ScopedFakeTestPartResultReporter</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-spi.h#55">55</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-spi.h">gtest-spi.h</a>
+    </p>
+    <div>
+      <div>
+        <p> This helper class can be used to mock out Google Test failure reporting so that we can test Google Test or code that builds on Google Test.</p>
+        <p> An object of this class appends a TestPartResult object to the TestPartResultArray object given in the constructor whenever a Google Test failure is reported. It can either intercept only failures that are generated in the same thread that created this object or it can intercept all generated failures. The scope of this mock object can be controlled with the second argument to the two arguments constructor.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TestPartResultReporterInterface.html">TestPartResultReporterInterface</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="EB5696FFA6256932B32A37397E6E3D7E665CF1A1">ScopedFakeTestPartResultReporter</h3>
+      <p>public void ScopedFakeTestPartResultReporter(TestPartResultArray * result)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#790">790</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> The c&apos;tor sets this object as the test part result reporter used by Google Test.  The &apos;result&apos; parameter specifies where to report the results. This reporter will only catch failures generated in the current thread. DEPRECATED</p>
+        </div>
+        <div>
+          <p> The c&apos;tor sets this object as the test part result reporter used by Google Test.  The &apos;result&apos; parameter specifies where to report the results. Intercepts only failures from the current thread.</p>
+        </div>
+      </div>
+      <h3 id="3CDF84469DF8F89320B82DDC521859F4160C9F17">ScopedFakeTestPartResultReporter</h3>
+      <p>
+        public void ScopedFakeTestPartResultReporter(
+        <a href="../testing/ScopedFakeTestPartResultReporter/InterceptMode.html">InterceptMode</a>
+         intercept_mode, TestPartResultArray * result)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#800">800</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Same as above, but you can choose the interception scope of this object.</p>
+        </div>
+        <div>
+          <p> The c&apos;tor sets this object as the test part result reporter used by Google Test.  The &apos;result&apos; parameter specifies where to report the results.</p>
+        </div>
+      </div>
+      <h3 id="070F5F91409626FF9EBC6F92F2E97E7F862EAEBE">~ScopedFakeTestPartResultReporter</h3>
+      <p>public void ~ScopedFakeTestPartResultReporter()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#820">820</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> The d&apos;tor restores the previous test part result reporter.</p>
+        </div>
+        <div>
+          <p> The d&apos;tor restores the test part result reporter used by Google Test before.</p>
+        </div>
+      </div>
+      <h3 id="37320A2220C53992BDA375ED88019B766BB8179C">ReportTestPartResult</h3>
+      <p>public void ReportTestPartResult(const TestPartResult &amp; result)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#831">831</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Appends the TestPartResult object to the TestPartResultArray received in the constructor.</p>
+          <p> This method is from the TestPartResultReporterInterface interface.</p>
+        </div>
+        <div>
+          <p> Increments the test part result count and remembers the result. This method is from the TestPartResultReporterInterface interface.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="5690AE8C5DE805B491B6119EEFF44EBF488487EC">enum InterceptMode</h3>
+      <ul>
+        <li>INTERCEPT_ONLY_CURRENT_THREAD</li>
+        <li>INTERCEPT_ALL_THREADS</li>
+      </ul>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-spi.h#59">59</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-spi.h">gtest-spi.h</a>
+      </p>
+      <div>
+        <div>
+          <p> The two possible mocking modes of this object.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#EB5696FFA6256932B32A37397E6E3D7E665CF1A1">ScopedFakeTestPartResultReporter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3CDF84469DF8F89320B82DDC521859F4160C9F17">ScopedFakeTestPartResultReporter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#070F5F91409626FF9EBC6F92F2E97E7F862EAEBE">~ScopedFakeTestPartResultReporter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37320A2220C53992BDA375ED88019B766BB8179C">ReportTestPartResult</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5690AE8C5DE805B491B6119EEFF44EBF488487EC">InterceptMode</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

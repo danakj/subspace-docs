@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TestPartResult</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TestPartResult</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#49">49</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+    </p>
+    <div>
+      <div>
+        <p> A copyable object representing the result of a test part (i.e. an assertion or an explicit FAIL(), ADD_FAILURE(), or SUCCESS()).</p>
+        <p> Don&apos;t inherit from TestPartResult as its destructor is not virtual.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="10D4DE6D1D07AD0B3DA97513329F8779F761D7FB">TestPartResult</h3>
+      <p>
+        public void TestPartResult(
+        <a href="../testing/TestPartResult/Type.html">Type</a>
+         a_type, const char * a_file_name, int a_line_number, const char * a_message)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#63">63</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> C&apos;tor.  TestPartResult does NOT have a default constructor. Always use this constructor (with parameters) to create a TestPartResult object.</p>
+        </div>
+      </div>
+      <h3 id="AD29B2DB350B02839793BACF9934D7E626DA5B08">type</h3>
+      <p>
+        public 
+        <a href="../testing/TestPartResult/Type.html">Type</a>
+         type()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#72">72</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the outcome of the test part.</p>
+        </div>
+      </div>
+      <h3 id="86ADF0DBF412F28BF23FCCF0105ADE855F72B55D">file_name</h3>
+      <p>public const char * file_name()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#76">76</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the name of the source file where the test part took place, or NULL if it&apos;s unknown.</p>
+        </div>
+      </div>
+      <h3 id="D6DD0BD34B9A73A37BFCD8F2000AF33CAE842E28">line_number</h3>
+      <p>public int line_number()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#82">82</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the line in the source file where the test part took place, or -1 if it&apos;s unknown.</p>
+        </div>
+      </div>
+      <h3 id="F8AABBEA7D94E7922F9220EB4ADC637285FB3E26">summary</h3>
+      <p>public const char * summary()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#85">85</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the summary of the failure message.</p>
+        </div>
+      </div>
+      <h3 id="4FA0EEC731D9584DC9494517C92E4E25B987A2D1">message</h3>
+      <p>public const char * message()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#88">88</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the message associated with the test part.</p>
+        </div>
+      </div>
+      <h3 id="162D874F9B028CC9F3FCCB1818CD5C8A2901ABB9">skipped</h3>
+      <p>public _Bool skipped()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#91">91</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test part was skipped.</p>
+        </div>
+      </div>
+      <h3 id="D8385C145B2B0E49034EC1F3082452005A4DEB1E">passed</h3>
+      <p>public _Bool passed()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#94">94</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test part passed.</p>
+        </div>
+      </div>
+      <h3 id="3A11E22976B4173FF6D8342A1B320A4EEBD4A865">nonfatally_failed</h3>
+      <p>public _Bool nonfatally_failed()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#97">97</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test part non-fatally failed.</p>
+        </div>
+      </div>
+      <h3 id="22DA79F86131357354B7C7ACFF5F3F624E484170">fatally_failed</h3>
+      <p>public _Bool fatally_failed()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#100">100</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test part fatally failed.</p>
+        </div>
+      </div>
+      <h3 id="FF7BA49D2AF90147CD55909D2634565D0B77A4D5">failed</h3>
+      <p>public _Bool failed()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#103">103</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test part failed.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="636288B6EB60B5A0BFFAD3501EC1502F6206DAEC">enum Type</h3>
+      <ul>
+        <li>kSuccess</li>
+        <li>kNonFatalFailure</li>
+        <li>kFatalFailure</li>
+        <li>kSkip</li>
+      </ul>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h#53">53</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-test-part.h">gtest-test-part.h</a>
+      </p>
+      <div>
+        <div>
+          <p> The possible outcomes of a test part (i.e. an assertion or an explicit SUCCEED(), FAIL(), or ADD_FAILURE()).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#10D4DE6D1D07AD0B3DA97513329F8779F761D7FB">TestPartResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD29B2DB350B02839793BACF9934D7E626DA5B08">type</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86ADF0DBF412F28BF23FCCF0105ADE855F72B55D">file_name</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6DD0BD34B9A73A37BFCD8F2000AF33CAE842E28">line_number</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8AABBEA7D94E7922F9220EB4ADC637285FB3E26">summary</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FA0EEC731D9584DC9494517C92E4E25B987A2D1">message</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#162D874F9B028CC9F3FCCB1818CD5C8A2901ABB9">skipped</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8385C145B2B0E49034EC1F3082452005A4DEB1E">passed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A11E22976B4173FF6D8342A1B320A4EEBD4A865">nonfatally_failed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22DA79F86131357354B7C7ACFF5F3F624E484170">fatally_failed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF7BA49D2AF90147CD55909D2634565D0B77A4D5">failed</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#636288B6EB60B5A0BFFAD3501EC1502F6206DAEC">Type</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

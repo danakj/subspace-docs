@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace __private</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/num/__private" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace __private</h1>
+    <div>
+      <div>
+        <p> Based on https://doc.rust-lang.org/nightly/src/core/num/int_log10.rs.html</p>
+      </div>
+    </div>
+    <h2 id="Namespaces">Namespaces</h2>
+    <ul>
+      <li>
+        <a href="int_log10/index.html">int_log10</a>
+      </li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="OverflowOut.html">OverflowOut</a>
+      </li>
+      <li>
+        <a href="ptr_type.html">ptr_type</a>
+      </li>
+      <li>
+        <a href="ptr_type.html">ptr_type</a>
+      </li>
+      <li>
+        <a href="ptr_type.html">ptr_type</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="403AFC2658A8BDAE9A6B86FA20E39BDFF62FF06C">unchecked_sizeof</h3>
+      <p>uint32_t unchecked_sizeof()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#54">54</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> A sizeof() function that returns type uint32_t.</p>
+        </div>
+      </div>
+      <h3 id="FC233C6772922EA3AD686D3B40E1945A42BCA419">unchecked_neg</h3>
+      <p>T unchecked_neg(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#61">61</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="FC5238CBC8C6A79E60A9C7ACD469F3A00083B340">unchecked_not</h3>
+      <p>T unchecked_not(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#67">67</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="FCEBCB9E153EAD0448B7EE554097409F4B1FBA93">unchecked_add</h3>
+      <p>T unchecked_add(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#73">73</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="AA45FED28EA864F104BFC526616BD586FFAD1F27">unchecked_sub</h3>
+      <p>T unchecked_sub(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#79">79</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="F46E5B49F8E5499E7236C32F65C9E59D9FC0747B">unchecked_mul</h3>
+      <p>T unchecked_mul(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#85">85</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="8FA97C821A397F13C84751A151D3139DCE0993D6">unchecked_div</h3>
+      <p>T unchecked_div(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#91">91</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="29E932189E2DC143CBB5908B1A018F0FEED7A550">unchecked_rem</h3>
+      <p>T unchecked_rem(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#97">97</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="96037FD51B9D4D427EE23E3203B34C1DDFE53DA2">unchecked_and</h3>
+      <p>T unchecked_and(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#103">103</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="A835142C10F93014DFDAF1E8246117246550293F">unchecked_or</h3>
+      <p>T unchecked_or(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#109">109</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="06D4C1D22CA430EEB70B249647AC648036289CC6">unchecked_xor</h3>
+      <p>T unchecked_xor(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#115">115</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="5A703AC6B63F888210B4BB4F9501835033F1386A">unchecked_shl</h3>
+      <p>T unchecked_shl(T x, uint32_t y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#121">121</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="A067E6F0C2FBFDD3188FF7F8634E6C210C51F761">unchecked_shr</h3>
+      <p>T unchecked_shr(T x, uint32_t y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#127">127</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="AB1334E32D483E0A18EDACDE9351C94E177DCABE">num_bits</h3>
+      <p>uint32_t num_bits()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#133">133</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="11B04B3A61FCA656DCB3FD036C7556812656E91C">high_bit</h3>
+      <p>T high_bit()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#139">139</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="B89C0A1950EE10FF60D98B15FC475A9F8151E3B8">high_bit</h3>
+      <p>uint32_t high_bit()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#152">152</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="40F3AAAD344C845FC3BC96E04C23D510BA5F3734">high_bit</h3>
+      <p>uint64_t high_bit()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#158">158</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="CD08373A981986E5DE0A28AA35CB3A1E83D4A162">max_value</h3>
+      <p>T max_value()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#164">164</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="C2ED96F37F734439BDDE30AE6CA82665C80644A6">min_value</h3>
+      <p>T min_value()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#184">184</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="27FAF2A5A42AC684E2F1F31FC114EF3010079F78">epsilon</h3>
+      <p>T epsilon()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#197">197</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="15E7969EB5622E3E5CCFCF1317AE6DF06D32E1DC">count_ones</h3>
+      <p>uint32_t count_ones(T value)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#225">225</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="A55182CEEEC9C690422686D30723A3DC267CE1B2">leading_zeros_nonzero</h3>
+      <p>
+        uint32_t leading_zeros_nonzero(
+        <a href="../../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , T value)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#265">265</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="CA5E5F27C583609F2B2015A1ED7001EAB17916B6">leading_zeros</h3>
+      <p>uint32_t leading_zeros(T value)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#346">346</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="272D2D2EA19E43702EC0C866034797144B65BC7D">trailing_zeros_nonzero</h3>
+      <p>
+        uint32_t trailing_zeros_nonzero(
+        <a href="../../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , T value)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#360">360</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Counts the number of trailing zeros in a non-zero input.</p>
+          <p> # Safety This function produces Undefined Behaviour if passed a zero value.</p>
+          <p> TODO: Any way to make it constexpr?</p>
+        </div>
+      </div>
+      <h3 id="1DBC661CAB2A624451EDA013331485338A14AE7B">trailing_zeros</h3>
+      <p>uint32_t trailing_zeros(T value)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#409">409</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> TODO: Any way to make it constexpr?</p>
+        </div>
+      </div>
+      <h3 id="BAC5666099B5FBC2F89FF36BA082BF339E55767F">reverse_bits</h3>
+      <p>T reverse_bits(T value)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#417">417</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="A4C2D361D0EF78E8500AC3FF165EB518B680837A">rotate_left</h3>
+      <p>T rotate_left(T value, uint32_t n)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#445">445</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="F8949CE189A405DF23BE0AD9C14C096A8A48F6C2">rotate_right</h3>
+      <p>T rotate_right(T value, uint32_t n)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#456">456</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="6E48EC832824BBD70FE3DAA54B32E333B3CB487A">swap_bytes</h3>
+      <p>T swap_bytes(T value)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#468">468</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="EFBCBD3EF4ECA16EB84A4E1FD9CBE677A384A1B4">into_unsigned</h3>
+      <p>auto into_unsigned(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#528">528</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="0DA90168543436403B920B8FB7F42D756D52B9F1">into_widened</h3>
+      <p>auto into_widened(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#542">542</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="F05B22F7CF4D22AA4DC355C806AF0F47A8478445">into_signed</h3>
+      <p>auto into_signed(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#566">566</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="D40BF23EC495F0BCF1E3744D36ACF08E3E6983C7">sign_bit</h3>
+      <p>_Bool sign_bit(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#579">579</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="DC960643D0D1284F06CDF79402CC583A1D468733">add_with_overflow</h3>
+      <p>OverflowOut&lt;T&gt; add_with_overflow(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#593">593</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="77DF17AD1AD80EDC4CFA4F196AB222962DBEAFB2">add_with_overflow_signed</h3>
+      <p>OverflowOut&lt;T&gt; add_with_overflow_signed(T x, U y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#618">618</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="A8A9A3C33E91F79FFEBB6BF6917B1C6C3A80DC3E">add_with_overflow_unsigned</h3>
+      <p>OverflowOut&lt;T&gt; add_with_overflow_unsigned(T x, U y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#631">631</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="E194E3EEC105A390504C06FFCE3E84B773426A32">sub_with_overflow</h3>
+      <p>OverflowOut&lt;T&gt; sub_with_overflow(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#643">643</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="67B5E6D68ACF3750C9E71528DDEAC0013E7B5E89">sub_with_overflow_unsigned</h3>
+      <p>OverflowOut&lt;T&gt; sub_with_overflow_unsigned(T x, U y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#668">668</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="AFA960391C57A3535EE866C39E310AE3A7954776">mul_with_overflow</h3>
+      <p>OverflowOut&lt;T&gt; mul_with_overflow(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#680">680</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="6B9D6837598D81A2720EF0AE11CE0BE3CCE5EC5F">pow_with_overflow</h3>
+      <p>OverflowOut&lt;T&gt; pow_with_overflow(T base, uint32_t exp)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#777">777</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="4DEDFDFA6913504400BB50C7EDC74411AC39EEDB">shl_with_overflow</h3>
+      <p>OverflowOut&lt;T&gt; shl_with_overflow(T x, uint32_t shift)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#804">804</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="2FE2D1DC3EFB4D8DE7A4F6FFFE1B4E55A074E8DD">shr_with_overflow</h3>
+      <p>OverflowOut&lt;T&gt; shr_with_overflow(T x, uint32_t shift)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#837">837</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="E8E54914908D7DE582C53137F34B44F86CC805F5">saturating_add</h3>
+      <p>T saturating_add(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#869">869</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="6121268188E475C0833F236A7AF9745BF271C9DC">saturating_sub</h3>
+      <p>T saturating_sub(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#899">899</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="6EE537CE9A5857F39DB5B73B5A7396DF1A91E292">saturating_mul</h3>
+      <p>T saturating_mul(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#929">929</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="8AC452A69B7020F770EA2EB2BD51D0B42429CC9E">wrapping_add</h3>
+      <p>T wrapping_add(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#955">955</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="FBD231A40BE9F9CC226D07298C8D6A33FE3D0C74">wrapping_sub</h3>
+      <p>T wrapping_sub(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#970">970</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="FF8EC63E3B223C75828A871D6CCB2D6028FF3959">wrapping_mul</h3>
+      <p>T wrapping_mul(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#985">985</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="A8128F3F1ECC336DD3F7B05839B740E2EA2D3EDB">wrapping_pow</h3>
+      <p>T wrapping_pow(T base, uint32_t exp)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1000">1000</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="818D8854FA4D2F3972475348197706DD38C9DA76">one_less_than_next_power_of_two</h3>
+      <p>T one_less_than_next_power_of_two(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1026">1026</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns one less than next power of two. (For 8u8 next power of two is 8u8 and for 6u8 it is 8u8)</p>
+          <p> 8u8.one_less_than_next_power_of_two() == 7 6u8.one_less_than_next_power_of_two() == 7</p>
+          <p> This method cannot overflow, as in the `next_power_of_two` overflow cases it instead ends up returning the maximum value of the type, and can return 0 for 0.</p>
+        </div>
+      </div>
+      <h3 id="B61DFD8171597556DD33FD4031BAFA90DC226D4F">div_overflows</h3>
+      <p>_Bool div_overflows(T x, T y)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1043">1043</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="2B43CE2C679F554C19773590F46BF033C7B8E56A">div_overflows_nonzero</h3>
+      <p>
+        _Bool div_overflows_nonzero(
+        <a href="../../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , T x, T y)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1051">1051</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="669017BB13BF10DD40CDF06D21770B541B5F6177">div_euclid</h3>
+      <p>
+        T div_euclid(
+        <a href="../../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , T x, T y)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1061">1061</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> SAFETY: Requires that !div_overflows(x, y) or Undefined Behaviour results.</p>
+        </div>
+      </div>
+      <h3 id="8230013B72B942C2018ED35BC624AE2C46E9E700">rem_euclid</h3>
+      <p>
+        T rem_euclid(
+        <a href="../../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , T x, T y)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1075">1075</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> SAFETY: Requires that !div_overflows(x, y) or Undefined Behaviour results.</p>
+        </div>
+      </div>
+      <h3 id="B832755B28BE8190DFBD071D008EBD959A25ADAF">into_unsigned_integer</h3>
+      <p>auto into_unsigned_integer(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1089">1089</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="CF652D194803B33CFEA6E96467FC386049ACC578">into_float_constexpr</h3>
+      <p>
+        auto into_float_constexpr(
+        <a href="../../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , T x)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1103">1103</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Prefer the non-constexpr `into_float()` to avoid problems where you get a different value in a constexpr context from a runtime context. It&apos;s safe to call this function if the argument is not a NaN. Otherwise, you must ensure the NaN is exactly in the form that would be produced in a constexpr context in order to avoid problems.</p>
+        </div>
+      </div>
+      <h3 id="F9227F13C0B6E84FDEE8A8B29508BCCCB0CC8B64">into_float</h3>
+      <p>auto into_float(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1122">1122</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> This is NOT constexpr because it can produce different results in a constexpr context than in a runtime one. For example.</p>
+          <p> ``` constexpr float x = into_float(uint32_t{0x7f800001}); const float y = into_float(uint32_t{0x7f800001}); ``` In this case `x` is `7fc00001` (the quiet bit became set), but `y` is `0x7f800001`.</p>
+        </div>
+      </div>
+      <h3 id="90C4D5A2532AD59FA7F71F9CC4AE4C937D0BD50B">min_positive_value</h3>
+      <p>T min_positive_value()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1129">1129</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="0FC40D2041C50B01207330EA78CBD32D7FC276E7">min_exp</h3>
+      <p>int32_t min_exp()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1138">1138</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="83157ABC5B476AE292979423F581E34E42962C2D">max_exp</h3>
+      <p>int32_t max_exp()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1147">1147</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="92FA66A00B89FB2B473D0B525867410A8E8A3AE4">min_10_exp</h3>
+      <p>int32_t min_10_exp()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1156">1156</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="1867DB8C7A93B96361BE4ED1337B86F366E819CC">max_10_exp</h3>
+      <p>int32_t max_10_exp()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1165">1165</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="4B3E3355B5D773BE4C74987D4A5DB08B355F29E7">radix</h3>
+      <p>uint32_t radix()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1174">1174</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="F5EC8E3EFBC3F738CC87ADAF84B21BF11F80E683">num_mantissa_digits</h3>
+      <p>uint32_t num_mantissa_digits()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1180">1180</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="39A4622A700E299BA9618EF41865A03FC94E99BE">num_digits</h3>
+      <p>uint32_t num_digits()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1189">1189</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="70AE6CEFAB6E45D975AAC82652D10481AB93E2F2">nan</h3>
+      <p>T nan()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1198">1198</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="9DF7916640CA75EFFDD6D61142BAA697A90F19EE">infinity</h3>
+      <p>T infinity()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1211">1211</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="2D1047CB1A72B6E3CB8C683A2F59B9F32260312F">negative_infinity</h3>
+      <p>T negative_infinity()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1223">1223</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="A600801854A67A7E0AD4B0E82438FAB71F5E068E">exponent_bits</h3>
+      <p>int32_t exponent_bits(float x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1233">1233</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="CE56ACD7BA13F5D40019780C9444D5A3844BB616">exponent_bits</h3>
+      <p>int32_t exponent_bits(double x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1239">1239</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="49B797626B0930658B28DBF068765EF61EF1AB75">exponent_value</h3>
+      <p>int32_t exponent_value(float x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1246">1246</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="49793EC4C3DB650954DE2EA742D8647683E624AC">exponent_value</h3>
+      <p>int32_t exponent_value(double x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1250">1250</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="48C7F1BD404EB644CE1BD22B83558D7BD1CEAE9F">mantissa</h3>
+      <p>uint32_t mantissa(float x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1254">1254</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="206B095392A369A971938DE8099F68AF7AD6F89A">mantissa</h3>
+      <p>uint64_t mantissa(double x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1259">1259</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="02B732B10455AA215A28ECA99512D3EDA928FAEE">float_is_zero</h3>
+      <p>_Bool float_is_zero(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1267">1267</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="4D17D43FFC79C26BE573E1215D465BCF116A5546">float_is_inf</h3>
+      <p>_Bool float_is_inf(float x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1271">1271</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="E5045FAD3D25209128CEBAD06EBB9436EE30CDE5">float_is_inf</h3>
+      <p>_Bool float_is_inf(double x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1282">1282</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="890B2463764B1B649C575D6674FBCCAA74466F37">float_is_inf_or_nan</h3>
+      <p>_Bool float_is_inf_or_nan(float x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1292">1292</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="AA4F0FB00926A3A247C45EEE755802C6C7A35036">float_is_inf_or_nan</h3>
+      <p>_Bool float_is_inf_or_nan(double x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1297">1297</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="BE09F7BF6028DEAE5A76308DD8EE67C9BB9F3359">float_is_nan</h3>
+      <p>_Bool float_is_nan(float x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1302">1302</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="CB491294C96F6C05F3C236C3E36A0BE2ECAD3414">float_is_nan</h3>
+      <p>_Bool float_is_nan(double x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1312">1312</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="382184D3C77ACDC42EFC2CB43B8C17BE19F5B662">float_is_nan_quiet</h3>
+      <p>_Bool float_is_nan_quiet(float x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1323">1323</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Assumes that x is a NaN.</p>
+        </div>
+      </div>
+      <h3 id="841D96D436944A20E0E67EC7EE97EBD9D7B87A0A">float_is_nan_quiet</h3>
+      <p>_Bool float_is_nan_quiet(double x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1330">1330</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Assumes that x is a NaN.</p>
+        </div>
+      </div>
+      <h3 id="765C3EB3A73EBF86BA597165456E92C37ACD9779">float_nonzero_is_subnormal</h3>
+      <p>_Bool float_nonzero_is_subnormal(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1339">1339</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> This is only valid if the argument is not (positive or negative) zero.</p>
+        </div>
+      </div>
+      <h3 id="3D920253653F6D52D8027C4AFD560040426FAF3B">float_is_normal</h3>
+      <p>_Bool float_is_normal(float x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1343">1343</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="AFFDFBB9C986CB0ED31F6847295E255C8F965DDC">float_is_normal</h3>
+      <p>_Bool float_is_normal(double x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1350">1350</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="8FC130BE15059D4A56C532E3BC2A642489255552">truncate_float</h3>
+      <p>T truncate_float(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1359">1359</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="E1FF6A1D4FBA8D811F13649469DCF412A983D5B1">float_signbit</h3>
+      <p>_Bool float_signbit(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1390">1390</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="33E2A0C403B160B1A553ED0BB4E85AEE4CE9A89A">float_signum</h3>
+      <p>T float_signum(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1396">1396</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="A2006C79BAECA31E17379ACC68359089F88FD571">float_round</h3>
+      <p>T float_round(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1410">1410</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="D52E5D52B49A6F30048D13C78E0C224A66C4A5BA">float_category</h3>
+      <p>
+        <a href="../../../sus/num/FpCategory.html">FpCategory</a>
+         float_category(T x)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1422">1422</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <h3 id="13557B533EA700516484FF57835E18EA0B173C4F">float_clamp</h3>
+      <p>
+        T float_clamp(
+        <a href="../../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , T x, T min, T max)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h#1465">1465</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/intrinsics.h">intrinsics.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Requires that `min &lt;= max` and that `min` and `max` are not NaN or else this function produces Undefined Behaviour.</p>
+        </div>
+      </div>
+      <h3 id="48B82B16637F7CDD3BB8AD11CBAA0829FA1D398B">float_strong_ordering</h3>
+      <p>
+        <a href="../../../std/strong_ordering.html">strong_ordering</a>
+         float_strong_ordering(T l, T r)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/float_ordering.h#26">26</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./num/__private/float_ordering.h">float_ordering.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Namespaces">Namespaces</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#403AFC2658A8BDAE9A6B86FA20E39BDFF62FF06C">unchecked_sizeof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC233C6772922EA3AD686D3B40E1945A42BCA419">unchecked_neg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC5238CBC8C6A79E60A9C7ACD469F3A00083B340">unchecked_not</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCEBCB9E153EAD0448B7EE554097409F4B1FBA93">unchecked_add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA45FED28EA864F104BFC526616BD586FFAD1F27">unchecked_sub</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F46E5B49F8E5499E7236C32F65C9E59D9FC0747B">unchecked_mul</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8FA97C821A397F13C84751A151D3139DCE0993D6">unchecked_div</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#29E932189E2DC143CBB5908B1A018F0FEED7A550">unchecked_rem</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96037FD51B9D4D427EE23E3203B34C1DDFE53DA2">unchecked_and</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A835142C10F93014DFDAF1E8246117246550293F">unchecked_or</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#06D4C1D22CA430EEB70B249647AC648036289CC6">unchecked_xor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A703AC6B63F888210B4BB4F9501835033F1386A">unchecked_shl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A067E6F0C2FBFDD3188FF7F8634E6C210C51F761">unchecked_shr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB1334E32D483E0A18EDACDE9351C94E177DCABE">num_bits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11B04B3A61FCA656DCB3FD036C7556812656E91C">high_bit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B89C0A1950EE10FF60D98B15FC475A9F8151E3B8">high_bit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#40F3AAAD344C845FC3BC96E04C23D510BA5F3734">high_bit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD08373A981986E5DE0A28AA35CB3A1E83D4A162">max_value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2ED96F37F734439BDDE30AE6CA82665C80644A6">min_value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27FAF2A5A42AC684E2F1F31FC114EF3010079F78">epsilon</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15E7969EB5622E3E5CCFCF1317AE6DF06D32E1DC">count_ones</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A55182CEEEC9C690422686D30723A3DC267CE1B2">leading_zeros_nonzero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA5E5F27C583609F2B2015A1ED7001EAB17916B6">leading_zeros</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#272D2D2EA19E43702EC0C866034797144B65BC7D">trailing_zeros_nonzero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1DBC661CAB2A624451EDA013331485338A14AE7B">trailing_zeros</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BAC5666099B5FBC2F89FF36BA082BF339E55767F">reverse_bits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4C2D361D0EF78E8500AC3FF165EB518B680837A">rotate_left</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8949CE189A405DF23BE0AD9C14C096A8A48F6C2">rotate_right</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E48EC832824BBD70FE3DAA54B32E333B3CB487A">swap_bytes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFBCBD3EF4ECA16EB84A4E1FD9CBE677A384A1B4">into_unsigned</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0DA90168543436403B920B8FB7F42D756D52B9F1">into_widened</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F05B22F7CF4D22AA4DC355C806AF0F47A8478445">into_signed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D40BF23EC495F0BCF1E3744D36ACF08E3E6983C7">sign_bit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC960643D0D1284F06CDF79402CC583A1D468733">add_with_overflow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77DF17AD1AD80EDC4CFA4F196AB222962DBEAFB2">add_with_overflow_signed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8A9A3C33E91F79FFEBB6BF6917B1C6C3A80DC3E">add_with_overflow_unsigned</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E194E3EEC105A390504C06FFCE3E84B773426A32">sub_with_overflow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67B5E6D68ACF3750C9E71528DDEAC0013E7B5E89">sub_with_overflow_unsigned</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFA960391C57A3535EE866C39E310AE3A7954776">mul_with_overflow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B9D6837598D81A2720EF0AE11CE0BE3CCE5EC5F">pow_with_overflow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DEDFDFA6913504400BB50C7EDC74411AC39EEDB">shl_with_overflow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FE2D1DC3EFB4D8DE7A4F6FFFE1B4E55A074E8DD">shr_with_overflow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8E54914908D7DE582C53137F34B44F86CC805F5">saturating_add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6121268188E475C0833F236A7AF9745BF271C9DC">saturating_sub</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6EE537CE9A5857F39DB5B73B5A7396DF1A91E292">saturating_mul</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AC452A69B7020F770EA2EB2BD51D0B42429CC9E">wrapping_add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBD231A40BE9F9CC226D07298C8D6A33FE3D0C74">wrapping_sub</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF8EC63E3B223C75828A871D6CCB2D6028FF3959">wrapping_mul</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8128F3F1ECC336DD3F7B05839B740E2EA2D3EDB">wrapping_pow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#818D8854FA4D2F3972475348197706DD38C9DA76">one_less_than_next_power_of_two</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B61DFD8171597556DD33FD4031BAFA90DC226D4F">div_overflows</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B43CE2C679F554C19773590F46BF033C7B8E56A">div_overflows_nonzero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#669017BB13BF10DD40CDF06D21770B541B5F6177">div_euclid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8230013B72B942C2018ED35BC624AE2C46E9E700">rem_euclid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B832755B28BE8190DFBD071D008EBD959A25ADAF">into_unsigned_integer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF652D194803B33CFEA6E96467FC386049ACC578">into_float_constexpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9227F13C0B6E84FDEE8A8B29508BCCCB0CC8B64">into_float</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90C4D5A2532AD59FA7F71F9CC4AE4C937D0BD50B">min_positive_value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0FC40D2041C50B01207330EA78CBD32D7FC276E7">min_exp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83157ABC5B476AE292979423F581E34E42962C2D">max_exp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92FA66A00B89FB2B473D0B525867410A8E8A3AE4">min_10_exp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1867DB8C7A93B96361BE4ED1337B86F366E819CC">max_10_exp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B3E3355B5D773BE4C74987D4A5DB08B355F29E7">radix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F5EC8E3EFBC3F738CC87ADAF84B21BF11F80E683">num_mantissa_digits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39A4622A700E299BA9618EF41865A03FC94E99BE">num_digits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70AE6CEFAB6E45D975AAC82652D10481AB93E2F2">nan</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9DF7916640CA75EFFDD6D61142BAA697A90F19EE">infinity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D1047CB1A72B6E3CB8C683A2F59B9F32260312F">negative_infinity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A600801854A67A7E0AD4B0E82438FAB71F5E068E">exponent_bits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE56ACD7BA13F5D40019780C9444D5A3844BB616">exponent_bits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49B797626B0930658B28DBF068765EF61EF1AB75">exponent_value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49793EC4C3DB650954DE2EA742D8647683E624AC">exponent_value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48C7F1BD404EB644CE1BD22B83558D7BD1CEAE9F">mantissa</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#206B095392A369A971938DE8099F68AF7AD6F89A">mantissa</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02B732B10455AA215A28ECA99512D3EDA928FAEE">float_is_zero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D17D43FFC79C26BE573E1215D465BCF116A5546">float_is_inf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5045FAD3D25209128CEBAD06EBB9436EE30CDE5">float_is_inf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#890B2463764B1B649C575D6674FBCCAA74466F37">float_is_inf_or_nan</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA4F0FB00926A3A247C45EEE755802C6C7A35036">float_is_inf_or_nan</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE09F7BF6028DEAE5A76308DD8EE67C9BB9F3359">float_is_nan</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB491294C96F6C05F3C236C3E36A0BE2ECAD3414">float_is_nan</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#382184D3C77ACDC42EFC2CB43B8C17BE19F5B662">float_is_nan_quiet</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#841D96D436944A20E0E67EC7EE97EBD9D7B87A0A">float_is_nan_quiet</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#765C3EB3A73EBF86BA597165456E92C37ACD9779">float_nonzero_is_subnormal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D920253653F6D52D8027C4AFD560040426FAF3B">float_is_normal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFFDFBB9C986CB0ED31F6847295E255C8F965DDC">float_is_normal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8FC130BE15059D4A56C532E3BC2A642489255552">truncate_float</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1FF6A1D4FBA8D811F13649469DCF412A983D5B1">float_signbit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33E2A0C403B160B1A553ED0BB4E85AEE4CE9A89A">float_signum</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2006C79BAECA31E17379ACC68359089F88FD571">float_round</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D52E5D52B49A6F30048D13C78E0C224A66C4A5BA">float_category</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13557B533EA700516484FF57835E18EA0B173C4F">float_clamp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48B82B16637F7CDD3BB8AD11CBAA0829FA1D398B">float_strong_ordering</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

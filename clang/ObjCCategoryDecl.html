@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCCategoryDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCCategoryDecl</h1>
+    <p>Defined at line 2292 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    <div>
+      <div>
+        <p> ObjCCategoryDecl - Represents a category declaration. A category allows you to add methods to an existing class (without subclassing or modifying the original class interface or implementation:-). Categories don&apos;t allow you to add instance data. The following example adds &quot;myMethod&quot; to all NSView&apos;s within a process:</p>
+        <p>@interface NSView (MyViewMethods) - myMethod;@end</p>
+        <p> Categories also allow you to split the implementation of a class across several files (a feature more naturally supported in C++).</p>
+        <p> Categories were originally inspired by dynamic languages such as Common Lisp and Smalltalk.  More traditional class-based languages (C++, Java) don&apos;t support this level of dynamism, which is both powerful and dangerous.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ObjCContainerDecl.html">ObjCContainerDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="592D8AB62757837D45D2ED6292C2DABDF236FF21">Create</h3>
+      <p>
+        public ObjCCategoryDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         AtLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ClassNameLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         CategoryNameLoc, IdentifierInfo * Id, ObjCInterfaceDecl * IDecl, ObjCTypeParamList * typeParamList, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IvarLBraceLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IvarRBraceLoc)
+      </p>
+      <h3 id="E273AEF377040594F77D269AD6628F6772E77960">CreateDeserialized</h3>
+      <p>public ObjCCategoryDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="AD5AB6995BED3A8A244E02AF112B75148F985538">getClassInterface</h3>
+      <p>public ObjCInterfaceDecl * getClassInterface()</p>
+      <p>Defined at line 2337 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="D65C704A8422E59EA6D4506E692470461A168E03">getClassInterface</h3>
+      <p>public const ObjCInterfaceDecl * getClassInterface()</p>
+      <p>Defined at line 2338 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="67D5014F348635F00BC0A979CED367C59BDAD196">getTypeParamList</h3>
+      <p>public ObjCTypeParamList * getTypeParamList()</p>
+      <p>Defined at line 2342 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the type parameter list associated with this category or extension.</p>
+        </div>
+      </div>
+      <h3 id="F32CD7DABB21A3C46A9DF7C4DD78983B3B1742D6">setTypeParamList</h3>
+      <p>public void setTypeParamList(ObjCTypeParamList * TPL)</p>
+      <div>
+        <div>
+          <p> Set the type parameters of this category.</p>
+          <p> This function is used by the AST importer, which must import the type parameters after creating their DeclContext to avoid loops.</p>
+        </div>
+      </div>
+      <h3 id="76DBD3F3A017B6242268E7D0CE406390D74CC5BF">getImplementation</h3>
+      <p>public ObjCCategoryImplDecl * getImplementation()</p>
+      <h3 id="99E4C808B2B69B4CEDAF3934C437EB64D735B9AE">setImplementation</h3>
+      <p>public void setImplementation(ObjCCategoryImplDecl * ImplD)</p>
+      <h3 id="534DBB15F000E9D01A265FBB53693BD22F67890F">setProtocolList</h3>
+      <p>public void setProtocolList(ObjCProtocolDecl *const * List, unsigned int Num, const SourceLocation * Locs, ASTContext &amp; C)</p>
+      <p>Defined at line 2356 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> setProtocolList - Set the list of protocols that this interface implements.</p>
+        </div>
+      </div>
+      <h3 id="6B1E3F88CB99A792B7EBD472C490909E672C0992">getReferencedProtocols</h3>
+      <p>public const ObjCProtocolList &amp; getReferencedProtocols()</p>
+      <p>Defined at line 2361 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="386C8C65236BFDE3DFDE4E84E5660A752B1D9863">protocols</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         protocols()
+      </p>
+      <p>Defined at line 2368 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="99578DF22118818F5C1C67EF8E1376374DBC0400">protocol_begin</h3>
+      <p>public protocol_iterator protocol_begin()</p>
+      <p>Defined at line 2372 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="91D32073329277AE397AA075EFC561C8CE95809E">protocol_end</h3>
+      <p>public protocol_iterator protocol_end()</p>
+      <p>Defined at line 2376 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="C3AD5C515EBE942948C1649A4F4EDBF62234DDD8">protocol_size</h3>
+      <p>public unsigned int protocol_size()</p>
+      <p>Defined at line 2377 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="573B5B5DB1D8B3C7480F660FF610C6613D405745">protocol_locs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         protocol_locs()
+      </p>
+      <p>Defined at line 2382 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="ED04B382F25AB06B8BB31E90263898364287B1FE">protocol_loc_begin</h3>
+      <p>public protocol_loc_iterator protocol_loc_begin()</p>
+      <p>Defined at line 2386 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="506B08718D4CA6495671DBC226D31797DDBE52A7">protocol_loc_end</h3>
+      <p>public protocol_loc_iterator protocol_loc_end()</p>
+      <p>Defined at line 2390 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="C415BE2BEA0BD5F83C2E64A9FC0D5A4171BDC249">getNextClassCategory</h3>
+      <p>public ObjCCategoryDecl * getNextClassCategory()</p>
+      <p>Defined at line 2394 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="640B2A708F0A4034677C1A2A82AF5DB9DB7AEBBB">getNextClassCategoryRaw</h3>
+      <p>public ObjCCategoryDecl * getNextClassCategoryRaw()</p>
+      <p>Defined at line 2398 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the pointer to the next stored category (or extension), which may be hidden.</p>
+        </div>
+      </div>
+      <h3 id="438E9A47E4757294E0D3B1918446CF8929DBD9E2">IsClassExtension</h3>
+      <p>public _Bool IsClassExtension()</p>
+      <p>Defined at line 2402 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="A36137D159EE33E78C322E9B473E9A8A27F21942">ivars</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         ivars()
+      </p>
+      <p>Defined at line 2407 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="0B7561DE9A471E42AA22F8AB5ED53DFD6E1E4029">ivar_begin</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         ivar_begin()
+      </p>
+      <p>Defined at line 2409 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="14E1B96AF0EF8AF5BAC34A11783943D8F6C4DD5A">ivar_end</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         ivar_end()
+      </p>
+      <p>Defined at line 2413 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="358108B05E306B82DA52721616979D7B3464E362">ivar_size</h3>
+      <p>public unsigned int ivar_size()</p>
+      <p>Defined at line 2417 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="3D8EECCE2830AD68D5D624D0858471423E805C95">ivar_empty</h3>
+      <p>public _Bool ivar_empty()</p>
+      <p>Defined at line 2421 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="E699BAE1E8469DFF1C008182896F79057D921B96">getCategoryNameLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getCategoryNameLoc()
+      </p>
+      <p>Defined at line 2425 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="39918A28C2E9A1D6C2C22AB6B6803818A09C292F">setCategoryNameLoc</h3>
+      <p>
+        public void setCategoryNameLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 2426 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="F09494A2DDA553FD3E9A24D533ACD64D9DBB1AEF">setIvarLBraceLoc</h3>
+      <p>
+        public void setIvarLBraceLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 2428 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="1711E67C0173EB4F868861EDC907470FF3E48715">getIvarLBraceLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getIvarLBraceLoc()
+      </p>
+      <p>Defined at line 2429 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="FE88394AA3B872DE5B3EA1CF6A138742BB1FA198">setIvarRBraceLoc</h3>
+      <p>
+        public void setIvarRBraceLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 2430 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="0549B3B69806E1A8875AB646B2FEA4668C033F8F">getIvarRBraceLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getIvarRBraceLoc()
+      </p>
+      <p>Defined at line 2431 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="9ACB5E3BEB38A1A216CD741E382506DF7992FC3B">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 2433 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="8ED4F8B96026D52D2328F4ECB938EC0BF7C1A837">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 2434 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#592D8AB62757837D45D2ED6292C2DABDF236FF21">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E273AEF377040594F77D269AD6628F6772E77960">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD5AB6995BED3A8A244E02AF112B75148F985538">getClassInterface</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D65C704A8422E59EA6D4506E692470461A168E03">getClassInterface</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67D5014F348635F00BC0A979CED367C59BDAD196">getTypeParamList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F32CD7DABB21A3C46A9DF7C4DD78983B3B1742D6">setTypeParamList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76DBD3F3A017B6242268E7D0CE406390D74CC5BF">getImplementation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99E4C808B2B69B4CEDAF3934C437EB64D735B9AE">setImplementation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#534DBB15F000E9D01A265FBB53693BD22F67890F">setProtocolList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B1E3F88CB99A792B7EBD472C490909E672C0992">getReferencedProtocols</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#386C8C65236BFDE3DFDE4E84E5660A752B1D9863">protocols</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99578DF22118818F5C1C67EF8E1376374DBC0400">protocol_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#91D32073329277AE397AA075EFC561C8CE95809E">protocol_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3AD5C515EBE942948C1649A4F4EDBF62234DDD8">protocol_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#573B5B5DB1D8B3C7480F660FF610C6613D405745">protocol_locs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED04B382F25AB06B8BB31E90263898364287B1FE">protocol_loc_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#506B08718D4CA6495671DBC226D31797DDBE52A7">protocol_loc_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C415BE2BEA0BD5F83C2E64A9FC0D5A4171BDC249">getNextClassCategory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#640B2A708F0A4034677C1A2A82AF5DB9DB7AEBBB">getNextClassCategoryRaw</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#438E9A47E4757294E0D3B1918446CF8929DBD9E2">IsClassExtension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A36137D159EE33E78C322E9B473E9A8A27F21942">ivars</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B7561DE9A471E42AA22F8AB5ED53DFD6E1E4029">ivar_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14E1B96AF0EF8AF5BAC34A11783943D8F6C4DD5A">ivar_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#358108B05E306B82DA52721616979D7B3464E362">ivar_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D8EECCE2830AD68D5D624D0858471423E805C95">ivar_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E699BAE1E8469DFF1C008182896F79057D921B96">getCategoryNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39918A28C2E9A1D6C2C22AB6B6803818A09C292F">setCategoryNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F09494A2DDA553FD3E9A24D533ACD64D9DBB1AEF">setIvarLBraceLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1711E67C0173EB4F868861EDC907470FF3E48715">getIvarLBraceLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE88394AA3B872DE5B3EA1CF6A138742BB1FA198">setIvarRBraceLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0549B3B69806E1A8875AB646B2FEA4668C033F8F">getIvarRBraceLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9ACB5E3BEB38A1A216CD741E382506DF7992FC3B">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8ED4F8B96026D52D2328F4ECB938EC0BF7C1A837">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

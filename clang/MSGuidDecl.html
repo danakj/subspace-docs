@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MSGuidDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MSGuidDecl</h1>
+    <p>Defined at line 4200 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> A global _GUID constant. These are implicitly created by UuidAttrs.</p>
+        <p>   struct _declspec(uuid(&quot;01234567-89ab-cdef-0123-456789abcdef&quot;)) X{};</p>
+        <p> X is a CXXRecordDecl that contains a UuidAttr that references the (unique) MSGuidDecl for the specified UUID.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ValueDecl.html">ValueDecl</a>
+      , Mergeable&lt;MSGuidDecl&gt;, 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C6C8170911B57C7C3BFC1012C3822BDF8CE7533A">printName</h3>
+      <p>public void printName(llvm::raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <div>
+        <div>
+          <p> Print this UUID in a human-readable format.</p>
+        </div>
+      </div>
+      <h3 id="D556D79A6EC60E04B9EA25834A423CDDDCE67929">getParts</h3>
+      <p>
+        public 
+        <a href="MSGuidDeclParts.html">MSGuidDeclParts</a>
+         getParts()
+      </p>
+      <p>Defined at line 4232 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Get the decomposed parts of this declaration.</p>
+        </div>
+      </div>
+      <h3 id="53C50F485C95393663E65FE1AF035A44FD2E4B36">getAsAPValue</h3>
+      <p>public APValue &amp; getAsAPValue()</p>
+      <div>
+        <div>
+          <p> Get the value of this MSGuidDecl as an APValue. This may fail and return an absent APValue if the type of the declaration is not of the expected shape.</p>
+        </div>
+      </div>
+      <h3 id="7F01DF665C4B637F9AC98648F66F8B032CAF02C2">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="MSGuidDeclParts.html">MSGuidDeclParts</a>
+         P)
+      </p>
+      <p>Defined at line 4239 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="6B48916D60B603EC13ADA3E416F74B8BC45E3FC8">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 4245 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="7997BC39E727F387C799DFC220A89837026BA1C4">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 4247 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="A79BF67EA145BACD50829E2665C846F0692763A6">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 4248 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C6C8170911B57C7C3BFC1012C3822BDF8CE7533A">printName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D556D79A6EC60E04B9EA25834A423CDDDCE67929">getParts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53C50F485C95393663E65FE1AF035A44FD2E4B36">getAsAPValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F01DF665C4B637F9AC98648F66F8B032CAF02C2">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B48916D60B603EC13ADA3E416F74B8BC45E3FC8">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7997BC39E727F387C799DFC220A89837026BA1C4">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A79BF67EA145BACD50829E2665C846F0692763A6">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

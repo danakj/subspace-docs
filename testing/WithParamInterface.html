@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class WithParamInterface</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class WithParamInterface</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1846">1846</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+    </p>
+    <div>
+      <div>
+        <p> The pure interface class that all value-parameterized tests inherit from. A value-parameterized class must inherit from both ::testing::Test and ::testing::WithParamInterface. In most cases that just means inheriting from ::testing::TestWithParam, but more complicated test hierarchies may need to inherit from Test and WithParamInterface at different levels.</p>
+        <p> This interface has support for accessing the test parameter value via the GetParam() method.</p>
+        <p> Use it with one of the parameter generator defining functions, like Range(), Values(), ValuesIn(), Bool(), and Combine().</p>
+        <p> class FooTest : public ::testing::TestWithParam&lt;int&gt; {  protected:   FooTest() {     // Can use GetParam() here.   }   ~FooTest() override {     // Can use GetParam() here.   }   void SetUp() override {     // Can use GetParam() here.   }   void TearDown override {     // Can use GetParam() here.   } }; TEST_P(FooTest, DoesBar) {   // Can use GetParam() method here.   Foo foo;   ASSERT_TRUE(foo.DoesBar(GetParam())); } INSTANTIATE_TEST_SUITE_P(OneToTenRange, FooTest, ::testing::Range(1, 10));</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="DA107A78016FE571213B3BA83DD7F11763A2585D">~WithParamInterface&lt;T&gt;</h3>
+      <p>public void ~WithParamInterface&lt;T&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1849">1849</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <h3 id="D2F37A796D73F9E8AB83800AADC0A0C0D76AC8B2">GetParam</h3>
+      <p>public const ParamType &amp; GetParam()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1853">1853</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> The current parameter value. Is also available in the test fixture&apos;s constructor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#DA107A78016FE571213B3BA83DD7F11763A2585D">~WithParamInterface&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2F37A796D73F9E8AB83800AADC0A0C0D76AC8B2">GetParam</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class BaseUsingDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class BaseUsingDecl</h1>
+    <p>Defined at line 3331 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a C++ declaration that introduces decls from somewhere else. It provides a set of the shadow decls so introduced.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="NamedDecl.html">NamedDecl</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/BaseUsingDecl/shadow_iterator.html">shadow_iterator</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="961383B44F11564E40CAD58DC8005A97A7C4C268">BaseUsingDecl</h3>
+      <p>
+        protected void BaseUsingDecl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         N)
+      </p>
+      <p>Defined at line 3340 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="FD8E49A96856F56E62D8003D35DA1CD81ED20931">getShadowFlag</h3>
+      <p>protected _Bool getShadowFlag()</p>
+      <p>Defined at line 3348 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> A bool flag for use by a derived type</p>
+        </div>
+      </div>
+      <h3 id="D0BB38DF8B9D1A814E0EAD8790404DF4F3494D52">setShadowFlag</h3>
+      <p>protected void setShadowFlag(_Bool V)</p>
+      <p>Defined at line 3351 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> A bool flag a derived type may set</p>
+        </div>
+      </div>
+      <h3 id="B64806FFA70E4048006756960154847E9DEBAC35">shadows</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         shadows()
+      </p>
+      <p>Defined at line 3397 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="BF92E70AC1C99588BF75EBA61482257398CC8431">shadow_begin</h3>
+      <p>
+        public 
+        <a href="../clang/BaseUsingDecl/shadow_iterator.html">shadow_iterator</a>
+         shadow_begin()
+      </p>
+      <p>Defined at line 3401 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="A8FF4F52DBD55A81433547E838466E7DB6CBD920">shadow_end</h3>
+      <p>
+        public 
+        <a href="../clang/BaseUsingDecl/shadow_iterator.html">shadow_iterator</a>
+         shadow_end()
+      </p>
+      <p>Defined at line 3405 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="4F836B85A7AB8F93B96BF7C919D98DF1910B3F69">shadow_size</h3>
+      <p>public unsigned int shadow_size()</p>
+      <p>Defined at line 3409 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Return the number of shadowed declarations associated with this using declaration.</p>
+        </div>
+      </div>
+      <h3 id="8FF718C59E663F616144B4E64C8452819CB178D6">addShadowDecl</h3>
+      <p>public void addShadowDecl(UsingShadowDecl * S)</p>
+      <h3 id="105E245695033F09E00021D221B1965F15D0F614">removeShadowDecl</h3>
+      <p>public void removeShadowDecl(UsingShadowDecl * S)</p>
+      <h3 id="E032ADCAA5D5CC60BAE8CF895D4303777876508E">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3416 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="88109DB7D9A6210B39FA0E2115706A8A2DB10894">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3417 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#961383B44F11564E40CAD58DC8005A97A7C4C268">BaseUsingDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD8E49A96856F56E62D8003D35DA1CD81ED20931">getShadowFlag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0BB38DF8B9D1A814E0EAD8790404DF4F3494D52">setShadowFlag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B64806FFA70E4048006756960154847E9DEBAC35">shadows</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF92E70AC1C99588BF75EBA61482257398CC8431">shadow_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8FF4F52DBD55A81433547E838466E7DB6CBD920">shadow_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F836B85A7AB8F93B96BF7C919D98DF1910B3F69">shadow_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8FF718C59E663F616144B4E64C8452819CB178D6">addShadowDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#105E245695033F09E00021D221B1965F15D0F614">removeShadowDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E032ADCAA5D5CC60BAE8CF895D4303777876508E">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88109DB7D9A6210B39FA0E2115706A8A2DB10894">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

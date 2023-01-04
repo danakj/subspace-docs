@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPUseDeviceAddrClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPUseDeviceAddrClause</h1>
+    <p>Defined at line 7298 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents clause &apos;use_device_addr&apos; in the &apos;#pragma omp ...&apos; directives.</p>
+        <p> In this example directive &apos;#pragma omp target data&apos; has clause &apos;use_device_addr&apos; with the variables &apos;a&apos; and &apos;b&apos;.</p>
+      </div>
+    </div>
+    <p>Inherits from OMPMappableExprListClause&lt;OMPUseDeviceAddrClause&gt;, llvm::TrailingObjects&lt;OMPUseDeviceAddrClause, Expr *, ValueDecl *, unsigned int, OMPClauseMappableExprCommon::MappableComponent&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="83164B2B135F8E260425CCD87A3C548A5700085D">Create</h3>
+      <p>
+        public OMPUseDeviceAddrClause * Create(const ASTContext &amp; C, const OMPVarListLocTy &amp; Locs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Vars, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Declarations, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         ComponentLists)
+      </p>
+      <div>
+        <div>
+          <p> Creates clause with a list of variables </p>
+        </div>
+      </div>
+      <h3 id="4FDD53FAA1E36612D1FD8BAE2A35746717DB3185">CreateEmpty</h3>
+      <p>public OMPUseDeviceAddrClause * CreateEmpty(const ASTContext &amp; C, const OMPMappableExprListSizeTy &amp; Sizes)</p>
+      <div>
+        <div>
+          <p> Creates an empty clause with the place for  variables.</p>
+        </div>
+      </div>
+      <h3 id="2EC3DEE6772CEAAB64C9D171961D65C3FC689C89">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 7372 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="F9024F22358ACE1DE221F2D24007E4A9271305A8">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 7377 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="B29F6A0C16B62665B88BA64003B4E45D9BECF8BD">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 7382 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="B0E4E6944F72E61B992BB2BFABFC3115821A3069">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 7385 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="836D9A26BB7CEE0117E7BD245E51E46EBFE16936">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 7389 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#83164B2B135F8E260425CCD87A3C548A5700085D">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FDD53FAA1E36612D1FD8BAE2A35746717DB3185">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2EC3DEE6772CEAAB64C9D171961D65C3FC689C89">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9024F22358ACE1DE221F2D24007E4A9271305A8">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B29F6A0C16B62665B88BA64003B4E45D9BECF8BD">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0E4E6944F72E61B992BB2BFABFC3115821A3069">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#836D9A26BB7CEE0117E7BD245E51E46EBFE16936">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

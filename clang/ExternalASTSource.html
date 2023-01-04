@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExternalASTSource</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExternalASTSource</h1>
+    <p>Defined at line 60 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+    <div>
+      <div>
+        <p> Abstract interface for external sources of AST nodes.</p>
+        <p> External AST sources provide AST nodes constructed from some external source, such as a precompiled header. External AST sources can resolve types and declarations from abstract IDs into actual type and declaration nodes, and read parts of declaration contexts.</p>
+      </div>
+    </div>
+    <p>Inherits from RefCountedBase&lt;ExternalASTSource&gt;</p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/ExternalASTSource/Deserializing.html">Deserializing</a>
+      </li>
+      <li>
+        <a href="../clang/ExternalASTSource/MemoryBufferSizes.html">MemoryBufferSizes</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="190699557D53F26D8F636D83762EA5A24BF5B055">ExternalASTSource</h3>
+      <p>public void ExternalASTSource()</p>
+      <p>Defined at line 71 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <h3 id="E751FC2663AE4FD2F3C94B003586F1F03AE01885">~ExternalASTSource</h3>
+      <p>public void ~ExternalASTSource()</p>
+      <h3 id="6B54AA70C7D47A6ECB4D7751927DFC35D0B7F4F8">getGeneration</h3>
+      <p>public uint32_t getGeneration()</p>
+      <p>Defined at line 93 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Get the current generation of this AST source. This number is incremented each time the AST source lazily extends an existing entity.</p>
+        </div>
+      </div>
+      <h3 id="7BBFE8876D0F7F40B67B632EC3E32641254128EB">GetExternalDecl</h3>
+      <p>public Decl * GetExternalDecl(uint32_t ID)</p>
+      <div>
+        <div>
+          <p> Resolve a declaration ID into a declaration, potentially building a new declaration.</p>
+          <p> This method only needs to be implemented if the AST source ever passes back decl sets as VisibleDeclaration objects.</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="6CEFDA58F11868305C95B4445E3229BB3DD81B8F">GetExternalSelector</h3>
+      <p>
+        public 
+        <a href="Selector.html">Selector</a>
+         GetExternalSelector(uint32_t ID)
+      </p>
+      <div>
+        <div>
+          <p> Resolve a selector ID into a selector.</p>
+          <p> This operation only needs to be implemented if the AST source returns non-zero for GetNumKnownSelectors().</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="EFCE4884C2DFD41E67995814F29C2482D04550DA">GetNumExternalSelectors</h3>
+      <p>public uint32_t GetNumExternalSelectors()</p>
+      <div>
+        <div>
+          <p> Returns the number of selectors known to the external AST source.</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="CD804EC40ADE20F69011E36A65BCE5CFACBB3A01">GetExternalDeclStmt</h3>
+      <p>public Stmt * GetExternalDeclStmt(uint64_t Offset)</p>
+      <div>
+        <div>
+          <p> Resolve the offset of a statement in the decl stream into a statement.</p>
+          <p> This operation is meant to be used via a LazyOffsetPtr.  It only needs to be implemented if the AST source uses methods like FunctionDecl::setLazyBody when building decls.</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="333F94B4935077574112E43DC7618C6D088B5569">GetExternalCXXCtorInitializers</h3>
+      <p>public CXXCtorInitializer ** GetExternalCXXCtorInitializers(uint64_t Offset)</p>
+      <div>
+        <div>
+          <p> Resolve the offset of a set of C++ constructor initializers in the decl stream into an array of initializers.</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="9041D2942472F0859009DFD910F8A87B41D4270E">GetExternalCXXBaseSpecifiers</h3>
+      <p>public CXXBaseSpecifier * GetExternalCXXBaseSpecifiers(uint64_t Offset)</p>
+      <div>
+        <div>
+          <p> Resolve the offset of a set of C++ base specifiers in the decl stream into an array of specifiers.</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="DAE215D6B1BE81A857575409149A9309EDAC74F3">updateOutOfDateIdentifier</h3>
+      <p>public void updateOutOfDateIdentifier(IdentifierInfo &amp; II)</p>
+      <p>Defined at line 141 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Update an out-of-date identifier.</p>
+        </div>
+      </div>
+      <h3 id="9BFAD0F328879F5BFF1593BD095CFE6B2F6CA29B">FindExternalVisibleDeclsByName</h3>
+      <p>
+        public _Bool FindExternalVisibleDeclsByName(const DeclContext * DC, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name)
+      </p>
+      <div>
+        <div>
+          <p> Find all declarations with the given name in the given context, and add them to the context by calling SetExternalVisibleDeclsForName or SetNoExternalVisibleDeclsForName.</p>
+          <p> The default implementation of this method is a no-op returning </p>
+        </div>
+      </div>
+      <h3 id="95E363A74051BEDCB410A09249C99B1CEACA45E8">completeVisibleDeclsMap</h3>
+      <p>public void completeVisibleDeclsMap(const DeclContext * DC)</p>
+      <div>
+        <div>
+          <p> Ensures that the table of all visible declarations inside this context is up to date.</p>
+          <p> The default implementation of this function is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="50EE1186642FF2CCBCAC036C37B66379BFC7EFDD">getModule</h3>
+      <p>public Module * getModule(unsigned int ID)</p>
+      <p>Defined at line 160 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Retrieve the module that corresponds to the given module ID.</p>
+        </div>
+      </div>
+      <h3 id="CD69E76CEDBBA8B329B95210FBC7D10943D2DB9A">getSourceDescriptor</h3>
+      <p>public llvm::Optional&lt;ASTSourceDescriptor&gt; getSourceDescriptor(unsigned int ID)</p>
+      <div>
+        <div>
+          <p> Return a descriptor for the corresponding module, if one exists.</p>
+        </div>
+      </div>
+      <h3 id="64C1CE10881CDB859EB10A2C32E23174851CD1C7">hasExternalDefinitions</h3>
+      <p>
+        public 
+        <a href="../clang/ExternalASTSource/ExtKind.html">ExtKind</a>
+         hasExternalDefinitions(const Decl * D)
+      </p>
+      <h3 id="D7164306887D510674668DB6DB6FEE36B253AC47">FindExternalLexicalDecls</h3>
+      <p>
+        public void FindExternalLexicalDecls(const DeclContext * DC, 
+        <a href="../llvm/function_ref.html">function_ref</a>
+         IsKindWeWant, SmallVectorImpl&lt;Decl *&gt; &amp; Result)
+      </p>
+      <div>
+        <div>
+          <p> Finds all declarations lexically contained within the given DeclContext, after applying an optional filter predicate.</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="3B46949591FBD82FF83B9EDC60D4FECFD0CBDC71">FindExternalLexicalDecls</h3>
+      <p>public void FindExternalLexicalDecls(const DeclContext * DC, SmallVectorImpl&lt;Decl *&gt; &amp; Result)</p>
+      <p>Defined at line 183 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Finds all declarations lexically contained within the given DeclContext.</p>
+        </div>
+      </div>
+      <h3 id="FBD1E55F3290D158E34A9989D245D32DF979326F">FindFileRegionDecls</h3>
+      <p>
+        public void FindFileRegionDecls(
+        <a href="FileID.html">FileID</a>
+         File, unsigned int Offset, unsigned int Length, SmallVectorImpl&lt;Decl *&gt; &amp; Decls)
+      </p>
+      <div>
+        <div>
+          <p> Get the decls that are contained in a file in the Offset/Length range.  can be 0 to indicate a point at  instead of a range.</p>
+        </div>
+      </div>
+      <h3 id="AC007594D17F52B238AF14C30692CE7F0D85FFC7">CompleteRedeclChain</h3>
+      <p>public void CompleteRedeclChain(const Decl * D)</p>
+      <div>
+        <div>
+          <p> Gives the external AST source an opportunity to complete the redeclaration chain for a declaration. Called each time we need the most recent declaration of a declaration after the generation count is incremented.</p>
+        </div>
+      </div>
+      <h3 id="2D4D80D26A5A96ABEA18E198A0023EAD27F6D183">CompleteType</h3>
+      <p>public void CompleteType(TagDecl * Tag)</p>
+      <div>
+        <div>
+          <p> Gives the external AST source an opportunity to complete an incomplete type.</p>
+        </div>
+      </div>
+      <h3 id="C93AFACC3126151EA4D902B725CF8DDE6F59D3B5">CompleteType</h3>
+      <p>public void CompleteType(ObjCInterfaceDecl * Class)</p>
+      <div>
+        <div>
+          <p> Gives the external AST source an opportunity to complete an incomplete Objective-C class.</p>
+          <p> This routine will only be invoked if the &quot;externally completed&quot; bit is set on the ObjCInterfaceDecl via the function</p>
+        </div>
+      </div>
+      <h3 id="5EE4CA2337848381AACDA1BA7C750702E83A1864">ReadComments</h3>
+      <p>public void ReadComments()</p>
+      <div>
+        <div>
+          <p> Loads comment ranges.</p>
+        </div>
+      </div>
+      <h3 id="9D1846E9065561FADF617B173BD0FA44A938CCD0">StartedDeserializing</h3>
+      <p>public void StartedDeserializing()</p>
+      <div>
+        <div>
+          <p> Notify ExternalASTSource that we started deserialization of a decl or type so until FinishedDeserializing is called there may be decls that are initializing. Must be paired with FinishedDeserializing.</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="ADE251752EEDDF27D3358A77F210D28875A00A41">FinishedDeserializing</h3>
+      <p>public void FinishedDeserializing()</p>
+      <div>
+        <div>
+          <p> Notify ExternalASTSource that we finished the deserialization of a decl or type. Must be paired with StartedDeserializing.</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="87000CB60E93B3B0F00B37764174CA86A2D1EE20">StartTranslationUnit</h3>
+      <p>public void StartTranslationUnit(ASTConsumer * Consumer)</p>
+      <div>
+        <div>
+          <p> Function that will be invoked when we begin parsing a new translation unit involving this external AST source.</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="BB452ACA5E8A0ABFE92AD117FBF15AB7E7CBFE61">PrintStats</h3>
+      <p>public void PrintStats()</p>
+      <div>
+        <div>
+          <p> Print any statistics that have been gathered regarding the external AST source.</p>
+          <p> The default implementation of this method is a no-op.</p>
+        </div>
+      </div>
+      <h3 id="60E816A7D4C157F902CBC9E675CFEEAF4F03A729">layoutRecordType</h3>
+      <p>public _Bool layoutRecordType(const RecordDecl * Record, uint64_t &amp; Size, uint64_t &amp; Alignment, llvm::DenseMap&lt;const FieldDecl *, uint64_t&gt; &amp; FieldOffsets, llvm::DenseMap&lt;const CXXRecordDecl *, CharUnits&gt; &amp; BaseOffsets, llvm::DenseMap&lt;const CXXRecordDecl *, CharUnits&gt; &amp; VirtualBaseOffsets)</p>
+      <div>
+        <div>
+          <p> Perform layout on the given record.</p>
+          <p> This routine allows the external AST source to provide an specific layout for a record, overriding the layout that would normally be constructed. It is intended for clients who receive specific layout details rather than source code (such as LLDB). The client is expected to fill in the field offsets, base offsets, virtual base offsets, and complete object size.</p>
+        </div>
+      </div>
+      <h3 id="5E1EC6744801BC2E497542CECE64C9792EB75202">getMemoryBufferSizes</h3>
+      <p>
+        public 
+        <a href="../clang/ExternalASTSource/MemoryBufferSizes.html">MemoryBufferSizes</a>
+         getMemoryBufferSizes()
+      </p>
+      <p>Defined at line 288 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Return the amount of memory used by memory buffers, breaking down by heap-backed versus mmap&apos;ed memory.</p>
+        </div>
+      </div>
+      <h3 id="BB686F2B7CC41BAB34915DFE7D34E3803EB39A37">getMemoryBufferSizes</h3>
+      <p>public void getMemoryBufferSizes(MemoryBufferSizes &amp; sizes)</p>
+      <h3 id="F1387761213E373021A92DA2A8CC8325EC81CD14">isA</h3>
+      <p>public _Bool isA(const void * ClassID)</p>
+      <p>Defined at line 298 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> LLVM-style RTTI.\{</p>
+        </div>
+      </div>
+      <h3 id="82D2A4CD0C97E7EE4F0D227440695192FA8FB6A3">classof</h3>
+      <p>public _Bool classof(const ExternalASTSource * S)</p>
+      <p>Defined at line 299 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <h3 id="33D7DEE4E43C94C032A7084CBA4671BA2EA9569F">SetExternalVisibleDeclsForName</h3>
+      <p>
+        protected 
+        <a href="DeclContextLookupResult.html">DeclContextLookupResult</a>
+         SetExternalVisibleDeclsForName(const DeclContext * DC, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Decls)
+      </p>
+      <div>
+        <div>
+          <p>\}</p>
+        </div>
+      </div>
+      <h3 id="A9E36BD90D411AE5859BC50115ECB6FCF2409A90">SetNoExternalVisibleDeclsForName</h3>
+      <p>
+        protected 
+        <a href="DeclContextLookupResult.html">DeclContextLookupResult</a>
+         SetNoExternalVisibleDeclsForName(const DeclContext * DC, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name)
+      </p>
+      <h3 id="F3C8AA7E5A47CBBBE8B6EF39848740CF99290349">incrementGeneration</h3>
+      <p>protected uint32_t incrementGeneration(ASTContext &amp; C)</p>
+      <div>
+        <div>
+          <p> Increment the current generation.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="DC834609C267B9E3ED9F5DD483D2D4AA0F7D73E0">enum ExtKind</h3>
+      <ul>
+        <li>EK_Always</li>
+        <li>EK_Never</li>
+        <li>EK_ReplyHazy</li>
+      </ul>
+      <p>Defined at line 165 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#190699557D53F26D8F636D83762EA5A24BF5B055">ExternalASTSource</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E751FC2663AE4FD2F3C94B003586F1F03AE01885">~ExternalASTSource</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B54AA70C7D47A6ECB4D7751927DFC35D0B7F4F8">getGeneration</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BBFE8876D0F7F40B67B632EC3E32641254128EB">GetExternalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CEFDA58F11868305C95B4445E3229BB3DD81B8F">GetExternalSelector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFCE4884C2DFD41E67995814F29C2482D04550DA">GetNumExternalSelectors</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD804EC40ADE20F69011E36A65BCE5CFACBB3A01">GetExternalDeclStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#333F94B4935077574112E43DC7618C6D088B5569">GetExternalCXXCtorInitializers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9041D2942472F0859009DFD910F8A87B41D4270E">GetExternalCXXBaseSpecifiers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAE215D6B1BE81A857575409149A9309EDAC74F3">updateOutOfDateIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BFAD0F328879F5BFF1593BD095CFE6B2F6CA29B">FindExternalVisibleDeclsByName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95E363A74051BEDCB410A09249C99B1CEACA45E8">completeVisibleDeclsMap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#50EE1186642FF2CCBCAC036C37B66379BFC7EFDD">getModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD69E76CEDBBA8B329B95210FBC7D10943D2DB9A">getSourceDescriptor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64C1CE10881CDB859EB10A2C32E23174851CD1C7">hasExternalDefinitions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7164306887D510674668DB6DB6FEE36B253AC47">FindExternalLexicalDecls</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B46949591FBD82FF83B9EDC60D4FECFD0CBDC71">FindExternalLexicalDecls</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBD1E55F3290D158E34A9989D245D32DF979326F">FindFileRegionDecls</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC007594D17F52B238AF14C30692CE7F0D85FFC7">CompleteRedeclChain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D4D80D26A5A96ABEA18E198A0023EAD27F6D183">CompleteType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C93AFACC3126151EA4D902B725CF8DDE6F59D3B5">CompleteType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5EE4CA2337848381AACDA1BA7C750702E83A1864">ReadComments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D1846E9065561FADF617B173BD0FA44A938CCD0">StartedDeserializing</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ADE251752EEDDF27D3358A77F210D28875A00A41">FinishedDeserializing</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87000CB60E93B3B0F00B37764174CA86A2D1EE20">StartTranslationUnit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB452ACA5E8A0ABFE92AD117FBF15AB7E7CBFE61">PrintStats</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#60E816A7D4C157F902CBC9E675CFEEAF4F03A729">layoutRecordType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E1EC6744801BC2E497542CECE64C9792EB75202">getMemoryBufferSizes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB686F2B7CC41BAB34915DFE7D34E3803EB39A37">getMemoryBufferSizes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1387761213E373021A92DA2A8CC8325EC81CD14">isA</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82D2A4CD0C97E7EE4F0D227440695192FA8FB6A3">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33D7DEE4E43C94C032A7084CBA4671BA2EA9569F">SetExternalVisibleDeclsForName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9E36BD90D411AE5859BC50115ECB6FCF2409A90">SetNoExternalVisibleDeclsForName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F3C8AA7E5A47CBBBE8B6EF39848740CF99290349">incrementGeneration</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#DC834609C267B9E3ED9F5DD483D2D4AA0F7D73E0">ExtKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

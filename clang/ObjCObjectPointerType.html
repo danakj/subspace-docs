@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCObjectPointerType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCObjectPointerType</h1>
+    <p>Defined at line 6277 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents a pointer to an Objective C object.</p>
+        <p> These are constructed from pointer declarators when the pointee type is an ObjCObjectType (or sugar for one).  In addition, the &apos;id&apos; and &apos;Class&apos; types are typedefs for these, and the protocol-qualified types &apos;id&lt;P&gt;&apos; and &apos;Class&lt;P&gt;&apos; are translated into these.</p>
+        <p> Pointers to pointers to Objective C objects are still PointerTypes; only the first level of pointer gets it own type implementation.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="368AA5762F562E9E0D0F281CC313633521B969A0">getPointeeType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getPointeeType()
+      </p>
+      <p>Defined at line 6289 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Gets the type pointed to by this ObjC pointer. The result will always be an ObjCObjectType or sugar thereof.</p>
+        </div>
+      </div>
+      <h3 id="35C95BBE9864570FD322274470F9B5732C3954F3">getObjectType</h3>
+      <p>public const ObjCObjectType * getObjectType()</p>
+      <p>Defined at line 6314 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Gets the type pointed to by this ObjC pointer.  Always returns non-null.</p>
+          <p> This method is equivalent to getPointeeType() except that it discards any typedefs (or other sugar) between this type and the &quot;outermost&quot; object type.  So for:</p>
+          <p> For &apos;A*&apos;, getObjectType() will return &apos;A&apos;. For &apos;A&lt;P&gt;*&apos;, getObjectType() will return &apos;A&lt;P&gt;&apos;. For &apos;AP*&apos;, getObjectType() will return &apos;A&lt;P&gt;&apos;. For &apos;A1*&apos;, getObjectType() will return &apos;A&apos;. For &apos;A1&lt;P&gt;*&apos;, getObjectType() will return &apos;A1&lt;P&gt;&apos;. For &apos;A1P*&apos;, getObjectType() will return &apos;A1&lt;P&gt;&apos;. For &apos;A1PQ*&apos;, getObjectType() will return &apos;A1&lt;Q&gt;&apos;, because   adding protocols to a protocol-qualified base discards the   old qualifiers (for now).  But if it didn&apos;t, getObjectType()   would return &apos;A1P&lt;Q&gt;&apos; (and we&apos;d have to make iterating over   qualifiers more complicated).</p>
+        </div>
+      </div>
+      <h3 id="1C60DFD0DB145B5085F99D05F76CBFD3387C3A42">getInterfaceType</h3>
+      <p>public const ObjCInterfaceType * getInterfaceType()</p>
+      <div>
+        <div>
+          <p> If this pointer points to an Objective C@interface type, gets the type for that interface.  Any protocol qualifiers on the interface are ignored.</p>
+        </div>
+      </div>
+      <h3 id="98B2C16620E0090528C9B4C1F4F9DF94261FFEFC">getInterfaceDecl</h3>
+      <p>public ObjCInterfaceDecl * getInterfaceDecl()</p>
+      <p>Defined at line 6329 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> If this pointer points to an Objective @interface type, gets the declaration for that interface.</p>
+        </div>
+      </div>
+      <h3 id="F04C90BAF720CACB68F85536CBDADD49BD2D7B6D">isObjCIdType</h3>
+      <p>public _Bool isObjCIdType()</p>
+      <p>Defined at line 6335 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> True if this is equivalent to the &apos;id&apos; type, i.e. if its object type is the primitive &apos;id&apos; type with no protocols.</p>
+        </div>
+      </div>
+      <h3 id="8173EEF2C4C87D2DAC3112B6F7BFA6806B7A6273">isObjCClassType</h3>
+      <p>public _Bool isObjCClassType()</p>
+      <p>Defined at line 6341 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> True if this is equivalent to the &apos;Class&apos; type, i.e. if its object tive is the primitive &apos;Class&apos; type with no protocols.</p>
+        </div>
+      </div>
+      <h3 id="A08F022165718B304F0767789D39E0FB37A39173">isObjCIdOrClassType</h3>
+      <p>public _Bool isObjCIdOrClassType()</p>
+      <p>Defined at line 6346 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> True if this is equivalent to the &apos;id&apos; or &apos;Class&apos; type,</p>
+        </div>
+      </div>
+      <h3 id="9F3369EC8964016BDC6AC15F271F87FB366D2A68">isObjCQualifiedIdType</h3>
+      <p>public _Bool isObjCQualifiedIdType()</p>
+      <p>Defined at line 6352 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> True if this is equivalent to &apos;id&lt;P&gt;&apos; for some non-empty set of protocols.</p>
+        </div>
+      </div>
+      <h3 id="3A00FCBBD90C5F30331FFC988C4DC3828C4AF64F">isObjCQualifiedClassType</h3>
+      <p>public _Bool isObjCQualifiedClassType()</p>
+      <p>Defined at line 6358 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> True if this is equivalent to &apos;Class&lt;P&gt;&apos; for some non-empty set of protocols.</p>
+        </div>
+      </div>
+      <h3 id="51870CE4CBA98CA3D04452E71F4B38252FAA045E">isKindOfType</h3>
+      <p>public _Bool isKindOfType()</p>
+      <p>Defined at line 6363 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Whether this is a &quot;__kindof&quot; type.</p>
+        </div>
+      </div>
+      <h3 id="088A85228365A92DF08D04650C950AD3312A328A">isSpecialized</h3>
+      <p>public _Bool isSpecialized()</p>
+      <p>Defined at line 6366 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Whether this type is specialized, meaning that it has type arguments.</p>
+        </div>
+      </div>
+      <h3 id="3750C382195476A18EAB7E8FE19073B3BE0D065E">isSpecializedAsWritten</h3>
+      <p>public _Bool isSpecializedAsWritten()</p>
+      <p>Defined at line 6369 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Whether this type is specialized, meaning that it has type arguments.</p>
+        </div>
+      </div>
+      <h3 id="BD14523CF74C20D4CC677EE274BD1DDCF3E9BA25">isUnspecialized</h3>
+      <p>public _Bool isUnspecialized()</p>
+      <p>Defined at line 6374 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Whether this type is unspecialized, meaning that is has no type arguments.</p>
+        </div>
+      </div>
+      <h3 id="A91FACAE98C6C6D0B8B360B259722EF51AC08085">isUnspecializedAsWritten</h3>
+      <p>public _Bool isUnspecializedAsWritten()</p>
+      <p>Defined at line 6378 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Determine whether this object type is &quot;unspecialized&quot; as written, meaning that it has no type arguments.</p>
+        </div>
+      </div>
+      <h3 id="15950018170A3D51B0560A47892A055AB1DEDA12">getTypeArgs</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getTypeArgs()
+      </p>
+      <p>Defined at line 6381 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Retrieve the type arguments for this type.</p>
+        </div>
+      </div>
+      <h3 id="671772D7C76414C19D19C54A9B4C07B217FA324F">getTypeArgsAsWritten</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getTypeArgsAsWritten()
+      </p>
+      <p>Defined at line 6386 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Retrieve the type arguments for this type.</p>
+        </div>
+      </div>
+      <h3 id="D9E27265E029038A004086446E9C1A31FE46EB0B">quals</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         quals()
+      </p>
+      <p>Defined at line 6396 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="771F6CC5ECA6A9F865A6E6EA30B7D6ADBBAA2CC4">qual_begin</h3>
+      <p>public qual_iterator qual_begin()</p>
+      <p>Defined at line 6398 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="E0D423F33D72AA6B097AF1249E5D86716439099E">qual_end</h3>
+      <p>public qual_iterator qual_end()</p>
+      <p>Defined at line 6402 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="71CB775D9041A194A917D6376EBA4F486F415124">qual_empty</h3>
+      <p>public _Bool qual_empty()</p>
+      <p>Defined at line 6406 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="F067AF8C3E7842DAC14A0689DBF67790B1F6EAB6">getNumProtocols</h3>
+      <p>public unsigned int getNumProtocols()</p>
+      <p>Defined at line 6409 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Return the number of qualifying protocols on the object type.</p>
+        </div>
+      </div>
+      <h3 id="2D4118F8020938BE66E183ED2FBA04A0A061E56F">getProtocol</h3>
+      <p>public ObjCProtocolDecl * getProtocol(unsigned int I)</p>
+      <p>Defined at line 6414 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Retrieve a qualifying protocol by index on the object type.</p>
+        </div>
+      </div>
+      <h3 id="5AC2CD6A2EA6A6B5DDB9DCF81E0E666F9F02D738">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 6418 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="AC5584969F1F1A59E692AB7CFFC77B6463FF28C3">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 6419 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="AFE9E016DD709325EA1FA3B7C8D6A3B10E0903DA">getSuperClassType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getSuperClassType()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the type of the superclass of this object pointer type.</p>
+          <p> This operation substitutes any type arguments into the superclass of the current class type, potentially producing a pointer to a specialization of the superclass type. Produces a null type if there is no superclass.</p>
+        </div>
+      </div>
+      <h3 id="13E4F555B41EEEFE2FC599249EB09487824CB78C">stripObjCKindOfTypeAndQuals</h3>
+      <p>public const ObjCObjectPointerType * stripObjCKindOfTypeAndQuals(const ASTContext &amp; ctx)</p>
+      <div>
+        <div>
+          <p> Strip off the Objective-C &quot;kindof&quot; type and (with it) any protocol qualifiers.</p>
+        </div>
+      </div>
+      <h3 id="3E26E87627FA150222B8785657EF49590C525F4F">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 6434 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="59D92E970F6B63CA236793071900BEA1F5605065">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="QualType.html">QualType</a>
+         T)
+      </p>
+      <p>Defined at line 6438 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="717C56BB34ACCA45B672F27D9280F519CCD97095">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 6442 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#368AA5762F562E9E0D0F281CC313633521B969A0">getPointeeType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35C95BBE9864570FD322274470F9B5732C3954F3">getObjectType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C60DFD0DB145B5085F99D05F76CBFD3387C3A42">getInterfaceType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98B2C16620E0090528C9B4C1F4F9DF94261FFEFC">getInterfaceDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F04C90BAF720CACB68F85536CBDADD49BD2D7B6D">isObjCIdType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8173EEF2C4C87D2DAC3112B6F7BFA6806B7A6273">isObjCClassType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A08F022165718B304F0767789D39E0FB37A39173">isObjCIdOrClassType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F3369EC8964016BDC6AC15F271F87FB366D2A68">isObjCQualifiedIdType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A00FCBBD90C5F30331FFC988C4DC3828C4AF64F">isObjCQualifiedClassType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#51870CE4CBA98CA3D04452E71F4B38252FAA045E">isKindOfType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#088A85228365A92DF08D04650C950AD3312A328A">isSpecialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3750C382195476A18EAB7E8FE19073B3BE0D065E">isSpecializedAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD14523CF74C20D4CC677EE274BD1DDCF3E9BA25">isUnspecialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A91FACAE98C6C6D0B8B360B259722EF51AC08085">isUnspecializedAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15950018170A3D51B0560A47892A055AB1DEDA12">getTypeArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#671772D7C76414C19D19C54A9B4C07B217FA324F">getTypeArgsAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9E27265E029038A004086446E9C1A31FE46EB0B">quals</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#771F6CC5ECA6A9F865A6E6EA30B7D6ADBBAA2CC4">qual_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0D423F33D72AA6B097AF1249E5D86716439099E">qual_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71CB775D9041A194A917D6376EBA4F486F415124">qual_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F067AF8C3E7842DAC14A0689DBF67790B1F6EAB6">getNumProtocols</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D4118F8020938BE66E183ED2FBA04A0A061E56F">getProtocol</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AC2CD6A2EA6A6B5DDB9DCF81E0E666F9F02D738">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC5584969F1F1A59E692AB7CFFC77B6463FF28C3">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFE9E016DD709325EA1FA3B7C8D6A3B10E0903DA">getSuperClassType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13E4F555B41EEEFE2FC599249EB09487824CB78C">stripObjCKindOfTypeAndQuals</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3E26E87627FA150222B8785657EF49590C525F4F">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59D92E970F6B63CA236793071900BEA1F5605065">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#717C56BB34ACCA45B672F27D9280F519CCD97095">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

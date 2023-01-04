@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class BuiltinType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class BuiltinType</h1>
+    <p>Defined at line 2620 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> This class is used for builtin types like &apos;int&apos;.  Builtin types are always canonical and have a literal name field.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="64693B3C7B6ED8E958F0561B2292FA885FEF26F7">getKind</h3>
+      <p>
+        public 
+        <a href="../clang/BuiltinType/Kind.html">Kind</a>
+         getKind()
+      </p>
+      <p>Defined at line 2655 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="EB9178B301791F2995D1AF87F44D44FB9ADDF619">getName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getName(const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="84D937BACB08DFF33A1EA7EB1783D144FB4FFD21">getNameAsCString</h3>
+      <p>public const char * getNameAsCString(const PrintingPolicy &amp; Policy)</p>
+      <p>Defined at line 2658 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="5E0CC3246FAA455C62994AEA668D0D7EA7D2878E">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 2665 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="D2246C5E850F1CF64358A1D9EE84085720E84856">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 2666 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="CFA41EEBF344F9181E8BF33165856835BA6DA91D">isInteger</h3>
+      <p>public _Bool isInteger()</p>
+      <p>Defined at line 2668 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="A7BF0EF28F6A3DB6B46AB8EBB936A2B4FCBFDB33">isSignedInteger</h3>
+      <p>public _Bool isSignedInteger()</p>
+      <p>Defined at line 2672 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="11BC4E34780B83B83A1DF386DF720B767608F09F">isUnsignedInteger</h3>
+      <p>public _Bool isUnsignedInteger()</p>
+      <p>Defined at line 2676 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="DA583E0825AD95230B8BEF6ECA8AEE1507D6C975">isFloatingPoint</h3>
+      <p>public _Bool isFloatingPoint()</p>
+      <p>Defined at line 2680 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="384EF9D98363E8BF5495E5002C28643EC69F81FA">isSVEBool</h3>
+      <p>public _Bool isSVEBool()</p>
+      <p>Defined at line 2684 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="154D11599DC5EA40183BD77C4460C98FA12B1812">isPlaceholderTypeKind</h3>
+      <p>
+        public _Bool isPlaceholderTypeKind(
+        <a href="../clang/BuiltinType/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 2687 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Determines whether the given kind corresponds to a placeholder type.</p>
+        </div>
+      </div>
+      <h3 id="3B6EA80CFC0329EBC899217521F4507F6D72C411">isPlaceholderType</h3>
+      <p>public _Bool isPlaceholderType()</p>
+      <p>Defined at line 2694 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Determines whether this type is a placeholder type, i.e. a type which cannot appear in arbitrary positions in a fully-formed expression.</p>
+        </div>
+      </div>
+      <h3 id="B3154A74010D3994B6F2B6CFBFD374D2F61821F6">isNonOverloadPlaceholderType</h3>
+      <p>public _Bool isNonOverloadPlaceholderType()</p>
+      <p>Defined at line 2707 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Determines whether this type is a placeholder type other than Overload.  Most placeholder types require only syntactic information about their context in order to be resolved (e.g. whether it is a call expression), which means they can (and should) be resolved in an earlier &quot;phase&quot; of analysis. Overload expressions sometimes pick up further information from their context, like whether the context expects a specific function-pointer type, and so frequently need special treatment.</p>
+        </div>
+      </div>
+      <h3 id="42DBBABD603FB78E2697AE8AB704204DB7AA3344">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 2711 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="145C3336AA0CB95A90B4399CFB5FC95C5B183A4B">enum Kind</h3>
+      <ul>
+        <li>OCLImage1dRO</li>
+        <li>OCLImage1dArrayRO</li>
+        <li>OCLImage1dBufferRO</li>
+        <li>OCLImage2dRO</li>
+        <li>OCLImage2dArrayRO</li>
+        <li>OCLImage2dDepthRO</li>
+        <li>OCLImage2dArrayDepthRO</li>
+        <li>OCLImage2dMSAARO</li>
+        <li>OCLImage2dArrayMSAARO</li>
+        <li>OCLImage2dMSAADepthRO</li>
+        <li>OCLImage2dArrayMSAADepthRO</li>
+        <li>OCLImage3dRO</li>
+        <li>OCLImage1dWO</li>
+        <li>OCLImage1dArrayWO</li>
+        <li>OCLImage1dBufferWO</li>
+        <li>OCLImage2dWO</li>
+        <li>OCLImage2dArrayWO</li>
+        <li>OCLImage2dDepthWO</li>
+        <li>OCLImage2dArrayDepthWO</li>
+        <li>OCLImage2dMSAAWO</li>
+        <li>OCLImage2dArrayMSAAWO</li>
+        <li>OCLImage2dMSAADepthWO</li>
+        <li>OCLImage2dArrayMSAADepthWO</li>
+        <li>OCLImage3dWO</li>
+        <li>OCLImage1dRW</li>
+        <li>OCLImage1dArrayRW</li>
+        <li>OCLImage1dBufferRW</li>
+        <li>OCLImage2dRW</li>
+        <li>OCLImage2dArrayRW</li>
+        <li>OCLImage2dDepthRW</li>
+        <li>OCLImage2dArrayDepthRW</li>
+        <li>OCLImage2dMSAARW</li>
+        <li>OCLImage2dArrayMSAARW</li>
+        <li>OCLImage2dMSAADepthRW</li>
+        <li>OCLImage2dArrayMSAADepthRW</li>
+        <li>OCLImage3dRW</li>
+        <li>OCLIntelSubgroupAVCMcePayload</li>
+        <li>OCLIntelSubgroupAVCImePayload</li>
+        <li>OCLIntelSubgroupAVCRefPayload</li>
+        <li>OCLIntelSubgroupAVCSicPayload</li>
+        <li>OCLIntelSubgroupAVCMceResult</li>
+        <li>OCLIntelSubgroupAVCImeResult</li>
+        <li>OCLIntelSubgroupAVCRefResult</li>
+        <li>OCLIntelSubgroupAVCSicResult</li>
+        <li>OCLIntelSubgroupAVCImeResultSingleRefStreamout</li>
+        <li>OCLIntelSubgroupAVCImeResultDualRefStreamout</li>
+        <li>OCLIntelSubgroupAVCImeSingleRefStreamin</li>
+        <li>OCLIntelSubgroupAVCImeDualRefStreamin</li>
+        <li>SveInt8</li>
+        <li>SveInt16</li>
+        <li>SveInt32</li>
+        <li>SveInt64</li>
+        <li>SveUint8</li>
+        <li>SveUint16</li>
+        <li>SveUint32</li>
+        <li>SveUint64</li>
+        <li>SveFloat16</li>
+        <li>SveFloat32</li>
+        <li>SveFloat64</li>
+        <li>SveBFloat16</li>
+        <li>SveInt8x2</li>
+        <li>SveInt16x2</li>
+        <li>SveInt32x2</li>
+        <li>SveInt64x2</li>
+        <li>SveUint8x2</li>
+        <li>SveUint16x2</li>
+        <li>SveUint32x2</li>
+        <li>SveUint64x2</li>
+        <li>SveFloat16x2</li>
+        <li>SveFloat32x2</li>
+        <li>SveFloat64x2</li>
+        <li>SveBFloat16x2</li>
+        <li>SveInt8x3</li>
+        <li>SveInt16x3</li>
+        <li>SveInt32x3</li>
+        <li>SveInt64x3</li>
+        <li>SveUint8x3</li>
+        <li>SveUint16x3</li>
+        <li>SveUint32x3</li>
+        <li>SveUint64x3</li>
+        <li>SveFloat16x3</li>
+        <li>SveFloat32x3</li>
+        <li>SveFloat64x3</li>
+        <li>SveBFloat16x3</li>
+        <li>SveInt8x4</li>
+        <li>SveInt16x4</li>
+        <li>SveInt32x4</li>
+        <li>SveInt64x4</li>
+        <li>SveUint8x4</li>
+        <li>SveUint16x4</li>
+        <li>SveUint32x4</li>
+        <li>SveUint64x4</li>
+        <li>SveFloat16x4</li>
+        <li>SveFloat32x4</li>
+        <li>SveFloat64x4</li>
+        <li>SveBFloat16x4</li>
+        <li>SveBool</li>
+        <li>VectorQuad</li>
+        <li>VectorPair</li>
+        <li>RvvInt8mf8</li>
+        <li>RvvInt8mf4</li>
+        <li>RvvInt8mf2</li>
+        <li>RvvInt8m1</li>
+        <li>RvvInt8m2</li>
+        <li>RvvInt8m4</li>
+        <li>RvvInt8m8</li>
+        <li>RvvUint8mf8</li>
+        <li>RvvUint8mf4</li>
+        <li>RvvUint8mf2</li>
+        <li>RvvUint8m1</li>
+        <li>RvvUint8m2</li>
+        <li>RvvUint8m4</li>
+        <li>RvvUint8m8</li>
+        <li>RvvInt16mf4</li>
+        <li>RvvInt16mf2</li>
+        <li>RvvInt16m1</li>
+        <li>RvvInt16m2</li>
+        <li>RvvInt16m4</li>
+        <li>RvvInt16m8</li>
+        <li>RvvUint16mf4</li>
+        <li>RvvUint16mf2</li>
+        <li>RvvUint16m1</li>
+        <li>RvvUint16m2</li>
+        <li>RvvUint16m4</li>
+        <li>RvvUint16m8</li>
+        <li>RvvInt32mf2</li>
+        <li>RvvInt32m1</li>
+        <li>RvvInt32m2</li>
+        <li>RvvInt32m4</li>
+        <li>RvvInt32m8</li>
+        <li>RvvUint32mf2</li>
+        <li>RvvUint32m1</li>
+        <li>RvvUint32m2</li>
+        <li>RvvUint32m4</li>
+        <li>RvvUint32m8</li>
+        <li>RvvInt64m1</li>
+        <li>RvvInt64m2</li>
+        <li>RvvInt64m4</li>
+        <li>RvvInt64m8</li>
+        <li>RvvUint64m1</li>
+        <li>RvvUint64m2</li>
+        <li>RvvUint64m4</li>
+        <li>RvvUint64m8</li>
+        <li>RvvFloat16mf4</li>
+        <li>RvvFloat16mf2</li>
+        <li>RvvFloat16m1</li>
+        <li>RvvFloat16m2</li>
+        <li>RvvFloat16m4</li>
+        <li>RvvFloat16m8</li>
+        <li>RvvFloat32mf2</li>
+        <li>RvvFloat32m1</li>
+        <li>RvvFloat32m2</li>
+        <li>RvvFloat32m4</li>
+        <li>RvvFloat32m8</li>
+        <li>RvvFloat64m1</li>
+        <li>RvvFloat64m2</li>
+        <li>RvvFloat64m4</li>
+        <li>RvvFloat64m8</li>
+        <li>RvvBool1</li>
+        <li>RvvBool2</li>
+        <li>RvvBool4</li>
+        <li>RvvBool8</li>
+        <li>RvvBool16</li>
+        <li>RvvBool32</li>
+        <li>RvvBool64</li>
+        <li>Void</li>
+        <li>Bool</li>
+        <li>Char_U</li>
+        <li>UChar</li>
+        <li>WChar_U</li>
+        <li>Char8</li>
+        <li>Char16</li>
+        <li>Char32</li>
+        <li>UShort</li>
+        <li>UInt</li>
+        <li>ULong</li>
+        <li>ULongLong</li>
+        <li>UInt128</li>
+        <li>Char_S</li>
+        <li>SChar</li>
+        <li>WChar_S</li>
+        <li>Short</li>
+        <li>Int</li>
+        <li>Long</li>
+        <li>LongLong</li>
+        <li>Int128</li>
+        <li>ShortAccum</li>
+        <li>Accum</li>
+        <li>LongAccum</li>
+        <li>UShortAccum</li>
+        <li>UAccum</li>
+        <li>ULongAccum</li>
+        <li>ShortFract</li>
+        <li>Fract</li>
+        <li>LongFract</li>
+        <li>UShortFract</li>
+        <li>UFract</li>
+        <li>ULongFract</li>
+        <li>SatShortAccum</li>
+        <li>SatAccum</li>
+        <li>SatLongAccum</li>
+        <li>SatUShortAccum</li>
+        <li>SatUAccum</li>
+        <li>SatULongAccum</li>
+        <li>SatShortFract</li>
+        <li>SatFract</li>
+        <li>SatLongFract</li>
+        <li>SatUShortFract</li>
+        <li>SatUFract</li>
+        <li>SatULongFract</li>
+        <li>Half</li>
+        <li>Float</li>
+        <li>Double</li>
+        <li>LongDouble</li>
+        <li>Float16</li>
+        <li>BFloat16</li>
+        <li>Float128</li>
+        <li>Ibm128</li>
+        <li>NullPtr</li>
+        <li>ObjCId</li>
+        <li>ObjCClass</li>
+        <li>ObjCSel</li>
+        <li>OCLSampler</li>
+        <li>OCLEvent</li>
+        <li>OCLClkEvent</li>
+        <li>OCLQueue</li>
+        <li>OCLReserveID</li>
+        <li>Dependent</li>
+        <li>Overload</li>
+        <li>BoundMember</li>
+        <li>PseudoObject</li>
+        <li>UnknownAny</li>
+        <li>BuiltinFn</li>
+        <li>ARCUnbridgedCast</li>
+        <li>IncompleteMatrixIdx</li>
+        <li>OMPArraySection</li>
+        <li>OMPArrayShaping</li>
+        <li>OMPIterator</li>
+        <li>LastKind</li>
+      </ul>
+      <p>Defined at line 2622 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#64693B3C7B6ED8E958F0561B2292FA885FEF26F7">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB9178B301791F2995D1AF87F44D44FB9ADDF619">getName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84D937BACB08DFF33A1EA7EB1783D144FB4FFD21">getNameAsCString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E0CC3246FAA455C62994AEA668D0D7EA7D2878E">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2246C5E850F1CF64358A1D9EE84085720E84856">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CFA41EEBF344F9181E8BF33165856835BA6DA91D">isInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7BF0EF28F6A3DB6B46AB8EBB936A2B4FCBFDB33">isSignedInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11BC4E34780B83B83A1DF386DF720B767608F09F">isUnsignedInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA583E0825AD95230B8BEF6ECA8AEE1507D6C975">isFloatingPoint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#384EF9D98363E8BF5495E5002C28643EC69F81FA">isSVEBool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#154D11599DC5EA40183BD77C4460C98FA12B1812">isPlaceholderTypeKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B6EA80CFC0329EBC899217521F4507F6D72C411">isPlaceholderType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3154A74010D3994B6F2B6CFBFD374D2F61821F6">isNonOverloadPlaceholderType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42DBBABD603FB78E2697AE8AB704204DB7AA3344">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#145C3336AA0CB95A90B4399CFB5FC95C5B183A4B">Kind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

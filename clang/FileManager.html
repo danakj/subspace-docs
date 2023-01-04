@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FileManager</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FileManager</h1>
+    <p>Defined at line 53 of file /usr/lib/llvm-16/include/clang/Basic/FileManager.h</p>
+    <div>
+      <div>
+        <p> Implements support for file system lookup, file system caching, and directory search management.</p>
+        <p> This also handles more advanced properties, such as uniquing files based on &quot;inode&quot;, so that a file with two names (e.g. symlinked) will be treated as a single file.</p>
+      </div>
+    </div>
+    <p>Inherits from RefCountedBase&lt;FileManager&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4C41CDFC8EEA531603C5E33751F4EDD3CFEC5302">FileManager</h3>
+      <p>
+        public void FileManager(const FileSystemOptions &amp; FileSystemOpts, 
+        <a href="../llvm/IntrusiveRefCntPtr.html">IntrusiveRefCntPtr</a>
+         FS)
+      </p>
+      <div>
+        <div>
+          <p> Construct a file manager, optionally with a custom VFS.</p>
+        </div>
+      </div>
+      <h3 id="7412D5D92A5D88A2CF001B7952F69FBEBBBD4435">~FileManager</h3>
+      <p>public void ~FileManager()</p>
+      <h3 id="A3050010FB4039AC09D3787501B4E031FE8A7E28">setStatCache</h3>
+      <p>
+        public void setStatCache(
+        <a href="../std/unique_ptr.html">unique_ptr</a>
+         statCache)
+      </p>
+      <div>
+        <div>
+          <p> Installs the provided FileSystemStatCache object within the FileManager.</p>
+          <p> Ownership of this object is transferred to the FileManager.</p>
+        </div>
+      </div>
+      <h3 id="0A95482658382ABAD1940571B15490FE2E171822">clearStatCache</h3>
+      <p>public void clearStatCache()</p>
+      <div>
+        <div>
+          <p> Removes the FileSystemStatCache object from the manager.</p>
+        </div>
+      </div>
+      <h3 id="CB93348E7E70501AF2D5C1B7E5E02C03CAA1D1CF">getNumUniqueRealFiles</h3>
+      <p>public size_t getNumUniqueRealFiles()</p>
+      <p>Defined at line 153 of file /usr/lib/llvm-16/include/clang/Basic/FileManager.h</p>
+      <div>
+        <div>
+          <p> Returns the number of unique real file entries cached by the file manager.</p>
+        </div>
+      </div>
+      <h3 id="384731C58B1A04D7B809264F529B6C0429240371">getDirectoryRef</h3>
+      <p>
+        public 
+        <a href="../llvm/Expected.html">Expected</a>
+         getDirectoryRef(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         DirName, _Bool CacheFailure)
+      </p>
+      <div>
+        <div>
+          <p> Lookup, cache, and verify the specified directory (real or virtual).</p>
+          <p> This returns a  if there was an error reading the directory. On success, returns the reference to the directory entry together with the exact path that was used to access a file by a particular call to getDirectoryRef.</p>
+        </div>
+      </div>
+      <h3 id="AF9E6F8204DBD2724D084BF3FD2FE4282D787709">getOptionalDirectoryRef</h3>
+      <p>
+        public 
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         getOptionalDirectoryRef(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         DirName, _Bool CacheFailure)
+      </p>
+      <p>Defined at line 169 of file /usr/lib/llvm-16/include/clang/Basic/FileManager.h</p>
+      <div>
+        <div>
+          <p> Get a  if it exists, without doing anything on error.</p>
+        </div>
+      </div>
+      <h3 id="45E48970834FAF3A98A74832EE7ADFFEDBB1AA7C">getDirectory</h3>
+      <p>
+        public llvm::ErrorOr&lt;const DirectoryEntry *&gt; getDirectory(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         DirName, _Bool CacheFailure)
+      </p>
+      <div>
+        <div>
+          <p> Lookup, cache, and verify the specified directory (real or virtual).</p>
+          <p> This function is deprecated and will be removed at some point in the future, new clients should use</p>
+          <p> This returns a  if there was an error reading the directory. If there is no error, the DirectoryEntry is guaranteed to be non-NULL.</p>
+        </div>
+      </div>
+      <h3 id="17987353CC912DD12CD24785F21EA67749DFE427">getFile</h3>
+      <p>
+        public llvm::ErrorOr&lt;const FileEntry *&gt; getFile(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Filename, _Bool OpenFile, _Bool CacheFailure)
+      </p>
+      <div>
+        <div>
+          <p> Lookup, cache, and verify the specified file (real or virtual).</p>
+          <p> This function is deprecated and will be removed at some point in the future, new clients should use</p>
+          <p> This returns a  if there was an error loading the file. If there is no error, the FileEntry is guaranteed to be non-NULL.</p>
+        </div>
+      </div>
+      <h3 id="DCFC60EADCEB7C797EA1FBE98F1479CE7A4C923D">getFileRef</h3>
+      <p>
+        public 
+        <a href="../llvm/Expected.html">Expected</a>
+         getFileRef(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Filename, _Bool OpenFile, _Bool CacheFailure)
+      </p>
+      <div>
+        <div>
+          <p> Lookup, cache, and verify the specified file (real or virtual). Return the reference to the file entry together with the exact path that was used to access a file by a particular call to getFileRef. If the underlying VFS is a redirecting VFS that uses external file names, the returned FileEntryRef will use the external name instead of the filename that was passed to this method.</p>
+          <p> This returns a  if there was an error loading the file, or a  otherwise.</p>
+        </div>
+      </div>
+      <h3 id="9DA6DC77EB5B94575597BBDBBC2BB80C4934C56F">getSTDIN</h3>
+      <p>
+        public 
+        <a href="../llvm/Expected.html">Expected</a>
+         getSTDIN()
+      </p>
+      <div>
+        <div>
+          <p> Get the FileEntryRef for stdin, returning an error if stdin cannot be read.</p>
+          <p> This reads and caches stdin before returning. Subsequent calls return the same file entry, and a reference to the cached input is returned by calls to getBufferForFile.</p>
+        </div>
+      </div>
+      <h3 id="4C7465A558D5811EED239CFAF206E986145C2DF0">getOptionalFileRef</h3>
+      <p>
+        public 
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         getOptionalFileRef(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Filename, _Bool OpenFile, _Bool CacheFailure)
+      </p>
+      <p>Defined at line 234 of file /usr/lib/llvm-16/include/clang/Basic/FileManager.h</p>
+      <div>
+        <div>
+          <p> Get a FileEntryRef if it exists, without doing anything on error.</p>
+        </div>
+      </div>
+      <h3 id="BD414B59045D51DF3F12A2AE1B507AE54D19BEBD">getFileSystemOpts</h3>
+      <p>public FileSystemOptions &amp; getFileSystemOpts()</p>
+      <p>Defined at line 242 of file /usr/lib/llvm-16/include/clang/Basic/FileManager.h</p>
+      <div>
+        <div>
+          <p> Returns the current file system options</p>
+        </div>
+      </div>
+      <h3 id="00A9BDB17E5858483333092108195CA724CAF5CD">getFileSystemOpts</h3>
+      <p>public const FileSystemOptions &amp; getFileSystemOpts()</p>
+      <p>Defined at line 243 of file /usr/lib/llvm-16/include/clang/Basic/FileManager.h</p>
+      <h3 id="05323B2BEB17E81B0A5DD40D77A2DBE55559CC99">getVirtualFileSystem</h3>
+      <p>public llvm::vfs::FileSystem &amp; getVirtualFileSystem()</p>
+      <p>Defined at line 245 of file /usr/lib/llvm-16/include/clang/Basic/FileManager.h</p>
+      <h3 id="07528394B866D3060DA37B9D6BE1183294802768">getVirtualFileSystemPtr</h3>
+      <p>
+        public 
+        <a href="../llvm/IntrusiveRefCntPtr.html">IntrusiveRefCntPtr</a>
+         getVirtualFileSystemPtr()
+      </p>
+      <p>Defined at line 246 of file /usr/lib/llvm-16/include/clang/Basic/FileManager.h</p>
+      <h3 id="DDB5EA7B840D8DDD4C3930A1E74F1F37BC92EE16">setVirtualFileSystem</h3>
+      <p>
+        public void setVirtualFileSystem(
+        <a href="../llvm/IntrusiveRefCntPtr.html">IntrusiveRefCntPtr</a>
+         FS)
+      </p>
+      <p>Defined at line 251 of file /usr/lib/llvm-16/include/clang/Basic/FileManager.h</p>
+      <h3 id="3D33F3B40DF9AD3B54B89A35152BB397A6B3AE03">getVirtualFileRef</h3>
+      <p>
+        public 
+        <a href="FileEntryRef.html">FileEntryRef</a>
+         getVirtualFileRef(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Filename, off_t Size, time_t ModificationTime)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve a file entry for a &quot;virtual&quot; file that acts as if there were a file with the given name on disk.</p>
+          <p> The file itself is not accessed.</p>
+        </div>
+      </div>
+      <h3 id="42A3EC9507D3B3BAB21D157E01B53DA79E0FF106">getVirtualFile</h3>
+      <p>
+        public const FileEntry * getVirtualFile(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Filename, off_t Size, time_t ModificationTime)
+      </p>
+      <h3 id="95BFE05E768B5DDC0BF4484F14831F82AC781FD5">getBypassFile</h3>
+      <p>
+        public 
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         getBypassFile(
+        <a href="FileEntryRef.html">FileEntryRef</a>
+         VFE)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve a FileEntry that bypasses VFE, which is expected to be a virtual file entry, to access the real file.  The returned FileEntry will have the same filename as FE but a different identity and its own stat.</p>
+          <p> This should be used only for rare error recovery paths because it bypasses all mapping and uniquing, blindly creating a new FileEntry. There is no attempt to deduplicate these; if you bypass the same file twice, you get two new file entries.</p>
+        </div>
+      </div>
+      <h3 id="F48452D3204AB477DBDE6B595EA36CBE9E879A83">getBufferForFile</h3>
+      <p>
+        public 
+        <a href="../llvm/ErrorOr.html">ErrorOr</a>
+         getBufferForFile(const FileEntry * Entry, _Bool isVolatile, _Bool RequiresNullTerminator)
+      </p>
+      <div>
+        <div>
+          <p> Open the specified file as a MemoryBuffer, returning a new MemoryBuffer if successful, otherwise returning null.</p>
+        </div>
+      </div>
+      <h3 id="C82A574A4631409A2A48DFF05F3059D71A51FFAC">getBufferForFile</h3>
+      <p>
+        public 
+        <a href="../llvm/ErrorOr.html">ErrorOr</a>
+         getBufferForFile(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Filename, _Bool isVolatile, _Bool RequiresNullTerminator)
+      </p>
+      <p>Defined at line 280 of file /usr/lib/llvm-16/include/clang/Basic/FileManager.h</p>
+      <h3 id="EE7E5C86F8C688604257C900B1F42CFAEE0ABF14">getNoncachedStatValue</h3>
+      <p>
+        public 
+        <a href="../std/error_code.html">error_code</a>
+         getNoncachedStatValue(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Path, llvm::vfs::Status &amp; Result)
+      </p>
+      <div>
+        <div>
+          <p> Get the &apos;stat&apos; information for the given </p>
+          <p> If the path is relative, it will be resolved against the WorkingDir of the FileManager&apos;s FileSystemOptions.</p>
+        </div>
+      </div>
+      <h3 id="8FA91CB571B0E3889D3B616FD22218F300A6FA29">FixupRelativePath</h3>
+      <p>public _Bool FixupRelativePath(SmallVectorImpl&lt;char&gt; &amp; path)</p>
+      <div>
+        <div>
+          <p> If path is not absolute and FileSystemOptions set the working directory, the path is modified to be relative to the given working directory.</p>
+        </div>
+      </div>
+      <h3 id="3235FB408FE129D178FBC3CD22D0CED9AB8D511A">makeAbsolutePath</h3>
+      <p>public _Bool makeAbsolutePath(SmallVectorImpl&lt;char&gt; &amp; Path)</p>
+      <div>
+        <div>
+          <p> Makes  absolute taking into account FileSystemOptions and the working directory option.</p>
+        </div>
+      </div>
+      <h3 id="8EC5733BD04D358E3905F9D0B52731D39C6480ED">GetUniqueIDMapping</h3>
+      <p>public void GetUniqueIDMapping(SmallVectorImpl&lt;const FileEntry *&gt; &amp; UIDToFiles)</p>
+      <div>
+        <div>
+          <p> Produce an array mapping from the unique IDs assigned to each file to the corresponding FileEntry pointer.</p>
+        </div>
+      </div>
+      <h3 id="664A1C3F0C52BC072B49EB19B947A0A9E60B8C92">getCanonicalName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getCanonicalName(const DirectoryEntry * Dir)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the canonical name for a given directory.</p>
+          <p> This is a very expensive operation, despite its results being cached, and should only be used when the physical layout of the file system is required, which is (almost) never.</p>
+        </div>
+      </div>
+      <h3 id="93F3EE88273B82846C1EA3E6D65668C1A075B0E0">getCanonicalName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getCanonicalName(const FileEntry * File)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the canonical name for a given file.</p>
+          <p> This is a very expensive operation, despite its results being cached, and should only be used when the physical layout of the file system is required, which is (almost) never.</p>
+        </div>
+      </div>
+      <h3 id="155D355F864905C7E6C7C114D62F0FB852686BC5">PrintStats</h3>
+      <p>public void PrintStats()</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4C41CDFC8EEA531603C5E33751F4EDD3CFEC5302">FileManager</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7412D5D92A5D88A2CF001B7952F69FBEBBBD4435">~FileManager</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3050010FB4039AC09D3787501B4E031FE8A7E28">setStatCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A95482658382ABAD1940571B15490FE2E171822">clearStatCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB93348E7E70501AF2D5C1B7E5E02C03CAA1D1CF">getNumUniqueRealFiles</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#384731C58B1A04D7B809264F529B6C0429240371">getDirectoryRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF9E6F8204DBD2724D084BF3FD2FE4282D787709">getOptionalDirectoryRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45E48970834FAF3A98A74832EE7ADFFEDBB1AA7C">getDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17987353CC912DD12CD24785F21EA67749DFE427">getFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DCFC60EADCEB7C797EA1FBE98F1479CE7A4C923D">getFileRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9DA6DC77EB5B94575597BBDBBC2BB80C4934C56F">getSTDIN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C7465A558D5811EED239CFAF206E986145C2DF0">getOptionalFileRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD414B59045D51DF3F12A2AE1B507AE54D19BEBD">getFileSystemOpts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#00A9BDB17E5858483333092108195CA724CAF5CD">getFileSystemOpts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05323B2BEB17E81B0A5DD40D77A2DBE55559CC99">getVirtualFileSystem</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07528394B866D3060DA37B9D6BE1183294802768">getVirtualFileSystemPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DDB5EA7B840D8DDD4C3930A1E74F1F37BC92EE16">setVirtualFileSystem</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D33F3B40DF9AD3B54B89A35152BB397A6B3AE03">getVirtualFileRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42A3EC9507D3B3BAB21D157E01B53DA79E0FF106">getVirtualFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95BFE05E768B5DDC0BF4484F14831F82AC781FD5">getBypassFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F48452D3204AB477DBDE6B595EA36CBE9E879A83">getBufferForFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C82A574A4631409A2A48DFF05F3059D71A51FFAC">getBufferForFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE7E5C86F8C688604257C900B1F42CFAEE0ABF14">getNoncachedStatValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8FA91CB571B0E3889D3B616FD22218F300A6FA29">FixupRelativePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3235FB408FE129D178FBC3CD22D0CED9AB8D511A">makeAbsolutePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8EC5733BD04D358E3905F9D0B52731D39C6480ED">GetUniqueIDMapping</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#664A1C3F0C52BC072B49EB19B947A0A9E60B8C92">getCanonicalName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#93F3EE88273B82846C1EA3E6D65668C1A075B0E0">getCanonicalName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#155D355F864905C7E6C7C114D62F0FB852686BC5">PrintStats</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

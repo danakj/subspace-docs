@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CoreturnStmt</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CoreturnStmt</h1>
+    <p>Defined at line 458 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a &apos;co_return&apos; statement in the C++ Coroutines TS.</p>
+        <p> This statament models the initialization of the coroutine promise (encapsulating the eventual notional return value) from an expression (or braced-init-list), followed by termination of the coroutine.</p>
+        <p> This initialization is modeled by the evaluation of the operand followed by a call to one of:&lt;promise&gt;.return_value(&lt;operand&gt;)&lt;promise&gt;.return_void() which we name the &quot;promise call&quot;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Stmt.html">Stmt</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B1E32058E83DD48E4A2028D6BD47C9EEBAFFB6FE">CoreturnStmt</h3>
+      <p>
+        public void CoreturnStmt(
+        <a href="SourceLocation.html">SourceLocation</a>
+         CoreturnLoc, Stmt * Operand, Stmt * PromiseCall, _Bool IsImplicit)
+      </p>
+      <p>Defined at line 468 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="65B28370397D73D2C65BAAEA9765552DD6D42136">CoreturnStmt</h3>
+      <p>
+        public void CoreturnStmt(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         )
+      </p>
+      <p>Defined at line 476 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="A1EDBD0DAD24ADB750D8AE3F374FC350EB545F84">getKeywordLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getKeywordLoc()
+      </p>
+      <p>Defined at line 478 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="CDDF22C4A9739788B0C6AD1F7342C19C5E77AEAE">getOperand</h3>
+      <p>public Expr * getOperand()</p>
+      <p>Defined at line 482 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the operand of the &apos;co_return&apos; statement. Will be nullptr if none was specified.</p>
+        </div>
+      </div>
+      <h3 id="D00D1CA7F69027807A43D5D74EBD40E6771B4569">getPromiseCall</h3>
+      <p>public Expr * getPromiseCall()</p>
+      <p>Defined at line 487 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the promise call that results from this &apos;co_return&apos; statement. Will be nullptr if either the coroutine has not yet been finalized or the coroutine has no eventual return type.</p>
+        </div>
+      </div>
+      <h3 id="9A1ADD29268DECC040F3EB87221F378501CD009C">isImplicit</h3>
+      <p>public _Bool isImplicit()</p>
+      <p>Defined at line 491 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="D6E26249B60D8A11332F8EF1F96B057222ED9736">setIsImplicit</h3>
+      <p>public void setIsImplicit(_Bool value)</p>
+      <p>Defined at line 492 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="201D236261B03183AA8CC34119D764D1E7444385">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 494 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="1AFC5275AFAB31C1049F81FA45733DEAA52A5751">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 495 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="806551E3DFCDB8C90E568EC53406D3B10F1F68DC">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 499 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="F6485024E823F37AED824397A815B4CD0C7ABE89">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 503 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="154173E7AF0DAF6200F5183505FE54A19357B82E">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 507 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B1E32058E83DD48E4A2028D6BD47C9EEBAFFB6FE">CoreturnStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65B28370397D73D2C65BAAEA9765552DD6D42136">CoreturnStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1EDBD0DAD24ADB750D8AE3F374FC350EB545F84">getKeywordLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDDF22C4A9739788B0C6AD1F7342C19C5E77AEAE">getOperand</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D00D1CA7F69027807A43D5D74EBD40E6771B4569">getPromiseCall</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A1ADD29268DECC040F3EB87221F378501CD009C">isImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6E26249B60D8A11332F8EF1F96B057222ED9736">setIsImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#201D236261B03183AA8CC34119D764D1E7444385">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1AFC5275AFAB31C1049F81FA45733DEAA52A5751">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#806551E3DFCDB8C90E568EC53406D3B10F1F68DC">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6485024E823F37AED824397A815B4CD0C7ABE89">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#154173E7AF0DAF6200F5183505FE54A19357B82E">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

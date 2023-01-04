@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CanProxy</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CanProxy</h1>
+    <p>Defined at line 348 of file /usr/lib/llvm-16/include/clang/AST/CanonicalType.h</p>
+    <div>
+      <div>
+        <p> Canonical proxy type returned when retrieving the members of a canonical type or as the result of the  member function.</p>
+        <p> The CanProxy type mainly exists as a proxy through which operator-&gt; will look to either map down to a raw T* (e.g., PointerType*) or to a proxy type that provides canonical-type access to the fields of the type.</p>
+      </div>
+    </div>
+    <p>Inherits from CanProxyAdaptor&lt;T&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F7CC29C902EA63FA3F6EFCFBDE0B2D5581405556">CanProxy&lt;T&gt;</h3>
+      <p>public void CanProxy&lt;T&gt;()</p>
+      <p>Defined at line 351 of file /usr/lib/llvm-16/include/clang/AST/CanonicalType.h</p>
+      <div>
+        <div>
+          <p> Build a NULL proxy.</p>
+        </div>
+      </div>
+      <h3 id="F8A75D74262808375886C27B11FE3E7577E8406E">CanProxy&lt;T&gt;</h3>
+      <p>public void CanProxy&lt;T&gt;(CanQual&lt;T&gt; Stored)</p>
+      <p>Defined at line 354 of file /usr/lib/llvm-16/include/clang/AST/CanonicalType.h</p>
+      <div>
+        <div>
+          <p> Build a proxy to the given canonical type.</p>
+        </div>
+      </div>
+      <h3 id="B0D5514DCAF33BCF92B5789ABC9524EACB71D298">operator CanQual&lt;type-parameter-0-0&gt;</h3>
+      <p>public CanQual&lt;T&gt; operator CanQual&lt;type-parameter-0-0&gt;()</p>
+      <p>Defined at line 357 of file /usr/lib/llvm-16/include/clang/AST/CanonicalType.h</p>
+      <div>
+        <div>
+          <p> Implicit conversion to the stored canonical type.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F7CC29C902EA63FA3F6EFCFBDE0B2D5581405556">CanProxy&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8A75D74262808375886C27B11FE3E7577E8406E">CanProxy&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0D5514DCAF33BCF92B5789ABC9524EACB71D298">operator CanQual&lt;type-parameter-0-0&gt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

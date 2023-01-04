@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CPUDispatchAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CPUDispatchAttr</h1>
+    <p>Defined at line 2342 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CD36DEBA20B3A6369813723EB8A5EE682D569EC7">CreateImplicit</h3>
+      <p>public CPUDispatchAttr * CreateImplicit(ASTContext &amp; Ctx, IdentifierInfo ** Cpus, unsigned int CpusSize, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="D60F39FCF1CE760C179D4475D98B3B7B90ED1CD7">Create</h3>
+      <p>public CPUDispatchAttr * Create(ASTContext &amp; Ctx, IdentifierInfo ** Cpus, unsigned int CpusSize, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="88EB80BEF33589D78026AD5A84CC89C675F2B09E">CreateImplicit</h3>
+      <p>
+        public CPUDispatchAttr * CreateImplicit(ASTContext &amp; Ctx, IdentifierInfo ** Cpus, unsigned int CpusSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="623ED99236BEE44607C7DE223E53990F0F70DA78">Create</h3>
+      <p>
+        public CPUDispatchAttr * Create(ASTContext &amp; Ctx, IdentifierInfo ** Cpus, unsigned int CpusSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="61AB1D7ABAEAE97C8E476C900283925268A6BB33">CPUDispatchAttr</h3>
+      <p>public void CPUDispatchAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, IdentifierInfo ** Cpus, unsigned int CpusSize)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="F5E71343E283EFC37E25CD0FB6CFA4CDB9971CEE">CPUDispatchAttr</h3>
+      <p>public void CPUDispatchAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="42198D52739A1781AF07E442CC82182A7CD5DD38">clone</h3>
+      <p>public CPUDispatchAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="01447A0D9F3A92B2211466F351535E81608A6337">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="F6D5C6692C1AE995358012F68540EBF929B175F6">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="A14198ABE7459252B83176CEE0D9E82D9031B357">cpus_begin</h3>
+      <p>public cpus_iterator cpus_begin()</p>
+      <p>Defined at line 2374 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="723AF0BCEA12BA9D774AA1974B57DF65E608B785">cpus_end</h3>
+      <p>public cpus_iterator cpus_end()</p>
+      <p>Defined at line 2375 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="632D10FFA964CD350D00145DB349C9385AB1E4A6">cpus_size</h3>
+      <p>public unsigned int cpus_size()</p>
+      <p>Defined at line 2376 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="9D59570DB389BA29F0F382CDCF903B95CD02B567">cpus</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         cpus()
+      </p>
+      <p>Defined at line 2377 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="14A9F8204DD8110C9EB4EAEF912686B459BBE965">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 2382 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="D1A0989884D3ADA1AB229CBA2703335E2FDF091F">enum Spelling</h3>
+      <ul>
+        <li>GNU_cpu_dispatch</li>
+        <li>CXX11_clang_cpu_dispatch</li>
+        <li>C2x_clang_cpu_dispatch</li>
+        <li>Declspec_cpu_dispatch</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 2347 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CD36DEBA20B3A6369813723EB8A5EE682D569EC7">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D60F39FCF1CE760C179D4475D98B3B7B90ED1CD7">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88EB80BEF33589D78026AD5A84CC89C675F2B09E">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#623ED99236BEE44607C7DE223E53990F0F70DA78">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61AB1D7ABAEAE97C8E476C900283925268A6BB33">CPUDispatchAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F5E71343E283EFC37E25CD0FB6CFA4CDB9971CEE">CPUDispatchAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42198D52739A1781AF07E442CC82182A7CD5DD38">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01447A0D9F3A92B2211466F351535E81608A6337">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6D5C6692C1AE995358012F68540EBF929B175F6">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A14198ABE7459252B83176CEE0D9E82D9031B357">cpus_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#723AF0BCEA12BA9D774AA1974B57DF65E608B785">cpus_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#632D10FFA964CD350D00145DB349C9385AB1E4A6">cpus_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D59570DB389BA29F0F382CDCF903B95CD02B567">cpus</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14A9F8204DD8110C9EB4EAEF912686B459BBE965">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D1A0989884D3ADA1AB229CBA2703335E2FDF091F">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

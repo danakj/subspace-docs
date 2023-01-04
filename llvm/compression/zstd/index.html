@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace zstd</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/compression/zstd" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace zstd</h1>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="6D2439F1D7196F8517A3A2F176D8EB9B8FE95E8A">isAvailable</h3>
+      <p>_Bool isAvailable()</p>
+      <h3 id="965E76B4124CDCB4C6EA9B354E74E535C79F3BE7">compress</h3>
+      <p>
+        void compress(
+        <a href="../../../llvm/ArrayRef.html">ArrayRef</a>
+         Input, SmallVectorImpl&lt;uint8_t&gt; &amp; CompressedBuffer, int Level)
+      </p>
+      <h3 id="44FA880DD6D1BC2868D61688413632A286B03BE4">decompress</h3>
+      <p>
+        <a href="../../../llvm/Error.html">Error</a>
+         decompress(
+        <a href="../../../llvm/ArrayRef.html">ArrayRef</a>
+         Input, uint8_t * Output, size_t &amp; UncompressedSize)
+      </p>
+      <h3 id="6BF6825EEAE86612AEAA647C30A5EAF0AFD2D091">decompress</h3>
+      <p>
+        <a href="../../../llvm/Error.html">Error</a>
+         decompress(
+        <a href="../../../llvm/ArrayRef.html">ArrayRef</a>
+         Input, SmallVectorImpl&lt;uint8_t&gt; &amp; Output, size_t UncompressedSize)
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6D2439F1D7196F8517A3A2F176D8EB9B8FE95E8A">isAvailable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#965E76B4124CDCB4C6EA9B354E74E535C79F3BE7">compress</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44FA880DD6D1BC2868D61688413632A286B03BE4">decompress</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BF6825EEAE86612AEAA647C30A5EAF0AFD2D091">decompress</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

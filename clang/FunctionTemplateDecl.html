@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FunctionTemplateDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FunctionTemplateDecl</h1>
+    <p>Defined at line 1006 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> Declaration of a template function.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="RedeclarableTemplateDecl.html">RedeclarableTemplateDecl</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/FunctionTemplateDecl/Common.html">Common</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F885803ECC2296F57C3869E696CBF33B5A2C739F">FunctionTemplateDecl</h3>
+      <p>
+        protected void FunctionTemplateDecl(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params, NamedDecl * Decl)
+      </p>
+      <p>Defined at line 1020 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="6B9A76DA2E9918CFCFB70EFF735057DF25C0AE0F">newCommon</h3>
+      <p>protected CommonBase * newCommon(ASTContext &amp; C)</p>
+      <h3 id="DB2439E8819FBA595888E912D8E7A665CDA85616">getCommonPtr</h3>
+      <p>protected Common * getCommonPtr()</p>
+      <p>Defined at line 1028 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="55607DA7D150F0AFB28A7CE3595470E151D427C5">getSpecializations</h3>
+      <p>protected llvm::FoldingSetVector&lt;FunctionTemplateSpecializationInfo&gt; &amp; getSpecializations()</p>
+      <div>
+        <div>
+          <p> Retrieve the set of function template specializations of this function template.</p>
+        </div>
+      </div>
+      <h3 id="B652232B45BCF078145FEA19E6D6FD0320A211C8">addSpecialization</h3>
+      <p>protected void addSpecialization(FunctionTemplateSpecializationInfo * Info, void * InsertPos)</p>
+      <div>
+        <div>
+          <p> Add a specialization of this function template.</p>
+        </div>
+      </div>
+      <h3 id="E57F0E8B60AA72760A3C4E8896EB0210BDA9E1E7">LoadLazySpecializations</h3>
+      <p>public void LoadLazySpecializations()</p>
+      <div>
+        <div>
+          <p> Load any lazily-loaded specializations from the external source.</p>
+        </div>
+      </div>
+      <h3 id="529FBD076903A0DA4AFE19220A2CD72EDD06ED4F">getTemplatedDecl</h3>
+      <p>public FunctionDecl * getTemplatedDecl()</p>
+      <p>Defined at line 1052 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Get the underlying function declaration of the template.</p>
+        </div>
+      </div>
+      <h3 id="71743CA73739A18A71DC3604D4E0B439F2A55F4C">isThisDeclarationADefinition</h3>
+      <p>public _Bool isThisDeclarationADefinition()</p>
+      <p>Defined at line 1058 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Returns whether this template declaration defines the primary pattern.</p>
+        </div>
+      </div>
+      <h3 id="C8CE7A965799D6DB375CE641BDC52CA9EB8780DE">findSpecialization</h3>
+      <p>
+        public FunctionDecl * findSpecialization(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, void *&amp; InsertPos)
+      </p>
+      <div>
+        <div>
+          <p> Return the specialization with the provided arguments if it exists, otherwise return the insertion point.</p>
+        </div>
+      </div>
+      <h3 id="5278CEF43D018907513B4D58F71DBBAA6DDE2725">getCanonicalDecl</h3>
+      <p>public FunctionTemplateDecl * getCanonicalDecl()</p>
+      <p>Defined at line 1067 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="61ED51981252F2AA14B5B5EF83E11592C736D851">getCanonicalDecl</h3>
+      <p>public const FunctionTemplateDecl * getCanonicalDecl()</p>
+      <p>Defined at line 1071 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="A0900A926A9642F102D8E5F5CC1C2C5F18ADCD4E">getPreviousDecl</h3>
+      <p>public FunctionTemplateDecl * getPreviousDecl()</p>
+      <p>Defined at line 1078 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the previous declaration of this function template, or nullptr if no such declaration exists.</p>
+        </div>
+      </div>
+      <h3 id="7EE16ACFE279F59674DDFB8F8FE840AE1BBE56AC">getPreviousDecl</h3>
+      <p>public const FunctionTemplateDecl * getPreviousDecl()</p>
+      <p>Defined at line 1082 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="89D8E4BC2325C0666FEE6791BB508C287A9D4FD2">getMostRecentDecl</h3>
+      <p>public FunctionTemplateDecl * getMostRecentDecl()</p>
+      <p>Defined at line 1087 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="66CF9D593C9CB67515750D2DB5C114A67587AFDE">getMostRecentDecl</h3>
+      <p>public const FunctionTemplateDecl * getMostRecentDecl()</p>
+      <p>Defined at line 1092 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="795AE0E22F9358AD8DF42E5F53FAA3534D5D949E">getInstantiatedFromMemberTemplate</h3>
+      <p>public FunctionTemplateDecl * getInstantiatedFromMemberTemplate()</p>
+      <p>Defined at line 1096 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="78719F2DAE8199EE2B3D0BC336724D4DBF2690FA">specializations</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         specializations()
+      </p>
+      <p>Defined at line 1104 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="CC36188FC83326050E761D5D7019D3E3A3AE926E">spec_begin</h3>
+      <p>
+        public 
+        <a href="../clang/RedeclarableTemplateDecl/SpecIterator.html">SpecIterator</a>
+         spec_begin()
+      </p>
+      <p>Defined at line 1108 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="95B2CFB2150EA481C670EDD26F1ED77CC83EAB4C">spec_end</h3>
+      <p>
+        public 
+        <a href="../clang/RedeclarableTemplateDecl/SpecIterator.html">SpecIterator</a>
+         spec_end()
+      </p>
+      <p>Defined at line 1112 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="A7BBC8248ABBB83AE7F770E8912E931B36026405">isAbbreviated</h3>
+      <p>public _Bool isAbbreviated()</p>
+      <p>Defined at line 1118 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Return whether this function template is an abbreviated function template, e.g. `void foo(auto x)` or `template&lt;typename T&gt; void foo(auto x)`</p>
+        </div>
+      </div>
+      <h3 id="5AB0A88BE95C51F836E6C719E66F1BDEEFC01375">mergePrevDecl</h3>
+      <p>public void mergePrevDecl(FunctionTemplateDecl * Prev)</p>
+      <div>
+        <div>
+          <p> Merge  with our RedeclarableTemplateDecl::Common.</p>
+        </div>
+      </div>
+      <h3 id="35A5A13DF2679EC100B11298F16B03BB01114D1B">Create</h3>
+      <p>
+        public FunctionTemplateDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params, NamedDecl * Decl)
+      </p>
+      <div>
+        <div>
+          <p> Create a function template node.</p>
+        </div>
+      </div>
+      <h3 id="EF9649FD49EF396973D40DEEEFC1C660AE6FC01B">CreateDeserialized</h3>
+      <p>public FunctionTemplateDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <div>
+        <div>
+          <p> Create an empty function template node.</p>
+        </div>
+      </div>
+      <h3 id="AA4884262C706878DABE34A68F6B03CF7776F474">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 1141 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast support</p>
+        </div>
+      </div>
+      <h3 id="9B9777A6DD59E4CF94F59C2D654B645C85284729">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 1142 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F885803ECC2296F57C3869E696CBF33B5A2C739F">FunctionTemplateDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B9A76DA2E9918CFCFB70EFF735057DF25C0AE0F">newCommon</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB2439E8819FBA595888E912D8E7A665CDA85616">getCommonPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#55607DA7D150F0AFB28A7CE3595470E151D427C5">getSpecializations</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B652232B45BCF078145FEA19E6D6FD0320A211C8">addSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E57F0E8B60AA72760A3C4E8896EB0210BDA9E1E7">LoadLazySpecializations</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#529FBD076903A0DA4AFE19220A2CD72EDD06ED4F">getTemplatedDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71743CA73739A18A71DC3604D4E0B439F2A55F4C">isThisDeclarationADefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C8CE7A965799D6DB375CE641BDC52CA9EB8780DE">findSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5278CEF43D018907513B4D58F71DBBAA6DDE2725">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61ED51981252F2AA14B5B5EF83E11592C736D851">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0900A926A9642F102D8E5F5CC1C2C5F18ADCD4E">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7EE16ACFE279F59674DDFB8F8FE840AE1BBE56AC">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89D8E4BC2325C0666FEE6791BB508C287A9D4FD2">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66CF9D593C9CB67515750D2DB5C114A67587AFDE">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#795AE0E22F9358AD8DF42E5F53FAA3534D5D949E">getInstantiatedFromMemberTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78719F2DAE8199EE2B3D0BC336724D4DBF2690FA">specializations</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC36188FC83326050E761D5D7019D3E3A3AE926E">spec_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95B2CFB2150EA481C670EDD26F1ED77CC83EAB4C">spec_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7BBC8248ABBB83AE7F770E8912E931B36026405">isAbbreviated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AB0A88BE95C51F836E6C719E66F1BDEEFC01375">mergePrevDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35A5A13DF2679EC100B11298F16B03BB01114D1B">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF9649FD49EF396973D40DEEEFC1C660AE6FC01B">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA4884262C706878DABE34A68F6B03CF7776F474">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B9777A6DD59E4CF94F59C2D654B645C85284729">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class NestedNameSpecifier</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class NestedNameSpecifier</h1>
+    <p>Defined at line 50 of file /usr/lib/llvm-16/include/clang/AST/NestedNameSpecifier.h</p>
+    <div>
+      <div>
+        <p> Represents a C++ nested name specifier, such as &quot;\::std::vector&lt;int&gt;::&quot;.</p>
+        <p> C++ nested name specifiers are the prefixes to qualified names. For example, &quot;foo::&quot; in &quot;foo::x&quot; is a nested name specifier. Nested name specifiers are made up of a sequence of specifiers, each of which can be a namespace, type, identifier (for dependent names), decltype specifier, or the global specifier (&apos;::&apos;). The last two specifiers can only appear at the start of a nested-namespace-specifier.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="41628FF2EDFBB6C34B5D62183EE0FEC079FA0F79">operator=</h3>
+      <p>public NestedNameSpecifier &amp; operator=(const NestedNameSpecifier &amp; )</p>
+      <p>Defined at line 118 of file /usr/lib/llvm-16/include/clang/AST/NestedNameSpecifier.h</p>
+      <h3 id="C352770FC0C2F2D6163CC91779B0B1A266B23F83">Create</h3>
+      <p>public NestedNameSpecifier * Create(const ASTContext &amp; Context, NestedNameSpecifier * Prefix, IdentifierInfo * II)</p>
+      <div>
+        <div>
+          <p> Builds a specifier combining a prefix and an identifier.</p>
+          <p> The prefix must be dependent, since nested name specifiers referencing an identifier are only permitted when the identifier cannot be resolved.</p>
+        </div>
+      </div>
+      <h3 id="D10ABB7BD5E6AA004529304FDCD26559A3BC8DD0">Create</h3>
+      <p>public NestedNameSpecifier * Create(const ASTContext &amp; Context, NestedNameSpecifier * Prefix, const NamespaceDecl * NS)</p>
+      <div>
+        <div>
+          <p> Builds a nested name specifier that names a namespace.</p>
+        </div>
+      </div>
+      <h3 id="D8E5CF8F595AF4B1FDE814BCCD18D2E4E5DCDEF9">Create</h3>
+      <p>public NestedNameSpecifier * Create(const ASTContext &amp; Context, NestedNameSpecifier * Prefix, NamespaceAliasDecl * Alias)</p>
+      <div>
+        <div>
+          <p> Builds a nested name specifier that names a namespace alias.</p>
+        </div>
+      </div>
+      <h3 id="FC393263D6E925C498634F6C2593312DF75FBBC4">Create</h3>
+      <p>public NestedNameSpecifier * Create(const ASTContext &amp; Context, NestedNameSpecifier * Prefix, _Bool Template, const Type * T)</p>
+      <div>
+        <div>
+          <p> Builds a nested name specifier that names a type.</p>
+        </div>
+      </div>
+      <h3 id="B4C8FC35E81F5A599DBB18430D661ECDE8459ABE">Create</h3>
+      <p>public NestedNameSpecifier * Create(const ASTContext &amp; Context, IdentifierInfo * II)</p>
+      <div>
+        <div>
+          <p> Builds a specifier that consists of just an identifier.</p>
+          <p> The nested-name-specifier is assumed to be dependent, but has no prefix because the prefix is implied by something outside of the nested name specifier, e.g., in &quot;x-&gt;Base::f&quot;, the &quot;x&quot; has a dependent type.</p>
+        </div>
+      </div>
+      <h3 id="32A753A305EF70466358AF611B446B108937FF41">GlobalSpecifier</h3>
+      <p>public NestedNameSpecifier * GlobalSpecifier(const ASTContext &amp; Context)</p>
+      <div>
+        <div>
+          <p> Returns the nested name specifier representing the global scope.</p>
+        </div>
+      </div>
+      <h3 id="0207310C696DCE86A5FFA1F7863F5BF4A228EC71">SuperSpecifier</h3>
+      <p>public NestedNameSpecifier * SuperSpecifier(const ASTContext &amp; Context, CXXRecordDecl * RD)</p>
+      <div>
+        <div>
+          <p> Returns the nested name specifier representing the __super scope for the given CXXRecordDecl.</p>
+        </div>
+      </div>
+      <h3 id="C9E505EC91310116E082959BD4B61055902D71AA">getPrefix</h3>
+      <p>public NestedNameSpecifier * getPrefix()</p>
+      <p>Defined at line 169 of file /usr/lib/llvm-16/include/clang/AST/NestedNameSpecifier.h</p>
+      <div>
+        <div>
+          <p> Return the prefix of this nested name specifier.</p>
+          <p> The prefix contains all of the parts of the nested name specifier that precede this current specifier. For example, for a nested name specifier that represents &quot;foo::bar::&quot;, the current specifier will contain &quot;bar::&quot; and the prefix will contain &quot;foo::&quot;.</p>
+        </div>
+      </div>
+      <h3 id="9EB0CA7E381CC949EBB7E9FB8749725EEB252218">getKind</h3>
+      <p>
+        public 
+        <a href="../clang/NestedNameSpecifier/SpecifierKind.html">SpecifierKind</a>
+         getKind()
+      </p>
+      <div>
+        <div>
+          <p> Determine what kind of nested name specifier is stored.</p>
+        </div>
+      </div>
+      <h3 id="9F07477E213188FDE73056210428052D7E9CEB2F">getAsIdentifier</h3>
+      <p>public IdentifierInfo * getAsIdentifier()</p>
+      <p>Defined at line 176 of file /usr/lib/llvm-16/include/clang/AST/NestedNameSpecifier.h</p>
+      <div>
+        <div>
+          <p> Retrieve the identifier stored in this nested name specifier.</p>
+        </div>
+      </div>
+      <h3 id="74C56260B1370169007CB79E86D76B808716202F">getAsNamespace</h3>
+      <p>public NamespaceDecl * getAsNamespace()</p>
+      <div>
+        <div>
+          <p> Retrieve the namespace stored in this nested name specifier.</p>
+        </div>
+      </div>
+      <h3 id="26831E97B263A20CB94EF75CBFB7AB4CCA7037E0">getAsNamespaceAlias</h3>
+      <p>public NamespaceAliasDecl * getAsNamespaceAlias()</p>
+      <div>
+        <div>
+          <p> Retrieve the namespace alias stored in this nested name specifier.</p>
+        </div>
+      </div>
+      <h3 id="5DBC168B61AC23AAE77A33E69F48B3F4F7C7D3B4">getAsRecordDecl</h3>
+      <p>public CXXRecordDecl * getAsRecordDecl()</p>
+      <div>
+        <div>
+          <p> Retrieve the record declaration stored in this nested name specifier.</p>
+        </div>
+      </div>
+      <h3 id="50077453AC2CB3707BCC4DDB607A5E75210FB63A">getAsType</h3>
+      <p>public const Type * getAsType()</p>
+      <p>Defined at line 196 of file /usr/lib/llvm-16/include/clang/AST/NestedNameSpecifier.h</p>
+      <div>
+        <div>
+          <p> Retrieve the type stored in this nested name specifier.</p>
+        </div>
+      </div>
+      <h3 id="10DE07223C9F39C034BA139FDAB25ED7793FAE06">getDependence</h3>
+      <p>
+        public 
+        <a href="../clang/NestedNameSpecifierDependenceScope/NestedNameSpecifierDependence.html">NestedNameSpecifierDependence</a>
+         getDependence()
+      </p>
+      <h3 id="2455B84B8D3353D9BC9BAC878E5B1EBFFC73270B">isDependent</h3>
+      <p>public _Bool isDependent()</p>
+      <div>
+        <div>
+          <p> Whether this nested name specifier refers to a dependent type or not.</p>
+        </div>
+      </div>
+      <h3 id="27A8DE1FCA1D94C1F909D14D24E82FD6B87CC98F">isInstantiationDependent</h3>
+      <p>public _Bool isInstantiationDependent()</p>
+      <div>
+        <div>
+          <p> Whether this nested name specifier involves a template parameter.</p>
+        </div>
+      </div>
+      <h3 id="E60E72BF17FC22008B27C89809EE9F2F3709B267">containsUnexpandedParameterPack</h3>
+      <p>public _Bool containsUnexpandedParameterPack()</p>
+      <div>
+        <div>
+          <p> Whether this nested-name-specifier contains an unexpanded parameter pack (for C++11 variadic templates).</p>
+        </div>
+      </div>
+      <h3 id="6A96BAE782686995F9230011A3B0C9B94E18183A">containsErrors</h3>
+      <p>public _Bool containsErrors()</p>
+      <div>
+        <div>
+          <p> Whether this nested name specifier contains an error.</p>
+        </div>
+      </div>
+      <h3 id="5A8F58B4E1122971048FE80E15A45A3B1EE62810">print</h3>
+      <p>public void print(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy, _Bool ResolveTemplateArguments)</p>
+      <div>
+        <div>
+          <p> Print this nested name specifier to the given output stream. If `ResolveTemplateArguments` is true, we&apos;ll print actual types, e.g. `ns::SomeTemplate&lt;int, MyClass&gt;` instead of `ns::SomeTemplate&lt;Container::value_type, T&gt;`.</p>
+        </div>
+      </div>
+      <h3 id="C8D049922DE9D20AEDF66BB1CA671F593E103890">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 228 of file /usr/lib/llvm-16/include/clang/AST/NestedNameSpecifier.h</p>
+      <h3 id="9913283BF073EC6E3DA0D6D67DFF79BBD6D47465">dump</h3>
+      <p>public void dump(const LangOptions &amp; LO)</p>
+      <div>
+        <div>
+          <p> Dump the nested name specifier to standard output to aid in debugging.</p>
+        </div>
+      </div>
+      <h3 id="12FE9A0DA424D03E297ABDD13A07C62ED6AD115C">dump</h3>
+      <p>public void dump()</p>
+      <h3 id="96A27C237E3F8BB9BA1F33702D25C32C8A758F4D">dump</h3>
+      <p>public void dump(llvm::raw_ostream &amp; OS)</p>
+      <h3 id="764CDB5B61165C6B4D5EF8286FC57668B42DDC85">dump</h3>
+      <p>public void dump(llvm::raw_ostream &amp; OS, const LangOptions &amp; LO)</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="82E57E93E575C327F558B3185FD0CCE5A9640EEE">enum SpecifierKind</h3>
+      <ul>
+        <li>Identifier</li>
+        <li>Namespace</li>
+        <li>NamespaceAlias</li>
+        <li>TypeSpec</li>
+        <li>TypeSpecWithTemplate</li>
+        <li>Global</li>
+        <li>Super</li>
+      </ul>
+      <p>Defined at line 79 of file /usr/lib/llvm-16/include/clang/AST/NestedNameSpecifier.h</p>
+      <div>
+        <div>
+          <p> The kind of specifier that completes this nested name specifier.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#41628FF2EDFBB6C34B5D62183EE0FEC079FA0F79">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C352770FC0C2F2D6163CC91779B0B1A266B23F83">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D10ABB7BD5E6AA004529304FDCD26559A3BC8DD0">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8E5CF8F595AF4B1FDE814BCCD18D2E4E5DCDEF9">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC393263D6E925C498634F6C2593312DF75FBBC4">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4C8FC35E81F5A599DBB18430D661ECDE8459ABE">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32A753A305EF70466358AF611B446B108937FF41">GlobalSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0207310C696DCE86A5FFA1F7863F5BF4A228EC71">SuperSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C9E505EC91310116E082959BD4B61055902D71AA">getPrefix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EB0CA7E381CC949EBB7E9FB8749725EEB252218">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F07477E213188FDE73056210428052D7E9CEB2F">getAsIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#74C56260B1370169007CB79E86D76B808716202F">getAsNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#26831E97B263A20CB94EF75CBFB7AB4CCA7037E0">getAsNamespaceAlias</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5DBC168B61AC23AAE77A33E69F48B3F4F7C7D3B4">getAsRecordDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#50077453AC2CB3707BCC4DDB607A5E75210FB63A">getAsType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10DE07223C9F39C034BA139FDAB25ED7793FAE06">getDependence</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2455B84B8D3353D9BC9BAC878E5B1EBFFC73270B">isDependent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27A8DE1FCA1D94C1F909D14D24E82FD6B87CC98F">isInstantiationDependent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E60E72BF17FC22008B27C89809EE9F2F3709B267">containsUnexpandedParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A96BAE782686995F9230011A3B0C9B94E18183A">containsErrors</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A8F58B4E1122971048FE80E15A45A3B1EE62810">print</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C8D049922DE9D20AEDF66BB1CA671F593E103890">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9913283BF073EC6E3DA0D6D67DFF79BBD6D47465">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12FE9A0DA424D03E297ABDD13A07C62ED6AD115C">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96A27C237E3F8BB9BA1F33702D25C32C8A758F4D">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#764CDB5B61165C6B4D5EF8286FC57668B42DDC85">dump</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#82E57E93E575C327F558B3185FD0CCE5A9640EEE">SpecifierKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TemplateTemplateParmDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TemplateTemplateParmDecl</h1>
+    <p>Defined at line 1624 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> TemplateTemplateParmDecl - Declares a template template parameter, e.g., &quot;T&quot; in</p>
+        <p> A template template parameter is a TemplateDecl because it defines the name of a template and the template parameters allowable for substitution.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TemplateDecl.html">TemplateDecl</a>
+      , 
+      <a href="TemplateParmPosition.html">TemplateParmPosition</a>
+      , llvm::TrailingObjects&lt;TemplateTemplateParmDecl, TemplateParameterList *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="051D1638947F9C242555DA5191FB6E0F7CC7541F">Create</h3>
+      <p>
+        public TemplateTemplateParmDecl * Create(const ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, unsigned int D, unsigned int P, _Bool ParameterPack, IdentifierInfo * Id, TemplateParameterList * Params)
+      </p>
+      <h3 id="54ADE6C8270F5398820E8351B60C2593146FD872">Create</h3>
+      <p>
+        public TemplateTemplateParmDecl * Create(const ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, unsigned int D, unsigned int P, IdentifierInfo * Id, TemplateParameterList * Params, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Expansions)
+      </p>
+      <h3 id="352BD7A672A403EFD926928080D98D2B9D26C655">CreateDeserialized</h3>
+      <p>public TemplateTemplateParmDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="DB751890EF1A026DE920F4141A0379D3FA38EF89">CreateDeserialized</h3>
+      <p>public TemplateTemplateParmDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID, unsigned int NumExpansions)</p>
+      <h3 id="D38ED3A9F0A4E7ACCA6CC8AC22ABB5901E0E27DD">isParameterPack</h3>
+      <p>public _Bool isParameterPack()</p>
+      <p>Defined at line 1693 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Whether this template template parameter is a template parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="5DCD0B2728ABD345347A071CF3B4C2A68FDD0E81">isPackExpansion</h3>
+      <p>public _Bool isPackExpansion()</p>
+      <p>Defined at line 1699 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Whether this parameter pack is a pack expansion.</p>
+          <p> A template template parameter pack is a pack expansion if its template parameter list contains an unexpanded parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="E48FDD8AF94FFFFB2E4775BB6F27CBB092230358">isExpandedParameterPack</h3>
+      <p>public _Bool isExpandedParameterPack()</p>
+      <p>Defined at line 1722 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Whether this parameter is a template template parameter pack that has a known list of different template parameter lists at different positions.</p>
+          <p> A parameter pack is an expanded parameter pack when the original parameter pack&apos;s template parameter list was itself a pack expansion, and that expansion has already been expanded. For exampe, given:</p>
+          <p> The parameter pack  is a pack expansion, which expands the pack  When  is supplied with template arguments by instantiating  the instantiation of  is an expanded parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="3C7DC43667CDC3C515D4AACA16EF6964886C614F">getNumExpansionTemplateParameters</h3>
+      <p>public unsigned int getNumExpansionTemplateParameters()</p>
+      <p>Defined at line 1726 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieves the number of expansion template parameters in an expanded parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="3FC40427EEC4BAF56195B4F75B6B1DB7F1C6D16B">getExpansionTemplateParameters</h3>
+      <p>public TemplateParameterList * getExpansionTemplateParameters(unsigned int I)</p>
+      <p>Defined at line 1733 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve a particular expansion type within an expanded parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="EB75CD6CB7066C2BCBF214E4EF7E9E5F8620AEDB">getDefaultArgStorage</h3>
+      <p>public const DefArgStorage &amp; getDefaultArgStorage()</p>
+      <p>Defined at line 1738 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="A785841ABEE5AF5C64DBDDF74C55ADB67535FEDC">hasDefaultArgument</h3>
+      <p>public _Bool hasDefaultArgument()</p>
+      <p>Defined at line 1742 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Determine whether this template parameter has a default argument.</p>
+        </div>
+      </div>
+      <h3 id="235CBA2F4099ABE430F4BD67D644C36A13197826">getDefaultArgument</h3>
+      <p>public const TemplateArgumentLoc &amp; getDefaultArgument()</p>
+      <p>Defined at line 1745 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the default argument, if any.</p>
+        </div>
+      </div>
+      <h3 id="DFD9126B84CDF91D223689E5ABE6CDF63F659A4C">getDefaultArgumentLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getDefaultArgumentLoc()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the location of the default argument, if any.</p>
+        </div>
+      </div>
+      <h3 id="19569AC3ED1EAF820EDF2AB356483A13850EC7D4">defaultArgumentWasInherited</h3>
+      <p>public _Bool defaultArgumentWasInherited()</p>
+      <p>Defined at line 1755 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Determines whether the default argument was inherited from a previous declaration of this template.</p>
+        </div>
+      </div>
+      <h3 id="D51ED7CD517DCC582430F6298E0EE8C8741C1E10">setDefaultArgument</h3>
+      <p>public void setDefaultArgument(const ASTContext &amp; C, const TemplateArgumentLoc &amp; DefArg)</p>
+      <div>
+        <div>
+          <p> Set the default argument for this template parameter, and whether that default argument was inherited from another declaration.</p>
+        </div>
+      </div>
+      <h3 id="CA8EBBC545123580434FAC6DE58C593B11BBA4F8">setInheritedDefaultArgument</h3>
+      <p>public void setInheritedDefaultArgument(const ASTContext &amp; C, TemplateTemplateParmDecl * Prev)</p>
+      <p>Defined at line 1764 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="F17A946F1A8E5810AD89B0054405E9D4EE2EF4D1">removeDefaultArgument</h3>
+      <p>public void removeDefaultArgument()</p>
+      <p>Defined at line 1770 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Removes the default argument of this template parameter.</p>
+        </div>
+      </div>
+      <h3 id="719A2684BA8CEBEE8A559B9F55C40E8D6F6B7690">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 1772 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="8A860AEE2C4B51DFF7555B8CC99C03FF3E3E9286">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 1780 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="83ED21379F675BF8654BDA70BDBE0B2C55BAD291">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 1781 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#051D1638947F9C242555DA5191FB6E0F7CC7541F">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#54ADE6C8270F5398820E8351B60C2593146FD872">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#352BD7A672A403EFD926928080D98D2B9D26C655">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB751890EF1A026DE920F4141A0379D3FA38EF89">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D38ED3A9F0A4E7ACCA6CC8AC22ABB5901E0E27DD">isParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5DCD0B2728ABD345347A071CF3B4C2A68FDD0E81">isPackExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E48FDD8AF94FFFFB2E4775BB6F27CBB092230358">isExpandedParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C7DC43667CDC3C515D4AACA16EF6964886C614F">getNumExpansionTemplateParameters</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3FC40427EEC4BAF56195B4F75B6B1DB7F1C6D16B">getExpansionTemplateParameters</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB75CD6CB7066C2BCBF214E4EF7E9E5F8620AEDB">getDefaultArgStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A785841ABEE5AF5C64DBDDF74C55ADB67535FEDC">hasDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#235CBA2F4099ABE430F4BD67D644C36A13197826">getDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DFD9126B84CDF91D223689E5ABE6CDF63F659A4C">getDefaultArgumentLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#19569AC3ED1EAF820EDF2AB356483A13850EC7D4">defaultArgumentWasInherited</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D51ED7CD517DCC582430F6298E0EE8C8741C1E10">setDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA8EBBC545123580434FAC6DE58C593B11BBA4F8">setInheritedDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F17A946F1A8E5810AD89B0054405E9D4EE2EF4D1">removeDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#719A2684BA8CEBEE8A559B9F55C40E8D6F6B7690">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A860AEE2C4B51DFF7555B8CC99C03FF3E3E9286">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83ED21379F675BF8654BDA70BDBE0B2C55BAD291">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

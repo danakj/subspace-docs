@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace APIntOps</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/APIntOps" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace APIntOps</h1>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0E5EE82BB4953EFADD92CD6443C9BA66EFE5415C">smin</h3>
+      <p>const APInt &amp; smin(const APInt &amp; A, const APInt &amp; B)</p>
+      <p>Defined at line 2168 of file /usr/lib/llvm-16/include/llvm/ADT/APInt.h</p>
+      <div>
+        <div>
+          <p> Determine the smaller of two APInts considered to be signed.</p>
+        </div>
+      </div>
+      <h3 id="5EC5ECB9EB875F7ABE8B485C83D2764A646D8707">smax</h3>
+      <p>const APInt &amp; smax(const APInt &amp; A, const APInt &amp; B)</p>
+      <p>Defined at line 2173 of file /usr/lib/llvm-16/include/llvm/ADT/APInt.h</p>
+      <div>
+        <div>
+          <p> Determine the larger of two APInts considered to be signed.</p>
+        </div>
+      </div>
+      <h3 id="25A7A55CB7C6B36DF30FAD04A45E24A2074301C3">umin</h3>
+      <p>const APInt &amp; umin(const APInt &amp; A, const APInt &amp; B)</p>
+      <p>Defined at line 2178 of file /usr/lib/llvm-16/include/llvm/ADT/APInt.h</p>
+      <div>
+        <div>
+          <p> Determine the smaller of two APInts considered to be unsigned.</p>
+        </div>
+      </div>
+      <h3 id="B877DB0D1DA92BF6753CCE4F27AC141D6297CC4D">umax</h3>
+      <p>const APInt &amp; umax(const APInt &amp; A, const APInt &amp; B)</p>
+      <p>Defined at line 2183 of file /usr/lib/llvm-16/include/llvm/ADT/APInt.h</p>
+      <div>
+        <div>
+          <p> Determine the larger of two APInts considered to be unsigned.</p>
+        </div>
+      </div>
+      <h3 id="E1986FF8649B26058B1E8BB87583E701753653EA">GreatestCommonDivisor</h3>
+      <p>
+        <a href="../../llvm/APInt.html">APInt</a>
+         GreatestCommonDivisor(
+        <a href="../../llvm/APInt.html">APInt</a>
+         A, 
+        <a href="../../llvm/APInt.html">APInt</a>
+         B)
+      </p>
+      <div>
+        <div>
+          <p> Compute GCD of two unsigned APInt values.</p>
+          <p> This function returns the greatest common divisor of the two APInt values using Stein&apos;s algorithm.</p>
+        </div>
+      </div>
+      <h3 id="511146483C448078845CD9912A2E3391DAB77E66">RoundAPIntToDouble</h3>
+      <p>double RoundAPIntToDouble(const APInt &amp; APIVal)</p>
+      <p>Defined at line 2198 of file /usr/lib/llvm-16/include/llvm/ADT/APInt.h</p>
+      <div>
+        <div>
+          <p> Converts the given APInt to a double value.</p>
+          <p> Treats the APInt as an unsigned value for conversion purposes.</p>
+        </div>
+      </div>
+      <h3 id="E15B6DF091E3258346FE26D7C7A9D01001B3A7C0">RoundSignedAPIntToDouble</h3>
+      <p>double RoundSignedAPIntToDouble(const APInt &amp; APIVal)</p>
+      <p>Defined at line 2205 of file /usr/lib/llvm-16/include/llvm/ADT/APInt.h</p>
+      <div>
+        <div>
+          <p> Converts the given APInt to a double value.</p>
+          <p> Treats the APInt as a signed value for conversion purposes.</p>
+        </div>
+      </div>
+      <h3 id="64D74F185BB8F5EE4E6FCF5734729F728A1C6024">RoundAPIntToFloat</h3>
+      <p>float RoundAPIntToFloat(const APInt &amp; APIVal)</p>
+      <p>Defined at line 2210 of file /usr/lib/llvm-16/include/llvm/ADT/APInt.h</p>
+      <div>
+        <div>
+          <p> Converts the given APInt to a float value.</p>
+        </div>
+      </div>
+      <h3 id="9F586D7487974C42FA22886B12949D0FBBEF73A1">RoundSignedAPIntToFloat</h3>
+      <p>float RoundSignedAPIntToFloat(const APInt &amp; APIVal)</p>
+      <p>Defined at line 2217 of file /usr/lib/llvm-16/include/llvm/ADT/APInt.h</p>
+      <div>
+        <div>
+          <p> Converts the given APInt to a float value.</p>
+          <p> Treats the APInt as a signed value for conversion purposes.</p>
+        </div>
+      </div>
+      <h3 id="978C71987CEA918CE1CB9DE541FCABE016C2B7EA">RoundDoubleToAPInt</h3>
+      <p>
+        <a href="../../llvm/APInt.html">APInt</a>
+         RoundDoubleToAPInt(double Double, unsigned int width)
+      </p>
+      <div>
+        <div>
+          <p> Converts the given double value into a APInt.</p>
+          <p> This function convert a double value to an APInt value.</p>
+        </div>
+      </div>
+      <h3 id="3D26EAB26BB3424180997CD26C91D876F84B5E06">RoundFloatToAPInt</h3>
+      <p>
+        <a href="../../llvm/APInt.html">APInt</a>
+         RoundFloatToAPInt(float Float, unsigned int width)
+      </p>
+      <p>Defined at line 2229 of file /usr/lib/llvm-16/include/llvm/ADT/APInt.h</p>
+      <div>
+        <div>
+          <p> Converts a float value into a APInt.</p>
+          <p> Converts a float value into an APInt value.</p>
+        </div>
+      </div>
+      <h3 id="69F764A10CB18E380B45018BDA558868DEDE562B">RoundingUDiv</h3>
+      <p>
+        <a href="../../llvm/APInt.html">APInt</a>
+         RoundingUDiv(const APInt &amp; A, const APInt &amp; B, 
+        <a href="../../llvm/APInt/Rounding.html">Rounding</a>
+         RM)
+      </p>
+      <div>
+        <div>
+          <p> Return A unsign-divided by B, rounded by the given rounding mode.</p>
+        </div>
+      </div>
+      <h3 id="C3C074DE883472961E295D024AF1E39A107B8E37">RoundingSDiv</h3>
+      <p>
+        <a href="../../llvm/APInt.html">APInt</a>
+         RoundingSDiv(const APInt &amp; A, const APInt &amp; B, 
+        <a href="../../llvm/APInt/Rounding.html">Rounding</a>
+         RM)
+      </p>
+      <div>
+        <div>
+          <p> Return A sign-divided by B, rounded by the given rounding mode.</p>
+        </div>
+      </div>
+      <h3 id="6CA6A4F4F86A003CEB3CD686F85F00ECFEEF8E53">SolveQuadraticEquationWrap</h3>
+      <p>
+        std::optional&lt;APInt&gt; SolveQuadraticEquationWrap(
+        <a href="../../llvm/APInt.html">APInt</a>
+         A, 
+        <a href="../../llvm/APInt.html">APInt</a>
+         B, 
+        <a href="../../llvm/APInt.html">APInt</a>
+         C, unsigned int RangeWidth)
+      </p>
+      <div>
+        <div>
+          <p> Let q(n) = An^2 + Bn + C, and BW = bit width of the value range (e.g. 32 for i32). This function finds the smallest number n, such that (a) n &gt;= 0 and q(n) = 0, or (b) n &gt;= 1 and q(n-1) and q(n), when evaluated in the set of all     integers, belong to two different intervals [Rk, Rk+R),     where R = 2^BW, and k is an integer. The idea here is to find when q(n) &quot;overflows&quot; 2^BW, while at the same time &quot;allowing&quot; subtraction. In unsigned modulo arithmetic a subtraction (treated as addition of negated numbers) would always count as an overflow, but here we want to allow values to decrease and increase as long as they are within the same interval. Specifically, adding of two negative numbers should not cause an overflow (as long as the magnitude does not exceed the bit width). On the other hand, given a positive number, adding a negative number to it can give a negative result, which would cause the value to go from [-2^BW, 0) to [0, 2^BW). In that sense, zero is treated as a special case of an overflow.</p>
+          <p> This function returns std::nullopt if after finding k that minimizes the positive solution to q(n) = kR, both solutions are contained between two consecutive integers.</p>
+          <p> There are cases where q(n) &gt; T, and q(n+1) &lt; T (assuming evaluation in arithmetic modulo 2^BW, and treating the values as signed) by the virtue of *signed* overflow. This function will *not* find such an n, however it may find a value of n satisfying the inequalities due to an *unsigned* overflow (if the values are treated as unsigned). To find a solution for a signed overflow, treat it as a problem of finding an unsigned overflow with a range with of BW-1.</p>
+          <p> The returned value may have a different bit width from the input coefficients.</p>
+        </div>
+      </div>
+      <h3 id="CFFA072AB2747E6D19D523EDE0674FA0A8A37ADC">GetMostSignificantDifferentBit</h3>
+      <p>
+        <a href="../../std/optional.html">optional</a>
+         GetMostSignificantDifferentBit(const APInt &amp; A, const APInt &amp; B)
+      </p>
+      <div>
+        <div>
+          <p> Compare two values, and if they are different, return the position of the most significant bit that is different in the values.</p>
+        </div>
+      </div>
+      <h3 id="5545D680C56D56F8523BD884BF0932280C08D45B">ScaleBitMask</h3>
+      <p>
+        <a href="../../llvm/APInt.html">APInt</a>
+         ScaleBitMask(const APInt &amp; A, unsigned int NewBitWidth, _Bool MatchAllBits)
+      </p>
+      <div>
+        <div>
+          <p> Splat/Merge neighboring bits to widen/narrow the bitmask represented by </p>
+          <p> MatchAnyBits: (Default) e.g. ScaleBitMask(0b0101, 8) -&gt; 0b00110011 e.g. ScaleBitMask(0b00011011, 4) -&gt; 0b0111</p>
+          <p> MatchAllBits: e.g. ScaleBitMask(0b0101, 8) -&gt; 0b00110011 e.g. ScaleBitMask(0b00011011, 4) -&gt; 0b0001 A.getBitwidth() or NewBitWidth must be a whole multiples of the other.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0E5EE82BB4953EFADD92CD6443C9BA66EFE5415C">smin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5EC5ECB9EB875F7ABE8B485C83D2764A646D8707">smax</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25A7A55CB7C6B36DF30FAD04A45E24A2074301C3">umin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B877DB0D1DA92BF6753CCE4F27AC141D6297CC4D">umax</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1986FF8649B26058B1E8BB87583E701753653EA">GreatestCommonDivisor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#511146483C448078845CD9912A2E3391DAB77E66">RoundAPIntToDouble</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E15B6DF091E3258346FE26D7C7A9D01001B3A7C0">RoundSignedAPIntToDouble</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64D74F185BB8F5EE4E6FCF5734729F728A1C6024">RoundAPIntToFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F586D7487974C42FA22886B12949D0FBBEF73A1">RoundSignedAPIntToFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#978C71987CEA918CE1CB9DE541FCABE016C2B7EA">RoundDoubleToAPInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D26EAB26BB3424180997CD26C91D876F84B5E06">RoundFloatToAPInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69F764A10CB18E380B45018BDA558868DEDE562B">RoundingUDiv</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3C074DE883472961E295D024AF1E39A107B8E37">RoundingSDiv</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CA6A4F4F86A003CEB3CD686F85F00ECFEEF8E53">SolveQuadraticEquationWrap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CFFA072AB2747E6D19D523EDE0674FA0A8A37ADC">GetMostSignificantDifferentBit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5545D680C56D56F8523BD884BF0932280C08D45B">ScaleBitMask</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

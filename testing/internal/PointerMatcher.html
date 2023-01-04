@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class PointerMatcher</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class PointerMatcher</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1875">1875</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Implements the Pointer(m) matcher Implements the Pointer(m) matcher for matching a pointer that matches matcher m.  The pointer can be either raw or smart, and will match `m` against the raw pointer.</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../testing/internal/PointerMatcher/Impl.html">Impl</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CD12295302832B4890488C700F86FE9959B1E862">PointerMatcher&lt;InnerMatcher&gt;</h3>
+      <p>public void PointerMatcher&lt;InnerMatcher&gt;(const InnerMatcher &amp; matcher)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1877">1877</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="3A87DC66EAF8D586DEC4F5DEB4ACF79178AF5931">operator Matcher&lt;type-parameter-1-0&gt;</h3>
+      <p>public Matcher&lt;PointerType&gt; operator Matcher&lt;type-parameter-1-0&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1888">1888</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> This type conversion operator template allows Pointer(m) to be used as a matcher for any pointer type whose pointer type is compatible with the inner matcher, where type PointerType can be either a raw pointer or a smart pointer.</p>
+          <p> The reason we do this instead of relying on MakePolymorphicMatcher() is that the latter is not flexible enough for implementing the DescribeTo() method of Pointer().</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CD12295302832B4890488C700F86FE9959B1E862">PointerMatcher&lt;InnerMatcher&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A87DC66EAF8D586DEC4F5DEB4ACF79178AF5931">operator Matcher&lt;type-parameter-1-0&gt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

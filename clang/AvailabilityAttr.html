@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AvailabilityAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AvailabilityAttr</h1>
+    <p>Defined at line 1671 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="96B6B53083D3465D22623AFFCF93B1F11CAAF4D2">CreateImplicit</h3>
+      <p>
+        public AvailabilityAttr * CreateImplicit(ASTContext &amp; Ctx, IdentifierInfo * Platform, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Introduced, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Deprecated, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Obsoleted, _Bool Unavailable, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Message, _Bool Strict, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Replacement, int Priority, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="1020F0DD19751E013A8DEB4384345848B464D836">Create</h3>
+      <p>
+        public AvailabilityAttr * Create(ASTContext &amp; Ctx, IdentifierInfo * Platform, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Introduced, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Deprecated, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Obsoleted, _Bool Unavailable, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Message, _Bool Strict, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Replacement, int Priority, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="D457F0C166A7D9F5CA8184EB14720C4180F55912">CreateImplicit</h3>
+      <p>
+        public AvailabilityAttr * CreateImplicit(ASTContext &amp; Ctx, IdentifierInfo * Platform, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Introduced, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Deprecated, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Obsoleted, _Bool Unavailable, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Message, _Bool Strict, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Replacement, int Priority, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="E28B76D38A6E6295AF5B3AC68BFC896D918CD78C">Create</h3>
+      <p>
+        public AvailabilityAttr * Create(ASTContext &amp; Ctx, IdentifierInfo * Platform, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Introduced, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Deprecated, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Obsoleted, _Bool Unavailable, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Message, _Bool Strict, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Replacement, int Priority, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="B3D40EE5FE79425020FB11A15DE0DF1427CF66B8">AvailabilityAttr</h3>
+      <p>
+        public void AvailabilityAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, IdentifierInfo * Platform, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Introduced, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Deprecated, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         Obsoleted, _Bool Unavailable, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Message, _Bool Strict, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Replacement, int Priority)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="9F7E7A69F766ED029379CB88FB41DF57AE76C809">clone</h3>
+      <p>public AvailabilityAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="39A9F94FE37DEC9F569FF8746959E8AE9756627C">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="B0FAA9C9BC0281BB93CFAE91D40DA6DE5DD77B86">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="89CC79BA82F4C58A1069A2F5FEF77D7A02B712B8">getPlatform</h3>
+      <p>public IdentifierInfo * getPlatform()</p>
+      <p>Defined at line 1727 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="1E904CB5BE283A348A84CD23D4E1CC76063EC62F">getIntroduced</h3>
+      <p>
+        public 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         getIntroduced()
+      </p>
+      <p>Defined at line 1731 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="CDD9CA521B3FFAA261F70FE155FEB87D8E8D2213">setIntroduced</h3>
+      <p>
+        public void setIntroduced(ASTContext &amp; C, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         V)
+      </p>
+      <p>Defined at line 1734 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="306A02B52044A292EA8F6B09325D7A185E53D080">getDeprecated</h3>
+      <p>
+        public 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         getDeprecated()
+      </p>
+      <p>Defined at line 1738 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="F4B325FE5B7045D794FBB93E17761C50B017F24E">setDeprecated</h3>
+      <p>
+        public void setDeprecated(ASTContext &amp; C, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         V)
+      </p>
+      <p>Defined at line 1741 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="698BD525457C169BC23D5497C8A36F60D062DB1A">getObsoleted</h3>
+      <p>
+        public 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         getObsoleted()
+      </p>
+      <p>Defined at line 1745 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="31EE640D33D002875EC6CE91C1DDA61A05A7FC89">setObsoleted</h3>
+      <p>
+        public void setObsoleted(ASTContext &amp; C, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         V)
+      </p>
+      <p>Defined at line 1748 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="DDBF50D4970B4C7F2B346A03D9D8A66F9E940E8C">getUnavailable</h3>
+      <p>public _Bool getUnavailable()</p>
+      <p>Defined at line 1752 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C36784C29D6EC5C927EB6C2FF4283934DD8F7F5F">getMessage</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getMessage()
+      </p>
+      <p>Defined at line 1756 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="03E7A21ED73A07AA5C9EACCD6FC88AE19DE6E549">getMessageLength</h3>
+      <p>public unsigned int getMessageLength()</p>
+      <p>Defined at line 1759 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="8DA3C891CD405127CE483A05C48500AC0341A732">setMessage</h3>
+      <p>
+        public void setMessage(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 1762 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="B017BB476012AC3BE93C271D6C296097E11CE19E">getStrict</h3>
+      <p>public _Bool getStrict()</p>
+      <p>Defined at line 1769 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C22E71AF2968EC5B95C53684C3F714F1045B161B">getReplacement</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getReplacement()
+      </p>
+      <p>Defined at line 1773 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="35E1E9C6343CBB1D867404E0554AF041BBC62A26">getReplacementLength</h3>
+      <p>public unsigned int getReplacementLength()</p>
+      <p>Defined at line 1776 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="47BAD808AAD848F249A646908999F373171C7042">setReplacement</h3>
+      <p>
+        public void setReplacement(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 1779 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="B319A238C04265D00BF586D3E3BB4B54F542112F">getPriority</h3>
+      <p>public int getPriority()</p>
+      <p>Defined at line 1786 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="A23B65440D51B4E149E17D4A72A539B398959EB8">getPrettyPlatformName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getPrettyPlatformName(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Platform)
+      </p>
+      <p>Defined at line 1790 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="4D93E5E1240AEFB7637F232FDCDE5CF5802E3D59">getPlatformNameSourceSpelling</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getPlatformNameSourceSpelling(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Platform)
+      </p>
+      <p>Defined at line 1809 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="45D8F0A1A10D9AF71C2B8A1DD1145C507C6C708A">canonicalizePlatformName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         canonicalizePlatformName(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Platform)
+      </p>
+      <p>Defined at line 1825 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="3FFBC73E733F755E057045F4266EF2C76544FCBE">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 1841 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="E50911D48AE7224E47FF120C207419898D716398">enum Spelling</h3>
+      <ul>
+        <li>GNU_availability</li>
+        <li>CXX11_clang_availability</li>
+        <li>C2x_clang_availability</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 1696 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#96B6B53083D3465D22623AFFCF93B1F11CAAF4D2">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1020F0DD19751E013A8DEB4384345848B464D836">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D457F0C166A7D9F5CA8184EB14720C4180F55912">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E28B76D38A6E6295AF5B3AC68BFC896D918CD78C">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3D40EE5FE79425020FB11A15DE0DF1427CF66B8">AvailabilityAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F7E7A69F766ED029379CB88FB41DF57AE76C809">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39A9F94FE37DEC9F569FF8746959E8AE9756627C">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0FAA9C9BC0281BB93CFAE91D40DA6DE5DD77B86">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89CC79BA82F4C58A1069A2F5FEF77D7A02B712B8">getPlatform</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E904CB5BE283A348A84CD23D4E1CC76063EC62F">getIntroduced</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDD9CA521B3FFAA261F70FE155FEB87D8E8D2213">setIntroduced</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#306A02B52044A292EA8F6B09325D7A185E53D080">getDeprecated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4B325FE5B7045D794FBB93E17761C50B017F24E">setDeprecated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#698BD525457C169BC23D5497C8A36F60D062DB1A">getObsoleted</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31EE640D33D002875EC6CE91C1DDA61A05A7FC89">setObsoleted</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DDBF50D4970B4C7F2B346A03D9D8A66F9E940E8C">getUnavailable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C36784C29D6EC5C927EB6C2FF4283934DD8F7F5F">getMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03E7A21ED73A07AA5C9EACCD6FC88AE19DE6E549">getMessageLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DA3C891CD405127CE483A05C48500AC0341A732">setMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B017BB476012AC3BE93C271D6C296097E11CE19E">getStrict</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C22E71AF2968EC5B95C53684C3F714F1045B161B">getReplacement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35E1E9C6343CBB1D867404E0554AF041BBC62A26">getReplacementLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47BAD808AAD848F249A646908999F373171C7042">setReplacement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B319A238C04265D00BF586D3E3BB4B54F542112F">getPriority</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A23B65440D51B4E149E17D4A72A539B398959EB8">getPrettyPlatformName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D93E5E1240AEFB7637F232FDCDE5CF5802E3D59">getPlatformNameSourceSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45D8F0A1A10D9AF71C2B8A1DD1145C507C6C708A">canonicalizePlatformName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3FFBC73E733F755E057045F4266EF2C76544FCBE">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E50911D48AE7224E47FF120C207419898D716398">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

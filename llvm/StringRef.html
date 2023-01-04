@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StringRef</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StringRef</h1>
+    <p>Defined at line 50 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+    <div>
+      <div>
+        <p> ADT&apos;s.</p>
+      </div>
+      <div>
+        <p> StringRef - Represent a constant reference to a string, i.e. a character array and a length, which need not be null terminated.</p>
+        <p> This class does not own the string data, it is expected to be used in situations where the character data resides in some other buffer, whose lifetime extends past that of the StringRef. For this reason, it is not in general safe to store a StringRef.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8CEF15CA3684CDA2BEA5EF06B88D47FDB878AAF5">StringRef</h3>
+      <p>public void StringRef()</p>
+      <p>Defined at line 77 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Construct an empty string ref.implicit</p>
+        </div>
+      </div>
+      <h3 id="DE50A61E1C225B76A38A772A35B8BA8DC6C12922">StringRef</h3>
+      <p>public void StringRef(std::nullptr_t )</p>
+      <p>Defined at line 81 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Disable conversion from nullptr.  This prevents things like if (S == nullptr)</p>
+        </div>
+      </div>
+      <h3 id="296932E7FAD3416C84FDE217A42793816721580E">StringRef</h3>
+      <p>public void StringRef(const char * Str)</p>
+      <p>Defined at line 84 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Construct a string ref from a cstring.implicit</p>
+        </div>
+      </div>
+      <h3 id="4DE60BC04A91DE8B4162B149B36BD72B27EF1043">StringRef</h3>
+      <p>public void StringRef(const char * data, size_t length)</p>
+      <p>Defined at line 96 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Construct a string ref from a pointer and length.implicit</p>
+        </div>
+      </div>
+      <h3 id="5426A4F6D176771DA41BA2D8C1EA78410A72A7B1">StringRef</h3>
+      <p>public void StringRef(const std::string &amp; Str)</p>
+      <p>Defined at line 100 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Construct a string ref from an std::string.implicit</p>
+        </div>
+      </div>
+      <h3 id="CFA467366B4D8356AA98F3FC9DE3642762811EAC">StringRef</h3>
+      <p>
+        public void StringRef(
+        <a href="../std/basic_string_view.html">basic_string_view</a>
+         Str)
+      </p>
+      <p>Defined at line 104 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Construct a string ref from an std::string_view.implicit</p>
+        </div>
+      </div>
+      <h3 id="80A140C2EAB39971EE2F170C814727C1023251FE">begin</h3>
+      <p>public iterator begin()</p>
+      <p>Defined at line 111 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p>@}</p>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="034A968A4741A59B180098EED422CA8AA2D92B2E">end</h3>
+      <p>public iterator end()</p>
+      <p>Defined at line 113 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <h3 id="2B140E4962670CAB03B20F680D8D0CBACC3ED0B4">bytes_begin</h3>
+      <p>public const unsigned char * bytes_begin()</p>
+      <p>Defined at line 115 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <h3 id="B2305081A2547286DAE70D50874B6E0BA838049F">bytes_end</h3>
+      <p>public const unsigned char * bytes_end()</p>
+      <p>Defined at line 118 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <h3 id="BCE39EA6DCC7F8955D20C33CE786E247497EB3B0">bytes</h3>
+      <p>
+        public 
+        <a href="iterator_range.html">iterator_range</a>
+         bytes()
+      </p>
+      <p>Defined at line 121 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <h3 id="94A0D464CC09E53BA7CC8B82E56B33F15C04625C">data</h3>
+      <p>public const char * data()</p>
+      <p>Defined at line 131 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> data - Get a pointer to the start of the string (which may not be null terminated).</p>
+        </div>
+      </div>
+      <h3 id="B86E358D39410FF4E539C39CC884F2D4D826E61E">empty</h3>
+      <p>public _Bool empty()</p>
+      <p>Defined at line 134 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> empty - Check if the string is empty.</p>
+        </div>
+      </div>
+      <h3 id="D6354DC2F069B8209D5C5A21A729BF5545FCCA78">size</h3>
+      <p>public size_t size()</p>
+      <p>Defined at line 137 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> size - Get the string size.</p>
+        </div>
+      </div>
+      <h3 id="2E2F362C8CBAB03576530185C747DB8E70CA7615">front</h3>
+      <p>public char front()</p>
+      <p>Defined at line 140 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> front - Get the first character in the string.</p>
+        </div>
+      </div>
+      <h3 id="A76424D28845D3F3C9892B2F34DAF65700782838">back</h3>
+      <p>public char back()</p>
+      <p>Defined at line 146 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> back - Get the last character in the string.</p>
+        </div>
+      </div>
+      <h3 id="78145CCE5FAC54F6F97E4691D63DF064D818FC19">copy</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         copy(Allocator &amp; A)
+      </p>
+      <p>Defined at line 153 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> copy - Allocate copy in Allocator and return StringRef to it.</p>
+        </div>
+      </div>
+      <h3 id="0B0713028487201F908334535E40CB751077AFF5">equals</h3>
+      <p>
+        public _Bool equals(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 164 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> equals - Check for string equality, this is more efficient than compare() when the relative ordering of inequal strings isn&apos;t needed.</p>
+        </div>
+      </div>
+      <h3 id="E17C953B92536CDCFAA59E4D4C1ADF9CE4B0E9E0">equals_insensitive</h3>
+      <p>
+        public _Bool equals_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 170 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Check for string equality, ignoring case.</p>
+        </div>
+      </div>
+      <h3 id="723510452E2ED2E7E2B829D5811272098F5BF6A9">compare</h3>
+      <p>
+        public int compare(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 176 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> compare - Compare two strings; the result is -1, 0, or 1 if this string is lexicographically less than, equal to, or greater than the </p>
+        </div>
+      </div>
+      <h3 id="3CEC557634590E9587290D0F582E42E17B13A862">compare_insensitive</h3>
+      <p>
+        public int compare_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <div>
+        <div>
+          <p> Compare two strings, ignoring case.</p>
+        </div>
+      </div>
+      <h3 id="EE3475B32FE532F070BBFD0BA0DB76242F7B95A5">compare_numeric</h3>
+      <p>
+        public int compare_numeric(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <div>
+        <div>
+          <p> compare_numeric - Compare two strings, treating sequences of digits as numbers.</p>
+        </div>
+      </div>
+      <h3 id="8F29A19F08E3E566001FBB7266793D5E93D38E5D">edit_distance</h3>
+      <p>
+        public unsigned int edit_distance(
+        <a href="StringRef.html">StringRef</a>
+         Other, _Bool AllowReplacements, unsigned int MaxEditDistance)
+      </p>
+      <div>
+        <div>
+          <p> Determine the edit distance between this string and another string.</p>
+        </div>
+      </div>
+      <h3 id="4C8D65F0A9F507CA08863420A828345E0055C68F">edit_distance_insensitive</h3>
+      <p>
+        public unsigned int edit_distance_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         Other, _Bool AllowReplacements, unsigned int MaxEditDistance)
+      </p>
+      <h3 id="EC04BB2382886B133A6443841C6BBDC4F3DBB3DD">str</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         str()
+      </p>
+      <p>Defined at line 221 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> str - Get the contents as an std::string.</p>
+        </div>
+      </div>
+      <h3 id="C9EEF7167700824672E69B3490C6EA60E506433C">operator[]</h3>
+      <p>public char operator[](size_t Index)</p>
+      <p>Defined at line 230 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p>@}</p>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="10ABD5CC2F7D7CD316FD74FCEA92133E742DE5DD">operator=</h3>
+      <p>public std::enable_if_t&lt;std::is_same&lt;T, std::string&gt;::value, StringRef&gt; &amp; operator=(T &amp;&amp; Str)</p>
+      <p>Defined at line 240 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Disallow accidental assignment from a temporary std::string.</p>
+          <p> The declaration here is extra complicated so that `stringRef = {}` and `stringRef = &quot;abc&quot;` continue to select the move assignment operator.</p>
+        </div>
+      </div>
+      <h3 id="8AB2488A3AEFC9B67427C829223C3F5AD95D8639">operator basic_string_view</h3>
+      <p>
+        public 
+        <a href="../std/basic_string_view.html">basic_string_view</a>
+         operator basic_string_view()
+      </p>
+      <p>Defined at line 247 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p>@}</p>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="52BF834685058CC007CB6CB2650932A40CD927D8">starts_with</h3>
+      <p>
+        public _Bool starts_with(
+        <a href="StringRef.html">StringRef</a>
+         Prefix)
+      </p>
+      <p>Defined at line 256 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Check if this string starts with the given </p>
+        </div>
+      </div>
+      <h3 id="0E87B05E5A9DD10FAC0FE37D108B939B3A16FD32">startswith</h3>
+      <p>
+        public _Bool startswith(
+        <a href="StringRef.html">StringRef</a>
+         Prefix)
+      </p>
+      <p>Defined at line 260 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <h3 id="ED60FD1C9C3C428FF06ABA9C6878F46C271E0434">starts_with_insensitive</h3>
+      <p>
+        public _Bool starts_with_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         Prefix)
+      </p>
+      <div>
+        <div>
+          <p> Check if this string starts with the given  ignoring case.</p>
+        </div>
+      </div>
+      <h3 id="7762225E02936F9C4986F6D126E3EA1FA0301EFE">startswith_insensitive</h3>
+      <p>
+        public _Bool startswith_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         Prefix)
+      </p>
+      <p>Defined at line 266 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <h3 id="365C8019FB6E1F272E636BAFD1AE16EF71218663">ends_with</h3>
+      <p>
+        public _Bool ends_with(
+        <a href="StringRef.html">StringRef</a>
+         Suffix)
+      </p>
+      <p>Defined at line 271 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Check if this string ends with the given </p>
+        </div>
+      </div>
+      <h3 id="24F36CF35754FA78C13043679619F05791ED6282">endswith</h3>
+      <p>
+        public _Bool endswith(
+        <a href="StringRef.html">StringRef</a>
+         Suffix)
+      </p>
+      <p>Defined at line 276 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <h3 id="CD57963C0DEE61A024927F00A62044A1C1A48B82">ends_with_insensitive</h3>
+      <p>
+        public _Bool ends_with_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         Suffix)
+      </p>
+      <div>
+        <div>
+          <p> Check if this string ends with the given  ignoring case.</p>
+        </div>
+      </div>
+      <h3 id="77B416DA8080577503271DC34DC20F3BE053A821">endswith_insensitive</h3>
+      <p>
+        public _Bool endswith_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         Suffix)
+      </p>
+      <p>Defined at line 282 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <h3 id="0A9F236F85DE7C06C716EEE9700B42F80B8B1B1D">find</h3>
+      <p>public size_t find(char C, size_t From)</p>
+      <p>Defined at line 294 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Search for the first character  in the string.</p>
+        </div>
+      </div>
+      <h3 id="23476EAE8231AEADF26B269DEDC186864899FEAA">find_insensitive</h3>
+      <p>public size_t find_insensitive(char C, size_t From)</p>
+      <div>
+        <div>
+          <p> Search for the first character  in the string, ignoring case.</p>
+        </div>
+      </div>
+      <h3 id="2280D702CF001C1699ADDF56CEA2719C5E381AE1">find_if</h3>
+      <p>
+        public size_t find_if(
+        <a href="function_ref.html">function_ref</a>
+         F, size_t From)
+      </p>
+      <p>Defined at line 314 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Search for the first character satisfying the predicate </p>
+        </div>
+      </div>
+      <h3 id="9B0E59DB29F14F226D58D4FE4DCFC19709725EAB">find_if_not</h3>
+      <p>
+        public size_t find_if_not(
+        <a href="function_ref.html">function_ref</a>
+         F, size_t From)
+      </p>
+      <p>Defined at line 329 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Search for the first character not satisfying the predicate </p>
+        </div>
+      </div>
+      <h3 id="B66AD00916C55FF2ED7FED5AA04571811805510A">find</h3>
+      <p>
+        public size_t find(
+        <a href="StringRef.html">StringRef</a>
+         Str, size_t From)
+      </p>
+      <div>
+        <div>
+          <p> Search for the first string  in the string.</p>
+        </div>
+      </div>
+      <h3 id="88278F33E7AA4A69A93328CD24327B72A67F40BE">find_insensitive</h3>
+      <p>
+        public size_t find_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         Str, size_t From)
+      </p>
+      <div>
+        <div>
+          <p> Search for the first string  in the string, ignoring case.</p>
+        </div>
+      </div>
+      <h3 id="21CD9B256289BCA97A035686B18B40917F25B917">rfind</h3>
+      <p>public size_t rfind(char C, size_t From)</p>
+      <p>Defined at line 350 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Search for the last character  in the string.</p>
+        </div>
+      </div>
+      <h3 id="E2D42244E6FB9EFF590926624A88C076102743CE">rfind_insensitive</h3>
+      <p>public size_t rfind_insensitive(char C, size_t From)</p>
+      <div>
+        <div>
+          <p> Search for the last character  in the string, ignoring case.</p>
+        </div>
+      </div>
+      <h3 id="BF9E733374F331740A553653B49FCFD981695790">rfind</h3>
+      <p>
+        public size_t rfind(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> Search for the last string  in the string.</p>
+        </div>
+      </div>
+      <h3 id="0CF2F8B99E6CEE8A378837FCB36552BCBD46AF4D">rfind_insensitive</h3>
+      <p>
+        public size_t rfind_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> Search for the last string  in the string, ignoring case.</p>
+        </div>
+      </div>
+      <h3 id="0FC9E1ADCA792673899E4AEE2A4C9FDBDBB61CFB">find_first_of</h3>
+      <p>public size_t find_first_of(char C, size_t From)</p>
+      <p>Defined at line 381 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Find the first character in the string that is  or npos if not found. Same as find.</p>
+        </div>
+      </div>
+      <h3 id="B8D367AE9EE7FFF15AB5D0C1210B54501701A1F4">find_first_of</h3>
+      <p>
+        public size_t find_first_of(
+        <a href="StringRef.html">StringRef</a>
+         Chars, size_t From)
+      </p>
+      <div>
+        <div>
+          <p> Find the first character in the string that is in  or npos if not found.</p>
+          <p> Complexity: O(size() + Chars.size())</p>
+        </div>
+      </div>
+      <h3 id="65072DFCE90FFD71520C7C94588E2BB70E23F24E">find_first_not_of</h3>
+      <p>public size_t find_first_not_of(char C, size_t From)</p>
+      <div>
+        <div>
+          <p> Find the first character in the string that is not  or npos if not found.</p>
+        </div>
+      </div>
+      <h3 id="6BB435BC8594DD8A0497AF1D76EEF99D64728413">find_first_not_of</h3>
+      <p>
+        public size_t find_first_not_of(
+        <a href="StringRef.html">StringRef</a>
+         Chars, size_t From)
+      </p>
+      <div>
+        <div>
+          <p> Find the first character in the string that is not in the string or npos if not found.</p>
+          <p> Complexity: O(size() + Chars.size())</p>
+        </div>
+      </div>
+      <h3 id="E215ACC95A3CAE1EBA40F6AFC86D061BB0F6C2EA">find_last_of</h3>
+      <p>public size_t find_last_of(char C, size_t From)</p>
+      <p>Defined at line 404 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Find the last character in the string that is  or npos if not found.</p>
+        </div>
+      </div>
+      <h3 id="451A5BDAD863E60815422E3B73FB357107718AF9">find_last_of</h3>
+      <p>
+        public size_t find_last_of(
+        <a href="StringRef.html">StringRef</a>
+         Chars, size_t From)
+      </p>
+      <div>
+        <div>
+          <p> Find the last character in the string that is in  or npos if not found.</p>
+          <p> Complexity: O(size() + Chars.size())</p>
+        </div>
+      </div>
+      <h3 id="5328E9C8335A4A2D183F1CBA32B301D3A23518ED">find_last_not_of</h3>
+      <p>public size_t find_last_not_of(char C, size_t From)</p>
+      <div>
+        <div>
+          <p> Find the last character in the string that is not  or npos if not found.</p>
+        </div>
+      </div>
+      <h3 id="17244B376A17B617E9463D2318C87FFABC1E2DBA">find_last_not_of</h3>
+      <p>
+        public size_t find_last_not_of(
+        <a href="StringRef.html">StringRef</a>
+         Chars, size_t From)
+      </p>
+      <div>
+        <div>
+          <p> Find the last character in the string that is not in  or npos if not found.</p>
+          <p> Complexity: O(size() + Chars.size())</p>
+        </div>
+      </div>
+      <h3 id="013FDAD5765F4F713A6549786FCBA9D50A1FD7DC">contains</h3>
+      <p>
+        public _Bool contains(
+        <a href="StringRef.html">StringRef</a>
+         Other)
+      </p>
+      <p>Defined at line 428 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return true if the given string is a substring of *this, and false otherwise.</p>
+        </div>
+      </div>
+      <h3 id="67A024A348EFFF365882873198CE8D661DDD3ED4">contains</h3>
+      <p>public _Bool contains(char C)</p>
+      <p>Defined at line 434 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return true if the given character is contained in *this, and false otherwise.</p>
+        </div>
+      </div>
+      <h3 id="BC5DAC75BE6FB93CF0C2301BB7427F6E257BFE42">contains_insensitive</h3>
+      <p>
+        public _Bool contains_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         Other)
+      </p>
+      <p>Defined at line 440 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return true if the given string is a substring of *this, and false otherwise.</p>
+        </div>
+      </div>
+      <h3 id="13005AA163F84A28558AAC411681C179C21BEA72">contains_insensitive</h3>
+      <p>public _Bool contains_insensitive(char C)</p>
+      <p>Defined at line 446 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return true if the given character is contained in *this, and false otherwise.</p>
+        </div>
+      </div>
+      <h3 id="E5F8D7F9EDAF30B9BBC2473BCAB5F8B9BD053D44">count</h3>
+      <p>public size_t count(char C)</p>
+      <p>Defined at line 455 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return the number of occurrences of  in the string.</p>
+        </div>
+      </div>
+      <h3 id="EA411359582B484A94EC86FB5FAE49CA6FEBA545">count</h3>
+      <p>
+        public size_t count(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> Return the number of non-overlapped occurrences of  in the string.</p>
+        </div>
+      </div>
+      <h3 id="7B85B635860C3197D9CE75583D82530F577AF34C">getAsInteger</h3>
+      <p>public _Bool getAsInteger(unsigned int Radix, T &amp; Result)</p>
+      <p>Defined at line 474 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Parse the current string as an integer of the specified radix.  If is specified as zero, this does radix autosensing using extended C rules: 0 is octal, 0x is hex, 0b is binary.</p>
+          <p> If the string is invalid or if only a subset of the string is valid, this returns true to signify the error.  The string is considered erroneous if empty or if it overflows T.</p>
+        </div>
+      </div>
+      <h3 id="C5CE26E27FE21C5EDD1E3F627FB62998CBD43092">consumeInteger</h3>
+      <p>public _Bool consumeInteger(unsigned int Radix, T &amp; Result)</p>
+      <p>Defined at line 503 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Parse the current string as an integer of the specified radix.  If is specified as zero, this does radix autosensing using extended C rules: 0 is octal, 0x is hex, 0b is binary.</p>
+          <p> If the string does not begin with a number of the specified radix, this returns true to signify the error. The string is considered erroneous if empty or if it overflows T. The portion of the string representing the discovered numeric value is removed from the beginning of the string.</p>
+        </div>
+      </div>
+      <h3 id="6EB412B34718A49247FDDB3F9260A19496AB239C">getAsInteger</h3>
+      <p>public _Bool getAsInteger(unsigned int Radix, APInt &amp; Result)</p>
+      <div>
+        <div>
+          <p> Parse the current string as an integer of the specified  or of an autosensed radix if the  given is 0.  The current value in is discarded, and the storage is changed to be wide enough to store the parsed integer.</p>
+          <p> APInt::fromString is superficially similar but assumes the string is well-formed in the given radix.</p>
+        </div>
+      </div>
+      <h3 id="08239096F53907158E35A70E0B99BAB3AC6AB78C">getAsDouble</h3>
+      <p>public _Bool getAsDouble(double &amp; Result, _Bool AllowInexact)</p>
+      <div>
+        <div>
+          <p> Parse the current string as an IEEE double-precision floating point value.  The string must be a well-formed double.</p>
+          <p> If  is false, the function will fail if the string cannot be represented exactly.  Otherwise, the function only fails in case of an overflow or underflow, or an invalid floating point representation.</p>
+        </div>
+      </div>
+      <h3 id="4D371B8E95DA328739742E2A84AED4D2A3B4FCF2">lower</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         lower()
+      </p>
+      <div>
+        <div>
+          <p> Convert the given ASCII string to lowercase.</p>
+        </div>
+      </div>
+      <h3 id="EEE6DEEBF0A4CA345D3C4C7C35CCA6C95433FCA5">upper</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         upper()
+      </p>
+      <div>
+        <div>
+          <p> Convert the given ASCII string to uppercase.</p>
+        </div>
+      </div>
+      <h3 id="EDAB641FFFC68D3AA33B6750C27C77BAF0F404B9">substr</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         substr(size_t Start, size_t N)
+      </p>
+      <p>Defined at line 564 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return a reference to the substring from [Start, Start + N).</p>
+        </div>
+      </div>
+      <h3 id="70FB77F56682F8AF42CD9FBA6EC6798E888E1DF4">take_front</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         take_front(size_t N)
+      </p>
+      <p>Defined at line 572 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return a StringRef equal to &apos;this&apos; but with only the first  elements remaining.  If  is greater than the length of the string, the entire string is returned.</p>
+        </div>
+      </div>
+      <h3 id="84E09712B48FCE2407915A8EB6A6306FA5416132">take_back</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         take_back(size_t N)
+      </p>
+      <p>Defined at line 581 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return a StringRef equal to &apos;this&apos; but with only the last  elements remaining.  If  is greater than the length of the string, the entire string is returned.</p>
+        </div>
+      </div>
+      <h3 id="A11D7DD599A28232A25D98D3CA86FD497526C0E1">take_while</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         take_while(
+        <a href="function_ref.html">function_ref</a>
+         F)
+      </p>
+      <p>Defined at line 589 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return the longest prefix of &apos;this&apos; such that every character in the prefix satisfies the given predicate.</p>
+        </div>
+      </div>
+      <h3 id="A0597EA12EAF73A19E847C8644437784624C345E">take_until</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         take_until(
+        <a href="function_ref.html">function_ref</a>
+         F)
+      </p>
+      <p>Defined at line 595 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return the longest prefix of &apos;this&apos; such that no character in the prefix satisfies the given predicate.</p>
+        </div>
+      </div>
+      <h3 id="37EF61797E74502CEC67988E6D201C5D466142F2">drop_front</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         drop_front(size_t N)
+      </p>
+      <p>Defined at line 601 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return a StringRef equal to &apos;this&apos; but with the first  elements dropped.</p>
+        </div>
+      </div>
+      <h3 id="BB901A4CD7DD3049450DA3A10140872AA50D5029">drop_back</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         drop_back(size_t N)
+      </p>
+      <p>Defined at line 608 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return a StringRef equal to &apos;this&apos; but with the last  elements dropped.</p>
+        </div>
+      </div>
+      <h3 id="2D23AB125375E4BFC2378DF3DD0CF7FFA4CAEE68">drop_while</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         drop_while(
+        <a href="function_ref.html">function_ref</a>
+         F)
+      </p>
+      <p>Defined at line 615 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return a StringRef equal to &apos;this&apos;, but with all characters satisfying the given predicate dropped from the beginning of the string.</p>
+        </div>
+      </div>
+      <h3 id="55E86825C138347A26A42A1DCBFE3E71E3CAB614">drop_until</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         drop_until(
+        <a href="function_ref.html">function_ref</a>
+         F)
+      </p>
+      <p>Defined at line 621 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return a StringRef equal to &apos;this&apos;, but with all characters not satisfying the given predicate dropped from the beginning of the string.</p>
+        </div>
+      </div>
+      <h3 id="47B902CF6C228182F0E143323071E06082DD7200">consume_front</h3>
+      <p>
+        public _Bool consume_front(
+        <a href="StringRef.html">StringRef</a>
+         Prefix)
+      </p>
+      <p>Defined at line 627 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Returns true if this StringRef has the given prefix and removes that prefix.</p>
+        </div>
+      </div>
+      <h3 id="44409A6048CA71667389160D6BD81AC8E9F628E1">consume_front_insensitive</h3>
+      <p>
+        public _Bool consume_front_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         Prefix)
+      </p>
+      <p>Defined at line 637 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Returns true if this StringRef has the given prefix, ignoring case, and removes that prefix.</p>
+        </div>
+      </div>
+      <h3 id="D99C38F47DCCEEBB2F6A5824D6820C9C80CC9947">consume_back</h3>
+      <p>
+        public _Bool consume_back(
+        <a href="StringRef.html">StringRef</a>
+         Suffix)
+      </p>
+      <p>Defined at line 647 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Returns true if this StringRef has the given suffix and removes that suffix.</p>
+        </div>
+      </div>
+      <h3 id="7D21B6F43FDD380D43A0B5CBBAE6CA3E900803A9">consume_back_insensitive</h3>
+      <p>
+        public _Bool consume_back_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         Suffix)
+      </p>
+      <p>Defined at line 657 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Returns true if this StringRef has the given suffix, ignoring case, and removes that suffix.</p>
+        </div>
+      </div>
+      <h3 id="0A00F7A434627953F69D142D593C4B29D8C60399">slice</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         slice(size_t Start, size_t End)
+      </p>
+      <p>Defined at line 676 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return a reference to the substring from [Start, End).</p>
+        </div>
+      </div>
+      <h3 id="262443ECF10D865D3E8C17686233EEF2C516918F">split</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         split(char Separator)
+      </p>
+      <p>Defined at line 692 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Split into two substrings around the first occurrence of a separator character.</p>
+          <p> If  is in the string, then the result is a pair (LHS, RHS) such that (*this == LHS + Separator + RHS) is true and RHS is maximal. If  is not in the string, then the result is a pair (LHS, RHS) where (*this == LHS) and (RHS == &quot;&quot;).</p>
+        </div>
+      </div>
+      <h3 id="35009CE95758D143CCD5AA6886C48CD45B950B73">split</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         split(
+        <a href="StringRef.html">StringRef</a>
+         Separator)
+      </p>
+      <p>Defined at line 706 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Split into two substrings around the first occurrence of a separator string.</p>
+          <p> If  is in the string, then the result is a pair (LHS, RHS) such that (*this == LHS + Separator + RHS) is true and RHS is maximal. If  is not in the string, then the result is a pair (LHS, RHS) where (*this == LHS) and (RHS == &quot;&quot;).</p>
+        </div>
+      </div>
+      <h3 id="0240BFBFFFD394C04D038F8A944732A6EED00CB7">rsplit</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         rsplit(
+        <a href="StringRef.html">StringRef</a>
+         Separator)
+      </p>
+      <p>Defined at line 724 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Split into two substrings around the last occurrence of a separator string.</p>
+          <p> If  is in the string, then the result is a pair (LHS, RHS) such that (*this == LHS + Separator + RHS) is true and RHS is minimal. If  is not in the string, then the result is a pair (LHS, RHS) where (*this == LHS) and (RHS == &quot;&quot;).</p>
+        </div>
+      </div>
+      <h3 id="632E1DE46FB241D5A20F2F5A672FDFCA72235785">split</h3>
+      <p>
+        public void split(SmallVectorImpl&lt;StringRef&gt; &amp; A, 
+        <a href="StringRef.html">StringRef</a>
+         Separator, int MaxSplit, _Bool KeepEmpty)
+      </p>
+      <div>
+        <div>
+          <p> Split into substrings around the occurrences of a separator string.</p>
+          <p> Each substring is stored in  If  is &gt;= 0, at most splits are done and consequently &lt;=  + 1 elements are added to A. If  is false, empty strings are not added to  They still count when considering  An useful invariant is that Separator.join(A) == *this if MaxSplit == -1 and KeepEmpty == true</p>
+        </div>
+      </div>
+      <h3 id="B3E5E5A5C77ED843AC589873032CA4DF136E2A99">split</h3>
+      <p>public void split(SmallVectorImpl&lt;StringRef&gt; &amp; A, char Separator, int MaxSplit, _Bool KeepEmpty)</p>
+      <div>
+        <div>
+          <p> Split into substrings around the occurrences of a separator character.</p>
+          <p> Each substring is stored in  If  is &gt;= 0, at most splits are done and consequently &lt;=  + 1 elements are added to A. If  is false, empty strings are not added to  They still count when considering  An useful invariant is that Separator.join(A) == *this if MaxSplit == -1 and KeepEmpty == true</p>
+        </div>
+      </div>
+      <h3 id="0E70CAE78982E66721A05F37C84D2EEB9ECD91C0">rsplit</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         rsplit(char Separator)
+      </p>
+      <p>Defined at line 777 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Split into two substrings around the last occurrence of a separator character.</p>
+          <p> If  is in the string, then the result is a pair (LHS, RHS) such that (*this == LHS + Separator + RHS) is true and RHS is minimal. If  is not in the string, then the result is a pair (LHS, RHS) where (*this == LHS) and (RHS == &quot;&quot;).</p>
+        </div>
+      </div>
+      <h3 id="588FFB075B639AA58E2C0E6CAB6EC621226DC58C">ltrim</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         ltrim(char Char)
+      </p>
+      <p>Defined at line 783 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return string with consecutive  characters starting from the the left removed.</p>
+        </div>
+      </div>
+      <h3 id="4DC084F9A58FEBDC55229EEB6FE4B23B043DA78A">ltrim</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         ltrim(
+        <a href="StringRef.html">StringRef</a>
+         Chars)
+      </p>
+      <p>Defined at line 789 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return string with consecutive characters in  starting from the left removed.</p>
+        </div>
+      </div>
+      <h3 id="7704D5B260C1F837AF50EF9F519E277FB50D7AEC">rtrim</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         rtrim(char Char)
+      </p>
+      <p>Defined at line 795 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return string with consecutive  characters starting from the right removed.</p>
+        </div>
+      </div>
+      <h3 id="2CC76609976AF8925A2868341AE6DE529E9FBD48">rtrim</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         rtrim(
+        <a href="StringRef.html">StringRef</a>
+         Chars)
+      </p>
+      <p>Defined at line 801 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return string with consecutive characters in  starting from the right removed.</p>
+        </div>
+      </div>
+      <h3 id="6271FC4E9E0B20A47796CE7AB99424D16A95B51E">trim</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         trim(char Char)
+      </p>
+      <p>Defined at line 807 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return string with consecutive  characters starting from the left and right removed.</p>
+        </div>
+      </div>
+      <h3 id="5C371697A342BD740D803433018BB611F9E2AB56">trim</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         trim(
+        <a href="StringRef.html">StringRef</a>
+         Chars)
+      </p>
+      <p>Defined at line 813 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Return string with consecutive characters in  starting from the left and right removed.</p>
+        </div>
+      </div>
+      <h3 id="4FB19A17832D9E4FF9D30CEA92FD8A1C00E1676B">detectEOL</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         detectEOL()
+      </p>
+      <p>Defined at line 823 of file /usr/lib/llvm-16/include/llvm/ADT/StringRef.h</p>
+      <div>
+        <div>
+          <p> Detect the line ending style of the string.</p>
+          <p> If the string contains a line ending, return the line ending character sequence that is detected. Otherwise return &apos;&apos; for unix line endings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8CEF15CA3684CDA2BEA5EF06B88D47FDB878AAF5">StringRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE50A61E1C225B76A38A772A35B8BA8DC6C12922">StringRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#296932E7FAD3416C84FDE217A42793816721580E">StringRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DE60BC04A91DE8B4162B149B36BD72B27EF1043">StringRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5426A4F6D176771DA41BA2D8C1EA78410A72A7B1">StringRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CFA467366B4D8356AA98F3FC9DE3642762811EAC">StringRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#80A140C2EAB39971EE2F170C814727C1023251FE">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#034A968A4741A59B180098EED422CA8AA2D92B2E">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B140E4962670CAB03B20F680D8D0CBACC3ED0B4">bytes_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2305081A2547286DAE70D50874B6E0BA838049F">bytes_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BCE39EA6DCC7F8955D20C33CE786E247497EB3B0">bytes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#94A0D464CC09E53BA7CC8B82E56B33F15C04625C">data</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B86E358D39410FF4E539C39CC884F2D4D826E61E">empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6354DC2F069B8209D5C5A21A729BF5545FCCA78">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E2F362C8CBAB03576530185C747DB8E70CA7615">front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A76424D28845D3F3C9892B2F34DAF65700782838">back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78145CCE5FAC54F6F97E4691D63DF064D818FC19">copy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B0713028487201F908334535E40CB751077AFF5">equals</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E17C953B92536CDCFAA59E4D4C1ADF9CE4B0E9E0">equals_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#723510452E2ED2E7E2B829D5811272098F5BF6A9">compare</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3CEC557634590E9587290D0F582E42E17B13A862">compare_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE3475B32FE532F070BBFD0BA0DB76242F7B95A5">compare_numeric</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F29A19F08E3E566001FBB7266793D5E93D38E5D">edit_distance</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C8D65F0A9F507CA08863420A828345E0055C68F">edit_distance_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC04BB2382886B133A6443841C6BBDC4F3DBB3DD">str</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C9EEF7167700824672E69B3490C6EA60E506433C">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10ABD5CC2F7D7CD316FD74FCEA92133E742DE5DD">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AB2488A3AEFC9B67427C829223C3F5AD95D8639">operator basic_string_view</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52BF834685058CC007CB6CB2650932A40CD927D8">starts_with</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E87B05E5A9DD10FAC0FE37D108B939B3A16FD32">startswith</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED60FD1C9C3C428FF06ABA9C6878F46C271E0434">starts_with_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7762225E02936F9C4986F6D126E3EA1FA0301EFE">startswith_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#365C8019FB6E1F272E636BAFD1AE16EF71218663">ends_with</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24F36CF35754FA78C13043679619F05791ED6282">endswith</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD57963C0DEE61A024927F00A62044A1C1A48B82">ends_with_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77B416DA8080577503271DC34DC20F3BE053A821">endswith_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A9F236F85DE7C06C716EEE9700B42F80B8B1B1D">find</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23476EAE8231AEADF26B269DEDC186864899FEAA">find_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2280D702CF001C1699ADDF56CEA2719C5E381AE1">find_if</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B0E59DB29F14F226D58D4FE4DCFC19709725EAB">find_if_not</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B66AD00916C55FF2ED7FED5AA04571811805510A">find</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88278F33E7AA4A69A93328CD24327B72A67F40BE">find_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21CD9B256289BCA97A035686B18B40917F25B917">rfind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2D42244E6FB9EFF590926624A88C076102743CE">rfind_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF9E733374F331740A553653B49FCFD981695790">rfind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0CF2F8B99E6CEE8A378837FCB36552BCBD46AF4D">rfind_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0FC9E1ADCA792673899E4AEE2A4C9FDBDBB61CFB">find_first_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8D367AE9EE7FFF15AB5D0C1210B54501701A1F4">find_first_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65072DFCE90FFD71520C7C94588E2BB70E23F24E">find_first_not_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BB435BC8594DD8A0497AF1D76EEF99D64728413">find_first_not_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E215ACC95A3CAE1EBA40F6AFC86D061BB0F6C2EA">find_last_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#451A5BDAD863E60815422E3B73FB357107718AF9">find_last_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5328E9C8335A4A2D183F1CBA32B301D3A23518ED">find_last_not_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17244B376A17B617E9463D2318C87FFABC1E2DBA">find_last_not_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#013FDAD5765F4F713A6549786FCBA9D50A1FD7DC">contains</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67A024A348EFFF365882873198CE8D661DDD3ED4">contains</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC5DAC75BE6FB93CF0C2301BB7427F6E257BFE42">contains_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13005AA163F84A28558AAC411681C179C21BEA72">contains_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5F8D7F9EDAF30B9BBC2473BCAB5F8B9BD053D44">count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA411359582B484A94EC86FB5FAE49CA6FEBA545">count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B85B635860C3197D9CE75583D82530F577AF34C">getAsInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5CE26E27FE21C5EDD1E3F627FB62998CBD43092">consumeInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6EB412B34718A49247FDDB3F9260A19496AB239C">getAsInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08239096F53907158E35A70E0B99BAB3AC6AB78C">getAsDouble</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D371B8E95DA328739742E2A84AED4D2A3B4FCF2">lower</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EEE6DEEBF0A4CA345D3C4C7C35CCA6C95433FCA5">upper</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EDAB641FFFC68D3AA33B6750C27C77BAF0F404B9">substr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70FB77F56682F8AF42CD9FBA6EC6798E888E1DF4">take_front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84E09712B48FCE2407915A8EB6A6306FA5416132">take_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A11D7DD599A28232A25D98D3CA86FD497526C0E1">take_while</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0597EA12EAF73A19E847C8644437784624C345E">take_until</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37EF61797E74502CEC67988E6D201C5D466142F2">drop_front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB901A4CD7DD3049450DA3A10140872AA50D5029">drop_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D23AB125375E4BFC2378DF3DD0CF7FFA4CAEE68">drop_while</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#55E86825C138347A26A42A1DCBFE3E71E3CAB614">drop_until</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47B902CF6C228182F0E143323071E06082DD7200">consume_front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44409A6048CA71667389160D6BD81AC8E9F628E1">consume_front_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D99C38F47DCCEEBB2F6A5824D6820C9C80CC9947">consume_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D21B6F43FDD380D43A0B5CBBAE6CA3E900803A9">consume_back_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A00F7A434627953F69D142D593C4B29D8C60399">slice</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#262443ECF10D865D3E8C17686233EEF2C516918F">split</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35009CE95758D143CCD5AA6886C48CD45B950B73">split</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0240BFBFFFD394C04D038F8A944732A6EED00CB7">rsplit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#632E1DE46FB241D5A20F2F5A672FDFCA72235785">split</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3E5E5A5C77ED843AC589873032CA4DF136E2A99">split</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E70CAE78982E66721A05F37C84D2EEB9ECD91C0">rsplit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#588FFB075B639AA58E2C0E6CAB6EC621226DC58C">ltrim</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DC084F9A58FEBDC55229EEB6FE4B23B043DA78A">ltrim</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7704D5B260C1F837AF50EF9F519E277FB50D7AEC">rtrim</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2CC76609976AF8925A2868341AE6DE529E9FBD48">rtrim</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6271FC4E9E0B20A47796CE7AB99424D16A95B51E">trim</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5C371697A342BD740D803433018BB611F9E2AB56">trim</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FB19A17832D9E4FF9D30CEA92FD8A1C00E1676B">detectEOL</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

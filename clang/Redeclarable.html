@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Redeclarable</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Redeclarable</h1>
+    <p>Defined at line 84 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+    <div>
+      <div>
+        <p> Provides common interface for the Decls that can be redeclared.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        protected 
+        <a href="../clang/Redeclarable/DeclLink.html">DeclLink</a>
+         RedeclLink
+      </li>
+      <li>protected decl_type * First</li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/Redeclarable/DeclLink.html">DeclLink</a>
+      </li>
+      <li>
+        <a href="../clang/Redeclarable/redecl_iterator.html">redecl_iterator</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3D9ECB0CF6FF2C23C0E3DE52BE1BC49C4DA77EE6">PreviousDeclLink</h3>
+      <p>
+        protected 
+        <a href="../clang/Redeclarable/DeclLink.html">DeclLink</a>
+         PreviousDeclLink(decl_type * D)
+      </p>
+      <p>Defined at line 166 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <h3 id="E569DCB65E28EA6F63226E4FEDD714B7E90C1E42">LatestDeclLink</h3>
+      <p>
+        protected 
+        <a href="../clang/Redeclarable/DeclLink.html">DeclLink</a>
+         LatestDeclLink(const ASTContext &amp; Ctx)
+      </p>
+      <p>Defined at line 170 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <h3 id="FC6A3A50E072470AEC997CC34C23A84341EAF534">getNextRedeclaration</h3>
+      <p>protected decl_type * getNextRedeclaration()</p>
+      <p>Defined at line 189 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <h3 id="35F82A337548375CC13AF19EF09B4667CEC946E2">Redeclarable&lt;decl_type&gt;</h3>
+      <p>public void Redeclarable&lt;decl_type&gt;(const ASTContext &amp; Ctx)</p>
+      <p>Defined at line 198 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <h3 id="5D5B2F0F2D1F69D91369169FEB3283FC34103738">getPreviousDecl</h3>
+      <p>public decl_type * getPreviousDecl()</p>
+      <p>Defined at line 204 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <div>
+        <div>
+          <p> Return the previous declaration of this declaration or NULL if this is the first declaration.</p>
+        </div>
+      </div>
+      <h3 id="215786BB5EF58995CD3C0BB05820FC62A5690304">getPreviousDecl</h3>
+      <p>public const decl_type * getPreviousDecl()</p>
+      <p>Defined at line 209 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <h3 id="CDA27E815B6EE497B82D4D2011923DC82396354B">getFirstDecl</h3>
+      <p>public decl_type * getFirstDecl()</p>
+      <p>Defined at line 216 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <div>
+        <div>
+          <p> Return the first declaration of this declaration or itself if this is the only declaration.</p>
+        </div>
+      </div>
+      <h3 id="4F60CD0D0B9767B070944DAFB80FA37442B4EB6E">getFirstDecl</h3>
+      <p>public const decl_type * getFirstDecl()</p>
+      <p>Defined at line 220 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <div>
+        <div>
+          <p> Return the first declaration of this declaration or itself if this is the only declaration.</p>
+        </div>
+      </div>
+      <h3 id="E59D69C55A3EDE83C92F354C24473369B111D8C1">isFirstDecl</h3>
+      <p>public _Bool isFirstDecl()</p>
+      <p>Defined at line 223 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <div>
+        <div>
+          <p> True if this is the first declaration in its redeclaration chain.</p>
+        </div>
+      </div>
+      <h3 id="D9921D778A318BA50F01966293F81292513C34BF">getMostRecentDecl</h3>
+      <p>public decl_type * getMostRecentDecl()</p>
+      <p>Defined at line 226 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <div>
+        <div>
+          <p> Returns the most recent (re)declaration of this declaration.</p>
+        </div>
+      </div>
+      <h3 id="5D0A505A63396B81870C801C6D57EB7E238658B2">getMostRecentDecl</h3>
+      <p>public const decl_type * getMostRecentDecl()</p>
+      <p>Defined at line 231 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <div>
+        <div>
+          <p> Returns the most recent (re)declaration of this declaration.</p>
+        </div>
+      </div>
+      <h3 id="5AD3CC82BA1A336798A569123A633FF8EC3C8676">setPreviousDecl</h3>
+      <p>public void setPreviousDecl(decl_type * PrevDecl)</p>
+      <p>Defined at line 4814 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Set the previous declaration. If PrevDecl is NULL, set this as the first and only declaration.</p>
+        </div>
+      </div>
+      <h3 id="2E449F2A584100C9A7DA295DDB3F71D406F78813">redecls</h3>
+      <p>public redecl_range redecls()</p>
+      <p>Defined at line 296 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <div>
+        <div>
+          <p> Returns an iterator range for all the redeclarations of the same decl. It will iterate at least once (when this decl is the only one).</p>
+        </div>
+      </div>
+      <h3 id="AF88CECEE6F3E3FF0DB9D56FA1103DE324A0806F">redecls_begin</h3>
+      <p>
+        public 
+        <a href="../clang/Redeclarable/redecl_iterator.html">redecl_iterator</a>
+         redecls_begin()
+      </p>
+      <p>Defined at line 302 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+      <h3 id="53EE634768973DC0C4401BC518B21147E385107D">redecls_end</h3>
+      <p>
+        public 
+        <a href="../clang/Redeclarable/redecl_iterator.html">redecl_iterator</a>
+         redecls_end()
+      </p>
+      <p>Defined at line 303 of file /usr/lib/llvm-16/include/clang/AST/Redeclarable.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3D9ECB0CF6FF2C23C0E3DE52BE1BC49C4DA77EE6">PreviousDeclLink</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E569DCB65E28EA6F63226E4FEDD714B7E90C1E42">LatestDeclLink</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC6A3A50E072470AEC997CC34C23A84341EAF534">getNextRedeclaration</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35F82A337548375CC13AF19EF09B4667CEC946E2">Redeclarable&lt;decl_type&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D5B2F0F2D1F69D91369169FEB3283FC34103738">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#215786BB5EF58995CD3C0BB05820FC62A5690304">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDA27E815B6EE497B82D4D2011923DC82396354B">getFirstDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F60CD0D0B9767B070944DAFB80FA37442B4EB6E">getFirstDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E59D69C55A3EDE83C92F354C24473369B111D8C1">isFirstDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9921D778A318BA50F01966293F81292513C34BF">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D0A505A63396B81870C801C6D57EB7E238658B2">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AD3CC82BA1A336798A569123A633FF8EC3C8676">setPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E449F2A584100C9A7DA295DDB3F71D406F78813">redecls</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF88CECEE6F3E3FF0DB9D56FA1103DE324A0806F">redecls_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53EE634768973DC0C4401BC518B21147E385107D">redecls_end</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

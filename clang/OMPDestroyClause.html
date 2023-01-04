@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPDestroyClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPDestroyClause</h1>
+    <p>Defined at line 8004 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;destroy&apos; clause in the &apos;#pragma omp depobj&apos; directive or the &apos;#pragma omp interop&apos; directive..</p>
+        <p> In these examples directive &apos;#pragma omp depobj&apos; and &apos;#pragma omp interop&apos; have a &apos;destroy&apos; clause. The &apos;interop&apos; directive includes an object.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPClause.html">OMPClause</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="48D178285850216F8CC2F9C79C5DCA08B079190A">OMPDestroyClause</h3>
+      <p>
+        public void OMPDestroyClause(Expr * InteropVar, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         VarLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 8033 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build &apos;destroy&apos; clause with an interop variable expression </p>
+        </div>
+      </div>
+      <h3 id="998CFE8114D647729DEC323A0650BAA9CC398160">OMPDestroyClause</h3>
+      <p>
+        public void OMPDestroyClause(
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 8043 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build &apos;destroy&apos; clause.</p>
+        </div>
+      </div>
+      <h3 id="E2F5C00A4F43377E5DA00C3341F8CCF718ED286A">OMPDestroyClause</h3>
+      <p>public void OMPDestroyClause()</p>
+      <p>Defined at line 8047 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build an empty clause.</p>
+        </div>
+      </div>
+      <h3 id="8E9BDD4068E037215C6D34DDF0FD28FD66B3CF5A">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 8052 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the location of &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="C8560C0C3F8E2EA7846B178A3FB94C9FD4586BE7">getVarLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getVarLoc()
+      </p>
+      <p>Defined at line 8055 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the location of the interop variable.</p>
+        </div>
+      </div>
+      <h3 id="7695C4A0C2C7B13BBC39CA546A0591CA7BD6BE26">getInteropVar</h3>
+      <p>public Expr * getInteropVar()</p>
+      <p>Defined at line 8058 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the interop variable.</p>
+        </div>
+      </div>
+      <h3 id="2DDCCF479D45863906877DB71164A66E763FC630">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 8060 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="D9ECA1BB1A357443239F09303561A1C4EAE4D67A">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 8066 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="A40235039AEAA60C2C616A0FB57F5792AAD5B004">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 8072 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="C388B7FCD5456A9A090F0234D19E1B6D2DFE57FB">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 8075 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="4AA29D3426B6510217EB864EE7A374E39095B303">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 8079 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#48D178285850216F8CC2F9C79C5DCA08B079190A">OMPDestroyClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#998CFE8114D647729DEC323A0650BAA9CC398160">OMPDestroyClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2F5C00A4F43377E5DA00C3341F8CCF718ED286A">OMPDestroyClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E9BDD4068E037215C6D34DDF0FD28FD66B3CF5A">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C8560C0C3F8E2EA7846B178A3FB94C9FD4586BE7">getVarLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7695C4A0C2C7B13BBC39CA546A0591CA7BD6BE26">getInteropVar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2DDCCF479D45863906877DB71164A66E763FC630">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9ECA1BB1A357443239F09303561A1C4EAE4D67A">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A40235039AEAA60C2C616A0FB57F5792AAD5B004">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C388B7FCD5456A9A090F0234D19E1B6D2DFE57FB">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AA29D3426B6510217EB864EE7A374E39095B303">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

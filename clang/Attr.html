@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Attr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Attr</h1>
+    <p>Defined at line 40 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+    <div>
+      <div>
+        <p> Attr - This represents one attribute.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="AttributeCommonInfo.html">AttributeCommonInfo</a>
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected unsigned int Inherited</li>
+      <li>protected unsigned int IsPackExpansion</li>
+      <li>protected unsigned int Implicit</li>
+      <li>protected unsigned int IsLateParsed</li>
+      <li>protected unsigned int InheritEvenIfAlreadyPresent</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B411B375B9D864A14FCC6DB71AD711A9A6D8DEFB">operator new</h3>
+      <p>protected void * operator new(size_t bytes)</p>
+      <p>Defined at line 55 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="EF1B195427EB3272811AE5F9AAC902DC96F861A1">operator delete</h3>
+      <p>protected void operator delete(void * data)</p>
+      <p>Defined at line 58 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="E59D91335B349B5D21D622645A10015B35755324">operator new</h3>
+      <p>public void * operator new(size_t Bytes, ASTContext &amp; C, size_t Alignment)</p>
+      <p>Defined at line 64 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <div>
+        <div>
+          <p> Forward so that the regular new and delete do not hide global ones.</p>
+        </div>
+      </div>
+      <h3 id="B32F501438A475712D74040467A761FD26C8BD36">operator delete</h3>
+      <p>public void operator delete(void * Ptr, ASTContext &amp; C, size_t Alignment)</p>
+      <p>Defined at line 68 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="09CEF76E92CA662C4FA95CD6D3BCD22785D8E8D1">Attr</h3>
+      <p>
+        protected void Attr(ASTContext &amp; Context, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../clang/attr/Kind.html">Kind</a>
+         AK, _Bool IsLateParsed)
+      </p>
+      <p>Defined at line 73 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="F178FDB57AAFF5040D0BBB3C937FEA43871603FF">getKind</h3>
+      <p>
+        public 
+        <a href="../clang/attr/Kind.html">Kind</a>
+         getKind()
+      </p>
+      <p>Defined at line 80 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="2A9D17FBD7106B138E8604D63DF8DA08E6381936">getSpellingListIndex</h3>
+      <p>public unsigned int getSpellingListIndex()</p>
+      <p>Defined at line 82 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="E5A95C67B4EFF98E0B9D76B357A9229129E28E55">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="2F02B097541FE1019A5ACEA63BA7F746CC0F9DAA">getLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 87 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="361ED35E0F8B21B032E2E6499A4AECF66F21CD44">isInherited</h3>
+      <p>public _Bool isInherited()</p>
+      <p>Defined at line 89 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="B89DCD85D676E4576886BFC2934811B05733DF7B">isImplicit</h3>
+      <p>public _Bool isImplicit()</p>
+      <p>Defined at line 93 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <div>
+        <div>
+          <p> Returns true if the attribute has been implicitly created instead of explicitly written by the user.</p>
+        </div>
+      </div>
+      <h3 id="F4633F95A52F6E54538A54471C4E1E83F8F04EFE">setImplicit</h3>
+      <p>public void setImplicit(_Bool I)</p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="706FDEACA9D20BF00C9D403A0C05FB0AC4ECDFBF">setPackExpansion</h3>
+      <p>public void setPackExpansion(_Bool PE)</p>
+      <p>Defined at line 96 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="1E0341C6B2DDCFEB9DEC5ECF9999445C29156E10">isPackExpansion</h3>
+      <p>public _Bool isPackExpansion()</p>
+      <p>Defined at line 97 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="278E1F6AF840EDA82B155DE5C3F0343CB6D705BB">clone</h3>
+      <p>public Attr * clone(ASTContext &amp; C)</p>
+      <div>
+        <div>
+          <p> Clone this attribute.</p>
+        </div>
+      </div>
+      <h3 id="4F32D43173D8CE742EE48BD955C0A65F89390FB0">isLateParsed</h3>
+      <p>public _Bool isLateParsed()</p>
+      <p>Defined at line 102 of file /usr/lib/llvm-16/include/clang/AST/Attr.h</p>
+      <h3 id="87778F6E4D2424C8EA02F98CD10F7D31ECC3D324">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <div>
+        <div>
+          <p> Pretty print this attribute.</p>
+        </div>
+      </div>
+      <h3 id="97F98CA45653D81EFF863B121829F85F2F0AFDEB">getDocumentation</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getDocumentation(
+        <a href="../clang/attr/Kind.html">Kind</a>
+         )
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B411B375B9D864A14FCC6DB71AD711A9A6D8DEFB">operator new</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF1B195427EB3272811AE5F9AAC902DC96F861A1">operator delete</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E59D91335B349B5D21D622645A10015B35755324">operator new</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B32F501438A475712D74040467A761FD26C8BD36">operator delete</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#09CEF76E92CA662C4FA95CD6D3BCD22785D8E8D1">Attr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F178FDB57AAFF5040D0BBB3C937FEA43871603FF">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A9D17FBD7106B138E8604D63DF8DA08E6381936">getSpellingListIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5A95C67B4EFF98E0B9D76B357A9229129E28E55">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F02B097541FE1019A5ACEA63BA7F746CC0F9DAA">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#361ED35E0F8B21B032E2E6499A4AECF66F21CD44">isInherited</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B89DCD85D676E4576886BFC2934811B05733DF7B">isImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4633F95A52F6E54538A54471C4E1E83F8F04EFE">setImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#706FDEACA9D20BF00C9D403A0C05FB0AC4ECDFBF">setPackExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E0341C6B2DDCFEB9DEC5ECF9999445C29156E10">isPackExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#278E1F6AF840EDA82B155DE5C3F0343CB6D705BB">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F32D43173D8CE742EE48BD955C0A65F89390FB0">isLateParsed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87778F6E4D2424C8EA02F98CD10F7D31ECC3D324">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97F98CA45653D81EFF863B121829F85F2F0AFDEB">getDocumentation</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

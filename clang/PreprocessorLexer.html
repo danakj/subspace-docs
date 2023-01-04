@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class PreprocessorLexer</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class PreprocessorLexer</h1>
+    <p>Defined at line 30 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected Preprocessor * PP</li>
+      <li>
+        protected 
+        <a href="FileID.html">FileID</a>
+         FID
+      </li>
+      <li>protected unsigned int InitialNumSLocEntries</li>
+      <li>protected _Bool ParsingPreprocessorDirective</li>
+      <li>protected _Bool ParsingFilename</li>
+      <li>protected _Bool LexingRawMode</li>
+      <li>
+        protected 
+        <a href="MultipleIncludeOpt.html">MultipleIncludeOpt</a>
+         MIOpt
+      </li>
+      <li>
+        protected 
+        <a href="../llvm/SmallVector.html">SmallVector</a>
+         ConditionalStack
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="735007E4DC423732E78E2C0FCB7AC9699D3E0E3C">PreprocessorLexer</h3>
+      <p>protected void PreprocessorLexer()</p>
+      <p>Defined at line 78 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <h3 id="B0A9FCEE8AFD5023911AB029BD7F52D834CB37FF">PreprocessorLexer</h3>
+      <p>
+        protected void PreprocessorLexer(Preprocessor * pp, 
+        <a href="FileID.html">FileID</a>
+         fid)
+      </p>
+      <h3 id="F2D69366BDCBEFBA95C54EBD227D767D375CE23A">~PreprocessorLexer</h3>
+      <p>protected void ~PreprocessorLexer()</p>
+      <p>Defined at line 80 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <h3 id="A9DD92463FBE390FB26A932B1779E155900BBCD1">IndirectLex</h3>
+      <p>protected void IndirectLex(Token &amp; Result)</p>
+      <h3 id="DA36E94F1555832D3A865440E43BE6ABAECE26D5">getSourceLocation</h3>
+      <p>
+        protected 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getSourceLocation()
+      </p>
+      <div>
+        <div>
+          <p> Return the source location for the next observable location.</p>
+        </div>
+      </div>
+      <h3 id="F0AF30190A9E34FFD98C846771495582D020C1BD">pushConditionalLevel</h3>
+      <p>
+        protected void pushConditionalLevel(
+        <a href="SourceLocation.html">SourceLocation</a>
+         DirectiveStart, _Bool WasSkipping, _Bool FoundNonSkip, _Bool FoundElse)
+      </p>
+      <p>Defined at line 93 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <div>
+        <div>
+          <p> pushConditionalLevel - When we enter a #if directive, this keeps track of what we are currently in for diagnostic emission (e.g. #if with missing#endif).</p>
+        </div>
+      </div>
+      <h3 id="8B096D2BB0588C5A7FD787BC0A02A6C2125BBC43">pushConditionalLevel</h3>
+      <p>protected void pushConditionalLevel(const PPConditionalInfo &amp; CI)</p>
+      <p>Defined at line 102 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <h3 id="4CDFD66707064E6771C98AF1A187F687C65E3F93">popConditionalLevel</h3>
+      <p>protected _Bool popConditionalLevel(PPConditionalInfo &amp; CI)</p>
+      <p>Defined at line 109 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <div>
+        <div>
+          <p> popConditionalLevel - Remove an entry off the top of the conditional stack, returning information about it.  If the conditional stack is empty, this returns true and does not fill in the arguments.</p>
+        </div>
+      </div>
+      <h3 id="0B8D103A5D254D9818B733B2F67A579DD3796419">peekConditionalLevel</h3>
+      <p>protected PPConditionalInfo &amp; peekConditionalLevel()</p>
+      <p>Defined at line 118 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <div>
+        <div>
+          <p> Return the top of the conditional stack.</p>
+        </div>
+      </div>
+      <h3 id="467537B5E4763C73D3240C4BD9FCB09D8D83A487">getConditionalStackDepth</h3>
+      <p>protected unsigned int getConditionalStackDepth()</p>
+      <p>Defined at line 123 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <h3 id="C12150634E905F48ACE983B4C2F5DEDAB362FB30">PreprocessorLexer</h3>
+      <p>public void PreprocessorLexer(const PreprocessorLexer &amp; )</p>
+      <p>Defined at line 126 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <h3 id="B7FEF3DEA5C3C818C5C4246D0E159EB9EF36F790">operator=</h3>
+      <p>public PreprocessorLexer &amp; operator=(const PreprocessorLexer &amp; )</p>
+      <p>Defined at line 127 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <h3 id="8A6AEDDC26EC3C3827616930A48693A9E687ED8B">LexIncludeFilename</h3>
+      <p>public void LexIncludeFilename(Token &amp; FilenameTok)</p>
+      <div>
+        <div>
+          <p> Lex a token, producing a header-name token if possible.</p>
+        </div>
+      </div>
+      <h3 id="4FEFB14C8F6AF603D6D6C210C704AE9BEF8DF923">setParsingPreprocessorDirective</h3>
+      <p>public void setParsingPreprocessorDirective(_Bool f)</p>
+      <p>Defined at line 137 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <div>
+        <div>
+          <p> Inform the lexer whether or not we are currently lexing a preprocessor directive.</p>
+        </div>
+      </div>
+      <h3 id="308C0526DE871FF0370CC2E539D6A78CC015A536">isLexingRawMode</h3>
+      <p>public _Bool isLexingRawMode()</p>
+      <p>Defined at line 142 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <div>
+        <div>
+          <p> Return true if this lexer is in raw mode or not.</p>
+        </div>
+      </div>
+      <h3 id="3D0432B685CABF684A4385AD67F771E82FCAB251">getPP</h3>
+      <p>public Preprocessor * getPP()</p>
+      <p>Defined at line 145 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <div>
+        <div>
+          <p> Return the preprocessor object for this lexer.</p>
+        </div>
+      </div>
+      <h3 id="AFBBFEE19A01F55A16A757BBBB525A1DF4C59248">getFileID</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         getFileID()
+      </p>
+      <p>Defined at line 147 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <h3 id="B13277EC8A1B33358673E4309A0FEF75C4C95198">getInitialNumSLocEntries</h3>
+      <p>public unsigned int getInitialNumSLocEntries()</p>
+      <p>Defined at line 154 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <div>
+        <div>
+          <p> Number of SLocEntries before lexing the file.</p>
+        </div>
+      </div>
+      <h3 id="27E9BD0E16F65C3F4C7AC8758384DEDE7661E4F3">getFileEntry</h3>
+      <p>
+        public 
+        <a href="OptionalFileEntryRefDegradesToFileEntryPtr.html">OptionalFileEntryRefDegradesToFileEntryPtr</a>
+         getFileEntry()
+      </p>
+      <div>
+        <div>
+          <p> getFileEntry - Return the FileEntry corresponding to this FileID.  Like getFileID(), this only works for lexers with attached preprocessors.</p>
+        </div>
+      </div>
+      <h3 id="C5B0F72E39F1B629D1E1C664001956FD0D1CBF55">conditional_begin</h3>
+      <p>public conditional_iterator conditional_begin()</p>
+      <p>Defined at line 167 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <h3 id="75B1C5DEABF9038389EBE55196196D487802C47E">conditional_end</h3>
+      <p>public conditional_iterator conditional_end()</p>
+      <p>Defined at line 171 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+      <h3 id="536E79FCCEA75C405BAF42138BF596371DD34A71">setConditionalLevels</h3>
+      <p>
+        public void setConditionalLevels(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         CL)
+      </p>
+      <p>Defined at line 175 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessorLexer.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#735007E4DC423732E78E2C0FCB7AC9699D3E0E3C">PreprocessorLexer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0A9FCEE8AFD5023911AB029BD7F52D834CB37FF">PreprocessorLexer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2D69366BDCBEFBA95C54EBD227D767D375CE23A">~PreprocessorLexer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9DD92463FBE390FB26A932B1779E155900BBCD1">IndirectLex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA36E94F1555832D3A865440E43BE6ABAECE26D5">getSourceLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F0AF30190A9E34FFD98C846771495582D020C1BD">pushConditionalLevel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8B096D2BB0588C5A7FD787BC0A02A6C2125BBC43">pushConditionalLevel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CDFD66707064E6771C98AF1A187F687C65E3F93">popConditionalLevel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B8D103A5D254D9818B733B2F67A579DD3796419">peekConditionalLevel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#467537B5E4763C73D3240C4BD9FCB09D8D83A487">getConditionalStackDepth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C12150634E905F48ACE983B4C2F5DEDAB362FB30">PreprocessorLexer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7FEF3DEA5C3C818C5C4246D0E159EB9EF36F790">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A6AEDDC26EC3C3827616930A48693A9E687ED8B">LexIncludeFilename</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FEFB14C8F6AF603D6D6C210C704AE9BEF8DF923">setParsingPreprocessorDirective</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#308C0526DE871FF0370CC2E539D6A78CC015A536">isLexingRawMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D0432B685CABF684A4385AD67F771E82FCAB251">getPP</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFBBFEE19A01F55A16A757BBBB525A1DF4C59248">getFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B13277EC8A1B33358673E4309A0FEF75C4C95198">getInitialNumSLocEntries</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27E9BD0E16F65C3F4C7AC8758384DEDE7661E4F3">getFileEntry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5B0F72E39F1B629D1E1C664001956FD0D1CBF55">conditional_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75B1C5DEABF9038389EBE55196196D487802C47E">conditional_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#536E79FCCEA75C405BAF42138BF596371DD34A71">setConditionalLevels</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

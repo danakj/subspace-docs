@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExtVectorElementExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExtVectorElementExpr</h1>
+    <p>Defined at line 5916 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> ExtVectorElementExpr - This represents access to specific elements of a vector, and may occur on the left hand side or right hand side.  For example the following is legal:  &quot;V.xy = V.zw&quot; if V is a 4 element extended vector.</p>
+        <p> Note that the base may have either vector or pointer to vector type, just like a struct field reference.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B37F6C6A23683A51DA686651EA0B380BED06F4CE">ExtVectorElementExpr</h3>
+      <p>
+        public void ExtVectorElementExpr(
+        <a href="QualType.html">QualType</a>
+         ty, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, Expr * base, IdentifierInfo &amp; accessor, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         loc)
+      </p>
+      <p>Defined at line 5921 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="1C88837B65FF38A7104B15379AEBFA511FE1B55F">ExtVectorElementExpr</h3>
+      <p>
+        public void ExtVectorElementExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 5930 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Build an empty vector element expression.</p>
+        </div>
+      </div>
+      <h3 id="80D062BA65F332AA2544F3391C00368631767B21">getBase</h3>
+      <p>public const Expr * getBase()</p>
+      <p>Defined at line 5933 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A1C9E6B42EDB3A91347A1977DEF01C67D6CCA270">getBase</h3>
+      <p>public Expr * getBase()</p>
+      <p>Defined at line 5934 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="16A1F4F11E930AE58ECEBE23BF520C06552A0530">setBase</h3>
+      <p>public void setBase(Expr * E)</p>
+      <p>Defined at line 5935 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="1295E482AA991718686E384E06D260F2BB468607">getAccessor</h3>
+      <p>public IdentifierInfo &amp; getAccessor()</p>
+      <p>Defined at line 5937 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A745B542ECDF9D55AB68E97286D50C5F2B56F87D">setAccessor</h3>
+      <p>public void setAccessor(IdentifierInfo * II)</p>
+      <p>Defined at line 5938 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="FB54FA574C529057605249FA2E505B95BBA1852F">getAccessorLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAccessorLoc()
+      </p>
+      <p>Defined at line 5940 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="007FF2F647CB091D47468161D04C60499F74143A">setAccessorLoc</h3>
+      <p>
+        public void setAccessorLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 5941 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="40E30A7F96F18921BC5143ADF96E603DC11AF31D">getNumElements</h3>
+      <p>public unsigned int getNumElements()</p>
+      <div>
+        <div>
+          <p> getNumElements - Get the number of components being selected.</p>
+        </div>
+      </div>
+      <h3 id="1D4BE5056A217B16F737980FCCEA8B2CA8E12639">containsDuplicateElements</h3>
+      <p>public _Bool containsDuplicateElements()</p>
+      <div>
+        <div>
+          <p> containsDuplicateElements - Return true if any element access is repeated.</p>
+        </div>
+      </div>
+      <h3 id="2EF40D692A972E755C22F6790D1FC4B7D8F1A87B">getEncodedElementAccess</h3>
+      <p>public void getEncodedElementAccess(SmallVectorImpl&lt;uint32_t&gt; &amp; Elts)</p>
+      <div>
+        <div>
+          <p> getEncodedElementAccess - Encode the elements accessed into an llvm aggregate Constant of ConstantInt(s).</p>
+        </div>
+      </div>
+      <h3 id="917328B15F43FBB38192A3A1E11BD95C2B637A21">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 5954 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="EA7A4637AB079E614755CA0F649595886CF8AB82">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 5957 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A6814F31572DF49225653CF9C7B93FF595C183EC">isArrow</h3>
+      <p>public _Bool isArrow()</p>
+      <div>
+        <div>
+          <p> isArrow - Return true if the base expression is a pointer to vector, return false if the base expression is a vector.</p>
+        </div>
+      </div>
+      <h3 id="CB1F218A0600E6144C260DEC4DB35EEA85BBF432">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 5963 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="6F2BDBCFEC18C43712F20171412E9F50F108FFD9">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 5968 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="B9511670D7C5FBFCA8F45AF730DFBC9802192DD6">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 5969 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B37F6C6A23683A51DA686651EA0B380BED06F4CE">ExtVectorElementExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C88837B65FF38A7104B15379AEBFA511FE1B55F">ExtVectorElementExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#80D062BA65F332AA2544F3391C00368631767B21">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1C9E6B42EDB3A91347A1977DEF01C67D6CCA270">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16A1F4F11E930AE58ECEBE23BF520C06552A0530">setBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1295E482AA991718686E384E06D260F2BB468607">getAccessor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A745B542ECDF9D55AB68E97286D50C5F2B56F87D">setAccessor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB54FA574C529057605249FA2E505B95BBA1852F">getAccessorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#007FF2F647CB091D47468161D04C60499F74143A">setAccessorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#40E30A7F96F18921BC5143ADF96E603DC11AF31D">getNumElements</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D4BE5056A217B16F737980FCCEA8B2CA8E12639">containsDuplicateElements</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2EF40D692A972E755C22F6790D1FC4B7D8F1A87B">getEncodedElementAccess</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#917328B15F43FBB38192A3A1E11BD95C2B637A21">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA7A4637AB079E614755CA0F649595886CF8AB82">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6814F31572DF49225653CF9C7B93FF595C183EC">isArrow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB1F218A0600E6144C260DEC4DB35EEA85BBF432">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F2BDBCFEC18C43712F20171412E9F50F108FFD9">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9511670D7C5FBFCA8F45AF730DFBC9802192DD6">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

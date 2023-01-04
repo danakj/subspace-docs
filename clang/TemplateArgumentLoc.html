@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TemplateArgumentLoc</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TemplateArgumentLoc</h1>
+    <p>Defined at line 458 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+    <div>
+      <div>
+        <p> Location wrapper for a TemplateArgument.  TemplateArgument is to TemplateArgumentLoc as Type is to TypeLoc.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E370B192CAB3BC6C5BDB851C99D03A8B3E284AC5">TemplateArgumentLoc</h3>
+      <p>public void TemplateArgumentLoc()</p>
+      <p>Defined at line 463 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="3301ED15CEB0527AB67A90BB2464A133B1AEA837">TemplateArgumentLoc</h3>
+      <p>
+        public void TemplateArgumentLoc(const TemplateArgument &amp; Argument, 
+        <a href="TemplateArgumentLocInfo.html">TemplateArgumentLocInfo</a>
+         Opaque)
+      </p>
+      <p>Defined at line 465 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="FCF9420A0BDD9B8BD93AAF47B6E934C88B204BDC">TemplateArgumentLoc</h3>
+      <p>public void TemplateArgumentLoc(const TemplateArgument &amp; Argument, TypeSourceInfo * TInfo)</p>
+      <p>Defined at line 469 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="9F6D4060B720065173A34F73C27F42B35422001F">TemplateArgumentLoc</h3>
+      <p>public void TemplateArgumentLoc(const TemplateArgument &amp; Argument, Expr * E)</p>
+      <p>Defined at line 474 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="BE2DAB63300C1E6408FD34614C91A6DCAE3F38AA">TemplateArgumentLoc</h3>
+      <p>
+        public void TemplateArgumentLoc(ASTContext &amp; Ctx, const TemplateArgument &amp; Argument, 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         QualifierLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TemplateNameLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EllipsisLoc)
+      </p>
+      <p>Defined at line 485 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="AB049A504C3EB6808DA7CF19C70369C6B8F8353F">getLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 496 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <div>
+        <div>
+          <p> - Fetches the primary location of the argument.</p>
+        </div>
+      </div>
+      <h3 id="FB8223709C262DB5E0E51ECC4A4EC07A9B23043E">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <div>
+        <div>
+          <p> - Fetches the full source range of the argument.</p>
+        </div>
+      </div>
+      <h3 id="DF99A59711936835BF2F576C45E12FDD91D58281">getArgument</h3>
+      <p>public const TemplateArgument &amp; getArgument()</p>
+      <p>Defined at line 507 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="B200F426C47A2A24554C1E7E2FA8B0F908181418">getLocInfo</h3>
+      <p>
+        public 
+        <a href="TemplateArgumentLocInfo.html">TemplateArgumentLocInfo</a>
+         getLocInfo()
+      </p>
+      <p>Defined at line 511 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="034C356E12EC28BC8377E70241E3806790B016BB">getTypeSourceInfo</h3>
+      <p>public TypeSourceInfo * getTypeSourceInfo()</p>
+      <p>Defined at line 515 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="9094B40C82F3D3B43FE8AFB107714DB45A4BCB10">getSourceExpression</h3>
+      <p>public Expr * getSourceExpression()</p>
+      <p>Defined at line 521 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="908B518DE5B0384B04F6B3612AD3DF398510FA76">getSourceDeclExpression</h3>
+      <p>public Expr * getSourceDeclExpression()</p>
+      <p>Defined at line 526 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="D4836064E05FF35C38162E1FAE4931A1C207471A">getSourceNullPtrExpression</h3>
+      <p>public Expr * getSourceNullPtrExpression()</p>
+      <p>Defined at line 531 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="0698B7447B6148BEFE409358C4E120931CFCA009">getSourceIntegralExpression</h3>
+      <p>public Expr * getSourceIntegralExpression()</p>
+      <p>Defined at line 536 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="9FC588A765899C2B8FDBD0EFC5908EB0C877AB2A">getTemplateQualifierLoc</h3>
+      <p>
+        public 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         getTemplateQualifierLoc()
+      </p>
+      <p>Defined at line 541 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="0357B47C673D0DAB1FBC0E866A5D05431D41A028">getTemplateNameLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTemplateNameLoc()
+      </p>
+      <p>Defined at line 548 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="04CACB9D07126958E7425455AA08AFA4C0BDE8B9">getTemplateEllipsisLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTemplateEllipsisLoc()
+      </p>
+      <p>Defined at line 555 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E370B192CAB3BC6C5BDB851C99D03A8B3E284AC5">TemplateArgumentLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3301ED15CEB0527AB67A90BB2464A133B1AEA837">TemplateArgumentLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCF9420A0BDD9B8BD93AAF47B6E934C88B204BDC">TemplateArgumentLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F6D4060B720065173A34F73C27F42B35422001F">TemplateArgumentLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE2DAB63300C1E6408FD34614C91A6DCAE3F38AA">TemplateArgumentLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB049A504C3EB6808DA7CF19C70369C6B8F8353F">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB8223709C262DB5E0E51ECC4A4EC07A9B23043E">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF99A59711936835BF2F576C45E12FDD91D58281">getArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B200F426C47A2A24554C1E7E2FA8B0F908181418">getLocInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#034C356E12EC28BC8377E70241E3806790B016BB">getTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9094B40C82F3D3B43FE8AFB107714DB45A4BCB10">getSourceExpression</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#908B518DE5B0384B04F6B3612AD3DF398510FA76">getSourceDeclExpression</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4836064E05FF35C38162E1FAE4931A1C207471A">getSourceNullPtrExpression</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0698B7447B6148BEFE409358C4E120931CFCA009">getSourceIntegralExpression</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FC588A765899C2B8FDBD0EFC5908EB0C877AB2A">getTemplateQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0357B47C673D0DAB1FBC0E866A5D05431D41A028">getTemplateNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#04CACB9D07126958E7425455AA08AFA4C0BDE8B9">getTemplateEllipsisLoc</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DeclarationNameExtra</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/detail" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DeclarationNameExtra</h1>
+    <p>Defined at line 959 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+    <div>
+      <div>
+        <p> DeclarationNameExtra is used as a base of various uncommon special names. This class is needed since DeclarationName has not enough space to store the kind of every possible names. Therefore the kind of common names is stored directly in DeclarationName, and the kind of uncommon names is stored in DeclarationNameExtra. It is aligned to 8 bytes because DeclarationName needs the lower 3 bits to store the kind of common names. DeclarationNameExtra is tightly coupled to DeclarationName and any change here is very likely to require changes in DeclarationName(Table).</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected unsigned int ExtraKindOrNumArgs</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E04BD54BA9C47EB2B84BF2562E066A33D9F7D361">DeclarationNameExtra</h3>
+      <p>
+        protected void DeclarationNameExtra(
+        <a href="../../clang/detail/DeclarationNameExtra/ExtraKind.html">ExtraKind</a>
+         Kind)
+      </p>
+      <p>Defined at line 988 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="0995657439FF092CDC91CAC909001CD84D5C392A">DeclarationNameExtra</h3>
+      <p>protected void DeclarationNameExtra(unsigned int NumArgs)</p>
+      <p>Defined at line 989 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="6531EE8404DA4974B7C69D29852BB0A144B631BA">getKind</h3>
+      <p>
+        protected 
+        <a href="../../clang/detail/DeclarationNameExtra/ExtraKind.html">ExtraKind</a>
+         getKind()
+      </p>
+      <p>Defined at line 993 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> Return the corresponding ExtraKind.</p>
+        </div>
+      </div>
+      <h3 id="898D0FAB64B31E722410DC3A0F3BA2394B5ACA71">getNumArgs</h3>
+      <p>protected unsigned int getNumArgs()</p>
+      <p>Defined at line 1002 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> Return the number of arguments in an ObjC selector. Only valid when this is indeed an ObjCMultiArgSelector.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="0159D69A0E1DA729FE42CB254B158EAE6A2CA121">enum ExtraKind</h3>
+      <ul>
+        <li>CXXDeductionGuideName</li>
+        <li>CXXLiteralOperatorName</li>
+        <li>CXXUsingDirective</li>
+        <li>ObjCMultiArgSelector</li>
+      </ul>
+      <p>Defined at line 969 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> The kind of &quot;extra&quot; information stored in the DeclarationName. See for an explanation of how these enumerator values are used. Note that DeclarationName depends on the numerical values of the enumerators in this enum. See DeclarationName::StoredNameKind for more info.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E04BD54BA9C47EB2B84BF2562E066A33D9F7D361">DeclarationNameExtra</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0995657439FF092CDC91CAC909001CD84D5C392A">DeclarationNameExtra</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6531EE8404DA4974B7C69D29852BB0A144B631BA">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#898D0FAB64B31E722410DC3A0F3BA2394B5ACA71">getNumArgs</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0159D69A0E1DA729FE42CB254B158EAE6A2CA121">ExtraKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

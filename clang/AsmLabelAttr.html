@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AsmLabelAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AsmLabelAttr</h1>
+    <p>Defined at line 1403 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="ECA6EC3171C034599D352D5399EA6608B1680EFF">CreateImplicit</h3>
+      <p>
+        public AsmLabelAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Label, _Bool IsLiteralLabel, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="B95699195A49AECB7EAC633C2B6F9382025302DF">Create</h3>
+      <p>
+        public AsmLabelAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Label, _Bool IsLiteralLabel, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="6C4B6F537D0D7E9E27DC12F99545AFA9BE1A60D8">CreateImplicit</h3>
+      <p>
+        public AsmLabelAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Label, _Bool IsLiteralLabel, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="BFD265B14DD1E8909DD4EBEBF42F18526103EDE1">Create</h3>
+      <p>
+        public AsmLabelAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Label, _Bool IsLiteralLabel, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="3FD9C2330E5642EB087E886289B2D9730E852FDD">CreateImplicit</h3>
+      <p>
+        public AsmLabelAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Label, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="12B385AD2075C17C979ABF0AEAC0B2B05EE6D299">Create</h3>
+      <p>
+        public AsmLabelAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Label, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="A4E490546A6FBDFFEC7053BD2123D8E50AEE4811">CreateImplicit</h3>
+      <p>
+        public AsmLabelAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Label, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="3AA7BCB44AC665F073D90D528AC0724C6B86CEBC">Create</h3>
+      <p>
+        public AsmLabelAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Label, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="E0F47D501400E7A9E56B2C133C80BB25E631C037">AsmLabelAttr</h3>
+      <p>
+        public void AsmLabelAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Label, _Bool IsLiteralLabel)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="5A567DD0DA3F339987E551E922B87A29BD2C0F2F">AsmLabelAttr</h3>
+      <p>
+        public void AsmLabelAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Label)
+      </p>
+      <h3 id="4C3D1971E2959D6829A58643993956548CBCC1BB">clone</h3>
+      <p>public AsmLabelAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="8D90A4B7224E44045570F0698B3FDD1DC1D7ACFF">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="60169DC5F11DA457F2A2096349B00C6DC5E5086B">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="DF32C7FAC5F2BB1CEE570150BBA667044D9A2215">getLabel</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getLabel()
+      </p>
+      <p>Defined at line 1439 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="65FBD47FF3C597FCCBF99FEF4ED7E0D9B97C653C">getLabelLength</h3>
+      <p>public unsigned int getLabelLength()</p>
+      <p>Defined at line 1442 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="B15F3CCF3B1A34DF8122F23CDB4DD6A2691181DB">setLabel</h3>
+      <p>
+        public void setLabel(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 1445 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="BB8ED57DBAAD2B61ABBA3713A465DC6150A90B1F">getIsLiteralLabel</h3>
+      <p>public _Bool getIsLiteralLabel()</p>
+      <p>Defined at line 1452 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="66D9D701AAAC3D7462DE4EDC9A7013538DF3E2BE">isEquivalent</h3>
+      <p>public _Bool isEquivalent(AsmLabelAttr * Other)</p>
+      <p>Defined at line 1457 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C1760F048FA305ED0E0843B43E64CEC3FD79888C">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 1462 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="15D15AD5B9E3C3A927BFE8BB53A439B6BB87112B">enum Spelling</h3>
+      <ul>
+        <li>Keyword_asm</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 1410 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#ECA6EC3171C034599D352D5399EA6608B1680EFF">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B95699195A49AECB7EAC633C2B6F9382025302DF">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C4B6F537D0D7E9E27DC12F99545AFA9BE1A60D8">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BFD265B14DD1E8909DD4EBEBF42F18526103EDE1">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3FD9C2330E5642EB087E886289B2D9730E852FDD">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12B385AD2075C17C979ABF0AEAC0B2B05EE6D299">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4E490546A6FBDFFEC7053BD2123D8E50AEE4811">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3AA7BCB44AC665F073D90D528AC0724C6B86CEBC">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0F47D501400E7A9E56B2C133C80BB25E631C037">AsmLabelAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A567DD0DA3F339987E551E922B87A29BD2C0F2F">AsmLabelAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C3D1971E2959D6829A58643993956548CBCC1BB">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D90A4B7224E44045570F0698B3FDD1DC1D7ACFF">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#60169DC5F11DA457F2A2096349B00C6DC5E5086B">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF32C7FAC5F2BB1CEE570150BBA667044D9A2215">getLabel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65FBD47FF3C597FCCBF99FEF4ED7E0D9B97C653C">getLabelLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B15F3CCF3B1A34DF8122F23CDB4DD6A2691181DB">setLabel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB8ED57DBAAD2B61ABBA3713A465DC6150A90B1F">getIsLiteralLabel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66D9D701AAAC3D7462DE4EDC9A7013538DF3E2BE">isEquivalent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1760F048FA305ED0E0843B43E64CEC3FD79888C">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#15D15AD5B9E3C3A927BFE8BB53A439B6BB87112B">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

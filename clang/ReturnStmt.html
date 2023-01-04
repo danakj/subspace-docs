@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ReturnStmt</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ReturnStmt</h1>
+    <p>Defined at line 2796 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    <div>
+      <div>
+        <p> ReturnStmt - This represents a return, optionally of an expression:   return;   return 4;</p>
+        <p> Note that GCC allows return with no argument in a function declared to return a value, and it allows returning a value in functions declared to return void.  We explicitly model this in the AST, which means you can&apos;t depend on the return type of the function and the presence of an argument.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Stmt.html">Stmt</a>
+      , llvm::TrailingObjects&lt;ReturnStmt, const VarDecl *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2DC95269265911520807BB124471F2CBD78B037F">Create</h3>
+      <p>
+        public ReturnStmt * Create(const ASTContext &amp; Ctx, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RL, Expr * E, const VarDecl * NRVOCandidate)
+      </p>
+      <div>
+        <div>
+          <p> Create a return statement.</p>
+        </div>
+      </div>
+      <h3 id="F3C7A5A53B225763AC993A1A2092B94CA309C095">CreateEmpty</h3>
+      <p>public ReturnStmt * CreateEmpty(const ASTContext &amp; Ctx, _Bool HasNRVOCandidate)</p>
+      <div>
+        <div>
+          <p> Create an empty return statement, optionally with storage for an NRVO candidate.</p>
+        </div>
+      </div>
+      <h3 id="1D0C1D0E002E5F5C9FCBBBA4A41694A08ACDA0CB">getRetValue</h3>
+      <p>public Expr * getRetValue()</p>
+      <p>Defined at line 2829 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="CC04A17AD1BE77CB743DC5D1C8C28B0382FAD346">getRetValue</h3>
+      <p>public const Expr * getRetValue()</p>
+      <p>Defined at line 2830 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="D3AD3B0F4A340A8443079F23A963F52E1BEB1DD9">setRetValue</h3>
+      <p>public void setRetValue(Expr * E)</p>
+      <p>Defined at line 2831 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="4F49CA62C268887F0F948708C57618D4FC84E8E5">getNRVOCandidate</h3>
+      <p>public const VarDecl * getNRVOCandidate()</p>
+      <p>Defined at line 2838 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> Retrieve the variable that might be used for the named return value optimization.</p>
+          <p> The optimization itself can only be performed if the variable is also marked as an NRVO object.</p>
+        </div>
+      </div>
+      <h3 id="E6C65F2066A691BE735F4CA0DD4F01FEA51D4AB6">setNRVOCandidate</h3>
+      <p>public void setNRVOCandidate(const VarDecl * Var)</p>
+      <p>Defined at line 2846 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> Set the variable that might be used for the named return value optimization. The return statement must have storage for it, which is the case if and only if hasNRVOCandidate() is true.</p>
+        </div>
+      </div>
+      <h3 id="BFE1F9012528CD5E61E6DDA041E513C3F0AA66CE">getReturnLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getReturnLoc()
+      </p>
+      <p>Defined at line 2852 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="D966C301B4C32D4B740A5A061E11B41F00257841">setReturnLoc</h3>
+      <p>
+        public void setReturnLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2853 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="1A45418BA38313CA3E6D1400FCB607A2032C599B">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2855 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="202C9C8F7BD7FC18FFDA01DC441EBFC581CAA34F">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2856 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="E828836A52AAC4F109DD01399DFEBD2124AF7F16">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2860 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="99FF0635019BD1D9DD9D74613D6158B48465592D">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2865 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="23061A198AD59BECCEC9EE19AAAFCBAB7A447CAF">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2871 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2DC95269265911520807BB124471F2CBD78B037F">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F3C7A5A53B225763AC993A1A2092B94CA309C095">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D0C1D0E002E5F5C9FCBBBA4A41694A08ACDA0CB">getRetValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC04A17AD1BE77CB743DC5D1C8C28B0382FAD346">getRetValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3AD3B0F4A340A8443079F23A963F52E1BEB1DD9">setRetValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F49CA62C268887F0F948708C57618D4FC84E8E5">getNRVOCandidate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6C65F2066A691BE735F4CA0DD4F01FEA51D4AB6">setNRVOCandidate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BFE1F9012528CD5E61E6DDA041E513C3F0AA66CE">getReturnLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D966C301B4C32D4B740A5A061E11B41F00257841">setReturnLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1A45418BA38313CA3E6D1400FCB607A2032C599B">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#202C9C8F7BD7FC18FFDA01DC441EBFC581CAA34F">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E828836A52AAC4F109DD01399DFEBD2124AF7F16">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99FF0635019BD1D9DD9D74613D6158B48465592D">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23061A198AD59BECCEC9EE19AAAFCBAB7A447CAF">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

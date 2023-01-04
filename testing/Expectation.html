@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Expectation</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Expectation</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#504">504</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+    </p>
+    <div>
+      <div>
+        <p> An abstract handle of an expectation.</p>
+      </div>
+      <div>
+        <p> An abstract handle of an expectation.  Useful in the .After() clause of EXPECT_CALL() for setting the (partial) order of expectations.  The syntax:</p>
+        <p>   Expectation e1 = EXPECT_CALL(...)...;   EXPECT_CALL(...).After(e1)...;</p>
+        <p> sets two expectations where the latter can only be matched after the former has been satisfied.</p>
+        <p> Notes:   - This class is copyable and has value semantics.   - Constness is shallow: a const Expectation object itself cannot     be modified, but the mutable methods of the ExpectationBase     object it references can be called via expectation_base().</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9A24ED5576D07E448F2CDB869DEA81043CFCB39B">Expectation</h3>
+      <p>public void Expectation()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#864">864</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Constructs a null object that doesn&apos;t reference any expectation.</p>
+        </div>
+      </div>
+      <h3 id="A89DC8FC9F7E24BDAEA823A383B78580CAB0B182">Expectation</h3>
+      <p>public void Expectation(Expectation &amp;&amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#508">508</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <h3 id="8C26724B805DF333D6099AC270A2BB4537761977">Expectation</h3>
+      <p>public void Expectation(const Expectation &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#509">509</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <h3 id="18CDFAF6447F46328AD3834BB002E538D4143F28">operator=</h3>
+      <p>public Expectation &amp; operator=(Expectation &amp;&amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#510">510</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <h3 id="E81260700EA7ED382693C4ADA25CF8658AD633B9">operator=</h3>
+      <p>public Expectation &amp; operator=(const Expectation &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#511">511</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <h3 id="82C48784BAC3F5BBBC15F9485121DB8AB3D58BB0">~Expectation</h3>
+      <p>public void ~Expectation()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#870">870</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <h3 id="217143BF01CEC369BD69CBF736568BE6E70C9B0D">Expectation</h3>
+      <p>public void Expectation(internal::ExpectationBase &amp; exp)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1958">1958</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Constructs an Expectation object that references and co-owns exp.</p>
+        </div>
+        <div>
+          <p> This single-argument ctor must not be explicit, in order to support the   Expectation e = EXPECT_CALL(...); syntax.</p>
+          <p> A TypedExpectation object stores its pre-requisites as Expectation objects, and needs to call the non-const Retire() method on the ExpectationBase objects they reference.  Therefore Expectation must receive a *non-const* reference to the ExpectationBase object.</p>
+        </div>
+      </div>
+      <h3 id="ED0921B3D9397C959C6334927D7687C42B2C0596">operator==</h3>
+      <p>public _Bool operator==(const Expectation &amp; rhs)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#530">530</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if rhs references the same expectation as this object does.</p>
+        </div>
+      </div>
+      <h3 id="6CD4A78B72E3D8F588B602E4C0C65015264B647B">operator!=</h3>
+      <p>public _Bool operator!=(const Expectation &amp; rhs)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#534">534</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9A24ED5576D07E448F2CDB869DEA81043CFCB39B">Expectation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A89DC8FC9F7E24BDAEA823A383B78580CAB0B182">Expectation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8C26724B805DF333D6099AC270A2BB4537761977">Expectation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#18CDFAF6447F46328AD3834BB002E538D4143F28">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E81260700EA7ED382693C4ADA25CF8658AD633B9">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82C48784BAC3F5BBBC15F9485121DB8AB3D58BB0">~Expectation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#217143BF01CEC369BD69CBF736568BE6E70C9B0D">Expectation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED0921B3D9397C959C6334927D7687C42B2C0596">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CD4A78B72E3D8F588B602E4C0C65015264B647B">operator!=</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

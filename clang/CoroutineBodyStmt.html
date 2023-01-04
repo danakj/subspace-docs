@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CoroutineBodyStmt</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CoroutineBodyStmt</h1>
+    <p>Defined at line 317 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+    <div>
+      <div>
+        <p> Represents the body of a coroutine. This wraps the normal function body and holds the additional semantic context required to set up and tear down the coroutine frame.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Stmt.html">Stmt</a>
+      , llvm::TrailingObjects&lt;CoroutineBodyStmt, Stmt *&gt;
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/CoroutineBodyStmt/CtorArgs.html">CtorArgs</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B1262B66F47793EE3FB438B14D3F54109FC19774">Create</h3>
+      <p>public CoroutineBodyStmt * Create(const ASTContext &amp; C, const CtorArgs &amp; Args)</p>
+      <h3 id="09F7868051A73AA3E129E00E1D8F1FE512695A05">Create</h3>
+      <p>
+        public CoroutineBodyStmt * Create(const ASTContext &amp; C, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         , unsigned int NumParams)
+      </p>
+      <h3 id="35E3EC554B907308F47224BC8C028CD46ACF8826">hasDependentPromiseType</h3>
+      <p>public _Bool hasDependentPromiseType()</p>
+      <p>Defined at line 370 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="C4BFBAEE8A43084DC017ECFD3470BE857D8D91F4">getBody</h3>
+      <p>public Stmt * getBody()</p>
+      <p>Defined at line 376 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the body of the coroutine as written. This will be either a CompoundStmt or a TryStmt.</p>
+        </div>
+      </div>
+      <h3 id="2F8C2DB22952BD48FB8DC1C5B54A72D11091769A">getPromiseDeclStmt</h3>
+      <p>public Stmt * getPromiseDeclStmt()</p>
+      <p>Defined at line 380 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="824D10036D9A33331AE4DD85D57669D5884EA9E6">getPromiseDecl</h3>
+      <p>public VarDecl * getPromiseDecl()</p>
+      <p>Defined at line 383 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="33FC425C1D8D2EF58FC74BC25EE3BC11C9237253">getInitSuspendStmt</h3>
+      <p>public Stmt * getInitSuspendStmt()</p>
+      <p>Defined at line 387 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="C2D556BD79E4C29CD41C74718286A093B5F010B0">getFinalSuspendStmt</h3>
+      <p>public Stmt * getFinalSuspendStmt()</p>
+      <p>Defined at line 390 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="8291B31EE11216E273F3118AF9D4D74659750080">getExceptionHandler</h3>
+      <p>public Stmt * getExceptionHandler()</p>
+      <p>Defined at line 394 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="F2640337F20CFD287AE4782099C5D54F01117B9D">getFallthroughHandler</h3>
+      <p>public Stmt * getFallthroughHandler()</p>
+      <p>Defined at line 397 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="8D3B3C9E2518E095DC3B6F2A92DB68065042A042">getAllocate</h3>
+      <p>public Expr * getAllocate()</p>
+      <p>Defined at line 401 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="FA39FD79283DDA1942DBDF5F1A83ABAAF0E3BB99">getDeallocate</h3>
+      <p>public Expr * getDeallocate()</p>
+      <p>Defined at line 404 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="1198C892628BF823CAC40BCDB475ED063F2A05B7">getReturnValueInit</h3>
+      <p>public Expr * getReturnValueInit()</p>
+      <p>Defined at line 407 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="104B1AFE81864D3FB61ECB03FDDA048096A49AED">getReturnValue</h3>
+      <p>public Expr * getReturnValue()</p>
+      <p>Defined at line 410 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="92F6B3D90F2A82A14E51215B7AC3EA858868BE7A">getReturnStmt</h3>
+      <p>public Stmt * getReturnStmt()</p>
+      <p>Defined at line 415 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="E48F75B30ECD2DBAD29BB1110C52C886478C4E19">getReturnStmtOnAllocFailure</h3>
+      <p>public Stmt * getReturnStmtOnAllocFailure()</p>
+      <p>Defined at line 416 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="F4329F8E33BB4F3B798257825CDE53AC909347C1">getParamMoves</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getParamMoves()
+      </p>
+      <p>Defined at line 419 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="65CE35E2B94170D73074213E7F5E5F81B687A3E2">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 423 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="6AF440644932711292E96A7BC7B88C96F9724B10">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 427 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="DB7AA646185367E6FB3AAE85CFC5EF1D3016CB2E">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 431 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="BE49943696A81136B7B35FE19897F1BEA1D2A036">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 436 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="2831D53432C37123A47C1DCA2A8C57FDB3D078A9">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 442 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B1262B66F47793EE3FB438B14D3F54109FC19774">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#09F7868051A73AA3E129E00E1D8F1FE512695A05">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35E3EC554B907308F47224BC8C028CD46ACF8826">hasDependentPromiseType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4BFBAEE8A43084DC017ECFD3470BE857D8D91F4">getBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F8C2DB22952BD48FB8DC1C5B54A72D11091769A">getPromiseDeclStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#824D10036D9A33331AE4DD85D57669D5884EA9E6">getPromiseDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33FC425C1D8D2EF58FC74BC25EE3BC11C9237253">getInitSuspendStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2D556BD79E4C29CD41C74718286A093B5F010B0">getFinalSuspendStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8291B31EE11216E273F3118AF9D4D74659750080">getExceptionHandler</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2640337F20CFD287AE4782099C5D54F01117B9D">getFallthroughHandler</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D3B3C9E2518E095DC3B6F2A92DB68065042A042">getAllocate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA39FD79283DDA1942DBDF5F1A83ABAAF0E3BB99">getDeallocate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1198C892628BF823CAC40BCDB475ED063F2A05B7">getReturnValueInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#104B1AFE81864D3FB61ECB03FDDA048096A49AED">getReturnValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92F6B3D90F2A82A14E51215B7AC3EA858868BE7A">getReturnStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E48F75B30ECD2DBAD29BB1110C52C886478C4E19">getReturnStmtOnAllocFailure</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4329F8E33BB4F3B798257825CDE53AC909347C1">getParamMoves</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65CE35E2B94170D73074213E7F5E5F81B687A3E2">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AF440644932711292E96A7BC7B88C96F9724B10">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB7AA646185367E6FB3AAE85CFC5EF1D3016CB2E">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE49943696A81136B7B35FE19897F1BEA1D2A036">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2831D53432C37123A47C1DCA2A8C57FDB3D078A9">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

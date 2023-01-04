@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DefaultValue</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DefaultValue</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#395">395</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+    </p>
+    <div>
+      <div>
+        <p> This specialization allows DefaultValue&lt;void&gt;::Get() to compile.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D7A70DA7404C061894B53A625B20BF270A9A1B14">Exists</h3>
+      <p>public _Bool Exists()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#398">398</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <h3 id="117B34C1ED56CBAD20597B28FFFF9BB702BC8512">Get</h3>
+      <p>public void Get()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#399">399</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D7A70DA7404C061894B53A625B20BF270A9A1B14">Exists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#117B34C1ED56CBAD20597B28FFFF9BB702BC8512">Get</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DefaultValue</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DefaultValue</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#287">287</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+    </p>
+    <div>
+      <div>
+        <p> When an unexpected function call is encountered, Google Mock will let it return a default value if the user has specified one for its return type, or if the return type has a built-in default value; otherwise Google Mock won&apos;t know what value to return and will have to abort the process.</p>
+        <p> The DefaultValue&lt;T&gt; class allows a user to specify the default value for a type T that is both copyable and publicly destructible (i.e. anything that can be used as a function return type).  The usage is:</p>
+        <p>   // Sets the default value for type T to be foo.   DefaultValue&lt;T&gt;::Set(foo);</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="40AD1C072E508F2E99AE359163DB6F6E1A415655">Set</h3>
+      <p>public void Set(T x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#291">291</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Sets the default value for type T; requires T to be copy-constructable and have a public destructor.</p>
+        </div>
+      </div>
+      <h3 id="005100B7A21E8C687E553B0F2E9AA136B5074238">SetFactory</h3>
+      <p>public void SetFactory(FactoryFunction factory)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#300">300</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <h3 id="B5CC4C4202F148EA82846CF712F4C2ABCF98EB4B">Clear</h3>
+      <p>public void Clear()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#306">306</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Unsets the default value for type T.</p>
+        </div>
+      </div>
+      <h3 id="ACEF435A052FF1CC26708FE459A898D613441CCD">IsSet</h3>
+      <p>public _Bool IsSet()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#312">312</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the user has set the default value for type T.</p>
+        </div>
+      </div>
+      <h3 id="35DA68148B7836F2FDF7DA142BD24FE2FA81CFF7">Exists</h3>
+      <p>public _Bool Exists()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#316">316</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if T has a default return value set by the user or there exists a built-in default value.</p>
+        </div>
+      </div>
+      <h3 id="D9DD211D1F7D9FD60863305E0B732A5E6D59870E">Get</h3>
+      <p>public T Get()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#323">323</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the default value for type T if the user has set one; otherwise returns the built-in default value. Requires that Exists() is true, which ensures that the return value is well-defined.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#40AD1C072E508F2E99AE359163DB6F6E1A415655">Set</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#005100B7A21E8C687E553B0F2E9AA136B5074238">SetFactory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5CC4C4202F148EA82846CF712F4C2ABCF98EB4B">Clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ACEF435A052FF1CC26708FE459A898D613441CCD">IsSet</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35DA68148B7836F2FDF7DA142BD24FE2FA81CFF7">Exists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9DD211D1F7D9FD60863305E0B732A5E6D59870E">Get</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DefaultValue</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DefaultValue</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#361">361</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+    </p>
+    <div>
+      <div>
+        <p> This partial specialization allows a user to set default values for reference types.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3F87A31EA05C02C1439074659C54BE22D9FBE642">Set</h3>
+      <p>public void Set(T &amp; x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#365">365</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Sets the default value for type T&amp;.</p>
+        </div>
+      </div>
+      <h3 id="CAFCD8A70A0FAAB9B81F8405E6AAA154085525D1">Clear</h3>
+      <p>public void Clear()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#370">370</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Unsets the default value for type T&amp;.</p>
+        </div>
+      </div>
+      <h3 id="4A9B0F6C8C36D64A3A2495F19817DD50B88E02ED">IsSet</h3>
+      <p>public _Bool IsSet()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#373">373</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the user has set the default value for type T&amp;.</p>
+        </div>
+      </div>
+      <h3 id="5595912221D71FDF2574B9D933A9A5AD698F9823">Exists</h3>
+      <p>public _Bool Exists()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#377">377</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if T has a default return value set by the user or there exists a built-in default value.</p>
+        </div>
+      </div>
+      <h3 id="8BDFC8EDB89BCB10900422AAC4133FADCC1350D6">Get</h3>
+      <p>public T &amp; Get()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#384">384</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the default value for type T&amp; if the user has set one; otherwise returns the built-in default value if there is one; otherwise aborts the process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3F87A31EA05C02C1439074659C54BE22D9FBE642">Set</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CAFCD8A70A0FAAB9B81F8405E6AAA154085525D1">Clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A9B0F6C8C36D64A3A2495F19817DD50B88E02ED">IsSet</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5595912221D71FDF2574B9D933A9A5AD698F9823">Exists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8BDFC8EDB89BCB10900422AAC4133FADCC1350D6">Get</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

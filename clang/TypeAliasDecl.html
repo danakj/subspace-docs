@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TypeAliasDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TypeAliasDecl</h1>
+    <p>Defined at line 3401 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    <div>
+      <div>
+        <p> Represents the declaration of a typedef-name via a C++11 alias-declaration.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TypedefNameDecl.html">TypedefNameDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B1D1DD5070A63CE5D23574C66AE9C4CE79C07FD8">Create</h3>
+      <p>
+        public TypeAliasDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, IdentifierInfo * Id, TypeSourceInfo * TInfo)
+      </p>
+      <h3 id="6665898DAFE71EF251527A1454B3E947378E6125">CreateDeserialized</h3>
+      <p>public TypeAliasDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="67FA7CCE27409240DBAAE436C26852065543C3A5">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <h3 id="0832D4F2C2D670AB57EBA6671FBD67D9545F39C0">getDescribedAliasTemplate</h3>
+      <p>public TypeAliasTemplateDecl * getDescribedAliasTemplate()</p>
+      <p>Defined at line 3418 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="F806D321021AD7C22C7CBB84DCAAD6385DB365B7">setDescribedAliasTemplate</h3>
+      <p>public void setDescribedAliasTemplate(TypeAliasTemplateDecl * TAT)</p>
+      <p>Defined at line 3419 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="B84E17A60ED2A24CE2E56DCDE22F57948249B022">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3422 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="4454B82D95A7AE7F03307A46549BCE90DDC967DC">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3423 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B1D1DD5070A63CE5D23574C66AE9C4CE79C07FD8">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6665898DAFE71EF251527A1454B3E947378E6125">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67FA7CCE27409240DBAAE436C26852065543C3A5">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0832D4F2C2D670AB57EBA6671FBD67D9545F39C0">getDescribedAliasTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F806D321021AD7C22C7CBB84DCAAD6385DB365B7">setDescribedAliasTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B84E17A60ED2A24CE2E56DCDE22F57948249B022">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4454B82D95A7AE7F03307A46549BCE90DDC967DC">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

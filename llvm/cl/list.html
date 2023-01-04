@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class list</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class list</h1>
+    <p>Defined at line 1646 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <div>
+      <div>
+        <p>===----------------------------------------------------------------------===// A list of command line options.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Option.html">Option</a>
+      , list_storage&lt;DataType, StorageClass&gt;
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public std::function&lt;void (const typename ParserClass::parser_data_type &amp;)&gt; Callback</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="EFFDFE2645EF5AC8222ECEF765D912D7048D1722">list&lt;DataType, StorageClass, ParserClass&gt;</h3>
+      <p>public void list&lt;DataType, StorageClass, ParserClass&gt;(const list&lt;DataType, StorageClass, ParserClass&gt; &amp; )</p>
+      <p>Defined at line 1702 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Command line options should not be copyable</p>
+        </div>
+      </div>
+      <h3 id="158CFB36BCE0557AA3A75D1FE91084614B160A5A">operator=</h3>
+      <p>public list&lt;DataType, StorageClass, ParserClass&gt; &amp; operator=(const list&lt;DataType, StorageClass, ParserClass&gt; &amp; )</p>
+      <p>Defined at line 1703 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="F1E1841B97370B923BE0CC8D1E10B743106AA336">getParser</h3>
+      <p>public ParserClass &amp; getParser()</p>
+      <p>Defined at line 1705 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="7C4766C483354905977D3435BE180091D2AE00BF">getPosition</h3>
+      <p>public unsigned int getPosition(unsigned int optnum)</p>
+      <p>Defined at line 1707 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="2041FA5476DC551682FA407085F0ABC2F55431DC">clear</h3>
+      <p>public void clear()</p>
+      <p>Defined at line 1712 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="6A97775C0870199D1E6A7FF6DCB72F355E817284">setInitialValues</h3>
+      <p>public void setInitialValues(ArrayRef&lt;DataType&gt; Vs)</p>
+      <p>Defined at line 1718 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> setInitialValues - Used by the cl::list_init modifier...</p>
+        </div>
+      </div>
+      <h3 id="D7994E23F9303A52402720C70C80DBE171075D38">setNumAdditionalVals</h3>
+      <p>public void setNumAdditionalVals(unsigned int n)</p>
+      <p>Defined at line 1726 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="A4D92FBEAAC2D554F3C8AAE6FB45BBAB169B808B">list&lt;DataType, StorageClass, ParserClass&gt;</h3>
+      <p>public void list&lt;DataType, StorageClass, ParserClass&gt;(const Mods &amp;... Ms)</p>
+      <p>Defined at line 1729 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="65F340DFDE38B7D06552B4DD4A21C5DDD772DC26">setCallback</h3>
+      <p>public void setCallback(std::function&lt;void (const typename ParserClass::parser_data_type &amp;)&gt; CB)</p>
+      <p>Defined at line 1735 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#EFFDFE2645EF5AC8222ECEF765D912D7048D1722">list&lt;DataType, StorageClass, ParserClass&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#158CFB36BCE0557AA3A75D1FE91084614B160A5A">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1E1841B97370B923BE0CC8D1E10B743106AA336">getParser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C4766C483354905977D3435BE180091D2AE00BF">getPosition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2041FA5476DC551682FA407085F0ABC2F55431DC">clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A97775C0870199D1E6A7FF6DCB72F355E817284">setInitialValues</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7994E23F9303A52402720C70C80DBE171075D38">setNumAdditionalVals</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4D92FBEAAC2D554F3C8AAE6FB45BBAB169B808B">list&lt;DataType, StorageClass, ParserClass&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65F340DFDE38B7D06552B4DD4A21C5DDD772DC26">setCallback</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

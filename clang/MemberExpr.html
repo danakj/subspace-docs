@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MemberExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MemberExpr</h1>
+    <p>Defined at line 3170 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> MemberExpr - [C99 6.5.2.3] Structure and Union Members.  X-&gt;F and X.F.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;MemberExpr, MemberExprNameQualifier, ASTTemplateKWAndArgsInfo, TemplateArgumentLoc&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D6E5AB4D96ED357FA57F363B2E016649B2CF033A">Create</h3>
+      <p>
+        public MemberExpr * Create(const ASTContext &amp; C, Expr * Base, _Bool IsArrow, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         OperatorLoc, 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         QualifierLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TemplateKWLoc, ValueDecl * MemberDecl, 
+        <a href="DeclAccessPair.html">DeclAccessPair</a>
+         FoundDecl, 
+        <a href="DeclarationNameInfo.html">DeclarationNameInfo</a>
+         MemberNameInfo, const TemplateArgumentListInfo * TemplateArgs, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="NonOdrUseReason.html">NonOdrUseReason</a>
+         NOUR)
+      </p>
+      <h3 id="AE95579E4D695AEE85DE6151D3E5E1E07460C44D">CreateImplicit</h3>
+      <p>
+        public MemberExpr * CreateImplicit(const ASTContext &amp; C, Expr * Base, _Bool IsArrow, ValueDecl * MemberDecl, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK)
+      </p>
+      <p>Defined at line 3231 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Create an implicit MemberExpr, with no location, qualifier, template arguments, and so on. Suitable only for non-static member access.</p>
+        </div>
+      </div>
+      <h3 id="119AF075CB0E5AEC5A945D1F09BF46BBB10F82B3">CreateEmpty</h3>
+      <p>public MemberExpr * CreateEmpty(const ASTContext &amp; Context, _Bool HasQualifier, _Bool HasFoundDecl, _Bool HasTemplateKWAndArgsInfo, unsigned int NumTemplateArgs)</p>
+      <h3 id="104793DF7C91D735F818A160A8DA844DE8949437">setBase</h3>
+      <p>public void setBase(Expr * E)</p>
+      <p>Defined at line 3246 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E26938C375BA002959F613C165FB8A678C6E6BCD">getBase</h3>
+      <p>public Expr * getBase()</p>
+      <p>Defined at line 3247 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="28FAA1DC2988E27A2AB41B87901082C7121DD685">getMemberDecl</h3>
+      <p>public ValueDecl * getMemberDecl()</p>
+      <p>Defined at line 3253 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the member declaration to which this expression refers.</p>
+          <p> The returned declaration will be a FieldDecl or (in C++) a VarDecl (for static data members), a CXXMethodDecl, or an EnumConstantDecl.</p>
+        </div>
+      </div>
+      <h3 id="6D561C32A22A9FEA9126797CD641841BB7531559">setMemberDecl</h3>
+      <p>public void setMemberDecl(ValueDecl * D)</p>
+      <h3 id="B7E76E946733E0BAF13D78C4FA9B18F818D05779">getFoundDecl</h3>
+      <p>
+        public 
+        <a href="DeclAccessPair.html">DeclAccessPair</a>
+         getFoundDecl()
+      </p>
+      <p>Defined at line 3257 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieves the declaration found by lookup.</p>
+        </div>
+      </div>
+      <h3 id="E77B853D8EA5E253C21FAC0C5F4D7D562C4B8641">hasQualifier</h3>
+      <p>public _Bool hasQualifier()</p>
+      <p>Defined at line 3267 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Determines whether this member expression actually had a C++ nested-name-specifier prior to the name of the member, e.g., x-&gt;Base::foo.</p>
+        </div>
+      </div>
+      <h3 id="D986EF46B387A5446DF03A6DC7328843E81D58D7">getQualifierLoc</h3>
+      <p>
+        public 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         getQualifierLoc()
+      </p>
+      <p>Defined at line 3272 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> If the member name was qualified, retrieves the nested-name-specifier that precedes the member name, with source-location information.</p>
+        </div>
+      </div>
+      <h3 id="AEE51E1FDB253BF22203EB2FAC1653741C800520">getQualifier</h3>
+      <p>public NestedNameSpecifier * getQualifier()</p>
+      <p>Defined at line 3281 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> If the member name was qualified, retrieves the nested-name-specifier that precedes the member name. Otherwise, returns NULL.</p>
+        </div>
+      </div>
+      <h3 id="383C042D30A26E50E126334154993C52F43DF8DF">getTemplateKeywordLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTemplateKeywordLoc()
+      </p>
+      <p>Defined at line 3287 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the template keyword preceding the member name, if any.</p>
+        </div>
+      </div>
+      <h3 id="6DFA1878DDF320F765DA10DB9ED48A2E2FED6756">getLAngleLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLAngleLoc()
+      </p>
+      <p>Defined at line 3295 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the left angle bracket starting the explicit template argument list following the member name, if any.</p>
+        </div>
+      </div>
+      <h3 id="B0A38B06C78221D5277EC31277C2889480AE748E">getRAngleLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRAngleLoc()
+      </p>
+      <p>Defined at line 3303 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the right angle bracket ending the explicit template argument list following the member name, if any.</p>
+        </div>
+      </div>
+      <h3 id="3F408F58C28DF03440891341D7D9B92514119EF9">hasTemplateKeyword</h3>
+      <p>public _Bool hasTemplateKeyword()</p>
+      <p>Defined at line 3310 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Determines whether the member name was preceded by the template keyword.</p>
+        </div>
+      </div>
+      <h3 id="AAC08E6F83100770FFA72F191169A3B431F0AA0F">hasExplicitTemplateArgs</h3>
+      <p>public _Bool hasExplicitTemplateArgs()</p>
+      <p>Defined at line 3314 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Determines whether the member name was followed by an explicit template argument list.</p>
+        </div>
+      </div>
+      <h3 id="8D83B2380A89F0FCB6C2A466DE01C61B87E4AAAD">copyTemplateArgumentsInto</h3>
+      <p>public void copyTemplateArgumentsInto(TemplateArgumentListInfo &amp; List)</p>
+      <p>Defined at line 3318 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Copies the template arguments (if present) into the given structure.</p>
+        </div>
+      </div>
+      <h3 id="929B96F06FFEF2CA374FE16CD73D0D147B35F187">getTemplateArgs</h3>
+      <p>public const TemplateArgumentLoc * getTemplateArgs()</p>
+      <p>Defined at line 3326 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the template arguments provided as part of this template-id.</p>
+        </div>
+      </div>
+      <h3 id="30C232D2D2F090C44C7A16E744E059F37EFB73B6">getNumTemplateArgs</h3>
+      <p>public unsigned int getNumTemplateArgs()</p>
+      <p>Defined at line 3335 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the number of template arguments provided as part of this template-id.</p>
+        </div>
+      </div>
+      <h3 id="063B502C2D5933D0F7544D3C4D1622C0CDE2CBB8">template_arguments</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         template_arguments()
+      </p>
+      <p>Defined at line 3342 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="638AFB48811C38F9C05EB60369DFD869FF6DD633">getMemberNameInfo</h3>
+      <p>
+        public 
+        <a href="DeclarationNameInfo.html">DeclarationNameInfo</a>
+         getMemberNameInfo()
+      </p>
+      <p>Defined at line 3347 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the member declaration name info.</p>
+        </div>
+      </div>
+      <h3 id="85E90D9FF64DDDFE89C18D0D4817DD916A6513F4">getOperatorLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getOperatorLoc()
+      </p>
+      <p>Defined at line 3352 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A74A8E2AF71E84984770BCB36B93360E5869CEC5">isArrow</h3>
+      <p>public _Bool isArrow()</p>
+      <p>Defined at line 3354 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2D15BB8C286C0FE34F4B65B3D3A5DB25850C56CB">setArrow</h3>
+      <p>public void setArrow(_Bool A)</p>
+      <p>Defined at line 3355 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="830884DC19986F085B6C0D357DDD680EAC22AEDD">getMemberLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getMemberLoc()
+      </p>
+      <p>Defined at line 3359 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getMemberLoc - Return the location of the &quot;member&quot;, in X-&gt;F, it is the location of &apos;F&apos;.</p>
+        </div>
+      </div>
+      <h3 id="0EDF7AC6E202B57637CC42884A51C12D4176C0E9">setMemberLoc</h3>
+      <p>
+        public void setMemberLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 3360 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="F18D8D909178B51D6E25A32FA808BF56E6C200AE">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <h3 id="DE917E521E658E3FCAADF64A72FF85DCE5A9CEB3">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <h3 id="552694B171AD9CCDA1163F8BE3ABFC5400116605">getExprLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExprLoc()
+      </p>
+      <p>Defined at line 3365 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="AB28B9D8CE8774A0E27B3C1B4C75EB226CE9DBEF">isImplicitAccess</h3>
+      <p>public _Bool isImplicitAccess()</p>
+      <p>Defined at line 3368 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Determine whether the base of this explicit is implicit.</p>
+        </div>
+      </div>
+      <h3 id="24B205F52374E7EB96DCADBC041212890C089921">hadMultipleCandidates</h3>
+      <p>public _Bool hadMultipleCandidates()</p>
+      <p>Defined at line 3374 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Returns true if this member expression refers to a method that was resolved from an overloaded set having size greater than 1.</p>
+        </div>
+      </div>
+      <h3 id="7A473893A9501598F83D71F9019AEBBFB9BAD669">setHadMultipleCandidates</h3>
+      <p>public void setHadMultipleCandidates(_Bool V)</p>
+      <p>Defined at line 3380 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Sets the flag telling whether this expression refers to a method that was resolved from an overloaded set having size greater than 1.</p>
+        </div>
+      </div>
+      <h3 id="7E7AF4B62EFBD298C5C489ADBA78DB4F0DFD7EE7">performsVirtualDispatch</h3>
+      <p>public _Bool performsVirtualDispatch(const LangOptions &amp; LO)</p>
+      <p>Defined at line 3388 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Returns true if virtual dispatch is performed. If the member access is fully qualified, (i.e. X::f()), virtual dispatching is not performed. In -fapple-kext mode qualified calls to virtual method will still go through the vtable.</p>
+        </div>
+      </div>
+      <h3 id="9EADA08D31086172F5EEFFAD4369CBEAABA5851F">isNonOdrUse</h3>
+      <p>
+        public 
+        <a href="NonOdrUseReason.html">NonOdrUseReason</a>
+         isNonOdrUse()
+      </p>
+      <p>Defined at line 3394 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Is this expression a non-odr-use reference, and if so, why? This is only meaningful if the named member is a static member.</p>
+        </div>
+      </div>
+      <h3 id="7FDB041C31C14D23A1D8E339A097B102195650E3">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 3398 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B0B419EF0F38DEEE0D39288B76A1B75962C4E887">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3403 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="A4E8D563E09A1F2C111AE7C1137B6D22FA242A0E">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3404 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D6E5AB4D96ED357FA57F363B2E016649B2CF033A">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE95579E4D695AEE85DE6151D3E5E1E07460C44D">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#119AF075CB0E5AEC5A945D1F09BF46BBB10F82B3">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#104793DF7C91D735F818A160A8DA844DE8949437">setBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E26938C375BA002959F613C165FB8A678C6E6BCD">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28FAA1DC2988E27A2AB41B87901082C7121DD685">getMemberDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D561C32A22A9FEA9126797CD641841BB7531559">setMemberDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7E76E946733E0BAF13D78C4FA9B18F818D05779">getFoundDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E77B853D8EA5E253C21FAC0C5F4D7D562C4B8641">hasQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D986EF46B387A5446DF03A6DC7328843E81D58D7">getQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AEE51E1FDB253BF22203EB2FAC1653741C800520">getQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#383C042D30A26E50E126334154993C52F43DF8DF">getTemplateKeywordLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DFA1878DDF320F765DA10DB9ED48A2E2FED6756">getLAngleLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0A38B06C78221D5277EC31277C2889480AE748E">getRAngleLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F408F58C28DF03440891341D7D9B92514119EF9">hasTemplateKeyword</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AAC08E6F83100770FFA72F191169A3B431F0AA0F">hasExplicitTemplateArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D83B2380A89F0FCB6C2A466DE01C61B87E4AAAD">copyTemplateArgumentsInto</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#929B96F06FFEF2CA374FE16CD73D0D147B35F187">getTemplateArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30C232D2D2F090C44C7A16E744E059F37EFB73B6">getNumTemplateArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#063B502C2D5933D0F7544D3C4D1622C0CDE2CBB8">template_arguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#638AFB48811C38F9C05EB60369DFD869FF6DD633">getMemberNameInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85E90D9FF64DDDFE89C18D0D4817DD916A6513F4">getOperatorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A74A8E2AF71E84984770BCB36B93360E5869CEC5">isArrow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D15BB8C286C0FE34F4B65B3D3A5DB25850C56CB">setArrow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#830884DC19986F085B6C0D357DDD680EAC22AEDD">getMemberLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EDF7AC6E202B57637CC42884A51C12D4176C0E9">setMemberLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F18D8D909178B51D6E25A32FA808BF56E6C200AE">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE917E521E658E3FCAADF64A72FF85DCE5A9CEB3">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#552694B171AD9CCDA1163F8BE3ABFC5400116605">getExprLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB28B9D8CE8774A0E27B3C1B4C75EB226CE9DBEF">isImplicitAccess</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24B205F52374E7EB96DCADBC041212890C089921">hadMultipleCandidates</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A473893A9501598F83D71F9019AEBBFB9BAD669">setHadMultipleCandidates</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E7AF4B62EFBD298C5C489ADBA78DB4F0DFD7EE7">performsVirtualDispatch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EADA08D31086172F5EEFFAD4369CBEAABA5851F">isNonOdrUse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FDB041C31C14D23A1D8E339A097B102195650E3">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0B419EF0F38DEEE0D39288B76A1B75962C4E887">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4E8D563E09A1F2C111AE7C1137B6D22FA242A0E">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

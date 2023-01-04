@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class BinaryOperator</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class BinaryOperator</h1>
+    <p>Defined at line 3813 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> A builtin binary operation expression such as &quot;x + y&quot; or &quot;x &lt;= y&quot;.</p>
+        <p> This expression node kind describes a builtin binary operation, such as &quot;x + y&quot; for integer values &quot;x&quot; and &quot;y&quot;. The operands will already have been converted to appropriate types (e.g., by performing promotions or conversions).</p>
+        <p> In C++, where operators may be overloaded, a different kind of expression node (CXXOperatorCallExpr) is used to express the invocation of an overloaded operator with operator syntax. Within a C++ template, whether BinaryOperator or CXXOperatorCallExpr is used to store an expression &quot;x + y&quot; depends on the subexpressions for x and y. If neither x or y is type-dependent, and the &quot;+&quot; operator resolves to a built-in operation, BinaryOperator will be used to express the computation (x and y may still be value-dependent). If either x or y is type-dependent, or if the &quot;+&quot; resolves to an overloaded operator, CXXOperatorCallExpr will be used to express the computation.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="02A672976F70A93A69CF8F0E86BEEE150AB5CAAD">offsetOfTrailingStorage</h3>
+      <p>protected size_t offsetOfTrailingStorage()</p>
+      <p>Defined at line 4105 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="4261C78460ECE3C36B23D1740506123480FC3CE4">getTrailingFPFeatures</h3>
+      <p>protected FPOptionsOverride * getTrailingFPFeatures()</p>
+      <p>Defined at line 3824 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Return a pointer to the trailing FPOptions</p>
+        </div>
+      </div>
+      <h3 id="1ACD98B14558B046F3F9B746EEBEE166D6B241A8">getTrailingFPFeatures</h3>
+      <p>protected const FPOptionsOverride * getTrailingFPFeatures()</p>
+      <p>Defined at line 3829 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E4BA25885AB03F76BCA32039FCFF3D0FE51CC986">BinaryOperator</h3>
+      <p>
+        protected void BinaryOperator(const ASTContext &amp; Ctx, Expr * lhs, Expr * rhs, 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         opc, 
+        <a href="QualType.html">QualType</a>
+         ResTy, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         opLoc, 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         FPFeatures)
+      </p>
+      <div>
+        <div>
+          <p> Build a binary operator, assuming that appropriate storage has been allocated for the trailing objects when needed.</p>
+        </div>
+      </div>
+      <h3 id="CEC2510DE5FAA865BDB1805110A5D453421B6777">BinaryOperator</h3>
+      <p>
+        protected void BinaryOperator(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 3842 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Construct an empty binary operator.</p>
+        </div>
+      </div>
+      <h3 id="4FC574F359BD6D22EEE7D09DD3049E55403A3797">CreateEmpty</h3>
+      <p>public BinaryOperator * CreateEmpty(const ASTContext &amp; C, _Bool hasFPFeatures)</p>
+      <h3 id="0716DD02D73A2AAD5523779AF349AE151CCFEC98">Create</h3>
+      <p>
+        public BinaryOperator * Create(const ASTContext &amp; C, Expr * lhs, Expr * rhs, 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         opc, 
+        <a href="QualType.html">QualType</a>
+         ResTy, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         opLoc, 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         FPFeatures)
+      </p>
+      <h3 id="2C2C9AF62FDEECEF94FFC5110139E937870E25B4">getExprLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExprLoc()
+      </p>
+      <p>Defined at line 3853 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="706FD8D3B4C69CC1DE1871E0FFE9D945721D0164">getOperatorLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getOperatorLoc()
+      </p>
+      <p>Defined at line 3854 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="3FCCC4C76802442DF51AF42F06E6330B662E7BD3">setOperatorLoc</h3>
+      <p>
+        public void setOperatorLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 3855 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="71A196BE5D93E63A267A22F95C615EE222DB527E">getOpcode</h3>
+      <p>
+        public 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         getOpcode()
+      </p>
+      <p>Defined at line 3857 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="4DB3D6DFD59446B352BCEFDF285C2C774DC447BF">setOpcode</h3>
+      <p>
+        public void setOpcode(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3860 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="96B6FCC17CEBD0861B694168A257D4B5ED430BE3">getLHS</h3>
+      <p>public Expr * getLHS()</p>
+      <p>Defined at line 3862 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="CB5AE8D0C6CED38E3297AF416DDAFBA0EF703354">setLHS</h3>
+      <p>public void setLHS(Expr * E)</p>
+      <p>Defined at line 3863 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="EF43D8F327ADAEA74929F5A4F44E04A7E8B67BF6">getRHS</h3>
+      <p>public Expr * getRHS()</p>
+      <p>Defined at line 3864 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="ED1EB4D501D7FE53AB037DCF786EEA5866DBE7BB">setRHS</h3>
+      <p>public void setRHS(Expr * E)</p>
+      <p>Defined at line 3865 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A8F17DB157071CBCCF3BA9B78D03A0DA338AB8D7">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 3867 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="1895EA6F7C7C1F727EF6DF831F5B107260C097E1">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 3870 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0B129A53B00EC867016D269272D7DAC1E59E1FE8">getOpcodeStr</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getOpcodeStr(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Op)
+      </p>
+      <div>
+        <div>
+          <p> getOpcodeStr - Turn an Opcode enum value into the punctuation char it corresponds to, e.g. &quot;&lt;&lt;=&quot;.</p>
+        </div>
+      </div>
+      <h3 id="3EC48884FE881A8DDC5EFE8996CF5E08401F12E2">getOpcodeStr</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getOpcodeStr()
+      </p>
+      <p>Defined at line 3878 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="BF421B49115332876DC93BF403BDFAC23944F9D5">getOverloadedOpcode</h3>
+      <p>
+        public 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         getOverloadedOpcode(
+        <a href="OverloadedOperatorKind.html">OverloadedOperatorKind</a>
+         OO)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the binary opcode that corresponds to the given overloaded operator.</p>
+        </div>
+      </div>
+      <h3 id="407390D9CCE2642BA99048222DC4B507FB8852FA">getOverloadedOperator</h3>
+      <p>
+        public 
+        <a href="OverloadedOperatorKind.html">OverloadedOperatorKind</a>
+         getOverloadedOperator(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the overloaded operator kind that corresponds to the given binary opcode.</p>
+        </div>
+      </div>
+      <h3 id="EDC383DF77EE2649D50B110AF4128DC265D9BAC3">isPtrMemOp</h3>
+      <p>
+        public _Bool isPtrMemOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3889 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> predicates to categorize the respective opcodes.</p>
+        </div>
+      </div>
+      <h3 id="F554FCD19BE907123761A839E8DC560117EFC862">isPtrMemOp</h3>
+      <p>public _Bool isPtrMemOp()</p>
+      <p>Defined at line 3892 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="170E6B666FD8D3CBB6040BBFED1D2FA87D4490FC">isMultiplicativeOp</h3>
+      <p>
+        public _Bool isMultiplicativeOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3894 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="58A38812322E62D6FF2B25767C78AE99F68EF310">isMultiplicativeOp</h3>
+      <p>public _Bool isMultiplicativeOp()</p>
+      <p>Defined at line 3897 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C0056619E2E4DB10B3717BEAC740A949307BD409">isAdditiveOp</h3>
+      <p>
+        public _Bool isAdditiveOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3898 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2F7FBBC210D7D6F72C57E69B5724E35B47AB5AC8">isAdditiveOp</h3>
+      <p>public _Bool isAdditiveOp()</p>
+      <p>Defined at line 3899 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8E049DAF38E5CC2910FFBCC605661593A999965C">isShiftOp</h3>
+      <p>
+        public _Bool isShiftOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3900 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="88D7CB3DBEFFF982EDF9607064A2642065E567C1">isShiftOp</h3>
+      <p>public _Bool isShiftOp()</p>
+      <p>Defined at line 3901 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="867A7071A3F9C2C20F3FAFEAE448795ADD67747E">isBitwiseOp</h3>
+      <p>
+        public _Bool isBitwiseOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3903 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7DA0EF64BE27C5894ED42974263E3CC32BB5BE39">isBitwiseOp</h3>
+      <p>public _Bool isBitwiseOp()</p>
+      <p>Defined at line 3904 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D8FF90F04FFCCD7AA4DABF824FB14C02989C2550">isRelationalOp</h3>
+      <p>
+        public _Bool isRelationalOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3906 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="118E0F56A387F932E6188069FAC98295B5794158">isRelationalOp</h3>
+      <p>public _Bool isRelationalOp()</p>
+      <p>Defined at line 3907 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="BD7C4E503B6697A229970BA54C5E045B69A47AE2">isEqualityOp</h3>
+      <p>
+        public _Bool isEqualityOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3909 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8DEF7D58EB380BDB4492B3B37E4B7C67B02351FC">isEqualityOp</h3>
+      <p>public _Bool isEqualityOp()</p>
+      <p>Defined at line 3910 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="39B1C32DDE85D73D59EC2C597BC7E9B0F89C6DF6">isComparisonOp</h3>
+      <p>
+        public _Bool isComparisonOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3912 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2F7245015CDB268EE768DCA068EA5D6AA3A2B2FB">isComparisonOp</h3>
+      <p>public _Bool isComparisonOp()</p>
+      <p>Defined at line 3913 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="765E597C263ABB84AE31C7D591CC4648CD29DE69">isCommaOp</h3>
+      <p>
+        public _Bool isCommaOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3915 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="31448D01036215A95AE41399960B693377F037D5">isCommaOp</h3>
+      <p>public _Bool isCommaOp()</p>
+      <p>Defined at line 3916 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2E866696F79FE04F82B7B3AB1EA9E63E72B86E8C">negateComparisonOp</h3>
+      <p>
+        public 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         negateComparisonOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3918 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9BC48824E33B2151BF37443DA56C84DB9CA8EF2D">reverseComparisonOp</h3>
+      <p>
+        public 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         reverseComparisonOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3931 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="96C67DD909CD6A3F504C81CB8320CF5FD9D13565">isLogicalOp</h3>
+      <p>
+        public _Bool isLogicalOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3945 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="822A1E0D5A3BB2811F2205F01E4AE2D7236028DC">isLogicalOp</h3>
+      <p>public _Bool isLogicalOp()</p>
+      <p>Defined at line 3946 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="33A2E4003AA2D81A9F103BF82F599FC13778BC16">isAssignmentOp</h3>
+      <p>
+        public _Bool isAssignmentOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3948 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="535B7E207823BCEA0D59B998DFD8F55B7DB2600D">isAssignmentOp</h3>
+      <p>public _Bool isAssignmentOp()</p>
+      <p>Defined at line 3951 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7980A5318B249C47947C2A88E434584B36FD1C0B">isCompoundAssignmentOp</h3>
+      <p>
+        public _Bool isCompoundAssignmentOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3953 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="850D9FB0A8CCD23715E7155FB83715499179AFE4">isCompoundAssignmentOp</h3>
+      <p>public _Bool isCompoundAssignmentOp()</p>
+      <p>Defined at line 3956 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0F3923ADC7E6F698236194D7750F8892082484C1">getOpForCompoundAssignment</h3>
+      <p>
+        public 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         getOpForCompoundAssignment(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3959 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="01D57679A5456741E87E35A342F0BE1CB89416BD">isShiftAssignOp</h3>
+      <p>
+        public _Bool isShiftAssignOp(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 3967 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D11784D8CF96CB8EF021813430BAD296950AA6DD">isShiftAssignOp</h3>
+      <p>public _Bool isShiftAssignOp()</p>
+      <p>Defined at line 3970 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7EB96E3CCEB308333138BFCAD058EC304C428190">isNullPointerArithmeticExtension</h3>
+      <p>
+        public _Bool isNullPointerArithmeticExtension(ASTContext &amp; Ctx, 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opc, Expr * LHS, Expr * RHS)
+      </p>
+      <div>
+        <div>
+          <p> Return true if a binary operator using the specified opcode and operands would match the &apos;p = (i8*)nullptr + n&apos; idiom for casting a pointer-sized integer to a pointer.</p>
+        </div>
+      </div>
+      <h3 id="37F9DE89F0774CE8406E6779646EB239EB7F2DF7">classof</h3>
+      <p>public _Bool classof(const Stmt * S)</p>
+      <p>Defined at line 3980 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="77AF061965E9ED86D6893E0DF8938F1DA60CEADF">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3986 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="47AA1D6EE65B892DA5F6C8E8B650DC163C5BCE3E">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3989 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="6D099F689EA7011CEE215C7FB16423BD2A5A3779">setHasStoredFPFeatures</h3>
+      <p>public void setHasStoredFPFeatures(_Bool B)</p>
+      <p>Defined at line 3995 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Set and fetch the bit that shows whether FPFeatures needs to be allocated in Trailing Storage</p>
+        </div>
+      </div>
+      <h3 id="1852493741BA846EFFCDB8645325CB822DB0B56C">hasStoredFPFeatures</h3>
+      <p>public _Bool hasStoredFPFeatures()</p>
+      <p>Defined at line 3996 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2510A75ECAB23BF2B2BAF808D3EE68D5895D2B6D">getStoredFPFeatures</h3>
+      <p>
+        public 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         getStoredFPFeatures()
+      </p>
+      <p>Defined at line 3999 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get FPFeatures from trailing storage</p>
+        </div>
+      </div>
+      <h3 id="C3732E4A7C9BA8BCDBC27BDCE131D8DBF466EE89">setStoredFPFeatures</h3>
+      <p>
+        public void setStoredFPFeatures(
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         F)
+      </p>
+      <p>Defined at line 4004 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Set FPFeatures in trailing storage, used only by Serialization</p>
+        </div>
+      </div>
+      <h3 id="FF596161D79A48CA9B265D196E03C0B5CE253524">getFPFeaturesInEffect</h3>
+      <p>
+        public 
+        <a href="FPOptions.html">FPOptions</a>
+         getFPFeaturesInEffect(const LangOptions &amp; LO)
+      </p>
+      <p>Defined at line 4011 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the FP features status of this operator. Only meaningful for operations on floating point types.</p>
+        </div>
+      </div>
+      <h3 id="9C74AA7ECD44F32358F9B17615FE502982437170">getFPFeatures</h3>
+      <p>
+        public 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         getFPFeatures()
+      </p>
+      <p>Defined at line 4018 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> This is used in ASTImporter</p>
+        </div>
+      </div>
+      <h3 id="C3FB67F258524978EB95C8028BDF6F5D55916804">isFPContractableWithinStatement</h3>
+      <p>public _Bool isFPContractableWithinStatement(const LangOptions &amp; LO)</p>
+      <p>Defined at line 4026 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the FP contractability status of this operator. Only meaningful for operations on floating point types.</p>
+        </div>
+      </div>
+      <h3 id="92446CC099450C38285D82D26B2F7426A824D436">isFEnvAccessOn</h3>
+      <p>public _Bool isFEnvAccessOn(const LangOptions &amp; LO)</p>
+      <p>Defined at line 4032 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the FENV_ACCESS status of this operator. Only meaningful for operations on floating point types.</p>
+        </div>
+      </div>
+      <h3 id="714F2F83776A8AA1AFF4A99ED8C32DB63F86AFA0">BinaryOperator</h3>
+      <p>
+        protected void BinaryOperator(const ASTContext &amp; Ctx, Expr * lhs, Expr * rhs, 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         opc, 
+        <a href="QualType.html">QualType</a>
+         ResTy, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         opLoc, 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         FPFeatures, _Bool dead2)
+      </p>
+      <h3 id="6E90A99B32918FA076958AFF225276CC5FA67768">BinaryOperator</h3>
+      <p>
+        protected void BinaryOperator(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 4043 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Construct an empty BinaryOperator, SC is CompoundAssignOperator.</p>
+        </div>
+      </div>
+      <h3 id="EB096E45DDF2F21EE957193274AA2B56FEE61486">sizeOfTrailingObjects</h3>
+      <p>protected unsigned int sizeOfTrailingObjects(_Bool HasFPFeatures)</p>
+      <p>Defined at line 4049 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Return the size in bytes needed for the trailing objects. Used to allocate the right amount of storage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#02A672976F70A93A69CF8F0E86BEEE150AB5CAAD">offsetOfTrailingStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4261C78460ECE3C36B23D1740506123480FC3CE4">getTrailingFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1ACD98B14558B046F3F9B746EEBEE166D6B241A8">getTrailingFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E4BA25885AB03F76BCA32039FCFF3D0FE51CC986">BinaryOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CEC2510DE5FAA865BDB1805110A5D453421B6777">BinaryOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FC574F359BD6D22EEE7D09DD3049E55403A3797">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0716DD02D73A2AAD5523779AF349AE151CCFEC98">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2C2C9AF62FDEECEF94FFC5110139E937870E25B4">getExprLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#706FD8D3B4C69CC1DE1871E0FFE9D945721D0164">getOperatorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3FCCC4C76802442DF51AF42F06E6330B662E7BD3">setOperatorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71A196BE5D93E63A267A22F95C615EE222DB527E">getOpcode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DB3D6DFD59446B352BCEFDF285C2C774DC447BF">setOpcode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96B6FCC17CEBD0861B694168A257D4B5ED430BE3">getLHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB5AE8D0C6CED38E3297AF416DDAFBA0EF703354">setLHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF43D8F327ADAEA74929F5A4F44E04A7E8B67BF6">getRHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED1EB4D501D7FE53AB037DCF786EEA5866DBE7BB">setRHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8F17DB157071CBCCF3BA9B78D03A0DA338AB8D7">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1895EA6F7C7C1F727EF6DF831F5B107260C097E1">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B129A53B00EC867016D269272D7DAC1E59E1FE8">getOpcodeStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EC48884FE881A8DDC5EFE8996CF5E08401F12E2">getOpcodeStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF421B49115332876DC93BF403BDFAC23944F9D5">getOverloadedOpcode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#407390D9CCE2642BA99048222DC4B507FB8852FA">getOverloadedOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EDC383DF77EE2649D50B110AF4128DC265D9BAC3">isPtrMemOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F554FCD19BE907123761A839E8DC560117EFC862">isPtrMemOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#170E6B666FD8D3CBB6040BBFED1D2FA87D4490FC">isMultiplicativeOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58A38812322E62D6FF2B25767C78AE99F68EF310">isMultiplicativeOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0056619E2E4DB10B3717BEAC740A949307BD409">isAdditiveOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F7FBBC210D7D6F72C57E69B5724E35B47AB5AC8">isAdditiveOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E049DAF38E5CC2910FFBCC605661593A999965C">isShiftOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88D7CB3DBEFFF982EDF9607064A2642065E567C1">isShiftOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#867A7071A3F9C2C20F3FAFEAE448795ADD67747E">isBitwiseOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7DA0EF64BE27C5894ED42974263E3CC32BB5BE39">isBitwiseOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8FF90F04FFCCD7AA4DABF824FB14C02989C2550">isRelationalOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#118E0F56A387F932E6188069FAC98295B5794158">isRelationalOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD7C4E503B6697A229970BA54C5E045B69A47AE2">isEqualityOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DEF7D58EB380BDB4492B3B37E4B7C67B02351FC">isEqualityOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39B1C32DDE85D73D59EC2C597BC7E9B0F89C6DF6">isComparisonOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F7245015CDB268EE768DCA068EA5D6AA3A2B2FB">isComparisonOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#765E597C263ABB84AE31C7D591CC4648CD29DE69">isCommaOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31448D01036215A95AE41399960B693377F037D5">isCommaOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E866696F79FE04F82B7B3AB1EA9E63E72B86E8C">negateComparisonOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BC48824E33B2151BF37443DA56C84DB9CA8EF2D">reverseComparisonOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96C67DD909CD6A3F504C81CB8320CF5FD9D13565">isLogicalOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#822A1E0D5A3BB2811F2205F01E4AE2D7236028DC">isLogicalOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33A2E4003AA2D81A9F103BF82F599FC13778BC16">isAssignmentOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#535B7E207823BCEA0D59B998DFD8F55B7DB2600D">isAssignmentOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7980A5318B249C47947C2A88E434584B36FD1C0B">isCompoundAssignmentOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#850D9FB0A8CCD23715E7155FB83715499179AFE4">isCompoundAssignmentOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F3923ADC7E6F698236194D7750F8892082484C1">getOpForCompoundAssignment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01D57679A5456741E87E35A342F0BE1CB89416BD">isShiftAssignOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D11784D8CF96CB8EF021813430BAD296950AA6DD">isShiftAssignOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7EB96E3CCEB308333138BFCAD058EC304C428190">isNullPointerArithmeticExtension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37F9DE89F0774CE8406E6779646EB239EB7F2DF7">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77AF061965E9ED86D6893E0DF8938F1DA60CEADF">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47AA1D6EE65B892DA5F6C8E8B650DC163C5BCE3E">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D099F689EA7011CEE215C7FB16423BD2A5A3779">setHasStoredFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1852493741BA846EFFCDB8645325CB822DB0B56C">hasStoredFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2510A75ECAB23BF2B2BAF808D3EE68D5895D2B6D">getStoredFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3732E4A7C9BA8BCDBC27BDCE131D8DBF466EE89">setStoredFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF596161D79A48CA9B265D196E03C0B5CE253524">getFPFeaturesInEffect</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C74AA7ECD44F32358F9B17615FE502982437170">getFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3FB67F258524978EB95C8028BDF6F5D55916804">isFPContractableWithinStatement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92446CC099450C38285D82D26B2F7426A824D436">isFEnvAccessOn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#714F2F83776A8AA1AFF4A99ED8C32DB63F86AFA0">BinaryOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E90A99B32918FA076958AFF225276CC5FA67768">BinaryOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB096E45DDF2F21EE957193274AA2B56FEE61486">sizeOfTrailingObjects</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

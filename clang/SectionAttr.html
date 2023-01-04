@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SectionAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SectionAttr</h1>
+    <p>Defined at line 10504 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E4184A5491827FE0FF28ED3A562E3F4553750104">CreateImplicit</h3>
+      <p>
+        public SectionAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="28D71BED4FAEA45960009540A2873375CC455A80">Create</h3>
+      <p>
+        public SectionAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="2CBE66B8CF882CA16858FDFF8F42AF7BA7248703">CreateImplicit</h3>
+      <p>
+        public SectionAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax, 
+        <a href="../clang/SectionAttr/Spelling.html">Spelling</a>
+         S)
+      </p>
+      <h3 id="DF40E2C06242845EDA294E76CBA359C7F999AE45">Create</h3>
+      <p>
+        public SectionAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax, 
+        <a href="../clang/SectionAttr/Spelling.html">Spelling</a>
+         S)
+      </p>
+      <h3 id="050A07D3B7CB516FEED10A6640B67A115CDE09D5">SectionAttr</h3>
+      <p>
+        public void SectionAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="B9549640EAE0363CDA2161195B20388243313D7D">clone</h3>
+      <p>public SectionAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="115ABB70CDC3A213CE3E48D1E6259A839ACF82C7">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="6AD0619E934C714AA5502111C6A22B5D45244F58">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="0DAD6BF508A1E264306DB465DB7612F76A3B71D2">getSemanticSpelling</h3>
+      <p>
+        public 
+        <a href="../clang/SectionAttr/Spelling.html">Spelling</a>
+         getSemanticSpelling()
+      </p>
+      <h3 id="1DDF7BC1E18A5FC59A6E04FCAE5FE3193AD37D59">getName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getName()
+      </p>
+      <p>Defined at line 10534 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C08BEC357778992A3004F320DE91D8C71131C9CD">getNameLength</h3>
+      <p>public unsigned int getNameLength()</p>
+      <p>Defined at line 10537 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="1A65C6925C424B7778B265F6D7F05C9949ED1CAC">setName</h3>
+      <p>
+        public void setName(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 10540 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C7917715AFFE6F7C22EA420583DB29D7CB39F2CE">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 10549 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="B487E12EFF46E2945226EE13CFB0747A4140063A">enum Spelling</h3>
+      <ul>
+        <li>GNU_section</li>
+        <li>CXX11_gnu_section</li>
+        <li>C2x_gnu_section</li>
+        <li>Declspec_allocate</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 10509 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E4184A5491827FE0FF28ED3A562E3F4553750104">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28D71BED4FAEA45960009540A2873375CC455A80">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2CBE66B8CF882CA16858FDFF8F42AF7BA7248703">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF40E2C06242845EDA294E76CBA359C7F999AE45">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#050A07D3B7CB516FEED10A6640B67A115CDE09D5">SectionAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9549640EAE0363CDA2161195B20388243313D7D">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#115ABB70CDC3A213CE3E48D1E6259A839ACF82C7">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AD0619E934C714AA5502111C6A22B5D45244F58">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0DAD6BF508A1E264306DB465DB7612F76A3B71D2">getSemanticSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1DDF7BC1E18A5FC59A6E04FCAE5FE3193AD37D59">getName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C08BEC357778992A3004F320DE91D8C71131C9CD">getNameLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1A65C6925C424B7778B265F6D7F05C9949ED1CAC">setName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7917715AFFE6F7C22EA420583DB29D7CB39F2CE">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B487E12EFF46E2945226EE13CFB0747A4140063A">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

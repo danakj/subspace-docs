@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCAvailabilityCheckExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCAvailabilityCheckExpr</h1>
+    <p>Defined at line 1686 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+    <div>
+      <div>
+        <p> A runtime availability query.</p>
+        <p> There are 2 ways to spell this node:</p>
+        <p> Note that we only need to keep track of one  here, which is the one that corresponds to the current deployment target. This is meant to be used in the condition of an  but it is also usable as top level expressions.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="ED624D4E0EA827AA9AE2A40DB9F67E83AEE0F27C">ObjCAvailabilityCheckExpr</h3>
+      <p>
+        public void ObjCAvailabilityCheckExpr(
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         VersionToCheck, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         AtLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParen, 
+        <a href="QualType.html">QualType</a>
+         Ty)
+      </p>
+      <p>Defined at line 1693 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="7F818C14F3625D7DDAB02E8185FC5B91E22B6689">ObjCAvailabilityCheckExpr</h3>
+      <p>
+        public void ObjCAvailabilityCheckExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Shell)
+      </p>
+      <p>Defined at line 1700 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="186AE7EDCF00760E66AEB48D33FBAE961DF8CD8F">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1703 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="372169B04639BD8AEA466669F29DF31406386FDE">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1704 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="05F530B683B7F4D5BC075AA3BBDE5D0B93FFE746">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 1705 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="64479E397666E97B72EF173FEAF033F546D1CDE3">hasVersion</h3>
+      <p>public _Bool hasVersion()</p>
+      <p>Defined at line 1708 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <div>
+        <div>
+          <p> This may be &apos;*&apos;, in which case this should fold to true.</p>
+        </div>
+      </div>
+      <h3 id="36613F0B21C73302078E3A4372E720F2945E957F">getVersion</h3>
+      <p>
+        public 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         getVersion()
+      </p>
+      <p>Defined at line 1709 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="EE2076792E91B4D8EFABB7F1F4FCE9C6D03ECA48">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1711 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="F7FAFE44A3512E1AB9B42D8F229B823F7BC803BA">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1715 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="7DDB5936EEC4B58EE021B9D93822A8C518005329">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 1719 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#ED624D4E0EA827AA9AE2A40DB9F67E83AEE0F27C">ObjCAvailabilityCheckExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F818C14F3625D7DDAB02E8185FC5B91E22B6689">ObjCAvailabilityCheckExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#186AE7EDCF00760E66AEB48D33FBAE961DF8CD8F">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#372169B04639BD8AEA466669F29DF31406386FDE">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05F530B683B7F4D5BC075AA3BBDE5D0B93FFE746">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64479E397666E97B72EF173FEAF033F546D1CDE3">hasVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#36613F0B21C73302078E3A4372E720F2945E957F">getVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE2076792E91B4D8EFABB7F1F4FCE9C6D03ECA48">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7FAFE44A3512E1AB9B42D8F229B823F7BC803BA">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7DDB5936EEC4B58EE021B9D93822A8C518005329">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OptionalFileEntryRefDegradesToFileEntryPtr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OptionalFileEntryRefDegradesToFileEntryPtr</h1>
+    <p>Defined at line 292 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+    <div>
+      <div>
+        <p> Wrapper around OptionalFileEntryRef that degrades to &apos;const FileEntry*&apos;, facilitating incremental patches to propagate FileEntryRef.</p>
+        <p> This class can be used as return value or field where it&apos;s convenient for an OptionalFileEntryRef to degrade to a &apos;const FileEntry*&apos;. The purpose is to avoid code churn due to dances like the following:</p>
+        <p> FIXME: Once FileEntryRef is &quot;everywhere&quot; and FileEntry::LastRef and FileEntry::getName have been deleted, delete this class and replace instances with OptionalFileEntryRef.</p>
+      </div>
+    </div>
+    <p>Inherits from OptionalFileEntryRef</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4D2156E8D83B9B5F5C95434234DFEC9D54E24A65">OptionalFileEntryRefDegradesToFileEntryPtr</h3>
+      <p>public void OptionalFileEntryRefDegradesToFileEntryPtr()</p>
+      <p>Defined at line 294 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="B6E01AA994BB4A09E78CFF03CFB2814D0500D581">OptionalFileEntryRefDegradesToFileEntryPtr</h3>
+      <p>public void OptionalFileEntryRefDegradesToFileEntryPtr(OptionalFileEntryRefDegradesToFileEntryPtr &amp;&amp; )</p>
+      <p>Defined at line 295 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="246A674F591C11AC045E788729E9271BFFFDCDBA">OptionalFileEntryRefDegradesToFileEntryPtr</h3>
+      <p>public void OptionalFileEntryRefDegradesToFileEntryPtr(const OptionalFileEntryRefDegradesToFileEntryPtr &amp; )</p>
+      <p>Defined at line 297 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="A03A3E99E6DB076F8556D32B4F3D6991C2FA10D6">operator=</h3>
+      <p>public OptionalFileEntryRefDegradesToFileEntryPtr &amp; operator=(OptionalFileEntryRefDegradesToFileEntryPtr &amp;&amp; )</p>
+      <p>Defined at line 299 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="8529BEA8D8D90FDCA6C56842C384779FDB264CB1">operator=</h3>
+      <p>public OptionalFileEntryRefDegradesToFileEntryPtr &amp; operator=(const OptionalFileEntryRefDegradesToFileEntryPtr &amp; )</p>
+      <p>Defined at line 301 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="C29160A80DB19572B0D61D72B5EAF4E643A8318B">OptionalFileEntryRefDegradesToFileEntryPtr</h3>
+      <p>
+        public void OptionalFileEntryRefDegradesToFileEntryPtr(
+        <a href="../std/nullopt_t.html">nullopt_t</a>
+         )
+      </p>
+      <p>Defined at line 304 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="E1ED29B8ED154D65366752D6F2CD037E61BF4EE0">OptionalFileEntryRefDegradesToFileEntryPtr</h3>
+      <p>
+        public void OptionalFileEntryRefDegradesToFileEntryPtr(
+        <a href="FileEntryRef.html">FileEntryRef</a>
+         Ref)
+      </p>
+      <p>Defined at line 305 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="0B5D3B0A561475B0A0531EA58C1FCB1CF3E2EB77">OptionalFileEntryRefDegradesToFileEntryPtr</h3>
+      <p>
+        public void OptionalFileEntryRefDegradesToFileEntryPtr(
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         MaybeRef)
+      </p>
+      <p>Defined at line 307 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="FE6B6805706AE69DA093B1A63C5BB4EAE53ADADC">operator=</h3>
+      <p>
+        public OptionalFileEntryRefDegradesToFileEntryPtr &amp; operator=(
+        <a href="../std/nullopt_t.html">nullopt_t</a>
+         )
+      </p>
+      <p>Defined at line 310 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="8ED1E43E830CAB4F5411D9823CCB1D3109CEBA6D">operator=</h3>
+      <p>
+        public OptionalFileEntryRefDegradesToFileEntryPtr &amp; operator=(
+        <a href="FileEntryRef.html">FileEntryRef</a>
+         Ref)
+      </p>
+      <p>Defined at line 314 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="F360BC3037488E9C878FCBA40EA4376CD13BDA4B">operator=</h3>
+      <p>
+        public OptionalFileEntryRefDegradesToFileEntryPtr &amp; operator=(
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         MaybeRef)
+      </p>
+      <p>Defined at line 318 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <h3 id="3BE277F49DB826D557D6935E4D9DB695B7A9B34B">operator const clang::FileEntry *</h3>
+      <p>public const FileEntry * operator const clang::FileEntry *()</p>
+      <p>Defined at line 327 of file /usr/lib/llvm-16/include/clang/Basic/FileEntry.h</p>
+      <div>
+        <div>
+          <p> Degrade to &apos;const FileEntry *&apos; to allow  FileEntry::LastRef and FileEntry::getName have been deleted, delete this class and replace instances with OptionalFileEntryRef</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4D2156E8D83B9B5F5C95434234DFEC9D54E24A65">OptionalFileEntryRefDegradesToFileEntryPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B6E01AA994BB4A09E78CFF03CFB2814D0500D581">OptionalFileEntryRefDegradesToFileEntryPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#246A674F591C11AC045E788729E9271BFFFDCDBA">OptionalFileEntryRefDegradesToFileEntryPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A03A3E99E6DB076F8556D32B4F3D6991C2FA10D6">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8529BEA8D8D90FDCA6C56842C384779FDB264CB1">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C29160A80DB19572B0D61D72B5EAF4E643A8318B">OptionalFileEntryRefDegradesToFileEntryPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1ED29B8ED154D65366752D6F2CD037E61BF4EE0">OptionalFileEntryRefDegradesToFileEntryPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B5D3B0A561475B0A0531EA58C1FCB1CF3E2EB77">OptionalFileEntryRefDegradesToFileEntryPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE6B6805706AE69DA093B1A63C5BB4EAE53ADADC">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8ED1E43E830CAB4F5411D9823CCB1D3109CEBA6D">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F360BC3037488E9C878FCBA40EA4376CD13BDA4B">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3BE277F49DB826D557D6935E4D9DB695B7A9B34B">operator const clang::FileEntry *</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

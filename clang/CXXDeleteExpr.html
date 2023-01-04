@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXDeleteExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXDeleteExpr</h1>
+    <p>Defined at line 2421 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a  expression for memory deallocation and destructor calls, e.g. &quot;delete[] pArray&quot;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="02670F41B99F44D18103380F42EB2811AD18893C">CXXDeleteExpr</h3>
+      <p>
+        public void CXXDeleteExpr(
+        <a href="QualType.html">QualType</a>
+         Ty, _Bool GlobalDelete, _Bool ArrayForm, _Bool ArrayFormAsWritten, _Bool UsualArrayDeleteWantsSize, FunctionDecl * OperatorDelete, Expr * Arg, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 2431 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="42C2A5BCA0AD03353BB0D00D2D4354C69F06FDB2">CXXDeleteExpr</h3>
+      <p>
+        public void CXXDeleteExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Shell)
+      </p>
+      <p>Defined at line 2444 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="D66FD36CF719EF97F69A4CC19005C2402D554164">isGlobalDelete</h3>
+      <p>public _Bool isGlobalDelete()</p>
+      <p>Defined at line 2446 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="3A4CA9C28FA5E0805BD7AF1B98492CFE3358B51B">isArrayForm</h3>
+      <p>public _Bool isArrayForm()</p>
+      <p>Defined at line 2447 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="E485027438526DCD20E6D8833C0E5BA2FF45A05C">isArrayFormAsWritten</h3>
+      <p>public _Bool isArrayFormAsWritten()</p>
+      <p>Defined at line 2448 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="CAC29B53E9784228A838D3966DE86D8EF4DCA017">doesUsualArrayDeleteWantSize</h3>
+      <p>public _Bool doesUsualArrayDeleteWantSize()</p>
+      <p>Defined at line 2456 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Answers whether the usual array deallocation function for the allocated type expects the size of the allocation as a parameter.  This can be true even if the actual deallocation function that we&apos;re using doesn&apos;t want a size.</p>
+        </div>
+      </div>
+      <h3 id="9EFA060AE162AFEBE37F7BE5D82216493F0487DA">getOperatorDelete</h3>
+      <p>public FunctionDecl * getOperatorDelete()</p>
+      <p>Defined at line 2460 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="26E250333514E3EC853EB56967CABE0E910A6FD1">getArgument</h3>
+      <p>public Expr * getArgument()</p>
+      <p>Defined at line 2462 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="430F69A418BEB46647F4E193CE238A7036E1A24B">getArgument</h3>
+      <p>public const Expr * getArgument()</p>
+      <p>Defined at line 2463 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="CED1FDFEAB9759BC67FCD9085111DF248599C5A2">getDestroyedType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getDestroyedType()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the type being destroyed.</p>
+          <p> If the type being destroyed is a dependent type which may or may not be a pointer, return an invalid type.</p>
+        </div>
+      </div>
+      <h3 id="EE60FB9EA645A83BE64655AA0DD470319867A0FC">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2471 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="79840D24CDEF3C39A78B165EE5145D1746CBBD85">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2472 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="3E47584854A56E755E531B8506FCC38335C5E75D">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2476 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="F31B362CBBA108141A632E378239A3110506D46D">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2481 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="34A38D278C91FA655F5F51374F4FA902A9FB824F">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2483 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#02670F41B99F44D18103380F42EB2811AD18893C">CXXDeleteExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42C2A5BCA0AD03353BB0D00D2D4354C69F06FDB2">CXXDeleteExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D66FD36CF719EF97F69A4CC19005C2402D554164">isGlobalDelete</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A4CA9C28FA5E0805BD7AF1B98492CFE3358B51B">isArrayForm</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E485027438526DCD20E6D8833C0E5BA2FF45A05C">isArrayFormAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CAC29B53E9784228A838D3966DE86D8EF4DCA017">doesUsualArrayDeleteWantSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EFA060AE162AFEBE37F7BE5D82216493F0487DA">getOperatorDelete</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#26E250333514E3EC853EB56967CABE0E910A6FD1">getArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#430F69A418BEB46647F4E193CE238A7036E1A24B">getArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CED1FDFEAB9759BC67FCD9085111DF248599C5A2">getDestroyedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE60FB9EA645A83BE64655AA0DD470319867A0FC">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79840D24CDEF3C39A78B165EE5145D1746CBBD85">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3E47584854A56E755E531B8506FCC38335C5E75D">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F31B362CBBA108141A632E378239A3110506D46D">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#34A38D278C91FA655F5F51374F4FA902A9FB824F">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

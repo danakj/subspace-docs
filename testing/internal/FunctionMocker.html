@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FunctionMocker</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FunctionMocker</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1459">1459</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+    </p>
+    <p>
+      Inherits from 
+      <a href="UntypedFunctionMockerBase.html">UntypedFunctionMockerBase</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="96694A43D6AD7B2071202BEE701FFA14BEC137FD">FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1468">1468</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <h3 id="D25225110BB14556C417C033CD981C495632884C">FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(const FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1482">1482</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> There is no generally useful and implementable semantics of copying a mock object, so copying a mock is usually a user error. Thus we disallow copying function mockers.  If the user really wants to copy a mock object, they should implement their own copy operation, for example:</p>
+          <p>   class MockFoo : public Foo {    public:     // Defines a copy constructor explicitly.     MockFoo(const MockFoo&amp; src) {}     ...   };</p>
+        </div>
+      </div>
+      <h3 id="DA360FEA20A7B6623291FCA64BA2DE856CF048E0">operator=</h3>
+      <p>public FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp; operator=(const FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1483">1483</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <h3 id="C3C9273AFD002CF5DAC81960ED41DE44C07E6C0C">~FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void ~FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1488">1488</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> The destructor verifies that all expectations on this mock function have been satisfied.  If not, it will report Google Test non-fatal failures for the violations.</p>
+        </div>
+      </div>
+      <h3 id="8FE1E3286139615BA933284DBC92B5C47E00014C">FindOnCallSpec</h3>
+      <p>public const OnCallSpec&lt;F&gt; * FindOnCallSpec(const ArgumentTuple &amp; args)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1498">1498</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the ON_CALL spec that matches this mock function with the given arguments; returns NULL if no matching ON_CALL is found. L = *</p>
+        </div>
+      </div>
+      <h3 id="7BA4ED7B61C62D2A9DEC61C41FE5AD93EE157380">PerformDefaultAction</h3>
+      <p>public Result PerformDefaultAction(ArgumentTuple &amp;&amp; args, const std::string &amp; call_description)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1518">1518</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Performs the default action of this mock function on the given arguments and returns the result. Asserts (or throws if exceptions are enabled) with a helpful call descrption if there is no valid return value. This method doesn&apos;t depend on the mutable state of this object, and thus can be called concurrently without locking. L = *</p>
+        </div>
+      </div>
+      <h3 id="722DB4C1C9DC86FE13E852A99AD8112B30D24A23">UntypedPerformDefaultAction</h3>
+      <p>public UntypedActionResultHolderBase * UntypedPerformDefaultAction(void * untyped_args, const std::string &amp; call_description)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1544">1544</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Performs the default action with the given arguments and returns the action&apos;s result.  The call description string will be used in the error message to describe the call in the case the default action fails.  The caller is responsible for deleting the result. L = *</p>
+        </div>
+      </div>
+      <h3 id="D1D9672CE3DD62FBAE1F239C3B3CA0F5F1DBBE7A">UntypedPerformAction</h3>
+      <p>public UntypedActionResultHolderBase * UntypedPerformAction(const void * untyped_action, void * untyped_args)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1556">1556</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Performs the given action with the given arguments and returns the action&apos;s result.  The caller is responsible for deleting the result. L = *</p>
+        </div>
+      </div>
+      <h3 id="CB755E1FB0D95F3BADCF5B0E1A7711D5A84B9AF9">ClearDefaultActionsLocked</h3>
+      <p>public void ClearDefaultActionsLocked()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1567">1567</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Implements UntypedFunctionMockerBase::ClearDefaultActionsLocked(): clears the ON_CALL()s set on this mock function.</p>
+        </div>
+      </div>
+      <h3 id="39F8B1041BB4321B021377B030C86804204F37E9">Invoke</h3>
+      <p>public Result Invoke(Args... args)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1596">1596</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the result of invoking this mock function with the given arguments.  This function can be safely called from multiple threads concurrently.</p>
+        </div>
+      </div>
+      <h3 id="0AB77A3FA8F0DB7DFFDDF555E190324291CA65DF">With</h3>
+      <p>public MockSpec&lt;F&gt; With(Matcher&lt;Args&gt;... m)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1603">1603</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <h3 id="B85866F9F157A26364FE270268D86D2436B41BB8">AddNewOnCallSpec</h3>
+      <p>protected OnCallSpec&lt;F&gt; &amp; AddNewOnCallSpec(const char * file, int line, const ArgumentMatcherTuple &amp; m)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1614">1614</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Adds and returns a default action spec for this mock function.</p>
+        </div>
+      </div>
+      <h3 id="1EBBCD22EE0B9AE38A35E1A0D0E8F574974D99C3">AddNewExpectation</h3>
+      <p>protected TypedExpectation&lt;F&gt; &amp; AddNewExpectation(const char * file, int line, const std::string &amp; source_text, const ArgumentMatcherTuple &amp; m)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1625">1625</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Adds and returns an expectation spec for this mock function.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#96694A43D6AD7B2071202BEE701FFA14BEC137FD">FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D25225110BB14556C417C033CD981C495632884C">FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA360FEA20A7B6623291FCA64BA2DE856CF048E0">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3C9273AFD002CF5DAC81960ED41DE44C07E6C0C">~FunctionMocker&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8FE1E3286139615BA933284DBC92B5C47E00014C">FindOnCallSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BA4ED7B61C62D2A9DEC61C41FE5AD93EE157380">PerformDefaultAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#722DB4C1C9DC86FE13E852A99AD8112B30D24A23">UntypedPerformDefaultAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D1D9672CE3DD62FBAE1F239C3B3CA0F5F1DBBE7A">UntypedPerformAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB755E1FB0D95F3BADCF5B0E1A7711D5A84B9AF9">ClearDefaultActionsLocked</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39F8B1041BB4321B021377B030C86804204F37E9">Invoke</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0AB77A3FA8F0DB7DFFDDF555E190324291CA65DF">With</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B85866F9F157A26364FE270268D86D2436B41BB8">AddNewOnCallSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1EBBCD22EE0B9AE38A35E1A0D0E8F574974D99C3">AddNewExpectation</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FunctionMocker</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FunctionMocker</h1>
+    <div>
+      <div>
+        <p> Implements a mock function.</p>
+      </div>
+      <div>
+        <p> Needed for a function mocker to register itself (so that we know how to clear a mock object).</p>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

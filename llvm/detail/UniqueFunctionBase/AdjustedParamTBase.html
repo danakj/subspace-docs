@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct AdjustedParamTBase</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/detail/UniqueFunctionBase" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct AdjustedParamTBase</h1>
+    <p>Defined at line 113 of file /usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h</p>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct AdjustedParamTBase</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/detail/UniqueFunctionBase" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct AdjustedParamTBase</h1>
+    <p>Defined at line 99 of file /usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h</p>
+    <div>
+      <div>
+        <p> Provide a type function to map parameters that won&apos;t observe extra copies or moves and which are small enough to likely pass in register to values and all other types to l-value reference types. We use this to compute the types used in our erased call utility to minimize copies and moves unless doing so would force things unnecessarily into memory.</p>
+        <p> The heuristic used is related to common ABI register passing conventions. It doesn&apos;t have to be exact though, and in one way it is more strict because we want to still be able to observe either moves *or* copies.</p>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct AdjustedParamTBase</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/detail/UniqueFunctionBase" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct AdjustedParamTBase</h1>
+    <p>Defined at line 112 of file /usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h</p>
+    <div>
+      <div>
+        <p> This specialization ensures that &apos;AdjustedParam&lt;V&lt;T&gt;&amp;&gt;&apos; or &apos;AdjustedParam&lt;V&lt;T&gt;&amp;&amp;&gt;&apos; does not trigger a compile-time error when &apos;T&apos; is an incomplete type and V a templated type.</p>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class raw_fd_ostream</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class raw_fd_ostream</h1>
+    <p>Defined at line 441 of file /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h</p>
+    <div>
+      <div>
+        <p> A raw_ostream that writes to a file descriptor.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="raw_pwrite_stream.html">raw_pwrite_stream</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2660D20D72E110EC26D6E75773FBC29B6F6D235C">error_detected</h3>
+      <p>
+        protected void error_detected(
+        <a href="../std/error_code.html">error_code</a>
+         EC)
+      </p>
+      <p>Defined at line 474 of file /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h</p>
+      <div>
+        <div>
+          <p> Set the flag indicating that an output error has been encountered.</p>
+        </div>
+      </div>
+      <h3 id="550917A27AAB893A18E32590A9DF61DA005A5A74">get_fd</h3>
+      <p>protected int get_fd()</p>
+      <p>Defined at line 477 of file /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h</p>
+      <div>
+        <div>
+          <p> Return the file descriptor.</p>
+        </div>
+      </div>
+      <h3 id="84E9A4A4FDD9C849620DA77D0ED124C65E96DAFC">inc_pos</h3>
+      <p>protected void inc_pos(uint64_t Delta)</p>
+      <p>Defined at line 480 of file /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h</p>
+      <div>
+        <div>
+          <p> Update the file position by increasing </p>
+        </div>
+      </div>
+      <h3 id="62BB0AEE18EE2F553132298FEBD3E2EA2B70FB1A">raw_fd_ostream</h3>
+      <p>
+        public void raw_fd_ostream(
+        <a href="StringRef.html">StringRef</a>
+         Filename, std::error_code &amp; EC)
+      </p>
+      <div>
+        <div>
+          <p> Open the specified file for writing. If an error occurs, information about the error is put into EC, and the stream should be immediately destroyed; allows optional flags to control how the file will be opened.</p>
+          <p> As a special case, if Filename is &quot;-&quot;, then the stream will use STDOUT_FILENO instead of opening a file. This will not close the stdout descriptor.</p>
+        </div>
+      </div>
+      <h3 id="579C18ED9120CB5EE1C839D314DB73112C1CAA89">raw_fd_ostream</h3>
+      <p>
+        public void raw_fd_ostream(
+        <a href="StringRef.html">StringRef</a>
+         Filename, std::error_code &amp; EC, 
+        <a href="../llvm/sys/fs/CreationDisposition.html">CreationDisposition</a>
+         Disp)
+      </p>
+      <h3 id="DE0F67B1976B67AD96FD5888EA67B15ED57B53BD">raw_fd_ostream</h3>
+      <p>
+        public void raw_fd_ostream(
+        <a href="StringRef.html">StringRef</a>
+         Filename, std::error_code &amp; EC, 
+        <a href="../llvm/sys/fs/FileAccess.html">FileAccess</a>
+         Access)
+      </p>
+      <h3 id="824D0E9A7D1B28F011ED9C1B700D23867742A8A7">raw_fd_ostream</h3>
+      <p>
+        public void raw_fd_ostream(
+        <a href="StringRef.html">StringRef</a>
+         Filename, std::error_code &amp; EC, 
+        <a href="../llvm/sys/fs/OpenFlags.html">OpenFlags</a>
+         Flags)
+      </p>
+      <h3 id="509CA6EBECA3719951B63AD42895015326AAFB7F">raw_fd_ostream</h3>
+      <p>
+        public void raw_fd_ostream(
+        <a href="StringRef.html">StringRef</a>
+         Filename, std::error_code &amp; EC, 
+        <a href="../llvm/sys/fs/CreationDisposition.html">CreationDisposition</a>
+         Disp, 
+        <a href="../llvm/sys/fs/FileAccess.html">FileAccess</a>
+         Access, 
+        <a href="../llvm/sys/fs/OpenFlags.html">OpenFlags</a>
+         Flags)
+      </p>
+      <h3 id="8AA800F1B1CEB9D366A455D92688C8F751E21762">raw_fd_ostream</h3>
+      <p>
+        public void raw_fd_ostream(int fd, _Bool shouldClose, _Bool unbuffered, 
+        <a href="../llvm/raw_ostream/OStreamKind.html">OStreamKind</a>
+         K)
+      </p>
+      <div>
+        <div>
+          <p> FD is the file descriptor that this writes to.  If ShouldClose is true, this closes the file when the stream is destroyed. If FD is for stdout or stderr, it will not be closed.</p>
+        </div>
+      </div>
+      <h3 id="3B663020D996C785C7ED75F41C1C40443A0E8F16">~raw_fd_ostream</h3>
+      <p>public void ~raw_fd_ostream()</p>
+      <h3 id="769750052CD04882E7292762D03506ACDB997A04">close</h3>
+      <p>public void close()</p>
+      <div>
+        <div>
+          <p> Manually flush the stream and close the file. Note that this does not call fsync.</p>
+        </div>
+      </div>
+      <h3 id="D6AEBD36558D1CCFB59415C531E5957542BFF08E">supportsSeeking</h3>
+      <p>public _Bool supportsSeeking()</p>
+      <p>Defined at line 514 of file /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h</p>
+      <h3 id="56E79FF58757619C5E558C6E576FB0081219BF71">isRegularFile</h3>
+      <p>public _Bool isRegularFile()</p>
+      <p>Defined at line 516 of file /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h</p>
+      <h3 id="7343F619D3C66CA9203B68A621DAEF4D2D559BBA">seek</h3>
+      <p>public uint64_t seek(uint64_t off)</p>
+      <div>
+        <div>
+          <p> Flushes the stream and repositions the underlying file descriptor position to the offset specified from the beginning of the file.</p>
+        </div>
+      </div>
+      <h3 id="BF3A3C4E0AEA26C0A75A0ECD7C74025104CE7B1E">is_displayed</h3>
+      <p>public _Bool is_displayed()</p>
+      <h3 id="DEEBF3A2AEB1BC013738DC519501D200FF8BB20A">has_colors</h3>
+      <p>public _Bool has_colors()</p>
+      <h3 id="C12103DAC62D968D0865FEE0E402A09EA7C9BDAF">error</h3>
+      <p>
+        public 
+        <a href="../std/error_code.html">error_code</a>
+         error()
+      </p>
+      <p>Defined at line 526 of file /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h</p>
+      <h3 id="3D0AC2A12B5DEC6FC357D3E7B1A2E12E95D06713">has_error</h3>
+      <p>public _Bool has_error()</p>
+      <p>Defined at line 532 of file /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h</p>
+      <div>
+        <div>
+          <p> Return the value of the flag in this raw_fd_ostream indicating whether an output error has been encountered. This doesn&apos;t implicitly flush any pending output.  Also, it doesn&apos;t guarantee to detect all errors unless the stream has been closed.</p>
+        </div>
+      </div>
+      <h3 id="61166D7E687A96719D8C18019A49CBCE221D44DA">clear_error</h3>
+      <p>public void clear_error()</p>
+      <p>Defined at line 543 of file /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h</p>
+      <div>
+        <div>
+          <p> Set the flag read by has_error() to false. If the error flag is set at the time when this raw_ostream&apos;s destructor is called, report_fatal_error is called to report the error. Use clear_error() after handling the error to avoid this behavior.</p>
+          <p>   &quot;Errors should never pass silently.    Unless explicitly silenced.&quot;      - from The Zen of Python, by Tim Peters</p>
+        </div>
+      </div>
+      <h3 id="4DB813A96CC5F35633B828518D23FFB7BE8DBF48">lock</h3>
+      <p>public Expected&lt;sys::fs::FileLocker&gt; lock()</p>
+      <div>
+        <div>
+          <p> Locks the underlying file.</p>
+          <p> The function blocks the current thread until the lock become available or error occurs.</p>
+          <p> Possible use of this function may be as follows:</p>
+        </div>
+      </div>
+      <h3 id="B452DDBA1C7621E05C29B973F683AE3FCA717553">tryLockFor</h3>
+      <p>public Expected&lt;sys::fs::FileLocker&gt; tryLockFor(const Duration &amp; Timeout)</p>
+      <div>
+        <div>
+          <p> Tries to lock the underlying file within the specified period.</p>
+          <p> It is used as </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2660D20D72E110EC26D6E75773FBC29B6F6D235C">error_detected</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#550917A27AAB893A18E32590A9DF61DA005A5A74">get_fd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84E9A4A4FDD9C849620DA77D0ED124C65E96DAFC">inc_pos</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#62BB0AEE18EE2F553132298FEBD3E2EA2B70FB1A">raw_fd_ostream</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#579C18ED9120CB5EE1C839D314DB73112C1CAA89">raw_fd_ostream</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE0F67B1976B67AD96FD5888EA67B15ED57B53BD">raw_fd_ostream</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#824D0E9A7D1B28F011ED9C1B700D23867742A8A7">raw_fd_ostream</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#509CA6EBECA3719951B63AD42895015326AAFB7F">raw_fd_ostream</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AA800F1B1CEB9D366A455D92688C8F751E21762">raw_fd_ostream</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B663020D996C785C7ED75F41C1C40443A0E8F16">~raw_fd_ostream</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#769750052CD04882E7292762D03506ACDB997A04">close</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6AEBD36558D1CCFB59415C531E5957542BFF08E">supportsSeeking</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#56E79FF58757619C5E558C6E576FB0081219BF71">isRegularFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7343F619D3C66CA9203B68A621DAEF4D2D559BBA">seek</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF3A3C4E0AEA26C0A75A0ECD7C74025104CE7B1E">is_displayed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEEBF3A2AEB1BC013738DC519501D200FF8BB20A">has_colors</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C12103DAC62D968D0865FEE0E402A09EA7C9BDAF">error</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D0AC2A12B5DEC6FC357D3E7B1A2E12E95D06713">has_error</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61166D7E687A96719D8C18019A49CBCE221D44DA">clear_error</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DB813A96CC5F35633B828518D23FFB7BE8DBF48">lock</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B452DDBA1C7621E05C29B973F683AE3FCA717553">tryLockFor</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

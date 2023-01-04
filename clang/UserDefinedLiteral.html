@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UserDefinedLiteral</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UserDefinedLiteral</h1>
+    <p>Defined at line 637 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> A call to a literal operator (C++11 [over.literal]) written as a user-defined literal (C++11 [lit.ext]).</p>
+        <p> Represents a user-defined literal, e.g. &quot;foo&quot;_bar or 1.23_xyz. While this is semantically equivalent to a normal call, this AST node provides better information about the syntactic representation of the literal.</p>
+        <p> Since literal operators are never found by ADL and can only be declared at namespace scope, a user-defined literal is never dependent.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="CallExpr.html">CallExpr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B9D7982FD112EEC4A06E3E73A2DD9E1256009D82">Create</h3>
+      <p>
+        public UserDefinedLiteral * Create(const ASTContext &amp; Ctx, Expr * Fn, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, 
+        <a href="QualType.html">QualType</a>
+         Ty, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LitEndLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         SuffixLoc, 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         FPFeatures)
+      </p>
+      <h3 id="B45478DE16A86C78C7B30B508A1D58A773B22C5D">CreateEmpty</h3>
+      <p>
+        public UserDefinedLiteral * CreateEmpty(const ASTContext &amp; Ctx, unsigned int NumArgs, _Bool HasFPOptions, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <h3 id="81A5A9AA29A806671FC1E8AF0EBE61CC33D3F6A1">getLiteralOperatorKind</h3>
+      <p>
+        public 
+        <a href="../clang/UserDefinedLiteral/LiteralOperatorKind.html">LiteralOperatorKind</a>
+         getLiteralOperatorKind()
+      </p>
+      <div>
+        <div>
+          <p> Returns the kind of literal operator invocation which this expression represents.</p>
+        </div>
+      </div>
+      <h3 id="5512D7CA49118A47C373E0AD2250F7F8B6577636">getCookedLiteral</h3>
+      <p>public Expr * getCookedLiteral()</p>
+      <div>
+        <div>
+          <p> If this is not a raw user-defined literal, get the underlying cooked literal (representing the literal with the suffix removed).</p>
+        </div>
+      </div>
+      <h3 id="A53AEDF8078AD4ABF9C12E8A8B143D48534EDB2B">getCookedLiteral</h3>
+      <p>public const Expr * getCookedLiteral()</p>
+      <p>Defined at line 693 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="BDF9360449992EAB333BD94EA7EB2B34F08B1DB7">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 697 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="91F78A9F86DA518C17AEC6CF0103AE5C74F45409">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 703 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="38480338C7B205D6897480BF70C5C66B890C5FCD">getUDSuffixLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getUDSuffixLoc()
+      </p>
+      <p>Defined at line 709 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Returns the location of a ud-suffix in the expression.</p>
+          <p> For a string literal, there may be multiple identical suffixes. This returns the first.</p>
+        </div>
+      </div>
+      <h3 id="DAB06A61D8D83CA53B1DBCC296FBAC0B57B5C4E5">getUDSuffix</h3>
+      <p>public const IdentifierInfo * getUDSuffix()</p>
+      <div>
+        <div>
+          <p> Returns the ud-suffix specified for this literal.</p>
+        </div>
+      </div>
+      <h3 id="6730C409228530C1D53F272459B22183D1AFFC90">classof</h3>
+      <p>public _Bool classof(const Stmt * S)</p>
+      <p>Defined at line 714 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="F279D6D5C4AAC27A0BB400AA53F543D990AF7A77">enum LiteralOperatorKind</h3>
+      <ul>
+        <li>LOK_Raw</li>
+        <li>LOK_Template</li>
+        <li>LOK_Integer</li>
+        <li>LOK_Floating</li>
+        <li>LOK_String</li>
+        <li>LOK_Character</li>
+      </ul>
+      <p>Defined at line 665 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> The kind of literal operator which is invoked.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B9D7982FD112EEC4A06E3E73A2DD9E1256009D82">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B45478DE16A86C78C7B30B508A1D58A773B22C5D">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81A5A9AA29A806671FC1E8AF0EBE61CC33D3F6A1">getLiteralOperatorKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5512D7CA49118A47C373E0AD2250F7F8B6577636">getCookedLiteral</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A53AEDF8078AD4ABF9C12E8A8B143D48534EDB2B">getCookedLiteral</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDF9360449992EAB333BD94EA7EB2B34F08B1DB7">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#91F78A9F86DA518C17AEC6CF0103AE5C74F45409">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38480338C7B205D6897480BF70C5C66B890C5FCD">getUDSuffixLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAB06A61D8D83CA53B1DBCC296FBAC0B57B5C4E5">getUDSuffix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6730C409228530C1D53F272459B22183D1AFFC90">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F279D6D5C4AAC27A0BB400AA53F543D990AF7A77">LiteralOperatorKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

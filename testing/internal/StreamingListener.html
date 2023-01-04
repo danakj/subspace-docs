@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StreamingListener</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StreamingListener</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1066">1066</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Streams test results to the given port on the given host machine.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="../../testing/EmptyTestEventListener.html">EmptyTestEventListener</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../testing/internal/StreamingListener/AbstractSocketWriter.html">AbstractSocketWriter</a>
+      </li>
+      <li>
+        <a href="../../testing/internal/StreamingListener/SocketWriter.html">SocketWriter</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FE35FF79209AE213158F898334E27DDDC27DD898">UrlEncode</h3>
+      <p>
+        public 
+        <a href="../../std/__cxx11/basic_string.html">basic_string</a>
+         UrlEncode(const char * str)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#4873">4873</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Checks if str contains &apos;=&apos;, &apos;&amp;&apos;, &apos;%&apos; or &apos;&apos; characters. If yes, replaces them by &quot;%xx&quot; where xx is their hexadecimal value. For example, replaces &quot;=&quot; with &quot;%3D&quot;.  This algorithm is O(strlen(str)) in both time and space -- important as the input str may contain an arbitrarily long test failure message and stack trace.</p>
+        </div>
+        <div>
+          <p> Escapes &apos;=&apos;, &apos;&amp;&apos;, &apos;%&apos;, and &apos;&apos; characters in str as &quot;%xx&quot;.</p>
+        </div>
+      </div>
+      <h3 id="F672584E26310E4FE02C9622453835ECF1C1B6AF">StreamingListener</h3>
+      <p>public void StreamingListener(const std::string &amp; host, const std::string &amp; port)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1132">1132</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+      <h3 id="770DA5B2930520397D40196A7A7C45D641A637F6">StreamingListener</h3>
+      <p>public void StreamingListener(AbstractSocketWriter * socket_writer)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1137">1137</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+      <h3 id="039ABAA508EB7C0FAC71E23848F9AEA4ADFA7BCA">OnTestProgramStart</h3>
+      <p>public void OnTestProgramStart(const UnitTest &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1140">1140</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+      <h3 id="32C79EB626A6E9481CBA9D048EB655A95386E4D8">OnTestProgramEnd</h3>
+      <p>public void OnTestProgramEnd(const UnitTest &amp; unit_test)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1144">1144</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+      <h3 id="932185070CBA452680827DEC9D8BA052D5329365">OnTestIterationStart</h3>
+      <p>public void OnTestIterationStart(const UnitTest &amp; , int iteration)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1153">1153</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+      <h3 id="5D34C99AE343946559765D87132AA911071C8903">OnTestIterationEnd</h3>
+      <p>public void OnTestIterationEnd(const UnitTest &amp; unit_test, int )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1159">1159</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+      <h3 id="F294758F7F0C3332A69EAE7F56BFD2C6B75E57B8">OnTestCaseStart</h3>
+      <p>public void OnTestCaseStart(const TestCase &amp; test_case)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1168">1168</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Note that &quot;event=TestCaseStart&quot; is a wire format and has to remain &quot;case&quot; for compatibility</p>
+        </div>
+      </div>
+      <h3 id="0DC6ECC5BEE62BE3A606AC4F70318E9D965F9BB3">OnTestCaseEnd</h3>
+      <p>public void OnTestCaseEnd(const TestCase &amp; test_case)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1174">1174</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Note that &quot;event=TestCaseEnd&quot; is a wire format and has to remain &quot;case&quot; for compatibility</p>
+        </div>
+      </div>
+      <h3 id="6E09ADB2298FB024FA3AE07E4A676D39F2347B84">OnTestStart</h3>
+      <p>public void OnTestStart(const TestInfo &amp; test_info)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1180">1180</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+      <h3 id="773C5178AC1ABC981F718DBA1919E939539C119D">OnTestEnd</h3>
+      <p>public void OnTestEnd(const TestInfo &amp; test_info)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1184">1184</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+      <h3 id="44AA944E5A0D4D307B278933DB21D73A30C692C1">OnTestPartResult</h3>
+      <p>public void OnTestPartResult(const TestPartResult &amp; test_part_result)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h#1191">1191</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-internal-inl.h">gtest-internal-inl.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FE35FF79209AE213158F898334E27DDDC27DD898">UrlEncode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F672584E26310E4FE02C9622453835ECF1C1B6AF">StreamingListener</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#770DA5B2930520397D40196A7A7C45D641A637F6">StreamingListener</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#039ABAA508EB7C0FAC71E23848F9AEA4ADFA7BCA">OnTestProgramStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32C79EB626A6E9481CBA9D048EB655A95386E4D8">OnTestProgramEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#932185070CBA452680827DEC9D8BA052D5329365">OnTestIterationStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D34C99AE343946559765D87132AA911071C8903">OnTestIterationEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F294758F7F0C3332A69EAE7F56BFD2C6B75E57B8">OnTestCaseStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0DC6ECC5BEE62BE3A606AC4F70318E9D965F9BB3">OnTestCaseEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E09ADB2298FB024FA3AE07E4A676D39F2347B84">OnTestStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#773C5178AC1ABC981F718DBA1919E939539C119D">OnTestEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44AA944E5A0D4D307B278933DB21D73A30C692C1">OnTestPartResult</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

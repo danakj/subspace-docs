@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ContentCache</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/SrcMgr" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ContentCache</h1>
+    <p>Defined at line 129 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+    <div>
+      <div>
+        <p> One instance of this struct is kept for every file loaded or used.</p>
+        <p> This object owns the MemoryBuffer object.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        public 
+        <a href="../../clang/OptionalFileEntryRefDegradesToFileEntryPtr.html">OptionalFileEntryRefDegradesToFileEntryPtr</a>
+         OrigEntry
+      </li>
+      <li>public const FileEntry * ContentsEntry</li>
+      <li>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Filename
+      </li>
+      <li>
+        public 
+        <a href="LineOffsetMapping.html">LineOffsetMapping</a>
+         SourceLineCache
+      </li>
+      <li>public unsigned int BufferOverridden</li>
+      <li>public unsigned int IsFileVolatile</li>
+      <li>public unsigned int IsTransient</li>
+      <li>public unsigned int IsBufferInvalid</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0F06C0393987DB5A0D09BCCCC03759C321200F4A">ContentCache</h3>
+      <p>public void ContentCache()</p>
+      <p>Defined at line 181 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="BA8D71F44A4AA057852091DA1530775A3E058CB3">ContentCache</h3>
+      <p>
+        public void ContentCache(
+        <a href="../../clang/FileEntryRef.html">FileEntryRef</a>
+         Ent)
+      </p>
+      <p>Defined at line 186 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="D36A6CE21820AB33A889EA8AE023A661066FA3D0">ContentCache</h3>
+      <p>
+        public void ContentCache(
+        <a href="../../clang/FileEntryRef.html">FileEntryRef</a>
+         Ent, const FileEntry * contentEnt)
+      </p>
+      <p>Defined at line 188 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="872F20A287A9462CAF19542A9CD7B7B79E59543C">ContentCache</h3>
+      <p>public void ContentCache(const ContentCache &amp; RHS)</p>
+      <p>Defined at line 195 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> The copy ctor does not allow copies where source object has either a non-NULL Buffer or SourceLineCache.  Ownership of allocated memory is not transferred, so this is a logical error.</p>
+        </div>
+      </div>
+      <h3 id="C5AEB638EB70B41661A8C8E8450C7BD97938B18A">operator=</h3>
+      <p>public ContentCache &amp; operator=(const ContentCache &amp; RHS)</p>
+      <p>Defined at line 205 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="849F87CF5C94A72C87F0DF5F774F238E3382F242">getBufferOrNone</h3>
+      <p>
+        public 
+        <a href="../../std/optional.html">optional</a>
+         getBufferOrNone(DiagnosticsEngine &amp; Diag, FileManager &amp; FM, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> Returns the memory buffer for the associated content.</p>
+        </div>
+      </div>
+      <h3 id="71D1271CE35940658E17F1618FB895841EB3F20F">getSize</h3>
+      <p>public unsigned int getSize()</p>
+      <div>
+        <div>
+          <p> Returns the size of the content encapsulated by this ContentCache.</p>
+          <p> This can be the size of the source file or the size of an arbitrary scratch buffer.  If the ContentCache encapsulates a source file this size is retrieved from the file&apos;s FileEntry.</p>
+        </div>
+      </div>
+      <h3 id="811E755556C8B81FF875777D63582ACE53756BE9">getSizeBytesMapped</h3>
+      <p>public unsigned int getSizeBytesMapped()</p>
+      <div>
+        <div>
+          <p> Returns the number of bytes actually mapped for this ContentCache.</p>
+          <p> This can be 0 if the MemBuffer was not actually expanded.</p>
+        </div>
+      </div>
+      <h3 id="21A73BADFDC3743358B4CC8719367A237079E596">getMemoryBufferKind</h3>
+      <p>
+        public 
+        <a href="../../llvm/MemoryBuffer/BufferKind.html">BufferKind</a>
+         getMemoryBufferKind()
+      </p>
+      <div>
+        <div>
+          <p> Returns the kind of memory used to back the memory buffer for this content cache.  This is used for performance analysis.</p>
+        </div>
+      </div>
+      <h3 id="2DDF7FA42A7F1A1281E78F2CC38B22E2A8780F72">getBufferIfLoaded</h3>
+      <p>
+        public 
+        <a href="../../std/optional.html">optional</a>
+         getBufferIfLoaded()
+      </p>
+      <p>Defined at line 237 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return the buffer, only if it has been loaded.</p>
+        </div>
+      </div>
+      <h3 id="7094E7F84E6FA5997C5A3F7AFFE8E12453689F43">getBufferDataIfLoaded</h3>
+      <p>
+        public 
+        <a href="../../std/optional.html">optional</a>
+         getBufferDataIfLoaded()
+      </p>
+      <p>Defined at line 245 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return a StringRef to the source buffer data, only if it has already been loaded.</p>
+        </div>
+      </div>
+      <h3 id="106EEDA54C1A253885BF6F1D0943EEB0AFE3EBE4">setBuffer</h3>
+      <p>
+        public void setBuffer(
+        <a href="../../std/unique_ptr.html">unique_ptr</a>
+         B)
+      </p>
+      <p>Defined at line 252 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Set the buffer.</p>
+        </div>
+      </div>
+      <h3 id="39B4258D166DB09E11F949F8D6D75980331870FA">setUnownedBuffer</h3>
+      <p>
+        public void setUnownedBuffer(
+        <a href="../../std/optional.html">optional</a>
+         B)
+      </p>
+      <p>Defined at line 260 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Set the buffer to one that&apos;s not owned (or to nullptr).</p>
+        </div>
+      </div>
+      <h3 id="46C2C10D9C2AB39CD56C0646FBE599C6FDDEA33E">getInvalidBOM</h3>
+      <p>
+        public const char * getInvalidBOM(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         BufStr)
+      </p>
+      <div>
+        <div>
+          <p> If BufStr has an invalid BOM, returns the BOM name; otherwise, returns nullptr</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0F06C0393987DB5A0D09BCCCC03759C321200F4A">ContentCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA8D71F44A4AA057852091DA1530775A3E058CB3">ContentCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D36A6CE21820AB33A889EA8AE023A661066FA3D0">ContentCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#872F20A287A9462CAF19542A9CD7B7B79E59543C">ContentCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5AEB638EB70B41661A8C8E8450C7BD97938B18A">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#849F87CF5C94A72C87F0DF5F774F238E3382F242">getBufferOrNone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71D1271CE35940658E17F1618FB895841EB3F20F">getSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#811E755556C8B81FF875777D63582ACE53756BE9">getSizeBytesMapped</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21A73BADFDC3743358B4CC8719367A237079E596">getMemoryBufferKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2DDF7FA42A7F1A1281E78F2CC38B22E2A8780F72">getBufferIfLoaded</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7094E7F84E6FA5997C5A3F7AFFE8E12453689F43">getBufferDataIfLoaded</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#106EEDA54C1A253885BF6F1D0943EEB0AFE3EBE4">setBuffer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39B4258D166DB09E11F949F8D6D75980331870FA">setUnownedBuffer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#46C2C10D9C2AB39CD56C0646FBE599C6FDDEA33E">getInvalidBOM</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

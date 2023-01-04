@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TargetAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TargetAttr</h1>
+    <p>Defined at line 11538 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F36590144679B5E59D04326A22B330C1EC56AAAE">CreateImplicit</h3>
+      <p>
+        public TargetAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         FeaturesStr, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="08F6DE429C4ABD7F9173DB4CABC3163D6C159F74">Create</h3>
+      <p>
+        public TargetAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         FeaturesStr, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="5CAC7BB97686E74B9367CB28DEFC573703EFD623">CreateImplicit</h3>
+      <p>
+        public TargetAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         FeaturesStr, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="FA30570B48A0FEB292F8A1A4D56ACA37BC090076">Create</h3>
+      <p>
+        public TargetAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         FeaturesStr, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="DB5EB37B78008ABF3AB153DA1434E4E20C500479">TargetAttr</h3>
+      <p>
+        public void TargetAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         FeaturesStr)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="ABE08D7D94DEE78D2515DAD48C361D9614C8D9D3">clone</h3>
+      <p>public TargetAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="F201F4CDF16B94D149CE7B43FBD2B4A8BF81C70E">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="EF73401EA8E76E25775EEFA06A314C95C2396A3E">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="3253C2B6186B5339571ECB51D08428DE4C164DE8">getFeaturesStr</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getFeaturesStr()
+      </p>
+      <p>Defined at line 11566 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="0A3B75F89D710C4C6B7C75BF435E36ED01C249AF">getFeaturesStrLength</h3>
+      <p>public unsigned int getFeaturesStrLength()</p>
+      <p>Defined at line 11569 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="6F9FA9927A83A3C18EDD2938C1B1F16AFB8435C1">setFeaturesStr</h3>
+      <p>
+        public void setFeaturesStr(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 11572 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="F15CAD644709B955875302E96CE7B50766323DB4">getArchitecture</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getArchitecture()
+      </p>
+      <p>Defined at line 11580 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="1B61E311E01EE9DF75D101363CBE57691C064B09">getAddedFeatures</h3>
+      <p>public void getAddedFeatures(llvm::SmallVectorImpl&lt;StringRef&gt; &amp; Out)</p>
+      <p>Defined at line 11597 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <div>
+        <div>
+          <p> Gets the list of features as simple string-refs with no +/- or &apos;no-&apos;. Only adds the items to &apos;Out&apos; that are additions.</p>
+        </div>
+      </div>
+      <h3 id="C0F6BEBB745A7F007BEA51596BC9ED05FEE9EA9A">isDefaultVersion</h3>
+      <p>public _Bool isDefaultVersion()</p>
+      <p>Defined at line 11613 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="94AF765C847F8D7232D540A30C0453BB7656F7BA">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 11616 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="A0F8E4AF6143F50EB32BBA2868C66FF4876C4862">enum Spelling</h3>
+      <ul>
+        <li>GNU_target</li>
+        <li>CXX11_gnu_target</li>
+        <li>C2x_gnu_target</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 11543 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F36590144679B5E59D04326A22B330C1EC56AAAE">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08F6DE429C4ABD7F9173DB4CABC3163D6C159F74">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5CAC7BB97686E74B9367CB28DEFC573703EFD623">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA30570B48A0FEB292F8A1A4D56ACA37BC090076">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB5EB37B78008ABF3AB153DA1434E4E20C500479">TargetAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ABE08D7D94DEE78D2515DAD48C361D9614C8D9D3">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F201F4CDF16B94D149CE7B43FBD2B4A8BF81C70E">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF73401EA8E76E25775EEFA06A314C95C2396A3E">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3253C2B6186B5339571ECB51D08428DE4C164DE8">getFeaturesStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A3B75F89D710C4C6B7C75BF435E36ED01C249AF">getFeaturesStrLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F9FA9927A83A3C18EDD2938C1B1F16AFB8435C1">setFeaturesStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F15CAD644709B955875302E96CE7B50766323DB4">getArchitecture</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B61E311E01EE9DF75D101363CBE57691C064B09">getAddedFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0F6BEBB745A7F007BEA51596BC9ED05FEE9EA9A">isDefaultVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#94AF765C847F8D7232D540A30C0453BB7656F7BA">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A0F8E4AF6143F50EB32BBA2868C66FF4876C4862">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

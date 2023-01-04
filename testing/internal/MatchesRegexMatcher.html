@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MatchesRegexMatcher</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MatchesRegexMatcher</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#796">796</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Implements polymorphic matchers MatchesRegex(regex) and ContainsRegex(regex), which can be used as a Matcher&lt;T&gt; as long as T can be converted to a string.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CC6EEA545676E270B0860F387F33FAEE62FBA43B">MatchesRegexMatcher</h3>
+      <p>public void MatchesRegexMatcher(const RE * regex, _Bool full_match)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#798">798</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <h3 id="E6A6EAD2DD6364DA06F685D8C6D2385602A9DF68">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(const internal::StringView &amp; s, MatchResultListener * listener)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#802">802</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <h3 id="7D9C883B7C4A508F8B54175B675E625869A1D413">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(CharType * s, MatchResultListener * listener)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#814">814</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Accepts pointer types, particularly:   const char*   char*   const wchar_t*   wchar_t*</p>
+        </div>
+      </div>
+      <h3 id="42AF42CA200D36B44EAA3877CB0837AE1A464E79">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(const MatcheeStringType &amp; s, MatchResultListener * )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#823">823</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Matches anything that can convert to std::string.</p>
+          <p> This is a template, not just a plain function with const std::string&amp;, because absl::string_view has some interfering non-explicit constructors.</p>
+        </div>
+      </div>
+      <h3 id="EF15CBEE0180D782C71FCF51BAA178CC341052BE">DescribeTo</h3>
+      <p>public void DescribeTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#830">830</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <h3 id="2D49C7744DC09E0ACB8311A7D55E0C808FEE7E43">DescribeNegationTo</h3>
+      <p>public void DescribeNegationTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#835">835</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CC6EEA545676E270B0860F387F33FAEE62FBA43B">MatchesRegexMatcher</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6A6EAD2DD6364DA06F685D8C6D2385602A9DF68">MatchAndExplain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D9C883B7C4A508F8B54175B675E625869A1D413">MatchAndExplain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42AF42CA200D36B44EAA3877CB0837AE1A464E79">MatchAndExplain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF15CBEE0180D782C71FCF51BAA178CC341052BE">DescribeTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D49C7744DC09E0ACB8311A7D55E0C808FEE7E43">DescribeNegationTo</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

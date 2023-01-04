@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SmallPtrSetImpl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SmallPtrSetImpl</h1>
+    <p>Defined at line 344 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+    <div>
+      <div>
+        <p> A templated base class for  which provides the typesafe interface that is common across all small sizes.</p>
+        <p> This is particularly useful for passing around between interface boundaries to avoid encoding a particular small size in the interface boundary.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="SmallPtrSetImplBase.html">SmallPtrSetImplBase</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4CC3C2116F1413F09A1E08B276F1F2B699A8E2E3">SmallPtrSetImpl&lt;PtrType&gt;</h3>
+      <p>public void SmallPtrSetImpl&lt;PtrType&gt;(const SmallPtrSetImpl&lt;PtrType&gt; &amp; )</p>
+      <p>Defined at line 359 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <h3 id="954E6E1C26E0BD93B4584368A96E138512D11D57">insert</h3>
+      <p>public std::pair&lt;iterator, _Bool&gt; insert(PtrType Ptr)</p>
+      <p>Defined at line 365 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <div>
+        <div>
+          <p> Inserts Ptr if and only if there is no element in the container equal to Ptr. The bool component of the returned pair is true if and only if the insertion takes place, and the iterator component of the pair points to the element equal to Ptr.</p>
+        </div>
+      </div>
+      <h3 id="0D032980BB56875DC80B0E07D79C814702FB3C15">insert</h3>
+      <p>public iterator insert(iterator , PtrType Ptr)</p>
+      <p>Defined at line 373 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <div>
+        <div>
+          <p> Insert the given pointer with an iterator hint that is ignored. This is identical to calling insert(Ptr), but allows SmallPtrSet to be used by std::insert_iterator and std::inserter().</p>
+        </div>
+      </div>
+      <h3 id="296355035F7E480D33F5898E768E4D27737A3BBE">erase</h3>
+      <p>public _Bool erase(PtrType Ptr)</p>
+      <p>Defined at line 379 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <div>
+        <div>
+          <p> erase - If the set contains the specified pointer, remove it and return true, otherwise return false.</p>
+        </div>
+      </div>
+      <h3 id="98AA925E66004E9ABA9FAB16A6605F3A982ABB4E">count</h3>
+      <p>public size_type count(ConstPtrType Ptr)</p>
+      <p>Defined at line 383 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <div>
+        <div>
+          <p> count - Return 1 if the specified pointer is in the set, 0 otherwise.</p>
+        </div>
+      </div>
+      <h3 id="F70A60A6BBA542C12883CA5B194510FEBF1DDF4E">find</h3>
+      <p>public iterator find(ConstPtrType Ptr)</p>
+      <p>Defined at line 386 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <h3 id="84E0B150452EAAE831DF702EE0C3A77EFFB7CAD4">contains</h3>
+      <p>public _Bool contains(ConstPtrType Ptr)</p>
+      <p>Defined at line 389 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <h3 id="A8FE37738FCBBE692759F0E1DA29213AE6B88A55">insert</h3>
+      <p>public void insert(IterT I, IterT E)</p>
+      <p>Defined at line 394 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <h3 id="31BE28059D100062A976F468DFD691A7684885E3">insert</h3>
+      <p>public void insert(std::initializer_list&lt;PtrType&gt; IL)</p>
+      <p>Defined at line 399 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <h3 id="70C4A7C9D221C25DA4D52BA379EF926C395B6794">begin</h3>
+      <p>public iterator begin()</p>
+      <p>Defined at line 403 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <h3 id="3EBF707BB75CF570B294C672EAB72B88A7BD27B7">end</h3>
+      <p>public iterator end()</p>
+      <p>Defined at line 408 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4CC3C2116F1413F09A1E08B276F1F2B699A8E2E3">SmallPtrSetImpl&lt;PtrType&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#954E6E1C26E0BD93B4584368A96E138512D11D57">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D032980BB56875DC80B0E07D79C814702FB3C15">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#296355035F7E480D33F5898E768E4D27737A3BBE">erase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98AA925E66004E9ABA9FAB16A6605F3A982ABB4E">count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F70A60A6BBA542C12883CA5B194510FEBF1DDF4E">find</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84E0B150452EAAE831DF702EE0C3A77EFFB7CAD4">contains</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8FE37738FCBBE692759F0E1DA29213AE6B88A55">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31BE28059D100062A976F468DFD691A7684885E3">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70C4A7C9D221C25DA4D52BA379EF926C395B6794">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EBF707BB75CF570B294C672EAB72B88A7BD27B7">end</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

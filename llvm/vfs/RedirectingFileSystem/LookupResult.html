@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct LookupResult</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/vfs/RedirectingFileSystem" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct LookupResult</h1>
+    <p>Defined at line 874 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    <div>
+      <div>
+        <p> Represents the result of a path lookup into the RedirectingFileSystem.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public Entry * E</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7246FF7D96B7BFE260AACB17BF36AC20125536F7">LookupResult</h3>
+      <p>
+        public void LookupResult(Entry * E, 
+        <a href="../../../llvm/sys/path/const_iterator.html">const_iterator</a>
+         Start, 
+        <a href="../../../llvm/sys/path/const_iterator.html">const_iterator</a>
+         End)
+      </p>
+      <h3 id="3498F1D59C0112A34B760A888D1DB6F0BB3DACD7">getExternalRedirect</h3>
+      <p>
+        public 
+        <a href="../../../std/optional.html">optional</a>
+         getExternalRedirect()
+      </p>
+      <p>Defined at line 891 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <div>
+        <div>
+          <p> If the found Entry maps the the input path to a path in the external file system (i.e. it is a FileEntry or DirectoryRemapEntry), returns that path.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7246FF7D96B7BFE260AACB17BF36AC20125536F7">LookupResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3498F1D59C0112A34B760A888D1DB6F0BB3DACD7">getExternalRedirect</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

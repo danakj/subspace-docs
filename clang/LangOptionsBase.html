@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class LangOptionsBase</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class LangOptionsBase</h1>
+    <p>Defined at line 34 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+    <div>
+      <div>
+        <p> Bitfields of LangOptions, split out from LangOptions in order to ensure that this large collection of bitfields is a trivial class type.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public unsigned int C99</li>
+      <li>public unsigned int C11</li>
+      <li>public unsigned int C17</li>
+      <li>public unsigned int C2x</li>
+      <li>public unsigned int MSVCCompat</li>
+      <li>public unsigned int Kernel</li>
+      <li>public unsigned int MicrosoftExt</li>
+      <li>public unsigned int AsmBlocks</li>
+      <li>public unsigned int Borland</li>
+      <li>public unsigned int CPlusPlus</li>
+      <li>public unsigned int CPlusPlus11</li>
+      <li>public unsigned int CPlusPlus14</li>
+      <li>public unsigned int CPlusPlus17</li>
+      <li>public unsigned int CPlusPlus20</li>
+      <li>public unsigned int CPlusPlus2b</li>
+      <li>public unsigned int ObjC</li>
+      <li>public unsigned int ObjCDefaultSynthProperties</li>
+      <li>public unsigned int EncodeExtendedBlockSig</li>
+      <li>public unsigned int EncodeCXXClassTemplateSpec</li>
+      <li>public unsigned int ObjCInferRelatedResultType</li>
+      <li>public unsigned int AppExt</li>
+      <li>public unsigned int Trigraphs</li>
+      <li>public unsigned int LineComment</li>
+      <li>public unsigned int Bool</li>
+      <li>public unsigned int Half</li>
+      <li>public unsigned int WChar</li>
+      <li>public unsigned int Char8</li>
+      <li>public unsigned int IEEE128</li>
+      <li>public unsigned int DeclSpecKeyword</li>
+      <li>public unsigned int DollarIdents</li>
+      <li>public unsigned int AsmPreprocessor</li>
+      <li>public unsigned int GNUMode</li>
+      <li>public unsigned int GNUKeywords</li>
+      <li>public unsigned int GNUCVersion</li>
+      <li>public unsigned int DisableKNRFunctions</li>
+      <li>public unsigned int Digraphs</li>
+      <li>public unsigned int HexFloats</li>
+      <li>public unsigned int CXXOperatorNames</li>
+      <li>public unsigned int AppleKext</li>
+      <li>public unsigned int PascalStrings</li>
+      <li>public unsigned int WritableStrings</li>
+      <li>public unsigned int ConstStrings</li>
+      <li>public unsigned int ConvergentFunctions</li>
+      <li>public unsigned int AltiVec</li>
+      <li>public unsigned int ZVector</li>
+      <li>public unsigned int Exceptions</li>
+      <li>public unsigned int ObjCExceptions</li>
+      <li>public unsigned int CXXExceptions</li>
+      <li>public unsigned int EHAsynch</li>
+      <li>public unsigned int IgnoreExceptions</li>
+      <li>public unsigned int ExternCNoUnwind</li>
+      <li>public unsigned int TraditionalCPP</li>
+      <li>public unsigned int RTTI</li>
+      <li>public unsigned int RTTIData</li>
+      <li>public unsigned int MSBitfields</li>
+      <li>public unsigned int MSVolatile</li>
+      <li>public unsigned int Freestanding</li>
+      <li>public unsigned int NoBuiltin</li>
+      <li>public unsigned int NoMathBuiltin</li>
+      <li>public unsigned int GNUAsm</li>
+      <li>public unsigned int Coroutines</li>
+      <li>public unsigned int CoroAlignedAllocation</li>
+      <li>public unsigned int DllExportInlines</li>
+      <li>public unsigned int RelaxedTemplateTemplateArgs</li>
+      <li>public unsigned int ExperimentalLibrary</li>
+      <li>public unsigned int DoubleSquareBracketAttributes</li>
+      <li>public unsigned int RecoveryAST</li>
+      <li>public unsigned int RecoveryASTType</li>
+      <li>public unsigned int ThreadsafeStatics</li>
+      <li>public unsigned int POSIXThreads</li>
+      <li>public unsigned int Blocks</li>
+      <li>public unsigned int EmitAllDecls</li>
+      <li>public unsigned int MathErrno</li>
+      <li>public unsigned int HeinousExtensions</li>
+      <li>public unsigned int Modules</li>
+      <li>public unsigned int ModulesTS</li>
+      <li>public unsigned int CPlusPlusModules</li>
+      <li>public unsigned int CompilingPCH</li>
+      <li>public unsigned int BuildingPCHWithObjectFile</li>
+      <li>public unsigned int CacheGeneratedPCH</li>
+      <li>public unsigned int PCHInstantiateTemplates</li>
+      <li>public unsigned int ModulesDeclUse</li>
+      <li>public unsigned int ModulesSearchAll</li>
+      <li>public unsigned int ModulesStrictDeclUse</li>
+      <li>public unsigned int ModulesValidateTextualHeaderIncludes</li>
+      <li>public unsigned int ModulesErrorRecovery</li>
+      <li>public unsigned int ImplicitModules</li>
+      <li>public unsigned int ModulesLocalVisibility</li>
+      <li>public unsigned int Optimize</li>
+      <li>public unsigned int OptimizeSize</li>
+      <li>public unsigned int Static</li>
+      <li>public unsigned int PackStruct</li>
+      <li>public unsigned int MaxTypeAlign</li>
+      <li>public unsigned int AlignDouble</li>
+      <li>public unsigned int DoubleSize</li>
+      <li>public unsigned int LongDoubleSize</li>
+      <li>public unsigned int PPCIEEELongDouble</li>
+      <li>public unsigned int EnableAIXExtendedAltivecABI</li>
+      <li>public unsigned int EnableAIXQuadwordAtomicsABI</li>
+      <li>public unsigned int PICLevel</li>
+      <li>public unsigned int PIE</li>
+      <li>public unsigned int ROPI</li>
+      <li>public unsigned int RWPI</li>
+      <li>public unsigned int GNUInline</li>
+      <li>public unsigned int NoInlineDefine</li>
+      <li>public unsigned int Deprecated</li>
+      <li>public unsigned int FastMath</li>
+      <li>public unsigned int FiniteMathOnly</li>
+      <li>public unsigned int UnsafeFPMath</li>
+      <li>public unsigned int ProtectParens</li>
+      <li>public unsigned int AllowFPReassoc</li>
+      <li>public unsigned int NoHonorNaNs</li>
+      <li>public unsigned int NoHonorInfs</li>
+      <li>public unsigned int NoSignedZero</li>
+      <li>public unsigned int AllowRecip</li>
+      <li>public unsigned int ApproxFunc</li>
+      <li>public unsigned int ObjCGCBitmapPrint</li>
+      <li>public unsigned int AccessControl</li>
+      <li>public unsigned int CharIsSigned</li>
+      <li>public unsigned int WCharSize</li>
+      <li>public unsigned int WCharIsSigned</li>
+      <li>public unsigned int ShortEnums</li>
+      <li>public unsigned int OpenCL</li>
+      <li>public unsigned int OpenCLVersion</li>
+      <li>public unsigned int OpenCLCPlusPlus</li>
+      <li>public unsigned int OpenCLCPlusPlusVersion</li>
+      <li>public unsigned int OpenCLGenericAddressSpace</li>
+      <li>public unsigned int OpenCLPipes</li>
+      <li>public unsigned int NativeHalfType</li>
+      <li>public unsigned int NativeHalfArgsAndReturns</li>
+      <li>public unsigned int CUDA</li>
+      <li>public unsigned int HIP</li>
+      <li>public unsigned int OpenMP</li>
+      <li>public unsigned int OpenMPExtensions</li>
+      <li>public unsigned int OpenMPSimd</li>
+      <li>public unsigned int OpenMPUseTLS</li>
+      <li>public unsigned int OpenMPIsDevice</li>
+      <li>public unsigned int OpenMPCUDAMode</li>
+      <li>public unsigned int OpenMPIRBuilder</li>
+      <li>public unsigned int OpenMPCUDANumSMs</li>
+      <li>public unsigned int OpenMPCUDABlocksPerSM</li>
+      <li>public unsigned int OpenMPCUDAReductionBufNum</li>
+      <li>public unsigned int OpenMPTargetDebug</li>
+      <li>public unsigned int OpenMPOptimisticCollapse</li>
+      <li>public unsigned int OpenMPThreadSubscription</li>
+      <li>public unsigned int OpenMPTeamSubscription</li>
+      <li>public unsigned int OpenMPNoThreadState</li>
+      <li>public unsigned int OpenMPNoNestedParallelism</li>
+      <li>public unsigned int OpenMPOffloadMandatory</li>
+      <li>public unsigned int NoGPULib</li>
+      <li>public unsigned int RenderScript</li>
+      <li>public unsigned int HLSL</li>
+      <li>public unsigned int CUDAIsDevice</li>
+      <li>public unsigned int CUDAAllowVariadicFunctions</li>
+      <li>public unsigned int CUDAHostDeviceConstexpr</li>
+      <li>public unsigned int CUDADeviceApproxTranscendentals</li>
+      <li>public unsigned int GPURelocatableDeviceCode</li>
+      <li>public unsigned int GPUAllowDeviceInit</li>
+      <li>public unsigned int GPUMaxThreadsPerBlock</li>
+      <li>public unsigned int GPUDeferDiag</li>
+      <li>public unsigned int GPUExcludeWrongSideOverloads</li>
+      <li>public unsigned int OffloadingNewDriver</li>
+      <li>public unsigned int SYCLIsDevice</li>
+      <li>public unsigned int SYCLIsHost</li>
+      <li>public unsigned int HIPUseNewLaunchAPI</li>
+      <li>public unsigned int SizedDeallocation</li>
+      <li>public unsigned int AlignedAllocation</li>
+      <li>public unsigned int AlignedAllocationUnavailable</li>
+      <li>public unsigned int NewAlignOverride</li>
+      <li>public unsigned int ModulesCodegen</li>
+      <li>public unsigned int ModulesDebugInfo</li>
+      <li>public unsigned int ElideConstructors</li>
+      <li>public unsigned int DumpRecordLayouts</li>
+      <li>public unsigned int DumpRecordLayoutsSimple</li>
+      <li>public unsigned int DumpRecordLayoutsCanonical</li>
+      <li>public unsigned int DumpRecordLayoutsComplete</li>
+      <li>public unsigned int DumpVTableLayouts</li>
+      <li>public unsigned int NoConstantCFStrings</li>
+      <li>public unsigned int InlineVisibilityHidden</li>
+      <li>public unsigned int IgnoreXCOFFVisibility</li>
+      <li>public unsigned int VisibilityInlinesHiddenStaticLocalVar</li>
+      <li>public unsigned int GlobalAllocationFunctionVisibilityHidden</li>
+      <li>public unsigned int NewInfallible</li>
+      <li>public unsigned int ParseUnknownAnytype</li>
+      <li>public unsigned int DebuggerSupport</li>
+      <li>public unsigned int DebuggerCastResultToId</li>
+      <li>public unsigned int DebuggerObjCLiteral</li>
+      <li>public unsigned int SpellChecking</li>
+      <li>public unsigned int SinglePrecisionConstants</li>
+      <li>public unsigned int FastRelaxedMath</li>
+      <li>public unsigned int CLNoSignedZero</li>
+      <li>public unsigned int CLUnsafeMath</li>
+      <li>public unsigned int CLFiniteMathOnly</li>
+      <li>public unsigned int ExpStrictFP</li>
+      <li>public unsigned int RoundingMath</li>
+      <li>public unsigned int NoBitFieldTypeAlign</li>
+      <li>public unsigned int HexagonQdsp6Compat</li>
+      <li>public unsigned int ObjCAutoRefCount</li>
+      <li>public unsigned int ObjCWeakRuntime</li>
+      <li>public unsigned int ObjCWeak</li>
+      <li>public unsigned int ObjCSubscriptingLegacyRuntime</li>
+      <li>public unsigned int CompatibilityQualifiedIdBlockParamTypeChecking</li>
+      <li>public unsigned int ObjCDisableDirectMethodsForTesting</li>
+      <li>public unsigned int CFProtectionBranch</li>
+      <li>public unsigned int FakeAddressSpaceMap</li>
+      <li>public unsigned int IncludeDefaultHeader</li>
+      <li>public unsigned int DeclareOpenCLBuiltins</li>
+      <li>public unsigned int DelayedTemplateParsing</li>
+      <li>public unsigned int BlocksRuntimeOptional</li>
+      <li>public unsigned int CompleteMemberPointers</li>
+      <li>public unsigned int SetVisibilityForExternDecls</li>
+      <li>public unsigned int VisibilityFromDLLStorageClass</li>
+      <li>public unsigned int SemanticInterposition</li>
+      <li>public unsigned int HalfNoSemanticInterposition</li>
+      <li>public unsigned int TrivialAutoVarInitStopAfter</li>
+      <li>public unsigned int ArrowDepth</li>
+      <li>public unsigned int InstantiationDepth</li>
+      <li>public unsigned int ConstexprCallDepth</li>
+      <li>public unsigned int ConstexprStepLimit</li>
+      <li>public unsigned int EnableNewConstInterp</li>
+      <li>public unsigned int BracketDepth</li>
+      <li>public unsigned int NumLargeByValueCopy</li>
+      <li>public unsigned int MSCompatibilityVersion</li>
+      <li>public unsigned int ApplePragmaPack</li>
+      <li>public unsigned int XLPragmaPack</li>
+      <li>public unsigned int RetainCommentsFromSystemHeaders</li>
+      <li>public unsigned int SanitizeAddressFieldPadding</li>
+      <li>public unsigned int Cmse</li>
+      <li>public unsigned int XRayInstrument</li>
+      <li>public unsigned int XRayAlwaysEmitCustomEvents</li>
+      <li>public unsigned int XRayAlwaysEmitTypedEvents</li>
+      <li>public unsigned int ForceEmitVTables</li>
+      <li>public unsigned int AllowEditorPlaceholders</li>
+      <li>public unsigned int FunctionAlignment</li>
+      <li>public unsigned int LoopAlignment</li>
+      <li>public unsigned int FixedPoint</li>
+      <li>public unsigned int PaddingOnUnsignedFixedPoint</li>
+      <li>public unsigned int RegisterStaticDestructors</li>
+      <li>public unsigned int MatrixTypes</li>
+      <li>public unsigned int MaxTokens</li>
+      <li>public unsigned int BranchTargetEnforcement</li>
+      <li>public unsigned int SpeculativeLoadHardening</li>
+      <li>public unsigned int RelativeCXXABIVTables</li>
+      <li>public unsigned int VScaleMin</li>
+      <li>public unsigned int VScaleMax</li>
+      <li>public unsigned int FuchsiaAPILevel</li>
+      <li>public unsigned int MaxBitIntWidth</li>
+      <li>public unsigned int IncrementalExtensions</li>
+      <li>protected unsigned int LaxVectorConversions</li>
+      <li>protected unsigned int AltivecSrcCompat</li>
+      <li>protected unsigned int ExceptionHandling</li>
+      <li>protected unsigned int CompilingModule</li>
+      <li>protected unsigned int MSPointerToMemberRepresentationMethod</li>
+      <li>protected unsigned int DefaultCallingConv</li>
+      <li>protected unsigned int HLSLVersion</li>
+      <li>protected unsigned int SYCLVersion</li>
+      <li>protected unsigned int DefaultVisibilityExportMapping</li>
+      <li>protected unsigned int DefaultFPContractMode</li>
+      <li>protected unsigned int FPExceptionMode</li>
+      <li>protected unsigned int FPEvalMethod</li>
+      <li>protected unsigned int AddressSpaceMapMangling</li>
+      <li>protected unsigned int GC</li>
+      <li>protected unsigned int ValueVisibilityMode</li>
+      <li>protected unsigned int TypeVisibilityMode</li>
+      <li>protected unsigned int DLLExportVisibility</li>
+      <li>protected unsigned int NoDLLStorageClassVisibility</li>
+      <li>protected unsigned int ExternDeclDLLImportVisibility</li>
+      <li>protected unsigned int ExternDeclNoDLLStorageClassVisibility</li>
+      <li>protected unsigned int StackProtector</li>
+      <li>protected unsigned int TrivialAutoVarInit</li>
+      <li>protected unsigned int SignedOverflowBehavior</li>
+      <li>protected unsigned int ThreadModel</li>
+      <li>protected unsigned int VtorDispMode</li>
+      <li>protected unsigned int ClangABICompat</li>
+      <li>protected unsigned int StrictFlexArraysLevel</li>
+      <li>protected unsigned int SignReturnAddressScope</li>
+      <li>protected unsigned int SignReturnAddressKey</li>
+      <li>protected unsigned int ExtendIntArgs</li>
+    </ul>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

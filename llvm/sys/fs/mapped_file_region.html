@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class mapped_file_region</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/sys/fs" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class mapped_file_region</h1>
+    <p>Defined at line 1269 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+    <div>
+      <div>
+        <p> This class represents a memory mapped file. It is based on boost::iostreams::mapped_file.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="6C557B74F65B6021FF46841BF710522C45FB9EAA">mapped_file_region</h3>
+      <p>public void mapped_file_region()</p>
+      <p>Defined at line 1306 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="32BA3BA94F59BD5D65F11DB6F0DEBE851DA49735">mapped_file_region</h3>
+      <p>public void mapped_file_region(mapped_file_region &amp;&amp; Moved)</p>
+      <p>Defined at line 1307 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="5F104E5CE3AED0B26E5D91C099D64FF6FB012665">operator=</h3>
+      <p>public mapped_file_region &amp; operator=(mapped_file_region &amp;&amp; Moved)</p>
+      <p>Defined at line 1308 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="AFCC4663BCDB5348B11B3F4B213B45B21487891B">mapped_file_region</h3>
+      <p>public void mapped_file_region(const mapped_file_region &amp; )</p>
+      <p>Defined at line 1314 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="5E6722A71338723665754EEBE9AC9D7DD0BA8CA4">operator=</h3>
+      <p>public mapped_file_region &amp; operator=(const mapped_file_region &amp; )</p>
+      <p>Defined at line 1315 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="C84F1F0DF47AF12DA79E4AC9777916EE5FF64DC6">mapped_file_region</h3>
+      <p>
+        public void mapped_file_region(sys::fs::file_t fd, 
+        <a href="../../../llvm/sys/fs/mapped_file_region/mapmode.html">mapmode</a>
+         mode, size_t length, uint64_t offset, std::error_code &amp; ec)
+      </p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="585F97F1627B5EC10643CE62776A641C5ED93AE1">~mapped_file_region</h3>
+      <p>public void ~mapped_file_region()</p>
+      <p>Defined at line 1321 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="1AE7ADBCA3A594A7EE69F5501FF3BDE2A476BBA9">operator bool</h3>
+      <p>public _Bool operator bool()</p>
+      <p>Defined at line 1324 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Check if this is a valid mapping.</p>
+        </div>
+      </div>
+      <h3 id="E9D409B7FFDC68272747543A9671770E0576E364">unmap</h3>
+      <p>public void unmap()</p>
+      <p>Defined at line 1327 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <div>
+        <div>
+          <p> Unmap.</p>
+        </div>
+      </div>
+      <h3 id="D26829992A1D9385252A920E84E81AD373FB7AA2">dontNeed</h3>
+      <p>public void dontNeed()</p>
+      <p>Defined at line 1331 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+      <h3 id="D42ACE293134A8969BC6DC8865F1E4E3D08A6F3C">size</h3>
+      <p>public size_t size()</p>
+      <h3 id="B9FD1EA29B84D4FFDF8A1D7C7AE85D1F70777A9A">data</h3>
+      <p>public char * data()</p>
+      <h3 id="1F0D79FD4516591B32B7843E650F86BDDD2E048D">const_data</h3>
+      <p>public const char * const_data()</p>
+      <div>
+        <div>
+          <p> Get a const view of the data. Modifying this memory has undefined behavior.</p>
+        </div>
+      </div>
+      <h3 id="75231D1E00160D6CF6EDEA4B03C22087CBF5FED7">alignment</h3>
+      <p>public int alignment()</p>
+      <div>
+        <div></div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="776C770FA1B6ECA639C7828F77F8245B9955D9FE">enum mapmode</h3>
+      <ul>
+        <li>readonly</li>
+        <li>readwrite</li>
+        <li>priv</li>
+      </ul>
+      <p>Defined at line 1271 of file /usr/lib/llvm-16/include/llvm/Support/FileSystem.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6C557B74F65B6021FF46841BF710522C45FB9EAA">mapped_file_region</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32BA3BA94F59BD5D65F11DB6F0DEBE851DA49735">mapped_file_region</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F104E5CE3AED0B26E5D91C099D64FF6FB012665">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFCC4663BCDB5348B11B3F4B213B45B21487891B">mapped_file_region</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E6722A71338723665754EEBE9AC9D7DD0BA8CA4">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C84F1F0DF47AF12DA79E4AC9777916EE5FF64DC6">mapped_file_region</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#585F97F1627B5EC10643CE62776A641C5ED93AE1">~mapped_file_region</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1AE7ADBCA3A594A7EE69F5501FF3BDE2A476BBA9">operator bool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9D409B7FFDC68272747543A9671770E0576E364">unmap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D26829992A1D9385252A920E84E81AD373FB7AA2">dontNeed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D42ACE293134A8969BC6DC8865F1E4E3D08A6F3C">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9FD1EA29B84D4FFDF8A1D7C7AE85D1F70777A9A">data</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1F0D79FD4516591B32B7843E650F86BDDD2E048D">const_data</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75231D1E00160D6CF6EDEA4B03C22087CBF5FED7">alignment</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#776C770FA1B6ECA639C7828F77F8245B9955D9FE">mapmode</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

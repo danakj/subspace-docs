@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class basic_parser_impl</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class basic_parser_impl</h1>
+    <p>Defined at line 882 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <div>
+      <div>
+        <p>-------------------------------------------------- Super class of parsers to provide boilerplate code</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="29FB81419ED142481073582CF44A2EB56EF7734E">basic_parser_impl</h3>
+      <p>public void basic_parser_impl(Option &amp; )</p>
+      <p>Defined at line 884 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="C7889342A935EF0D686D44875DF501ED3E74EA8B">~basic_parser_impl</h3>
+      <p>public void ~basic_parser_impl()</p>
+      <p>Defined at line 886 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="A8E1168E292604FE1A47F0B32FEACE729D0838C6">getValueExpectedFlagDefault</h3>
+      <p>
+        public 
+        <a href="ValueExpected.html">ValueExpected</a>
+         getValueExpectedFlagDefault()
+      </p>
+      <p>Defined at line 888 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="FAE981265C722243095589C9B931EF821BB18850">getExtraOptionNames</h3>
+      <p>public void getExtraOptionNames(SmallVectorImpl&lt;StringRef&gt; &amp; )</p>
+      <p>Defined at line 892 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="E719F1DF377EA395029A8CB0DA674AEB6E358202">initialize</h3>
+      <p>public void initialize()</p>
+      <p>Defined at line 894 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="9ED5C1DABCA54644289A595149DCF12AFF75F8E6">getOptionWidth</h3>
+      <p>public size_t getOptionWidth(const Option &amp; O)</p>
+      <div>
+        <div>
+          <p> Return the width of the option tag for printing...</p>
+        </div>
+      </div>
+      <h3 id="1BE4D5106BDB5A5C6B039CF5E1E3A3354381D147">printOptionInfo</h3>
+      <p>public void printOptionInfo(const Option &amp; O, size_t GlobalWidth)</p>
+      <div>
+        <div>
+          <p> Print out information about this option. The to-be-maintained width is specified.</p>
+        </div>
+      </div>
+      <h3 id="B5E08E9F691C3B30148DD3E1EB33D70FDAD178B7">printOptionNoValue</h3>
+      <p>public void printOptionNoValue(const Option &amp; O, size_t GlobalWidth)</p>
+      <div>
+        <div>
+          <p> Print a placeholder for options that don&apos;t yet support printOptionDiff().</p>
+        </div>
+      </div>
+      <h3 id="0DCB549BECC7EBF6051998A7A51059C5D4A0E5A8">getValueName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getValueName()
+      </p>
+      <p>Defined at line 908 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Overload in subclass to provide a better default value.</p>
+        </div>
+      </div>
+      <h3 id="D06844589738C964A5E54B6D18E7C7418D6C72C0">anchor</h3>
+      <p>public void anchor()</p>
+      <div>
+        <div>
+          <p> An out-of-line virtual method to provide a &apos;home&apos; for this class.</p>
+        </div>
+      </div>
+      <h3 id="B88EF098E9150228E8C77B600EC562E5E60DAAE6">printOptionName</h3>
+      <p>protected void printOptionName(const Option &amp; O, size_t GlobalWidth)</p>
+      <div>
+        <div>
+          <p> A helper for basic_parser::printOptionDiff.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#29FB81419ED142481073582CF44A2EB56EF7734E">basic_parser_impl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7889342A935EF0D686D44875DF501ED3E74EA8B">~basic_parser_impl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8E1168E292604FE1A47F0B32FEACE729D0838C6">getValueExpectedFlagDefault</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FAE981265C722243095589C9B931EF821BB18850">getExtraOptionNames</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E719F1DF377EA395029A8CB0DA674AEB6E358202">initialize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9ED5C1DABCA54644289A595149DCF12AFF75F8E6">getOptionWidth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BE4D5106BDB5A5C6B039CF5E1E3A3354381D147">printOptionInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5E08E9F691C3B30148DD3E1EB33D70FDAD178B7">printOptionNoValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0DCB549BECC7EBF6051998A7A51059C5D4A0E5A8">getValueName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D06844589738C964A5E54B6D18E7C7418D6C72C0">anchor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B88EF098E9150228E8C77B600EC562E5E60DAAE6">printOptionName</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

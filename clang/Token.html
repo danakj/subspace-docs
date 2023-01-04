@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Token</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Token</h1>
+    <p>Defined at line 35 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+    <div>
+      <div>
+        <p> Token - This structure provides full information about a lexed token. It is not intended to be space efficient, it is intended to return as much information as possible about each returned token.  This is expected to be compressed into a smaller form if memory footprint is important.</p>
+        <p> The parser can create a special &quot;annotation token&quot; representing a stream of tokens that were parsed and semantically resolved, e.g.: &quot;foo::MyClass&lt;int&gt;&quot; can be represented by a single typename annotation token that carries information about the SourceRange of the tokens and the type object.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="70CFF79A2332BD099E23F7AAD70949023AA212CF">getKind</h3>
+      <p>
+        public 
+        <a href="../clang/tok/TokenKind.html">TokenKind</a>
+         getKind()
+      </p>
+      <p>Defined at line 93 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="9EA1728D748DAF574B58C160E1112A6C6C37EC4F">setKind</h3>
+      <p>
+        public void setKind(
+        <a href="../clang/tok/TokenKind.html">TokenKind</a>
+         K)
+      </p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="DEE9381D9622CA0E14AFF0CFF95844BBFCA6E8DB">is</h3>
+      <p>
+        public _Bool is(
+        <a href="../clang/tok/TokenKind.html">TokenKind</a>
+         K)
+      </p>
+      <p>Defined at line 98 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> is/isNot - Predicates to check if this token is a specific kind, as in &quot;if (Tok.is(tok::l_brace)) {...}&quot;.</p>
+        </div>
+      </div>
+      <h3 id="993733B588D7D43FA721E56BA11CF248DBDC2111">isNot</h3>
+      <p>
+        public _Bool isNot(
+        <a href="../clang/tok/TokenKind.html">TokenKind</a>
+         K)
+      </p>
+      <p>Defined at line 99 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="65F5CD854DBF241DA604B62C5724E852564C96B9">isOneOf</h3>
+      <p>
+        public _Bool isOneOf(
+        <a href="../clang/tok/TokenKind.html">TokenKind</a>
+         K1, 
+        <a href="../clang/tok/TokenKind.html">TokenKind</a>
+         K2)
+      </p>
+      <p>Defined at line 100 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="303AA662A7C12B3528CB6EF4FEB14B07C77B6292">isOneOf</h3>
+      <p>
+        public _Bool isOneOf(
+        <a href="../clang/tok/TokenKind.html">TokenKind</a>
+         K1, Ts... Ks)
+      </p>
+      <p>Defined at line 103 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="EC4AA67AAA83CED027BD1705DF983485DA33711E">isAnyIdentifier</h3>
+      <p>public _Bool isAnyIdentifier()</p>
+      <p>Defined at line 109 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Return true if this is a raw identifier (when lexing in raw mode) or a non-keyword identifier (when lexing in non-raw mode).</p>
+        </div>
+      </div>
+      <h3 id="A0E37F228DF02E01766CA17889BF48C4168C7D98">isLiteral</h3>
+      <p>public _Bool isLiteral()</p>
+      <p>Defined at line 115 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Return true if this is a &quot;literal&quot;, like a numeric constant, string, etc.</p>
+        </div>
+      </div>
+      <h3 id="E81EB7FAE3F73D204F73915A14E3452697DB5E89">isAnnotation</h3>
+      <p>public _Bool isAnnotation()</p>
+      <p>Defined at line 120 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Return true if this is any of tok::annot_* kind tokens.</p>
+        </div>
+      </div>
+      <h3 id="DE1CB3125358A91B754F1D6428B07117B04B4387">getLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 126 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Return a source location identifier for the specified offset in the current file.</p>
+        </div>
+      </div>
+      <h3 id="1826C339DCE44825E1DD90CA3B6CE6F492E98FBF">getLength</h3>
+      <p>public unsigned int getLength()</p>
+      <p>Defined at line 129 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="E0A1B2BC874EE056F39DDBE8A4C80601C384A0BB">setLocation</h3>
+      <p>
+        public void setLocation(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 134 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="F9B6B9D1818A5C51E60A89EB230540F619DF30DD">setLength</h3>
+      <p>public void setLength(unsigned int Len)</p>
+      <p>Defined at line 135 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="9AD73CD0E6295AF441DD8C7CCB7F820D38394642">getAnnotationEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAnnotationEndLoc()
+      </p>
+      <p>Defined at line 140 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="B5C2053ADBA465B1F7D864884C9B015E01DF1BF2">setAnnotationEndLoc</h3>
+      <p>
+        public void setAnnotationEndLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 144 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="DFC95107CE5FA9138E0010A073BBB7E0644944AC">getLastLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLastLoc()
+      </p>
+      <p>Defined at line 149 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="8AF766C2B8CC5B7691CB86E13EA7EACC261DE0CF">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 153 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="48D1040A5212F010AD9C1328FB3999396AC5B1EC">getAnnotationRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getAnnotationRange()
+      </p>
+      <p>Defined at line 160 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> SourceRange of the group of tokens that this annotation token represents.</p>
+        </div>
+      </div>
+      <h3 id="9654934E3DA6BB3AB24668A2C9B50FECF5AF1881">setAnnotationRange</h3>
+      <p>
+        public void setAnnotationRange(
+        <a href="SourceRange.html">SourceRange</a>
+         R)
+      </p>
+      <p>Defined at line 163 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="E96761D1208596092C59C03684F7D22F0161463E">getName</h3>
+      <p>public const char * getName()</p>
+      <p>Defined at line 168 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="31B8A085F3C35DB7CB1B8CCA6D7070C329EE1113">startToken</h3>
+      <p>public void startToken()</p>
+      <p>Defined at line 171 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Reset all flags to cleared.</p>
+        </div>
+      </div>
+      <h3 id="5840222057EC16E7C098E8A1DCDD922655AEF297">hasPtrData</h3>
+      <p>public _Bool hasPtrData()</p>
+      <p>Defined at line 179 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="C0C83D00CF6256FA73E76AD0815650C4A90AC138">getIdentifierInfo</h3>
+      <p>public IdentifierInfo * getIdentifierInfo()</p>
+      <p>Defined at line 181 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="8008E0C37B6BBE469B7132080A82F60B02BBBF61">setIdentifierInfo</h3>
+      <p>public void setIdentifierInfo(IdentifierInfo * II)</p>
+      <p>Defined at line 190 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="BC2C349D7F3F59B1CB3B1D5DEA46D2107214F032">getEofData</h3>
+      <p>public const void * getEofData()</p>
+      <p>Defined at line 194 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="0C3BEC8D6E3116E0F2EF18762E47F1671FE36E32">setEofData</h3>
+      <p>public void setEofData(const void * D)</p>
+      <p>Defined at line 198 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="3D03700344E034CCF7B5E30D9813C107BEA5D861">getRawIdentifier</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getRawIdentifier()
+      </p>
+      <p>Defined at line 207 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> getRawIdentifier - For a raw identifier token (i.e., an identifier lexed in raw mode), returns a reference to the text substring in the buffer if known.</p>
+        </div>
+      </div>
+      <h3 id="DA54B1FC8985144B8D5E6008F25610990AC29DF0">setRawIdentifierData</h3>
+      <p>public void setRawIdentifierData(const char * Ptr)</p>
+      <p>Defined at line 211 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="934A17C593AA9CDC91964E54C2EA24BC7C49E1EB">getLiteralData</h3>
+      <p>public const char * getLiteralData()</p>
+      <p>Defined at line 219 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> getLiteralData - For a literal token (numeric constant, string, etc), this returns a pointer to the start of it in the text buffer if known, null otherwise.</p>
+        </div>
+      </div>
+      <h3 id="E847F3FAFD66BCADCDB1FDDE6126863D28674D82">setLiteralData</h3>
+      <p>public void setLiteralData(const char * Ptr)</p>
+      <p>Defined at line 223 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="392A2A9AC9AFC56344618BBA01C7E1BA28F841CB">getAnnotationValue</h3>
+      <p>public void * getAnnotationValue()</p>
+      <p>Defined at line 228 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="FAF434C094F2BEA2039E43BC2966A3FB74865E0A">setAnnotationValue</h3>
+      <p>public void setAnnotationValue(void * val)</p>
+      <p>Defined at line 232 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <h3 id="25A14383D92D6714A3B8EA15EDD7B03BE5E08F06">setFlag</h3>
+      <p>
+        public void setFlag(
+        <a href="../clang/Token/TokenFlags.html">TokenFlags</a>
+         Flag)
+      </p>
+      <p>Defined at line 238 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Set the specified flag.</p>
+        </div>
+      </div>
+      <h3 id="F04FA8BF478185D4E9DDDBEE62326FE9C5B90192">getFlag</h3>
+      <p>
+        public _Bool getFlag(
+        <a href="../clang/Token/TokenFlags.html">TokenFlags</a>
+         Flag)
+      </p>
+      <p>Defined at line 243 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Get the specified flag.</p>
+        </div>
+      </div>
+      <h3 id="E66E50FE1871041B1547451B6ACA371A02D6066D">clearFlag</h3>
+      <p>
+        public void clearFlag(
+        <a href="../clang/Token/TokenFlags.html">TokenFlags</a>
+         Flag)
+      </p>
+      <p>Defined at line 248 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Unset the specified flag.</p>
+        </div>
+      </div>
+      <h3 id="CCB1CF437E5895F444B4D4D9EDC891D1DB3A140E">getFlags</h3>
+      <p>public unsigned int getFlags()</p>
+      <p>Defined at line 256 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Return the internal represtation of the flags.</p>
+          <p> This is only intended for low-level operations such as writing tokens to disk.</p>
+        </div>
+      </div>
+      <h3 id="BC806F719A6E23B3C1E6BB7B7031F286C3325D1A">setFlagValue</h3>
+      <p>
+        public void setFlagValue(
+        <a href="../clang/Token/TokenFlags.html">TokenFlags</a>
+         Flag, _Bool Val)
+      </p>
+      <p>Defined at line 261 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Set a flag to either true or false.</p>
+        </div>
+      </div>
+      <h3 id="F92BE5AC6B6BB1402B8E1FF47B42C0B8909D3FF9">isAtStartOfLine</h3>
+      <p>public _Bool isAtStartOfLine()</p>
+      <p>Defined at line 270 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> isAtStartOfLine - Return true if this token is at the start of a line.</p>
+        </div>
+      </div>
+      <h3 id="31126E5CAE5EA81590FD5B134ADBE0AC7F8DD6C0">hasLeadingSpace</h3>
+      <p>public _Bool hasLeadingSpace()</p>
+      <p>Defined at line 274 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Return true if this token has whitespace before it.</p>
+        </div>
+      </div>
+      <h3 id="A20CCEF13BBE950364E7239E178F66710C20F045">isExpandDisabled</h3>
+      <p>public _Bool isExpandDisabled()</p>
+      <p>Defined at line 278 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Return true if this identifier token should never be expanded in the future, due to C99 6.10.3.4p2.</p>
+        </div>
+      </div>
+      <h3 id="C3C65F417585985EA7411A9C415C8D04983C3D13">isObjCAtKeyword</h3>
+      <p>
+        public _Bool isObjCAtKeyword(
+        <a href="../clang/tok/ObjCKeywordKind.html">ObjCKeywordKind</a>
+         objcKey)
+      </p>
+      <div>
+        <div>
+          <p> Return true if we have an ObjC keyword identifier.</p>
+        </div>
+      </div>
+      <h3 id="DD6F2325ACB4BA7E3ABD4D1DA03F3AA88E6E69D4">getObjCKeywordID</h3>
+      <p>
+        public 
+        <a href="../clang/tok/ObjCKeywordKind.html">ObjCKeywordKind</a>
+         getObjCKeywordID()
+      </p>
+      <div>
+        <div>
+          <p> Return the ObjC keyword kind.</p>
+        </div>
+      </div>
+      <h3 id="C2F8359D4601D076FC2FD585974AF6DDA0FA0BC7">needsCleaning</h3>
+      <p>public _Bool needsCleaning()</p>
+      <p>Defined at line 287 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Return true if this token has trigraphs or escaped newlines in it.</p>
+        </div>
+      </div>
+      <h3 id="5A7A9C57003F15A8780E6B28C8C89980B31C8DA4">hasLeadingEmptyMacro</h3>
+      <p>public _Bool hasLeadingEmptyMacro()</p>
+      <p>Defined at line 291 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Return true if this token has an empty macro before it.</p>
+        </div>
+      </div>
+      <h3 id="174F89410FA8D933D6BDFB4C1B512A3637AE8DCD">hasUDSuffix</h3>
+      <p>public _Bool hasUDSuffix()</p>
+      <p>Defined at line 295 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Return true if this token is a string or character literal which has a ud-suffix.</p>
+        </div>
+      </div>
+      <h3 id="9FEDA7352207355B226E869AC7965EEBFC2DA007">hasUCN</h3>
+      <p>public _Bool hasUCN()</p>
+      <p>Defined at line 298 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Returns true if this token contains a universal character name.</p>
+        </div>
+      </div>
+      <h3 id="4CF0692C59615EA93692F39CBB42E27CE2C1742B">stringifiedInMacro</h3>
+      <p>public _Bool stringifiedInMacro()</p>
+      <p>Defined at line 302 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Returns true if this token is formed by macro by stringizing or charizing operator.</p>
+        </div>
+      </div>
+      <h3 id="B1BEFDB3E12F1E0C5B3627BD523F6F4FE62A7BAD">commaAfterElided</h3>
+      <p>public _Bool commaAfterElided()</p>
+      <p>Defined at line 305 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Returns true if the comma after this token was elided.</p>
+        </div>
+      </div>
+      <h3 id="FE8D97B179224830208B976F3CD3EA0DBF0F1E6A">isEditorPlaceholder</h3>
+      <p>public _Bool isEditorPlaceholder()</p>
+      <p>Defined at line 312 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Returns true if this token is an editor placeholder.</p>
+          <p> Editor placeholders are produced by the code-completion engine and are represented as characters between &apos;&lt;#&apos; and &apos;#&gt;&apos; in the source code. The lexer uses identifier tokens to represent placeholders.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="442E0AEAF345C8B8DBCBCF4EACFFF5A277AB8A6C">enum TokenFlags</h3>
+      <ul>
+        <li>StartOfLine</li>
+        <li>LeadingSpace</li>
+        <li>DisableExpand</li>
+        <li>NeedsCleaning</li>
+        <li>LeadingEmptyMacro</li>
+        <li>HasUDSuffix</li>
+        <li>HasUCN</li>
+        <li>IgnoredComma</li>
+        <li>StringifiedInMacro</li>
+        <li>CommaAfterElided</li>
+        <li>IsEditorPlaceholder</li>
+        <li>IsReinjected</li>
+      </ul>
+      <p>Defined at line 73 of file /usr/lib/llvm-16/include/clang/Lex/Token.h</p>
+      <div>
+        <div>
+          <p> Various flags set per token:</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#70CFF79A2332BD099E23F7AAD70949023AA212CF">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EA1728D748DAF574B58C160E1112A6C6C37EC4F">setKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEE9381D9622CA0E14AFF0CFF95844BBFCA6E8DB">is</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#993733B588D7D43FA721E56BA11CF248DBDC2111">isNot</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65F5CD854DBF241DA604B62C5724E852564C96B9">isOneOf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#303AA662A7C12B3528CB6EF4FEB14B07C77B6292">isOneOf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC4AA67AAA83CED027BD1705DF983485DA33711E">isAnyIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0E37F228DF02E01766CA17889BF48C4168C7D98">isLiteral</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E81EB7FAE3F73D204F73915A14E3452697DB5E89">isAnnotation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE1CB3125358A91B754F1D6428B07117B04B4387">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1826C339DCE44825E1DD90CA3B6CE6F492E98FBF">getLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0A1B2BC874EE056F39DDBE8A4C80601C384A0BB">setLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9B6B9D1818A5C51E60A89EB230540F619DF30DD">setLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9AD73CD0E6295AF441DD8C7CCB7F820D38394642">getAnnotationEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5C2053ADBA465B1F7D864884C9B015E01DF1BF2">setAnnotationEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DFC95107CE5FA9138E0010A073BBB7E0644944AC">getLastLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AF766C2B8CC5B7691CB86E13EA7EACC261DE0CF">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48D1040A5212F010AD9C1328FB3999396AC5B1EC">getAnnotationRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9654934E3DA6BB3AB24668A2C9B50FECF5AF1881">setAnnotationRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E96761D1208596092C59C03684F7D22F0161463E">getName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31B8A085F3C35DB7CB1B8CCA6D7070C329EE1113">startToken</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5840222057EC16E7C098E8A1DCDD922655AEF297">hasPtrData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0C83D00CF6256FA73E76AD0815650C4A90AC138">getIdentifierInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8008E0C37B6BBE469B7132080A82F60B02BBBF61">setIdentifierInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC2C349D7F3F59B1CB3B1D5DEA46D2107214F032">getEofData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C3BEC8D6E3116E0F2EF18762E47F1671FE36E32">setEofData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D03700344E034CCF7B5E30D9813C107BEA5D861">getRawIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA54B1FC8985144B8D5E6008F25610990AC29DF0">setRawIdentifierData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#934A17C593AA9CDC91964E54C2EA24BC7C49E1EB">getLiteralData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E847F3FAFD66BCADCDB1FDDE6126863D28674D82">setLiteralData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#392A2A9AC9AFC56344618BBA01C7E1BA28F841CB">getAnnotationValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FAF434C094F2BEA2039E43BC2966A3FB74865E0A">setAnnotationValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25A14383D92D6714A3B8EA15EDD7B03BE5E08F06">setFlag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F04FA8BF478185D4E9DDDBEE62326FE9C5B90192">getFlag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E66E50FE1871041B1547451B6ACA371A02D6066D">clearFlag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CCB1CF437E5895F444B4D4D9EDC891D1DB3A140E">getFlags</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC806F719A6E23B3C1E6BB7B7031F286C3325D1A">setFlagValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F92BE5AC6B6BB1402B8E1FF47B42C0B8909D3FF9">isAtStartOfLine</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31126E5CAE5EA81590FD5B134ADBE0AC7F8DD6C0">hasLeadingSpace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A20CCEF13BBE950364E7239E178F66710C20F045">isExpandDisabled</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3C65F417585985EA7411A9C415C8D04983C3D13">isObjCAtKeyword</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD6F2325ACB4BA7E3ABD4D1DA03F3AA88E6E69D4">getObjCKeywordID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2F8359D4601D076FC2FD585974AF6DDA0FA0BC7">needsCleaning</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A7A9C57003F15A8780E6B28C8C89980B31C8DA4">hasLeadingEmptyMacro</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#174F89410FA8D933D6BDFB4C1B512A3637AE8DCD">hasUDSuffix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FEDA7352207355B226E869AC7965EEBFC2DA007">hasUCN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CF0692C59615EA93692F39CBB42E27CE2C1742B">stringifiedInMacro</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B1BEFDB3E12F1E0C5B3627BD523F6F4FE62A7BAD">commaAfterElided</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE8D97B179224830208B976F3CD3EA0DBF0F1E6A">isEditorPlaceholder</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#442E0AEAF345C8B8DBCBCF4EACFFF5A277AB8A6C">TokenFlags</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

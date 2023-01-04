@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXDeductionGuideDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXDeductionGuideDecl</h1>
+    <p>Defined at line 1897 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a C++ deduction guide declaration.</p>
+        <p> In this example, there will be an explicit deduction guide from the second line, and implicit deduction guide templates synthesized from the constructors of </p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="FunctionDecl.html">FunctionDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5B64098DB188E6FB2A1A9C84E206105A9939473B">Create</h3>
+      <p>
+        public CXXDeductionGuideDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="ExplicitSpecifier.html">ExplicitSpecifier</a>
+         ES, const DeclarationNameInfo &amp; NameInfo, 
+        <a href="QualType.html">QualType</a>
+         T, TypeSourceInfo * TInfo, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLocation, CXXConstructorDecl * Ctor)
+      </p>
+      <h3 id="7245F86E80C24A72834D4792DAC7E3F95CD1F51C">CreateDeserialized</h3>
+      <p>public CXXDeductionGuideDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="58B49431A34184977A4E1C271DE05D4E7935BD96">getExplicitSpecifier</h3>
+      <p>
+        public 
+        <a href="ExplicitSpecifier.html">ExplicitSpecifier</a>
+         getExplicitSpecifier()
+      </p>
+      <p>Defined at line 1930 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="115BC9FC645C224856AD1D1EEE16F13D436F8623">getExplicitSpecifier</h3>
+      <p>
+        public 
+        <a href="ExplicitSpecifier.html">ExplicitSpecifier</a>
+         getExplicitSpecifier()
+      </p>
+      <p>Defined at line 1931 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="C6BC8280A40B52DA2059604DEB29BC6790184CCC">isExplicit</h3>
+      <p>public _Bool isExplicit()</p>
+      <p>Defined at line 1934 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Return true if the declaration is already resolved to be explicit.</p>
+        </div>
+      </div>
+      <h3 id="F229150C3BE484166342A957F786805C91371C83">getDeducedTemplate</h3>
+      <p>public TemplateDecl * getDeducedTemplate()</p>
+      <p>Defined at line 1937 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Get the template for which this guide performs deduction.</p>
+        </div>
+      </div>
+      <h3 id="0A59BC6B77768B41BF8E16233D761E8B28385D01">getCorrespondingConstructor</h3>
+      <p>public CXXConstructorDecl * getCorrespondingConstructor()</p>
+      <p>Defined at line 1943 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Get the constructor from which this deduction guide was generated, if this is an implicit deduction guide.</p>
+        </div>
+      </div>
+      <h3 id="CE34861D62E222C70EDF441AAB23AFD498C64233">setIsCopyDeductionCandidate</h3>
+      <p>public void setIsCopyDeductionCandidate(_Bool isCDC)</p>
+      <p>Defined at line 1947 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="0B3CB59CA8E305FAC0EFA044D9061CF180D1C00A">isCopyDeductionCandidate</h3>
+      <p>public _Bool isCopyDeductionCandidate()</p>
+      <p>Defined at line 1951 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="5A8CD9F4ABF72C4D8DBF16A0AB1D56642EB883D8">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 1956 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="5A83A3773939878A76B2D4E72A2B30846CC9BD49">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 1957 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5B64098DB188E6FB2A1A9C84E206105A9939473B">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7245F86E80C24A72834D4792DAC7E3F95CD1F51C">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58B49431A34184977A4E1C271DE05D4E7935BD96">getExplicitSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#115BC9FC645C224856AD1D1EEE16F13D436F8623">getExplicitSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6BC8280A40B52DA2059604DEB29BC6790184CCC">isExplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F229150C3BE484166342A957F786805C91371C83">getDeducedTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A59BC6B77768B41BF8E16233D761E8B28385D01">getCorrespondingConstructor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE34861D62E222C70EDF441AAB23AFD498C64233">setIsCopyDeductionCandidate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B3CB59CA8E305FAC0EFA044D9061CF180D1C00A">isCopyDeductionCandidate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A8CD9F4ABF72C4D8DBF16A0AB1D56642EB883D8">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A83A3773939878A76B2D4E72A2B30846CC9BD49">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

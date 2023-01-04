@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FullSourceLoc</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FullSourceLoc</h1>
+    <p>Defined at line 368 of file /usr/lib/llvm-16/include/clang/Basic/SourceLocation.h</p>
+    <div>
+      <div>
+        <p> A SourceLocation and its associated SourceManager.</p>
+        <p> This is useful for argument passing to functions that expect both objects.</p>
+        <p> This class does not guarantee the presence of either the SourceManager or a valid SourceLocation. Clients should use `isValid()` and `hasManager()` before calling the member functions.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="SourceLocation.html">SourceLocation</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/FullSourceLoc/BeforeThanCompare.html">BeforeThanCompare</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="28DFA549445000F3EEA96D7E9AEFC336177F7418">FullSourceLoc</h3>
+      <p>public void FullSourceLoc()</p>
+      <p>Defined at line 373 of file /usr/lib/llvm-16/include/clang/Basic/SourceLocation.h</p>
+      <div>
+        <div>
+          <p> Creates a FullSourceLoc where isValid() returns </p>
+        </div>
+      </div>
+      <h3 id="9B55529FE85DD10C9A8DD87EB3AEEE8BEDFE38DE">FullSourceLoc</h3>
+      <p>
+        public void FullSourceLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const SourceManager &amp; SM)
+      </p>
+      <p>Defined at line 375 of file /usr/lib/llvm-16/include/clang/Basic/SourceLocation.h</p>
+      <h3 id="F632B41CC0E12C89E554D7B3BD7834B2EC2E0A0D">hasManager</h3>
+      <p>public _Bool hasManager()</p>
+      <p>Defined at line 379 of file /usr/lib/llvm-16/include/clang/Basic/SourceLocation.h</p>
+      <div>
+        <div>
+          <p> Checks whether the SourceManager is present.</p>
+        </div>
+      </div>
+      <h3 id="8028037EF9048EFC1CDEEC280762AE85EF335DBC">getManager</h3>
+      <p>public const SourceManager &amp; getManager()</p>
+      <p>Defined at line 382 of file /usr/lib/llvm-16/include/clang/Basic/SourceLocation.h</p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="D32A3C8F68747876B0B92F22899E41038B7EA3BF">getFileID</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         getFileID()
+      </p>
+      <h3 id="01999C4B29CDA0B04AC68BCEE6400716194268D1">getExpansionLoc</h3>
+      <p>
+        public 
+        <a href="FullSourceLoc.html">FullSourceLoc</a>
+         getExpansionLoc()
+      </p>
+      <h3 id="71EBAD219239A89FC5B0D6333870253E5802D707">getSpellingLoc</h3>
+      <p>
+        public 
+        <a href="FullSourceLoc.html">FullSourceLoc</a>
+         getSpellingLoc()
+      </p>
+      <h3 id="4FD4DF03824246A970103F4EED9AB9126A579994">getFileLoc</h3>
+      <p>
+        public 
+        <a href="FullSourceLoc.html">FullSourceLoc</a>
+         getFileLoc()
+      </p>
+      <h3 id="7F8F4BC05C24C658E7FA21CA2D65AA24405E44D6">getPresumedLoc</h3>
+      <p>
+        public 
+        <a href="PresumedLoc.html">PresumedLoc</a>
+         getPresumedLoc(_Bool UseLineDirectives)
+      </p>
+      <h3 id="FBFBF9F20F901367B64D9EE0B4D308566743FB8F">isMacroArgExpansion</h3>
+      <p>public _Bool isMacroArgExpansion(FullSourceLoc * StartLoc)</p>
+      <h3 id="1B93E97521B5EE9017B6631A3DFDC9FCFDD8267A">getImmediateMacroCallerLoc</h3>
+      <p>
+        public 
+        <a href="FullSourceLoc.html">FullSourceLoc</a>
+         getImmediateMacroCallerLoc()
+      </p>
+      <h3 id="BA7E5283526B27BB05391820B810B46055C61944">getModuleImportLoc</h3>
+      <p>public std::pair&lt;FullSourceLoc, StringRef&gt; getModuleImportLoc()</p>
+      <h3 id="9DBC70F04A2E824B7E463A5C47A3D26D6FEBE748">getFileOffset</h3>
+      <p>public unsigned int getFileOffset()</p>
+      <h3 id="4B42A05FAC84D19565E0FC38860B5868DBEDC756">getExpansionLineNumber</h3>
+      <p>public unsigned int getExpansionLineNumber(_Bool * Invalid)</p>
+      <h3 id="C77D21FAD3FB451D8FE4AABFE9965813E46CBDD3">getExpansionColumnNumber</h3>
+      <p>public unsigned int getExpansionColumnNumber(_Bool * Invalid)</p>
+      <h3 id="934E2DBDF1A451F4C0048A22E3F26F0A9D87739B">getDecomposedExpansionLoc</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         getDecomposedExpansionLoc()
+      </p>
+      <div>
+        <div>
+          <p> Decompose the underlying  into a raw (FileID + Offset) pair, after walking through all expansion records.</p>
+        </div>
+      </div>
+      <h3 id="A70CA1E057AB93C8BAEB6DE6C8300F24908E2833">getSpellingLineNumber</h3>
+      <p>public unsigned int getSpellingLineNumber(_Bool * Invalid)</p>
+      <h3 id="A988D5AAA3273C8558C0506D8B25CCB06691B0AC">getSpellingColumnNumber</h3>
+      <p>public unsigned int getSpellingColumnNumber(_Bool * Invalid)</p>
+      <h3 id="36864269E50DCA7BC9FDE5CCBC83ECF566F97BF9">getCharacterData</h3>
+      <p>public const char * getCharacterData(_Bool * Invalid)</p>
+      <h3 id="375D6BE40A230D2B8DFC8097E3CD462FA2B36B9F">getLineNumber</h3>
+      <p>public unsigned int getLineNumber(_Bool * Invalid)</p>
+      <h3 id="8DECC3D012C40142984029E13ED84BECD54D26D1">getColumnNumber</h3>
+      <p>public unsigned int getColumnNumber(_Bool * Invalid)</p>
+      <h3 id="AE9612DF5FB97F93F685557534523D2CD338A35F">getFileEntry</h3>
+      <p>public const FileEntry * getFileEntry()</p>
+      <h3 id="57756ABF56432E6F881234A699BF78594085B813">getBufferData</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getBufferData(_Bool * Invalid)
+      </p>
+      <div>
+        <div>
+          <p> Return a StringRef to the source buffer data for the specified FileID.</p>
+        </div>
+      </div>
+      <h3 id="5ACFA971DC2A2C3ABDCA73D0CC92DB2BFB10E0DF">getDecomposedLoc</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         getDecomposedLoc()
+      </p>
+      <div>
+        <div>
+          <p> Decompose the specified location into a raw FileID + Offset pair.</p>
+          <p> The first element is the FileID, the second is the offset from the start of the buffer of the location.</p>
+        </div>
+      </div>
+      <h3 id="1F123D51849CE5E9E9F9A88B487C419F1C0BF426">isInSystemHeader</h3>
+      <p>public _Bool isInSystemHeader()</p>
+      <h3 id="F476C06AC89A8CDEEBBE4C89D6FA4DC562957AA0">isBeforeInTranslationUnitThan</h3>
+      <p>
+        public _Bool isBeforeInTranslationUnitThan(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> Determines the order of 2 source locations in the translation unit.</p>
+        </div>
+      </div>
+      <h3 id="6EDF3D43F7A8F4666E5AB87497E88F5BAB31EFA7">isBeforeInTranslationUnitThan</h3>
+      <p>
+        public _Bool isBeforeInTranslationUnitThan(
+        <a href="FullSourceLoc.html">FullSourceLoc</a>
+         Loc)
+      </p>
+      <p>Defined at line 437 of file /usr/lib/llvm-16/include/clang/Basic/SourceLocation.h</p>
+      <div>
+        <div>
+          <p> Determines the order of 2 source locations in the translation unit.</p>
+        </div>
+      </div>
+      <h3 id="3700D73BC78C7376E9E214803C3C1311651BC024">dump</h3>
+      <p>public void dump()</p>
+      <div>
+        <div>
+          <p> Prints information about this FullSourceLoc to stderr.</p>
+          <p> This is useful for debugging.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#28DFA549445000F3EEA96D7E9AEFC336177F7418">FullSourceLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B55529FE85DD10C9A8DD87EB3AEEE8BEDFE38DE">FullSourceLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F632B41CC0E12C89E554D7B3BD7834B2EC2E0A0D">hasManager</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8028037EF9048EFC1CDEEC280762AE85EF335DBC">getManager</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D32A3C8F68747876B0B92F22899E41038B7EA3BF">getFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01999C4B29CDA0B04AC68BCEE6400716194268D1">getExpansionLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71EBAD219239A89FC5B0D6333870253E5802D707">getSpellingLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FD4DF03824246A970103F4EED9AB9126A579994">getFileLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F8F4BC05C24C658E7FA21CA2D65AA24405E44D6">getPresumedLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBFBF9F20F901367B64D9EE0B4D308566743FB8F">isMacroArgExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B93E97521B5EE9017B6631A3DFDC9FCFDD8267A">getImmediateMacroCallerLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA7E5283526B27BB05391820B810B46055C61944">getModuleImportLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9DBC70F04A2E824B7E463A5C47A3D26D6FEBE748">getFileOffset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B42A05FAC84D19565E0FC38860B5868DBEDC756">getExpansionLineNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C77D21FAD3FB451D8FE4AABFE9965813E46CBDD3">getExpansionColumnNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#934E2DBDF1A451F4C0048A22E3F26F0A9D87739B">getDecomposedExpansionLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A70CA1E057AB93C8BAEB6DE6C8300F24908E2833">getSpellingLineNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A988D5AAA3273C8558C0506D8B25CCB06691B0AC">getSpellingColumnNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#36864269E50DCA7BC9FDE5CCBC83ECF566F97BF9">getCharacterData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#375D6BE40A230D2B8DFC8097E3CD462FA2B36B9F">getLineNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DECC3D012C40142984029E13ED84BECD54D26D1">getColumnNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE9612DF5FB97F93F685557534523D2CD338A35F">getFileEntry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57756ABF56432E6F881234A699BF78594085B813">getBufferData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5ACFA971DC2A2C3ABDCA73D0CC92DB2BFB10E0DF">getDecomposedLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1F123D51849CE5E9E9F9A88B487C419F1C0BF426">isInSystemHeader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F476C06AC89A8CDEEBBE4C89D6FA4DC562957AA0">isBeforeInTranslationUnitThan</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6EDF3D43F7A8F4666E5AB87497E88F5BAB31EFA7">isBeforeInTranslationUnitThan</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3700D73BC78C7376E9E214803C3C1311651BC024">dump</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

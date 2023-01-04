@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class NamespaceAliasDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class NamespaceAliasDecl</h1>
+    <p>Defined at line 3033 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a C++ namespace alias.</p>
+        <p> For example:</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="NamedDecl.html">NamedDecl</a>
+      , Redeclarable&lt;NamespaceAliasDecl&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="85E1FCA963C5C580BB180EF32E39C80AC1528C49">Create</h3>
+      <p>
+        public NamespaceAliasDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         NamespaceLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         AliasLoc, IdentifierInfo * Alias, 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         QualifierLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdentLoc, NamedDecl * Namespace)
+      </p>
+      <h3 id="9A9C1A23381C871B45AD81E4AA5FA4CA45055DD2">CreateDeserialized</h3>
+      <p>public NamespaceAliasDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="6E679B9F86A92B946BDDF4AA46CAAB1E13E346D8">getCanonicalDecl</h3>
+      <p>public NamespaceAliasDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3088 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="3B017FEF87FE67069611183C047FD7AC3306BCA3">getCanonicalDecl</h3>
+      <p>public const NamespaceAliasDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3091 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="5310C4CBB4E39FA506C10DDB8A395B0D16CD4BB0">getQualifierLoc</h3>
+      <p>
+        public 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         getQualifierLoc()
+      </p>
+      <p>Defined at line 3097 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the nested-name-specifier that qualifies the name of the namespace, with source-location information.</p>
+        </div>
+      </div>
+      <h3 id="BDA6373AD2E155A68153EEC471DB5292764005FC">getQualifier</h3>
+      <p>public NestedNameSpecifier * getQualifier()</p>
+      <p>Defined at line 3101 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the nested-name-specifier that qualifies the name of the namespace.</p>
+        </div>
+      </div>
+      <h3 id="71ADC153F4258C4510E18591AFEF8BEACC629577">getNamespace</h3>
+      <p>public NamespaceDecl * getNamespace()</p>
+      <p>Defined at line 3106 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the namespace declaration aliased by this directive.</p>
+        </div>
+      </div>
+      <h3 id="6996D5D817D66AD4D73DEC7CB180708414A92E3B">getNamespace</h3>
+      <p>public const NamespaceDecl * getNamespace()</p>
+      <p>Defined at line 3113 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="430019EC81624E36C3B165FB407F0D7FEF3C8B38">getAliasLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAliasLoc()
+      </p>
+      <p>Defined at line 3119 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Returns the location of the alias name, i.e. &apos;foo&apos; in &quot;namespace foo = ns::bar;&quot;.</p>
+        </div>
+      </div>
+      <h3 id="C66D62B0B06B3CFAF48809476BCA1148945958C0">getNamespaceLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getNamespaceLoc()
+      </p>
+      <p>Defined at line 3122 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Returns the location of the  keyword.</p>
+        </div>
+      </div>
+      <h3 id="6E162CDEFAFC3B771CEF1B176889F9A07E91B4EB">getTargetNameLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTargetNameLoc()
+      </p>
+      <p>Defined at line 3125 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Returns the location of the identifier in the named namespace.</p>
+        </div>
+      </div>
+      <h3 id="C2C81B09BA3210243A3149CBD778B8924DFFE1BD">getAliasedNamespace</h3>
+      <p>public NamedDecl * getAliasedNamespace()</p>
+      <p>Defined at line 3129 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the namespace that this alias refers to, which may either be a NamespaceDecl or a NamespaceAliasDecl.</p>
+        </div>
+      </div>
+      <h3 id="E2B66DF0361E4FFC42F3E081815B50812D576E1D">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 3131 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="37F9D4FABC68F7E859C147AED268D337FDFB34B0">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3135 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="4ECEACB82B29BC3597C4924D3FBE7959F22B13DB">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3136 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#85E1FCA963C5C580BB180EF32E39C80AC1528C49">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A9C1A23381C871B45AD81E4AA5FA4CA45055DD2">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E679B9F86A92B946BDDF4AA46CAAB1E13E346D8">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B017FEF87FE67069611183C047FD7AC3306BCA3">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5310C4CBB4E39FA506C10DDB8A395B0D16CD4BB0">getQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDA6373AD2E155A68153EEC471DB5292764005FC">getQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71ADC153F4258C4510E18591AFEF8BEACC629577">getNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6996D5D817D66AD4D73DEC7CB180708414A92E3B">getNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#430019EC81624E36C3B165FB407F0D7FEF3C8B38">getAliasLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C66D62B0B06B3CFAF48809476BCA1148945958C0">getNamespaceLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E162CDEFAFC3B771CEF1B176889F9A07E91B4EB">getTargetNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2C81B09BA3210243A3149CBD778B8924DFFE1BD">getAliasedNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2B66DF0361E4FFC42F3E081815B50812D576E1D">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37F9D4FABC68F7E859C147AED268D337FDFB34B0">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4ECEACB82B29BC3597C4924D3FBE7959F22B13DB">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

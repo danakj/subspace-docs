@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ProxyFileSystem</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/vfs" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ProxyFileSystem</h1>
+    <p>Defined at line 423 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    <div>
+      <div>
+        <p> By default, this delegates all calls to the underlying file system. This is useful when derived file systems want to override some calls and still proxy other calls.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="FileSystem.html">FileSystem</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="64C9E5BB113E36009C9029B58B33B245F4A6E662">ProxyFileSystem</h3>
+      <p>
+        public void ProxyFileSystem(
+        <a href="../../llvm/IntrusiveRefCntPtr.html">IntrusiveRefCntPtr</a>
+         FS)
+      </p>
+      <p>Defined at line 425 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="5DF03F04019FC39E252476E7E7E91068D610B2EA">status</h3>
+      <p>
+        public 
+        <a href="../../llvm/ErrorOr.html">ErrorOr</a>
+         status(const Twine &amp; Path)
+      </p>
+      <p>Defined at line 428 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="9EB4489A1D824A25ED45BD661FDABEFA40964A36">openFileForRead</h3>
+      <p>
+        public 
+        <a href="../../llvm/ErrorOr.html">ErrorOr</a>
+         openFileForRead(const Twine &amp; Path)
+      </p>
+      <p>Defined at line 431 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="7D3C6DC6D716BE7EF61CC644CF50D70E6064717A">dir_begin</h3>
+      <p>
+        public 
+        <a href="directory_iterator.html">directory_iterator</a>
+         dir_begin(const Twine &amp; Dir, std::error_code &amp; EC)
+      </p>
+      <p>Defined at line 435 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="0973A8241CBDBFC50AE0C56A36C29BFEF646663C">getCurrentWorkingDirectory</h3>
+      <p>
+        public 
+        <a href="../../llvm/ErrorOr.html">ErrorOr</a>
+         getCurrentWorkingDirectory()
+      </p>
+      <p>Defined at line 438 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="645C6B86849F4CC265D534DD76A7677B1F1A7F6A">setCurrentWorkingDirectory</h3>
+      <p>
+        public 
+        <a href="../../std/error_code.html">error_code</a>
+         setCurrentWorkingDirectory(const Twine &amp; Path)
+      </p>
+      <p>Defined at line 441 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="F6FEAE3A827EEF576B078CBE9216B052E7C1B79E">getRealPath</h3>
+      <p>
+        public 
+        <a href="../../std/error_code.html">error_code</a>
+         getRealPath(const Twine &amp; Path, SmallVectorImpl&lt;char&gt; &amp; Output)
+      </p>
+      <p>Defined at line 444 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="D59948AA68C84ECAF0D745C99C5C334099286235">isLocal</h3>
+      <p>
+        public 
+        <a href="../../std/error_code.html">error_code</a>
+         isLocal(const Twine &amp; Path, _Bool &amp; Result)
+      </p>
+      <p>Defined at line 448 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="5AC65A496E38AF68C3E60F0D13796D16A29BD5FD">getUnderlyingFS</h3>
+      <p>protected FileSystem &amp; getUnderlyingFS()</p>
+      <p>Defined at line 453 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#64C9E5BB113E36009C9029B58B33B245F4A6E662">ProxyFileSystem</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5DF03F04019FC39E252476E7E7E91068D610B2EA">status</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EB4489A1D824A25ED45BD661FDABEFA40964A36">openFileForRead</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D3C6DC6D716BE7EF61CC644CF50D70E6064717A">dir_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0973A8241CBDBFC50AE0C56A36C29BFEF646663C">getCurrentWorkingDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#645C6B86849F4CC265D534DD76A7677B1F1A7F6A">setCurrentWorkingDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6FEAE3A827EEF576B078CBE9216B052E7C1B79E">getRealPath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D59948AA68C84ECAF0D745C99C5C334099286235">isLocal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AC65A496E38AF68C3E60F0D13796D16A29BD5FD">getUnderlyingFS</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ModuleFileExtension</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ModuleFileExtension</h1>
+    <p>Defined at line 66 of file /usr/lib/llvm-16/include/clang/Serialization/ModuleFileExtension.h</p>
+    <div>
+      <div>
+        <p> An abstract superclass that describes a custom extension to the module/precompiled header file format.</p>
+        <p> A module file extension can introduce additional information into compiled module files (.pcm) and precompiled headers (.pch) via a custom writer that can then be accessed via a custom reader when the module file or precompiled header is loaded.</p>
+        <p> Subclasses must use LLVM RTTI for open class hierarchies.</p>
+      </div>
+    </div>
+    <p>Inherits from llvm::RTTIExtends&lt;ModuleFileExtension, llvm::RTTIRoot&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="833CB635A9455ABF7E6674447DB45E197B9FAE3C">~ModuleFileExtension</h3>
+      <p>public void ~ModuleFileExtension()</p>
+      <h3 id="2884AB51E55983FCC60917DB9B503AEA3CD1B404">getExtensionMetadata</h3>
+      <p>
+        public 
+        <a href="ModuleFileExtensionMetadata.html">ModuleFileExtensionMetadata</a>
+         getExtensionMetadata()
+      </p>
+      <div>
+        <div>
+          <p> Retrieves the metadata for this module file extension.</p>
+        </div>
+      </div>
+      <h3 id="B834AEA3D51EB728F17A5683131E4DF61FABC0FE">hashExtension</h3>
+      <p>public void hashExtension(ExtensionHashBuilder &amp; HBuilder)</p>
+      <h3 id="C1FD10228FF916CFE175B986AD8794088DCD0624">createExtensionWriter</h3>
+      <p>public std::unique_ptr&lt;ModuleFileExtensionWriter&gt; createExtensionWriter(ASTWriter &amp; Writer)</p>
+      <div>
+        <div>
+          <p> Create a new module file extension writer, which will be responsible for writing the extension contents into a particular module file.</p>
+        </div>
+      </div>
+      <h3 id="5A479BB867C9A8FF3242BBE34A9218B6FB3D1053">createExtensionReader</h3>
+      <p>public std::unique_ptr&lt;ModuleFileExtensionReader&gt; createExtensionReader(const ModuleFileExtensionMetadata &amp; Metadata, ASTReader &amp; Reader, serialization::ModuleFile &amp; Mod, const llvm::BitstreamCursor &amp; Stream)</p>
+      <div>
+        <div>
+          <p> Create a new module file extension reader, given the metadata read from the block and the cursor into the extension block.</p>
+          <p> May return null to indicate that an extension block with the given metadata cannot be read.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#833CB635A9455ABF7E6674447DB45E197B9FAE3C">~ModuleFileExtension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2884AB51E55983FCC60917DB9B503AEA3CD1B404">getExtensionMetadata</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B834AEA3D51EB728F17A5683131E4DF61FABC0FE">hashExtension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1FD10228FF916CFE175B986AD8794088DCD0624">createExtensionWriter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A479BB867C9A8FF3242BBE34A9218B6FB3D1053">createExtensionReader</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

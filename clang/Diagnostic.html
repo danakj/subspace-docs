@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Diagnostic</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Diagnostic</h1>
+    <p>Defined at line 1567 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+    <div>
+      <div>
+        <p> A little helper class (which is basically a smart pointer that forwards info from DiagnosticsEngine) that allows clients to enquire about the currently in-flight diagnostic.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D683DDE6FA284095E45D10EC8E75BFF619FDB73C">Diagnostic</h3>
+      <p>public void Diagnostic(const DiagnosticsEngine * DO)</p>
+      <p>Defined at line 1572 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="79ABF77228532FA8F440042970A94EC21915A2C7">Diagnostic</h3>
+      <p>
+        public void Diagnostic(const DiagnosticsEngine * DO, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         storedDiagMessage)
+      </p>
+      <p>Defined at line 1573 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="5341D92F2D6C178EF5F7E7D6C5C00A23E04F9EF8">getDiags</h3>
+      <p>public const DiagnosticsEngine * getDiags()</p>
+      <p>Defined at line 1576 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="539126BF36FD1234B03C4BF4B2AD1D0A02505856">getID</h3>
+      <p>public unsigned int getID()</p>
+      <p>Defined at line 1577 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="81AE5D418EB6303C626D5B7FD80E22A5233C169F">getLocation</h3>
+      <p>public const SourceLocation &amp; getLocation()</p>
+      <p>Defined at line 1578 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="97708DE1B6C1D9090C51602102E87FF76D0775C8">hasSourceManager</h3>
+      <p>public _Bool hasSourceManager()</p>
+      <p>Defined at line 1579 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="E7BE033DACEDC87D2E33742AD0459CAEFBBE2CE4">getSourceManager</h3>
+      <p>public SourceManager &amp; getSourceManager()</p>
+      <p>Defined at line 1580 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="0241F2EC9007DEFE87521DE428AE94ED4F9024F9">getNumArgs</h3>
+      <p>public unsigned int getNumArgs()</p>
+      <p>Defined at line 1582 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="AEA96C60B20BBE68654C2C4A7133E9644978D6F0">getArgKind</h3>
+      <p>
+        public 
+        <a href="../clang/DiagnosticsEngine/ArgumentKind.html">ArgumentKind</a>
+         getArgKind(unsigned int Idx)
+      </p>
+      <p>Defined at line 1590 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Return the kind of the specified index.</p>
+          <p> Based on the kind of argument, the accessors below can be used to get the value.</p>
+        </div>
+      </div>
+      <h3 id="AF07406385929F1DE48AB01E14A6EBE9CF13ED0E">getArgStdStr</h3>
+      <p>public const std::string &amp; getArgStdStr(unsigned int Idx)</p>
+      <p>Defined at line 1598 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Return the provided argument string specified by </p>
+        </div>
+      </div>
+      <h3 id="A60CF31946D9F23BF9D4033133D4D2DC498F3D21">getArgCStr</h3>
+      <p>public const char * getArgCStr(unsigned int Idx)</p>
+      <p>Defined at line 1606 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Return the specified C string argument.</p>
+        </div>
+      </div>
+      <h3 id="4C8CD3DFE9948CF55570106A787EF6EA0691EAA1">getArgSInt</h3>
+      <p>public int64_t getArgSInt(unsigned int Idx)</p>
+      <p>Defined at line 1615 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Return the specified signed integer argument.</p>
+        </div>
+      </div>
+      <h3 id="6B9B78AEA456D55F35534E4243EDE8A3EE673CFD">getArgUInt</h3>
+      <p>public uint64_t getArgUInt(unsigned int Idx)</p>
+      <p>Defined at line 1623 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Return the specified unsigned integer argument.</p>
+        </div>
+      </div>
+      <h3 id="F43792DFECF08E8119FC6D4B07EDF07E5D5309E9">getArgIdentifier</h3>
+      <p>public const IdentifierInfo * getArgIdentifier(unsigned int Idx)</p>
+      <p>Defined at line 1631 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Return the specified IdentifierInfo argument.</p>
+        </div>
+      </div>
+      <h3 id="42536F579DE549F41E6DCD839FF11726F763B33C">getRawArg</h3>
+      <p>public uint64_t getRawArg(unsigned int Idx)</p>
+      <p>Defined at line 1640 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Return the specified non-string argument in an opaque form.</p>
+        </div>
+      </div>
+      <h3 id="297BA6155286B6E8D8EB91ABECC75F00857CE515">getNumRanges</h3>
+      <p>public unsigned int getNumRanges()</p>
+      <p>Defined at line 1647 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Return the number of source ranges associated with this diagnostic.</p>
+        </div>
+      </div>
+      <h3 id="A31301E22AF47E41B4249FBDA5F0E37F2127343E">getRange</h3>
+      <p>public const CharSourceRange &amp; getRange(unsigned int Idx)</p>
+      <p>Defined at line 1652 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="D87E8A7CAC99E6E15716A2E7EF3EF2DED34D4766">getRanges</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getRanges()
+      </p>
+      <p>Defined at line 1658 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Return an array reference for this diagnostic&apos;s ranges.</p>
+        </div>
+      </div>
+      <h3 id="15D9F48EB9B6BF38DAC67749E41602714CE979BB">getNumFixItHints</h3>
+      <p>public unsigned int getNumFixItHints()</p>
+      <p>Defined at line 1662 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="11FF072CED679E440E5E0CF358FA663685FB218F">getFixItHint</h3>
+      <p>public const FixItHint &amp; getFixItHint(unsigned int Idx)</p>
+      <p>Defined at line 1666 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="AF7BBC96D762176432689492BCF70DD9E941E198">getFixItHints</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getFixItHints()
+      </p>
+      <p>Defined at line 1671 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="2BB3ABD7019156F7BE761EFBE3F1FD45E3CE5111">FormatDiagnostic</h3>
+      <p>public void FormatDiagnostic(SmallVectorImpl&lt;char&gt; &amp; OutStr)</p>
+      <div>
+        <div>
+          <p> Format this diagnostic into a string, substituting the formal arguments into the %0 slots.</p>
+          <p> The result is appended onto the  array.</p>
+        </div>
+      </div>
+      <h3 id="75EEACD0E88156C4D439C5E6C1B9F61E525644AA">FormatDiagnostic</h3>
+      <p>public void FormatDiagnostic(const char * DiagStr, const char * DiagEnd, SmallVectorImpl&lt;char&gt; &amp; OutStr)</p>
+      <div>
+        <div>
+          <p> Format the given format-string into the output buffer using the arguments stored in this diagnostic.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D683DDE6FA284095E45D10EC8E75BFF619FDB73C">Diagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79ABF77228532FA8F440042970A94EC21915A2C7">Diagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5341D92F2D6C178EF5F7E7D6C5C00A23E04F9EF8">getDiags</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#539126BF36FD1234B03C4BF4B2AD1D0A02505856">getID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81AE5D418EB6303C626D5B7FD80E22A5233C169F">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97708DE1B6C1D9090C51602102E87FF76D0775C8">hasSourceManager</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E7BE033DACEDC87D2E33742AD0459CAEFBBE2CE4">getSourceManager</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0241F2EC9007DEFE87521DE428AE94ED4F9024F9">getNumArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AEA96C60B20BBE68654C2C4A7133E9644978D6F0">getArgKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF07406385929F1DE48AB01E14A6EBE9CF13ED0E">getArgStdStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A60CF31946D9F23BF9D4033133D4D2DC498F3D21">getArgCStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C8CD3DFE9948CF55570106A787EF6EA0691EAA1">getArgSInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B9B78AEA456D55F35534E4243EDE8A3EE673CFD">getArgUInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F43792DFECF08E8119FC6D4B07EDF07E5D5309E9">getArgIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42536F579DE549F41E6DCD839FF11726F763B33C">getRawArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#297BA6155286B6E8D8EB91ABECC75F00857CE515">getNumRanges</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A31301E22AF47E41B4249FBDA5F0E37F2127343E">getRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D87E8A7CAC99E6E15716A2E7EF3EF2DED34D4766">getRanges</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15D9F48EB9B6BF38DAC67749E41602714CE979BB">getNumFixItHints</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11FF072CED679E440E5E0CF358FA663685FB218F">getFixItHint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF7BBC96D762176432689492BCF70DD9E941E198">getFixItHints</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BB3ABD7019156F7BE761EFBE3F1FD45E3CE5111">FormatDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75EEACD0E88156C4D439C5E6C1B9F61E525644AA">FormatDiagnostic</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

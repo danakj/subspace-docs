@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ParmVarDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ParmVarDecl</h1>
+    <p>Defined at line 1715 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    <div>
+      <div>
+        <p> Represents a parameter to a function.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="VarDecl.html">VarDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="10963FA6DAA081F4D4A3D076EE40960670515D0F">ParmVarDecl</h3>
+      <p>
+        protected void ParmVarDecl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, IdentifierInfo * Id, 
+        <a href="QualType.html">QualType</a>
+         T, TypeSourceInfo * TInfo, 
+        <a href="StorageClass.html">StorageClass</a>
+         S, Expr * DefArg)
+      </p>
+      <p>Defined at line 1721 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="9E9FE999492347F030CE2843C77AB1D6037C8EAE">Create</h3>
+      <p>
+        public ParmVarDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, IdentifierInfo * Id, 
+        <a href="QualType.html">QualType</a>
+         T, TypeSourceInfo * TInfo, 
+        <a href="StorageClass.html">StorageClass</a>
+         S, Expr * DefArg)
+      </p>
+      <h3 id="4B7B73232FA215FF5CAA3456AE4D3788719BAC4D">CreateDeserialized</h3>
+      <p>public ParmVarDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="128BBCCE10E14739CAD6AB94E77EA95911C43642">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <h3 id="EB74F8B586B273E0E5D607AC5050F4C7986E5DDB">setObjCMethodScopeInfo</h3>
+      <p>public void setObjCMethodScopeInfo(unsigned int parameterIndex)</p>
+      <p>Defined at line 1743 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="9318B0986EA6B435C7148ABF1F889EB74D38D8EB">setScopeInfo</h3>
+      <p>public void setScopeInfo(unsigned int scopeDepth, unsigned int parameterIndex)</p>
+      <p>Defined at line 1748 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="2200CA25CDFA0191C0009FCCE0182DCD4480E534">isObjCMethodParameter</h3>
+      <p>public _Bool isObjCMethodParameter()</p>
+      <p>Defined at line 1758 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="FD3D81522E00CECE70796E037F9080CBD23B17F8">isDestroyedInCallee</h3>
+      <p>public _Bool isDestroyedInCallee()</p>
+      <div>
+        <div>
+          <p> Determines whether this parameter is destroyed in the callee function.</p>
+        </div>
+      </div>
+      <h3 id="64506E3220975B582BA77CC6582508A189E0CF53">getFunctionScopeDepth</h3>
+      <p>public unsigned int getFunctionScopeDepth()</p>
+      <p>Defined at line 1765 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="AA96B8FAA407F01EC19CDD85C93C236D94FD69A7">getMaxFunctionScopeDepth</h3>
+      <p>public unsigned int getMaxFunctionScopeDepth()</p>
+      <p>Defined at line 1770 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="1DCADC0F7A283C335C4F2A5589570BE4718486B1">getFunctionScopeIndex</h3>
+      <p>public unsigned int getFunctionScopeIndex()</p>
+      <p>Defined at line 1775 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Returns the index of this parameter in its prototype or method scope.</p>
+        </div>
+      </div>
+      <h3 id="67030F0087856AF5E971F48F2A354ACB07403116">getObjCDeclQualifier</h3>
+      <p>
+        public 
+        <a href="../clang/Decl/ObjCDeclQualifier.html">ObjCDeclQualifier</a>
+         getObjCDeclQualifier()
+      </p>
+      <p>Defined at line 1779 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="8F36E80BAA76060850400345758F5DA68290C480">setObjCDeclQualifier</h3>
+      <p>
+        public void setObjCDeclQualifier(
+        <a href="../clang/Decl/ObjCDeclQualifier.html">ObjCDeclQualifier</a>
+         QTVal)
+      </p>
+      <p>Defined at line 1783 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="4DF6AA4C2CEE0F4ED8C05F99C7E7CB8F24291725">isKNRPromoted</h3>
+      <p>public _Bool isKNRPromoted()</p>
+      <p>Defined at line 1796 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if the value passed to this parameter must undergo K&amp;R-style default argument promotion:</p>
+          <p> C99 6.5.2.2.   If the expression that denotes the called function has a type   that does not include a prototype, the integer promotions are   performed on each argument, and arguments that have type float   are promoted to double.</p>
+        </div>
+      </div>
+      <h3 id="E38AC6D4DB01D0C378DE4E591EDFD8D937B5CE21">setKNRPromoted</h3>
+      <p>public void setKNRPromoted(_Bool promoted)</p>
+      <p>Defined at line 1799 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="02572E93CA5634E1193D61731905D7C0FEF7E25F">getDefaultArg</h3>
+      <p>public Expr * getDefaultArg()</p>
+      <h3 id="E661755ABB3A346A20EA1DF943F8D30C94D1A7AB">getDefaultArg</h3>
+      <p>public const Expr * getDefaultArg()</p>
+      <p>Defined at line 1804 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="3B953AEC054A090E8B7BC9229FBA1694605B0F8E">setDefaultArg</h3>
+      <p>public void setDefaultArg(Expr * defarg)</p>
+      <h3 id="7873D65AE8D18D9FF7830C2399984B9724A7E08C">getDefaultArgRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getDefaultArgRange()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the source range that covers the entire default argument.</p>
+        </div>
+      </div>
+      <h3 id="F6C556906E95680C1BFDE47828711EBAF31ACE99">setUninstantiatedDefaultArg</h3>
+      <p>public void setUninstantiatedDefaultArg(Expr * arg)</p>
+      <h3 id="94A818715105346174FFC40C96C62DD2A03CF2E2">getUninstantiatedDefaultArg</h3>
+      <p>public Expr * getUninstantiatedDefaultArg()</p>
+      <h3 id="EA220BF122E0E58CADD0711221AD5C5E785A35B5">getUninstantiatedDefaultArg</h3>
+      <p>public const Expr * getUninstantiatedDefaultArg()</p>
+      <p>Defined at line 1815 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="2876CE7DB7EE9B7269124D93398910045E0FA78C">hasDefaultArg</h3>
+      <p>public _Bool hasDefaultArg()</p>
+      <div>
+        <div>
+          <p> Determines whether this parameter has a default argument, either parsed or not.</p>
+        </div>
+      </div>
+      <h3 id="EE57A68A1DD829D1E792D5F2E07B1DD59DAD7687">hasUnparsedDefaultArg</h3>
+      <p>public _Bool hasUnparsedDefaultArg()</p>
+      <p>Defined at line 1832 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Determines whether this parameter has a default argument that has not yet been parsed. This will occur during the processing of a C++ class whose member functions have default arguments, e.g.,</p>
+        </div>
+      </div>
+      <h3 id="D5FF2E802723CA7A421DA1A47F4107CDEB64DC9D">hasUninstantiatedDefaultArg</h3>
+      <p>public _Bool hasUninstantiatedDefaultArg()</p>
+      <p>Defined at line 1836 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="C5654393F05C7D97A40615F50DB2F95FA59D91B5">setUnparsedDefaultArg</h3>
+      <p>public void setUnparsedDefaultArg()</p>
+      <p>Defined at line 1844 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Specify that this parameter has an unparsed default argument. The argument will be replaced with a real default argument via setDefaultArg when the class definition enclosing the function declaration that owns this default argument is completed.</p>
+        </div>
+      </div>
+      <h3 id="A137F35DB4F98672CA72F4DFC3FA527BE40CD503">hasInheritedDefaultArg</h3>
+      <p>public _Bool hasInheritedDefaultArg()</p>
+      <p>Defined at line 1848 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="1CA5625A758843F317875BD06233E2C0BC13405F">setHasInheritedDefaultArg</h3>
+      <p>public void setHasInheritedDefaultArg(_Bool I)</p>
+      <p>Defined at line 1852 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="8EB7F977D00130760619E0A46CF1D76B0F8D3C2A">getOriginalType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getOriginalType()
+      </p>
+      <h3 id="C2C013EB05F6ABE62438AE60D65081E2C9BBA45B">setOwningFunction</h3>
+      <p>public void setOwningFunction(DeclContext * FD)</p>
+      <p>Defined at line 1862 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Sets the function declaration that owns this ParmVarDecl. Since ParmVarDecls are often created before the FunctionDecls that own them, this routine is required to update the DeclContext appropriately.</p>
+        </div>
+      </div>
+      <h3 id="FFCACC8658FCEEF1153923160410ABF14A5CC43B">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 1865 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="3C892A2CEA4E5BAB4540AA8A52EA1E0271E881F4">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 1866 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="4509F655E1EE54CFD02FD6CCC124ABF83E21BD14">enum </h3>
+      <ul>
+        <li>MaxFunctionScopeDepth</li>
+      </ul>
+      <p>Defined at line 1717 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="8F740E2DB974FAF3E07E1F1B8B54018CB146E475">enum </h3>
+      <ul>
+        <li>MaxFunctionScopeIndex</li>
+      </ul>
+      <p>Defined at line 1718 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#10963FA6DAA081F4D4A3D076EE40960670515D0F">ParmVarDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9E9FE999492347F030CE2843C77AB1D6037C8EAE">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B7B73232FA215FF5CAA3456AE4D3788719BAC4D">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#128BBCCE10E14739CAD6AB94E77EA95911C43642">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB74F8B586B273E0E5D607AC5050F4C7986E5DDB">setObjCMethodScopeInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9318B0986EA6B435C7148ABF1F889EB74D38D8EB">setScopeInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2200CA25CDFA0191C0009FCCE0182DCD4480E534">isObjCMethodParameter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD3D81522E00CECE70796E037F9080CBD23B17F8">isDestroyedInCallee</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64506E3220975B582BA77CC6582508A189E0CF53">getFunctionScopeDepth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA96B8FAA407F01EC19CDD85C93C236D94FD69A7">getMaxFunctionScopeDepth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1DCADC0F7A283C335C4F2A5589570BE4718486B1">getFunctionScopeIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67030F0087856AF5E971F48F2A354ACB07403116">getObjCDeclQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F36E80BAA76060850400345758F5DA68290C480">setObjCDeclQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DF6AA4C2CEE0F4ED8C05F99C7E7CB8F24291725">isKNRPromoted</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E38AC6D4DB01D0C378DE4E591EDFD8D937B5CE21">setKNRPromoted</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02572E93CA5634E1193D61731905D7C0FEF7E25F">getDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E661755ABB3A346A20EA1DF943F8D30C94D1A7AB">getDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B953AEC054A090E8B7BC9229FBA1694605B0F8E">setDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7873D65AE8D18D9FF7830C2399984B9724A7E08C">getDefaultArgRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6C556906E95680C1BFDE47828711EBAF31ACE99">setUninstantiatedDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#94A818715105346174FFC40C96C62DD2A03CF2E2">getUninstantiatedDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA220BF122E0E58CADD0711221AD5C5E785A35B5">getUninstantiatedDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2876CE7DB7EE9B7269124D93398910045E0FA78C">hasDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE57A68A1DD829D1E792D5F2E07B1DD59DAD7687">hasUnparsedDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5FF2E802723CA7A421DA1A47F4107CDEB64DC9D">hasUninstantiatedDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5654393F05C7D97A40615F50DB2F95FA59D91B5">setUnparsedDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A137F35DB4F98672CA72F4DFC3FA527BE40CD503">hasInheritedDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1CA5625A758843F317875BD06233E2C0BC13405F">setHasInheritedDefaultArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8EB7F977D00130760619E0A46CF1D76B0F8D3C2A">getOriginalType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2C013EB05F6ABE62438AE60D65081E2C9BBA45B">setOwningFunction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FFCACC8658FCEEF1153923160410ABF14A5CC43B">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C892A2CEA4E5BAB4540AA8A52EA1E0271E881F4">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4509F655E1EE54CFD02FD6CCC124ABF83E21BD14">@nonymous_enum_4509F655E1EE54CFD02FD6CCC124ABF83E21BD14</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F740E2DB974FAF3E07E1F1B8B54018CB146E475">@nonymous_enum_8F740E2DB974FAF3E07E1F1B8B54018CB146E475</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

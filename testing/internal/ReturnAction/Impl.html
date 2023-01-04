@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Impl</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal/ReturnAction" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Impl</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#699">699</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Partially specialize for ByMoveWrapper. This version of ReturnAction will move its contents instead.</p>
+      </div>
+    </div>
+    <p>Inherits from ActionInterface&lt;F&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D7EC6380920D982B1C01D45F4291F4901FAB69DA">Impl&lt;ByMoveWrapper&lt;type-parameter-1-0&gt;, type-parameter-1-1&gt;</h3>
+      <p>public void Impl&lt;ByMoveWrapper&lt;type-parameter-1-0&gt;, type-parameter-1-1&gt;(const std::shared_ptr&lt;R&gt; &amp; wrapper)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#705">705</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <h3 id="C9EE63736B2B72A445D49A030B32B636C505959D">Perform</h3>
+      <p>public Result Perform(const ArgumentTuple &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#708">708</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D7EC6380920D982B1C01D45F4291F4901FAB69DA">Impl&lt;ByMoveWrapper&lt;type-parameter-1-0&gt;, type-parameter-1-1&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C9EE63736B2B72A445D49A030B32B636C505959D">Perform</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Impl</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal/ReturnAction" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Impl</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#668">668</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Implements the Return(x) action for a particular function type F.</p>
+      </div>
+    </div>
+    <p>Inherits from ActionInterface&lt;F&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B679D3454A791484FBDB9D5D3A52D4139FDEC86F">Impl&lt;R_, F&gt;</h3>
+      <p>public void Impl&lt;R_, F&gt;(const std::shared_ptr&lt;R&gt; &amp; value)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#680">680</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> The implicit cast is necessary when Result has more than one single-argument constructor (e.g. Result is std::vector&lt;int&gt;) and R has a type conversion operator template.  In that case, value_(value) won&apos;t compile as the compiler doesn&apos;t known which constructor of Result to call.  ImplicitCast_ forces the compiler to convert R to Result without considering explicit constructors, thus resolving the ambiguity. value_ is then initialized using its copy constructor.</p>
+        </div>
+      </div>
+      <h3 id="C5E82A354E0F44FA4646A4BDFAFC2A60D11D9BA2">Perform</h3>
+      <p>public Result Perform(const ArgumentTuple &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#684">684</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B679D3454A791484FBDB9D5D3A52D4139FDEC86F">Impl&lt;R_, F&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5E82A354E0F44FA4646A4BDFAFC2A60D11D9BA2">Perform</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

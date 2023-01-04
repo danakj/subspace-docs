@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class NativeArray</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class NativeArray</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1094">1094</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Adapts a native array to a read-only STL-style container.  Instead of the complete STL container concept, this adaptor only implements members useful for Google Mock&apos;s container matchers.  New members should be added as needed.  To simplify the implementation, we only support Element being a raw type (i.e. having no top-level const or reference modifier).  It&apos;s the client&apos;s responsibility to satisfy this requirement.  Element can be an array type itself (hence multi-dimensional arrays are supported).</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D3C71CA0DB102891CF870A7B30E692C6639C081E">NativeArray&lt;Element&gt;</h3>
+      <p>
+        public void NativeArray&lt;Element&gt;(const Element * array, size_t count, 
+        <a href="RelationToSourceReference.html">RelationToSourceReference</a>
+         )
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1102">1102</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Constructs from a native array. References the source.</p>
+        </div>
+      </div>
+      <h3 id="2D877BA3A53F5BB79F9F6AAE3E28AE9A26EFFCF3">NativeArray&lt;Element&gt;</h3>
+      <p>
+        public void NativeArray&lt;Element&gt;(const Element * array, size_t count, 
+        <a href="RelationToSourceCopy.html">RelationToSourceCopy</a>
+         )
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1107">1107</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Constructs from a native array. Copies the source.</p>
+        </div>
+      </div>
+      <h3 id="F328C809BFC868EA543EFF19DE49E6D90D661183">NativeArray&lt;Element&gt;</h3>
+      <p>public void NativeArray&lt;Element&gt;(const NativeArray&lt;Element&gt; &amp; rhs)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1112">1112</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Copy constructor.</p>
+        </div>
+      </div>
+      <h3 id="5BBEA6B38D3C3B98F5BEA5ACC973183DD2B478F3">~NativeArray&lt;Element&gt;</h3>
+      <p>public void ~NativeArray&lt;Element&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1116">1116</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <h3 id="CBE2575314D60F2E8EE40BC8B14DCA101C68FB64">size</h3>
+      <p>public size_t size()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1122">1122</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> STL-style container methods.</p>
+        </div>
+      </div>
+      <h3 id="C47FF2F79EEC2DAC1A371C5ECD2ED772E29E3C20">begin</h3>
+      <p>public const_iterator begin()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1123">1123</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <h3 id="6AEF2F64B6FE388F84E1AB1052921023BBFA2391">end</h3>
+      <p>public const_iterator end()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1124">1124</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <h3 id="BD1EC184CAEFFE5D0F5C0E7D8DA095E63BD2E290">operator==</h3>
+      <p>public _Bool operator==(const NativeArray&lt;Element&gt; &amp; rhs)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1125">1125</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D3C71CA0DB102891CF870A7B30E692C6639C081E">NativeArray&lt;Element&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D877BA3A53F5BB79F9F6AAE3E28AE9A26EFFCF3">NativeArray&lt;Element&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F328C809BFC868EA543EFF19DE49E6D90D661183">NativeArray&lt;Element&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5BBEA6B38D3C3B98F5BEA5ACC973183DD2B478F3">~NativeArray&lt;Element&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CBE2575314D60F2E8EE40BC8B14DCA101C68FB64">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C47FF2F79EEC2DAC1A371C5ECD2ED772E29E3C20">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AEF2F64B6FE388F84E1AB1052921023BBFA2391">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD1EC184CAEFFE5D0F5C0E7D8DA095E63BD2E290">operator==</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

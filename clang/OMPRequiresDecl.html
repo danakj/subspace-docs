@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPRequiresDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPRequiresDecl</h1>
+    <p>Defined at line 416 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;#pragma omp requires...&apos; directive. For example</p>
+      </div>
+    </div>
+    <p>Inherits from OMPDeclarativeDirective&lt;Decl&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="52D26AF1AA6AF4484A84D1F8FD405B59B58C97B5">Create</h3>
+      <p>
+        public OMPRequiresDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         CL)
+      </p>
+      <div>
+        <div>
+          <p> Create requires node.</p>
+        </div>
+      </div>
+      <h3 id="25248783A2798E7DE14585ECBE5E1C70BE01A7E0">CreateDeserialized</h3>
+      <p>public OMPRequiresDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID, unsigned int N)</p>
+      <div>
+        <div>
+          <p> Create deserialized requires node.</p>
+        </div>
+      </div>
+      <h3 id="1E640E896456E488A3A84DD340045C955D581309">clauselist_size</h3>
+      <p>public unsigned int clauselist_size()</p>
+      <p>Defined at line 438 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="3DE4B1397C44210FC6972FBE3D4794565D9F600F">clauselist_empty</h3>
+      <p>public _Bool clauselist_empty()</p>
+      <p>Defined at line 439 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="BA6D8F5494B4115CABE05FCB7A5D70538A2ACA66">clauselists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         clauselists()
+      </p>
+      <p>Defined at line 441 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="9598B1D505FF83EBD91833B92E49D65EFD122C65">clauselists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         clauselists()
+      </p>
+      <p>Defined at line 444 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="367FB0948F7FE81B9F32A374269018352F9AE755">clauselist_begin</h3>
+      <p>public clauselist_iterator clauselist_begin()</p>
+      <p>Defined at line 447 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="B8746DDB5956C25AD7AA441CF1AEAFF3442F22C8">clauselist_end</h3>
+      <p>public clauselist_iterator clauselist_end()</p>
+      <p>Defined at line 448 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="B7F200B778E4D16AC5184294E3B492428D6D7002">clauselist_begin</h3>
+      <p>public clauselist_const_iterator clauselist_begin()</p>
+      <p>Defined at line 449 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="42DF9ACD907CFD50AD09644D2EB76543D9F04824">clauselist_end</h3>
+      <p>public clauselist_const_iterator clauselist_end()</p>
+      <p>Defined at line 452 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="EC4CF4620D1F37EAB4D39DA1BC311CFC9AB6B6E3">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 456 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="B5BE1EBA798C85B04E482CCC322CD187D4EFB10F">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 457 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#52D26AF1AA6AF4484A84D1F8FD405B59B58C97B5">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25248783A2798E7DE14585ECBE5E1C70BE01A7E0">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E640E896456E488A3A84DD340045C955D581309">clauselist_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3DE4B1397C44210FC6972FBE3D4794565D9F600F">clauselist_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA6D8F5494B4115CABE05FCB7A5D70538A2ACA66">clauselists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9598B1D505FF83EBD91833B92E49D65EFD122C65">clauselists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#367FB0948F7FE81B9F32A374269018352F9AE755">clauselist_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8746DDB5956C25AD7AA441CF1AEAFF3442F22C8">clauselist_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7F200B778E4D16AC5184294E3B492428D6D7002">clauselist_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42DF9ACD907CFD50AD09644D2EB76543D9F04824">clauselist_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC4CF4620D1F37EAB4D39DA1BC311CFC9AB6B6E3">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5BE1EBA798C85B04E482CCC322CD187D4EFB10F">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

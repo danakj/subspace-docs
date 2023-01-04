@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MSDependentExistsStmt</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MSDependentExistsStmt</h1>
+    <p>Defined at line 252 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+    <div>
+      <div>
+        <p> Representation of a Microsoft __if_exists or __if_not_exists statement with a dependent name.</p>
+        <p> The __if_exists statement can be used to include a sequence of statements in the program only when a particular dependent name does not exist. For example:</p>
+        <p> Similarly, the __if_not_exists statement can be used to include the statements when a particular name does not exist.</p>
+        <p> Note that this statement only captures __if_exists and __if_not_exists statements whose name is dependent. All non-dependent cases are handled directly in the parser, so that they don&apos;t introduce a new scope. Clang introduces scopes in the dependent case to keep names inside the compound statement from leaking out into the surround statements, which would compromise the template instantiation model. This behavior differs from Visual C++ (which never introduces a scope), but is a fairly reasonable approximation of the VC++ behavior.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Stmt.html">Stmt</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="BDADAFE917BEDD5420F19E55D9BFE5B0327C6DCA">MSDependentExistsStmt</h3>
+      <p>
+        public void MSDependentExistsStmt(
+        <a href="SourceLocation.html">SourceLocation</a>
+         KeywordLoc, _Bool IsIfExists, 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         QualifierLoc, 
+        <a href="DeclarationNameInfo.html">DeclarationNameInfo</a>
+         NameInfo, CompoundStmt * SubStmt)
+      </p>
+      <p>Defined at line 263 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="A4F7CEBDB7414215A2DE05B5FB69B45B869F930C">getKeywordLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getKeywordLoc()
+      </p>
+      <p>Defined at line 274 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the __if_exists or __if_not_exists keyword.</p>
+        </div>
+      </div>
+      <h3 id="B7EEED1A75EFFC53161215759C16E0B78276993E">isIfExists</h3>
+      <p>public _Bool isIfExists()</p>
+      <p>Defined at line 277 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <div>
+        <div>
+          <p> Determine whether this is an __if_exists statement.</p>
+        </div>
+      </div>
+      <h3 id="9C64F9B61527BD111C6A96280158A90C536F9BF4">isIfNotExists</h3>
+      <p>public _Bool isIfNotExists()</p>
+      <p>Defined at line 280 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <div>
+        <div>
+          <p> Determine whether this is an __if_exists statement.</p>
+        </div>
+      </div>
+      <h3 id="2A5CC4A54297CE571CB6B4DC3F7F50631C348698">getQualifierLoc</h3>
+      <p>
+        public 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         getQualifierLoc()
+      </p>
+      <p>Defined at line 284 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the nested-name-specifier that qualifies this name, if any.</p>
+        </div>
+      </div>
+      <h3 id="DD52DB8659FB217B5293223CE0B49D674070F359">getNameInfo</h3>
+      <p>
+        public 
+        <a href="DeclarationNameInfo.html">DeclarationNameInfo</a>
+         getNameInfo()
+      </p>
+      <p>Defined at line 288 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the name of the entity we&apos;re testing for, along with location information</p>
+        </div>
+      </div>
+      <h3 id="1D4167CF6970928E890709497BE8EC2856728239">getSubStmt</h3>
+      <p>public CompoundStmt * getSubStmt()</p>
+      <p>Defined at line 292 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the compound statement that will be included in the program only if the existence of the symbol matches the initial keyword.</p>
+        </div>
+      </div>
+      <h3 id="F4C355A64E12F96803D52BEB5CB3D93291D97C13">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 296 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="7AAC550F43DCE0857D9C127A846B6AC80AD87B3D">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 297 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="22042A3DF2C1B13E0E1CC665EEEBC0F1C2C3A302">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 301 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="A52E412BD2DF9D142C04FB16153A3972C96FB1DA">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 305 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="8182D539165AB1BD6AC09C7B44DCB0B40B7CE6FD">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 309 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BDADAFE917BEDD5420F19E55D9BFE5B0327C6DCA">MSDependentExistsStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4F7CEBDB7414215A2DE05B5FB69B45B869F930C">getKeywordLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7EEED1A75EFFC53161215759C16E0B78276993E">isIfExists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C64F9B61527BD111C6A96280158A90C536F9BF4">isIfNotExists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A5CC4A54297CE571CB6B4DC3F7F50631C348698">getQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD52DB8659FB217B5293223CE0B49D674070F359">getNameInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D4167CF6970928E890709497BE8EC2856728239">getSubStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4C355A64E12F96803D52BEB5CB3D93291D97C13">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7AAC550F43DCE0857D9C127A846B6AC80AD87B3D">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22042A3DF2C1B13E0E1CC665EEEBC0F1C2C3A302">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A52E412BD2DF9D142C04FB16153A3972C96FB1DA">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8182D539165AB1BD6AC09C7B44DCB0B40B7CE6FD">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

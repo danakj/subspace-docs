@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class PolymorphicMatcher</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class PolymorphicMatcher</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#633">633</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> The PolymorphicMatcher class template makes it easy to implement a polymorphic matcher (i.e. a matcher that can match values of more than one type, e.g. Eq(n) and NotNull()).</p>
+        <p> To define a polymorphic matcher, a user should provide an Impl class that has a DescribeTo() method and a DescribeNegationTo() method, and define a member function (or member function template)</p>
+        <p>   bool MatchAndExplain(const Value&amp; value,                        MatchResultListener* listener) const;</p>
+        <p> See the definition of NotNull() for a complete example.</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../testing/PolymorphicMatcher/MonomorphicImpl.html">MonomorphicImpl</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="EC55E3B65CBFC69B7BFDA65C8159ABAD3B39D444">PolymorphicMatcher&lt;Impl&gt;</h3>
+      <p>public void PolymorphicMatcher&lt;Impl&gt;(const Impl &amp; an_impl)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#635">635</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <h3 id="B140B2976C1978D36669A1B89B40D9ADFC7455A0">mutable_impl</h3>
+      <p>public Impl &amp; mutable_impl()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#639">639</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a mutable reference to the underlying matcher implementation object.</p>
+        </div>
+      </div>
+      <h3 id="908031BD9C7EE84811282B0A84CE9CE3583C109A">impl</h3>
+      <p>public const Impl &amp; impl()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#643">643</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns an immutable reference to the underlying matcher implementation object.</p>
+        </div>
+      </div>
+      <h3 id="2777428A3342FA55D06987DEFA2C6FD754BA946D">operator Matcher&lt;type-parameter-1-0&gt;</h3>
+      <p>public Matcher&lt;T&gt; operator Matcher&lt;type-parameter-1-0&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#646">646</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#EC55E3B65CBFC69B7BFDA65C8159ABAD3B39D444">PolymorphicMatcher&lt;Impl&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B140B2976C1978D36669A1B89B40D9ADFC7455A0">mutable_impl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#908031BD9C7EE84811282B0A84CE9CE3583C109A">impl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2777428A3342FA55D06987DEFA2C6FD754BA946D">operator Matcher&lt;type-parameter-1-0&gt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

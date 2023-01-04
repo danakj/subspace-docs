@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPSizesClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPSizesClause</h1>
+    <p>Defined at line 786 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents the &apos;sizes&apos; clause in the &apos;#pragma omp tile&apos; directive.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPClause.html">OMPClause</a>
+      , llvm::TrailingObjects&lt;OMPSizesClause, Expr *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3BC14AFA8BD24176DC5CF80416BBFB346CDD8DF1">Create</h3>
+      <p>
+        public OMPSizesClause * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Sizes)
+      </p>
+      <div>
+        <div>
+          <p> Build a &apos;sizes&apos; AST node.</p>
+        </div>
+      </div>
+      <h3 id="409957B82BBF7FB1B745D4E204EB795AC58259AF">CreateEmpty</h3>
+      <p>public OMPSizesClause * CreateEmpty(const ASTContext &amp; C, unsigned int NumSizes)</p>
+      <div>
+        <div>
+          <p> Build an empty &apos;sizes&apos; AST node for deserialization.</p>
+        </div>
+      </div>
+      <h3 id="24551A8E924E8BC327E28E680B21DA02203EA7AA">setLParenLoc</h3>
+      <p>
+        public void setLParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 822 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Sets the location of &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="12983E0DEA63A6D9254920D418D7F6F7FD79533F">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 825 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the location of &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="5C49C6E260EBD718FC082E043F3C79D94EDB58BF">getNumSizes</h3>
+      <p>public unsigned int getNumSizes()</p>
+      <p>Defined at line 828 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the number of list items.</p>
+        </div>
+      </div>
+      <h3 id="D0CFA3931D1ABCCA272EC549BF4508D32EB2302D">getSizesRefs</h3>
+      <p>
+        public 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         getSizesRefs()
+      </p>
+      <p>Defined at line 831 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the tile size expressions.</p>
+        </div>
+      </div>
+      <h3 id="2E971114084A9F1B4B804AADAE2122A6A90AA05F">getSizesRefs</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getSizesRefs()
+      </p>
+      <p>Defined at line 836 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="204109E49CAE631FF4C284207F099941A56596EC">setSizesRefs</h3>
+      <p>
+        public void setSizesRefs(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         VL)
+      </p>
+      <p>Defined at line 843 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Sets the tile size expressions.</p>
+        </div>
+      </div>
+      <h3 id="CDC93908385ADBD35FC812FA0F4D1488F77292CC">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 850 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="F88FFBB21B97A5F58F0AFA5EC84A6DE9F2C9D7D0">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 855 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="831DAAE75A4D1FDC692CC3B22F774A9D608E8878">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 861 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="78FC7F698EA057336F865DAEA33EE83A69427CBE">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 864 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="8554EA56FB3B4C035CC4DF047DCE19E0A059889C">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 868 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3BC14AFA8BD24176DC5CF80416BBFB346CDD8DF1">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#409957B82BBF7FB1B745D4E204EB795AC58259AF">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24551A8E924E8BC327E28E680B21DA02203EA7AA">setLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12983E0DEA63A6D9254920D418D7F6F7FD79533F">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5C49C6E260EBD718FC082E043F3C79D94EDB58BF">getNumSizes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0CFA3931D1ABCCA272EC549BF4508D32EB2302D">getSizesRefs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E971114084A9F1B4B804AADAE2122A6A90AA05F">getSizesRefs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#204109E49CAE631FF4C284207F099941A56596EC">setSizesRefs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDC93908385ADBD35FC812FA0F4D1488F77292CC">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F88FFBB21B97A5F58F0AFA5EC84A6DE9F2C9D7D0">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#831DAAE75A4D1FDC692CC3B22F774A9D608E8878">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78FC7F698EA057336F865DAEA33EE83A69427CBE">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8554EA56FB3B4C035CC4DF047DCE19E0A059889C">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

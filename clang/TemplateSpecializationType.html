@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TemplateSpecializationType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TemplateSpecializationType</h1>
+    <p>Defined at line 5354 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents a type template specialization; the template must be a class template, a type alias template, or a template template parameter.  A template which cannot be resolved to one of these, e.g. because it is written with a dependent scope specifier, is instead represented as a</p>
+        <p> A non-dependent template specialization type is always &quot;sugar&quot;, typically for a   For example, a class template specialization type of  will refer to a tag type for the instantiation  std::allocator&lt;int&gt;&gt;</p>
+        <p> Template specializations are dependent if either the template or any of the template arguments are dependent, in which case the type may also be canonical.</p>
+        <p> Instances of this type are allocated with a trailing array of TemplateArguments, followed by a QualType representing the non-canonical aliased type when the template is a type alias template.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2126DC9141C04F422CD82269DF2B31AB69798854">anyDependentTemplateArguments</h3>
+      <p>
+        public _Bool anyDependentTemplateArguments(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Converted)
+      </p>
+      <div>
+        <div>
+          <p> Determine whether any of the given template arguments are dependent.</p>
+          <p> The converted arguments should be supplied when known; whether an argument is dependent can depend on the conversions performed on it (for example, a &apos;const int&apos; passed as a template argument might be dependent if the parameter is a reference but non-dependent if the parameter is an int).</p>
+          <p> Note that the  parameter is unused: this is intentional, to remind the caller that they need to pass in the converted arguments, not the specified arguments.</p>
+        </div>
+      </div>
+      <h3 id="B355E8034DF423DE40053AB20725F357FE268E7D">anyDependentTemplateArguments</h3>
+      <p>
+        public _Bool anyDependentTemplateArguments(const TemplateArgumentListInfo &amp; , 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Converted)
+      </p>
+      <h3 id="C869F97B6C4ADDC45AD709D50F08BDBF84B71102">anyInstantiationDependentTemplateArguments</h3>
+      <p>
+        public _Bool anyInstantiationDependentTemplateArguments(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args)
+      </p>
+      <h3 id="99152BD957B8CFBA169D74C04522B317F226600E">isCurrentInstantiation</h3>
+      <p>public _Bool isCurrentInstantiation()</p>
+      <p>Defined at line 5396 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> True if this template specialization type matches a current instantiation in the context in which it is found.</p>
+        </div>
+      </div>
+      <h3 id="F44C4D19613CDD709E15D6F85A5A8E9912391DF4">isTypeAlias</h3>
+      <p>public _Bool isTypeAlias()</p>
+      <p>Defined at line 5415 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Determine if this template specialization type is for a type alias template that has been substituted.</p>
+          <p> Nearly every template specialization type whose template is an alias template will be substituted. However, this is not the case when the specialization contains a pack expansion but the template alias does not have a corresponding parameter pack, e.g.,</p>
+        </div>
+      </div>
+      <h3 id="40520E57439886085F07902F5B0047A98852FCB8">getAliasedType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getAliasedType()
+      </p>
+      <div>
+        <div>
+          <p> Get the aliased type, if this is a specialization of a type alias template.</p>
+        </div>
+      </div>
+      <h3 id="2AA022AD5A21451FDF99FB53DE62B4375A185899">getTemplateName</h3>
+      <p>
+        public 
+        <a href="TemplateName.html">TemplateName</a>
+         getTemplateName()
+      </p>
+      <p>Defined at line 5422 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Retrieve the name of the template that we are specializing.</p>
+        </div>
+      </div>
+      <h3 id="4300A25C850A491BBE4D61EBD43806D95857E24F">template_arguments</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         template_arguments()
+      </p>
+      <p>Defined at line 5424 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="845BAF49AB5F1F2E175C0D9C25E63801E89CB342">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 5429 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="5F702EE675EA1E643972768BAA9DFC1421EFC932">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 5433 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="53264EF21937D4DACEAA0DFD8632CE752E4FA051">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID, const ASTContext &amp; Ctx)</p>
+      <h3 id="7469C5DDC70B6AD4843559CE9E7DAAD6006D9870">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="TemplateName.html">TemplateName</a>
+         T, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, const ASTContext &amp; Context)
+      </p>
+      <h3 id="EAB8095A0DE76A1CE67C4F529553236C75CCAAFE">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 5442 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2126DC9141C04F422CD82269DF2B31AB69798854">anyDependentTemplateArguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B355E8034DF423DE40053AB20725F357FE268E7D">anyDependentTemplateArguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C869F97B6C4ADDC45AD709D50F08BDBF84B71102">anyInstantiationDependentTemplateArguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99152BD957B8CFBA169D74C04522B317F226600E">isCurrentInstantiation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F44C4D19613CDD709E15D6F85A5A8E9912391DF4">isTypeAlias</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#40520E57439886085F07902F5B0047A98852FCB8">getAliasedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2AA022AD5A21451FDF99FB53DE62B4375A185899">getTemplateName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4300A25C850A491BBE4D61EBD43806D95857E24F">template_arguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#845BAF49AB5F1F2E175C0D9C25E63801E89CB342">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F702EE675EA1E643972768BAA9DFC1421EFC932">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53264EF21937D4DACEAA0DFD8632CE752E4FA051">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7469C5DDC70B6AD4843559CE9E7DAAD6006D9870">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EAB8095A0DE76A1CE67C4F529553236C75CCAAFE">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

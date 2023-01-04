@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ConstantArrayType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ConstantArrayType</h1>
+    <p>Defined at line 3058 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents the canonical version of C arrays with a specified constant size. For example, the canonical type for &apos;int A[4 + 4*100]&apos; is a ConstantArrayType where the element type is &apos;int&apos; and the size is 404.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ArrayType.html">ArrayType</a>
+      , llvm::TrailingObjects&lt;ConstantArrayType, const Expr *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="471CD200D8E1C82404C8E86699DF00D92D12A080">getSize</h3>
+      <p>public const llvm::APInt &amp; getSize()</p>
+      <p>Defined at line 3081 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="599767E29DD0662598AAA5311CDDF7D794735FF3">getSizeExpr</h3>
+      <p>public const Expr * getSizeExpr()</p>
+      <p>Defined at line 3082 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="A71BAB9CC7B75787CFC8C58625139B8463A270A0">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 3087 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="5DA73EDFDAB8FC45606C571091F3FE5C448B8C0D">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 3088 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="A4C30F8B7F4CD1E17EAE0AFB1C2BF20408CCE24D">getNumAddressingBits</h3>
+      <p>
+        public unsigned int getNumAddressingBits(const ASTContext &amp; Context, 
+        <a href="QualType.html">QualType</a>
+         ElementType, const llvm::APInt &amp; NumElements)
+      </p>
+      <div>
+        <div>
+          <p> Determine the number of bits required to address a member of an array with the given element type and number of elements.</p>
+        </div>
+      </div>
+      <h3 id="5D1450EAC376635B977892F4C3A59A767E8D529E">getMaxSizeBits</h3>
+      <p>public unsigned int getMaxSizeBits(const ASTContext &amp; Context)</p>
+      <div>
+        <div>
+          <p> Determine the maximum number of active bits that an array&apos;s size can require, which limits the maximum size of the array.</p>
+        </div>
+      </div>
+      <h3 id="FA2A095F370FB3C69CC9BF00A083BE2E51854312">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID, const ASTContext &amp; Ctx)</p>
+      <p>Defined at line 3100 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="A9EEF4FA0CB8E6E01D22E8F82B1B4C7CE6406275">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, const ASTContext &amp; Ctx, 
+        <a href="QualType.html">QualType</a>
+         ET, const llvm::APInt &amp; ArraySize, const Expr * SizeExpr, 
+        <a href="../clang/ArrayType/ArraySizeModifier.html">ArraySizeModifier</a>
+         SizeMod, unsigned int TypeQuals)
+      </p>
+      <h3 id="E511DA96039901AF0DD136E31F8D5D5E2ED82A09">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 3110 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#471CD200D8E1C82404C8E86699DF00D92D12A080">getSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#599767E29DD0662598AAA5311CDDF7D794735FF3">getSizeExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A71BAB9CC7B75787CFC8C58625139B8463A270A0">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5DA73EDFDAB8FC45606C571091F3FE5C448B8C0D">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4C30F8B7F4CD1E17EAE0AFB1C2BF20408CCE24D">getNumAddressingBits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D1450EAC376635B977892F4C3A59A767E8D529E">getMaxSizeBits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA2A095F370FB3C69CC9BF00A083BE2E51854312">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9EEF4FA0CB8E6E01D22E8F82B1B4C7CE6406275">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E511DA96039901AF0DD136E31F8D5D5E2ED82A09">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

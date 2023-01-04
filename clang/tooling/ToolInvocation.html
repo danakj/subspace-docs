@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ToolInvocation</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/tooling" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ToolInvocation</h1>
+    <p>Defined at line 239 of file /usr/lib/llvm-16/include/clang/Tooling/Tooling.h</p>
+    <div>
+      <div>
+        <p> Utility to run a FrontendAction in a single clang invocation.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2AFACD14DC985069025A7F77BFBC10BED7A738E6">ToolInvocation</h3>
+      <p>
+        public void ToolInvocation(
+        <a href="../../std/vector.html">vector</a>
+         CommandLine, 
+        <a href="../../std/unique_ptr.html">unique_ptr</a>
+         FAction, FileManager * Files, 
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         PCHContainerOps)
+      </p>
+      <div>
+        <div>
+          <p> Create a tool invocation.</p>
+        </div>
+      </div>
+      <h3 id="70A5AEF770146646834237D8CF21B313AE77017B">ToolInvocation</h3>
+      <p>
+        public void ToolInvocation(
+        <a href="../../std/vector.html">vector</a>
+         CommandLine, ToolAction * Action, FileManager * Files, 
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         PCHContainerOps)
+      </p>
+      <div>
+        <div>
+          <p> Create a tool invocation.</p>
+        </div>
+      </div>
+      <h3 id="B94FA8DC99D10C69B13C334C76D366EE415B9007">~ToolInvocation</h3>
+      <p>public void ~ToolInvocation()</p>
+      <h3 id="8371E0CF9D81DC1497274AC8058D6A6756FB739A">setDiagnosticConsumer</h3>
+      <p>public void setDiagnosticConsumer(DiagnosticConsumer * DiagConsumer)</p>
+      <p>Defined at line 272 of file /usr/lib/llvm-16/include/clang/Tooling/Tooling.h</p>
+      <div>
+        <div>
+          <p> Set a  to use during driver command-line parsing and the action invocation itself.</p>
+        </div>
+      </div>
+      <h3 id="C10AF22FFCC521322E80AA957508FD817E30F75B">setDiagnosticOptions</h3>
+      <p>public void setDiagnosticOptions(DiagnosticOptions * DiagOpts)</p>
+      <p>Defined at line 277 of file /usr/lib/llvm-16/include/clang/Tooling/Tooling.h</p>
+      <div>
+        <div>
+          <p> Set a  to use during driver command-line parsing.</p>
+        </div>
+      </div>
+      <h3 id="C6CF2B0BDFEDDE97E7AA5DA6E9CB6450939D5F09">run</h3>
+      <p>public _Bool run()</p>
+      <div>
+        <div>
+          <p> Run the clang invocation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2AFACD14DC985069025A7F77BFBC10BED7A738E6">ToolInvocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70A5AEF770146646834237D8CF21B313AE77017B">ToolInvocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B94FA8DC99D10C69B13C334C76D366EE415B9007">~ToolInvocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8371E0CF9D81DC1497274AC8058D6A6756FB739A">setDiagnosticConsumer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C10AF22FFCC521322E80AA957508FD817E30F75B">setDiagnosticOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6CF2B0BDFEDDE97E7AA5DA6E9CB6450939D5F09">run</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Decl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Decl</h1>
+    <p>Defined at line 83 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+    <div>
+      <div>
+        <p> Decl - This represents one declaration (or definition), e.g. a variable, typedef, function, struct, etc.</p>
+        <p> Note: There are objects tacked on before the *beginning* of Decl (and its subclasses) in its Decl::operator new(). Proper alignment of all subclasses (not requiring more than the alignment of Decl) is asserted in DeclBase.cpp.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        protected 
+        <a href="../llvm/PointerIntPair.html">PointerIntPair</a>
+         NextInContextAndBits
+      </li>
+      <li>protected unsigned int Access</li>
+      <li>protected unsigned int FromASTFile</li>
+      <li>protected unsigned int IdentifierNamespace</li>
+      <li>protected unsigned int CacheValidAndLinkage</li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/Decl/EmptyShell.html">EmptyShell</a>
+      </li>
+      <li>
+        <a href="../clang/Decl/redecl_iterator.html">redecl_iterator</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="56CEF7F153CDF9CE99D599F6342EA2733B34E1BF">operator new</h3>
+      <p>protected void * operator new(std::size_t Size, const ASTContext &amp; Ctx, unsigned int ID, std::size_t Extra)</p>
+      <div>
+        <div>
+          <p> Allocate memory for a deserialized declaration.</p>
+          <p> This routine must be used to allocate memory for any declaration that is deserialized from a module file.</p>
+        </div>
+      </div>
+      <h3 id="46A5DFED3E6AA921BB6105F64755E8B2A109D971">operator new</h3>
+      <p>protected void * operator new(std::size_t Size, const ASTContext &amp; Ctx, DeclContext * Parent, std::size_t Extra)</p>
+      <div>
+        <div>
+          <p> Allocate memory for a non-deserialized declaration.</p>
+        </div>
+      </div>
+      <h3 id="2779F3EF45D83C383863024E75313052B36B8310">Decl</h3>
+      <p>public void Decl()</p>
+      <p>Defined at line 375 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="9B139F7C15268A0165E183B96CAF2E74DBE101D5">Decl</h3>
+      <p>public void Decl(const Decl &amp; )</p>
+      <p>Defined at line 376 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="8366D68AA1F32C6BE5220894FC429AE93C591553">Decl</h3>
+      <p>public void Decl(Decl &amp;&amp; )</p>
+      <p>Defined at line 377 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="08C3952FB15E72549C0B55023061C97DAEB651C3">operator=</h3>
+      <p>public Decl &amp; operator=(const Decl &amp; )</p>
+      <p>Defined at line 378 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="80969B8E9010A539E454E45A16B383F0A95C3D76">operator=</h3>
+      <p>public Decl &amp; operator=(Decl &amp;&amp; )</p>
+      <p>Defined at line 379 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="EC6A6621B121CC20AF266D6BAC0B13A8E8163861">Decl</h3>
+      <p>
+        protected void Decl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 382 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="E930A2C8977BF3979DEC017C6D53F1C814A409B8">Decl</h3>
+      <p>
+        protected void Decl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, 
+        <a href="../clang/Decl/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 392 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="CAF6151E4DA75CF1FC1A3562E76CA721A8641E19">~Decl</h3>
+      <p>protected void ~Decl()</p>
+      <h3 id="DCB0027F5C557802D0B3188B30732C8B30F92CC4">updateOutOfDate</h3>
+      <p>protected void updateOutOfDate(IdentifierInfo &amp; II)</p>
+      <div>
+        <div>
+          <p> Update a potentially out-of-date declaration.</p>
+        </div>
+      </div>
+      <h3 id="865C3C3AD4739602A58084BDE14D87463C968845">getCachedLinkage</h3>
+      <p>
+        protected 
+        <a href="Linkage.html">Linkage</a>
+         getCachedLinkage()
+      </p>
+      <p>Defined at line 406 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="54139DC2A8DA02DFD44AB7D0A8E37C0C0ED96202">setCachedLinkage</h3>
+      <p>
+        protected void setCachedLinkage(
+        <a href="Linkage.html">Linkage</a>
+         L)
+      </p>
+      <p>Defined at line 410 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="0216AE2C76302058AA794ADE5A22D39B7CF9ABEE">hasCachedLinkage</h3>
+      <p>protected _Bool hasCachedLinkage()</p>
+      <p>Defined at line 414 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="746A6DC7ED303CF16F0565C4518CF2CCFC3760BA">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 420 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Source range that this declaration covers.</p>
+        </div>
+      </div>
+      <h3 id="6BC00A2FCA8AE3BFCE9A1FD85E04D16210CEC3B5">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 424 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="DAE0C816C428A3D81A8B959CAAAB7F76640AA01F">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 428 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="611D518C54B67A9C94EDD8E52F4BC48E2CC8FF6B">getLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 432 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="BFD337E62E6A87F2F09902C0976C80ACC53C92C8">setLocation</h3>
+      <p>
+        public void setLocation(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 433 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="9D8F8FDE0C590B2962E12F83D98A5CEFB8BED1D5">getKind</h3>
+      <p>
+        public 
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         getKind()
+      </p>
+      <p>Defined at line 435 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="F55416C85A73CE41887AF8B8E55C4C82D5C895F9">getDeclKindName</h3>
+      <p>public const char * getDeclKindName()</p>
+      <h3 id="9B6967FF26BE16923F5284FE111235151DCAABC8">getNextDeclInContext</h3>
+      <p>public Decl * getNextDeclInContext()</p>
+      <p>Defined at line 438 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="587A0B320D746686FAEDEF0CFA87C71ADFC4A8DE">getNextDeclInContext</h3>
+      <p>public const Decl * getNextDeclInContext()</p>
+      <p>Defined at line 439 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="EDFB69758E390128021CD960BD4E8CA66F1C8564">getDeclContext</h3>
+      <p>public DeclContext * getDeclContext()</p>
+      <p>Defined at line 441 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="3CCE116A3EF80192145109D71C847C9655A904F5">getDeclContext</h3>
+      <p>public const DeclContext * getDeclContext()</p>
+      <p>Defined at line 446 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="64A145537AB352D2E50370BA6D7B7211F73BD185">getNonTransparentDeclContext</h3>
+      <p>public DeclContext * getNonTransparentDeclContext()</p>
+      <div>
+        <div>
+          <p> Return the non transparent context. See the comment of `DeclContext::isTransparentContext()` for the definition of transparent context.</p>
+        </div>
+      </div>
+      <h3 id="A8850161EF8E6EB0B0F0D21731C13AA140F46814">getNonTransparentDeclContext</h3>
+      <p>public const DeclContext * getNonTransparentDeclContext()</p>
+      <p>Defined at line 454 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="B31A80734BB56179B06584BBF6E91F2E0151045C">getNonClosureContext</h3>
+      <p>public Decl * getNonClosureContext()</p>
+      <div>
+        <div>
+          <p> Find the innermost non-closure ancestor of this declaration, walking up through blocks, lambdas, etc.  If that ancestor is not a code context (!isFunctionOrMethod()), returns null.</p>
+          <p> A declaration may be its own non-closure context.</p>
+        </div>
+      </div>
+      <h3 id="E66089BD116F7DCEC23608B4E0AF535232AABA92">getNonClosureContext</h3>
+      <p>public const Decl * getNonClosureContext()</p>
+      <p>Defined at line 464 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="99BDB1E2F8BEC56B37E8D92130CFA4AB0EEA32AE">getTranslationUnitDecl</h3>
+      <p>public TranslationUnitDecl * getTranslationUnitDecl()</p>
+      <h3 id="E856A82DC09AB36252DB7956083AF79DF487E9F5">getTranslationUnitDecl</h3>
+      <p>public const TranslationUnitDecl * getTranslationUnitDecl()</p>
+      <p>Defined at line 469 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="98A8B7E50AA8BC3A62840556992ECDFEFF0CAD3E">isInAnonymousNamespace</h3>
+      <p>public _Bool isInAnonymousNamespace()</p>
+      <h3 id="1D7F1C8B9C41B55BAE3D05E884F351D0CE9700DE">isInStdNamespace</h3>
+      <p>public _Bool isInStdNamespace()</p>
+      <h3 id="8F45207D1638483B6E88F0D3FA23F1F338A2E944">isFileContextDecl</h3>
+      <p>public _Bool isFileContextDecl()</p>
+      <div>
+        <div>
+          <p> Return true if this is a FileContext Decl.</p>
+        </div>
+      </div>
+      <h3 id="E554C675E184CFBA722EEEBF44E732B4F85B7CE6">getASTContext</h3>
+      <p>public ASTContext &amp; getASTContext()</p>
+      <h3 id="B5C10B7463DAE04ED56A6CF468E8146BCFD6477F">getLangOpts</h3>
+      <p>public const LangOptions &amp; getLangOpts()</p>
+      <div>
+        <div>
+          <p> Helper to get the language options from the ASTContext. Defined out of line to avoid depending on ASTContext.h.</p>
+        </div>
+      </div>
+      <h3 id="F59B99B16A70E25029CAA33CC3AD328326BF5D08">setAccess</h3>
+      <p>
+        public void setAccess(
+        <a href="AccessSpecifier.html">AccessSpecifier</a>
+         AS)
+      </p>
+      <p>Defined at line 486 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="985722E3094DBF3F8E747479966E6F59CF949766">getAccess</h3>
+      <p>
+        public 
+        <a href="AccessSpecifier.html">AccessSpecifier</a>
+         getAccess()
+      </p>
+      <p>Defined at line 491 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="77432EF80FCA31BA2BA90AA11AF1BBBAD448EA78">getAccessUnsafe</h3>
+      <p>
+        public 
+        <a href="AccessSpecifier.html">AccessSpecifier</a>
+         getAccessUnsafe()
+      </p>
+      <p>Defined at line 498 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Retrieve the access specifier for this declaration, even though it may not yet have been properly set.</p>
+        </div>
+      </div>
+      <h3 id="55489CE81CB374729E7446F837B18694474F035B">hasAttrs</h3>
+      <p>public _Bool hasAttrs()</p>
+      <p>Defined at line 502 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="45A00221AD29F965F4A773D819E19A9D55C9A62B">setAttrs</h3>
+      <p>public void setAttrs(const AttrVec &amp; Attrs)</p>
+      <p>Defined at line 504 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="8E98B37DA294154AF1511FF6055F61738E2E9343">getAttrs</h3>
+      <p>public AttrVec &amp; getAttrs()</p>
+      <p>Defined at line 508 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="2DFF6AB426148EA59DDFD9BF0B49F4D6717F605D">getAttrs</h3>
+      <p>public const AttrVec &amp; getAttrs()</p>
+      <h3 id="3D8340DA64FD109DA830D23067886BCC39AB5C81">dropAttrs</h3>
+      <p>public void dropAttrs()</p>
+      <h3 id="4CD0817A13031735911F0249C058CFE693B08ACF">addAttr</h3>
+      <p>public void addAttr(Attr * A)</p>
+      <h3 id="E3942AB59DA6EE45C678405E69A95CD50F3E83A7">attrs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         attrs()
+      </p>
+      <p>Defined at line 519 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="9E041CCF8EDD283FDF06BC7C9BADF3EA7F7EF44F">attr_begin</h3>
+      <p>public attr_iterator attr_begin()</p>
+      <p>Defined at line 523 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="84D1DAA07D175DF53DE01DD0DE6AC7DDB5E28673">attr_end</h3>
+      <p>public attr_iterator attr_end()</p>
+      <p>Defined at line 526 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="D3643D76F6346CB342BDFDD1C59556F9BCD636A0">dropAttr</h3>
+      <p>public void dropAttr()</p>
+      <p>Defined at line 531 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="C1F421FF935FB4F13A0A93C7278F19092917EE5C">specific_attrs</h3>
+      <p>public llvm::iterator_range&lt;specific_attr_iterator&lt;T&gt; &gt; specific_attrs()</p>
+      <p>Defined at line 542 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="345F85AC66811DBE60DB9621A4F76B96765C92B4">specific_attr_begin</h3>
+      <p>public specific_attr_iterator&lt;T&gt; specific_attr_begin()</p>
+      <p>Defined at line 547 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="C2BC6DD42F962C033C01105DC6D3FFC9FFC68F06">specific_attr_end</h3>
+      <p>public specific_attr_iterator&lt;T&gt; specific_attr_end()</p>
+      <p>Defined at line 552 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="858E46F808B8D2C54902FBABC0313CCD59E8B4CA">getAttr</h3>
+      <p>public T * getAttr()</p>
+      <p>Defined at line 556 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="4E3FA1F204CD12D255DD84244DD826F33FCE7472">hasAttr</h3>
+      <p>public _Bool hasAttr()</p>
+      <p>Defined at line 560 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="6C2E84D8076FB81CAF9B9BB3D730DAF1E07177DA">getMaxAlignment</h3>
+      <p>public unsigned int getMaxAlignment()</p>
+      <div>
+        <div>
+          <p> getMaxAlignment - return the maximum alignment specified by attributes on this decl, 0 if there are none.</p>
+        </div>
+      </div>
+      <h3 id="E82923774ACB256D2337782566AED068BA40226B">setInvalidDecl</h3>
+      <p>public void setInvalidDecl(_Bool Invalid)</p>
+      <div>
+        <div>
+          <p> setInvalidDecl - Indicates the Decl had a semantic error. This allows for graceful error recovery.</p>
+        </div>
+      </div>
+      <h3 id="A84B2BA9D5AC62EFB1A99F18691220024EC3C521">isInvalidDecl</h3>
+      <p>public _Bool isInvalidDecl()</p>
+      <p>Defined at line 571 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="2CD0EEE70BAAF457AD65D446BF592CE57FA69058">isImplicit</h3>
+      <p>public _Bool isImplicit()</p>
+      <p>Defined at line 576 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> isImplicit - Indicates whether the declaration was implicitly generated by the implementation. If false, this declaration was written explicitly in the source code.</p>
+        </div>
+      </div>
+      <h3 id="7067E84E62979D3020F54A2ABE8E2907990FF3AC">setImplicit</h3>
+      <p>public void setImplicit(_Bool I)</p>
+      <p>Defined at line 577 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="C7D8EF0C4EB44C209BB73E81C7D22314300D3680">isUsed</h3>
+      <p>public _Bool isUsed(_Bool CheckUsedAttr)</p>
+      <div>
+        <div>
+          <p> Whether *any* (re-)declaration of the entity was used, meaning that a definition is required.</p>
+        </div>
+      </div>
+      <h3 id="E765A508537A26F8AFD4473668B93E90F8A038C0">setIsUsed</h3>
+      <p>public void setIsUsed()</p>
+      <p>Defined at line 591 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Set whether the declaration is used, in the sense of odr-use.</p>
+          <p> This should only be used immediately after creating a declaration. It intentionally doesn&apos;t notify any listeners.</p>
+        </div>
+      </div>
+      <h3 id="48D421EE39D0812A82AA770CB9028DB72882F69C">markUsed</h3>
+      <p>public void markUsed(ASTContext &amp; C)</p>
+      <div>
+        <div>
+          <p> Mark the declaration used, in the sense of odr-use.</p>
+          <p> This notifies any mutation listeners in addition to setting a bit indicating the declaration is used.</p>
+        </div>
+      </div>
+      <h3 id="662AEE5F1EC6DD1CA09A0AC796E8921E30C2639F">isReferenced</h3>
+      <p>public _Bool isReferenced()</p>
+      <div>
+        <div>
+          <p> Whether any declaration of this entity was referenced.</p>
+        </div>
+      </div>
+      <h3 id="95F1FE4B8E7EC1FE1266486E17096EB11C3EA730">isThisDeclarationReferenced</h3>
+      <p>public _Bool isThisDeclarationReferenced()</p>
+      <p>Defined at line 604 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Whether this declaration was referenced. This should not be relied upon for anything other than debugging.</p>
+        </div>
+      </div>
+      <h3 id="60B6E8D895DCE0895D96EC873E2563025EDEB677">setReferenced</h3>
+      <p>public void setReferenced(_Bool R)</p>
+      <p>Defined at line 606 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="BBE5C9D6294E115314F59E59496B3BCB58A1AFA5">isTopLevelDeclInObjCContainer</h3>
+      <p>public _Bool isTopLevelDeclInObjCContainer()</p>
+      <p>Defined at line 611 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Whether this declaration is a top-level declaration (function, global variable, etc.) that is lexically inside an objc container definition.</p>
+        </div>
+      </div>
+      <h3 id="72F0810F58E6F757B84700CC3B38F70850CD5CAE">setTopLevelDeclInObjCContainer</h3>
+      <p>public void setTopLevelDeclInObjCContainer(_Bool V)</p>
+      <p>Defined at line 615 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="48E875BBF9AF6E4BFE001EAEA830F26D3322AC07">getExternalSourceSymbolAttr</h3>
+      <p>public ExternalSourceSymbolAttr * getExternalSourceSymbolAttr()</p>
+      <div>
+        <div>
+          <p> Looks on this and related declarations for an applicable external source symbol attribute.</p>
+        </div>
+      </div>
+      <h3 id="DA41BB4A2317EAD12D4C16ECABC926BDB52254BB">isModulePrivate</h3>
+      <p>public _Bool isModulePrivate()</p>
+      <p>Defined at line 625 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Whether this declaration was marked as being private to the module in which it was defined.</p>
+        </div>
+      </div>
+      <h3 id="011AFE28B85346821E3AD16B0C013C838E380AE6">isInExportDeclContext</h3>
+      <p>public _Bool isInExportDeclContext()</p>
+      <div>
+        <div>
+          <p> Whether this declaration was exported in a lexical context. e.g.:</p>
+          <p>   export namespace A {      void f1();        // isInExportDeclContext() == true   }   void A::f1();        // isInExportDeclContext() == false</p>
+          <p>   namespace B {      void f2();        // isInExportDeclContext() == false   }   export void B::f2(); // isInExportDeclContext() == true</p>
+        </div>
+      </div>
+      <h3 id="404FF650373D8D64AE583B763CA9E2D338721925">isInvisibleOutsideTheOwningModule</h3>
+      <p>public _Bool isInvisibleOutsideTheOwningModule()</p>
+      <p>Defined at line 643 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="C2A365F75C00A7A19D15F0B45B3B70C0C047A276">isDiscardedInGlobalModuleFragment</h3>
+      <p>public _Bool isDiscardedInGlobalModuleFragment()</p>
+      <p>Defined at line 649 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> FIXME: Implement discarding declarations actually in global module fragment. See [module.global.frag]p3,4 for details.</p>
+        </div>
+      </div>
+      <h3 id="DEFCFA2FFEECE6E32F29DBBC48B97316FE00025C">hasDefiningAttr</h3>
+      <p>public _Bool hasDefiningAttr()</p>
+      <div>
+        <div>
+          <p> Return true if this declaration has an attribute which acts as definition of the entity, such as &apos;alias&apos; or &apos;ifunc&apos;.</p>
+        </div>
+      </div>
+      <h3 id="007E02ACC9DB590BAD2C813C5BD3C31AFF58444D">getDefiningAttr</h3>
+      <p>public const Attr * getDefiningAttr()</p>
+      <div>
+        <div>
+          <p> Return this declaration&apos;s defining attribute if it has one.</p>
+        </div>
+      </div>
+      <h3 id="F1F75135D79CD05DBACDC310EAD9431A600C7CDF">setModulePrivate</h3>
+      <p>protected void setModulePrivate()</p>
+      <p>Defined at line 661 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Specify that this declaration was marked as being private to the module in which it was defined.</p>
+        </div>
+      </div>
+      <h3 id="9021D79F192221610997738151DBD1B1FF84755C">setFromASTFile</h3>
+      <p>public void setFromASTFile()</p>
+      <p>Defined at line 673 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Set the FromASTFile flag. This indicates that this declaration was deserialized and not parsed from source code and enables features such as module ownership information.</p>
+        </div>
+      </div>
+      <h3 id="7BDAF8CB44031A9D2B1862AC1CE8D865D50277D9">setOwningModuleID</h3>
+      <p>public void setOwningModuleID(unsigned int ID)</p>
+      <p>Defined at line 679 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Set the owning module ID.  This may only be called for deserialized Decls.</p>
+        </div>
+      </div>
+      <h3 id="6E15A485D95CE91857A4EA92B1D59CC2EBCF8D67">getAvailability</h3>
+      <p>
+        public 
+        <a href="AvailabilityResult.html">AvailabilityResult</a>
+         getAvailability(std::string * Message, 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         EnclosingVersion, StringRef * RealizedPlatform)
+      </p>
+      <div>
+        <div>
+          <p> Determine the availability of the given declaration.</p>
+          <p> This routine will determine the most restrictive availability of the given declaration (e.g., preferring &apos;unavailable&apos; to &apos;deprecated&apos;).</p>
+        </div>
+      </div>
+      <h3 id="2040EFDBFF8B570CB60598F706039EC125D4EED2">getVersionIntroduced</h3>
+      <p>
+        public 
+        <a href="../llvm/VersionTuple.html">VersionTuple</a>
+         getVersionIntroduced()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the version of the target platform in which this declaration was introduced.</p>
+        </div>
+      </div>
+      <h3 id="E96E3B76B50DC412D2A2323A95F3AE2417A28736">isDeprecated</h3>
+      <p>public _Bool isDeprecated(std::string * Message)</p>
+      <p>Defined at line 720 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Determine whether this declaration is marked &apos;deprecated&apos;.</p>
+        </div>
+      </div>
+      <h3 id="B2B7CD5FFCFAF0628FB8A8EED1DC8EC9D9D66B0A">isUnavailable</h3>
+      <p>public _Bool isUnavailable(std::string * Message)</p>
+      <p>Defined at line 729 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Determine whether this declaration is marked &apos;unavailable&apos;.</p>
+        </div>
+      </div>
+      <h3 id="720D84D4844A111C099D73B4754CB700977F4788">isWeakImported</h3>
+      <p>public _Bool isWeakImported()</p>
+      <div>
+        <div>
+          <p> Determine whether this is a weak-imported symbol.</p>
+          <p> Weak-imported symbols are typically marked with the &apos;weak_import&apos; attribute, but may also be marked with an &apos;availability&apos; attribute where we&apos;re targing a platform prior to the introduction of this feature.</p>
+        </div>
+      </div>
+      <h3 id="981AD01DBC1A2D47D5B7521716FFDE084221C530">canBeWeakImported</h3>
+      <p>public _Bool canBeWeakImported(_Bool &amp; IsDefinition)</p>
+      <div>
+        <div>
+          <p> Determines whether this symbol can be weak-imported, e.g., whether it would be well-formed to add the weak_import attribute.</p>
+        </div>
+      </div>
+      <h3 id="7442DAEB9FCF3CC9AF040DCDF231EF07C932EC1C">isFromASTFile</h3>
+      <p>public _Bool isFromASTFile()</p>
+      <p>Defined at line 751 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Determine whether this declaration came from an AST file (such as a precompiled header or module) rather than having been parsed.</p>
+        </div>
+      </div>
+      <h3 id="E84E45F2D1FAACEDDF055853A83EBB6CEB5FC51C">getGlobalID</h3>
+      <p>public unsigned int getGlobalID()</p>
+      <p>Defined at line 755 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Retrieve the global declaration ID associated with this declaration, which specifies where this Decl was loaded from.</p>
+        </div>
+      </div>
+      <h3 id="ED291497EF6E861219656C06A2A626AEE2ED5828">getOwningModuleID</h3>
+      <p>public unsigned int getOwningModuleID()</p>
+      <p>Defined at line 763 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Retrieve the global ID of the module that owns this particular declaration.</p>
+        </div>
+      </div>
+      <h3 id="C709A14F83349707AC2BB3A922A6F760383CC88A">hasLocalOwningModuleStorage</h3>
+      <p>protected _Bool hasLocalOwningModuleStorage()</p>
+      <h3 id="F42E870EDC9ABBFDD28B1F54B3A0DD0075DB8451">getImportedOwningModule</h3>
+      <p>public Module * getImportedOwningModule()</p>
+      <p>Defined at line 778 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Get the imported owning module, if this decl is from an imported (non-local) module.</p>
+        </div>
+      </div>
+      <h3 id="09EB55CD2E02B9F482B1C73F00E81AA8C1AA12AB">getLocalOwningModule</h3>
+      <p>public Module * getLocalOwningModule()</p>
+      <p>Defined at line 787 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Get the local owning module, if known. Returns nullptr if owner is not yet known or declaration is not from a module.</p>
+        </div>
+      </div>
+      <h3 id="933CF788EA3F7F29FAF9482CA4C7F208ECC39EDF">setLocalOwningModule</h3>
+      <p>public void setLocalOwningModule(Module * M)</p>
+      <p>Defined at line 795 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="94AA1329AD6016C6FCAA550D32A08326CACF8988">hasOwningModule</h3>
+      <p>public _Bool hasOwningModule()</p>
+      <p>Defined at line 803 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Is this declaration owned by some module?</p>
+        </div>
+      </div>
+      <h3 id="B2BD4718BCD7FB712D1C87F03137488A8006CA76">getOwningModule</h3>
+      <p>public Module * getOwningModule()</p>
+      <p>Defined at line 808 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Get the module that owns this declaration (for visibility purposes).</p>
+        </div>
+      </div>
+      <h3 id="D817953BF79DB2EEE6982A9485846938F4BDC3E0">getOwningModuleForLinkage</h3>
+      <p>public Module * getOwningModuleForLinkage(_Bool IgnoreLinkage)</p>
+      <div>
+        <div>
+          <p> Get the module that owns this declaration for linkage purposes. There only ever is such a module under the C++ Modules TS.</p>
+        </div>
+      </div>
+      <h3 id="6ABC8E0FAAC607112C6CA0C6C17240F51FB0B5C6">isUnconditionallyVisible</h3>
+      <p>public _Bool isUnconditionallyVisible()</p>
+      <p>Defined at line 824 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Determine whether this declaration is definitely visible to name lookup, independent of whether the owning module is visible. Note: The declaration may be visible even if this returns  if the owning module is visible within the query context. This is a low-level helper function; most code should be calling Sema::isVisible() instead.</p>
+        </div>
+      </div>
+      <h3 id="1FC8FFD9A1E88700FAB18869FF5D12D0C3CB2F05">isReachable</h3>
+      <p>public _Bool isReachable()</p>
+      <p>Defined at line 828 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="684CC53F222EE60A9F1E4D9EBEB312B2BC61BB1D">setVisibleDespiteOwningModule</h3>
+      <p>public void setVisibleDespiteOwningModule()</p>
+      <p>Defined at line 835 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Set that this declaration is globally visible, even if it came from a module that is not visible.</p>
+        </div>
+      </div>
+      <h3 id="492BF0899C468853B4CC9F4D345B9E2F59266351">getModuleOwnershipKind</h3>
+      <p>
+        public 
+        <a href="../clang/Decl/ModuleOwnershipKind.html">ModuleOwnershipKind</a>
+         getModuleOwnershipKind()
+      </p>
+      <p>Defined at line 841 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Get the kind of module ownership for this declaration.</p>
+        </div>
+      </div>
+      <h3 id="642E9B74D6CD70A72DBB9B982A91225DB3B8E90D">setModuleOwnershipKind</h3>
+      <p>
+        public void setModuleOwnershipKind(
+        <a href="../clang/Decl/ModuleOwnershipKind.html">ModuleOwnershipKind</a>
+         MOK)
+      </p>
+      <p>Defined at line 846 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Set whether this declaration is hidden from name lookup.</p>
+        </div>
+      </div>
+      <h3 id="DD0E349BADB58F516C8180150A7A392781703596">getIdentifierNamespace</h3>
+      <p>public unsigned int getIdentifierNamespace()</p>
+      <p>Defined at line 854 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="872A1A466A9542FAA176112CF8CA1AB9EDC60BA4">isInIdentifierNamespace</h3>
+      <p>public _Bool isInIdentifierNamespace(unsigned int NS)</p>
+      <p>Defined at line 858 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="F49FA068F21EE6C1375966529F552C4DB86E7582">getIdentifierNamespaceForKind</h3>
+      <p>
+        public unsigned int getIdentifierNamespaceForKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK)
+      </p>
+      <h3 id="EAE98CD71A312B8744FEC8DA37F048F143FE02BA">hasTagIdentifierNamespace</h3>
+      <p>public _Bool hasTagIdentifierNamespace()</p>
+      <p>Defined at line 864 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="1BEA976581FBC251FC1491B58A2577257EE7F17A">isTagIdentifierNamespace</h3>
+      <p>public _Bool isTagIdentifierNamespace(unsigned int NS)</p>
+      <p>Defined at line 868 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="158402CED8C0640330C41430A43B37020693D3A6">getLexicalDeclContext</h3>
+      <p>public DeclContext * getLexicalDeclContext()</p>
+      <p>Defined at line 883 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> getLexicalDeclContext - The declaration context where this Decl was lexically declared (LexicalDC). May be different from getDeclContext() (SemanticDC). e.g.:</p>
+          <p>   namespace A {      void f(); // SemanticDC == LexicalDC == &apos;namespace A&apos;   }   void A::f(); // SemanticDC == namespace &apos;A&apos;                // LexicalDC == global namespace</p>
+        </div>
+      </div>
+      <h3 id="34505E46D2884BDC90623E5E966829B9E9E1B4D4">getLexicalDeclContext</h3>
+      <p>public const DeclContext * getLexicalDeclContext()</p>
+      <p>Defined at line 888 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="52CEFB6450165EB9C07C89BF410D1857D250C5DD">isOutOfLine</h3>
+      <p>public _Bool isOutOfLine()</p>
+      <div>
+        <div>
+          <p> Determine whether this declaration is declared out of line (outside its semantic context).</p>
+        </div>
+      </div>
+      <h3 id="389A6D82A916D882B064BE3D06B55B6DE9A64B7A">setDeclContext</h3>
+      <p>public void setDeclContext(DeclContext * DC)</p>
+      <div>
+        <div>
+          <p> setDeclContext - Set both the semantic and lexical DeclContext to DC.</p>
+        </div>
+      </div>
+      <h3 id="5BAAF49F4C2EDF433007822225A131EB9A9FB4BD">setLexicalDeclContext</h3>
+      <p>public void setLexicalDeclContext(DeclContext * DC)</p>
+      <h3 id="13EA834204BD0FD6FAF215605A242A4478BC1B4B">isTemplated</h3>
+      <p>public _Bool isTemplated()</p>
+      <div>
+        <div>
+          <p> Determine whether this declaration is a templated entity (whether it is within the scope of a template parameter).</p>
+        </div>
+      </div>
+      <h3 id="5E8E9A0B8DDE7303BFBC4C723CC9BF492578F8A4">getTemplateDepth</h3>
+      <p>public unsigned int getTemplateDepth()</p>
+      <div>
+        <div>
+          <p> Determine the number of levels of template parameter surrounding this declaration.</p>
+        </div>
+      </div>
+      <h3 id="C115BC43FB7FA25985A1934F552326B38EC982B1">isDefinedOutsideFunctionOrMethod</h3>
+      <p>public _Bool isDefinedOutsideFunctionOrMethod()</p>
+      <p>Defined at line 914 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> isDefinedOutsideFunctionOrMethod - This predicate returns true if this scoped decl is defined outside the current function or method.  This is roughly global variables and functions, but also handles enums (which could be defined inside or outside a function etc).</p>
+        </div>
+      </div>
+      <h3 id="0B8CB5650A45C12EAA30DA37D939B4C4301B3077">isInLocalScopeForInstantiation</h3>
+      <p>public _Bool isInLocalScopeForInstantiation()</p>
+      <div>
+        <div>
+          <p> Determine whether a substitution into this declaration would occur as part of a substitution into a dependent local scope. Such a substitution transitively substitutes into all constructs nested within this declaration.</p>
+          <p> This recognizes non-defining declarations as well as members of local classes and lambdas:</p>
+        </div>
+      </div>
+      <h3 id="ED6A4B2C9AF11893403D18D5079E152060C774D0">getParentFunctionOrMethod</h3>
+      <p>public const DeclContext * getParentFunctionOrMethod(_Bool LexicalParent)</p>
+      <div>
+        <div>
+          <p> If this decl is defined inside a function/method/block it returns the corresponding DeclContext, otherwise it returns null.</p>
+        </div>
+      </div>
+      <h3 id="B7A917435785660C5421597F4C0602B731458F8C">getParentFunctionOrMethod</h3>
+      <p>public DeclContext * getParentFunctionOrMethod(_Bool LexicalParent)</p>
+      <p>Defined at line 936 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="7C071BB9CEFA10C9460BD52D5CE1C5381847C34F">getCanonicalDecl</h3>
+      <p>public Decl * getCanonicalDecl()</p>
+      <p>Defined at line 943 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Retrieves the &quot;canonical&quot; declaration of the given declaration.</p>
+        </div>
+      </div>
+      <h3 id="7E0FB1B809E5C6FA2991A48B9039B0E8A2BD5ADB">getCanonicalDecl</h3>
+      <p>public const Decl * getCanonicalDecl()</p>
+      <p>Defined at line 944 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="14F18C097D1AA9952E1397BF4272A5FA66AA5D31">isCanonicalDecl</h3>
+      <p>public _Bool isCanonicalDecl()</p>
+      <p>Defined at line 949 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Whether this particular Decl is a canonical one.</p>
+        </div>
+      </div>
+      <h3 id="8063DF1D238788AA42B54D897B8145D540C2BF1E">getNextRedeclarationImpl</h3>
+      <p>protected Decl * getNextRedeclarationImpl()</p>
+      <p>Defined at line 956 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Returns the next redeclaration or itself if this is the only decl.</p>
+          <p> Decl subclasses that can be redeclared should override this method so that Decl::redecl_iterator can iterate over them.</p>
+        </div>
+      </div>
+      <h3 id="70645465FE4E25F0CE7BCF2544E397B109970D7E">getPreviousDeclImpl</h3>
+      <p>protected Decl * getPreviousDeclImpl()</p>
+      <p>Defined at line 960 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Implementation of getPreviousDecl(), to be overridden by any subclass that has a redeclaration chain.</p>
+        </div>
+      </div>
+      <h3 id="4CA83A974B66C5FA03ED9AED99327E9F870829E9">getMostRecentDeclImpl</h3>
+      <p>protected Decl * getMostRecentDeclImpl()</p>
+      <p>Defined at line 964 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Implementation of getMostRecentDecl(), to be overridden by any subclass that has a redeclaration chain.</p>
+        </div>
+      </div>
+      <h3 id="C1D22E5BD1A8974F6D5652B9B80B5E01F630DA41">redecls</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         redecls()
+      </p>
+      <p>Defined at line 1014 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Returns an iterator range for all the redeclarations of the same decl. It will iterate at least once (when this decl is the only one).</p>
+        </div>
+      </div>
+      <h3 id="6BBDB4297498984BF89B66E275D9DC000A67EEC4">redecls_begin</h3>
+      <p>
+        public 
+        <a href="../clang/Decl/redecl_iterator.html">redecl_iterator</a>
+         redecls_begin()
+      </p>
+      <p>Defined at line 1018 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="D16D36619A35DD6885FBEBFF5F25D5FFD5D046AD">redecls_end</h3>
+      <p>
+        public 
+        <a href="../clang/Decl/redecl_iterator.html">redecl_iterator</a>
+         redecls_end()
+      </p>
+      <p>Defined at line 1022 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="EC6B249F7BEF1124C72BCB8C31FC87E75FEB7C3F">getPreviousDecl</h3>
+      <p>public Decl * getPreviousDecl()</p>
+      <p>Defined at line 1026 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Retrieve the previous declaration that declares the same entity as this declaration, or NULL if there is no previous declaration.</p>
+        </div>
+      </div>
+      <h3 id="743AE4475632D26183F83A0B884F808BAC46B280">getPreviousDecl</h3>
+      <p>public const Decl * getPreviousDecl()</p>
+      <p>Defined at line 1030 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Retrieve the previous declaration that declares the same entity as this declaration, or NULL if there is no previous declaration.</p>
+        </div>
+      </div>
+      <h3 id="5F7BC7C72BA5C445F4F94123E72D15183BEC5341">isFirstDecl</h3>
+      <p>public _Bool isFirstDecl()</p>
+      <p>Defined at line 1035 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> True if this is the first declaration in its redeclaration chain.</p>
+        </div>
+      </div>
+      <h3 id="415AC7E353728726E476EC565C8511DF6446ACC4">getMostRecentDecl</h3>
+      <p>public Decl * getMostRecentDecl()</p>
+      <p>Defined at line 1041 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Retrieve the most recent declaration that declares the same entity as this declaration (which may be this declaration).</p>
+        </div>
+      </div>
+      <h3 id="89B0EF85133223F08A82CA18404E7DFB00EF7698">getMostRecentDecl</h3>
+      <p>public const Decl * getMostRecentDecl()</p>
+      <p>Defined at line 1045 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Retrieve the most recent declaration that declares the same entity as this declaration (which may be this declaration).</p>
+        </div>
+      </div>
+      <h3 id="C043F4F0FB69D254081034430B317FF9466B3A91">getBody</h3>
+      <p>public Stmt * getBody()</p>
+      <p>Defined at line 1052 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> getBody - If this Decl represents a declaration for a body of code,  such as a function or method definition, this method returns the  top-level Stmt* of that body.  Otherwise this method returns null.</p>
+        </div>
+      </div>
+      <h3 id="817649D166434D52D51D179036BE08EE09B8347F">hasBody</h3>
+      <p>public _Bool hasBody()</p>
+      <p>Defined at line 1058 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Returns true if this  represents a declaration for a body of code, such as a function or method definition. Note that  can also return true if any redeclaration of this represents a declaration for a body of code.</p>
+        </div>
+      </div>
+      <h3 id="95868CC84056390669313316D11D8E2F1E7C73FA">getBodyRBrace</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBodyRBrace()
+      </p>
+      <div>
+        <div>
+          <p> getBodyRBrace - Gets the right brace of the body, if a body exists. This works whether the body is a CompoundStmt or a CXXTryStmt.</p>
+        </div>
+      </div>
+      <h3 id="DD9AFC0D2F9E327A7951E604F2CB5984BDB3720E">add</h3>
+      <p>
+        public void add(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         k)
+      </p>
+      <div>
+        <div>
+          <p> global temp stats (until we have a per-module visitor)</p>
+        </div>
+      </div>
+      <h3 id="B46B592D5FF40209F8FAC19D23756594DEBEB35B">EnableStatistics</h3>
+      <p>public void EnableStatistics()</p>
+      <h3 id="CFE37CC97573DB76FB15089A509639E63D30F45D">PrintStats</h3>
+      <p>public void PrintStats()</p>
+      <h3 id="B050C289831C25772C666F62103F47F4573B48A6">isTemplateParameter</h3>
+      <p>public _Bool isTemplateParameter()</p>
+      <p>Defined at line 2605 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> isTemplateParameter - Determines whether this declaration is a template parameter.</p>
+        </div>
+      </div>
+      <h3 id="C71E5846D50FD64A6223525A7ED7F6472B69EC2F">isTemplateParameterPack</h3>
+      <p>public _Bool isTemplateParameterPack()</p>
+      <div>
+        <div>
+          <p> isTemplateParameter - Determines whether this declaration is a template parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="C5D47428FFEDFC0C57C2AAC9FCD7F14C5B3687F1">isParameterPack</h3>
+      <p>public _Bool isParameterPack()</p>
+      <div>
+        <div>
+          <p> Whether this declaration is a parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="636020E1DEA545FAB59757FAC77A1CE33F8A3F1F">isTemplateDecl</h3>
+      <p>public _Bool isTemplateDecl()</p>
+      <div>
+        <div>
+          <p> returns true if this declaration is a template</p>
+        </div>
+      </div>
+      <h3 id="27FB5B44B2E1F8B98D5448F97BA196ADD7FAD001">isFunctionOrFunctionTemplate</h3>
+      <p>public _Bool isFunctionOrFunctionTemplate()</p>
+      <p>Defined at line 1084 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Whether this declaration is a function or function template.</p>
+        </div>
+      </div>
+      <h3 id="1C0B604FBCA7EA087CDAF3F63204143BB0873DB2">getDescribedTemplate</h3>
+      <p>public TemplateDecl * getDescribedTemplate()</p>
+      <div>
+        <div>
+          <p> If this is a declaration that describes some template, this method returns that template declaration.</p>
+          <p> Note that this returns nullptr for partial specializations, because they are not modeled as TemplateDecls. Use getDescribedTemplateParams to handle those cases.</p>
+        </div>
+      </div>
+      <h3 id="DF6F8A9EFCED952CBB022D4738C8287C1F57BC52">getDescribedTemplateParams</h3>
+      <p>public const TemplateParameterList * getDescribedTemplateParams()</p>
+      <div>
+        <div>
+          <p> If this is a declaration that describes some template or partial specialization, this returns the corresponding template parameter list.</p>
+        </div>
+      </div>
+      <h3 id="66AE0D48CEA7E78C7B6127CC49C6FC438D9B6161">getAsFunction</h3>
+      <p>public FunctionDecl * getAsFunction()</p>
+      <div>
+        <div>
+          <p> Returns the function itself, or the templated function if this is a function template.</p>
+        </div>
+      </div>
+      <h3 id="35375EDE68E4B26874C67DFCE7C06358BFB0A4BD">getAsFunction</h3>
+      <p>public const FunctionDecl * getAsFunction()</p>
+      <p>Defined at line 1106 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="95E0758D15CD666925793DB71130DBA8FF0C417F">setLocalExternDecl</h3>
+      <p>public void setLocalExternDecl()</p>
+      <p>Defined at line 1116 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Changes the namespace of this declaration to reflect that it&apos;s a function-local extern declaration.</p>
+          <p> These declarations appear in the lexical context of the extern declaration, but in the semantic context of the enclosing namespace scope.</p>
+        </div>
+      </div>
+      <h3 id="2099C72D32C2101AE28C188F0E5E0CF3402C0C8F">isLocalExternDecl</h3>
+      <p>public _Bool isLocalExternDecl()</p>
+      <p>Defined at line 1134 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Determine whether this is a block-scope declaration with linkage. This will either be a local variable declaration declared &apos;extern&apos;, or a local function declaration.</p>
+        </div>
+      </div>
+      <h3 id="77FBFC271F8D3156F2771AC7DC79139390A3E966">setObjectOfFriendDecl</h3>
+      <p>public void setObjectOfFriendDecl(_Bool PerformFriendInjection)</p>
+      <p>Defined at line 1145 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Changes the namespace of this declaration to reflect that it&apos;s the object of a friend declaration.</p>
+          <p> These declarations appear in the lexical context of the friending class, but in the semantic context of the actual entity.  This property applies only to a specific decl object;  other redeclarations of the same entity may not (and probably don&apos;t) share this property.</p>
+        </div>
+      </div>
+      <h3 id="57EC0B82470D87E10D28185E8E58A4858B93CAFA">getFriendObjectKind</h3>
+      <p>
+        public 
+        <a href="../clang/Decl/FriendObjectKind.html">FriendObjectKind</a>
+         getFriendObjectKind()
+      </p>
+      <p>Defined at line 1185 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Determines whether this declaration is the object of a friend declaration and, if so, what kind.</p>
+          <p> There is currently no direct way to find the associated FriendDecl.</p>
+        </div>
+      </div>
+      <h3 id="69A9C2ED7DB93687E0916E6AE8367C95EC9ED916">setNonMemberOperator</h3>
+      <p>public void setNonMemberOperator()</p>
+      <p>Defined at line 1194 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Specifies that this declaration is a C++ overloaded non-member.</p>
+        </div>
+      </div>
+      <h3 id="81789F6C451945335264BFE76243EFBC6BC88704">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 1201 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <h3 id="A6C4FCCDAB6845561D1AFBB3E8683DA5F6A7EAB0">castToDeclContext</h3>
+      <p>public DeclContext * castToDeclContext(const Decl * )</p>
+      <h3 id="41F715E2608D7969522F90836AAC96BEC78A145B">castFromDeclContext</h3>
+      <p>public Decl * castFromDeclContext(const DeclContext * )</p>
+      <h3 id="DC47AB1142AF72CC26B06C56DCCD92C547B621D0">print</h3>
+      <p>public void print(raw_ostream &amp; Out, unsigned int Indentation, _Bool PrintInstantiation)</p>
+      <h3 id="33DC8CA8B1870CAB2BBB91D930CADED0E6870747">print</h3>
+      <p>public void print(raw_ostream &amp; Out, const PrintingPolicy &amp; Policy, unsigned int Indentation, _Bool PrintInstantiation)</p>
+      <h3 id="D2C28A1A9B82EE4DC95921CDDC8ABA31C6C5A923">printGroup</h3>
+      <p>public void printGroup(Decl ** Begin, unsigned int NumDecls, raw_ostream &amp; Out, const PrintingPolicy &amp; Policy, unsigned int Indentation)</p>
+      <h3 id="496A53E418473601D71C314FA613279743751C52">dump</h3>
+      <p>public void dump()</p>
+      <div>
+        <div>
+          <p> Debuggers don&apos;t usually respect default arguments.</p>
+        </div>
+      </div>
+      <h3 id="E699F7DD9D2B3D5E24D514806A1B6051FD343C59">dumpColor</h3>
+      <p>public void dumpColor()</p>
+      <div>
+        <div>
+          <p> Same as dump(), but forces color printing.</p>
+        </div>
+      </div>
+      <h3 id="031D825CDAC0544602A3B8E7CEAC1E95BC7732D5">dump</h3>
+      <p>
+        public void dump(raw_ostream &amp; Out, _Bool Deserialize, 
+        <a href="ASTDumpOutputFormat.html">ASTDumpOutputFormat</a>
+         OutputFormat)
+      </p>
+      <h3 id="B02E71054BB2690EBDC4291864FB4EE884120D3F">getID</h3>
+      <p>public int64_t getID()</p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="77CC1133FFC447ACB030985076E351FFB0414567">getFunctionType</h3>
+      <p>public const FunctionType * getFunctionType(_Bool BlocksToo)</p>
+      <div>
+        <div>
+          <p> Looks through the Decl&apos;s underlying type to extract a FunctionType when possible. Will return null if the type underlying the Decl does not have a FunctionType.</p>
+        </div>
+      </div>
+      <h3 id="6CEF1CC5128FB040CAF16C2BFA7CA90C218AF756">getASTMutationListener</h3>
+      <p>protected ASTMutationListener * getASTMutationListener()</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="5C5D34F50966D5740359F767649C1E47629754FE">enum Kind</h3>
+      <ul>
+        <li>AccessSpec</li>
+        <li>Block</li>
+        <li>Captured</li>
+        <li>ClassScopeFunctionSpecialization</li>
+        <li>Empty</li>
+        <li>Export</li>
+        <li>ExternCContext</li>
+        <li>FileScopeAsm</li>
+        <li>Friend</li>
+        <li>FriendTemplate</li>
+        <li>ImplicitConceptSpecialization</li>
+        <li>Import</li>
+        <li>LifetimeExtendedTemporary</li>
+        <li>LinkageSpec</li>
+        <li>Using</li>
+        <li>UsingEnum</li>
+        <li>firstBaseUsing</li>
+        <li>lastBaseUsing</li>
+        <li>HLSLBuffer</li>
+        <li>Label</li>
+        <li>Namespace</li>
+        <li>NamespaceAlias</li>
+        <li>ObjCCompatibleAlias</li>
+        <li>ObjCCategory</li>
+        <li>ObjCCategoryImpl</li>
+        <li>ObjCImplementation</li>
+        <li>firstObjCImpl</li>
+        <li>lastObjCImpl</li>
+        <li>ObjCInterface</li>
+        <li>ObjCProtocol</li>
+        <li>firstObjCContainer</li>
+        <li>lastObjCContainer</li>
+        <li>ObjCMethod</li>
+        <li>ObjCProperty</li>
+        <li>BuiltinTemplate</li>
+        <li>Concept</li>
+        <li>ClassTemplate</li>
+        <li>FunctionTemplate</li>
+        <li>TypeAliasTemplate</li>
+        <li>VarTemplate</li>
+        <li>firstRedeclarableTemplate</li>
+        <li>lastRedeclarableTemplate</li>
+        <li>TemplateTemplateParm</li>
+        <li>firstTemplate</li>
+        <li>lastTemplate</li>
+        <li>Enum</li>
+        <li>Record</li>
+        <li>CXXRecord</li>
+        <li>ClassTemplateSpecialization</li>
+        <li>ClassTemplatePartialSpecialization</li>
+        <li>firstClassTemplateSpecialization</li>
+        <li>lastClassTemplateSpecialization</li>
+        <li>firstCXXRecord</li>
+        <li>lastCXXRecord</li>
+        <li>firstRecord</li>
+        <li>lastRecord</li>
+        <li>firstTag</li>
+        <li>lastTag</li>
+        <li>TemplateTypeParm</li>
+        <li>ObjCTypeParam</li>
+        <li>TypeAlias</li>
+        <li>Typedef</li>
+        <li>firstTypedefName</li>
+        <li>lastTypedefName</li>
+        <li>UnresolvedUsingTypename</li>
+        <li>firstType</li>
+        <li>lastType</li>
+        <li>UnresolvedUsingIfExists</li>
+        <li>UsingDirective</li>
+        <li>UsingPack</li>
+        <li>UsingShadow</li>
+        <li>ConstructorUsingShadow</li>
+        <li>firstUsingShadow</li>
+        <li>lastUsingShadow</li>
+        <li>Binding</li>
+        <li>Field</li>
+        <li>ObjCAtDefsField</li>
+        <li>ObjCIvar</li>
+        <li>firstField</li>
+        <li>lastField</li>
+        <li>Function</li>
+        <li>CXXDeductionGuide</li>
+        <li>CXXMethod</li>
+        <li>CXXConstructor</li>
+        <li>CXXConversion</li>
+        <li>CXXDestructor</li>
+        <li>firstCXXMethod</li>
+        <li>lastCXXMethod</li>
+        <li>firstFunction</li>
+        <li>lastFunction</li>
+        <li>MSProperty</li>
+        <li>NonTypeTemplateParm</li>
+        <li>Var</li>
+        <li>Decomposition</li>
+        <li>ImplicitParam</li>
+        <li>OMPCapturedExpr</li>
+        <li>ParmVar</li>
+        <li>VarTemplateSpecialization</li>
+        <li>VarTemplatePartialSpecialization</li>
+        <li>firstVarTemplateSpecialization</li>
+        <li>lastVarTemplateSpecialization</li>
+        <li>firstVar</li>
+        <li>lastVar</li>
+        <li>firstDeclarator</li>
+        <li>lastDeclarator</li>
+        <li>EnumConstant</li>
+        <li>IndirectField</li>
+        <li>MSGuid</li>
+        <li>OMPDeclareMapper</li>
+        <li>OMPDeclareReduction</li>
+        <li>TemplateParamObject</li>
+        <li>UnnamedGlobalConstant</li>
+        <li>UnresolvedUsingValue</li>
+        <li>firstValue</li>
+        <li>lastValue</li>
+        <li>firstNamed</li>
+        <li>lastNamed</li>
+        <li>OMPAllocate</li>
+        <li>OMPRequires</li>
+        <li>OMPThreadPrivate</li>
+        <li>ObjCPropertyImpl</li>
+        <li>PragmaComment</li>
+        <li>PragmaDetectMismatch</li>
+        <li>RequiresExprBody</li>
+        <li>StaticAssert</li>
+        <li>TopLevelStmt</li>
+        <li>TranslationUnit</li>
+        <li>firstDecl</li>
+        <li>lastDecl</li>
+      </ul>
+      <p>Defined at line 86 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> Lists the kind of concrete classes of Decl.</p>
+        </div>
+      </div>
+      <h3 id="24766E972DB03EA116CC9D80CD773221EA5610B6">enum IdentifierNamespace</h3>
+      <ul>
+        <li>IDNS_Label</li>
+        <li>IDNS_Tag</li>
+        <li>IDNS_Type</li>
+        <li>IDNS_Member</li>
+        <li>IDNS_Namespace</li>
+        <li>IDNS_Ordinary</li>
+        <li>IDNS_ObjCProtocol</li>
+        <li>IDNS_OrdinaryFriend</li>
+        <li>IDNS_TagFriend</li>
+        <li>IDNS_Using</li>
+        <li>IDNS_NonMemberOperator</li>
+        <li>IDNS_LocalExtern</li>
+        <li>IDNS_OMPReduction</li>
+        <li>IDNS_OMPMapper</li>
+      </ul>
+      <p>Defined at line 112 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> IdentifierNamespace - The different namespaces in which declarations may appear.  According to C99 6.2.3, there are four namespaces, labels, tags, members and ordinary identifiers.  C++ describes lookup completely differently: certain lookups merely &quot;ignore&quot; certain kinds of declarations, usually based on whether the declaration is of a type, etc.</p>
+          <p> These are meant as bitmasks, so that searches in C++ can look into the &quot;tag&quot; namespace during ordinary lookup.</p>
+          <p> Decl currently provides 15 bits of IDNS bits.</p>
+        </div>
+      </div>
+      <h3 id="6D99FCF686041C069974D7FB6C3EC623C1E4CB44">enum ObjCDeclQualifier</h3>
+      <ul>
+        <li>OBJC_TQ_None</li>
+        <li>OBJC_TQ_In</li>
+        <li>OBJC_TQ_Inout</li>
+        <li>OBJC_TQ_Out</li>
+        <li>OBJC_TQ_Bycopy</li>
+        <li>OBJC_TQ_Byref</li>
+        <li>OBJC_TQ_Oneway</li>
+        <li>OBJC_TQ_CSNullability</li>
+      </ul>
+      <p>Defined at line 195 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> ObjCDeclQualifier - &apos;Qualifiers&apos; written next to the return and parameter types in method declarations.  Other than remembering them and mangling them into the method&apos;s signature string, these are ignored by the compiler; they are consumed by certain remote-messaging frameworks.</p>
+          <p> in, inout, and out are mutually exclusive and apply only to method parameters.  bycopy and byref are mutually exclusive and apply only to method parameters (?).  oneway applies only to results.  All of these expect their corresponding parameter to have a particular type.  None of this is currently enforced by clang.</p>
+          <p> This should be kept in sync with ObjCDeclSpec::ObjCDeclQualifier.</p>
+        </div>
+      </div>
+      <h3 id="F03B53A6D05EE47E03DEC467925CC6E83795404E">enum class ModuleOwnershipKind</h3>
+      <ul>
+        <li>Unowned</li>
+        <li>Visible</li>
+        <li>VisibleWhenImported</li>
+        <li>ReachableWhenImported</li>
+        <li>ModulePrivate</li>
+      </ul>
+      <p>Defined at line 213 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+      <div>
+        <div>
+          <p> The kind of ownership a declaration has, for visibility purposes. This enumeration is designed such that higher values represent higher levels of name hiding.</p>
+        </div>
+      </div>
+      <h3 id="0E22F1606170321F542C330E37ACDD8EC3F668B3">enum FriendObjectKind</h3>
+      <ul>
+        <li>FOK_None</li>
+        <li>FOK_Declared</li>
+        <li>FOK_Undeclared</li>
+      </ul>
+      <p>Defined at line 1175 of file /usr/lib/llvm-16/include/clang/AST/DeclBase.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#56CEF7F153CDF9CE99D599F6342EA2733B34E1BF">operator new</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#46A5DFED3E6AA921BB6105F64755E8B2A109D971">operator new</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2779F3EF45D83C383863024E75313052B36B8310">Decl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B139F7C15268A0165E183B96CAF2E74DBE101D5">Decl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8366D68AA1F32C6BE5220894FC429AE93C591553">Decl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08C3952FB15E72549C0B55023061C97DAEB651C3">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#80969B8E9010A539E454E45A16B383F0A95C3D76">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC6A6621B121CC20AF266D6BAC0B13A8E8163861">Decl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E930A2C8977BF3979DEC017C6D53F1C814A409B8">Decl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CAF6151E4DA75CF1FC1A3562E76CA721A8641E19">~Decl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DCB0027F5C557802D0B3188B30732C8B30F92CC4">updateOutOfDate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#865C3C3AD4739602A58084BDE14D87463C968845">getCachedLinkage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#54139DC2A8DA02DFD44AB7D0A8E37C0C0ED96202">setCachedLinkage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0216AE2C76302058AA794ADE5A22D39B7CF9ABEE">hasCachedLinkage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#746A6DC7ED303CF16F0565C4518CF2CCFC3760BA">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BC00A2FCA8AE3BFCE9A1FD85E04D16210CEC3B5">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAE0C816C428A3D81A8B959CAAAB7F76640AA01F">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#611D518C54B67A9C94EDD8E52F4BC48E2CC8FF6B">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BFD337E62E6A87F2F09902C0976C80ACC53C92C8">setLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D8F8FDE0C590B2962E12F83D98A5CEFB8BED1D5">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F55416C85A73CE41887AF8B8E55C4C82D5C895F9">getDeclKindName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B6967FF26BE16923F5284FE111235151DCAABC8">getNextDeclInContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#587A0B320D746686FAEDEF0CFA87C71ADFC4A8DE">getNextDeclInContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EDFB69758E390128021CD960BD4E8CA66F1C8564">getDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3CCE116A3EF80192145109D71C847C9655A904F5">getDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64A145537AB352D2E50370BA6D7B7211F73BD185">getNonTransparentDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8850161EF8E6EB0B0F0D21731C13AA140F46814">getNonTransparentDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B31A80734BB56179B06584BBF6E91F2E0151045C">getNonClosureContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E66089BD116F7DCEC23608B4E0AF535232AABA92">getNonClosureContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99BDB1E2F8BEC56B37E8D92130CFA4AB0EEA32AE">getTranslationUnitDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E856A82DC09AB36252DB7956083AF79DF487E9F5">getTranslationUnitDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98A8B7E50AA8BC3A62840556992ECDFEFF0CAD3E">isInAnonymousNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D7F1C8B9C41B55BAE3D05E884F351D0CE9700DE">isInStdNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F45207D1638483B6E88F0D3FA23F1F338A2E944">isFileContextDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E554C675E184CFBA722EEEBF44E732B4F85B7CE6">getASTContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5C10B7463DAE04ED56A6CF468E8146BCFD6477F">getLangOpts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F59B99B16A70E25029CAA33CC3AD328326BF5D08">setAccess</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#985722E3094DBF3F8E747479966E6F59CF949766">getAccess</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77432EF80FCA31BA2BA90AA11AF1BBBAD448EA78">getAccessUnsafe</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#55489CE81CB374729E7446F837B18694474F035B">hasAttrs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45A00221AD29F965F4A773D819E19A9D55C9A62B">setAttrs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E98B37DA294154AF1511FF6055F61738E2E9343">getAttrs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2DFF6AB426148EA59DDFD9BF0B49F4D6717F605D">getAttrs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D8340DA64FD109DA830D23067886BCC39AB5C81">dropAttrs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CD0817A13031735911F0249C058CFE693B08ACF">addAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E3942AB59DA6EE45C678405E69A95CD50F3E83A7">attrs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9E041CCF8EDD283FDF06BC7C9BADF3EA7F7EF44F">attr_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84D1DAA07D175DF53DE01DD0DE6AC7DDB5E28673">attr_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3643D76F6346CB342BDFDD1C59556F9BCD636A0">dropAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1F421FF935FB4F13A0A93C7278F19092917EE5C">specific_attrs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#345F85AC66811DBE60DB9621A4F76B96765C92B4">specific_attr_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2BC6DD42F962C033C01105DC6D3FFC9FFC68F06">specific_attr_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#858E46F808B8D2C54902FBABC0313CCD59E8B4CA">getAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E3FA1F204CD12D255DD84244DD826F33FCE7472">hasAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C2E84D8076FB81CAF9B9BB3D730DAF1E07177DA">getMaxAlignment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E82923774ACB256D2337782566AED068BA40226B">setInvalidDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A84B2BA9D5AC62EFB1A99F18691220024EC3C521">isInvalidDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2CD0EEE70BAAF457AD65D446BF592CE57FA69058">isImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7067E84E62979D3020F54A2ABE8E2907990FF3AC">setImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7D8EF0C4EB44C209BB73E81C7D22314300D3680">isUsed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E765A508537A26F8AFD4473668B93E90F8A038C0">setIsUsed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48D421EE39D0812A82AA770CB9028DB72882F69C">markUsed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#662AEE5F1EC6DD1CA09A0AC796E8921E30C2639F">isReferenced</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95F1FE4B8E7EC1FE1266486E17096EB11C3EA730">isThisDeclarationReferenced</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#60B6E8D895DCE0895D96EC873E2563025EDEB677">setReferenced</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBE5C9D6294E115314F59E59496B3BCB58A1AFA5">isTopLevelDeclInObjCContainer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#72F0810F58E6F757B84700CC3B38F70850CD5CAE">setTopLevelDeclInObjCContainer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48E875BBF9AF6E4BFE001EAEA830F26D3322AC07">getExternalSourceSymbolAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA41BB4A2317EAD12D4C16ECABC926BDB52254BB">isModulePrivate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#011AFE28B85346821E3AD16B0C013C838E380AE6">isInExportDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#404FF650373D8D64AE583B763CA9E2D338721925">isInvisibleOutsideTheOwningModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2A365F75C00A7A19D15F0B45B3B70C0C047A276">isDiscardedInGlobalModuleFragment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEFCFA2FFEECE6E32F29DBBC48B97316FE00025C">hasDefiningAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#007E02ACC9DB590BAD2C813C5BD3C31AFF58444D">getDefiningAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1F75135D79CD05DBACDC310EAD9431A600C7CDF">setModulePrivate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9021D79F192221610997738151DBD1B1FF84755C">setFromASTFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BDAF8CB44031A9D2B1862AC1CE8D865D50277D9">setOwningModuleID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E15A485D95CE91857A4EA92B1D59CC2EBCF8D67">getAvailability</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2040EFDBFF8B570CB60598F706039EC125D4EED2">getVersionIntroduced</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E96E3B76B50DC412D2A2323A95F3AE2417A28736">isDeprecated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2B7CD5FFCFAF0628FB8A8EED1DC8EC9D9D66B0A">isUnavailable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#720D84D4844A111C099D73B4754CB700977F4788">isWeakImported</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#981AD01DBC1A2D47D5B7521716FFDE084221C530">canBeWeakImported</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7442DAEB9FCF3CC9AF040DCDF231EF07C932EC1C">isFromASTFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E84E45F2D1FAACEDDF055853A83EBB6CEB5FC51C">getGlobalID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED291497EF6E861219656C06A2A626AEE2ED5828">getOwningModuleID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C709A14F83349707AC2BB3A922A6F760383CC88A">hasLocalOwningModuleStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F42E870EDC9ABBFDD28B1F54B3A0DD0075DB8451">getImportedOwningModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#09EB55CD2E02B9F482B1C73F00E81AA8C1AA12AB">getLocalOwningModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#933CF788EA3F7F29FAF9482CA4C7F208ECC39EDF">setLocalOwningModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#94AA1329AD6016C6FCAA550D32A08326CACF8988">hasOwningModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2BD4718BCD7FB712D1C87F03137488A8006CA76">getOwningModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D817953BF79DB2EEE6982A9485846938F4BDC3E0">getOwningModuleForLinkage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6ABC8E0FAAC607112C6CA0C6C17240F51FB0B5C6">isUnconditionallyVisible</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FC8FFD9A1E88700FAB18869FF5D12D0C3CB2F05">isReachable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#684CC53F222EE60A9F1E4D9EBEB312B2BC61BB1D">setVisibleDespiteOwningModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#492BF0899C468853B4CC9F4D345B9E2F59266351">getModuleOwnershipKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#642E9B74D6CD70A72DBB9B982A91225DB3B8E90D">setModuleOwnershipKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD0E349BADB58F516C8180150A7A392781703596">getIdentifierNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#872A1A466A9542FAA176112CF8CA1AB9EDC60BA4">isInIdentifierNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F49FA068F21EE6C1375966529F552C4DB86E7582">getIdentifierNamespaceForKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EAE98CD71A312B8744FEC8DA37F048F143FE02BA">hasTagIdentifierNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BEA976581FBC251FC1491B58A2577257EE7F17A">isTagIdentifierNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#158402CED8C0640330C41430A43B37020693D3A6">getLexicalDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#34505E46D2884BDC90623E5E966829B9E9E1B4D4">getLexicalDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52CEFB6450165EB9C07C89BF410D1857D250C5DD">isOutOfLine</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#389A6D82A916D882B064BE3D06B55B6DE9A64B7A">setDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5BAAF49F4C2EDF433007822225A131EB9A9FB4BD">setLexicalDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13EA834204BD0FD6FAF215605A242A4478BC1B4B">isTemplated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E8E9A0B8DDE7303BFBC4C723CC9BF492578F8A4">getTemplateDepth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C115BC43FB7FA25985A1934F552326B38EC982B1">isDefinedOutsideFunctionOrMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B8CB5650A45C12EAA30DA37D939B4C4301B3077">isInLocalScopeForInstantiation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED6A4B2C9AF11893403D18D5079E152060C774D0">getParentFunctionOrMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7A917435785660C5421597F4C0602B731458F8C">getParentFunctionOrMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C071BB9CEFA10C9460BD52D5CE1C5381847C34F">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E0FB1B809E5C6FA2991A48B9039B0E8A2BD5ADB">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14F18C097D1AA9952E1397BF4272A5FA66AA5D31">isCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8063DF1D238788AA42B54D897B8145D540C2BF1E">getNextRedeclarationImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70645465FE4E25F0CE7BCF2544E397B109970D7E">getPreviousDeclImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CA83A974B66C5FA03ED9AED99327E9F870829E9">getMostRecentDeclImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1D22E5BD1A8974F6D5652B9B80B5E01F630DA41">redecls</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BBDB4297498984BF89B66E275D9DC000A67EEC4">redecls_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D16D36619A35DD6885FBEBFF5F25D5FFD5D046AD">redecls_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC6B249F7BEF1124C72BCB8C31FC87E75FEB7C3F">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#743AE4475632D26183F83A0B884F808BAC46B280">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F7BC7C72BA5C445F4F94123E72D15183BEC5341">isFirstDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#415AC7E353728726E476EC565C8511DF6446ACC4">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89B0EF85133223F08A82CA18404E7DFB00EF7698">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C043F4F0FB69D254081034430B317FF9466B3A91">getBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#817649D166434D52D51D179036BE08EE09B8347F">hasBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95868CC84056390669313316D11D8E2F1E7C73FA">getBodyRBrace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD9AFC0D2F9E327A7951E604F2CB5984BDB3720E">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B46B592D5FF40209F8FAC19D23756594DEBEB35B">EnableStatistics</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CFE37CC97573DB76FB15089A509639E63D30F45D">PrintStats</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B050C289831C25772C666F62103F47F4573B48A6">isTemplateParameter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C71E5846D50FD64A6223525A7ED7F6472B69EC2F">isTemplateParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5D47428FFEDFC0C57C2AAC9FCD7F14C5B3687F1">isParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#636020E1DEA545FAB59757FAC77A1CE33F8A3F1F">isTemplateDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27FB5B44B2E1F8B98D5448F97BA196ADD7FAD001">isFunctionOrFunctionTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C0B604FBCA7EA087CDAF3F63204143BB0873DB2">getDescribedTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF6F8A9EFCED952CBB022D4738C8287C1F57BC52">getDescribedTemplateParams</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66AE0D48CEA7E78C7B6127CC49C6FC438D9B6161">getAsFunction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35375EDE68E4B26874C67DFCE7C06358BFB0A4BD">getAsFunction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95E0758D15CD666925793DB71130DBA8FF0C417F">setLocalExternDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2099C72D32C2101AE28C188F0E5E0CF3402C0C8F">isLocalExternDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77FBFC271F8D3156F2771AC7DC79139390A3E966">setObjectOfFriendDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57EC0B82470D87E10D28185E8E58A4858B93CAFA">getFriendObjectKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69A9C2ED7DB93687E0916E6AE8367C95EC9ED916">setNonMemberOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81789F6C451945335264BFE76243EFBC6BC88704">classofKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6C4FCCDAB6845561D1AFBB3E8683DA5F6A7EAB0">castToDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#41F715E2608D7969522F90836AAC96BEC78A145B">castFromDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC47AB1142AF72CC26B06C56DCCD92C547B621D0">print</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33DC8CA8B1870CAB2BBB91D930CADED0E6870747">print</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2C28A1A9B82EE4DC95921CDDC8ABA31C6C5A923">printGroup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#496A53E418473601D71C314FA613279743751C52">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E699F7DD9D2B3D5E24D514806A1B6051FD343C59">dumpColor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#031D825CDAC0544602A3B8E7CEAC1E95BC7732D5">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B02E71054BB2690EBDC4291864FB4EE884120D3F">getID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77CC1133FFC447ACB030985076E351FFB0414567">getFunctionType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CEF1CC5128FB040CAF16C2BFA7CA90C218AF756">getASTMutationListener</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5C5D34F50966D5740359F767649C1E47629754FE">Kind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24766E972DB03EA116CC9D80CD773221EA5610B6">IdentifierNamespace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D99FCF686041C069974D7FB6C3EC623C1E4CB44">ObjCDeclQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F03B53A6D05EE47E03DEC467925CC6E83795404E">ModuleOwnershipKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E22F1606170321F542C330E37ACDD8EC3F668B3">FriendObjectKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

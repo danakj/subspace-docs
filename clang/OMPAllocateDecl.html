@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPAllocateDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPAllocateDecl</h1>
+    <p>Defined at line 473 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;#pragma omp allocate ...&apos; directive. For example, in the following, the default allocator is used for both &apos;a&apos; and &apos;A::b&apos;:</p>
+      </div>
+    </div>
+    <p>Inherits from OMPDeclarativeDirective&lt;Decl&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="AE4D547747D155861059A70C676B834B4A3405B2">Create</h3>
+      <p>
+        public OMPAllocateDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         VL, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         CL)
+      </p>
+      <h3 id="DF00CD0CE1E2F8DA6061E0A1CBB0754AAC13192A">CreateDeserialized</h3>
+      <p>public OMPAllocateDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID, unsigned int NVars, unsigned int NClauses)</p>
+      <h3 id="86CF541A19EB75320A1E6369A8205C701A52F77D">varlist_size</h3>
+      <p>public unsigned int varlist_size()</p>
+      <p>Defined at line 510 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="E18F1EECDEDE9A8B67E99A4ADC0B039153179363">varlist_empty</h3>
+      <p>public _Bool varlist_empty()</p>
+      <p>Defined at line 511 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="C47B9BA6B3B2CD817D32688944BE30161952A7E5">clauselist_size</h3>
+      <p>public unsigned int clauselist_size()</p>
+      <p>Defined at line 512 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="0B6AB21774DE77CBF0C2FF565992492E72EACBCE">clauselist_empty</h3>
+      <p>public _Bool clauselist_empty()</p>
+      <p>Defined at line 513 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="5F9189A03278F32BEE26E7E283EA953DD61B4ED7">varlists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         varlists()
+      </p>
+      <p>Defined at line 515 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="B8E6D8F6E7103EF144C6D598767759B678D1E1A0">varlists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         varlists()
+      </p>
+      <p>Defined at line 518 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="248740429E5C73FD63DFF006B470F34E40A4077E">varlist_begin</h3>
+      <p>public varlist_iterator varlist_begin()</p>
+      <p>Defined at line 521 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="381E730BAF3DD26B85683112BE1484FEA35E8BE8">varlist_end</h3>
+      <p>public varlist_iterator varlist_end()</p>
+      <p>Defined at line 522 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="4823CC7E0275D895D3E8EC0AF3B4C0D3452FEC25">varlist_begin</h3>
+      <p>public varlist_const_iterator varlist_begin()</p>
+      <p>Defined at line 523 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="9A100DDD10507DC8F3D924E165779173CF85A343">varlist_end</h3>
+      <p>public varlist_const_iterator varlist_end()</p>
+      <p>Defined at line 524 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="28C936A9F2CCC92AD97E9D0C0A6DA3F0BACB669C">clauselists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         clauselists()
+      </p>
+      <p>Defined at line 526 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="D7D2CD9EAFEB66B31062B8499F9C566B9E925B2D">clauselists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         clauselists()
+      </p>
+      <p>Defined at line 529 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="606E0789F6A99DF5E39980E69DBEBCE01E215F12">clauselist_begin</h3>
+      <p>public clauselist_iterator clauselist_begin()</p>
+      <p>Defined at line 532 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="8183B1533A77BE1C78357E9BD65AB11AC558CAAA">clauselist_end</h3>
+      <p>public clauselist_iterator clauselist_end()</p>
+      <p>Defined at line 533 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="4AAFB228D3050408BC5AEF02849951AEA12717DB">clauselist_begin</h3>
+      <p>public clauselist_const_iterator clauselist_begin()</p>
+      <p>Defined at line 534 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="A9C875E69B2495BD5785F592DAB792BF5056DABE">clauselist_end</h3>
+      <p>public clauselist_const_iterator clauselist_end()</p>
+      <p>Defined at line 537 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="F4CF040688D7E844E0F20D2C174A88E32CD1F6CA">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 541 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="D9E85A3EECC81105296D22D6427D5C698B8933AF">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 542 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#AE4D547747D155861059A70C676B834B4A3405B2">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF00CD0CE1E2F8DA6061E0A1CBB0754AAC13192A">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86CF541A19EB75320A1E6369A8205C701A52F77D">varlist_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E18F1EECDEDE9A8B67E99A4ADC0B039153179363">varlist_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C47B9BA6B3B2CD817D32688944BE30161952A7E5">clauselist_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B6AB21774DE77CBF0C2FF565992492E72EACBCE">clauselist_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F9189A03278F32BEE26E7E283EA953DD61B4ED7">varlists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8E6D8F6E7103EF144C6D598767759B678D1E1A0">varlists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#248740429E5C73FD63DFF006B470F34E40A4077E">varlist_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#381E730BAF3DD26B85683112BE1484FEA35E8BE8">varlist_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4823CC7E0275D895D3E8EC0AF3B4C0D3452FEC25">varlist_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A100DDD10507DC8F3D924E165779173CF85A343">varlist_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28C936A9F2CCC92AD97E9D0C0A6DA3F0BACB669C">clauselists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7D2CD9EAFEB66B31062B8499F9C566B9E925B2D">clauselists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#606E0789F6A99DF5E39980E69DBEBCE01E215F12">clauselist_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8183B1533A77BE1C78357E9BD65AB11AC558CAAA">clauselist_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AAFB228D3050408BC5AEF02849951AEA12717DB">clauselist_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9C875E69B2495BD5785F592DAB792BF5056DABE">clauselist_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4CF040688D7E844E0F20D2C174A88E32CD1F6CA">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9E85A3EECC81105296D22D6427D5C698B8933AF">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

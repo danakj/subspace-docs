@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SmallString</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SmallString</h1>
+    <p>Defined at line 26 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+    <div>
+      <div>
+        <p> SmallString - A SmallString is just a SmallVector with methods and accessors that make it work better as a string (e.g. operator+ etc).</p>
+      </div>
+    </div>
+    <p>Inherits from SmallVector&lt;char, InternalLen&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="19FA423F25BAB27B4652692EEAB5BFEB4170648C">SmallString&lt;InternalLen&gt;</h3>
+      <p>public void SmallString&lt;InternalLen&gt;()</p>
+      <p>Defined at line 29 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Default ctor - Initialize to empty.</p>
+        </div>
+      </div>
+      <h3 id="16B7AFD4CEE74DB7D094530CC35475BE309AFFE0">SmallString&lt;InternalLen&gt;</h3>
+      <p>
+        public void SmallString&lt;InternalLen&gt;(
+        <a href="StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 32 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Initialize from a StringRef.</p>
+        </div>
+      </div>
+      <h3 id="68FE3E77D611D4EBF22E757B2B71931D5F6406E6">SmallString&lt;InternalLen&gt;</h3>
+      <p>
+        public void SmallString&lt;InternalLen&gt;(
+        <a href="../std/initializer_list.html">initializer_list</a>
+         Refs)
+      </p>
+      <p>Defined at line 35 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Initialize by concatenating a list of StringRefs.</p>
+        </div>
+      </div>
+      <h3 id="E4CEBE1780CE54231841A43975EE16047AEC3B3B">SmallString&lt;InternalLen&gt;</h3>
+      <p>public void SmallString&lt;InternalLen&gt;(ItTy S, ItTy E)</p>
+      <p>Defined at line 42 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Initialize with a range.</p>
+        </div>
+      </div>
+      <h3 id="FF39E0EC8300C8C663DCBA2F539A9A369A971814">assign</h3>
+      <p>
+        public void assign(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 51 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Assign from a StringRef.</p>
+        </div>
+      </div>
+      <h3 id="CD33FF81434E6749AA2793A498D064ED4E66DC98">assign</h3>
+      <p>
+        public void assign(
+        <a href="../std/initializer_list.html">initializer_list</a>
+         Refs)
+      </p>
+      <p>Defined at line 56 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Assign from a list of StringRefs.</p>
+        </div>
+      </div>
+      <h3 id="59B6A1FC073D774C6BCE54FA9927CFED7AFC655E">append</h3>
+      <p>
+        public void append(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 68 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Append from a StringRef.</p>
+        </div>
+      </div>
+      <h3 id="6E947074709FDCA88D340D56BD20D4E7E8E44A81">append</h3>
+      <p>
+        public void append(
+        <a href="../std/initializer_list.html">initializer_list</a>
+         Refs)
+      </p>
+      <p>Defined at line 73 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Append from a list of StringRefs.</p>
+        </div>
+      </div>
+      <h3 id="C96957943BDC114A444DA7BC2914395822341A1B">equals</h3>
+      <p>
+        public _Bool equals(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 92 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Check for string equality.  This is more efficient than compare() when the relative ordering of inequal strings isn&apos;t needed.</p>
+        </div>
+      </div>
+      <h3 id="BEE1117BCFCB43BE8E4CDB7111C07915DF29FAC9">equals_insensitive</h3>
+      <p>
+        public _Bool equals_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 97 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Check for string equality, ignoring case.</p>
+        </div>
+      </div>
+      <h3 id="7F0A9387A90C65B83EA1F0B82B7AC8C40A8CAD1F">compare</h3>
+      <p>
+        public int compare(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 103 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Compare two strings; the result is -1, 0, or 1 if this string is lexicographically less than, equal to, or greater than the </p>
+        </div>
+      </div>
+      <h3 id="8E0D4B8885E47E45B5A802403F5780F2E1CF2F4B">compare_insensitive</h3>
+      <p>
+        public int compare_insensitive(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 108 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> compare_insensitive - Compare two strings, ignoring case.</p>
+        </div>
+      </div>
+      <h3 id="CD8091A213D969413EECD5423BC4E403826B4171">compare_numeric</h3>
+      <p>
+        public int compare_numeric(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 114 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> compare_numeric - Compare two strings, treating sequences of digits as numbers.</p>
+        </div>
+      </div>
+      <h3 id="D6425C963E90C78C2E9B6AB73D98E207CBCC2F96">startswith</h3>
+      <p>
+        public _Bool startswith(
+        <a href="StringRef.html">StringRef</a>
+         Prefix)
+      </p>
+      <p>Defined at line 123 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> startswith - Check if this string starts with the given </p>
+        </div>
+      </div>
+      <h3 id="D8703E1EE25337182010666CA7885FA760AD2430">endswith</h3>
+      <p>
+        public _Bool endswith(
+        <a href="StringRef.html">StringRef</a>
+         Suffix)
+      </p>
+      <p>Defined at line 128 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> endswith - Check if this string ends with the given </p>
+        </div>
+      </div>
+      <h3 id="ADFB5B39F5A1CECAF35264EDF4CF6743DC264908">find</h3>
+      <p>public size_t find(char C, size_t From)</p>
+      <p>Defined at line 140 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> find - Search for the first character  in the string.</p>
+        </div>
+      </div>
+      <h3 id="96B5E1FD1953B5BBBDF67BE88613637E9C88A77B">find</h3>
+      <p>
+        public size_t find(
+        <a href="StringRef.html">StringRef</a>
+         Str, size_t From)
+      </p>
+      <p>Defined at line 148 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Search for the first string  in the string.</p>
+        </div>
+      </div>
+      <h3 id="81D559AF1D699E5550760F64465213885C6D048A">rfind</h3>
+      <p>public size_t rfind(char C, size_t From)</p>
+      <p>Defined at line 156 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Search for the last character  in the string.</p>
+        </div>
+      </div>
+      <h3 id="8887B2381309529C080F5A3CD455111C7F261548">rfind</h3>
+      <p>
+        public size_t rfind(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <p>Defined at line 164 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Search for the last string  in the string.</p>
+        </div>
+      </div>
+      <h3 id="6D9CD280B8027432B1E4250BF3F6B4D6539EB109">find_first_of</h3>
+      <p>public size_t find_first_of(char C, size_t From)</p>
+      <p>Defined at line 170 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Find the first character in the string that is  or npos if not found. Same as find.</p>
+        </div>
+      </div>
+      <h3 id="BD24DD9B4228CF3BFEEC2767A53B557307589986">find_first_of</h3>
+      <p>
+        public size_t find_first_of(
+        <a href="StringRef.html">StringRef</a>
+         Chars, size_t From)
+      </p>
+      <p>Defined at line 178 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Find the first character in the string that is in  or npos if not found.</p>
+          <p> Complexity: O(size() + Chars.size())</p>
+        </div>
+      </div>
+      <h3 id="7897DF21927B9A9BD8A8F68E0CF9329D75397962">find_first_not_of</h3>
+      <p>public size_t find_first_not_of(char C, size_t From)</p>
+      <p>Defined at line 184 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Find the first character in the string that is not  or npos if not found.</p>
+        </div>
+      </div>
+      <h3 id="5897DF4DFBFC3B8C4880B352706A898690EA18C9">find_first_not_of</h3>
+      <p>
+        public size_t find_first_not_of(
+        <a href="StringRef.html">StringRef</a>
+         Chars, size_t From)
+      </p>
+      <p>Defined at line 192 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Find the first character in the string that is not in the string or npos if not found.</p>
+          <p> Complexity: O(size() + Chars.size())</p>
+        </div>
+      </div>
+      <h3 id="6D3AE42DA82E2D259BF0EA8DE083B7B1C2590A3B">find_last_of</h3>
+      <p>public size_t find_last_of(char C, size_t From)</p>
+      <p>Defined at line 198 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Find the last character in the string that is  or npos if not found.</p>
+        </div>
+      </div>
+      <h3 id="8FAAA5E460BE8D5B7407D5C517F7EA4D18B12294">find_last_of</h3>
+      <p>
+        public size_t find_last_of(
+        <a href="StringRef.html">StringRef</a>
+         Chars, size_t From)
+      </p>
+      <p>Defined at line 206 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Find the last character in the string that is in  or npos if not found.</p>
+          <p> Complexity: O(size() + Chars.size())</p>
+        </div>
+      </div>
+      <h3 id="B120177ACE8EE17EE0C7C6BA59ADA82C7C62A582">count</h3>
+      <p>public size_t count(char C)</p>
+      <p>Defined at line 216 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Return the number of occurrences of  in the string.</p>
+        </div>
+      </div>
+      <h3 id="9F8CECC0B0B933CF59B01B54A1B4511D4C755BB8">count</h3>
+      <p>
+        public size_t count(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <p>Defined at line 222 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Return the number of non-overlapped occurrences of  in the string.</p>
+        </div>
+      </div>
+      <h3 id="B8CC8B9DEDF39E705B6645D279E85B9A5894425C">substr</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         substr(size_t Start, size_t N)
+      </p>
+      <p>Defined at line 239 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Return a reference to the substring from [Start, Start + N).</p>
+        </div>
+      </div>
+      <h3 id="6A2BAF9E7F78F6353B5C56285EDACBDE3E7CB98D">slice</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         slice(size_t Start, size_t End)
+      </p>
+      <p>Defined at line 253 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Return a reference to the substring from [Start, End).</p>
+        </div>
+      </div>
+      <h3 id="77361181E29AB1C1F9D6D75C19654D27264120C6">str</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         str()
+      </p>
+      <p>Defined at line 260 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Explicit conversion to StringRef.</p>
+        </div>
+      </div>
+      <h3 id="58AAAEEEAABE256A0AD742AB6101202F5656F954">c_str</h3>
+      <p>public const char * c_str()</p>
+      <p>Defined at line 263 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> TODO: Make this const, if it&apos;s safe...</p>
+        </div>
+      </div>
+      <h3 id="1FE540E21278433A6A20DDA85B02320776C409B5">operator StringRef</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         operator StringRef()
+      </p>
+      <p>Defined at line 270 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Implicit conversion to StringRef.</p>
+        </div>
+      </div>
+      <h3 id="0F3792A5ADB669A66CBC058626945E42819BB634">operator basic_string</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         operator basic_string()
+      </p>
+      <p>Defined at line 272 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <h3 id="177ABFAC8AF8538B9A5A6F5275F8931B66B20AEE">operator=</h3>
+      <p>
+        public SmallString&lt;InternalLen&gt; &amp; operator=(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 277 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <div>
+        <div>
+          <p> Extra operators.</p>
+        </div>
+      </div>
+      <h3 id="460FE2655711D84EDEEC9FD328209A3FC87AB9BE">operator+=</h3>
+      <p>
+        public SmallString&lt;InternalLen&gt; &amp; operator+=(
+        <a href="StringRef.html">StringRef</a>
+         RHS)
+      </p>
+      <p>Defined at line 282 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+      <h3 id="EFF75F3DB7A6421B49BD62067739E33C4A59C80F">operator+=</h3>
+      <p>public SmallString&lt;InternalLen&gt; &amp; operator+=(char C)</p>
+      <p>Defined at line 286 of file /usr/lib/llvm-16/include/llvm/ADT/SmallString.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#19FA423F25BAB27B4652692EEAB5BFEB4170648C">SmallString&lt;InternalLen&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16B7AFD4CEE74DB7D094530CC35475BE309AFFE0">SmallString&lt;InternalLen&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68FE3E77D611D4EBF22E757B2B71931D5F6406E6">SmallString&lt;InternalLen&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E4CEBE1780CE54231841A43975EE16047AEC3B3B">SmallString&lt;InternalLen&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF39E0EC8300C8C663DCBA2F539A9A369A971814">assign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD33FF81434E6749AA2793A498D064ED4E66DC98">assign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59B6A1FC073D774C6BCE54FA9927CFED7AFC655E">append</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E947074709FDCA88D340D56BD20D4E7E8E44A81">append</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C96957943BDC114A444DA7BC2914395822341A1B">equals</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BEE1117BCFCB43BE8E4CDB7111C07915DF29FAC9">equals_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F0A9387A90C65B83EA1F0B82B7AC8C40A8CAD1F">compare</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E0D4B8885E47E45B5A802403F5780F2E1CF2F4B">compare_insensitive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD8091A213D969413EECD5423BC4E403826B4171">compare_numeric</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6425C963E90C78C2E9B6AB73D98E207CBCC2F96">startswith</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8703E1EE25337182010666CA7885FA760AD2430">endswith</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ADFB5B39F5A1CECAF35264EDF4CF6743DC264908">find</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96B5E1FD1953B5BBBDF67BE88613637E9C88A77B">find</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81D559AF1D699E5550760F64465213885C6D048A">rfind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8887B2381309529C080F5A3CD455111C7F261548">rfind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D9CD280B8027432B1E4250BF3F6B4D6539EB109">find_first_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD24DD9B4228CF3BFEEC2767A53B557307589986">find_first_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7897DF21927B9A9BD8A8F68E0CF9329D75397962">find_first_not_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5897DF4DFBFC3B8C4880B352706A898690EA18C9">find_first_not_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D3AE42DA82E2D259BF0EA8DE083B7B1C2590A3B">find_last_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8FAAA5E460BE8D5B7407D5C517F7EA4D18B12294">find_last_of</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B120177ACE8EE17EE0C7C6BA59ADA82C7C62A582">count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F8CECC0B0B933CF59B01B54A1B4511D4C755BB8">count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8CC8B9DEDF39E705B6645D279E85B9A5894425C">substr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A2BAF9E7F78F6353B5C56285EDACBDE3E7CB98D">slice</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77361181E29AB1C1F9D6D75C19654D27264120C6">str</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58AAAEEEAABE256A0AD742AB6101202F5656F954">c_str</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FE540E21278433A6A20DDA85B02320776C409B5">operator StringRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F3792A5ADB669A66CBC058626945E42819BB634">operator basic_string</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#177ABFAC8AF8538B9A5A6F5275F8931B66B20AEE">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#460FE2655711D84EDEEC9FD328209A3FC87AB9BE">operator+=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFF75F3DB7A6421B49BD62067739E33C4A59C80F">operator+=</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

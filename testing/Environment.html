@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Environment</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Environment</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1062">1062</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+    </p>
+    <div>
+      <div>
+        <p> An Environment object is capable of setting up and tearing down an environment.  You should subclass this to define your own environment(s).</p>
+        <p> An Environment object does the set-up and tear-down in virtual methods SetUp() and TearDown() instead of the constructor and the destructor, as:</p>
+        <p>   1. You cannot safely throw from a destructor.  This is a problem      as in some cases Google Test is used where exceptions are enabled, and      we may want to implement ASSERT_* using exceptions where they are      available.   2. You cannot use ASSERT_* directly in a constructor or      destructor.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="316873C7D4DC38BB5E62F3E6159B40E7CE8844D1">~Environment</h3>
+      <p>public void ~Environment()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1065">1065</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> The d&apos;tor is virtual as we need to subclass Environment.</p>
+        </div>
+      </div>
+      <h3 id="B60A2E2220AA016636FC7DF8BC5FD434419F56E5">SetUp</h3>
+      <p>public void SetUp()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1068">1068</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Override this to define how to set up the environment.</p>
+        </div>
+      </div>
+      <h3 id="DB77F877D83BE90871C95BB31578034E57ADE328">TearDown</h3>
+      <p>public void TearDown()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1071">1071</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Override this to define how to tear down the environment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#316873C7D4DC38BB5E62F3E6159B40E7CE8844D1">~Environment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B60A2E2220AA016636FC7DF8BC5FD434419F56E5">SetUp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB77F877D83BE90871C95BB31578034E57ADE328">TearDown</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

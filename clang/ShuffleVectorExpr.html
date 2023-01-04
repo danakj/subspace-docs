@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ShuffleVectorExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ShuffleVectorExpr</h1>
+    <p>Defined at line 4403 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> ShuffleVectorExpr - clang-specific builtin-in function __builtin_shufflevector. This AST node represents a operator that does a constant shuffle, similar to LLVM&apos;s shufflevector instruction. It takes two vectors and a variable number of constant indices, and returns the appropriately shuffled vector.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B03B537C2B5A344CCC8BF745FE100C2AF6070A67">ShuffleVectorExpr</h3>
+      <p>
+        public void ShuffleVectorExpr(const ASTContext &amp; C, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         args, 
+        <a href="QualType.html">QualType</a>
+         Type, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         BLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RP)
+      </p>
+      <h3 id="039489F57CF685870337B32436E2B4C11215AB64">ShuffleVectorExpr</h3>
+      <p>
+        public void ShuffleVectorExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 4418 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Build an empty vector-shuffle expression.</p>
+        </div>
+      </div>
+      <h3 id="7E6477B28E6A4D273C5C50D52B7A87E440364543">getBuiltinLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBuiltinLoc()
+      </p>
+      <p>Defined at line 4421 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="125A7A9FF949BAD53FEE790E0127456B9FD89630">setBuiltinLoc</h3>
+      <p>
+        public void setBuiltinLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 4422 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="1FC99D0B2E7E2B3B34B0021A07B0A69716DF767D">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 4424 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="37ED83DB91DF5C85D87F6534778324DD9DE82385">setRParenLoc</h3>
+      <p>
+        public void setRParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 4425 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D44558D028055536862642C631447C84236B618B">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 4427 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="DE7439B454935E75C0E809A1471752644BD9D50A">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 4428 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0695ED97EB6C1760B68D24AA4F62DC614710F296">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 4430 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="251FF0951EDD7759D0BB69B0C7EC128086739C94">getNumSubExprs</h3>
+      <p>public unsigned int getNumSubExprs()</p>
+      <p>Defined at line 4437 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getNumSubExprs - Return the size of the SubExprs array.  This includes the constant expression, the actual arguments passed in, and the function pointers.</p>
+        </div>
+      </div>
+      <h3 id="18B9329922953796359F8D12A7FE155FEC4F6467">getSubExprs</h3>
+      <p>public Expr ** getSubExprs()</p>
+      <p>Defined at line 4440 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the array of expressions.</p>
+        </div>
+      </div>
+      <h3 id="70EBA0E2A2816A9232DC155CF45EE76CDDA79C30">getExpr</h3>
+      <p>public Expr * getExpr(unsigned int Index)</p>
+      <p>Defined at line 4443 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getExpr - Return the Expr at the specified index.</p>
+        </div>
+      </div>
+      <h3 id="4B0F13F06F9DAACAAA8C1D465F81D5300410ECFA">getExpr</h3>
+      <p>public const Expr * getExpr(unsigned int Index)</p>
+      <p>Defined at line 4447 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="5F51DFF49D56387D7F03E208B9F631CC5933D252">setExprs</h3>
+      <p>
+        public void setExprs(const ASTContext &amp; C, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Exprs)
+      </p>
+      <h3 id="B4AE7A3ECAD11202CD4509132C0F18A9E9094B7D">getShuffleMaskIdx</h3>
+      <p>
+        public 
+        <a href="../llvm/APSInt.html">APSInt</a>
+         getShuffleMaskIdx(const ASTContext &amp; Ctx, unsigned int N)
+      </p>
+      <p>Defined at line 4454 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0807F9B2DDC290FDB05A45BA31AA42D9D352078F">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4460 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="7F0E74E7EEC463B353E906981C6523694271FFDA">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4463 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B03B537C2B5A344CCC8BF745FE100C2AF6070A67">ShuffleVectorExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#039489F57CF685870337B32436E2B4C11215AB64">ShuffleVectorExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E6477B28E6A4D273C5C50D52B7A87E440364543">getBuiltinLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#125A7A9FF949BAD53FEE790E0127456B9FD89630">setBuiltinLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FC99D0B2E7E2B3B34B0021A07B0A69716DF767D">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37ED83DB91DF5C85D87F6534778324DD9DE82385">setRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D44558D028055536862642C631447C84236B618B">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE7439B454935E75C0E809A1471752644BD9D50A">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0695ED97EB6C1760B68D24AA4F62DC614710F296">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#251FF0951EDD7759D0BB69B0C7EC128086739C94">getNumSubExprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#18B9329922953796359F8D12A7FE155FEC4F6467">getSubExprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70EBA0E2A2816A9232DC155CF45EE76CDDA79C30">getExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B0F13F06F9DAACAAA8C1D465F81D5300410ECFA">getExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F51DFF49D56387D7F03E208B9F631CC5933D252">setExprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4AE7A3ECAD11202CD4509132C0F18A9E9094B7D">getShuffleMaskIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0807F9B2DDC290FDB05A45BA31AA42D9D352078F">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F0E74E7EEC463B353E906981C6523694271FFDA">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

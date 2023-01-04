@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UnaryExprOrTypeTraitExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UnaryExprOrTypeTraitExpr</h1>
+    <p>Defined at line 2559 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> UnaryExprOrTypeTraitExpr - expression with either a type or (unevaluated) expression operand.  Used for sizeof/alignof (C99 6.5.3.4) and vec_step (OpenCL 1.1 6.11.12).</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="BC79CD122DD2A523000223EF065820C59110E4F9">UnaryExprOrTypeTraitExpr</h3>
+      <p>
+        public void UnaryExprOrTypeTraitExpr(
+        <a href="UnaryExprOrTypeTrait.html">UnaryExprOrTypeTrait</a>
+         ExprKind, TypeSourceInfo * TInfo, 
+        <a href="QualType.html">QualType</a>
+         resultType, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         op, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         rp)
+      </p>
+      <p>Defined at line 2567 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="5237E315F76BA88B7284B3FC76DB9A0A485EB29E">UnaryExprOrTypeTraitExpr</h3>
+      <p>
+        public void UnaryExprOrTypeTraitExpr(
+        <a href="UnaryExprOrTypeTrait.html">UnaryExprOrTypeTrait</a>
+         ExprKind, Expr * E, 
+        <a href="QualType.html">QualType</a>
+         resultType, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         op, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         rp)
+      </p>
+      <h3 id="D483E5489D11B55CAEF844E97AF42816B14E13A7">UnaryExprOrTypeTraitExpr</h3>
+      <p>
+        public void UnaryExprOrTypeTraitExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 2588 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Construct an empty sizeof/alignof expression.</p>
+        </div>
+      </div>
+      <h3 id="17A43147D1F02161E67DF30643166CE1A4D1AB89">getKind</h3>
+      <p>
+        public 
+        <a href="UnaryExprOrTypeTrait.html">UnaryExprOrTypeTrait</a>
+         getKind()
+      </p>
+      <p>Defined at line 2591 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="4EDE2525C4CDCE9643EF25E63F78D222BA14BFC7">setKind</h3>
+      <p>
+        public void setKind(
+        <a href="UnaryExprOrTypeTrait.html">UnaryExprOrTypeTrait</a>
+         K)
+      </p>
+      <p>Defined at line 2594 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="3D1873F1CAEFAD786A06C8D768B0D2495A6711A3">isArgumentType</h3>
+      <p>public _Bool isArgumentType()</p>
+      <p>Defined at line 2601 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="DA455ECE16D004060AE994744A10148710C3A436">getArgumentType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getArgumentType()
+      </p>
+      <p>Defined at line 2602 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="446202D69A815A80E2F99CE3562C49F00AD2B271">getArgumentTypeInfo</h3>
+      <p>public TypeSourceInfo * getArgumentTypeInfo()</p>
+      <p>Defined at line 2605 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="5C8405D3BF0D38C36C811E6F1D3635B99B3F5C83">getArgumentExpr</h3>
+      <p>public Expr * getArgumentExpr()</p>
+      <p>Defined at line 2609 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="24CE8802EBBDE337B7C42109FF3E26FD790213BA">getArgumentExpr</h3>
+      <p>public const Expr * getArgumentExpr()</p>
+      <p>Defined at line 2613 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="74629BAE10ABBB67A2302B772FB7D82B41BA8405">setArgument</h3>
+      <p>public void setArgument(Expr * E)</p>
+      <p>Defined at line 2617 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2F7CA0D7C53C5714A5900593D3245E5986D95F9A">setArgument</h3>
+      <p>public void setArgument(TypeSourceInfo * TInfo)</p>
+      <p>Defined at line 2621 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="666E46CA949EF450BC896F2AF7F2978E4087D225">getTypeOfArgument</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getTypeOfArgument()
+      </p>
+      <p>Defined at line 2628 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Gets the argument type, or the type of the argument expression, whichever is appropriate.</p>
+        </div>
+      </div>
+      <h3 id="2C2807830EB3BEFB5BFA55F2C9F416B36F04FCA3">getOperatorLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getOperatorLoc()
+      </p>
+      <p>Defined at line 2632 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B9ADC5245830F2599CDC92DB719AD6107BD5F555">setOperatorLoc</h3>
+      <p>
+        public void setOperatorLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2633 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E682D9FE8D93EF4FCE9A6C957987519E1B48A81B">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 2635 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="78558E69E37CE9FFEBD7F385E95A411BC0D65F93">setRParenLoc</h3>
+      <p>
+        public void setRParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2636 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9531924269FA597D732BFE50A3164864D937C64B">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2638 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="3030C08F570700A527AF13A298689F0514AD869E">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2639 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A231F76F284E7DC0E568B0E086929F98420EBF81">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2641 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="3E9D0A2D656F983843C7C6F53BC6ECB906BB3545">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="6E477DB8763C6404FF5CE19FD5269452B41EFAE2">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BC79CD122DD2A523000223EF065820C59110E4F9">UnaryExprOrTypeTraitExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5237E315F76BA88B7284B3FC76DB9A0A485EB29E">UnaryExprOrTypeTraitExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D483E5489D11B55CAEF844E97AF42816B14E13A7">UnaryExprOrTypeTraitExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17A43147D1F02161E67DF30643166CE1A4D1AB89">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4EDE2525C4CDCE9643EF25E63F78D222BA14BFC7">setKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D1873F1CAEFAD786A06C8D768B0D2495A6711A3">isArgumentType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA455ECE16D004060AE994744A10148710C3A436">getArgumentType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#446202D69A815A80E2F99CE3562C49F00AD2B271">getArgumentTypeInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5C8405D3BF0D38C36C811E6F1D3635B99B3F5C83">getArgumentExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24CE8802EBBDE337B7C42109FF3E26FD790213BA">getArgumentExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#74629BAE10ABBB67A2302B772FB7D82B41BA8405">setArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F7CA0D7C53C5714A5900593D3245E5986D95F9A">setArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#666E46CA949EF450BC896F2AF7F2978E4087D225">getTypeOfArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2C2807830EB3BEFB5BFA55F2C9F416B36F04FCA3">getOperatorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9ADC5245830F2599CDC92DB719AD6107BD5F555">setOperatorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E682D9FE8D93EF4FCE9A6C957987519E1B48A81B">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78558E69E37CE9FFEBD7F385E95A411BC0D65F93">setRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9531924269FA597D732BFE50A3164864D937C64B">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3030C08F570700A527AF13A298689F0514AD869E">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A231F76F284E7DC0E568B0E086929F98420EBF81">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3E9D0A2D656F983843C7C6F53BC6ECB906BB3545">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E477DB8763C6404FF5CE19FD5269452B41EFAE2">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

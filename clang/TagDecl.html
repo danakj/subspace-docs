@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TagDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TagDecl</h1>
+    <p>Defined at line 3427 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    <div>
+      <div>
+        <p> Represents the declaration of a struct/union/class/enum.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TypeDecl.html">TypeDecl</a>
+      , 
+      <a href="DeclContext.html">DeclContext</a>
+      , Redeclarable&lt;TagDecl&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5FF706BB456DA061CA27BA63EEA5DD3D6C51AB2D">TagDecl</h3>
+      <p>
+        protected void TagDecl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, 
+        <a href="TagTypeKind.html">TagTypeKind</a>
+         TK, const ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, IdentifierInfo * Id, TagDecl * PrevDecl, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartL)
+      </p>
+      <h3 id="C99D00849C07F8312E0E823455E69F6761E7FDAF">getNextRedeclarationImpl</h3>
+      <p>protected TagDecl * getNextRedeclarationImpl()</p>
+      <p>Defined at line 3466 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="5324981798478766E22C508456E88C9A62A63141">getPreviousDeclImpl</h3>
+      <p>protected TagDecl * getPreviousDeclImpl()</p>
+      <p>Defined at line 3470 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="9961001833CB5A0B537EFDFBAA98432068ABEA62">getMostRecentDeclImpl</h3>
+      <p>protected TagDecl * getMostRecentDeclImpl()</p>
+      <p>Defined at line 3474 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="28B451B35BBCA00BA5668B9312DC905ED213C631">completeDefinition</h3>
+      <p>protected void completeDefinition()</p>
+      <div>
+        <div>
+          <p> Completes the definition of this tag declaration.</p>
+          <p> This is a helper function for derived classes.</p>
+        </div>
+      </div>
+      <h3 id="31E5EB8D17E8C44CF39E61874EA56DC8F4031722">setBeingDefined</h3>
+      <p>protected void setBeingDefined(_Bool V)</p>
+      <p>Defined at line 3484 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this decl is currently being defined.</p>
+        </div>
+      </div>
+      <h3 id="A9BCE1918FA2B9F1C1831055612C7634BCE43697">setMayHaveOutOfDateDef</h3>
+      <p>protected void setMayHaveOutOfDateDef(_Bool V)</p>
+      <p>Defined at line 3490 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Indicates whether it is possible for declarations of this kind to have an out-of-date definition.</p>
+          <p> This option is only enabled when modules are enabled.</p>
+        </div>
+      </div>
+      <h3 id="7EC82235071FA5C38D202247E4432003E445DEF2">getBraceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getBraceRange()
+      </p>
+      <p>Defined at line 3508 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="E821CA99CC1357FDB617F55C44EF0195251A78E6">setBraceRange</h3>
+      <p>
+        public void setBraceRange(
+        <a href="SourceRange.html">SourceRange</a>
+         R)
+      </p>
+      <p>Defined at line 3509 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="08EB5A4735200238BC10A120EF69A25BDB65A046">getInnerLocStart</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getInnerLocStart()
+      </p>
+      <p>Defined at line 3513 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Return SourceLocation representing start of source range ignoring outer template declarations.</p>
+        </div>
+      </div>
+      <h3 id="E3CFC8636AB4FD468452A4FA9F57C1D1A28D000A">getOuterLocStart</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getOuterLocStart()
+      </p>
+      <div>
+        <div>
+          <p> Return SourceLocation representing start of source range taking into account any outer template declarations.</p>
+        </div>
+      </div>
+      <h3 id="1FC37A5480AB7384B5675FFE7E21EC906EEA6AD0">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <h3 id="4AEA5D739BEEE6573743F1278739F9F9C292DE21">getCanonicalDecl</h3>
+      <p>public TagDecl * getCanonicalDecl()</p>
+      <h3 id="6A7BEF17DC0E0F4826A55DA7AFEFAD743A1C322E">getCanonicalDecl</h3>
+      <p>public const TagDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3521 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="EA106AF40254FD9CAE80B7B1047DB77DC013771A">isThisDeclarationADefinition</h3>
+      <p>public _Bool isThisDeclarationADefinition()</p>
+      <p>Defined at line 3527 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Return true if this declaration is a completion definition of the type. Provided for consistency.</p>
+        </div>
+      </div>
+      <h3 id="AF659D678E130734AD2D44AE716EDBB12C6CB147">isCompleteDefinition</h3>
+      <p>public _Bool isCompleteDefinition()</p>
+      <p>Defined at line 3532 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Return true if this decl has its body fully specified.</p>
+        </div>
+      </div>
+      <h3 id="14CE3FCD12074A7D04AEA058FF3BCB71CD9A62C2">setCompleteDefinition</h3>
+      <p>public void setCompleteDefinition(_Bool V)</p>
+      <p>Defined at line 3535 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this decl has its body fully specified.</p>
+        </div>
+      </div>
+      <h3 id="EAB667D370A2DA40E024740910118C59034793CA">isCompleteDefinitionRequired</h3>
+      <p>public _Bool isCompleteDefinitionRequired()</p>
+      <p>Defined at line 3541 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Return true if this complete decl is required to be complete for some existing use.</p>
+        </div>
+      </div>
+      <h3 id="634CE4F62390E58E9BAF7B5AE2B0AC186085B022">setCompleteDefinitionRequired</h3>
+      <p>public void setCompleteDefinitionRequired(_Bool V)</p>
+      <p>Defined at line 3547 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this complete decl is required to be complete for some existing use.</p>
+        </div>
+      </div>
+      <h3 id="C0305B47404D441818B39627631442ECF920F259">isBeingDefined</h3>
+      <p>public _Bool isBeingDefined()</p>
+      <p>Defined at line 3552 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Return true if this decl is currently being defined.</p>
+        </div>
+      </div>
+      <h3 id="6E8C110DC5C185B16B274B2455A08FDA4A89D133">isEmbeddedInDeclarator</h3>
+      <p>public _Bool isEmbeddedInDeclarator()</p>
+      <p>Defined at line 3556 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this tag declaration is &quot;embedded&quot; (i.e., defined or declared for the very first time) in the syntax of a declarator.</p>
+        </div>
+      </div>
+      <h3 id="A948EF6297410B372F2D66879B5BDD323E63C331">setEmbeddedInDeclarator</h3>
+      <p>public void setEmbeddedInDeclarator(_Bool isInDeclarator)</p>
+      <p>Defined at line 3562 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this tag declaration is &quot;embedded&quot; (i.e., defined or declared for the very first time) in the syntax of a declarator.</p>
+        </div>
+      </div>
+      <h3 id="31EACD2C02E47C2A2A8C8D31E8CC9B9168EAC25C">isFreeStanding</h3>
+      <p>public _Bool isFreeStanding()</p>
+      <p>Defined at line 3567 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this tag is free standing, e.g. &quot;struct foo;&quot;.</p>
+        </div>
+      </div>
+      <h3 id="5908FDEC69F9303144B643ACD863B451D902FA2D">setFreeStanding</h3>
+      <p>public void setFreeStanding(_Bool isFreeStanding)</p>
+      <p>Defined at line 3570 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this tag is free standing, e.g. &quot;struct foo;&quot;.</p>
+        </div>
+      </div>
+      <h3 id="DF02F63491E1FA1B0463828EDF167623590AC973">mayHaveOutOfDateDef</h3>
+      <p>public _Bool mayHaveOutOfDateDef()</p>
+      <p>Defined at line 3578 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Indicates whether it is possible for declarations of this kind to have an out-of-date definition.</p>
+          <p> This option is only enabled when modules are enabled.</p>
+        </div>
+      </div>
+      <h3 id="EFE8FE310F9243203B47D32D63F40FD342E68818">isDependentType</h3>
+      <p>public _Bool isDependentType()</p>
+      <p>Defined at line 3583 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Whether this declaration declares a type that is dependent, i.e., a type that somehow depends on template parameters.</p>
+        </div>
+      </div>
+      <h3 id="D7B5FC488D22FD4ADA8AB7E95A0C1F1F8E3BB080">isThisDeclarationADemotedDefinition</h3>
+      <p>public _Bool isThisDeclarationADemotedDefinition()</p>
+      <p>Defined at line 3590 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Whether this declaration was a definition in some module but was forced to be a declaration.</p>
+          <p> Useful for clients checking if a module has a definition of a specific symbol and not interested in the final AST with deduplicated definitions.</p>
+        </div>
+      </div>
+      <h3 id="831732FD42EAA4077614359AA8D25320C35A8A33">demoteThisDefinitionToDeclaration</h3>
+      <p>public void demoteThisDefinitionToDeclaration()</p>
+      <p>Defined at line 3596 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Mark a definition as a declaration and maintain information it _was_ a definition.</p>
+        </div>
+      </div>
+      <h3 id="7D9EC1B48FBD439CA8D68F05936D59F7F2BD970E">startDefinition</h3>
+      <p>public void startDefinition()</p>
+      <div>
+        <div>
+          <p> Starts the definition of this tag declaration.</p>
+          <p> This method should be invoked at the beginning of the definition of this tag declaration. It will set the tag type into a state where it is in the process of being defined.</p>
+        </div>
+      </div>
+      <h3 id="8141667B8D272C196884D6CAB2BF664387AAABEC">getDefinition</h3>
+      <p>public TagDecl * getDefinition()</p>
+      <div>
+        <div>
+          <p> Returns the TagDecl that actually defines this  struct/union/class/enum.  When determining whether or not a  struct/union/class/enum has a definition, one should use this  method as opposed to &apos;isDefinition&apos;.  &apos;isDefinition&apos; indicates  whether or not a specific TagDecl is defining declaration, not  whether or not the struct/union/class/enum type is defined.  This method returns NULL if there is no TagDecl that defines  the struct/union/class/enum.</p>
+        </div>
+      </div>
+      <h3 id="08721965D0D67E4EEFCCDA980691DACE0C50EE93">getKindName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getKindName()
+      </p>
+      <p>Defined at line 3620 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="A8C40C6AB33F56C93530B1BCDD6FDF190890BD00">getTagKind</h3>
+      <p>
+        public 
+        <a href="TagTypeKind.html">TagTypeKind</a>
+         getTagKind()
+      </p>
+      <p>Defined at line 3624 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="1B3C3A48BF4383FFB7389FED3AB02227F8843037">setTagKind</h3>
+      <p>
+        public void setTagKind(
+        <a href="TagTypeKind.html">TagTypeKind</a>
+         TK)
+      </p>
+      <p>Defined at line 3628 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="A50FB8D6675E4F5992086FEBF5134E0B8CA277BE">isStruct</h3>
+      <p>public _Bool isStruct()</p>
+      <p>Defined at line 3630 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="EBE70406434577FFEFDD4C64C9CBC06A1AE07B98">isInterface</h3>
+      <p>public _Bool isInterface()</p>
+      <p>Defined at line 3631 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="F73BA7D90EB1C83A97E3E7EA68FE214E3BA0E358">isClass</h3>
+      <p>public _Bool isClass()</p>
+      <p>Defined at line 3632 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="A67C1504D8ADD2AE4EE72F47A9CDB14C82B66999">isUnion</h3>
+      <p>public _Bool isUnion()</p>
+      <p>Defined at line 3633 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="97C380CE11A2B6478B1979C6798C643C3A464900">isEnum</h3>
+      <p>public _Bool isEnum()</p>
+      <p>Defined at line 3634 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="6F8C2A0AFE024C81F369E32FCDF0193E54727F64">hasNameForLinkage</h3>
+      <p>public _Bool hasNameForLinkage()</p>
+      <p>Defined at line 3651 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Is this tag type named, either directly or via being defined in a typedef of this type?</p>
+          <p> C++11 [basic.link]p8:   A type is said to have linkage if and only if:     - it is a class or enumeration type that is named (or has a       name for linkage purposes) and the name has linkage; ... C++11 [dcl.typedef]p9:   If the typedef declaration defines an unnamed class (or enum),   the first typedef-name declared by the declaration to be that   class type (or enum type) is used to denote the class type (or   enum type) for linkage purposes only.</p>
+          <p> C does not have an analogous rule, but the same concept is nonetheless useful in some places.</p>
+        </div>
+      </div>
+      <h3 id="DA15D7BDC071D14318BB21752B5F06F1955652EF">getTypedefNameForAnonDecl</h3>
+      <p>public TypedefNameDecl * getTypedefNameForAnonDecl()</p>
+      <p>Defined at line 3655 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="0E3BE1E6595C6C477DC5A09D79EC7CD1BDD798EB">setTypedefNameForAnonDecl</h3>
+      <p>public void setTypedefNameForAnonDecl(TypedefNameDecl * TDD)</p>
+      <h3 id="9682EC878C9AD2AB2E1063DB481374647A6F15E2">getQualifier</h3>
+      <p>public NestedNameSpecifier * getQualifier()</p>
+      <p>Defined at line 3664 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Retrieve the nested-name-specifier that qualifies the name of this declaration, if it was present in the source.</p>
+        </div>
+      </div>
+      <h3 id="81440A035DC6F8C5527AC3A284B52F4A67C7C0CC">getQualifierLoc</h3>
+      <p>
+        public 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         getQualifierLoc()
+      </p>
+      <p>Defined at line 3672 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Retrieve the nested-name-specifier (with source-location information) that qualifies the name of this declaration, if it was present in the source.</p>
+        </div>
+      </div>
+      <h3 id="D3D09C442B12166E45D395685C1611195BBDAFF7">setQualifierInfo</h3>
+      <p>
+        public void setQualifierInfo(
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         QualifierLoc)
+      </p>
+      <h3 id="34BEC1311D32AB45769EBF3EB3F01B6AAEC36E8B">getNumTemplateParameterLists</h3>
+      <p>public unsigned int getNumTemplateParameterLists()</p>
+      <p>Defined at line 3679 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="5993E65FDE259009C012312EB22AB9AB1A62591C">getTemplateParameterList</h3>
+      <p>public TemplateParameterList * getTemplateParameterList(unsigned int i)</p>
+      <p>Defined at line 3683 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="BD67DE0D00DAB59D43D2E76FB16C0369A62A392C">printName</h3>
+      <p>public void printName(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="A6F38C2504EB51CF3721748BDCADC24769EE86CC">setTemplateParameterListsInfo</h3>
+      <p>
+        public void setTemplateParameterListsInfo(ASTContext &amp; Context, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         TPLists)
+      </p>
+      <h3 id="983C8A678C9166AF27434E257285AB8AD5E2654B">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3694 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="BD62C1FDC8C71CE871F917A0480843C2D0368276">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3695 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="4A2AB0A630A44F4F5F335782A2F17696A1260F8C">castToDeclContext</h3>
+      <p>public DeclContext * castToDeclContext(const TagDecl * D)</p>
+      <p>Defined at line 3697 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="062D975B94137F6D2417C44573A95DC900DD0B23">castFromDeclContext</h3>
+      <p>public TagDecl * castFromDeclContext(const DeclContext * DC)</p>
+      <p>Defined at line 3701 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5FF706BB456DA061CA27BA63EEA5DD3D6C51AB2D">TagDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C99D00849C07F8312E0E823455E69F6761E7FDAF">getNextRedeclarationImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5324981798478766E22C508456E88C9A62A63141">getPreviousDeclImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9961001833CB5A0B537EFDFBAA98432068ABEA62">getMostRecentDeclImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28B451B35BBCA00BA5668B9312DC905ED213C631">completeDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31E5EB8D17E8C44CF39E61874EA56DC8F4031722">setBeingDefined</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9BCE1918FA2B9F1C1831055612C7634BCE43697">setMayHaveOutOfDateDef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7EC82235071FA5C38D202247E4432003E445DEF2">getBraceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E821CA99CC1357FDB617F55C44EF0195251A78E6">setBraceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08EB5A4735200238BC10A120EF69A25BDB65A046">getInnerLocStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E3CFC8636AB4FD468452A4FA9F57C1D1A28D000A">getOuterLocStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FC37A5480AB7384B5675FFE7E21EC906EEA6AD0">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AEA5D739BEEE6573743F1278739F9F9C292DE21">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A7BEF17DC0E0F4826A55DA7AFEFAD743A1C322E">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA106AF40254FD9CAE80B7B1047DB77DC013771A">isThisDeclarationADefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF659D678E130734AD2D44AE716EDBB12C6CB147">isCompleteDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14CE3FCD12074A7D04AEA058FF3BCB71CD9A62C2">setCompleteDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EAB667D370A2DA40E024740910118C59034793CA">isCompleteDefinitionRequired</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#634CE4F62390E58E9BAF7B5AE2B0AC186085B022">setCompleteDefinitionRequired</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0305B47404D441818B39627631442ECF920F259">isBeingDefined</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E8C110DC5C185B16B274B2455A08FDA4A89D133">isEmbeddedInDeclarator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A948EF6297410B372F2D66879B5BDD323E63C331">setEmbeddedInDeclarator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31EACD2C02E47C2A2A8C8D31E8CC9B9168EAC25C">isFreeStanding</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5908FDEC69F9303144B643ACD863B451D902FA2D">setFreeStanding</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF02F63491E1FA1B0463828EDF167623590AC973">mayHaveOutOfDateDef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFE8FE310F9243203B47D32D63F40FD342E68818">isDependentType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7B5FC488D22FD4ADA8AB7E95A0C1F1F8E3BB080">isThisDeclarationADemotedDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#831732FD42EAA4077614359AA8D25320C35A8A33">demoteThisDefinitionToDeclaration</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D9EC1B48FBD439CA8D68F05936D59F7F2BD970E">startDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8141667B8D272C196884D6CAB2BF664387AAABEC">getDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08721965D0D67E4EEFCCDA980691DACE0C50EE93">getKindName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8C40C6AB33F56C93530B1BCDD6FDF190890BD00">getTagKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B3C3A48BF4383FFB7389FED3AB02227F8843037">setTagKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A50FB8D6675E4F5992086FEBF5134E0B8CA277BE">isStruct</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EBE70406434577FFEFDD4C64C9CBC06A1AE07B98">isInterface</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F73BA7D90EB1C83A97E3E7EA68FE214E3BA0E358">isClass</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A67C1504D8ADD2AE4EE72F47A9CDB14C82B66999">isUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97C380CE11A2B6478B1979C6798C643C3A464900">isEnum</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F8C2A0AFE024C81F369E32FCDF0193E54727F64">hasNameForLinkage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA15D7BDC071D14318BB21752B5F06F1955652EF">getTypedefNameForAnonDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E3BE1E6595C6C477DC5A09D79EC7CD1BDD798EB">setTypedefNameForAnonDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9682EC878C9AD2AB2E1063DB481374647A6F15E2">getQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81440A035DC6F8C5527AC3A284B52F4A67C7C0CC">getQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3D09C442B12166E45D395685C1611195BBDAFF7">setQualifierInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#34BEC1311D32AB45769EBF3EB3F01B6AAEC36E8B">getNumTemplateParameterLists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5993E65FDE259009C012312EB22AB9AB1A62591C">getTemplateParameterList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD67DE0D00DAB59D43D2E76FB16C0369A62A392C">printName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6F38C2504EB51CF3721748BDCADC24769EE86CC">setTemplateParameterListsInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#983C8A678C9166AF27434E257285AB8AD5E2654B">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD62C1FDC8C71CE871F917A0480843C2D0368276">classofKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A2AB0A630A44F4F5F335782A2F17696A1260F8C">castToDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#062D975B94137F6D2417C44573A95DC900DD0B23">castFromDeclContext</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

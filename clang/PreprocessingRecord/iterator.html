@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class iterator</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/PreprocessingRecord" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class iterator</h1>
+    <p>Defined at line 427 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessingRecord.h</p>
+    <div>
+      <div>
+        <p> Iteration over the preprocessed entities.</p>
+        <p> In a complete iteration, the iterator walks the range [-M, N), where negative values are used to indicate preprocessed entities loaded from the external source while non-negative values are used to indicate preprocessed entities introduced by the current preprocessor. However, to provide iteration in source order (for, e.g., chained precompiled headers), dereferencing the iterator flips the negative values (corresponding to loaded entities), so that position -M corresponds to element 0 in the loaded entities vector, position -M+1 corresponds to element 1 in the loaded entities vector, etc. This gives us a reasonably efficient, source-order walk.</p>
+        <p> We define this as a wrapping iterator around an int. The iterator_adaptor_base class forwards the iterator methods to basic integer arithmetic.</p>
+      </div>
+    </div>
+    <p>Inherits from llvm::iterator_adaptor_base&lt;iterator, int, std::random_access_iterator_tag, PreprocessedEntity *, int, PreprocessedEntity *, PreprocessedEntity *&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9E3AA70AFE3EED2CE3079AFFCA570190E33A30B0">iterator</h3>
+      <p>public void iterator()</p>
+      <p>Defined at line 439 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessingRecord.h</p>
+      <h3 id="ACA4FB4A04B379508836115639ABC2B80EAEDC75">operator*</h3>
+      <p>public PreprocessedEntity * operator*()</p>
+      <p>Defined at line 441 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessingRecord.h</p>
+      <h3 id="7A2B5FAA71CE5D1FCA9D127B37BB6028B8C2B0A9">operator-&gt;</h3>
+      <p>public PreprocessedEntity * operator-&gt;()</p>
+      <p>Defined at line 448 of file /usr/lib/llvm-16/include/clang/Lex/PreprocessingRecord.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9E3AA70AFE3EED2CE3079AFFCA570190E33A30B0">iterator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ACA4FB4A04B379508836115639ABC2B80EAEDC75">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A2B5FAA71CE5D1FCA9D127B37BB6028B8C2B0A9">operator-&gt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

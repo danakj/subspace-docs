@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ArrayInitLoopExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ArrayInitLoopExpr</h1>
+    <p>Defined at line 5427 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> Represents a loop initializing the elements of an array.</p>
+        <p> The need to initialize the elements of an array occurs in a number of contexts:</p>
+        <p>  * in the implicit copy/move constructor for a class with an array member  * when a lambda-expression captures an array by value  * when a decomposition declaration decomposes an array</p>
+        <p> There are two subexpressions: a common expression (the source array) that is evaluated once up-front, and a per-element initializer that runs once for each array element.</p>
+        <p> Within the per-element initializer, the common expression may be referenced via an OpaqueValueExpr, and the current index may be obtained via an ArrayInitIndexExpr.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A64004B191500DB11E896F0ABBC81DD3FAB72094">ArrayInitLoopExpr</h3>
+      <p>
+        public void ArrayInitLoopExpr(
+        <a href="QualType.html">QualType</a>
+         T, Expr * CommonInit, Expr * ElementInit)
+      </p>
+      <p>Defined at line 5434 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="EE752F6B2C314B894E76CB64F35344F09172B772">getCommonExpr</h3>
+      <p>public OpaqueValueExpr * getCommonExpr()</p>
+      <p>Defined at line 5442 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the common subexpression shared by all initializations (the source array).</p>
+        </div>
+      </div>
+      <h3 id="98FEFFF573FE1CF9B15ECCAAC525FD02FBA7C875">getSubExpr</h3>
+      <p>public Expr * getSubExpr()</p>
+      <p>Defined at line 5447 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the initializer to use for each array element.</p>
+        </div>
+      </div>
+      <h3 id="B41E7DFF939E3D2BD28FA82145F66AB6CBEEDB31">getArraySize</h3>
+      <p>
+        public 
+        <a href="../llvm/APInt.html">APInt</a>
+         getArraySize()
+      </p>
+      <p>Defined at line 5449 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="DDEDC8D0C593303495B686FCE93AF99C8662A39C">classof</h3>
+      <p>public _Bool classof(const Stmt * S)</p>
+      <p>Defined at line 5454 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B90BAA263FB8A8A1FB476DDD87CE8C3F9F90EF67">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 5458 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="BE04258166FCCA6C7DDB1ECC43D18FBAD0B2E162">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 5461 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="78EAD0425F5DDB1410952B918D12AD223F9B46DF">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 5465 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="FFD23468AF1DDCA78212643969957AA34D156F89">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 5468 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A64004B191500DB11E896F0ABBC81DD3FAB72094">ArrayInitLoopExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE752F6B2C314B894E76CB64F35344F09172B772">getCommonExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98FEFFF573FE1CF9B15ECCAAC525FD02FBA7C875">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B41E7DFF939E3D2BD28FA82145F66AB6CBEEDB31">getArraySize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DDEDC8D0C593303495B686FCE93AF99C8662A39C">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B90BAA263FB8A8A1FB476DDD87CE8C3F9F90EF67">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE04258166FCCA6C7DDB1ECC43D18FBAD0B2E162">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78EAD0425F5DDB1410952B918D12AD223F9B46DF">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FFD23468AF1DDCA78212643969957AA34D156F89">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

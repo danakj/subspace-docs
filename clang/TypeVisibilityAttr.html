@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TypeVisibilityAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TypeVisibilityAttr</h1>
+    <p>Defined at line 12102 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A7D5E47F271FA505E0D99733885216E014545489">CreateImplicit</h3>
+      <p>
+        public TypeVisibilityAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../clang/TypeVisibilityAttr/VisibilityType.html">VisibilityType</a>
+         Visibility, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="3128A4475428D9BCCAB3962F121490A3834EADAB">Create</h3>
+      <p>
+        public TypeVisibilityAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../clang/TypeVisibilityAttr/VisibilityType.html">VisibilityType</a>
+         Visibility, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="1BCA4740F46309FFF1F3F284131C99A596C6A9D9">CreateImplicit</h3>
+      <p>
+        public TypeVisibilityAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../clang/TypeVisibilityAttr/VisibilityType.html">VisibilityType</a>
+         Visibility, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="1C7473D09BA910CE77C9F051E1156AD577938A79">Create</h3>
+      <p>
+        public TypeVisibilityAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../clang/TypeVisibilityAttr/VisibilityType.html">VisibilityType</a>
+         Visibility, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="16DE898709A44908C0B66B6D629AA5586BB7E748">TypeVisibilityAttr</h3>
+      <p>
+        public void TypeVisibilityAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../clang/TypeVisibilityAttr/VisibilityType.html">VisibilityType</a>
+         Visibility)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="7C03DB82F4492514A15B0DB3072E38D3523F18DF">clone</h3>
+      <p>public TypeVisibilityAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="A9D50B56D66B077CC5C36E4C502EDCE617C4330E">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="9C46014E6CF0961ED04F609A2472A221682B1E29">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="831F3CB38FE04F9333046BE2C9BC9CD19576BAD2">getVisibility</h3>
+      <p>
+        public 
+        <a href="../clang/TypeVisibilityAttr/VisibilityType.html">VisibilityType</a>
+         getVisibility()
+      </p>
+      <p>Defined at line 12136 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="68A974AC100BF6CBC55E3CFAFAB2C76180004281">ConvertStrToVisibilityType</h3>
+      <p>
+        public _Bool ConvertStrToVisibilityType(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Val, VisibilityType &amp; Out)
+      </p>
+      <h3 id="B9603D4ACF4269E8E862D3613041AAFCCE47202A">ConvertVisibilityTypeToStr</h3>
+      <p>
+        public const char * ConvertVisibilityTypeToStr(
+        <a href="../clang/TypeVisibilityAttr/VisibilityType.html">VisibilityType</a>
+         Val)
+      </p>
+      <h3 id="2762CB9F8DC8D9848AD84EE7CB09F50FEA59ED2B">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 12144 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="5D40A485F85866B06EE6B2739413EE4B6DAE4AC2">enum VisibilityType</h3>
+      <ul>
+        <li>Default</li>
+        <li>Hidden</li>
+        <li>Protected</li>
+      </ul>
+      <p>Defined at line 12104 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="3A704D9F798AF1C358E2C8C188C2C0B2B3CAD25D">enum Spelling</h3>
+      <ul>
+        <li>GNU_type_visibility</li>
+        <li>CXX11_clang_type_visibility</li>
+        <li>C2x_clang_type_visibility</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 12113 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A7D5E47F271FA505E0D99733885216E014545489">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3128A4475428D9BCCAB3962F121490A3834EADAB">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BCA4740F46309FFF1F3F284131C99A596C6A9D9">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C7473D09BA910CE77C9F051E1156AD577938A79">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16DE898709A44908C0B66B6D629AA5586BB7E748">TypeVisibilityAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C03DB82F4492514A15B0DB3072E38D3523F18DF">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9D50B56D66B077CC5C36E4C502EDCE617C4330E">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C46014E6CF0961ED04F609A2472A221682B1E29">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#831F3CB38FE04F9333046BE2C9BC9CD19576BAD2">getVisibility</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68A974AC100BF6CBC55E3CFAFAB2C76180004281">ConvertStrToVisibilityType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9603D4ACF4269E8E862D3613041AAFCCE47202A">ConvertVisibilityTypeToStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2762CB9F8DC8D9848AD84EE7CB09F50FEA59ED2B">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5D40A485F85866B06EE6B2739413EE4B6DAE4AC2">VisibilityType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A704D9F798AF1C358E2C8C188C2C0B2B3CAD25D">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

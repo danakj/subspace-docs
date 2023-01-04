@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SourceManager</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SourceManager</h1>
+    <p>Defined at line 637 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+    <div>
+      <div>
+        <p> This class handles loading and caching of source files into memory.</p>
+        <p> This object owns the MemoryBuffer objects for all of the loaded files and assigns unique FileID&apos;s for each unique #include chain.</p>
+        <p> The SourceManager can be queried for information about SourceLocation objects, turning them into either spelling or expansion locations. Spelling locations represent where the bytes corresponding to a token came from and expansion locations represent where the location is in the user&apos;s view. In the case of a macro expansion, for example, the spelling location indicates where the expanded token came from and the expansion location specifies where it was expanded.</p>
+      </div>
+    </div>
+    <p>Inherits from RefCountedBase&lt;SourceManager&gt;</p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/SourceManager/MemoryBufferSizes.html">MemoryBufferSizes</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7A22AA56C7F060D71C924CFC20D96DB47329CE23">SourceManager</h3>
+      <p>public void SourceManager(DiagnosticsEngine &amp; Diag, FileManager &amp; FileMgr, _Bool UserFilesAreVolatile)</p>
+      <h3 id="8B6CC214A351A93CBA62A4B003A309D6688EC93C">SourceManager</h3>
+      <p>public void SourceManager(const SourceManager &amp; )</p>
+      <p>Defined at line 805 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="A451A31D610163C48B93488DEDD380D7A6C3E22B">operator=</h3>
+      <p>public SourceManager &amp; operator=(const SourceManager &amp; )</p>
+      <p>Defined at line 806 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="D380D891559C4859E89D942894FCE98A36B77B96">~SourceManager</h3>
+      <p>public void ~SourceManager()</p>
+      <h3 id="B4984F93ED611E932A5716902FC6AAC0A6775CEE">clearIDTables</h3>
+      <p>public void clearIDTables()</p>
+      <h3 id="F7FE1F1518EB493574EDA56B730774A3462EEF3B">initializeForReplay</h3>
+      <p>public void initializeForReplay(const SourceManager &amp; Old)</p>
+      <div>
+        <div>
+          <p> Initialize this source manager suitably to replay the compilation described by  Requires that  outlive </p>
+        </div>
+      </div>
+      <h3 id="07814E96A3EE795D2AE5F3B0B90DBA3D39B61116">getDiagnostics</h3>
+      <p>public DiagnosticsEngine &amp; getDiagnostics()</p>
+      <p>Defined at line 815 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="BF9CE1FD6D1A46BCD46B594348B6A4D3B1715986">getFileManager</h3>
+      <p>public FileManager &amp; getFileManager()</p>
+      <p>Defined at line 817 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="083FCADB1ACA18B82896494818CB34B09F28EE62">setOverridenFilesKeepOriginalName</h3>
+      <p>public void setOverridenFilesKeepOriginalName(_Bool value)</p>
+      <p>Defined at line 822 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Set true if the SourceManager should report the original file name for contents of files that were overridden by other files. Defaults to true.</p>
+        </div>
+      </div>
+      <h3 id="306A7B525E10E879A0982186BAB5D35CF47A8EA8">userFilesAreVolatile</h3>
+      <p>public _Bool userFilesAreVolatile()</p>
+      <p>Defined at line 828 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> True if non-system source files should be treated as volatile (likely to change while trying to use them).</p>
+        </div>
+      </div>
+      <h3 id="B6460467F2A7DF23A7CBF3AAD869F217038196BB">getModuleBuildStack</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getModuleBuildStack()
+      </p>
+      <p>Defined at line 831 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Retrieve the module build stack.</p>
+        </div>
+      </div>
+      <h3 id="79C8B7F79656CF64AA959D763589DE6ADFF97757">setModuleBuildStack</h3>
+      <p>
+        public void setModuleBuildStack(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         stack)
+      </p>
+      <p>Defined at line 836 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Set the module build stack.</p>
+        </div>
+      </div>
+      <h3 id="629A8701913E30AE22F600A8EE9AEFE8CAA5BB99">pushModuleBuildStack</h3>
+      <p>
+        public void pushModuleBuildStack(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         moduleName, 
+        <a href="FullSourceLoc.html">FullSourceLoc</a>
+         importLoc)
+      </p>
+      <p>Defined at line 842 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Push an entry to the module build stack.</p>
+        </div>
+      </div>
+      <h3 id="A54E45BAEFF040A631E5009EB7799A1DEE4984C8">getMainFileID</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         getMainFileID()
+      </p>
+      <p>Defined at line 851 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns the FileID of the main source file.</p>
+        </div>
+      </div>
+      <h3 id="4D95F8EAD6A8152A6A972F205A5ABC1264EC00B0">setMainFileID</h3>
+      <p>
+        public void setMainFileID(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <p>Defined at line 854 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Set the file ID for the main source file.</p>
+        </div>
+      </div>
+      <h3 id="048704EF5E10263EAF9BFD5EAC04908A9EB827C3">isMainFile</h3>
+      <p>public _Bool isMainFile(const FileEntry &amp; SourceFile)</p>
+      <div>
+        <div>
+          <p> Returns true when the given FileEntry corresponds to the main file.</p>
+          <p> The main file should be set prior to calling this function.</p>
+        </div>
+      </div>
+      <h3 id="369F8960531F2C52C9D12342B7C7394C43152592">setPreambleFileID</h3>
+      <p>
+        public void setPreambleFileID(
+        <a href="FileID.html">FileID</a>
+         Preamble)
+      </p>
+      <p>Defined at line 864 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Set the file ID for the precompiled preamble.</p>
+        </div>
+      </div>
+      <h3 id="EF4D62184C501643CE11D6E5D28329554DFD18D3">getPreambleFileID</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         getPreambleFileID()
+      </p>
+      <p>Defined at line 870 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Get the file ID for the precompiled preamble if there is one.</p>
+        </div>
+      </div>
+      <h3 id="3AD6CC4B14C17AC6AC673BBEECADE7CA34B9EEBD">createFileID</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         createFileID(const FileEntry * SourceFile, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IncludePos, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileCharacter, int LoadedID, class SourceLocation::UIntTy LoadedOffset)
+      </p>
+      <div>
+        <div>
+          <p> Create a new FileID that represents the specified file being #included from the specified IncludePosition.</p>
+          <p> This translates NULL into standard input.</p>
+        </div>
+      </div>
+      <h3 id="608B7C0A4C5EDD4BE72B69A9E2F30BE34B181691">createFileID</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         createFileID(
+        <a href="FileEntryRef.html">FileEntryRef</a>
+         SourceFile, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IncludePos, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileCharacter, int LoadedID, class SourceLocation::UIntTy LoadedOffset)
+      </p>
+      <h3 id="CB2645746FC4A96BDBC190B00C50D3477FD15AA2">createFileID</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         createFileID(
+        <a href="../std/unique_ptr.html">unique_ptr</a>
+         Buffer, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileCharacter, int LoadedID, class SourceLocation::UIntTy LoadedOffset, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IncludeLoc)
+      </p>
+      <div>
+        <div>
+          <p> Create a new FileID that represents the specified memory buffer.</p>
+          <p> This does no caching of the buffer and takes ownership of the MemoryBuffer, so only pass a MemoryBuffer to this once.</p>
+        </div>
+      </div>
+      <h3 id="5B2E4B1E1201FD8DEA879E831460EA57F4137697">createFileID</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         createFileID(const llvm::MemoryBufferRef &amp; Buffer, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileCharacter, int LoadedID, class SourceLocation::UIntTy LoadedOffset, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IncludeLoc)
+      </p>
+      <div>
+        <div>
+          <p> Create a new FileID that represents the specified memory buffer.</p>
+          <p> This does not take ownership of the MemoryBuffer. The memory buffer must outlive the SourceManager.</p>
+        </div>
+      </div>
+      <h3 id="9051B45D236803DF4AB770B4E878640E0E089235">getOrCreateFileID</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         getOrCreateFileID(const FileEntry * SourceFile, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileCharacter)
+      </p>
+      <div>
+        <div>
+          <p> Get the FileID for  if it exists. Otherwise, create a new FileID for the </p>
+        </div>
+      </div>
+      <h3 id="C4DBECB26958F8459DB4E27CC56BEBDA279CB39C">createMacroArgExpansionLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         createMacroArgExpansionLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         SpellingLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ExpansionLoc, unsigned int Length)
+      </p>
+      <div>
+        <div>
+          <p> Creates an expansion SLocEntry for the substitution of an argument into a function-like macro&apos;s body. Returns the start of the expansion.</p>
+          <p> The macro argument was written at  with length  is the parameter name in the (expanded) macro body.</p>
+        </div>
+      </div>
+      <h3 id="37977218273964C45708C8D44AB9FAB6F9F05ED9">createExpansionLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         createExpansionLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         SpellingLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ExpansionLocStart, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ExpansionLocEnd, unsigned int Length, _Bool ExpansionIsTokenRange, int LoadedID, class SourceLocation::UIntTy LoadedOffset)
+      </p>
+      <div>
+        <div>
+          <p> Creates an expansion SLocEntry for a macro use. Returns its start.</p>
+          <p> The macro body begins at  with length  The macro use spans [ExpansionLocStart, ExpansionLocEnd].</p>
+        </div>
+      </div>
+      <h3 id="FDC49C2D20BE60053A939DE64B4B247E7BEAEE45">createTokenSplitLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         createTokenSplitLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         SpellingLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TokenStart, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TokenEnd)
+      </p>
+      <div>
+        <div>
+          <p> Return a new SourceLocation that encodes that the token starting at  ends prematurely at </p>
+        </div>
+      </div>
+      <h3 id="743FC8D9B63A4E0DEF929276E664A98238563B85">getMemoryBufferForFileOrNone</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getMemoryBufferForFileOrNone(const FileEntry * File)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the memory buffer associated with the given file.</p>
+          <p> Returns std::nullopt if the buffer is not valid.</p>
+        </div>
+      </div>
+      <h3 id="CF45005BE56FCBC3ED9D82CB77FF5E8973BB2DBC">getMemoryBufferForFileOrFake</h3>
+      <p>
+        public 
+        <a href="../llvm/MemoryBufferRef.html">MemoryBufferRef</a>
+         getMemoryBufferForFileOrFake(const FileEntry * File)
+      </p>
+      <p>Defined at line 949 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Retrieve the memory buffer associated with the given file.</p>
+          <p> Returns a fake buffer if there isn&apos;t a real one.</p>
+        </div>
+      </div>
+      <h3 id="3E11FE6AF076C9CCEB717F738F3BF2D19DCD37C4">overrideFileContents</h3>
+      <p>public void overrideFileContents(const FileEntry * SourceFile, const llvm::MemoryBufferRef &amp; Buffer)</p>
+      <p>Defined at line 962 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Override the contents of the given source file by providing an already-allocated buffer.</p>
+        </div>
+      </div>
+      <h3 id="79B21FD1344F5B03B2D3E4F451FDA64070AA1669">overrideFileContents</h3>
+      <p>
+        public void overrideFileContents(const FileEntry * SourceFile, 
+        <a href="../std/unique_ptr.html">unique_ptr</a>
+         Buffer)
+      </p>
+      <div>
+        <div>
+          <p> Override the contents of the given source file by providing an already-allocated buffer.</p>
+        </div>
+      </div>
+      <h3 id="142DCEEFAACAEF228820A5E21D3EFEB2DBBCEE74">overrideFileContents</h3>
+      <p>
+        public void overrideFileContents(
+        <a href="FileEntryRef.html">FileEntryRef</a>
+         SourceFile, 
+        <a href="../std/unique_ptr.html">unique_ptr</a>
+         Buffer)
+      </p>
+      <p>Defined at line 976 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="B158FE5C9AE965A712869E92F8AF9623961C86D8">overrideFileContents</h3>
+      <p>
+        public void overrideFileContents(const FileEntry * SourceFile, 
+        <a href="FileEntryRef.html">FileEntryRef</a>
+         NewFile)
+      </p>
+      <div>
+        <div>
+          <p> Override the given source file with another one.</p>
+        </div>
+      </div>
+      <h3 id="1FB107C61DDA9674924A66798ECE3E0D5EFCC441">isFileOverridden</h3>
+      <p>public _Bool isFileOverridden(const FileEntry * File)</p>
+      <p>Defined at line 990 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns true if the file contents have been overridden.</p>
+        </div>
+      </div>
+      <h3 id="57E43452AEBD086AD01A7F15D130BFF8A6FBC3D1">bypassFileContentsOverride</h3>
+      <p>
+        public 
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         bypassFileContentsOverride(
+        <a href="FileEntryRef.html">FileEntryRef</a>
+         File)
+      </p>
+      <div>
+        <div>
+          <p> Bypass the overridden contents of a file.  This creates a new FileEntry and initializes the content cache for it.  Returns std::nullopt if there is no such file in the filesystem.</p>
+          <p> This should be called before parsing has begun.</p>
+        </div>
+      </div>
+      <h3 id="AE440DACDFFF70A30AFAB3E4D6D5132C8D08FEA2">setFileIsTransient</h3>
+      <p>public void setFileIsTransient(const FileEntry * SourceFile)</p>
+      <div>
+        <div>
+          <p> Specify that a file is transient.</p>
+        </div>
+      </div>
+      <h3 id="F1CC42F230DB5670BB7F4955740AA2FEFE6A16C8">setAllFilesAreTransient</h3>
+      <p>public void setAllFilesAreTransient(_Bool Transient)</p>
+      <p>Defined at line 1013 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Specify that all files that are read during this compilation are transient.</p>
+        </div>
+      </div>
+      <h3 id="213BA1456B96B763730ED423A3980866CC0EF1B8">getBufferOrNone</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getBufferOrNone(
+        <a href="FileID.html">FileID</a>
+         FID, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1025 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return the buffer for the specified FileID.</p>
+          <p> If there is an error opening this buffer the first time, return std::nullopt.</p>
+        </div>
+      </div>
+      <h3 id="00CA164EE682B4B67522FB162DA3A1C603FA425C">getBufferOrFake</h3>
+      <p>
+        public 
+        <a href="../llvm/MemoryBufferRef.html">MemoryBufferRef</a>
+         getBufferOrFake(
+        <a href="FileID.html">FileID</a>
+         FID, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1037 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return the buffer for the specified FileID.</p>
+          <p> If there is an error opening this buffer the first time, this manufactures a temporary buffer and returns it.</p>
+        </div>
+      </div>
+      <h3 id="C01918DF14DE0A90D20180B47CA2F70B00DD07B0">getFileEntryForID</h3>
+      <p>
+        public const FileEntry * getFileEntryForID(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <p>Defined at line 1045 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns the FileEntry record for the provided FileID.</p>
+        </div>
+      </div>
+      <h3 id="AB2D67B004A28788316CDA1E9339159A3A644AA1">getFileEntryRefForID</h3>
+      <p>
+        public 
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         getFileEntryRefForID(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <p>Defined at line 1052 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns the FileEntryRef for the provided FileID.</p>
+        </div>
+      </div>
+      <h3 id="84871B4DD0F6545383DFE1439BBE80CCB4FA5971">getNonBuiltinFilenameForID</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getNonBuiltinFilenameForID(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <div>
+        <div>
+          <p> Returns the filename for the provided FileID, unless it&apos;s a built-in buffer that&apos;s not represented by a filename.</p>
+          <p> Returns std::nullopt for non-files and built-in files.</p>
+        </div>
+      </div>
+      <h3 id="58202541035CD2A8FEE1612B8F3F8AB47CEEEBCF">getFileEntryForSLocEntry</h3>
+      <p>public const FileEntry * getFileEntryForSLocEntry(const SrcMgr::SLocEntry &amp; sloc)</p>
+      <p>Defined at line 1065 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns the FileEntry record for the provided SLocEntry.</p>
+        </div>
+      </div>
+      <h3 id="EF8A5C9E162D5CCA569A0A527FB15FC41262B2E0">getBufferData</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getBufferData(
+        <a href="FileID.html">FileID</a>
+         FID, _Bool * Invalid)
+      </p>
+      <div>
+        <div>
+          <p> Return a StringRef to the source buffer data for the specified FileID.</p>
+        </div>
+      </div>
+      <h3 id="31D158DC0A80456B78FC7D72A52B55B26C049BD9">getBufferDataOrNone</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getBufferDataOrNone(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <div>
+        <div>
+          <p> Return a StringRef to the source buffer data for the specified FileID, returning std::nullopt if invalid.</p>
+        </div>
+      </div>
+      <h3 id="AB3D3C681953054F6E2C693AB32D5A12F9D43BBC">getBufferDataIfLoaded</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getBufferDataIfLoaded(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <div>
+        <div>
+          <p> Return a StringRef to the source buffer data for the specified FileID, returning std::nullopt if it&apos;s not yet loaded.</p>
+        </div>
+      </div>
+      <h3 id="844028648E1FD3643EF7D2B7C3B5A9CA457AB025">getNumCreatedFIDsForFileID</h3>
+      <p>
+        public unsigned int getNumCreatedFIDsForFileID(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <p>Defined at line 1091 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Get the number of FileIDs (files and macros) that were created during preprocessing of  including it.</p>
+        </div>
+      </div>
+      <h3 id="49826BA44C64A35D3AF40987E7B57E40C75E062E">setNumCreatedFIDsForFileID</h3>
+      <p>
+        public void setNumCreatedFIDsForFileID(
+        <a href="FileID.html">FileID</a>
+         FID, unsigned int NumFIDs, _Bool Force)
+      </p>
+      <p>Defined at line 1099 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Set the number of FileIDs (files and macros) that were created during preprocessing of  including it.</p>
+        </div>
+      </div>
+      <h3 id="A2295B2FF5D275E5C2DA84CE5F575E6DDBC367A5">getFileID</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         getFileID(
+        <a href="SourceLocation.html">SourceLocation</a>
+         SpellingLoc)
+      </p>
+      <p>Defined at line 1118 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return the FileID for a SourceLocation.</p>
+          <p> This is a very hot method that is used for all SourceManager queries that start with a SourceLocation object.  It is responsible for finding the entry in SLocEntryTable which contains the specified location.</p>
+        </div>
+      </div>
+      <h3 id="FDAC8492B8A6BEBB2AEF1E37A753AB63E1E7AE90">getFilename</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getFilename(
+        <a href="SourceLocation.html">SourceLocation</a>
+         SpellingLoc)
+      </p>
+      <div>
+        <div>
+          <p> Return the filename of the file containing a SourceLocation.</p>
+        </div>
+      </div>
+      <h3 id="44A3FD78331633265DBA1B750D8E16CF407F9368">getLocForStartOfFile</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocForStartOfFile(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <p>Defined at line 1127 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return the source location corresponding to the first byte of the specified file.</p>
+        </div>
+      </div>
+      <h3 id="1E47D61C0A620CF333F57B75CE2ED1FB6256BCAB">getLocForEndOfFile</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocForEndOfFile(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <p>Defined at line 1135 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return the source location corresponding to the last byte of the specified file.</p>
+        </div>
+      </div>
+      <h3 id="8CB1B62390EA2A23D60D0CB1AA1DEA1CAA6D1F6B">getIncludeLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getIncludeLoc(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <p>Defined at line 1144 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns the include location if  is a #include&apos;d file otherwise it returns an invalid location.</p>
+        </div>
+      </div>
+      <h3 id="50D98117F905B1A219F22216BE14158F9B3A7663">getModuleImportLoc</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         getModuleImportLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1153 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns the import location if the given source location is located within a module, or an invalid location if the source location is within the current translation unit.</p>
+        </div>
+      </div>
+      <h3 id="016BEB44CC1D6C4683EEB925EEDBE4C93D8D2E79">getExpansionLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExpansionLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1167 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Given a SourceLocation object  return the expansion location referenced by the ID.</p>
+        </div>
+      </div>
+      <h3 id="491707E66798D9CD24AAADEEDB5368D7531659F6">getFileLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getFileLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1177 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Given  if it is a macro location return the expansion location or the spelling location, depending on if it comes from a macro argument or not.</p>
+        </div>
+      </div>
+      <h3 id="F5A7C74A9D5999068F82D02641BA620509042FFF">getImmediateExpansionRange</h3>
+      <p>
+        public 
+        <a href="CharSourceRange.html">CharSourceRange</a>
+         getImmediateExpansionRange(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> Return the start/end of the expansion information for an expansion location.</p>
+        </div>
+      </div>
+      <h3 id="4F47F576F3F823842DDBC7C849B413348055FFA0">getExpansionRange</h3>
+      <p>
+        public 
+        <a href="CharSourceRange.html">CharSourceRange</a>
+         getExpansionRange(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> Given a SourceLocation object, return the range of tokens covered by the expansion in the ultimate file.</p>
+        </div>
+      </div>
+      <h3 id="4B7E0197A6B0BA635917C6760EF13D305C33B499">getExpansionRange</h3>
+      <p>
+        public 
+        <a href="CharSourceRange.html">CharSourceRange</a>
+         getExpansionRange(
+        <a href="SourceRange.html">SourceRange</a>
+         Range)
+      </p>
+      <p>Defined at line 1194 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Given a SourceRange object, return the range of tokens or characters covered by the expansion in the ultimate file.</p>
+        </div>
+      </div>
+      <h3 id="867ED94F46BE1F6B532E8EF53D2F6BA52B9A3884">getExpansionRange</h3>
+      <p>
+        public 
+        <a href="CharSourceRange.html">CharSourceRange</a>
+         getExpansionRange(
+        <a href="CharSourceRange.html">CharSourceRange</a>
+         Range)
+      </p>
+      <p>Defined at line 1203 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Given a CharSourceRange object, return the range of tokens or characters covered by the expansion in the ultimate file.</p>
+        </div>
+      </div>
+      <h3 id="365F5B378D063B0B5C163ED1E5DCF4784F94C5D8">getSpellingLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getSpellingLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1215 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Given a SourceLocation object, return the spelling location referenced by the ID.</p>
+          <p> This is the place where the characters that make up the lexed token can be found.</p>
+        </div>
+      </div>
+      <h3 id="0FD3DF0565A1B03E28E3DFB8003A76805E269D1C">getImmediateSpellingLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getImmediateSpellingLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> Given a SourceLocation object, return the spelling location referenced by the ID.</p>
+          <p> This is the first level down towards the place where the characters that make up the lexed token can be found.  This should not generally be used by clients.</p>
+        </div>
+      </div>
+      <h3 id="AFC213349CE14CCFADBBA15C2D3586A5225E19E9">getComposedLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getComposedLoc(
+        <a href="FileID.html">FileID</a>
+         FID, unsigned int Offset)
+      </p>
+      <p>Defined at line 1231 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Form a SourceLocation from a FileID and Offset pair.</p>
+        </div>
+      </div>
+      <h3 id="270D1A0A77F0F2CAD83640AE81CBDCC27F114CA3">getDecomposedLoc</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         getDecomposedLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1245 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Decompose the specified location into a raw FileID + Offset pair.</p>
+          <p> The first element is the FileID, the second is the offset from the start of the buffer of the location.</p>
+        </div>
+      </div>
+      <h3 id="4C4A3354C7264AF809C786AC6C303745241E2898">getDecomposedExpansionLoc</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         getDecomposedExpansionLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1257 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Decompose the specified location into a raw FileID + Offset pair.</p>
+          <p> If the location is an expansion record, walk through it until we find the final location expanded.</p>
+        </div>
+      </div>
+      <h3 id="3D8269FDB74DC2C9737AB703D4B06F9AE37B50E4">getDecomposedSpellingLoc</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         getDecomposedSpellingLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1275 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Decompose the specified location into a raw FileID + Offset pair.</p>
+          <p> If the location is an expansion record, walk through it until we find its spelling record.</p>
+        </div>
+      </div>
+      <h3 id="1666F7DC279B36AF929A937F7A0DAF35BAF4C5EF">getDecomposedIncludedLoc</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         getDecomposedIncludedLoc(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <div>
+        <div>
+          <p> Returns the &quot;included/expanded in&quot; decomposed location of the given FileID.</p>
+        </div>
+      </div>
+      <h3 id="5B6D452E0FD6974EF58E4BDA10122D3972BEB9A9">getFileOffset</h3>
+      <p>
+        public unsigned int getFileOffset(
+        <a href="SourceLocation.html">SourceLocation</a>
+         SpellingLoc)
+      </p>
+      <p>Defined at line 1296 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns the offset from the start of the file that the specified SourceLocation represents.</p>
+          <p> This is not very meaningful for a macro ID.</p>
+        </div>
+      </div>
+      <h3 id="76D728C7721C6A38F2FBB82B8BB387B590D5F36E">isMacroArgExpansion</h3>
+      <p>
+        public _Bool isMacroArgExpansion(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, SourceLocation * StartLoc)
+      </p>
+      <div>
+        <div>
+          <p> Tests whether the given source location represents a macro argument&apos;s expansion into the function-like macro definition.</p>
+          <p> Such source locations only appear inside of the expansion locations representing where a particular function-like macro was expanded.</p>
+        </div>
+      </div>
+      <h3 id="22B3EE42CC6D05168631D34462BE914B003EBEA3">isMacroBodyExpansion</h3>
+      <p>
+        public _Bool isMacroBodyExpansion(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> Tests whether the given source location represents the expansion of a macro body.</p>
+          <p> This is equivalent to testing whether the location is part of a macro expansion but not the expansion of an argument to a function-like macro.</p>
+        </div>
+      </div>
+      <h3 id="788F4DD22A20EACB11F35690D23A5C4F5F2E2C75">isAtStartOfImmediateMacroExpansion</h3>
+      <p>
+        public _Bool isAtStartOfImmediateMacroExpansion(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, SourceLocation * MacroBegin)
+      </p>
+      <div>
+        <div>
+          <p> Returns true if the given MacroID location points at the beginning of the immediate macro expansion.</p>
+        </div>
+      </div>
+      <h3 id="F6C3973708B1B760FB52B1841967249222D8BEE3">isAtEndOfImmediateMacroExpansion</h3>
+      <p>
+        public _Bool isAtEndOfImmediateMacroExpansion(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, SourceLocation * MacroEnd)
+      </p>
+      <div>
+        <div>
+          <p> Returns true if the given MacroID location points at the character end of the immediate macro expansion.</p>
+        </div>
+      </div>
+      <h3 id="53697F7EA19CBE342B4A0DEF49DCA902E9A1B918">isInSLocAddrSpace</h3>
+      <p>
+        public _Bool isInSLocAddrSpace(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Start, unsigned int Length, class SourceLocation::UIntTy * RelativeOffset)
+      </p>
+      <p>Defined at line 1341 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns true if  is inside the [ + chunk of the source location address space.</p>
+          <p> If it&apos;s true and  is non-null, it will be set to the relative offset of  inside the chunk.</p>
+        </div>
+      </div>
+      <h3 id="FD31FE65F94D9B27261A2328FF23A4D793A8D977">isInSameSLocAddrSpace</h3>
+      <p>
+        public _Bool isInSameSLocAddrSpace(
+        <a href="SourceLocation.html">SourceLocation</a>
+         LHS, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RHS, class SourceLocation::IntTy * RelativeOffset)
+      </p>
+      <p>Defined at line 1366 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return true if both  and  are in the local source location address space or the loaded one.</p>
+          <p> If it&apos;s true and  is non-null, it will be set to the offset of  relative to </p>
+        </div>
+      </div>
+      <h3 id="C70D48C30CD41E9E461F794BB2589BD7A7E0C6C5">getCharacterData</h3>
+      <p>
+        public const char * getCharacterData(
+        <a href="SourceLocation.html">SourceLocation</a>
+         SL, _Bool * Invalid)
+      </p>
+      <div>
+        <div>
+          <p> Return a pointer to the start of the specified location in the appropriate spelling MemoryBuffer.</p>
+        </div>
+      </div>
+      <h3 id="20FCD00745CA706456C3F19B2328918A653209DF">getColumnNumber</h3>
+      <p>
+        public unsigned int getColumnNumber(
+        <a href="FileID.html">FileID</a>
+         FID, unsigned int FilePos, _Bool * Invalid)
+      </p>
+      <div>
+        <div>
+          <p> Return the column # for the specified file position.</p>
+          <p> This is significantly cheaper to compute than the line number.  This returns zero if the column number isn&apos;t known.  This may only be called on a file sloc, so you must choose a spelling or expansion location before calling this method.</p>
+        </div>
+      </div>
+      <h3 id="015A1F25A06CB7C872217D41C515E61BD24C62E7">getSpellingColumnNumber</h3>
+      <p>
+        public unsigned int getSpellingColumnNumber(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, _Bool * Invalid)
+      </p>
+      <h3 id="2A651E27ACF876AE0CBC2CF327C9D73CD35B1126">getExpansionColumnNumber</h3>
+      <p>
+        public unsigned int getExpansionColumnNumber(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, _Bool * Invalid)
+      </p>
+      <h3 id="C33CEC2ADCA8912A3CAE188DCB8B02FAAA12AD67">getPresumedColumnNumber</h3>
+      <p>
+        public unsigned int getPresumedColumnNumber(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, _Bool * Invalid)
+      </p>
+      <h3 id="F6CD9238D719C9A2F58543ECB915EC90F1CDF0D8">getLineNumber</h3>
+      <p>
+        public unsigned int getLineNumber(
+        <a href="FileID.html">FileID</a>
+         FID, unsigned int FilePos, _Bool * Invalid)
+      </p>
+      <div>
+        <div>
+          <p> Given a SourceLocation, return the spelling line number for the position indicated.</p>
+          <p> This requires building and caching a table of line offsets for the MemoryBuffer, so this is not cheap: use only when about to emit a diagnostic.</p>
+        </div>
+      </div>
+      <h3 id="5D0D0D512C349F59215341268B7544C831C37CA0">getSpellingLineNumber</h3>
+      <p>
+        public unsigned int getSpellingLineNumber(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, _Bool * Invalid)
+      </p>
+      <h3 id="A78B8589EDD734F4141250F6B29A3EA864B112B9">getExpansionLineNumber</h3>
+      <p>
+        public unsigned int getExpansionLineNumber(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, _Bool * Invalid)
+      </p>
+      <h3 id="C6FBD286B42BAC83C249C55C57A6E96F91B5C785">getPresumedLineNumber</h3>
+      <p>
+        public unsigned int getPresumedLineNumber(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, _Bool * Invalid)
+      </p>
+      <h3 id="CB57B5349CDC4E7CAE5D775EB2E2270E75976EA3">getBufferName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getBufferName(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, _Bool * Invalid)
+      </p>
+      <div>
+        <div>
+          <p> Return the filename or buffer identifier of the buffer the location is in.</p>
+          <p> Note that this name does not respect #line directives.  Use getPresumedLoc for normal clients.</p>
+        </div>
+      </div>
+      <h3 id="61CCC5FC69AA4DF3016890394EAA098D02829494">getFileCharacteristic</h3>
+      <p>
+        public 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         getFileCharacteristic(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> Return the file characteristic of the specified source location, indicating whether this is a normal file, a system header, or an &quot;implicit extern C&quot; system header.</p>
+          <p> This state can be modified with flags on GNU linemarker directives like:</p>
+          <p> which changes all source locations in the current file after that to be considered to be from a system header.</p>
+        </div>
+      </div>
+      <h3 id="0ADDF63170F0303E662642077AB0029002C86F80">getPresumedLoc</h3>
+      <p>
+        public 
+        <a href="PresumedLoc.html">PresumedLoc</a>
+         getPresumedLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, _Bool UseLineDirectives)
+      </p>
+      <div>
+        <div>
+          <p> Returns the &quot;presumed&quot; location of a SourceLocation specifies.</p>
+          <p> A &quot;presumed location&quot; can be modified by #line or GNU line marker directives.  This provides a view on the data that a user should see in diagnostics, for example.</p>
+          <p> Note that a presumed location is always given as the expansion point of an expansion location, not at the spelling location.</p>
+        </div>
+      </div>
+      <h3 id="6CB2CB546C024D6E2AD2E40E248F0693F6CF7747">isInMainFile</h3>
+      <p>
+        public _Bool isInMainFile(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> Returns whether the PresumedLoc for a given SourceLocation is in the main file.</p>
+          <p> This computes the &quot;presumed&quot; location for a SourceLocation, then checks whether it came from a file other than the main file. This is different from isWrittenInMainFile() because it takes line marker directives into account.</p>
+        </div>
+      </div>
+      <h3 id="9F94E7B0ACF6F188CDF4937106509C9EC6861478">isWrittenInSameFile</h3>
+      <p>
+        public _Bool isWrittenInSameFile(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc1, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc2)
+      </p>
+      <p>Defined at line 1466 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns true if the spelling locations for both SourceLocations are part of the same file buffer.</p>
+          <p> This check ignores line marker directives.</p>
+        </div>
+      </div>
+      <h3 id="AC432F129BCB67DD96C9800250C91E0839D7EE51">isWrittenInMainFile</h3>
+      <p>
+        public _Bool isWrittenInMainFile(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1474 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns true if the spelling location for the given location is in the main file buffer.</p>
+          <p> This check ignores line marker directives.</p>
+        </div>
+      </div>
+      <h3 id="32AC04B7C23C48621A7BBC6C67A4062DE0E9D310">isWrittenInBuiltinFile</h3>
+      <p>
+        public _Bool isWrittenInBuiltinFile(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1479 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns whether  is located in a &lt;built-in&gt; file.</p>
+        </div>
+      </div>
+      <h3 id="FD8513B9A0D409626E9A0C339679613532D0BC32">isWrittenInCommandLineFile</h3>
+      <p>
+        public _Bool isWrittenInCommandLineFile(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1488 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns whether  is located in a &lt;command line&gt; file.</p>
+        </div>
+      </div>
+      <h3 id="8917E355143CE75C9C5290A82C6A7BF3C599D8F7">isWrittenInScratchSpace</h3>
+      <p>
+        public _Bool isWrittenInScratchSpace(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1497 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns whether  is located in a &lt;scratch space&gt; file.</p>
+        </div>
+      </div>
+      <h3 id="A17B05F21AECDAE8E553F0EB28412DAB14180D64">isInSystemHeader</h3>
+      <p>
+        public _Bool isInSystemHeader(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1506 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns if a SourceLocation is in a system header.</p>
+        </div>
+      </div>
+      <h3 id="3D4B3112BFEC97F585BCC6FC235AE72917920206">isInExternCSystemHeader</h3>
+      <p>
+        public _Bool isInExternCSystemHeader(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1513 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns if a SourceLocation is in an &quot;extern C&quot; system header.</p>
+        </div>
+      </div>
+      <h3 id="FD2712268A8B6E920636A1A09120C9B80E7844F9">isInSystemMacro</h3>
+      <p>
+        public _Bool isInSystemMacro(
+        <a href="SourceLocation.html">SourceLocation</a>
+         loc)
+      </p>
+      <p>Defined at line 1518 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns whether  is expanded from a macro in a system header.</p>
+        </div>
+      </div>
+      <h3 id="E23FC16177CA089346B1C1D1BDCC74FFC56FFDB4">getFileIDSize</h3>
+      <p>
+        public unsigned int getFileIDSize(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <div>
+        <div>
+          <p> The size of the SLocEntry that  represents.</p>
+        </div>
+      </div>
+      <h3 id="D8D755B259C589E2C828D7B9994486BC7D31B796">isInFileID</h3>
+      <p>
+        public _Bool isInFileID(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="FileID.html">FileID</a>
+         FID, unsigned int * RelativeOffset)
+      </p>
+      <p>Defined at line 1541 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Given a specific FileID, returns true if  is inside that FileID chunk and sets relative offset (offset of  from beginning of FileID) to </p>
+        </div>
+      </div>
+      <h3 id="E26FC735D99CD829DF6B8EE42DB5D15B3EF1C71B">getLineTableFilenameID</h3>
+      <p>
+        public unsigned int getLineTableFilenameID(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> Return the uniqued ID for the specified filename.</p>
+        </div>
+      </div>
+      <h3 id="2BEE084441285B693187981B9F72182730E4FFD7">AddLineNote</h3>
+      <p>
+        public void AddLineNote(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, unsigned int LineNo, int FilenameID, _Bool IsFileEntry, _Bool IsFileExit, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileKind)
+      </p>
+      <div>
+        <div>
+          <p> Add a line note to the line table for the FileID and offset specified by Loc.</p>
+          <p> If FilenameID is -1, it is considered to be unspecified.</p>
+        </div>
+      </div>
+      <h3 id="93CED93E784BD4FE0A1B766D12FCAFD630522158">hasLineTable</h3>
+      <p>public _Bool hasLineTable()</p>
+      <p>Defined at line 1569 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Determine if the source manager has a line table.</p>
+        </div>
+      </div>
+      <h3 id="538E1C69F4A8474C1AE137541C49FF6A437E309E">getLineTable</h3>
+      <p>public LineTableInfo &amp; getLineTable()</p>
+      <div>
+        <div>
+          <p> Retrieve the stored line table.</p>
+        </div>
+      </div>
+      <h3 id="8A648EA8A17379FE5F48C2EE93528DFF87F5E420">getContentCacheSize</h3>
+      <p>public size_t getContentCacheSize()</p>
+      <p>Defined at line 1580 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return the total amount of physical memory allocated by the ContentCache allocator.</p>
+        </div>
+      </div>
+      <h3 id="610863B62B6FA3EB5BA9F78151A61C9D73C98F1A">getMemoryBufferSizes</h3>
+      <p>
+        public 
+        <a href="../clang/SourceManager/MemoryBufferSizes.html">MemoryBufferSizes</a>
+         getMemoryBufferSizes()
+      </p>
+      <div>
+        <div>
+          <p> Return the amount of memory used by memory buffers, breaking down by heap-backed versus mmap&apos;ed memory.</p>
+        </div>
+      </div>
+      <h3 id="510ECE6D485FF555D8EF16F3B4003631D8086BD0">getDataStructureSizes</h3>
+      <p>public size_t getDataStructureSizes()</p>
+      <div>
+        <div>
+          <p> Return the amount of memory used for various side tables and data structures in the SourceManager.</p>
+        </div>
+      </div>
+      <h3 id="4F9F084B3051D1B8A64BD9D7AB985B39BA6FFE2F">translateFileLineCol</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         translateFileLineCol(const FileEntry * SourceFile, unsigned int Line, unsigned int Col)
+      </p>
+      <div>
+        <div>
+          <p> Get the source location for the given file:line:col triplet.</p>
+          <p> If the source file is included multiple times, the source location will be based upon the first inclusion.</p>
+        </div>
+      </div>
+      <h3 id="E085EE853DAEB61B31ECA46F6B44C1B9A18A6CA3">translateFile</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         translateFile(const FileEntry * SourceFile)
+      </p>
+      <div>
+        <div>
+          <p> Get the FileID for the given file.</p>
+          <p> If the source file is included multiple times, the FileID will be the first inclusion.</p>
+        </div>
+      </div>
+      <h3 id="4D3FBA148C24E19003F018C68095F57DA8F804E9">translateFile</h3>
+      <p>
+        public 
+        <a href="FileID.html">FileID</a>
+         translateFile(
+        <a href="FileEntryRef.html">FileEntryRef</a>
+         SourceFile)
+      </p>
+      <p>Defined at line 1616 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="ABE503E9F523BC82D47137F7B9A10F01030DF0B3">translateLineCol</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         translateLineCol(
+        <a href="FileID.html">FileID</a>
+         FID, unsigned int Line, unsigned int Col)
+      </p>
+      <div>
+        <div>
+          <p> Get the source location in  for the given line:col. Returns null location if  is not a file SLocEntry.</p>
+        </div>
+      </div>
+      <h3 id="7A4C71A0468829CC6880A5C7EB40AAA181210E8B">getMacroArgExpandedLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getMacroArgExpandedLocation(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> If  points inside a function macro argument, the returned location will be the macro location in which the argument was expanded. If a macro argument is used multiple times, the expanded location will be at the first expansion of the argument. e.g.   MY_MACRO(foo);             ^ Passing a file location pointing at &apos;foo&apos;, will yield a macro location where &apos;foo&apos; was expanded into.</p>
+        </div>
+      </div>
+      <h3 id="6B9A9F85068C527035FF206C19DCF39A1F9B6097">isBeforeInTranslationUnit</h3>
+      <p>
+        public _Bool isBeforeInTranslationUnit(
+        <a href="SourceLocation.html">SourceLocation</a>
+         LHS, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RHS)
+      </p>
+      <div>
+        <div>
+          <p> Determines the order of 2 source locations in the translation unit.</p>
+        </div>
+      </div>
+      <h3 id="DD4F39FA9FC80523169853760585C58E9B123383">isInTheSameTranslationUnit</h3>
+      <p>public std::pair&lt;_Bool, _Bool&gt; isInTheSameTranslationUnit(std::pair&lt;FileID, unsigned int&gt; &amp; LOffs, std::pair&lt;FileID, unsigned int&gt; &amp; ROffs)</p>
+      <div>
+        <div>
+          <p> Determines whether the two decomposed source location is in the        same translation unit. As a byproduct, it also calculates the order        of the source locations in case they are in the same TU.</p>
+        </div>
+      </div>
+      <h3 id="F05018DA6F55D3E76ACC2C103FA1918FA36A6C00">isBeforeInSLocAddrSpace</h3>
+      <p>
+        public _Bool isBeforeInSLocAddrSpace(
+        <a href="SourceLocation.html">SourceLocation</a>
+         LHS, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RHS)
+      </p>
+      <p>Defined at line 1654 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Determines the order of 2 source locations in the &quot;source location address space&quot;.</p>
+        </div>
+      </div>
+      <h3 id="A388ED54225B78DA47E4612A2A18DA1A77BC0FA4">isBeforeInSLocAddrSpace</h3>
+      <p>
+        public _Bool isBeforeInSLocAddrSpace(
+        <a href="SourceLocation.html">SourceLocation</a>
+         LHS, class SourceLocation::UIntTy RHS)
+      </p>
+      <p>Defined at line 1662 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Determines the order of a source location and a source location offset in the &quot;source location address space&quot;.</p>
+          <p> Note that we always consider source locations loaded from</p>
+        </div>
+      </div>
+      <h3 id="759A5DED7B9B6B44FA5C98D19129466CD44267B7">isPointWithin</h3>
+      <p>
+        public _Bool isPointWithin(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Location, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Start, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         End)
+      </p>
+      <p>Defined at line 1674 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return true if the Point is within Start and End.</p>
+        </div>
+      </div>
+      <h3 id="C4BBC8FFF55D65E97B3C4D046DEEEAF0BBC8AF64">fileinfo_begin</h3>
+      <p>
+        public 
+        <a href="../llvm/DenseMapIterator.html">DenseMapIterator</a>
+         fileinfo_begin()
+      </p>
+      <p>Defined at line 1685 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="1DBE55FD15CCD37A0564A234BF48D47E33A33D87">fileinfo_end</h3>
+      <p>
+        public 
+        <a href="../llvm/DenseMapIterator.html">DenseMapIterator</a>
+         fileinfo_end()
+      </p>
+      <p>Defined at line 1686 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="2C430C0FC66FB2A5558753624B6EE0F5EB1BB055">hasFileInfo</h3>
+      <p>public _Bool hasFileInfo(const FileEntry * File)</p>
+      <p>Defined at line 1687 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="F4F6369281B035440E538363EC32980588DD8D14">PrintStats</h3>
+      <p>public void PrintStats()</p>
+      <div>
+        <div>
+          <p> Print statistics to stderr.</p>
+        </div>
+      </div>
+      <h3 id="992DAF1C88A4B1CAF9F8BBA76E29E794987493C7">dump</h3>
+      <p>public void dump()</p>
+      <h3 id="568E3382C5F872BC5A9E0EE9E1F4CBF3A1522E1E">noteSLocAddressSpaceUsage</h3>
+      <p>
+        public void noteSLocAddressSpaceUsage(DiagnosticsEngine &amp; Diag, 
+        <a href="../std/optional.html">optional</a>
+         MaxNotes)
+      </p>
+      <div>
+        <div>
+          <p> Produce notes describing the current source location address space usage.</p>
+        </div>
+      </div>
+      <h3 id="83D3D5F25C30FB944567DC08293D1285AD37E2E1">local_sloc_entry_size</h3>
+      <p>public unsigned int local_sloc_entry_size()</p>
+      <p>Defined at line 1701 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Get the number of local SLocEntries we have.</p>
+        </div>
+      </div>
+      <h3 id="6459F9471039972389C5AEAEAAE0DAF8DBA39688">getLocalSLocEntry</h3>
+      <p>public const SrcMgr::SLocEntry &amp; getLocalSLocEntry(unsigned int Index)</p>
+      <p>Defined at line 1704 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Get a local SLocEntry. This is exposed for indexing.</p>
+        </div>
+      </div>
+      <h3 id="23AB1550120E0BEF7D50F536A8D556110ED799FE">loaded_sloc_entry_size</h3>
+      <p>public unsigned int loaded_sloc_entry_size()</p>
+      <p>Defined at line 1710 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Get the number of loaded SLocEntries we have.</p>
+        </div>
+      </div>
+      <h3 id="02EB3D8CA3BA2B23E68B77712A68221CF52B66E4">getLoadedSLocEntry</h3>
+      <p>public const SrcMgr::SLocEntry &amp; getLoadedSLocEntry(unsigned int Index, _Bool * Invalid)</p>
+      <p>Defined at line 1713 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Get a loaded SLocEntry. This is exposed for indexing.</p>
+        </div>
+      </div>
+      <h3 id="D4782C7E2A8E9D1679C3EC2F17A0304E806100AC">getSLocEntry</h3>
+      <p>
+        public const SrcMgr::SLocEntry &amp; getSLocEntry(
+        <a href="FileID.html">FileID</a>
+         FID, _Bool * Invalid)
+      </p>
+      <p>Defined at line 1721 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="097E0591CC49708B6DFDFE066E22AF37980F2651">getNextLocalOffset</h3>
+      <p>public class SourceLocation::UIntTy getNextLocalOffset()</p>
+      <p>Defined at line 1730 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="D9ABC98D0784B0DE47BEE2509F13D99778FC2DAF">setExternalSLocEntrySource</h3>
+      <p>public void setExternalSLocEntrySource(ExternalSLocEntrySource * Source)</p>
+      <p>Defined at line 1732 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="DEEBBD76F1DBF58B3F8CB276AED3AEAA69E31A4B">AllocateLoadedSLocEntries</h3>
+      <p>public std::pair&lt;int, SourceLocation::UIntTy&gt; AllocateLoadedSLocEntries(unsigned int NumSLocEntries, class SourceLocation::UIntTy TotalSize)</p>
+      <div>
+        <div>
+          <p> Allocate a number of loaded SLocEntries, which will be actually loaded on demand from the external source.</p>
+          <p> NumSLocEntries will be allocated, which occupy a total of TotalSize space in the global source view. The lowest ID and the base offset of the entries will be returned.</p>
+        </div>
+      </div>
+      <h3 id="1AA6B801BF6AA0A4BFD95F98E819CCDA8711065F">isLoadedSourceLocation</h3>
+      <p>
+        public _Bool isLoadedSourceLocation(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1749 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns true if  came from a PCH/Module.</p>
+        </div>
+      </div>
+      <h3 id="DD0C2A6A77D77E34A4782A96CD5C71EAB5AF5A52">isLocalSourceLocation</h3>
+      <p>
+        public _Bool isLocalSourceLocation(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1754 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns true if  did not come from a PCH/Module.</p>
+        </div>
+      </div>
+      <h3 id="1D12B121369A32BFBD9284CBA20A140DFDF53CBB">isLoadedFileID</h3>
+      <p>
+        public _Bool isLoadedFileID(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <p>Defined at line 1759 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns true if  came from a PCH/Module.</p>
+        </div>
+      </div>
+      <h3 id="05418B44BE2BD0DEE87C981F76BE5542CC142C33">isLocalFileID</h3>
+      <p>
+        public _Bool isLocalFileID(
+        <a href="FileID.html">FileID</a>
+         FID)
+      </p>
+      <p>Defined at line 1765 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns true if  did not come from a PCH/Module.</p>
+        </div>
+      </div>
+      <h3 id="3DFB97CC6C016A01D244460B59A3DC00DF0132DF">getImmediateMacroCallerLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getImmediateMacroCallerLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1771 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Gets the location of the immediate macro caller, one level up the stack toward the initial macro typed into the source.</p>
+        </div>
+      </div>
+      <h3 id="ED899F64460BC5FC122EE1E9D0648F042C521494">getTopMacroCallerLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTopMacroCallerLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7A22AA56C7F060D71C924CFC20D96DB47329CE23">SourceManager</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8B6CC214A351A93CBA62A4B003A309D6688EC93C">SourceManager</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A451A31D610163C48B93488DEDD380D7A6C3E22B">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D380D891559C4859E89D942894FCE98A36B77B96">~SourceManager</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4984F93ED611E932A5716902FC6AAC0A6775CEE">clearIDTables</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7FE1F1518EB493574EDA56B730774A3462EEF3B">initializeForReplay</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07814E96A3EE795D2AE5F3B0B90DBA3D39B61116">getDiagnostics</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF9CE1FD6D1A46BCD46B594348B6A4D3B1715986">getFileManager</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#083FCADB1ACA18B82896494818CB34B09F28EE62">setOverridenFilesKeepOriginalName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#306A7B525E10E879A0982186BAB5D35CF47A8EA8">userFilesAreVolatile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B6460467F2A7DF23A7CBF3AAD869F217038196BB">getModuleBuildStack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79C8B7F79656CF64AA959D763589DE6ADFF97757">setModuleBuildStack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#629A8701913E30AE22F600A8EE9AEFE8CAA5BB99">pushModuleBuildStack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A54E45BAEFF040A631E5009EB7799A1DEE4984C8">getMainFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D95F8EAD6A8152A6A972F205A5ABC1264EC00B0">setMainFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#048704EF5E10263EAF9BFD5EAC04908A9EB827C3">isMainFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#369F8960531F2C52C9D12342B7C7394C43152592">setPreambleFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF4D62184C501643CE11D6E5D28329554DFD18D3">getPreambleFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3AD6CC4B14C17AC6AC673BBEECADE7CA34B9EEBD">createFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#608B7C0A4C5EDD4BE72B69A9E2F30BE34B181691">createFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB2645746FC4A96BDBC190B00C50D3477FD15AA2">createFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B2E4B1E1201FD8DEA879E831460EA57F4137697">createFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9051B45D236803DF4AB770B4E878640E0E089235">getOrCreateFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4DBECB26958F8459DB4E27CC56BEBDA279CB39C">createMacroArgExpansionLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37977218273964C45708C8D44AB9FAB6F9F05ED9">createExpansionLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FDC49C2D20BE60053A939DE64B4B247E7BEAEE45">createTokenSplitLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#743FC8D9B63A4E0DEF929276E664A98238563B85">getMemoryBufferForFileOrNone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF45005BE56FCBC3ED9D82CB77FF5E8973BB2DBC">getMemoryBufferForFileOrFake</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3E11FE6AF076C9CCEB717F738F3BF2D19DCD37C4">overrideFileContents</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79B21FD1344F5B03B2D3E4F451FDA64070AA1669">overrideFileContents</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#142DCEEFAACAEF228820A5E21D3EFEB2DBBCEE74">overrideFileContents</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B158FE5C9AE965A712869E92F8AF9623961C86D8">overrideFileContents</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FB107C61DDA9674924A66798ECE3E0D5EFCC441">isFileOverridden</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57E43452AEBD086AD01A7F15D130BFF8A6FBC3D1">bypassFileContentsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE440DACDFFF70A30AFAB3E4D6D5132C8D08FEA2">setFileIsTransient</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1CC42F230DB5670BB7F4955740AA2FEFE6A16C8">setAllFilesAreTransient</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#213BA1456B96B763730ED423A3980866CC0EF1B8">getBufferOrNone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#00CA164EE682B4B67522FB162DA3A1C603FA425C">getBufferOrFake</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C01918DF14DE0A90D20180B47CA2F70B00DD07B0">getFileEntryForID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB2D67B004A28788316CDA1E9339159A3A644AA1">getFileEntryRefForID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84871B4DD0F6545383DFE1439BBE80CCB4FA5971">getNonBuiltinFilenameForID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58202541035CD2A8FEE1612B8F3F8AB47CEEEBCF">getFileEntryForSLocEntry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF8A5C9E162D5CCA569A0A527FB15FC41262B2E0">getBufferData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31D158DC0A80456B78FC7D72A52B55B26C049BD9">getBufferDataOrNone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB3D3C681953054F6E2C693AB32D5A12F9D43BBC">getBufferDataIfLoaded</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#844028648E1FD3643EF7D2B7C3B5A9CA457AB025">getNumCreatedFIDsForFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49826BA44C64A35D3AF40987E7B57E40C75E062E">setNumCreatedFIDsForFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2295B2FF5D275E5C2DA84CE5F575E6DDBC367A5">getFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FDAC8492B8A6BEBB2AEF1E37A753AB63E1E7AE90">getFilename</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44A3FD78331633265DBA1B750D8E16CF407F9368">getLocForStartOfFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E47D61C0A620CF333F57B75CE2ED1FB6256BCAB">getLocForEndOfFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CB1B62390EA2A23D60D0CB1AA1DEA1CAA6D1F6B">getIncludeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#50D98117F905B1A219F22216BE14158F9B3A7663">getModuleImportLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#016BEB44CC1D6C4683EEB925EEDBE4C93D8D2E79">getExpansionLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#491707E66798D9CD24AAADEEDB5368D7531659F6">getFileLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F5A7C74A9D5999068F82D02641BA620509042FFF">getImmediateExpansionRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F47F576F3F823842DDBC7C849B413348055FFA0">getExpansionRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B7E0197A6B0BA635917C6760EF13D305C33B499">getExpansionRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#867ED94F46BE1F6B532E8EF53D2F6BA52B9A3884">getExpansionRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#365F5B378D063B0B5C163ED1E5DCF4784F94C5D8">getSpellingLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0FD3DF0565A1B03E28E3DFB8003A76805E269D1C">getImmediateSpellingLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFC213349CE14CCFADBBA15C2D3586A5225E19E9">getComposedLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#270D1A0A77F0F2CAD83640AE81CBDCC27F114CA3">getDecomposedLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C4A3354C7264AF809C786AC6C303745241E2898">getDecomposedExpansionLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D8269FDB74DC2C9737AB703D4B06F9AE37B50E4">getDecomposedSpellingLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1666F7DC279B36AF929A937F7A0DAF35BAF4C5EF">getDecomposedIncludedLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B6D452E0FD6974EF58E4BDA10122D3972BEB9A9">getFileOffset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76D728C7721C6A38F2FBB82B8BB387B590D5F36E">isMacroArgExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22B3EE42CC6D05168631D34462BE914B003EBEA3">isMacroBodyExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#788F4DD22A20EACB11F35690D23A5C4F5F2E2C75">isAtStartOfImmediateMacroExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6C3973708B1B760FB52B1841967249222D8BEE3">isAtEndOfImmediateMacroExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53697F7EA19CBE342B4A0DEF49DCA902E9A1B918">isInSLocAddrSpace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD31FE65F94D9B27261A2328FF23A4D793A8D977">isInSameSLocAddrSpace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C70D48C30CD41E9E461F794BB2589BD7A7E0C6C5">getCharacterData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#20FCD00745CA706456C3F19B2328918A653209DF">getColumnNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#015A1F25A06CB7C872217D41C515E61BD24C62E7">getSpellingColumnNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A651E27ACF876AE0CBC2CF327C9D73CD35B1126">getExpansionColumnNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C33CEC2ADCA8912A3CAE188DCB8B02FAAA12AD67">getPresumedColumnNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6CD9238D719C9A2F58543ECB915EC90F1CDF0D8">getLineNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D0D0D512C349F59215341268B7544C831C37CA0">getSpellingLineNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A78B8589EDD734F4141250F6B29A3EA864B112B9">getExpansionLineNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6FBD286B42BAC83C249C55C57A6E96F91B5C785">getPresumedLineNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB57B5349CDC4E7CAE5D775EB2E2270E75976EA3">getBufferName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61CCC5FC69AA4DF3016890394EAA098D02829494">getFileCharacteristic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0ADDF63170F0303E662642077AB0029002C86F80">getPresumedLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CB2CB546C024D6E2AD2E40E248F0693F6CF7747">isInMainFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F94E7B0ACF6F188CDF4937106509C9EC6861478">isWrittenInSameFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC432F129BCB67DD96C9800250C91E0839D7EE51">isWrittenInMainFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32AC04B7C23C48621A7BBC6C67A4062DE0E9D310">isWrittenInBuiltinFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD8513B9A0D409626E9A0C339679613532D0BC32">isWrittenInCommandLineFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8917E355143CE75C9C5290A82C6A7BF3C599D8F7">isWrittenInScratchSpace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A17B05F21AECDAE8E553F0EB28412DAB14180D64">isInSystemHeader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D4B3112BFEC97F585BCC6FC235AE72917920206">isInExternCSystemHeader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD2712268A8B6E920636A1A09120C9B80E7844F9">isInSystemMacro</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E23FC16177CA089346B1C1D1BDCC74FFC56FFDB4">getFileIDSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8D755B259C589E2C828D7B9994486BC7D31B796">isInFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E26FC735D99CD829DF6B8EE42DB5D15B3EF1C71B">getLineTableFilenameID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BEE084441285B693187981B9F72182730E4FFD7">AddLineNote</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#93CED93E784BD4FE0A1B766D12FCAFD630522158">hasLineTable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#538E1C69F4A8474C1AE137541C49FF6A437E309E">getLineTable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A648EA8A17379FE5F48C2EE93528DFF87F5E420">getContentCacheSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#610863B62B6FA3EB5BA9F78151A61C9D73C98F1A">getMemoryBufferSizes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#510ECE6D485FF555D8EF16F3B4003631D8086BD0">getDataStructureSizes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F9F084B3051D1B8A64BD9D7AB985B39BA6FFE2F">translateFileLineCol</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E085EE853DAEB61B31ECA46F6B44C1B9A18A6CA3">translateFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D3FBA148C24E19003F018C68095F57DA8F804E9">translateFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ABE503E9F523BC82D47137F7B9A10F01030DF0B3">translateLineCol</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A4C71A0468829CC6880A5C7EB40AAA181210E8B">getMacroArgExpandedLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B9A9F85068C527035FF206C19DCF39A1F9B6097">isBeforeInTranslationUnit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD4F39FA9FC80523169853760585C58E9B123383">isInTheSameTranslationUnit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F05018DA6F55D3E76ACC2C103FA1918FA36A6C00">isBeforeInSLocAddrSpace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A388ED54225B78DA47E4612A2A18DA1A77BC0FA4">isBeforeInSLocAddrSpace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#759A5DED7B9B6B44FA5C98D19129466CD44267B7">isPointWithin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4BBC8FFF55D65E97B3C4D046DEEEAF0BBC8AF64">fileinfo_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1DBE55FD15CCD37A0564A234BF48D47E33A33D87">fileinfo_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2C430C0FC66FB2A5558753624B6EE0F5EB1BB055">hasFileInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4F6369281B035440E538363EC32980588DD8D14">PrintStats</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#992DAF1C88A4B1CAF9F8BBA76E29E794987493C7">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#568E3382C5F872BC5A9E0EE9E1F4CBF3A1522E1E">noteSLocAddressSpaceUsage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83D3D5F25C30FB944567DC08293D1285AD37E2E1">local_sloc_entry_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6459F9471039972389C5AEAEAAE0DAF8DBA39688">getLocalSLocEntry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23AB1550120E0BEF7D50F536A8D556110ED799FE">loaded_sloc_entry_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02EB3D8CA3BA2B23E68B77712A68221CF52B66E4">getLoadedSLocEntry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4782C7E2A8E9D1679C3EC2F17A0304E806100AC">getSLocEntry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#097E0591CC49708B6DFDFE066E22AF37980F2651">getNextLocalOffset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9ABC98D0784B0DE47BEE2509F13D99778FC2DAF">setExternalSLocEntrySource</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEEBBD76F1DBF58B3F8CB276AED3AEAA69E31A4B">AllocateLoadedSLocEntries</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1AA6B801BF6AA0A4BFD95F98E819CCDA8711065F">isLoadedSourceLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD0C2A6A77D77E34A4782A96CD5C71EAB5AF5A52">isLocalSourceLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D12B121369A32BFBD9284CBA20A140DFDF53CBB">isLoadedFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05418B44BE2BD0DEE87C981F76BE5542CC142C33">isLocalFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3DFB97CC6C016A01D244460B59A3DC00DF0132DF">getImmediateMacroCallerLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED899F64460BC5FC122EE1E9D0648F042C521494">getTopMacroCallerLoc</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

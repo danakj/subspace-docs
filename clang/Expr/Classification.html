@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Classification</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/Expr" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Classification</h1>
+    <p>Defined at line 323 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> The return type of classify(). Represents the C++11 expression        taxonomy.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="363895590A2EB2E5E00DDC30E6E029D24CD03122">Classification</h3>
+      <p>public void Classification()</p>
+      <p>Defined at line 366 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="67A8E18E2B7586B20DBBA92CE4FDE0A7258C2EBA">getKind</h3>
+      <p>
+        public 
+        <a href="../../clang/Expr/Classification/Kinds.html">Kinds</a>
+         getKind()
+      </p>
+      <p>Defined at line 368 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C04A63CE1912B6E2207F3C47F9CFA98460944BD9">getModifiable</h3>
+      <p>
+        public 
+        <a href="../../clang/Expr/Classification/ModifiableType.html">ModifiableType</a>
+         getModifiable()
+      </p>
+      <p>Defined at line 369 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="598E613C246B0C9BDF2F4481E413F7B0F801659D">isLValue</h3>
+      <p>public _Bool isLValue()</p>
+      <p>Defined at line 373 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="6DCA585AFCA714D3837C30F50D7966DE7B7A97C5">isXValue</h3>
+      <p>public _Bool isXValue()</p>
+      <p>Defined at line 374 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="DB9EE424F4BFB80EAA11AAF1C9C28F39C07D6299">isGLValue</h3>
+      <p>public _Bool isGLValue()</p>
+      <p>Defined at line 375 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="99A5F37D17ABBD0505544304996DBB93920DA6BA">isPRValue</h3>
+      <p>public _Bool isPRValue()</p>
+      <p>Defined at line 376 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="1E73F34F33C3E044C1CF03AA8F834AD56F433D4C">isRValue</h3>
+      <p>public _Bool isRValue()</p>
+      <p>Defined at line 377 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8B5982CB6483F2FFC4E6D0EDB5A80053D67D2E74">isModifiable</h3>
+      <p>public _Bool isModifiable()</p>
+      <p>Defined at line 378 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="71886BFD534906A01030298A5EF9693FF2F3D390">makeSimpleLValue</h3>
+      <p>
+        public 
+        <a href="Classification.html">Classification</a>
+         makeSimpleLValue()
+      </p>
+      <p>Defined at line 381 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Create a simple, modifiably lvalue</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="6D8D0706A5BF88B0263E55FD7FC2D7FFDABBF966">enum Kinds</h3>
+      <ul>
+        <li>CL_LValue</li>
+        <li>CL_XValue</li>
+        <li>CL_Function</li>
+        <li>CL_Void</li>
+        <li>CL_AddressableVoid</li>
+        <li>CL_DuplicateVectorComponents</li>
+        <li>CL_MemberFunction</li>
+        <li>CL_SubObjCPropertySetting</li>
+        <li>CL_ClassTemporary</li>
+        <li>CL_ArrayTemporary</li>
+        <li>CL_ObjCMessageRValue</li>
+        <li>CL_PRValue</li>
+      </ul>
+      <p>Defined at line 326 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> The various classification results. Most of these mean prvalue.</p>
+        </div>
+      </div>
+      <h3 id="CBA092E6C73966A6311E420A29FDD48D6EEF15A1">enum ModifiableType</h3>
+      <ul>
+        <li>CM_Untested</li>
+        <li>CM_Modifiable</li>
+        <li>CM_RValue</li>
+        <li>CM_Function</li>
+        <li>CM_LValueCast</li>
+        <li>CM_NoSetterProperty</li>
+        <li>CM_ConstQualified</li>
+        <li>CM_ConstQualifiedField</li>
+        <li>CM_ConstAddrSpace</li>
+        <li>CM_ArrayType</li>
+        <li>CM_IncompleteType</li>
+      </ul>
+      <p>Defined at line 341 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> The results of modification testing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#363895590A2EB2E5E00DDC30E6E029D24CD03122">Classification</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67A8E18E2B7586B20DBBA92CE4FDE0A7258C2EBA">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C04A63CE1912B6E2207F3C47F9CFA98460944BD9">getModifiable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#598E613C246B0C9BDF2F4481E413F7B0F801659D">isLValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DCA585AFCA714D3837C30F50D7966DE7B7A97C5">isXValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB9EE424F4BFB80EAA11AAF1C9C28F39C07D6299">isGLValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99A5F37D17ABBD0505544304996DBB93920DA6BA">isPRValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E73F34F33C3E044C1CF03AA8F834AD56F433D4C">isRValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8B5982CB6483F2FFC4E6D0EDB5A80053D67D2E74">isModifiable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71886BFD534906A01030298A5EF9693FF2F3D390">makeSimpleLValue</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6D8D0706A5BF88B0263E55FD7FC2D7FFDABBF966">Kinds</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CBA092E6C73966A6311E420A29FDD48D6EEF15A1">ModifiableType</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

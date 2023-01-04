@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SMDiagnostic</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SMDiagnostic</h1>
+    <p>Defined at line 281 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+    <div>
+      <div>
+        <p> Instances of this class encapsulate one diagnostic report, allowing printing to a raw_ostream as a caret diagnostic.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="ADE4A1A4C48C2812B4267F8814433D656615829A">SMDiagnostic</h3>
+      <p>public void SMDiagnostic()</p>
+      <p>Defined at line 294 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <div>
+        <div>
+          <p> Null diagnostic.</p>
+        </div>
+      </div>
+      <h3 id="33BAA9F2C7EBA4382C0D9D06033D50CB2E4FC0C7">SMDiagnostic</h3>
+      <p>
+        public void SMDiagnostic(
+        <a href="StringRef.html">StringRef</a>
+         filename, 
+        <a href="../llvm/SourceMgr/DiagKind.html">DiagKind</a>
+         Knd, 
+        <a href="StringRef.html">StringRef</a>
+         Msg)
+      </p>
+      <p>Defined at line 296 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <div>
+        <div>
+          <p> Diagnostic with no location (e.g. file not found, command line arg error).</p>
+        </div>
+      </div>
+      <h3 id="5999EACAD45E01E3BAF835BD9B620891696329D2">SMDiagnostic</h3>
+      <p>
+        public void SMDiagnostic(const SourceMgr &amp; sm, 
+        <a href="SMLoc.html">SMLoc</a>
+         L, 
+        <a href="StringRef.html">StringRef</a>
+         FN, int Line, int Col, 
+        <a href="../llvm/SourceMgr/DiagKind.html">DiagKind</a>
+         Kind, 
+        <a href="StringRef.html">StringRef</a>
+         Msg, 
+        <a href="StringRef.html">StringRef</a>
+         LineStr, 
+        <a href="ArrayRef.html">ArrayRef</a>
+         Ranges, 
+        <a href="ArrayRef.html">ArrayRef</a>
+         FixIts)
+      </p>
+      <div>
+        <div>
+          <p> Diagnostic with a location.</p>
+        </div>
+      </div>
+      <h3 id="ED62D1E1A09D2E6C02F09E664A1DD018D9AA5686">getSourceMgr</h3>
+      <p>public const SourceMgr * getSourceMgr()</p>
+      <p>Defined at line 305 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="DA580A4454B04ABA99149BE3FA49D0B579373FEA">getLoc</h3>
+      <p>
+        public 
+        <a href="SMLoc.html">SMLoc</a>
+         getLoc()
+      </p>
+      <p>Defined at line 306 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="32BC262EB89509B61A63141D15654F51597A4EA4">getFilename</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getFilename()
+      </p>
+      <p>Defined at line 307 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="7C4A377FF11B1756D9A56AC2FB43B91775F935DE">getLineNo</h3>
+      <p>public int getLineNo()</p>
+      <p>Defined at line 308 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="804CD956D7D1753573C595B7A5D3AA05F547C7CA">getColumnNo</h3>
+      <p>public int getColumnNo()</p>
+      <p>Defined at line 309 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="6A641329A6A7E35E041E8C3FAC7C397294A34A6B">getKind</h3>
+      <p>
+        public 
+        <a href="../llvm/SourceMgr/DiagKind.html">DiagKind</a>
+         getKind()
+      </p>
+      <p>Defined at line 310 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="4BA5DCA45EBADCDCC5AA4FD8CFBA71DE5749CB18">getMessage</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getMessage()
+      </p>
+      <p>Defined at line 311 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="BB7A695F6013F9B34F64BD051B250EAD8482B934">getLineContents</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getLineContents()
+      </p>
+      <p>Defined at line 312 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="F4BB7658AABF24B6D6C2E747E09016D131CEA764">getRanges</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         getRanges()
+      </p>
+      <p>Defined at line 313 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="A834CCBBD79A783F5A86836D481A9A850EE61684">addFixIt</h3>
+      <p>public void addFixIt(const SMFixIt &amp; Hint)</p>
+      <p>Defined at line 315 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="27B0635DFAE2D7B409325E8D60FC092BD2B74CD4">getFixIts</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         getFixIts()
+      </p>
+      <p>Defined at line 317 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="B5A4A8CA4185D6735C5C7E58C11B39FFDF94D76B">print</h3>
+      <p>public void print(const char * ProgName, raw_ostream &amp; S, _Bool ShowColors, _Bool ShowKindLabel)</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#ADE4A1A4C48C2812B4267F8814433D656615829A">SMDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33BAA9F2C7EBA4382C0D9D06033D50CB2E4FC0C7">SMDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5999EACAD45E01E3BAF835BD9B620891696329D2">SMDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED62D1E1A09D2E6C02F09E664A1DD018D9AA5686">getSourceMgr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA580A4454B04ABA99149BE3FA49D0B579373FEA">getLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32BC262EB89509B61A63141D15654F51597A4EA4">getFilename</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C4A377FF11B1756D9A56AC2FB43B91775F935DE">getLineNo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#804CD956D7D1753573C595B7A5D3AA05F547C7CA">getColumnNo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A641329A6A7E35E041E8C3FAC7C397294A34A6B">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4BA5DCA45EBADCDCC5AA4FD8CFBA71DE5749CB18">getMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB7A695F6013F9B34F64BD051B250EAD8482B934">getLineContents</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4BB7658AABF24B6D6C2E747E09016D131CEA764">getRanges</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A834CCBBD79A783F5A86836D481A9A850EE61684">addFixIt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27B0635DFAE2D7B409325E8D60FC092BD2B74CD4">getFixIts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5A4A8CA4185D6735C5C7E58C11B39FFDF94D76B">print</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

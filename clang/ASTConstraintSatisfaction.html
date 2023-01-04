@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct ASTConstraintSatisfaction</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct ASTConstraintSatisfaction</h1>
+    <p>Defined at line 84 of file /usr/lib/llvm-16/include/clang/AST/ASTConcept.h</p>
+    <div>
+      <div>
+        <p> This is safe to store in an AST node, as opposed to ConstraintSatisfaction.</p>
+      </div>
+    </div>
+    <p>Inherits from llvm::TrailingObjects&lt;ASTConstraintSatisfaction, UnsatisfiedConstraintRecord&gt;</p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public std::size_t NumRecords</li>
+      <li>public _Bool IsSatisfied</li>
+      <li>public _Bool ContainsErrors</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D157CF0B9274051F15C318C1A006C2EC1887070C">begin</h3>
+      <p>public const UnsatisfiedConstraintRecord * begin()</p>
+      <p>Defined at line 91 of file /usr/lib/llvm-16/include/clang/AST/ASTConcept.h</p>
+      <h3 id="4C4A5156637C744BD87E698ABBEE7E10878C43A2">end</h3>
+      <p>public const UnsatisfiedConstraintRecord * end()</p>
+      <p>Defined at line 95 of file /usr/lib/llvm-16/include/clang/AST/ASTConcept.h</p>
+      <h3 id="55AA303BE2BD532C5B59A5F6C7B24987F372B71C">ASTConstraintSatisfaction</h3>
+      <p>public void ASTConstraintSatisfaction(const ASTContext &amp; C, const ConstraintSatisfaction &amp; Satisfaction)</p>
+      <h3 id="ACEBCFDCD4EBF505452D8463536D21B05ECE62CA">ASTConstraintSatisfaction</h3>
+      <p>public void ASTConstraintSatisfaction(const ASTContext &amp; C, const ASTConstraintSatisfaction &amp; Satisfaction)</p>
+      <h3 id="7D2E4F6999A08B51E3644BCEAFBA43F633BD56B2">Create</h3>
+      <p>public ASTConstraintSatisfaction * Create(const ASTContext &amp; C, const ConstraintSatisfaction &amp; Satisfaction)</p>
+      <h3 id="00F5DE3A8FBED19A2713054CD092ED85ABA6E7A1">Rebuild</h3>
+      <p>public ASTConstraintSatisfaction * Rebuild(const ASTContext &amp; C, const ASTConstraintSatisfaction &amp; Satisfaction)</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D157CF0B9274051F15C318C1A006C2EC1887070C">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C4A5156637C744BD87E698ABBEE7E10878C43A2">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#55AA303BE2BD532C5B59A5F6C7B24987F372B71C">ASTConstraintSatisfaction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ACEBCFDCD4EBF505452D8463536D21B05ECE62CA">ASTConstraintSatisfaction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D2E4F6999A08B51E3644BCEAFBA43F633BD56B2">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#00F5DE3A8FBED19A2713054CD092ED85ABA6E7A1">Rebuild</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

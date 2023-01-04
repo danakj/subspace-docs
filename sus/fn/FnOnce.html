@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FnOnce</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/fn" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FnOnce</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h#164">164</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h">fn_defn.h</a>
+    </p>
+    <div>
+      <div>
+        <p> A closure that erases the type of the internal callable object (lambda). A FnOnce may only be called a single time.</p>
+        <p> Fn can be used as a FnMut, which can be used as a FnOnce.</p>
+        <p> Lambdas without captures can be converted into a FnOnce, FnMut, or Fn directly. If the lambda has captured, it must be given to one of:</p>
+        <p> - `sus_bind(sus_store(..captures..), lambda)` to bind a const lambda which captures variables from local state. Variables to be captured in the lambda must also be named in sus_store(). `sus_bind()` only allows those named variables to be captured, and ensures they are stored by value instead of by reference.</p>
+        <p> - `sus_bind0(lambda)` to bind a const lambda which has bound variables that don&apos;t capture state from outside the lambda, such as `[i = 2]() { return i; }`.</p>
+        <p> - sus_bind_mut(sus_store(...captures...), lambda)` to bind a mutable lambda which captures variables from local state.</p>
+        <p> - `sus_bind0_mut(lambda)` to bind a mutable lambda which has bound variables that don&apos;t capture state from outside the lambda, such as `[i = 2]() { return ++i; }`.</p>
+        <p> Within sus_store(), a variable name can be wrapped with a helper to capture in different ways:</p>
+        <p> - `sus_take(x)` will move `x` into the closure instead of copying it.</p>
+        <p> - `sus_unsafe_pointer(x)` will allow capturing a pointer. Otherwise it be disallowed, and it is strongly discouraged as it requires careful present and future understanding of the pointee&apos;s lifetime.</p>
+        <p> # Example</p>
+        <p> Moves `a` into the closure&apos;s storage, and copies b. The lambda then refers to the closure&apos;s stored values by reference.</p>
+        <p> ``` int a = 1; int b = 2; FnOnce&lt;void()&gt; f = sus_bind_mut(   sus_store(sus_take(a), b), [&amp;a, &amp;b]() mutable { a += b; } ); ```</p>
+        <p> Copies `a` into the closure&apos;s storage and defines a `b` from an rvalue. Since `b` isn&apos;t referred to outside the Fn it does not need to be bound.</p>
+        <p> ``` int a = 1; FnOnce&lt;void()&gt; f = sus_bind_mut(   sus_store(a), [&amp;a, b = 2]() mutable { a += b; } ); ```</p>
+        <p> TODO: There&apos;s no way to do this currently, since it won&apos;t know what to name the `x.foo()` value.</p>
+        <p> ``` struct { int foo() { return 2; } } x; FnOnce&lt;void()&gt; f = sus_bind_mut(   sus_store(x.foo()), [&amp;a]() mutable { a += 1; } ); ```</p>
+        <p> # Why can a &quot;const&quot; Fn convert to a mutable FnMut or FnOnce?</p>
+        <p> A FnMut or FnOnce is _allowed_ to mutate its storage, but a &quot;const&quot; Fn closure would just choose not to do so.</p>
+        <p> However, a `const Fn` requires that the storage is not mutated, so it is not useful if converted to a `const FnMut` or `const FnOnce` which are only callable as mutable objects.</p>
+        <p> # Null pointers</p>
+        <p> A null function pointer is not allowed, constructing a FnOnce from a null pointer will panic.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        protected 
+        <a href="../../sus/fn/FnOnce/.html"></a>
+         
+      </li>
+      <li>
+        protected 
+        <a href="../../sus/fn/__private/FnType.html">FnType</a>
+         type_
+      </li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../sus/fn/FnOnce/.html"></a>
+      </li>
+      <li>
+        <a href="../../sus/fn/FnOnce/SusUnsafeNeverValueOverlay.html">SusUnsafeNeverValueOverlay</a>
+      </li>
+      <li>
+        <a href="../../sus/fn/FnOnce/SusUnsafeNeverValueOverlay.html">SusUnsafeNeverValueOverlay</a>
+      </li>
+      <li>
+        <a href="../../sus/fn/FnOnce/SusUnsafeNeverValueOverlay.html">SusUnsafeNeverValueOverlay</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="BE6674153333D097F0AF0B214E3640B8258CA22F">FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(F ptr)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h#26">26</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h">fn_impl.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Construction from a function pointer or captureless lambda.</p>
+        </div>
+      </div>
+      <h3 id="906B4CD2C3239195E3C49B44D2F2CFCB00F54BA1">FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(__private::SusBind&lt;F&gt; &amp;&amp; holder)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h#173">173</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h">fn_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Construction from the output of `sus_bind()`.</p>
+        </div>
+      </div>
+      <h3 id="6826D5184B89EDA11EAC3CB8E9B5CE84D19AC7C5">~FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void ~FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h#83">83</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h">fn_impl.h</a>
+      </p>
+      <h3 id="A4A2442D1D30733B4A9C7824A8365CC04D9D37F2">FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp;&amp; o)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h#95">95</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h">fn_impl.h</a>
+      </p>
+      <h3 id="118F6BFDBBA05BC991B98BBA2114524AB1083A5D">operator=</h3>
+      <p>public FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp; operator=(FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp;&amp; o)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h#109">109</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h">fn_impl.h</a>
+      </p>
+      <h3 id="051CE082C82850D926F18518CB3843668B149841">FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(const FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h#182">182</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h">fn_defn.h</a>
+      </p>
+      <h3 id="AFC86327B9233BAF1C1A3206AEC554E08B105EDD">operator=</h3>
+      <p>public FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp; operator=(const FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h#183">183</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h">fn_defn.h</a>
+      </p>
+      <h3 id="6D5919DF717F5D525755D1671B66646D9E2DF2ED">operator()</h3>
+      <p>public R operator()(CallArgs &amp;&amp;... args)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h#130">130</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h">fn_impl.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Runs and consumes the closure.</p>
+          <p> Arguments passed by value to the underlying callable object are always moved. Thus, a const reference, or a mutable lvalue reference will not be accepted here, to prevent an implicit copy from occuring.</p>
+        </div>
+      </div>
+      <h3 id="6CD2559341B0B627D367813A0E6BD870C552F314">from</h3>
+      <p>public auto from(F fn)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h#195">195</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h">fn_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> `sus::construct::From` trait implementation for function pointers or lambdas without captures.</p>
+        </div>
+      </div>
+      <h3 id="ECA464A2678D70D601E2053AE5B8021E581E244C">from</h3>
+      <p>public auto from(__private::SusBind&lt;F&gt; &amp;&amp; holder)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h#201">201</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h">fn_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> `sus::construct::From` trait implementation for the output of `sus_bind()`.</p>
+        </div>
+      </div>
+      <h3 id="75CD88C2A497AD5430D245452AD910A7282AC604">FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>protected void FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(ConstructionType , F &amp;&amp; lambda)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h#33">33</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h">fn_impl.h</a>
+      </p>
+      <h3 id="9C3FEC662B68A244EF7462F3350228569E394A3B">make_vtable</h3>
+      <p>
+        protected void make_vtable(FnStorage &amp; , 
+        <a href="../../sus/fn/__private/StorageConstructionFnOnceType.html">StorageConstructionFnOnceType</a>
+         )
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h#47">47</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h">fn_impl.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Functions to construct and return a pointer to a static vtable object for the `__private::FnStorage` being stored in `storage_`.</p>
+          <p> A FnOnce needs to store only a single pointer, for call_once(). But a Fn needs to store three, for call(), call_mut() and call_once() since it can be converted to a FnMut or FnOnce. For that reason we have 3 overloads where each one instantiates only the functions it requires - to avoid trying to compile functions that aren&apos;t accessible and thus don&apos;t need to be able to compile.</p>
+        </div>
+      </div>
+      <h3 id="1FA76474CA09E302ABBA23A9ABF5114F1606261F">make_vtable</h3>
+      <p>
+        protected void make_vtable(FnStorage &amp; , 
+        <a href="../../sus/fn/__private/StorageConstructionFnMutType.html">StorageConstructionFnMutType</a>
+         )
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h#59">59</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h">fn_impl.h</a>
+      </p>
+      <h3 id="12AF8EDA1581702FA9905E72A4209084CD7F201F">make_vtable</h3>
+      <p>
+        protected void make_vtable(FnStorage &amp; , 
+        <a href="../../sus/fn/__private/StorageConstructionFnType.html">StorageConstructionFnType</a>
+         )
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h#71">71</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_impl.h">fn_impl.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BE6674153333D097F0AF0B214E3640B8258CA22F">FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#906B4CD2C3239195E3C49B44D2F2CFCB00F54BA1">FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6826D5184B89EDA11EAC3CB8E9B5CE84D19AC7C5">~FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4A2442D1D30733B4A9C7824A8365CC04D9D37F2">FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#118F6BFDBBA05BC991B98BBA2114524AB1083A5D">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#051CE082C82850D926F18518CB3843668B149841">FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFC86327B9233BAF1C1A3206AEC554E08B105EDD">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D5919DF717F5D525755D1671B66646D9E2DF2ED">operator()</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CD2559341B0B627D367813A0E6BD870C552F314">from</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ECA464A2678D70D601E2053AE5B8021E581E244C">from</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75CD88C2A497AD5430D245452AD910A7282AC604">FnOnce&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C3FEC662B68A244EF7462F3350228569E394A3B">make_vtable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FA76474CA09E302ABBA23A9ABF5114F1606261F">make_vtable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12AF8EDA1581702FA9905E72A4209084CD7F201F">make_vtable</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FnOnce</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/fn" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FnOnce</h1>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ParenExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ParenExpr</h1>
+    <p>Defined at line 2122 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> ParenExpr - This represents a parethesized expression, e.g. &quot;(1)&quot;.  This AST node is only formed if full location information is requested.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D9FBE50D0DB115BA48FEA37840C1DBF02F5A2717">ParenExpr</h3>
+      <p>
+        public void ParenExpr(
+        <a href="SourceLocation.html">SourceLocation</a>
+         l, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         r, Expr * val)
+      </p>
+      <p>Defined at line 2126 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B22D120D3F9211CDCE88BAF121DD55685A992F30">ParenExpr</h3>
+      <p>
+        public void ParenExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 2134 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Construct an empty parenthesized expression.</p>
+        </div>
+      </div>
+      <h3 id="4E28AA9FBE62C6B1E75B79ADDFDF16B8EB963621">getSubExpr</h3>
+      <p>public const Expr * getSubExpr()</p>
+      <p>Defined at line 2137 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="83590B80E55D46E2A01BDF2133A76BD80FAF8AAF">getSubExpr</h3>
+      <p>public Expr * getSubExpr()</p>
+      <p>Defined at line 2138 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D2D1F774F88DE833233DAC4C4ACDDB7C37834284">setSubExpr</h3>
+      <p>public void setSubExpr(Expr * E)</p>
+      <p>Defined at line 2139 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8BF09B25E821C5005FA3443329B40152C9EC8CCF">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2141 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="96EEB77991B765CD0F6D254A3911563CD1919746">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2142 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="912BC28A107D873F03BF52ED35789977A4BE62BC">getLParen</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParen()
+      </p>
+      <p>Defined at line 2145 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the location of the left parentheses &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="278D85C4C16D93A73CBFD81EE79A257F2938DD3A">setLParen</h3>
+      <p>
+        public void setLParen(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 2146 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B1B0BAEADF1E081BD2FA7536674347A87A282F06">getRParen</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParen()
+      </p>
+      <p>Defined at line 2149 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the location of the right parentheses &apos;)&apos;.</p>
+        </div>
+      </div>
+      <h3 id="CF5B831131FFCE340B53348F0551F1E203F3FD48">setRParen</h3>
+      <p>
+        public void setRParen(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 2150 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="DD9D977A8D2EDA2C7FCFC0A394661ECDA1FBFCCC">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2152 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="07DB2F5947BFBDCD483E8CD1B36E840AA5EAD115">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2157 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="E2B1F35566DA3F764C45ADFFC4375185D92A5FD5">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2158 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D9FBE50D0DB115BA48FEA37840C1DBF02F5A2717">ParenExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B22D120D3F9211CDCE88BAF121DD55685A992F30">ParenExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E28AA9FBE62C6B1E75B79ADDFDF16B8EB963621">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83590B80E55D46E2A01BDF2133A76BD80FAF8AAF">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2D1F774F88DE833233DAC4C4ACDDB7C37834284">setSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8BF09B25E821C5005FA3443329B40152C9EC8CCF">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96EEB77991B765CD0F6D254A3911563CD1919746">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#912BC28A107D873F03BF52ED35789977A4BE62BC">getLParen</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#278D85C4C16D93A73CBFD81EE79A257F2938DD3A">setLParen</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B1B0BAEADF1E081BD2FA7536674347A87A282F06">getRParen</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF5B831131FFCE340B53348F0551F1E203F3FD48">setRParen</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD9D977A8D2EDA2C7FCFC0A394661ECDA1FBFCCC">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07DB2F5947BFBDCD483E8CD1B36E840AA5EAD115">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2B1F35566DA3F764C45ADFFC4375185D92A5FD5">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

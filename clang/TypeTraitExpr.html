@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TypeTraitExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TypeTraitExpr</h1>
+    <p>Defined at line 2688 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> A type trait used in the implementation of various C++11 and Library TR1 trait templates.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;TypeTraitExpr, TypeSourceInfo *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="BBB029A55A033FD0D8C30C1E4FA2E406DCD3F853">Create</h3>
+      <p>
+        public TypeTraitExpr * Create(const ASTContext &amp; C, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="TypeTrait.html">TypeTrait</a>
+         Kind, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParenLoc, _Bool Value)
+      </p>
+      <div>
+        <div>
+          <p> Create a new type trait expression.</p>
+        </div>
+      </div>
+      <h3 id="22CBB275E4528ADD43B35532F0D1E3C2A1358FEC">CreateDeserialized</h3>
+      <p>public TypeTraitExpr * CreateDeserialized(const ASTContext &amp; C, unsigned int NumArgs)</p>
+      <h3 id="9ED99CA6C7D8AAC8FEAEFE863B28B09C5ECDE016">getTrait</h3>
+      <p>
+        public 
+        <a href="TypeTrait.html">TypeTrait</a>
+         getTrait()
+      </p>
+      <p>Defined at line 2727 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determine which type trait this expression uses.</p>
+        </div>
+      </div>
+      <h3 id="616FEDD73ABFCAB9CC9F4485CBC6F5F533ED61D0">getValue</h3>
+      <p>public _Bool getValue()</p>
+      <p>Defined at line 2731 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="8E0C832B5322F4F9138E4823CBA0AF2C4E5176C2">getNumArgs</h3>
+      <p>public unsigned int getNumArgs()</p>
+      <p>Defined at line 2737 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determine the number of arguments to this type trait.</p>
+        </div>
+      </div>
+      <h3 id="5F7DFF4CFA6CAF113B61D38626E9F8009FDFA1AB">getArg</h3>
+      <p>public TypeSourceInfo * getArg(unsigned int I)</p>
+      <p>Defined at line 2740 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the Ith argument.</p>
+        </div>
+      </div>
+      <h3 id="37103BFDB2D8E1AA90CD7C871DA8DF45B6B009E1">getArgs</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getArgs()
+      </p>
+      <p>Defined at line 2746 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the argument types.</p>
+        </div>
+      </div>
+      <h3 id="CD33EAAF311A8F84E8834C1669354D798C93AB4A">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2751 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="1BAA292EFD15CEABCFCB798D0F1F2DFDFCBE8B4C">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2752 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="E65A4ABF662228F0B5A7DAAA3D5599F3E70975A7">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2754 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="DAE91FECFB28A25DC2889CFF16C1850B8771015A">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2759 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="E7820D76571B539ABEAE113042ABDFDE09B94DA0">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2763 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BBB029A55A033FD0D8C30C1E4FA2E406DCD3F853">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22CBB275E4528ADD43B35532F0D1E3C2A1358FEC">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9ED99CA6C7D8AAC8FEAEFE863B28B09C5ECDE016">getTrait</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#616FEDD73ABFCAB9CC9F4485CBC6F5F533ED61D0">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E0C832B5322F4F9138E4823CBA0AF2C4E5176C2">getNumArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F7DFF4CFA6CAF113B61D38626E9F8009FDFA1AB">getArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37103BFDB2D8E1AA90CD7C871DA8DF45B6B009E1">getArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD33EAAF311A8F84E8834C1669354D798C93AB4A">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BAA292EFD15CEABCFCB798D0F1F2DFDFCBE8B4C">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E65A4ABF662228F0B5A7DAAA3D5599F3E70975A7">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAE91FECFB28A25DC2889CFF16C1850B8771015A">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E7820D76571B539ABEAE113042ABDFDE09B94DA0">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPMappableExprListClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPMappableExprListClause</h1>
+    <p>Defined at line 5175 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents clauses with a list of expressions that are mappable. Examples of these clauses are &apos;map&apos; in &apos;#pragma omp target [enter|exit] [data]...&apos; directives, and  &apos;to&apos; and &apos;from in &apos;#pragma omp target update...&apos; directives.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from OMPVarListClause&lt;T&gt;, 
+      <a href="OMPClauseMappableExprCommon.html">OMPClauseMappableExprCommon</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/OMPMappableExprListClause/const_component_lists_iterator.html">const_component_lists_iterator</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3077E2EB69D9133832E71E276905A4E294C1335A">OMPMappableExprListClause&lt;T&gt;</h3>
+      <p>
+        protected void OMPMappableExprListClause&lt;T&gt;(
+        <a href="../llvm/omp/Clause.html">Clause</a>
+         K, const OMPVarListLocTy &amp; Locs, const OMPMappableExprListSizeTy &amp; Sizes, _Bool SupportsMapper, NestedNameSpecifierLoc * MapperQualifierLocPtr, DeclarationNameInfo * MapperIdInfoPtr)
+      </p>
+      <p>Defined at line 5218 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build a clause for  declarations,  total component lists, and  total components.</p>
+        </div>
+      </div>
+      <h3 id="CF66DB3744EA80B13E1D770C9BEF795FD90A68BD">getUniqueDeclsRef</h3>
+      <p>
+        protected 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         getUniqueDeclsRef()
+      </p>
+      <p>Defined at line 5236 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the unique declarations that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="F23B77C9B5D66E85C7E750FCD3F9FF93F64942B0">getUniqueDeclsRef</h3>
+      <p>
+        protected 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getUniqueDeclsRef()
+      </p>
+      <p>Defined at line 5244 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the unique declarations that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="0BA15EB0CA66B0E6D905C84DAFE027A2FB4E3CAC">setUniqueDecls</h3>
+      <p>
+        protected void setUniqueDecls(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         UDs)
+      </p>
+      <p>Defined at line 5253 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Set the unique declarations that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="6457219401C372F9FDDDAC1AB19A8570E34D675A">getDeclNumListsRef</h3>
+      <p>
+        protected 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         getDeclNumListsRef()
+      </p>
+      <p>Defined at line 5261 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the number of lists per declaration that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="C25CC79D55381A49CAF3650497A15938DA831959">getDeclNumListsRef</h3>
+      <p>
+        protected 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getDeclNumListsRef()
+      </p>
+      <p>Defined at line 5269 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the number of lists per declaration that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="132D5FCA03BD54E88107A0132323103F38C806A4">setDeclNumLists</h3>
+      <p>
+        protected void setDeclNumLists(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         DNLs)
+      </p>
+      <p>Defined at line 5277 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Set the number of lists per declaration that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="2A07D3D36A34891C8E466187B7AF5CAAD8BB924E">getComponentListSizesRef</h3>
+      <p>
+        protected 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         getComponentListSizesRef()
+      </p>
+      <p>Defined at line 5285 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the cumulative component lists sizes that are in the trailing objects of the class. They are appended after the number of lists.</p>
+        </div>
+      </div>
+      <h3 id="9FB4F21C573E5CDF731D211786386C8E41BB1E9A">getComponentListSizesRef</h3>
+      <p>
+        protected 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getComponentListSizesRef()
+      </p>
+      <p>Defined at line 5294 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the cumulative component lists sizes that are in the trailing objects of the class. They are appended after the number of lists.</p>
+        </div>
+      </div>
+      <h3 id="8FA678385BDEAE34640E02483C4ED93314BA4114">setComponentListSizes</h3>
+      <p>
+        protected void setComponentListSizes(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         CLSs)
+      </p>
+      <p>Defined at line 5303 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Set the cumulative component lists sizes that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="20E56FBB8921C20FE8FDBAFB27D8AC81AA083272">getComponentsRef</h3>
+      <p>
+        protected 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         getComponentsRef()
+      </p>
+      <p>Defined at line 5310 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the components that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="962DCBE0823C239A0632C42B999FEE5480CE1994">getComponentsRef</h3>
+      <p>
+        protected 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getComponentsRef()
+      </p>
+      <p>Defined at line 5318 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the components that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="780E1135A917D6473089FAD2BB64F2A41B0F51B9">setComponents</h3>
+      <p>
+        protected void setComponents(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Components, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         CLSs)
+      </p>
+      <p>Defined at line 5328 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Set the components that are in the trailing objects of the class. This requires the list sizes so that it can also fill the original expressions, which are the first component of each list.</p>
+        </div>
+      </div>
+      <h3 id="4EBCFBDF5FB40141E58C8B47A5B75275C3709B80">setClauseInfo</h3>
+      <p>
+        protected void setClauseInfo(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Declarations, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         ComponentLists)
+      </p>
+      <p>Defined at line 5339 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fill the clause information from the list of declarations and associated component lists.</p>
+        </div>
+      </div>
+      <h3 id="CD0F68100DDD3A62F7D8FCEE1780EB890787AE07">setMapperQualifierLoc</h3>
+      <p>
+        protected void setMapperQualifierLoc(
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         NNSL)
+      </p>
+      <p>Defined at line 5414 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Set the nested name specifier of associated user-defined mapper.</p>
+        </div>
+      </div>
+      <h3 id="031EEB060CF59FBD016A06B935E977D69B71BEC4">setMapperIdInfo</h3>
+      <p>
+        protected void setMapperIdInfo(
+        <a href="DeclarationNameInfo.html">DeclarationNameInfo</a>
+         MapperId)
+      </p>
+      <p>Defined at line 5419 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Set the name of associated user-defined mapper.</p>
+        </div>
+      </div>
+      <h3 id="D1475543F99769A0FF10D15BDDA2651947024926">getUDMapperRefs</h3>
+      <p>
+        protected 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         getUDMapperRefs()
+      </p>
+      <p>Defined at line 5425 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the user-defined mapper references that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="932DA182AD64E59C7B01B05D67B12494DBBC5855">getUDMapperRefs</h3>
+      <p>
+        protected 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getUDMapperRefs()
+      </p>
+      <p>Defined at line 5436 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the user-defined mappers references that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="B5B3DB68B02C3E89A57B9FF774003CCC45CBA2EB">setUDMapperRefs</h3>
+      <p>
+        protected void setUDMapperRefs(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         DMDs)
+      </p>
+      <p>Defined at line 5447 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Set the user-defined mappers that are in the trailing objects of the class.</p>
+        </div>
+      </div>
+      <h3 id="24423031773102088AA569EF5786EE316206451A">getUniqueDeclarationsNum</h3>
+      <p>public unsigned int getUniqueDeclarationsNum()</p>
+      <p>Defined at line 5457 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Return the number of unique base declarations in this clause.</p>
+        </div>
+      </div>
+      <h3 id="33060D1697D5F28454AC23C3E321EFD9352BEC25">getTotalComponentListNum</h3>
+      <p>public unsigned int getTotalComponentListNum()</p>
+      <p>Defined at line 5460 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Return the number of lists derived from the clause expressions.</p>
+        </div>
+      </div>
+      <h3 id="7FA78303AE4A0B72D639FCBC34B184E377B1EA7D">getTotalComponentsNum</h3>
+      <p>public unsigned int getTotalComponentsNum()</p>
+      <p>Defined at line 5464 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Return the total number of components in all lists derived from the clause.</p>
+        </div>
+      </div>
+      <h3 id="3A8575D7A1E7497DC0E78964773421F063A875F1">getMapperQualifierLoc</h3>
+      <p>
+        public 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         getMapperQualifierLoc()
+      </p>
+      <p>Defined at line 5467 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Gets the nested name specifier for associated user-defined mapper.</p>
+        </div>
+      </div>
+      <h3 id="9BEDCE5A1D2A650320F0F790242058B4C1491B7E">getMapperIdInfo</h3>
+      <p>public const DeclarationNameInfo &amp; getMapperIdInfo()</p>
+      <p>Defined at line 5472 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Gets the name info for associated user-defined mapper.</p>
+        </div>
+      </div>
+      <h3 id="0B2627B0575E3C1B57863978762653FD19BE523F">component_lists_begin</h3>
+      <p>
+        public 
+        <a href="../clang/OMPMappableExprListClause/const_component_lists_iterator.html">const_component_lists_iterator</a>
+         component_lists_begin()
+      </p>
+      <p>Defined at line 5634 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Iterators for all component lists.</p>
+        </div>
+      </div>
+      <h3 id="A8EFFB80E04A2320DA14325C127A7B997D1AE28C">component_lists_end</h3>
+      <p>
+        public 
+        <a href="../clang/OMPMappableExprListClause/const_component_lists_iterator.html">const_component_lists_iterator</a>
+         component_lists_end()
+      </p>
+      <p>Defined at line 5640 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="A4A9D65790A074FBCD247D3C718EF4D2933C48AA">component_lists</h3>
+      <p>public const_component_lists_range component_lists()</p>
+      <p>Defined at line 5647 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="5B9B65880B3FABA4BDACD491783408A4E18E69F7">decl_component_lists_begin</h3>
+      <p>
+        public 
+        <a href="../clang/OMPMappableExprListClause/const_component_lists_iterator.html">const_component_lists_iterator</a>
+         decl_component_lists_begin(const ValueDecl * VD)
+      </p>
+      <p>Defined at line 5653 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Iterators for component lists associated with the provided declaration.</p>
+        </div>
+      </div>
+      <h3 id="05F51D4F04C720AD632BD2B4E1564B53ED08F070">decl_component_lists_end</h3>
+      <p>
+        public 
+        <a href="../clang/OMPMappableExprListClause/const_component_lists_iterator.html">const_component_lists_iterator</a>
+         decl_component_lists_end()
+      </p>
+      <p>Defined at line 5660 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="12C0198038A8CFC09FEBEC18217333B5ACA63287">decl_component_lists</h3>
+      <p>public const_component_lists_range decl_component_lists(const ValueDecl * VD)</p>
+      <p>Defined at line 5663 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="ECDB9DCB8DCD86CB7062D1F19182F7CA3B6CE211">all_decls</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         all_decls()
+      </p>
+      <p>Defined at line 5672 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="685B4DCA17B80C9C3B84BD46C7295C73AD28BFF1">all_num_lists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         all_num_lists()
+      </p>
+      <p>Defined at line 5681 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="EE489855297EE886AF27FF9FD8B837B832A1A2BA">all_lists_sizes</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         all_lists_sizes()
+      </p>
+      <p>Defined at line 5690 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="E8EE030C8B6079E90A7EAA0B994BA94C4436D3D1">all_components</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         all_components()
+      </p>
+      <p>Defined at line 5699 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="A1B93AEC4E4AD647728404BA8774FB804804BA7B">mapperlist_begin</h3>
+      <p>public mapperlist_iterator mapperlist_begin()</p>
+      <p>Defined at line 5710 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="D932113D3921094D67EEB1B7956A85793C2FD054">mapperlist_end</h3>
+      <p>public mapperlist_iterator mapperlist_end()</p>
+      <p>Defined at line 5711 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="81ADA871701BFBA7C3488F93A0315BA5D1B46E81">mapperlist_begin</h3>
+      <p>public mapperlist_const_iterator mapperlist_begin()</p>
+      <p>Defined at line 5712 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="F6E2D49D3D1E361493E8C87D95339200C6971403">mapperlist_end</h3>
+      <p>public mapperlist_const_iterator mapperlist_end()</p>
+      <p>Defined at line 5715 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="63D26BDC093FE082EAB742846D796D670B8AD968">mapperlists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         mapperlists()
+      </p>
+      <p>Defined at line 5718 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="AD97460F8569DA5E4FC0242357A2321EF3436E61">mapperlists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         mapperlists()
+      </p>
+      <p>Defined at line 5721 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3077E2EB69D9133832E71E276905A4E294C1335A">OMPMappableExprListClause&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF66DB3744EA80B13E1D770C9BEF795FD90A68BD">getUniqueDeclsRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F23B77C9B5D66E85C7E750FCD3F9FF93F64942B0">getUniqueDeclsRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0BA15EB0CA66B0E6D905C84DAFE027A2FB4E3CAC">setUniqueDecls</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6457219401C372F9FDDDAC1AB19A8570E34D675A">getDeclNumListsRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C25CC79D55381A49CAF3650497A15938DA831959">getDeclNumListsRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#132D5FCA03BD54E88107A0132323103F38C806A4">setDeclNumLists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A07D3D36A34891C8E466187B7AF5CAAD8BB924E">getComponentListSizesRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FB4F21C573E5CDF731D211786386C8E41BB1E9A">getComponentListSizesRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8FA678385BDEAE34640E02483C4ED93314BA4114">setComponentListSizes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#20E56FBB8921C20FE8FDBAFB27D8AC81AA083272">getComponentsRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#962DCBE0823C239A0632C42B999FEE5480CE1994">getComponentsRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#780E1135A917D6473089FAD2BB64F2A41B0F51B9">setComponents</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4EBCFBDF5FB40141E58C8B47A5B75275C3709B80">setClauseInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD0F68100DDD3A62F7D8FCEE1780EB890787AE07">setMapperQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#031EEB060CF59FBD016A06B935E977D69B71BEC4">setMapperIdInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D1475543F99769A0FF10D15BDDA2651947024926">getUDMapperRefs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#932DA182AD64E59C7B01B05D67B12494DBBC5855">getUDMapperRefs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5B3DB68B02C3E89A57B9FF774003CCC45CBA2EB">setUDMapperRefs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24423031773102088AA569EF5786EE316206451A">getUniqueDeclarationsNum</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33060D1697D5F28454AC23C3E321EFD9352BEC25">getTotalComponentListNum</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FA78303AE4A0B72D639FCBC34B184E377B1EA7D">getTotalComponentsNum</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A8575D7A1E7497DC0E78964773421F063A875F1">getMapperQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BEDCE5A1D2A650320F0F790242058B4C1491B7E">getMapperIdInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B2627B0575E3C1B57863978762653FD19BE523F">component_lists_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8EFFB80E04A2320DA14325C127A7B997D1AE28C">component_lists_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4A9D65790A074FBCD247D3C718EF4D2933C48AA">component_lists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B9B65880B3FABA4BDACD491783408A4E18E69F7">decl_component_lists_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05F51D4F04C720AD632BD2B4E1564B53ED08F070">decl_component_lists_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12C0198038A8CFC09FEBEC18217333B5ACA63287">decl_component_lists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ECDB9DCB8DCD86CB7062D1F19182F7CA3B6CE211">all_decls</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#685B4DCA17B80C9C3B84BD46C7295C73AD28BFF1">all_num_lists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE489855297EE886AF27FF9FD8B837B832A1A2BA">all_lists_sizes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8EE030C8B6079E90A7EAA0B994BA94C4436D3D1">all_components</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1B93AEC4E4AD647728404BA8774FB804804BA7B">mapperlist_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D932113D3921094D67EEB1B7956A85793C2FD054">mapperlist_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81ADA871701BFBA7C3488F93A0315BA5D1B46E81">mapperlist_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6E2D49D3D1E361493E8C87D95339200C6971403">mapperlist_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63D26BDC093FE082EAB742846D796D670B8AD968">mapperlists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD97460F8569DA5E4FC0242357A2321EF3436E61">mapperlists</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

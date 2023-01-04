@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CastExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CastExpr</h1>
+    <p>Defined at line 3481 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> CastExpr - Base class for type casts, including both implicit casts (ImplicitCastExpr) and explicit casts that have some representation in the source code (ExplicitCastExpr&apos;s derived classes).</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E093EABEBC4285E2B87148767A9E89EFFAB9A3CF">CastExpr</h3>
+      <p>
+        protected void CastExpr(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="QualType.html">QualType</a>
+         ty, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="CastKind.html">CastKind</a>
+         kind, Expr * op, unsigned int BasePathSize, _Bool HasFPFeatures)
+      </p>
+      <p>Defined at line 3494 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7782904E5E5BE44FEED7AAEEE02DFCF74BC646F9">CastExpr</h3>
+      <p>
+        protected void CastExpr(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty, unsigned int BasePathSize, _Bool HasFPFeatures)
+      </p>
+      <p>Defined at line 3507 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Construct an empty cast.</p>
+        </div>
+      </div>
+      <h3 id="C18D4B67D2AC328B34921071828E52568447B602">getTrailingFPFeatures</h3>
+      <p>protected FPOptionsOverride * getTrailingFPFeatures()</p>
+      <div>
+        <div>
+          <p> Return a pointer to the trailing FPOptions.</p>
+        </div>
+      </div>
+      <h3 id="F92B89DCB7F991D8C67174572826AC1DAD829ACB">getTrailingFPFeatures</h3>
+      <p>protected const FPOptionsOverride * getTrailingFPFeatures()</p>
+      <p>Defined at line 3520 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E34F851BCB4C95EF7D1E83703070820C5D9C3EE5">getCastKind</h3>
+      <p>
+        public 
+        <a href="CastKind.html">CastKind</a>
+         getCastKind()
+      </p>
+      <p>Defined at line 3525 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="73AEAE965C3CEFB27AADF25C3EAE30CF683A31EE">setCastKind</h3>
+      <p>
+        public void setCastKind(
+        <a href="CastKind.html">CastKind</a>
+         K)
+      </p>
+      <p>Defined at line 3526 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="264CEAFFBC947B92DAB88DB60BF0EECB8C752C3C">getCastKindName</h3>
+      <p>
+        public const char * getCastKindName(
+        <a href="CastKind.html">CastKind</a>
+         CK)
+      </p>
+      <h3 id="E07A2009B06C31E36ED55B5C6F5DB3184A474FAA">getCastKindName</h3>
+      <p>public const char * getCastKindName()</p>
+      <p>Defined at line 3529 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="390EF25E68B317922232841962A591D0C70B6B39">getSubExpr</h3>
+      <p>public Expr * getSubExpr()</p>
+      <p>Defined at line 3531 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="125C7EB8EC347693168D133406F2569B22D01CE5">getSubExpr</h3>
+      <p>public const Expr * getSubExpr()</p>
+      <p>Defined at line 3532 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7D10FFBDD207CAED22945AAEDE2AB09233E11F7D">setSubExpr</h3>
+      <p>public void setSubExpr(Expr * E)</p>
+      <p>Defined at line 3533 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0674E4567B520F34DDCC351F8516D09C9007C77D">getSubExprAsWritten</h3>
+      <p>public Expr * getSubExprAsWritten()</p>
+      <div>
+        <div>
+          <p> Retrieve the cast subexpression as it was written in the source code, looking through any implicit casts or other intermediate nodes introduced by semantic analysis.</p>
+        </div>
+      </div>
+      <h3 id="971E7BA0ED033AF88EF8AD4A1AA70AE442F7CC93">getSubExprAsWritten</h3>
+      <p>public const Expr * getSubExprAsWritten()</p>
+      <p>Defined at line 3539 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="F91AFD9DD9AF6FB2CEF357EEE7113EDFF3D49470">getConversionFunction</h3>
+      <p>public NamedDecl * getConversionFunction()</p>
+      <div>
+        <div>
+          <p> If this cast applies a user-defined conversion, retrieve the conversion function that it invokes.</p>
+        </div>
+      </div>
+      <h3 id="7919D1594BA8A4FC75C978E7D50E805F98D4CFE2">path_empty</h3>
+      <p>public _Bool path_empty()</p>
+      <p>Defined at line 3549 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="62E8B42BE92E15156F6836692CAFFBEA503DC6B2">path_size</h3>
+      <p>public unsigned int path_size()</p>
+      <p>Defined at line 3550 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="12860F304D0032D306A9ECA37D21A869060FFD81">path_begin</h3>
+      <p>public path_iterator path_begin()</p>
+      <p>Defined at line 3551 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="CFE7A471DAE8ED6A89145CF2D1AA3C67D1F98124">path_end</h3>
+      <p>public path_iterator path_end()</p>
+      <p>Defined at line 3552 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2FD3B98E023E05CFEFAA66903534C78B9BB40A13">path_begin</h3>
+      <p>public path_const_iterator path_begin()</p>
+      <p>Defined at line 3553 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0503422F8509989E8F8A7DC6A9237C33251F57E8">path_end</h3>
+      <p>public path_const_iterator path_end()</p>
+      <p>Defined at line 3554 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="720FE89A13D7C8D81290E612AB67BE6F3AF63FAA">path</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         path()
+      </p>
+      <p>Defined at line 3556 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A75F24FD93D4899D635F9ABB1B6FA9CDC616E8CB">path</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         path()
+      </p>
+      <p>Defined at line 3559 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="DE7B1CC6CE5A40AFE9347AC01D6BAB75C4D4D269">getTargetUnionField</h3>
+      <p>public const FieldDecl * getTargetUnionField()</p>
+      <p>Defined at line 3563 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="441C57FCC6ED2271762CAC3F11C63AD410CA2144">hasStoredFPFeatures</h3>
+      <p>public _Bool hasStoredFPFeatures()</p>
+      <p>Defined at line 3568 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="6B36A6B1D84ED159BA8687900D6B3D94D7E653F0">getStoredFPFeatures</h3>
+      <p>
+        public 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         getStoredFPFeatures()
+      </p>
+      <p>Defined at line 3571 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get FPOptionsOverride from trailing storage.</p>
+        </div>
+      </div>
+      <h3 id="13FEE2CA8D06419241293FC954EFAD5B682E72CD">getFPFeaturesInEffect</h3>
+      <p>
+        public 
+        <a href="FPOptions.html">FPOptions</a>
+         getFPFeaturesInEffect(const LangOptions &amp; LO)
+      </p>
+      <p>Defined at line 3578 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the FP features status of this operation. Only meaningful for operations on floating point types.</p>
+        </div>
+      </div>
+      <h3 id="046EC3360033FA875B2E4904D77E71BFAE28D76E">getFPFeatures</h3>
+      <p>
+        public 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         getFPFeatures()
+      </p>
+      <p>Defined at line 3584 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="AAE44B9F17653DFF8CED0035E00BE1F60FBA94C2">getTargetFieldForToUnionCast</h3>
+      <p>
+        public const FieldDecl * getTargetFieldForToUnionCast(
+        <a href="QualType.html">QualType</a>
+         unionType, 
+        <a href="QualType.html">QualType</a>
+         opType)
+      </p>
+      <h3 id="C21BB295912FA7A7C687A43A269965DF68A6A8A6">getTargetFieldForToUnionCast</h3>
+      <p>
+        public const FieldDecl * getTargetFieldForToUnionCast(const RecordDecl * RD, 
+        <a href="QualType.html">QualType</a>
+         opType)
+      </p>
+      <h3 id="5E60C5539319CEFFCECF6931D3187736E0F27AFE">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 3595 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E53512DE281433F80270C308B025BE7E1FCFD19B">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3601 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="165447D555E208F4CFE4ABD68D47DEAC17085DB7">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 3602 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E093EABEBC4285E2B87148767A9E89EFFAB9A3CF">CastExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7782904E5E5BE44FEED7AAEEE02DFCF74BC646F9">CastExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C18D4B67D2AC328B34921071828E52568447B602">getTrailingFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F92B89DCB7F991D8C67174572826AC1DAD829ACB">getTrailingFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E34F851BCB4C95EF7D1E83703070820C5D9C3EE5">getCastKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73AEAE965C3CEFB27AADF25C3EAE30CF683A31EE">setCastKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#264CEAFFBC947B92DAB88DB60BF0EECB8C752C3C">getCastKindName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E07A2009B06C31E36ED55B5C6F5DB3184A474FAA">getCastKindName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#390EF25E68B317922232841962A591D0C70B6B39">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#125C7EB8EC347693168D133406F2569B22D01CE5">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D10FFBDD207CAED22945AAEDE2AB09233E11F7D">setSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0674E4567B520F34DDCC351F8516D09C9007C77D">getSubExprAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#971E7BA0ED033AF88EF8AD4A1AA70AE442F7CC93">getSubExprAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F91AFD9DD9AF6FB2CEF357EEE7113EDFF3D49470">getConversionFunction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7919D1594BA8A4FC75C978E7D50E805F98D4CFE2">path_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#62E8B42BE92E15156F6836692CAFFBEA503DC6B2">path_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12860F304D0032D306A9ECA37D21A869060FFD81">path_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CFE7A471DAE8ED6A89145CF2D1AA3C67D1F98124">path_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FD3B98E023E05CFEFAA66903534C78B9BB40A13">path_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0503422F8509989E8F8A7DC6A9237C33251F57E8">path_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#720FE89A13D7C8D81290E612AB67BE6F3AF63FAA">path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A75F24FD93D4899D635F9ABB1B6FA9CDC616E8CB">path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE7B1CC6CE5A40AFE9347AC01D6BAB75C4D4D269">getTargetUnionField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#441C57FCC6ED2271762CAC3F11C63AD410CA2144">hasStoredFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B36A6B1D84ED159BA8687900D6B3D94D7E653F0">getStoredFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13FEE2CA8D06419241293FC954EFAD5B682E72CD">getFPFeaturesInEffect</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#046EC3360033FA875B2E4904D77E71BFAE28D76E">getFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AAE44B9F17653DFF8CED0035E00BE1F60FBA94C2">getTargetFieldForToUnionCast</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C21BB295912FA7A7C687A43A269965DF68A6A8A6">getTargetFieldForToUnionCast</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E60C5539319CEFFCECF6931D3187736E0F27AFE">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E53512DE281433F80270C308B025BE7E1FCFD19B">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#165447D555E208F4CFE4ABD68D47DEAC17085DB7">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class BTFTypeTagAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class BTFTypeTagAttr</h1>
+    <p>Defined at line 1919 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="TypeAttr.html">TypeAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="015FE5AB3CAAFC2DD45A9CCE5A6FED2C84D6BFB8">CreateImplicit</h3>
+      <p>
+        public BTFTypeTagAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         BTFTypeTag, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="41A7B58F488093AA518308A9654988EA091FBBBC">Create</h3>
+      <p>
+        public BTFTypeTagAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         BTFTypeTag, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="FC5790A3944F9174997F78A7E2025B759B606F66">CreateImplicit</h3>
+      <p>
+        public BTFTypeTagAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         BTFTypeTag, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="2067956DDDDF6096DA76599FA0787207FB375556">Create</h3>
+      <p>
+        public BTFTypeTagAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         BTFTypeTag, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="B100AEB41DE69E8441F8D37D8A2D87C5EA44807A">BTFTypeTagAttr</h3>
+      <p>
+        public void BTFTypeTagAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         BTFTypeTag)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="49666C2A8AFA704F142136C6C20AD78D3DEE0FA3">clone</h3>
+      <p>public BTFTypeTagAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="DC07793C74B92640C9B4B79F3FCD40D593BE5F5A">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="851B7A892920ED5DADEF3A996263679126ABE606">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="6454CD0BB12384E445CD4D3E634F7C749D8562F4">getBTFTypeTag</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getBTFTypeTag()
+      </p>
+      <p>Defined at line 1947 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="BE9B89E743A325515586C25132C804CDFA7C72AD">getBTFTypeTagLength</h3>
+      <p>public unsigned int getBTFTypeTagLength()</p>
+      <p>Defined at line 1950 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="BB4F74BF9B039053A26250A3763428CE470403E7">setBTFTypeTag</h3>
+      <p>
+        public void setBTFTypeTag(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 1953 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="2F0AA168814EAE0AE3C9F9080B1500F254729F67">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 1962 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="E41DAF593AADC17F36AF8AD8127A9649A8A5F064">enum Spelling</h3>
+      <ul>
+        <li>GNU_btf_type_tag</li>
+        <li>CXX11_clang_btf_type_tag</li>
+        <li>C2x_clang_btf_type_tag</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 1924 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#015FE5AB3CAAFC2DD45A9CCE5A6FED2C84D6BFB8">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#41A7B58F488093AA518308A9654988EA091FBBBC">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC5790A3944F9174997F78A7E2025B759B606F66">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2067956DDDDF6096DA76599FA0787207FB375556">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B100AEB41DE69E8441F8D37D8A2D87C5EA44807A">BTFTypeTagAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49666C2A8AFA704F142136C6C20AD78D3DEE0FA3">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC07793C74B92640C9B4B79F3FCD40D593BE5F5A">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#851B7A892920ED5DADEF3A996263679126ABE606">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6454CD0BB12384E445CD4D3E634F7C749D8562F4">getBTFTypeTag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE9B89E743A325515586C25132C804CDFA7C72AD">getBTFTypeTagLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB4F74BF9B039053A26250A3763428CE470403E7">setBTFTypeTag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F0AA168814EAE0AE3C9F9080B1500F254729F67">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E41DAF593AADC17F36AF8AD8127A9649A8A5F064">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

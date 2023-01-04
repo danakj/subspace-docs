@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct OMPContext</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/omp" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct OMPContext</h1>
+    <p>Defined at line 157 of file /usr/lib/llvm-16/include/llvm/Frontend/OpenMP/OMPContext.h</p>
+    <div>
+      <div>
+        <p> The context for a source location is made up of active property traits, e.g., device={kind(host)}, and constructs traits which describe the nesting in OpenMP constructs at the location.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        public 
+        <a href="../../llvm/BitVector.html">BitVector</a>
+         ActiveTraits
+      </li>
+      <li>
+        public 
+        <a href="../../llvm/SmallVector.html">SmallVector</a>
+         ConstructTraits
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="12E487D01FCB6AE70F3D6A6929B4C1A94FC403DA">OMPContext</h3>
+      <p>
+        public void OMPContext(_Bool IsDeviceCompilation, 
+        <a href="../../llvm/Triple.html">Triple</a>
+         TargetTriple)
+      </p>
+      <h3 id="2BAE7A41E3A9C1586C3511A4FFB6AAD3A3CBF4FD">~OMPContext</h3>
+      <p>public void ~OMPContext()</p>
+      <p>Defined at line 159 of file /usr/lib/llvm-16/include/llvm/Frontend/OpenMP/OMPContext.h</p>
+      <h3 id="F7C9F08DA54F26ADB3E9F0EA6CD0E7B0B14AC4DF">addTrait</h3>
+      <p>
+        public void addTrait(
+        <a href="TraitProperty.html">TraitProperty</a>
+         Property)
+      </p>
+      <p>Defined at line 161 of file /usr/lib/llvm-16/include/llvm/Frontend/OpenMP/OMPContext.h</p>
+      <h3 id="141F0DEBDAEF7564598324DA6B508A621BDE0201">addTrait</h3>
+      <p>
+        public void addTrait(
+        <a href="TraitSet.html">TraitSet</a>
+         Set, 
+        <a href="TraitProperty.html">TraitProperty</a>
+         Property)
+      </p>
+      <p>Defined at line 164 of file /usr/lib/llvm-16/include/llvm/Frontend/OpenMP/OMPContext.h</p>
+      <h3 id="2ADA50B7257AAB48905429286501685C3C609C8C">matchesISATrait</h3>
+      <p>
+        public _Bool matchesISATrait(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         )
+      </p>
+      <p>Defined at line 173 of file /usr/lib/llvm-16/include/llvm/Frontend/OpenMP/OMPContext.h</p>
+      <div>
+        <div>
+          <p> Hook for users to check if an ISA trait matches. The trait is described as the string that got parsed and it depends on the target and context if this matches or not.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#12E487D01FCB6AE70F3D6A6929B4C1A94FC403DA">OMPContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BAE7A41E3A9C1586C3511A4FFB6AAD3A3CBF4FD">~OMPContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7C9F08DA54F26ADB3E9F0EA6CD0E7B0B14AC4DF">addTrait</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#141F0DEBDAEF7564598324DA6B508A621BDE0201">addTrait</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2ADA50B7257AAB48905429286501685C3C609C8C">matchesISATrait</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

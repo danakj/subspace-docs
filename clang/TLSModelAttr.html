@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TLSModelAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TLSModelAttr</h1>
+    <p>Defined at line 11492 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="33797CB431DA9469BB2CFE9867669CB7B7F7476A">CreateImplicit</h3>
+      <p>
+        public TLSModelAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Model, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="C01A9BEABC6D3878B1CADD3A8D97BBEF7209D12C">Create</h3>
+      <p>
+        public TLSModelAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Model, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="E6B631B7B0419806104434462126A0A743B20AC7">CreateImplicit</h3>
+      <p>
+        public TLSModelAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Model, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="29DB9B15EBD7E452175861E5F9BA87AE0BA2B349">Create</h3>
+      <p>
+        public TLSModelAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Model, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="BBEEA8C673AA1D5CEE0C817A218FA4CDC42DD93D">TLSModelAttr</h3>
+      <p>
+        public void TLSModelAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Model)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="51BFFEA794400EC4B404F8F266BAEDAEE5BE4102">clone</h3>
+      <p>public TLSModelAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="339DA273113C35D123F671C6062AF38C795D7B63">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="41581AFA49EA11A2968B9323974A4B8C3052DA0A">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="EC65306E581060B6BB208ED86574DA4EBB0A3F3A">getModel</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getModel()
+      </p>
+      <p>Defined at line 11520 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="513D43928598E1731DCE51B46A345A6BE1C047E6">getModelLength</h3>
+      <p>public unsigned int getModelLength()</p>
+      <p>Defined at line 11523 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="86D8C5191663A2D56CFC15DFDC4748FBC9219329">setModel</h3>
+      <p>
+        public void setModel(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 11526 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="7F9B054258FAC432960675729F7F2D06D53449F1">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 11535 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="E5C22E591721FB0C487054CE44C4C9D99F6D7256">enum Spelling</h3>
+      <ul>
+        <li>GNU_tls_model</li>
+        <li>CXX11_gnu_tls_model</li>
+        <li>C2x_gnu_tls_model</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 11497 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#33797CB431DA9469BB2CFE9867669CB7B7F7476A">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C01A9BEABC6D3878B1CADD3A8D97BBEF7209D12C">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6B631B7B0419806104434462126A0A743B20AC7">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#29DB9B15EBD7E452175861E5F9BA87AE0BA2B349">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBEEA8C673AA1D5CEE0C817A218FA4CDC42DD93D">TLSModelAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#51BFFEA794400EC4B404F8F266BAEDAEE5BE4102">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#339DA273113C35D123F671C6062AF38C795D7B63">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#41581AFA49EA11A2968B9323974A4B8C3052DA0A">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC65306E581060B6BB208ED86574DA4EBB0A3F3A">getModel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#513D43928598E1731DCE51B46A345A6BE1C047E6">getModelLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86D8C5191663A2D56CFC15DFDC4748FBC9219329">setModel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F9B054258FAC432960675729F7F2D06D53449F1">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E5C22E591721FB0C487054CE44C4C9D99F6D7256">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

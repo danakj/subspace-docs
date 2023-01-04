@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExpansionInfo</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/SrcMgr" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExpansionInfo</h1>
+    <p>Defined at line 354 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+    <div>
+      <div>
+        <p> Each ExpansionInfo encodes the expansion location - where the token was ultimately expanded, and the SpellingLoc - where the actual character data for the token came from.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="05E02F15456B765F187247AC21D0C7A2A7BBFD02">getSpellingLoc</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getSpellingLoc()
+      </p>
+      <p>Defined at line 372 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="2ED48B823667CC45A83E2AAF5BB011F07FEB76D8">getExpansionLocStart</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getExpansionLocStart()
+      </p>
+      <p>Defined at line 376 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="992F8F39AE4700B5C470C4DE50DD09DF854235D4">getExpansionLocEnd</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getExpansionLocEnd()
+      </p>
+      <p>Defined at line 380 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="BC0A0BE340F5B037D4347C11674667B2B30C9462">isExpansionTokenRange</h3>
+      <p>public _Bool isExpansionTokenRange()</p>
+      <p>Defined at line 385 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="F09B30648F0546CBC4B3749B84D187365CEE916A">getExpansionLocRange</h3>
+      <p>
+        public 
+        <a href="../../clang/CharSourceRange.html">CharSourceRange</a>
+         getExpansionLocRange()
+      </p>
+      <p>Defined at line 387 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="933A688E5D656705FF02DAF7A2364B569A859714">isMacroArgExpansion</h3>
+      <p>public _Bool isMacroArgExpansion()</p>
+      <p>Defined at line 393 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="17DC3C168B262D4703B8C2777C01125F9E6BA626">isMacroBodyExpansion</h3>
+      <p>public _Bool isMacroBodyExpansion()</p>
+      <p>Defined at line 398 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="2B97CD78ABF3D3D4E36187BC9EC8C3E4ED630D2F">isFunctionMacroExpansion</h3>
+      <p>public _Bool isFunctionMacroExpansion()</p>
+      <p>Defined at line 402 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="EA78216A1E9DAA464291BCAA3D1B6C8CC74C7CAE">create</h3>
+      <p>
+        public 
+        <a href="ExpansionInfo.html">ExpansionInfo</a>
+         create(
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         SpellingLoc, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         Start, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         End, _Bool ExpansionIsTokenRange)
+      </p>
+      <p>Defined at line 413 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return a ExpansionInfo for an expansion.</p>
+          <p> Start and End specify the expansion range (where the macro is expanded), and SpellingLoc specifies the spelling location (where the characters from the token come from). All three can refer to normal File SLocs or expansion locations.</p>
+        </div>
+      </div>
+      <h3 id="242251F302D3BCCD8A6415351347F222E23F71EF">createForMacroArg</h3>
+      <p>
+        public 
+        <a href="ExpansionInfo.html">ExpansionInfo</a>
+         createForMacroArg(
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         SpellingLoc, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         ExpansionLoc)
+      </p>
+      <p>Defined at line 443 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return a special ExpansionInfo for the expansion of a macro argument into a function-like macro&apos;s body.</p>
+          <p> ExpansionLoc specifies the expansion location (where the macro is expanded). This doesn&apos;t need to be a range because a macro is always expanded at a macro parameter reference, and macro parameters are always exactly one token. SpellingLoc specifies the spelling location (where the characters from the token come from). ExpansionLoc and SpellingLoc can both refer to normal File SLocs or expansion locations.</p>
+          <p> Given the code:</p>
+          <p> When expanding &apos; the &apos; would call this with an SpellingLoc pointing at &apos; and an ExpansionLoc pointing at its location in the definition of &apos;</p>
+        </div>
+      </div>
+      <h3 id="7AB6F3EE7F684213BBB25728A1F705A3F5BD59D9">createForTokenSplit</h3>
+      <p>
+        public 
+        <a href="ExpansionInfo.html">ExpansionInfo</a>
+         createForTokenSplit(
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         SpellingLoc, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         Start, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         End)
+      </p>
+      <p>Defined at line 456 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return a special ExpansionInfo representing a token that ends prematurely. This is used to model a &apos;&gt;&gt;&apos; token that has been split into &apos;&gt;&apos; tokens and similar cases. Unlike for the other forms of expansion, the expansion range in this case is a character range, not a token range.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#05E02F15456B765F187247AC21D0C7A2A7BBFD02">getSpellingLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2ED48B823667CC45A83E2AAF5BB011F07FEB76D8">getExpansionLocStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#992F8F39AE4700B5C470C4DE50DD09DF854235D4">getExpansionLocEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC0A0BE340F5B037D4347C11674667B2B30C9462">isExpansionTokenRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F09B30648F0546CBC4B3749B84D187365CEE916A">getExpansionLocRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#933A688E5D656705FF02DAF7A2364B569A859714">isMacroArgExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17DC3C168B262D4703B8C2777C01125F9E6BA626">isMacroBodyExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B97CD78ABF3D3D4E36187BC9EC8C3E4ED630D2F">isFunctionMacroExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA78216A1E9DAA464291BCAA3D1B6C8CC74C7CAE">create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#242251F302D3BCCD8A6415351347F222E23F71EF">createForMacroArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7AB6F3EE7F684213BBB25728A1F705A3F5BD59D9">createForTokenSplit</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

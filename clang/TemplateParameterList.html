@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TemplateParameterList</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TemplateParameterList</h1>
+    <p>Defined at line 70 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> Stores a list of template parameters for a TemplateDecl and its derived classes.</p>
+      </div>
+    </div>
+    <p>Inherits from llvm::TrailingObjects&lt;TemplateParameterList, NamedDecl *, Expr *&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="09564F092744B07E819DC006C42F45E99FA1DD7A">TemplateParameterList</h3>
+      <p>
+        protected void TemplateParameterList(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TemplateLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LAngleLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Params, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RAngleLoc, Expr * RequiresClause)
+      </p>
+      <h3 id="8370252BBECC1845F1295663070740BFECDB7C30">numTrailingObjects</h3>
+      <p>
+        protected size_t numTrailingObjects(
+        <a href="../llvm/trailing_objects_internal/TrailingObjectsBase/OverloadToken.html">OverloadToken</a>
+         )
+      </p>
+      <p>Defined at line 99 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="6AE31C984F7E5D003D6D034B0BA3D3BBE59D94E1">numTrailingObjects</h3>
+      <p>
+        protected size_t numTrailingObjects(
+        <a href="../llvm/trailing_objects_internal/TrailingObjectsBase/OverloadToken.html">OverloadToken</a>
+         )
+      </p>
+      <p>Defined at line 103 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="679A49DC2EE0F4F8EEA145FE48386ED6D9F9CE54">Create</h3>
+      <p>
+        public TemplateParameterList * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TemplateLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LAngleLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Params, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RAngleLoc, Expr * RequiresClause)
+      </p>
+      <h3 id="CE79346B7666673A7996B3E889DDD7D827965687">begin</h3>
+      <p>public iterator begin()</p>
+      <p>Defined at line 125 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="F2F19D5E50EF3B0F8F5994CAC7D18FA003F44E91">begin</h3>
+      <p>public const_iterator begin()</p>
+      <p>Defined at line 126 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="0B173DA528B9B0D87E026E20AC85E6E4136B4011">end</h3>
+      <p>public iterator end()</p>
+      <p>Defined at line 127 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="11055C65FB5B77DC6738068A813331942CBFFB7D">end</h3>
+      <p>public const_iterator end()</p>
+      <p>Defined at line 128 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="AD2FEA42D31C943C4EEDB9F58E3FBB978AD61E7A">size</h3>
+      <p>public unsigned int size()</p>
+      <p>Defined at line 130 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="F94B1215274BDFE02E82084A345694DFD6459767">asArray</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         asArray()
+      </p>
+      <p>Defined at line 132 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="89358EE75685A34D0B484754F5D21B8CBA936FC5">asArray</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         asArray()
+      </p>
+      <p>Defined at line 135 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="1CD7617966F2D1F15F57777A78C20AD345FE7226">getParam</h3>
+      <p>public NamedDecl * getParam(unsigned int Idx)</p>
+      <p>Defined at line 139 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="7446FC27EE2E7C1B59AE9D53AF3BA62F55CB4735">getParam</h3>
+      <p>public const NamedDecl * getParam(unsigned int Idx)</p>
+      <p>Defined at line 143 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="75F5E10AF3A3CF7CD2B14680D55FB42BA507AB9A">getMinRequiredArguments</h3>
+      <p>public unsigned int getMinRequiredArguments()</p>
+      <div>
+        <div>
+          <p> Returns the minimum number of arguments needed to form a template specialization.</p>
+          <p> This may be fewer than the number of template parameters, if some of the parameters have default arguments or if there is a parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="FA4157628176BE17700423427FBCF2F2BFA14EBD">getDepth</h3>
+      <p>public unsigned int getDepth()</p>
+      <div>
+        <div>
+          <p> Get the depth of this template parameter list in the set of template parameter lists.</p>
+          <p> The first template parameter list in a declaration will have depth 0, the second template parameter list will have depth 1, etc.</p>
+        </div>
+      </div>
+      <h3 id="812125A59E5CEDFF49A38779986888DAEEE2BEC2">containsUnexpandedParameterPack</h3>
+      <p>public _Bool containsUnexpandedParameterPack()</p>
+      <div>
+        <div>
+          <p> Determine whether this template parameter list contains an unexpanded parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="EB947F83246CE3AEF77B472CEC4790E8886D619F">hasParameterPack</h3>
+      <p>public _Bool hasParameterPack()</p>
+      <p>Defined at line 167 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Determine whether this template parameter list contains a parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="C1E5695AB7862C0A61BD7817EAA049FCFF389906">getRequiresClause</h3>
+      <p>public Expr * getRequiresClause()</p>
+      <p>Defined at line 175 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> The constraint-expression of the associated requires-clause.</p>
+        </div>
+      </div>
+      <h3 id="38DEA656F6984A67DB7A05FF5A15FB0CB8CD166B">getRequiresClause</h3>
+      <p>public const Expr * getRequiresClause()</p>
+      <p>Defined at line 180 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> The constraint-expression of the associated requires-clause.</p>
+        </div>
+      </div>
+      <h3 id="299674C3F345DC6B8246EB6C9F2A8B3202A748A3">getAssociatedConstraints</h3>
+      <p>public void getAssociatedConstraints(llvm::SmallVectorImpl&lt;const Expr *&gt; &amp; AC)</p>
+      <div>
+        <div>
+          <p> The constraints in the resulting list are to be treated as if in a conjunction (&quot;and&quot;).</p>
+        </div>
+      </div>
+      <h3 id="66B000EC6AEA08EFD2D4C25834AC2702FE0BADD2">hasAssociatedConstraints</h3>
+      <p>public _Bool hasAssociatedConstraints()</p>
+      <h3 id="95F31463F254B5724903F3AB4F3EE97977222DD8">getTemplateLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTemplateLoc()
+      </p>
+      <p>Defined at line 194 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="C49D49BE53A19326BCBCE261725C8196E9585622">getLAngleLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLAngleLoc()
+      </p>
+      <p>Defined at line 195 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="B032912E763EE2F6DFCD8A5B6FEE462B70C39413">getRAngleLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRAngleLoc()
+      </p>
+      <p>Defined at line 196 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="11C7BD329937F3407447EEB83DD5F09C84F8A9FF">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 198 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="F8FE408679CE338F70BD8C3DEC4D8BC7A9C60CD1">print</h3>
+      <p>public void print(raw_ostream &amp; Out, const ASTContext &amp; Context, _Bool OmitTemplateKW)</p>
+      <h3 id="F9A08D1DEDF859544FF9A35D3A8E43AA3DAF6FC9">print</h3>
+      <p>public void print(raw_ostream &amp; Out, const ASTContext &amp; Context, const PrintingPolicy &amp; Policy, _Bool OmitTemplateKW)</p>
+      <h3 id="8AFDC23D0BFFBCC2B81AEDF261420443FC918C7A">shouldIncludeTypeForArgument</h3>
+      <p>public _Bool shouldIncludeTypeForArgument(const PrintingPolicy &amp; Policy, const TemplateParameterList * TPL, unsigned int Idx)</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#09564F092744B07E819DC006C42F45E99FA1DD7A">TemplateParameterList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8370252BBECC1845F1295663070740BFECDB7C30">numTrailingObjects</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AE31C984F7E5D003D6D034B0BA3D3BBE59D94E1">numTrailingObjects</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#679A49DC2EE0F4F8EEA145FE48386ED6D9F9CE54">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE79346B7666673A7996B3E889DDD7D827965687">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2F19D5E50EF3B0F8F5994CAC7D18FA003F44E91">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B173DA528B9B0D87E026E20AC85E6E4136B4011">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11055C65FB5B77DC6738068A813331942CBFFB7D">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD2FEA42D31C943C4EEDB9F58E3FBB978AD61E7A">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F94B1215274BDFE02E82084A345694DFD6459767">asArray</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89358EE75685A34D0B484754F5D21B8CBA936FC5">asArray</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1CD7617966F2D1F15F57777A78C20AD345FE7226">getParam</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7446FC27EE2E7C1B59AE9D53AF3BA62F55CB4735">getParam</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75F5E10AF3A3CF7CD2B14680D55FB42BA507AB9A">getMinRequiredArguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA4157628176BE17700423427FBCF2F2BFA14EBD">getDepth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#812125A59E5CEDFF49A38779986888DAEEE2BEC2">containsUnexpandedParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB947F83246CE3AEF77B472CEC4790E8886D619F">hasParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1E5695AB7862C0A61BD7817EAA049FCFF389906">getRequiresClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38DEA656F6984A67DB7A05FF5A15FB0CB8CD166B">getRequiresClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#299674C3F345DC6B8246EB6C9F2A8B3202A748A3">getAssociatedConstraints</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66B000EC6AEA08EFD2D4C25834AC2702FE0BADD2">hasAssociatedConstraints</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95F31463F254B5724903F3AB4F3EE97977222DD8">getTemplateLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C49D49BE53A19326BCBCE261725C8196E9585622">getLAngleLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B032912E763EE2F6DFCD8A5B6FEE462B70C39413">getRAngleLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11C7BD329937F3407447EEB83DD5F09C84F8A9FF">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8FE408679CE338F70BD8C3DEC4D8BC7A9C60CD1">print</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9A08D1DEDF859544FF9A35D3A8E43AA3DAF6FC9">print</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AFDC23D0BFFBCC2B81AEDF261420443FC918C7A">shouldIncludeTypeForArgument</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

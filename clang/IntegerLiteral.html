@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class IntegerLiteral</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class IntegerLiteral</h1>
+    <p>Defined at line 1504 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , 
+      <a href="APIntStorage.html">APIntStorage</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0674403C099B6161AC9B7843A4F3BC0F0817BCA2">IntegerLiteral</h3>
+      <p>
+        public void IntegerLiteral(const ASTContext &amp; C, const llvm::APInt &amp; V, 
+        <a href="QualType.html">QualType</a>
+         type, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         l)
+      </p>
+      <div>
+        <div>
+          <p> type should be IntTy, LongTy, LongLongTy, UnsignedIntTy, UnsignedLongTy, or UnsignedLongLongTy</p>
+        </div>
+      </div>
+      <h3 id="CEF7C8719B0E5B39D4B9087A7704A23BD7A54849">Create</h3>
+      <p>
+        public IntegerLiteral * Create(const ASTContext &amp; C, const llvm::APInt &amp; V, 
+        <a href="QualType.html">QualType</a>
+         type, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         l)
+      </p>
+      <div>
+        <div>
+          <p> Returns a new integer literal with value &apos;V&apos; and type &apos;type&apos;.</p>
+        </div>
+      </div>
+      <h3 id="A2FE5D5FE1870134DDCF280E7FC05079CE31DD38">Create</h3>
+      <p>
+        public IntegerLiteral * Create(const ASTContext &amp; C, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <div>
+        <div>
+          <p> Returns a new empty integer literal.</p>
+        </div>
+      </div>
+      <h3 id="C3D86A3274EB41E549273EBF9688F8A1C8021382">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1526 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="FF67DAC26AA5CFD01B8F3FFE94DCDE39142C6299">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1527 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="4454CBCAB772AB0662A770830B6F671112800021">getLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 1530 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the literal.</p>
+        </div>
+      </div>
+      <h3 id="0D4389939EE7C4CFE7EA48B138B0CAC913821A27">setLocation</h3>
+      <p>
+        public void setLocation(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Location)
+      </p>
+      <p>Defined at line 1532 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="59754FC3AFF4721D340E0C74508DC7B0989AA4DC">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 1534 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="573BFBBF35D716D4A19D6B8283F1C279CFF91FB7">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1539 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="CC2F4BF041EA7972F39F1ECCB92A7DE6E0133F14">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1542 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0674403C099B6161AC9B7843A4F3BC0F0817BCA2">IntegerLiteral</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CEF7C8719B0E5B39D4B9087A7704A23BD7A54849">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2FE5D5FE1870134DDCF280E7FC05079CE31DD38">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3D86A3274EB41E549273EBF9688F8A1C8021382">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF67DAC26AA5CFD01B8F3FFE94DCDE39142C6299">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4454CBCAB772AB0662A770830B6F671112800021">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D4389939EE7C4CFE7EA48B138B0CAC913821A27">setLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59754FC3AFF4721D340E0C74508DC7B0989AA4DC">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#573BFBBF35D716D4A19D6B8283F1C279CFF91FB7">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC2F4BF041EA7972F39F1ECCB92A7DE6E0133F14">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

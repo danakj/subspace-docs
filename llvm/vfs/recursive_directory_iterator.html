@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class recursive_directory_iterator</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/vfs" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class recursive_directory_iterator</h1>
+    <p>Defined at line 231 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    <div>
+      <div>
+        <p> An input iterator over the recursive contents of a virtual path, similar to llvm::sys::fs::recursive_directory_iterator.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="008DD0ED7C424A45FCD893FCC2694BD78F85C452">recursive_directory_iterator</h3>
+      <p>public void recursive_directory_iterator(FileSystem &amp; FS, const Twine &amp; Path, std::error_code &amp; EC)</p>
+      <h3 id="91D3506312F9E5158259068F9F1DDB453C61DD6E">recursive_directory_iterator</h3>
+      <p>public void recursive_directory_iterator()</p>
+      <p>Defined at line 241 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <div>
+        <div>
+          <p> Construct an &apos;end&apos; iterator.</p>
+        </div>
+      </div>
+      <h3 id="A374F1BB42094F546B423379CA0A5838A6F6B534">increment</h3>
+      <p>public recursive_directory_iterator &amp; increment(std::error_code &amp; EC)</p>
+      <div>
+        <div>
+          <p> Equivalent to operator++, with an error code.</p>
+        </div>
+      </div>
+      <h3 id="4D712F0CC29B619C4F07828269CC0702A71B1781">operator*</h3>
+      <p>public const directory_entry &amp; operator*()</p>
+      <p>Defined at line 246 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="698092CB5E580E2F74BCFCDD710AE49E466C5E1D">operator-&gt;</h3>
+      <p>public const directory_entry * operator-&gt;()</p>
+      <p>Defined at line 247 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="8BD5CDC04F2F81F1B3A2DD814C6985C95A7BF5E5">operator==</h3>
+      <p>public _Bool operator==(const recursive_directory_iterator &amp; Other)</p>
+      <p>Defined at line 249 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="4D24A3F16BED1BB1F06C7754D744F6BF8FB96268">operator!=</h3>
+      <p>public _Bool operator!=(const recursive_directory_iterator &amp; RHS)</p>
+      <p>Defined at line 252 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="67B7CAC921B8778C8148E083779E1EBBCE8A892C">level</h3>
+      <p>public int level()</p>
+      <p>Defined at line 257 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <div>
+        <div>
+          <p> Gets the current level. Starting path is at level 0.</p>
+        </div>
+      </div>
+      <h3 id="8DE9202F65D6C516E913A69C6E5863D3E958B21A">no_push</h3>
+      <p>public void no_push()</p>
+      <p>Defined at line 263 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#008DD0ED7C424A45FCD893FCC2694BD78F85C452">recursive_directory_iterator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#91D3506312F9E5158259068F9F1DDB453C61DD6E">recursive_directory_iterator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A374F1BB42094F546B423379CA0A5838A6F6B534">increment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D712F0CC29B619C4F07828269CC0702A71B1781">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#698092CB5E580E2F74BCFCDD710AE49E466C5E1D">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8BD5CDC04F2F81F1B3A2DD814C6985C95A7BF5E5">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D24A3F16BED1BB1F06C7754D744F6BF8FB96268">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67B7CAC921B8778C8148E083779E1EBBCE8A892C">level</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DE9202F65D6C516E913A69C6E5863D3E958B21A">no_push</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

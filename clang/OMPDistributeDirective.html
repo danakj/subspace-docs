@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPDistributeDirective</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPDistributeDirective</h1>
+    <p>Defined at line 4369 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;#pragma omp distribute&apos; directive.</p>
+        <p> In this example directive &apos;#pragma omp distribute&apos; has clauses &apos;private&apos; with the variables &apos;a&apos; and &apos;b&apos;</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPLoopDirective.html">OMPLoopDirective</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9FD22C93EF5DFAE5BA8B2096E96EDAB0CB2FBC88">Create</h3>
+      <p>
+        public OMPDistributeDirective * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc, unsigned int CollapsedNum, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Clauses, Stmt * AssociatedStmt, const HelperExprs &amp; Exprs)
+      </p>
+      <div>
+        <div>
+          <p> Creates directive with a list of </p>
+        </div>
+      </div>
+      <h3 id="951594BC1E50F35419F7B554CF4CE86BE2438E2E">CreateEmpty</h3>
+      <p>
+        public OMPDistributeDirective * CreateEmpty(const ASTContext &amp; C, unsigned int NumClauses, unsigned int CollapsedNum, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         )
+      </p>
+      <div>
+        <div>
+          <p> Creates an empty directive with the place for  clauses.</p>
+        </div>
+      </div>
+      <h3 id="0542E6CFDF9B0A6963556D533469A7C032F5491E">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 4421 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9FD22C93EF5DFAE5BA8B2096E96EDAB0CB2FBC88">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#951594BC1E50F35419F7B554CF4CE86BE2438E2E">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0542E6CFDF9B0A6963556D533469A7C032F5491E">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

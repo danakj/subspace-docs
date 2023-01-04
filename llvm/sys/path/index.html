@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace path</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/sys/path" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace path</h1>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="const_iterator.html">const_iterator</a>
+      </li>
+      <li>
+        <a href="reverse_iterator.html">reverse_iterator</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D4F6CA47EC6BF788771710E3AE06E71752A9CB79">is_style_posix</h3>
+      <p>
+        _Bool is_style_posix(
+        <a href="Style.html">Style</a>
+         S)
+      </p>
+      <p>Defined at line 36 of file /usr/lib/llvm-16/include/llvm/Support/Path.h</p>
+      <div>
+        <div>
+          <p> Check if  uses POSIX path rules.</p>
+        </div>
+      </div>
+      <h3 id="7F1854B1E9D78145E9B871316DC7ECC076BA14EF">is_style_windows</h3>
+      <p>
+        _Bool is_style_windows(
+        <a href="Style.html">Style</a>
+         S)
+      </p>
+      <p>Defined at line 49 of file /usr/lib/llvm-16/include/llvm/Support/Path.h</p>
+      <div>
+        <div>
+          <p> Check if  uses Windows path rules.</p>
+        </div>
+      </div>
+      <h3 id="6BB1E2612B7AC05865476E4D2C2842B64F67FF3C">begin</h3>
+      <p>
+        <a href="const_iterator.html">const_iterator</a>
+         begin(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> An end iterator has Position = Path.size() + 1.</p>
+        </div>
+        <div>
+          <p> Get begin iterator over </p>
+        </div>
+      </div>
+      <h3 id="E9194D2F547E8D07857B7B309A00216B4F25BA09">end</h3>
+      <p>
+        <a href="const_iterator.html">const_iterator</a>
+         end(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path)
+      </p>
+      <div>
+        <div>
+          <p> Get end iterator over </p>
+        </div>
+      </div>
+      <h3 id="F91069E421756DB7B9F05919641B293FB1EBD511">rbegin</h3>
+      <p>
+        <a href="reverse_iterator.html">reverse_iterator</a>
+         rbegin(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Get reverse begin iterator over </p>
+        </div>
+      </div>
+      <h3 id="D8A195336EB9D4CDD72775240A6C0EC6FC2FD1A4">rend</h3>
+      <p>
+        <a href="reverse_iterator.html">reverse_iterator</a>
+         rend(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path)
+      </p>
+      <div>
+        <div>
+          <p> Get reverse end iterator over </p>
+        </div>
+      </div>
+      <h3 id="D5AD6E3F813447A995A991E1BB555BB371BE120D">remove_filename</h3>
+      <p>
+        void remove_filename(SmallVectorImpl&lt;char&gt; &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Remove the last component from  unless it is the root dir.</p>
+          <p> Similar to the POSIX &quot;dirname&quot; utility.</p>
+        </div>
+      </div>
+      <h3 id="BF3EEC4C09D285585A01E59BC9DF29D91BE86D20">replace_extension</h3>
+      <p>
+        void replace_extension(SmallVectorImpl&lt;char&gt; &amp; path, const Twine &amp; extension, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Replace the file extension of  with </p>
+        </div>
+      </div>
+      <h3 id="4B8E6943FFAFEA6FB8B4FAB16438113C77F6BED6">replace_path_prefix</h3>
+      <p>
+        _Bool replace_path_prefix(SmallVectorImpl&lt;char&gt; &amp; Path, 
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         OldPrefix, 
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         NewPrefix, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Replace matching path prefix with another path.</p>
+        </div>
+      </div>
+      <h3 id="4A1D0DCEA79F65D5ACDD9DF137C07F5D323456D7">remove_leading_dotslash</h3>
+      <p>
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         remove_leading_dotslash(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Remove redundant leading &quot;./&quot; pieces and consecutive separators.</p>
+        </div>
+      </div>
+      <h3 id="98725A90D5026439D8596B1A3DF262DFC72F80D9">remove_dots</h3>
+      <p>
+        _Bool remove_dots(SmallVectorImpl&lt;char&gt; &amp; path, _Bool remove_dot_dot, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> In-place remove any &apos;./&apos; and optionally &apos;../&apos; components from a path.</p>
+        </div>
+      </div>
+      <h3 id="AACC07F44FB995DA6079699B9655F44B57CB9460">append</h3>
+      <p>void append(SmallVectorImpl&lt;char&gt; &amp; path, const Twine &amp; a, const Twine &amp; b, const Twine &amp; c, const Twine &amp; d)</p>
+      <div>
+        <div>
+          <p> Append to path.</p>
+        </div>
+      </div>
+      <h3 id="5F432DCDFD21BAECCD982CFE5D67A0896750A0BE">append</h3>
+      <p>
+        void append(SmallVectorImpl&lt;char&gt; &amp; path, 
+        <a href="Style.html">Style</a>
+         style, const Twine &amp; a, const Twine &amp; b, const Twine &amp; c, const Twine &amp; d)
+      </p>
+      <h3 id="99407B43F1780216CF4235CE4C3E863EEAF34045">append</h3>
+      <p>
+        void append(SmallVectorImpl&lt;char&gt; &amp; path, 
+        <a href="const_iterator.html">const_iterator</a>
+         begin, 
+        <a href="const_iterator.html">const_iterator</a>
+         end, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Append to path.</p>
+        </div>
+      </div>
+      <h3 id="FBE43913A81BA01258A41CB210E3F804A070A8CF">native</h3>
+      <p>
+        void native(const Twine &amp; path, SmallVectorImpl&lt;char&gt; &amp; result, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Convert path to the native form. This is used to give paths to users and operating system calls in the platform&apos;s normal way. For example, on Windows all &apos;/&apos; are converted to &apos;\&apos;. On Unix, it converts all &apos;\&apos; to &apos;/&apos;.</p>
+        </div>
+      </div>
+      <h3 id="83AAD27C7D8AF5AA8B779F5F86E0B78AA8BDF835">native</h3>
+      <p>
+        void native(SmallVectorImpl&lt;char&gt; &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Convert path to the native form in place. This is used to give paths to users and operating system calls in the platform&apos;s normal way. For example, on Windows all &apos;/&apos; are converted to &apos;\&apos;.</p>
+        </div>
+      </div>
+      <h3 id="62705358C9687DA2CF6E86AF7AFE5756DCC2B5BB">make_preferred</h3>
+      <p>
+        void make_preferred(SmallVectorImpl&lt;char&gt; &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <p>Defined at line 269 of file /usr/lib/llvm-16/include/llvm/Support/Path.h</p>
+      <div>
+        <div>
+          <p> For Windows path styles, convert path to use the preferred path separators. For other styles, do nothing.</p>
+        </div>
+      </div>
+      <h3 id="2F82669538F1BA33A2918F1EEA716123B6C7D573">convert_to_slash</h3>
+      <p>
+        <a href="../../../std/__cxx11/basic_string.html">basic_string</a>
+         convert_to_slash(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Replaces backslashes with slashes if Windows.</p>
+        </div>
+      </div>
+      <h3 id="BC90E2C8EE8F16CB44F65B58A8FC02A8B666732D">root_name</h3>
+      <p>
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         root_name(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Get root name.</p>
+        </div>
+      </div>
+      <h3 id="9233F6F03B5B02919B544D341C3CCAEA04A74709">root_directory</h3>
+      <p>
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         root_directory(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Get root directory.</p>
+        </div>
+      </div>
+      <h3 id="D1677958CF9716EA371F1F52B64CD846CBD62E0C">root_path</h3>
+      <p>
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         root_path(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Get root path.</p>
+          <p> Equivalent to root_name + root_directory.</p>
+        </div>
+      </div>
+      <h3 id="85F71C39C334A2E8F233F2C23B1A5C91D8A6C1E8">relative_path</h3>
+      <p>
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         relative_path(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Get relative path.</p>
+        </div>
+      </div>
+      <h3 id="A8E19309166D5B3E1DCF4FEB3779B6191965066A">parent_path</h3>
+      <p>
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         parent_path(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Get parent path.</p>
+        </div>
+      </div>
+      <h3 id="F321EE24E019E4E27F7515427A78BFEA298658D3">filename</h3>
+      <p>
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         filename(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Get filename.</p>
+        </div>
+      </div>
+      <h3 id="A09A0F24AFD84453E98A0CD9FFAA9990C2C7F31A">stem</h3>
+      <p>
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         stem(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Get stem.</p>
+          <p> If filename contains a dot but not solely one or two dots, result is the substring of filename ending at (but not including) the last dot. Otherwise it is filename.</p>
+        </div>
+      </div>
+      <h3 id="CA7351D5EF3185CF489423CCA1B0C941AAD3C6E7">extension</h3>
+      <p>
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         extension(
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Get extension.</p>
+          <p> If filename contains a dot but not solely one or two dots, result is the substring of filename starting at (and including) the last dot, and ending at the end of  Otherwise &quot;&quot;.</p>
+        </div>
+      </div>
+      <h3 id="7E7F6B9AD80193ABD54373AD6B4FA692EFFAD9FF">is_separator</h3>
+      <p>
+        _Bool is_separator(char value, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Check whether the given char is a path separator on the host OS.</p>
+        </div>
+      </div>
+      <h3 id="5C7F72F53C3842F44E66220C42C2809E670D6531">get_separator</h3>
+      <p>
+        <a href="../../../llvm/StringRef.html">StringRef</a>
+         get_separator(
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Return the preferred separator for this platform.</p>
+        </div>
+      </div>
+      <h3 id="4E5654B49FB94634D7020A98A2A0DC48E9F588EC">system_temp_directory</h3>
+      <p>void system_temp_directory(_Bool erasedOnReboot, SmallVectorImpl&lt;char&gt; &amp; result)</p>
+      <div>
+        <div>
+          <p> Get the typical temporary directory for the system, e.g., &quot;/var/tmp&quot; or &quot;C:/TEMP&quot;</p>
+        </div>
+      </div>
+      <h3 id="666DFECEDA8C192EDDF62358FC10B1597EF592FB">home_directory</h3>
+      <p>_Bool home_directory(SmallVectorImpl&lt;char&gt; &amp; result)</p>
+      <div>
+        <div>
+          <p> Get the user&apos;s home directory.</p>
+        </div>
+      </div>
+      <h3 id="BFE5ED673A3069AABD64D891F3624096F2398B8B">user_config_directory</h3>
+      <p>_Bool user_config_directory(SmallVectorImpl&lt;char&gt; &amp; result)</p>
+      <div>
+        <div>
+          <p> Get the directory where packages should read user-specific configurations. e.g. $XDG_CONFIG_HOME.</p>
+        </div>
+      </div>
+      <h3 id="923FF45B6D987A91605C31BC1574557FAAE7F2BA">cache_directory</h3>
+      <p>_Bool cache_directory(SmallVectorImpl&lt;char&gt; &amp; result)</p>
+      <div>
+        <div>
+          <p> Get the directory where installed packages should put their machine-local cache, e.g. $XDG_CACHE_HOME.</p>
+        </div>
+      </div>
+      <h3 id="9FC05681BA37C8330DD8D81E8DBB9FFB6078A97F">has_root_name</h3>
+      <p>
+        _Bool has_root_name(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Has root name?</p>
+          <p> root_name != &quot;&quot;</p>
+        </div>
+      </div>
+      <h3 id="3A8D2ECD0CA07F903C0A4E31987D34C1BA9D0721">has_root_directory</h3>
+      <p>
+        _Bool has_root_directory(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Has root directory?</p>
+          <p> root_directory != &quot;&quot;</p>
+        </div>
+      </div>
+      <h3 id="3A6917372B515B494FDE0099BECD1944670B971E">has_root_path</h3>
+      <p>
+        _Bool has_root_path(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Has root path?</p>
+          <p> root_path != &quot;&quot;</p>
+        </div>
+      </div>
+      <h3 id="5EAFFF77111DB1DD385DAD1C99794DF971CFFE2B">has_relative_path</h3>
+      <p>
+        _Bool has_relative_path(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Has relative path?</p>
+          <p> relative_path != &quot;&quot;</p>
+        </div>
+      </div>
+      <h3 id="3547EB9A047CDE619D36AD928F4607D67878090D">has_parent_path</h3>
+      <p>
+        _Bool has_parent_path(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Has parent path?</p>
+          <p> parent_path != &quot;&quot;</p>
+        </div>
+      </div>
+      <h3 id="109B8DE27EDA090376FA0C4D43DC6C7B00CBF37E">has_filename</h3>
+      <p>
+        _Bool has_filename(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Has filename?</p>
+          <p> filename != &quot;&quot;</p>
+        </div>
+      </div>
+      <h3 id="EEA01293DD3A731887854FD2123CC453FCCA7BD7">has_stem</h3>
+      <p>
+        _Bool has_stem(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Has stem?</p>
+          <p> stem != &quot;&quot;</p>
+        </div>
+      </div>
+      <h3 id="16A773D914CBCF473B6AB1FED4D26893279DABFD">has_extension</h3>
+      <p>
+        _Bool has_extension(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Has extension?</p>
+          <p> extension != &quot;&quot;</p>
+        </div>
+      </div>
+      <h3 id="28C6D72FD0F8C3AB0E64F93C9C4751BE15DA677E">is_absolute</h3>
+      <p>
+        _Bool is_absolute(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Is path absolute?</p>
+          <p> According to cppreference.com, C++17 states: &quot;An absolute path is a path that unambiguously identifies the location of a file without reference to an additional starting location.&quot;</p>
+          <p> In other words, the rules are: 1) POSIX style paths with nonempty root directory are absolute. 2) Windows style paths with nonempty root name and root directory are    absolute. 3) No other paths are absolute.</p>
+        </div>
+      </div>
+      <h3 id="CB07C5311EBAFB2BA659EF01419369A373A26903">is_absolute_gnu</h3>
+      <p>
+        _Bool is_absolute_gnu(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Is path absolute using GNU rules?</p>
+          <p> GNU rules are: 1) Paths starting with a path separator are absolute. 2) Windows style paths are also absolute if they start with a character    followed by &apos;:&apos;. 3) No other paths are absolute.</p>
+          <p> On Windows style the path &quot;C:\Users\Default&quot; has &quot;C:&quot; as root name and &quot;\&quot; as root directory.</p>
+          <p> Hence &quot;C:&quot; on Windows is absolute under GNU rules and not absolute under C++17 because it has no root directory. Likewise &quot;/&quot; and &quot;\&quot; on Windows are absolute under GNU and are not absolute under C++17 due to empty root name.</p>
+        </div>
+      </div>
+      <h3 id="F760D3310AEBF84AA6A7406448C763F5366FA5BE">is_relative</h3>
+      <p>
+        _Bool is_relative(const Twine &amp; path, 
+        <a href="Style.html">Style</a>
+         style)
+      </p>
+      <div>
+        <div>
+          <p> Is path relative?</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="66071770E0AE861B68AAA60C5CB4029C5A6B3325">enum class Style</h3>
+      <ul>
+        <li>native</li>
+        <li>posix</li>
+        <li>windows_slash</li>
+        <li>windows_backslash</li>
+        <li>windows</li>
+      </ul>
+      <p>Defined at line 27 of file /usr/lib/llvm-16/include/llvm/Support/Path.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D4F6CA47EC6BF788771710E3AE06E71752A9CB79">is_style_posix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F1854B1E9D78145E9B871316DC7ECC076BA14EF">is_style_windows</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BB1E2612B7AC05865476E4D2C2842B64F67FF3C">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9194D2F547E8D07857B7B309A00216B4F25BA09">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F91069E421756DB7B9F05919641B293FB1EBD511">rbegin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8A195336EB9D4CDD72775240A6C0EC6FC2FD1A4">rend</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5AD6E3F813447A995A991E1BB555BB371BE120D">remove_filename</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF3EEC4C09D285585A01E59BC9DF29D91BE86D20">replace_extension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B8E6943FFAFEA6FB8B4FAB16438113C77F6BED6">replace_path_prefix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A1D0DCEA79F65D5ACDD9DF137C07F5D323456D7">remove_leading_dotslash</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98725A90D5026439D8596B1A3DF262DFC72F80D9">remove_dots</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AACC07F44FB995DA6079699B9655F44B57CB9460">append</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F432DCDFD21BAECCD982CFE5D67A0896750A0BE">append</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99407B43F1780216CF4235CE4C3E863EEAF34045">append</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBE43913A81BA01258A41CB210E3F804A070A8CF">native</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83AAD27C7D8AF5AA8B779F5F86E0B78AA8BDF835">native</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#62705358C9687DA2CF6E86AF7AFE5756DCC2B5BB">make_preferred</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F82669538F1BA33A2918F1EEA716123B6C7D573">convert_to_slash</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC90E2C8EE8F16CB44F65B58A8FC02A8B666732D">root_name</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9233F6F03B5B02919B544D341C3CCAEA04A74709">root_directory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D1677958CF9716EA371F1F52B64CD846CBD62E0C">root_path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85F71C39C334A2E8F233F2C23B1A5C91D8A6C1E8">relative_path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8E19309166D5B3E1DCF4FEB3779B6191965066A">parent_path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F321EE24E019E4E27F7515427A78BFEA298658D3">filename</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A09A0F24AFD84453E98A0CD9FFAA9990C2C7F31A">stem</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA7351D5EF3185CF489423CCA1B0C941AAD3C6E7">extension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E7F6B9AD80193ABD54373AD6B4FA692EFFAD9FF">is_separator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5C7F72F53C3842F44E66220C42C2809E670D6531">get_separator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E5654B49FB94634D7020A98A2A0DC48E9F588EC">system_temp_directory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#666DFECEDA8C192EDDF62358FC10B1597EF592FB">home_directory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BFE5ED673A3069AABD64D891F3624096F2398B8B">user_config_directory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#923FF45B6D987A91605C31BC1574557FAAE7F2BA">cache_directory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FC05681BA37C8330DD8D81E8DBB9FFB6078A97F">has_root_name</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A8D2ECD0CA07F903C0A4E31987D34C1BA9D0721">has_root_directory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A6917372B515B494FDE0099BECD1944670B971E">has_root_path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5EAFFF77111DB1DD385DAD1C99794DF971CFFE2B">has_relative_path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3547EB9A047CDE619D36AD928F4607D67878090D">has_parent_path</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#109B8DE27EDA090376FA0C4D43DC6C7B00CBF37E">has_filename</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EEA01293DD3A731887854FD2123CC453FCCA7BD7">has_stem</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16A773D914CBCF473B6AB1FED4D26893279DABFD">has_extension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28C6D72FD0F8C3AB0E64F93C9C4751BE15DA677E">is_absolute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB07C5311EBAFB2BA659EF01419369A373A26903">is_absolute_gnu</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F760D3310AEBF84AA6A7406448C763F5366FA5BE">is_relative</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#66071770E0AE861B68AAA60C5CB4029C5A6B3325">Style</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

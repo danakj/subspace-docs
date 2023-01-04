@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DesignatedInitExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DesignatedInitExpr</h1>
+    <p>Defined at line 5035 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> Represents a C99 designated initializer expression.</p>
+        <p> A designated initializer expression (C99 6.7.8) contains one or more designators (which can be field designators, array designators, or GNU array-range designators) followed by an expression that initializes the field or element(s) that the designators refer to. For example, given:</p>
+        <p> The InitListExpr contains three DesignatedInitExprs, the first of which covers  This DesignatedInitExpr will have two designators, one array designator for  followed by one field designator for  The initialization expression will be 1.0.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;DesignatedInitExpr, Stmt *&gt;
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/DesignatedInitExpr/Designator.html">Designator</a>
+      </li>
+      <li>
+        <a href="../clang/DesignatedInitExpr/FieldDesignator.html">FieldDesignator</a>
+      </li>
+      <li>
+        <a href="../clang/DesignatedInitExpr/ArrayOrRangeDesignator.html">ArrayOrRangeDesignator</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="58A4CD373BF79F171DB33876E585EDFB0BAEFE5D">Create</h3>
+      <p>
+        public DesignatedInitExpr * Create(const ASTContext &amp; C, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Designators, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         IndexExprs, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EqualOrColonLoc, _Bool GNUSyntax, Expr * Init)
+      </p>
+      <h3 id="5F045A526DC8F2D218FB1D099EBAAC6E7FB81CE0">CreateEmpty</h3>
+      <p>public DesignatedInitExpr * CreateEmpty(const ASTContext &amp; C, unsigned int NumIndexExprs)</p>
+      <h3 id="8BE510D34AD699DA07CFF337C571908451DFF006">size</h3>
+      <p>public unsigned int size()</p>
+      <p>Defined at line 5238 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Returns the number of designators in this initializer.</p>
+        </div>
+      </div>
+      <h3 id="B22A1CBD7918EB96C140869F1291C8D413700CD4">designators</h3>
+      <p>
+        public 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         designators()
+      </p>
+      <p>Defined at line 5241 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterator access to the designators.</p>
+        </div>
+      </div>
+      <h3 id="A3D2670AEC3DEBEEDF5EC305361459FF3A8EA5BA">designators</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         designators()
+      </p>
+      <p>Defined at line 5245 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E2FBAB04DDEBB9775E2C0EEED9545C68FBBB28E1">getDesignator</h3>
+      <p>public Designator * getDesignator(unsigned int Idx)</p>
+      <p>Defined at line 5249 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0EF09842B2690F78C2DA79B26FF93EF3F42AC4C1">getDesignator</h3>
+      <p>public const Designator * getDesignator(unsigned int Idx)</p>
+      <p>Defined at line 5250 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="014A3D8F5E0889A00A1596D6E56E83C1658F4D99">setDesignators</h3>
+      <p>public void setDesignators(const ASTContext &amp; C, const Designator * Desigs, unsigned int NumDesigs)</p>
+      <h3 id="EB7929CBD066E5699603F7ECB37CF177248A142F">getArrayIndex</h3>
+      <p>public Expr * getArrayIndex(const Designator &amp; D)</p>
+      <h3 id="40365B8DE2F74A64F664CC09C0981C6119CFDC6B">getArrayRangeStart</h3>
+      <p>public Expr * getArrayRangeStart(const Designator &amp; D)</p>
+      <h3 id="AD8EA0FEAB99937B5F4400BCBCA9E3FB88AF7302">getArrayRangeEnd</h3>
+      <p>public Expr * getArrayRangeEnd(const Designator &amp; D)</p>
+      <h3 id="B48F7ECDC5DA268FDAEAF6901A09B52E4FA58AE2">getEqualOrColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEqualOrColonLoc()
+      </p>
+      <p>Defined at line 5263 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the &apos;=&apos; that precedes the initializer value itself, if present.</p>
+        </div>
+      </div>
+      <h3 id="CC5EE058C33E90A919C750B3DC045753EBBFBE15">setEqualOrColonLoc</h3>
+      <p>
+        public void setEqualOrColonLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 5264 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="59DE114C3025F290B811B9D2E6926316EF970820">isDirectInit</h3>
+      <p>public _Bool isDirectInit()</p>
+      <p>Defined at line 5268 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Whether this designated initializer should result in direct-initialization of the designated subobject (eg, &apos;{.foo{1, 2, 3}}&apos;).</p>
+        </div>
+      </div>
+      <h3 id="47D5686B303B92267D73C76B18FCF3B25BC29885">usesGNUSyntax</h3>
+      <p>public _Bool usesGNUSyntax()</p>
+      <p>Defined at line 5272 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Determines whether this designated initializer used the deprecated GNU syntax for designated initializers.</p>
+        </div>
+      </div>
+      <h3 id="07DF681C408B088C90D186D028A0788C6D27CD38">setGNUSyntax</h3>
+      <p>public void setGNUSyntax(_Bool GNU)</p>
+      <p>Defined at line 5273 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="75FA766040A5DD516D1164B687A2A0F648F1682F">getInit</h3>
+      <p>public Expr * getInit()</p>
+      <p>Defined at line 5276 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the initializer value.</p>
+        </div>
+      </div>
+      <h3 id="769F7F0D1523205713B7D0F84700E6D767A6A38E">setInit</h3>
+      <p>public void setInit(Expr * init)</p>
+      <p>Defined at line 5280 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C11F35E8C7B50F92E5EE308AA72EC9A514CF69D3">getNumSubExprs</h3>
+      <p>public unsigned int getNumSubExprs()</p>
+      <p>Defined at line 5288 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Retrieve the total number of subexpressions in this designated initializer expression, including the actual initialized value and any expressions that occur within array and array-range designators.</p>
+        </div>
+      </div>
+      <h3 id="FCDD4C8D982274A7B924F608831EAF95D48F3F79">getSubExpr</h3>
+      <p>public Expr * getSubExpr(unsigned int Idx)</p>
+      <p>Defined at line 5290 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="F6572656C1ECC763C8A4D439D9C9F56EA727BAD1">setSubExpr</h3>
+      <p>public void setSubExpr(unsigned int Idx, Expr * E)</p>
+      <p>Defined at line 5295 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="427669E9D2DAB9A13283FD987AF3958DABCB891D">ExpandDesignator</h3>
+      <p>public void ExpandDesignator(const ASTContext &amp; C, unsigned int Idx, const Designator * First, const Designator * Last)</p>
+      <div>
+        <div>
+          <p> Replaces the designator at index  with the series of designators in [First, Last).</p>
+        </div>
+      </div>
+      <h3 id="D0AD2209CCD58CDE18E2DB44E43FE1ED5B389A10">getDesignatorsSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getDesignatorsSourceRange()
+      </p>
+      <h3 id="C90BF6002A91D1D2A81925A6E052B8E1949A6B28">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <h3 id="DAAAFCF579C7C93498723643FAB2FB60FB136B33">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <h3 id="071C774D31BA9BBB1DF0DADCBB601C6C6A8239E3">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 5310 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="F97A13A219E3919EB3E1B54372BC07F062CFF68F">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 5315 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="01AB3656500C59C71ED33ECF7366704019043C9D">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 5319 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#58A4CD373BF79F171DB33876E585EDFB0BAEFE5D">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F045A526DC8F2D218FB1D099EBAAC6E7FB81CE0">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8BE510D34AD699DA07CFF337C571908451DFF006">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B22A1CBD7918EB96C140869F1291C8D413700CD4">designators</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3D2670AEC3DEBEEDF5EC305361459FF3A8EA5BA">designators</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2FBAB04DDEBB9775E2C0EEED9545C68FBBB28E1">getDesignator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EF09842B2690F78C2DA79B26FF93EF3F42AC4C1">getDesignator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#014A3D8F5E0889A00A1596D6E56E83C1658F4D99">setDesignators</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB7929CBD066E5699603F7ECB37CF177248A142F">getArrayIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#40365B8DE2F74A64F664CC09C0981C6119CFDC6B">getArrayRangeStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD8EA0FEAB99937B5F4400BCBCA9E3FB88AF7302">getArrayRangeEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B48F7ECDC5DA268FDAEAF6901A09B52E4FA58AE2">getEqualOrColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC5EE058C33E90A919C750B3DC045753EBBFBE15">setEqualOrColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59DE114C3025F290B811B9D2E6926316EF970820">isDirectInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47D5686B303B92267D73C76B18FCF3B25BC29885">usesGNUSyntax</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07DF681C408B088C90D186D028A0788C6D27CD38">setGNUSyntax</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75FA766040A5DD516D1164B687A2A0F648F1682F">getInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#769F7F0D1523205713B7D0F84700E6D767A6A38E">setInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C11F35E8C7B50F92E5EE308AA72EC9A514CF69D3">getNumSubExprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCDD4C8D982274A7B924F608831EAF95D48F3F79">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6572656C1ECC763C8A4D439D9C9F56EA727BAD1">setSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#427669E9D2DAB9A13283FD987AF3958DABCB891D">ExpandDesignator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0AD2209CCD58CDE18E2DB44E43FE1ED5B389A10">getDesignatorsSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C90BF6002A91D1D2A81925A6E052B8E1949A6B28">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAAAFCF579C7C93498723643FAB2FB60FB136B33">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#071C774D31BA9BBB1DF0DADCBB601C6C6A8239E3">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F97A13A219E3919EB3E1B54372BC07F062CFF68F">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01AB3656500C59C71ED33ECF7366704019043C9D">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

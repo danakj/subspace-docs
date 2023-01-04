@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPCapturedExprDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPCapturedExprDecl</h1>
+    <p>Defined at line 383 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+    <div>
+      <div>
+        <p> Pseudo declaration for capturing expressions. Also is used for capturing of non-static data members in non-static member functions.</p>
+        <p> Clang supports capturing of variables only, but OpenMP 4.5 allows to privatize non-static members of current class in non-static member functions. This pseudo-declaration allows properly handle this kind of capture by wrapping captured expression into a variable-like declaration.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="VarDecl.html">VarDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CBEA5DEFACFFECFB1851565EC14F7C5192A06849">Create</h3>
+      <p>
+        public OMPCapturedExprDecl * Create(ASTContext &amp; C, DeclContext * DC, IdentifierInfo * Id, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc)
+      </p>
+      <h3 id="095F9E54F70CD2228CADB28DE3AE0591262EBD08">CreateDeserialized</h3>
+      <p>public OMPCapturedExprDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="60C9A3B72E458690700D9CC4D0A9C94307AC9BBF">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <h3 id="D0CA3BBCAE7BB8E5181995BDB976170DC7AF4937">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 405 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="5154C3C270813A58091626F04AC20D9E7F0A900C">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 406 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CBEA5DEFACFFECFB1851565EC14F7C5192A06849">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#095F9E54F70CD2228CADB28DE3AE0591262EBD08">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#60C9A3B72E458690700D9CC4D0A9C94307AC9BBF">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0CA3BBCAE7BB8E5181995BDB976170DC7AF4937">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5154C3C270813A58091626F04AC20D9E7F0A900C">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

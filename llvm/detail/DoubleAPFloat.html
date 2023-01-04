@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DoubleAPFloat</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/detail" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DoubleAPFloat</h1>
+    <p>Defined at line 622 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+    <div>
+      <div>
+        <p> This mode implements more precise float in terms of two APFloats. The interface and layout is designed for arbitrary underlying semantics, though currently only PPCDoubleDouble semantics are supported, whose corresponding underlying semantics are IEEEdouble.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="../../llvm/APFloatBase.html">APFloatBase</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8034130FAE98F8A319EFDA7171E201CC0C722E36">DoubleAPFloat</h3>
+      <p>public void DoubleAPFloat(const fltSemantics &amp; S)</p>
+      <h3 id="B5679DE7D27636985251447F7B4B402B7FCCD135">DoubleAPFloat</h3>
+      <p>
+        public void DoubleAPFloat(const fltSemantics &amp; S, 
+        <a href="../../llvm/APFloatBase/uninitializedTag.html">uninitializedTag</a>
+         )
+      </p>
+      <h3 id="5D54B0BC6AD71D0FB933D285935A30A281DF6AB2">DoubleAPFloat</h3>
+      <p>public void DoubleAPFloat(const fltSemantics &amp; S, integerPart )</p>
+      <h3 id="36C607776B52F9B43D162D7F10F46B6DE3A93FF0">DoubleAPFloat</h3>
+      <p>public void DoubleAPFloat(const fltSemantics &amp; S, const APInt &amp; I)</p>
+      <h3 id="8F223AF01904E3560E25B18C16CEB76CBCD1818D">DoubleAPFloat</h3>
+      <p>public void DoubleAPFloat(const fltSemantics &amp; S, APFloat &amp;&amp; First, APFloat &amp;&amp; Second)</p>
+      <h3 id="50587468AF410AF7FAEB5B727F428515C7210AA6">DoubleAPFloat</h3>
+      <p>public void DoubleAPFloat(const DoubleAPFloat &amp; RHS)</p>
+      <h3 id="AFB25C44036EA91D9AA5694A4B1C75B38A11A907">DoubleAPFloat</h3>
+      <p>public void DoubleAPFloat(DoubleAPFloat &amp;&amp; RHS)</p>
+      <h3 id="E2C77F3D81C3257C4B5BE501539E753BD53F97F2">operator=</h3>
+      <p>public DoubleAPFloat &amp; operator=(const DoubleAPFloat &amp; RHS)</p>
+      <h3 id="296237B2EC2E1100B1AB1DD0EE14668609619F67">operator=</h3>
+      <p>public DoubleAPFloat &amp; operator=(DoubleAPFloat &amp;&amp; RHS)</p>
+      <p>Defined at line 644 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="F72A3AFAB03EB7CFD7DFE2716888E3367E3F2FAA">needsCleanup</h3>
+      <p>public _Bool needsCleanup()</p>
+      <p>Defined at line 652 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="0EBCA43D98782B12895DF56E39B99185E79FA8D6">getFirst</h3>
+      <p>public APFloat &amp; getFirst()</p>
+      <p>Defined at line 654 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="C4BF2C6502ABE63F9DA0BD2DBA2B126BF434DED0">getFirst</h3>
+      <p>public const APFloat &amp; getFirst()</p>
+      <p>Defined at line 655 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="FC12FB26BEAAACE06C8D85F48261A925581F4F02">getSecond</h3>
+      <p>public APFloat &amp; getSecond()</p>
+      <p>Defined at line 656 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="235A2EF49DBF1EDDAABDE821575A70503A5D4828">getSecond</h3>
+      <p>public const APFloat &amp; getSecond()</p>
+      <p>Defined at line 657 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="025CC653BE860EC79340AEE30DEBA87C8D5FDC06">add</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         add(const DoubleAPFloat &amp; RHS, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <h3 id="1BC1E3BE9DBB7A07FB3C34009482FA2258A03D03">subtract</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         subtract(const DoubleAPFloat &amp; RHS, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <h3 id="A08C5671DE3C862ADA9721942F81A0CF7BC2FC12">multiply</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         multiply(const DoubleAPFloat &amp; RHS, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <h3 id="7825C19A70D7D4E3248C3C0DB627ACC1260880D7">divide</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         divide(const DoubleAPFloat &amp; RHS, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <h3 id="0E44ABBD4934D7C0B001D47D548F74EC881B8A37">remainder</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         remainder(const DoubleAPFloat &amp; RHS)
+      </p>
+      <h3 id="3A6A42FCE8337DEEABB470F3484843B7F7E8153E">mod</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         mod(const DoubleAPFloat &amp; RHS)
+      </p>
+      <h3 id="63901A58DCFD3960221EEAF08E08B84EAD8A649F">fusedMultiplyAdd</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         fusedMultiplyAdd(const DoubleAPFloat &amp; Multiplicand, const DoubleAPFloat &amp; Addend, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <h3 id="9D1E945D95DBBC24C98B3FFF19900C107C6D668C">roundToIntegral</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         roundToIntegral(
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <h3 id="FC2A54A63B20235BED2E304BAD197D26E0D7793B">changeSign</h3>
+      <p>public void changeSign()</p>
+      <h3 id="575842AB4761EEAD0868ED32A5F7D361DDBA0F57">compareAbsoluteValue</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/cmpResult.html">cmpResult</a>
+         compareAbsoluteValue(const DoubleAPFloat &amp; RHS)
+      </p>
+      <h3 id="2A9D02D124AFF3266DD862839D295B3DEE9E5CB7">getCategory</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/fltCategory.html">fltCategory</a>
+         getCategory()
+      </p>
+      <h3 id="3829AC060B22AC1BE9CCDEB6A94C3E36A8E20EED">isNegative</h3>
+      <p>public _Bool isNegative()</p>
+      <h3 id="ECD311B7DA7A01631EFE70EFEE2747BC70B6575A">makeInf</h3>
+      <p>public void makeInf(_Bool Neg)</p>
+      <h3 id="A6A1EB73826278A46063B4985D6158A5C37B1B20">makeZero</h3>
+      <p>public void makeZero(_Bool Neg)</p>
+      <h3 id="33D21C5BAD8828A6715676058B2217F11ADBB4B2">makeLargest</h3>
+      <p>public void makeLargest(_Bool Neg)</p>
+      <h3 id="6A26C2D90CEDE2AC5A99AF10D2A60135C2B80BF5">makeSmallest</h3>
+      <p>public void makeSmallest(_Bool Neg)</p>
+      <h3 id="BA6054FAE2369D6261D43310A14139180DCBCE68">makeSmallestNormalized</h3>
+      <p>public void makeSmallestNormalized(_Bool Neg)</p>
+      <h3 id="6F3C295B6F8F266BA3B543DE940482F3FA41D392">makeNaN</h3>
+      <p>public void makeNaN(_Bool SNaN, _Bool Neg, const APInt * fill)</p>
+      <h3 id="4301EF6F9099DFE02876A73841A9C4B8910FD69C">compare</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/cmpResult.html">cmpResult</a>
+         compare(const DoubleAPFloat &amp; RHS)
+      </p>
+      <h3 id="EF9194C3E0B99FE6260C07EBE4E3806ABDF81D85">bitwiseIsEqual</h3>
+      <p>public _Bool bitwiseIsEqual(const DoubleAPFloat &amp; RHS)</p>
+      <h3 id="0561CA9F9723E9A9D5D749106CA3D6F3EB4F8483">bitcastToAPInt</h3>
+      <p>
+        public 
+        <a href="../../llvm/APInt.html">APInt</a>
+         bitcastToAPInt()
+      </p>
+      <h3 id="71B18647C3065BBBF005749A908910EE43069875">convertFromString</h3>
+      <p>
+        public Expected&lt;opStatus&gt; convertFromString(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="A142F03BFC2ED6941E0001C90919C4942D2BF31C">next</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         next(_Bool nextDown)
+      </p>
+      <h3 id="DEE0198EAC6355425653107BA1550DB7C7173324">convertToInteger</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertToInteger(
+        <a href="../../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         Input, unsigned int Width, _Bool IsSigned, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM, _Bool * IsExact)
+      </p>
+      <h3 id="DE66251EBD9FFA5EC31B167C48792646C5D51A63">convertFromAPInt</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertFromAPInt(const APInt &amp; Input, _Bool IsSigned, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <h3 id="9A49F58484F68C42D944EF793ABE606509DBE3DD">convertFromSignExtendedInteger</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertFromSignExtendedInteger(const integerPart * Input, unsigned int InputSize, _Bool IsSigned, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <h3 id="99A939CC2DADA20E368639CBABB70E7D0B848A88">convertFromZeroExtendedInteger</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertFromZeroExtendedInteger(const integerPart * Input, unsigned int InputSize, _Bool IsSigned, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <h3 id="A05355231CD956917C87D25057607D3669ABE8B1">convertToHexString</h3>
+      <p>
+        public unsigned int convertToHexString(char * DST, unsigned int HexDigits, _Bool UpperCase, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <h3 id="2A05B60B53F84CDC6C0266BD964AAB259A0C80C9">isDenormal</h3>
+      <p>public _Bool isDenormal()</p>
+      <h3 id="F868A40134ECEA5ECF8B56EFA5365730BA745F32">isSmallest</h3>
+      <p>public _Bool isSmallest()</p>
+      <h3 id="D46C1156EA631CBB22EAB9C923A3199D621EC422">isSmallestNormalized</h3>
+      <p>public _Bool isSmallestNormalized()</p>
+      <h3 id="7DFB2655E7C79C92BAE8D573DB0FA27F38E92020">isLargest</h3>
+      <p>public _Bool isLargest()</p>
+      <h3 id="75B61D06BD2DACDC07926FA5164271CC6DC508FE">isInteger</h3>
+      <p>public _Bool isInteger()</p>
+      <h3 id="BE0036C1154306FBD738A4A2CD1C8594D794DC9C">toString</h3>
+      <p>public void toString(SmallVectorImpl&lt;char&gt; &amp; Str, unsigned int FormatPrecision, unsigned int FormatMaxPadding, _Bool TruncateZero)</p>
+      <h3 id="1138B345A8464F379C2EEA82BCCE1DBB45B87160">getExactInverse</h3>
+      <p>public _Bool getExactInverse(APFloat * inv)</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8034130FAE98F8A319EFDA7171E201CC0C722E36">DoubleAPFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5679DE7D27636985251447F7B4B402B7FCCD135">DoubleAPFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D54B0BC6AD71D0FB933D285935A30A281DF6AB2">DoubleAPFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#36C607776B52F9B43D162D7F10F46B6DE3A93FF0">DoubleAPFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F223AF01904E3560E25B18C16CEB76CBCD1818D">DoubleAPFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#50587468AF410AF7FAEB5B727F428515C7210AA6">DoubleAPFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFB25C44036EA91D9AA5694A4B1C75B38A11A907">DoubleAPFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2C77F3D81C3257C4B5BE501539E753BD53F97F2">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#296237B2EC2E1100B1AB1DD0EE14668609619F67">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F72A3AFAB03EB7CFD7DFE2716888E3367E3F2FAA">needsCleanup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EBCA43D98782B12895DF56E39B99185E79FA8D6">getFirst</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4BF2C6502ABE63F9DA0BD2DBA2B126BF434DED0">getFirst</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC12FB26BEAAACE06C8D85F48261A925581F4F02">getSecond</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#235A2EF49DBF1EDDAABDE821575A70503A5D4828">getSecond</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#025CC653BE860EC79340AEE30DEBA87C8D5FDC06">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BC1E3BE9DBB7A07FB3C34009482FA2258A03D03">subtract</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A08C5671DE3C862ADA9721942F81A0CF7BC2FC12">multiply</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7825C19A70D7D4E3248C3C0DB627ACC1260880D7">divide</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E44ABBD4934D7C0B001D47D548F74EC881B8A37">remainder</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A6A42FCE8337DEEABB470F3484843B7F7E8153E">mod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63901A58DCFD3960221EEAF08E08B84EAD8A649F">fusedMultiplyAdd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D1E945D95DBBC24C98B3FFF19900C107C6D668C">roundToIntegral</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC2A54A63B20235BED2E304BAD197D26E0D7793B">changeSign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#575842AB4761EEAD0868ED32A5F7D361DDBA0F57">compareAbsoluteValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A9D02D124AFF3266DD862839D295B3DEE9E5CB7">getCategory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3829AC060B22AC1BE9CCDEB6A94C3E36A8E20EED">isNegative</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ECD311B7DA7A01631EFE70EFEE2747BC70B6575A">makeInf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6A1EB73826278A46063B4985D6158A5C37B1B20">makeZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33D21C5BAD8828A6715676058B2217F11ADBB4B2">makeLargest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A26C2D90CEDE2AC5A99AF10D2A60135C2B80BF5">makeSmallest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA6054FAE2369D6261D43310A14139180DCBCE68">makeSmallestNormalized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F3C295B6F8F266BA3B543DE940482F3FA41D392">makeNaN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4301EF6F9099DFE02876A73841A9C4B8910FD69C">compare</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF9194C3E0B99FE6260C07EBE4E3806ABDF81D85">bitwiseIsEqual</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0561CA9F9723E9A9D5D749106CA3D6F3EB4F8483">bitcastToAPInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71B18647C3065BBBF005749A908910EE43069875">convertFromString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A142F03BFC2ED6941E0001C90919C4942D2BF31C">next</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEE0198EAC6355425653107BA1550DB7C7173324">convertToInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE66251EBD9FFA5EC31B167C48792646C5D51A63">convertFromAPInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A49F58484F68C42D944EF793ABE606509DBE3DD">convertFromSignExtendedInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99A939CC2DADA20E368639CBABB70E7D0B848A88">convertFromZeroExtendedInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A05355231CD956917C87D25057607D3669ABE8B1">convertToHexString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A05B60B53F84CDC6C0266BD964AAB259A0C80C9">isDenormal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F868A40134ECEA5ECF8B56EFA5365730BA745F32">isSmallest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D46C1156EA631CBB22EAB9C923A3199D621EC422">isSmallestNormalized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7DFB2655E7C79C92BAE8D573DB0FA27F38E92020">isLargest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75B61D06BD2DACDC07926FA5164271CC6DC508FE">isInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE0036C1154306FBD738A4A2CD1C8594D794DC9C">toString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1138B345A8464F379C2EEA82BCCE1DBB45B87160">getExactInverse</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

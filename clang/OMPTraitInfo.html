@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPTraitInfo</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPTraitInfo</h1>
+    <p>Defined at line 8778 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> Helper data structure representing the traits in a match clause of an `declare variant` or `metadirective`. The outer level is an ordered collection of selector sets, each with an associated kind and an ordered collection of selectors. A selector has a kind, an optional score/condition, and an ordered collection of properties.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        public 
+        <a href="../llvm/SmallVector.html">SmallVector</a>
+         Sets
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C802438675B162A25849F8F24AFDAD50C56EBF94">OMPTraitInfo</h3>
+      <p>
+        public void OMPTraitInfo(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         MangledName)
+      </p>
+      <div>
+        <div>
+          <p> Reconstruct a (partial) OMPTraitInfo object from a mangled name.</p>
+        </div>
+      </div>
+      <h3 id="78BEA8F7304175B37DE02FAF6C882F44FA579046">anyScoreOrCondition</h3>
+      <p>
+        public _Bool anyScoreOrCondition(
+        <a href="../llvm/function_ref.html">function_ref</a>
+         Cond)
+      </p>
+      <p>Defined at line 8790 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="D0772A161039C1E6AE29445C00AE8D3E7A90733C">getAsVariantMatchInfo</h3>
+      <p>public void getAsVariantMatchInfo(ASTContext &amp; ASTCtx, llvm::omp::VariantMatchInfo &amp; VMI)</p>
+      <div>
+        <div>
+          <p> Create a variant match info object from this trait info object. While the former is a flat representation the actual main difference is that the latter uses clang::Expr to store the score/condition while the former is independent of clang. Thus, expressions and conditions are evaluated in this method.</p>
+        </div>
+      </div>
+      <h3 id="7A4108187949EE636D25F21E8CB83CCA980477EA">getMangledName</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getMangledName()
+      </p>
+      <div>
+        <div>
+          <p> Return a string representation identifying this context selector.</p>
+        </div>
+      </div>
+      <h3 id="0DB78528E6D0354AF3EB8ED3BB8DA9864A05EAE6">isExtensionActive</h3>
+      <p>
+        public _Bool isExtensionActive(
+        <a href="../llvm/omp/TraitProperty.html">TraitProperty</a>
+         TP)
+      </p>
+      <p>Defined at line 8814 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Check the extension trait  is active.</p>
+        </div>
+      </div>
+      <h3 id="885AE7B7A32E5F43886722E6E05F498E89F48A54">print</h3>
+      <p>public void print(llvm::raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <div>
+        <div>
+          <p> Print a human readable representation into </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C802438675B162A25849F8F24AFDAD50C56EBF94">OMPTraitInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78BEA8F7304175B37DE02FAF6C882F44FA579046">anyScoreOrCondition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0772A161039C1E6AE29445C00AE8D3E7A90733C">getAsVariantMatchInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A4108187949EE636D25F21E8CB83CCA980477EA">getMangledName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0DB78528E6D0354AF3EB8ED3BB8DA9864A05EAE6">isExtensionActive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#885AE7B7A32E5F43886722E6E05F498E89F48A54">print</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

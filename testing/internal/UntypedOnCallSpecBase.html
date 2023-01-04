@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UntypedOnCallSpecBase</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UntypedOnCallSpecBase</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#260">260</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Untyped base class for OnCallSpec&lt;F&gt;.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected const char * file_</li>
+      <li>protected int line_</li>
+      <li>
+        protected 
+        <a href="../../testing/internal/UntypedOnCallSpecBase/Clause.html">Clause</a>
+         last_clause_
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="709D76BB3363348B9BAD938346E48BC3A472F32A">UntypedOnCallSpecBase</h3>
+      <p>public void UntypedOnCallSpecBase(const char * a_file, int a_line)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#263">263</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> The arguments are the location of the ON_CALL() statement.</p>
+        </div>
+      </div>
+      <h3 id="808D9F60952A104AD148DEB9BF6FBAE7C66A6B59">file</h3>
+      <p>public const char * file()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#267">267</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Where in the source file was the default action spec defined?</p>
+        </div>
+      </div>
+      <h3 id="0C72518E99FD8A6E3FE156C910FA6CB62E1634B0">line</h3>
+      <p>public int line()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#268">268</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <h3 id="308F5ABCBCDCFFBBA38BEACE621199A2658251EE">AssertSpecProperty</h3>
+      <p>protected void AssertSpecProperty(_Bool property, const std::string &amp; failure_message)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#281">281</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Asserts that the ON_CALL() statement has a certain property.</p>
+        </div>
+      </div>
+      <h3 id="D1EBA3C244C1EA56DE2C24DAB4AB106DE31723EA">ExpectSpecProperty</h3>
+      <p>protected void ExpectSpecProperty(_Bool property, const std::string &amp; failure_message)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#287">287</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Expects that the ON_CALL() statement has a certain property.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="AEB1771109182BEDF81EF1DA210AFC4ADE9BC428">enum Clause</h3>
+      <ul>
+        <li>kNone</li>
+        <li>kWith</li>
+        <li>kWillByDefault</li>
+      </ul>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#272">272</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Gives each clause in the ON_CALL() statement a name.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#709D76BB3363348B9BAD938346E48BC3A472F32A">UntypedOnCallSpecBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#808D9F60952A104AD148DEB9BF6FBAE7C66A6B59">file</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C72518E99FD8A6E3FE156C910FA6CB62E1634B0">line</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#308F5ABCBCDCFFBBA38BEACE621199A2658251EE">AssertSpecProperty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D1EBA3C244C1EA56DE2C24DAB4AB106DE31723EA">ExpectSpecProperty</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#AEB1771109182BEDF81EF1DA210AFC4ADE9BC428">Clause</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class PointerIntPair</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class PointerIntPair</h1>
+    <p>Defined at line 46 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+    <div>
+      <div>
+        <p> PointerIntPair - This class implements a pair of a pointer and small integer.  It is designed to represent this in the space required by one pointer by bitmangling the integer into the low part of the pointer.  This can only be done for small integers: typically up to 3 bits, but it depends on the number of bits available according to PointerLikeTypeTraits for the type.</p>
+        <p> Note that PointerIntPair always puts the IntVal part in the highest bits possible.  For example, PointerIntPair&lt;void*, 1, bool&gt; will put the bit for the bool into bit #2, not bit #0, which allows the low two bits to be used for something else.  For example, this allows:   PointerIntPair&lt;PointerIntPair&lt;void*, 1, bool&gt;, 1, bool&gt; ... and the two bools will land in different bits.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C7A0B98506FFBD30C94AFCFB38A06059288E70C1">PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt;</h3>
+      <p>public void PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt;()</p>
+      <p>Defined at line 52 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="8BD52D851A6E6F35A0EC4903C60B299074A748C9">PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt;</h3>
+      <p>public void PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt;(PointerTy PtrVal, IntType IntVal)</p>
+      <p>Defined at line 54 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="5FA65B66DBB9AB3C0C27DF8A70CB259CF6A89880">PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt;</h3>
+      <p>public void PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt;(PointerTy PtrVal)</p>
+      <p>Defined at line 58 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="6730B5F72D389F7D100B741DEBEFA172FD6B433A">getPointer</h3>
+      <p>public PointerTy getPointer()</p>
+      <p>Defined at line 60 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="46956B9CCD1A4D11A5E61B8DAEAC9F515C7CA9F7">getInt</h3>
+      <p>public IntType getInt()</p>
+      <p>Defined at line 62 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="690058097E86B1BBE0E985902FD36B36093A3115">setPointer</h3>
+      <p>public void setPointer(PointerTy PtrVal)</p>
+      <p>Defined at line 64 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="064EAA90734E987B4CDEBA934CFE7D8FD9663E7A">setInt</h3>
+      <p>public void setInt(IntType IntVal)</p>
+      <p>Defined at line 68 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="7C68EB4FC79108B2E5F61478B678A3CB8ACD6BBA">initWithPointer</h3>
+      <p>public void initWithPointer(PointerTy PtrVal)</p>
+      <p>Defined at line 72 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="8634E0D555E8CC8A539631E09073344578564E0C">setPointerAndInt</h3>
+      <p>public void setPointerAndInt(PointerTy PtrVal, IntType IntVal)</p>
+      <p>Defined at line 76 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="3933A7F1DF7BDD71985BB87CE0E776690DCE9BDF">getAddrOfPointer</h3>
+      <p>public const PointerTy * getAddrOfPointer()</p>
+      <p>Defined at line 81 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="F31ED7BA13FE7FAE36CD053261837FB7FB753A55">getAddrOfPointer</h3>
+      <p>public PointerTy * getAddrOfPointer()</p>
+      <p>Defined at line 85 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="17EF3C152646FD72E4DF50948863E9BC56578B98">getOpaqueValue</h3>
+      <p>public void * getOpaqueValue()</p>
+      <p>Defined at line 92 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="EB6DCE22CB0F546F9006328D9531A198C89593F7">setFromOpaqueValue</h3>
+      <p>public void setFromOpaqueValue(void * Val)</p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="13E9AEF369E7737B5DE485DBA627B4DD2CB045BB">getFromOpaqueValue</h3>
+      <p>
+        public 
+        <a href="PointerIntPair.html">PointerIntPair</a>
+         getFromOpaqueValue(void * V)
+      </p>
+      <p>Defined at line 98 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="83F86633A92A9D4FCC797E848763DCDF1047E004">getFromOpaqueValue</h3>
+      <p>
+        public 
+        <a href="PointerIntPair.html">PointerIntPair</a>
+         getFromOpaqueValue(const void * V)
+      </p>
+      <p>Defined at line 106 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <div>
+        <div>
+          <p> Allow PointerIntPairs to be created from const void * if and only if the pointer type could be created from a const void *.</p>
+        </div>
+      </div>
+      <h3 id="5301E5E8BAA34787C477648E15699DEB9A5F53E7">operator==</h3>
+      <p>public _Bool operator==(const PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt; &amp; RHS)</p>
+      <p>Defined at line 111 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="95117C831630B14F49722D4AC92BAC955D597882">operator!=</h3>
+      <p>public _Bool operator!=(const PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt; &amp; RHS)</p>
+      <p>Defined at line 115 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="88C4CF4346EB04DB50ABDA36CCE8932AA5465F3E">operator&lt;</h3>
+      <p>public _Bool operator&lt;(const PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt; &amp; RHS)</p>
+      <p>Defined at line 119 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="635910D7F5636F8DFA680A67686EBB28764EF3D0">operator&gt;</h3>
+      <p>public _Bool operator&gt;(const PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt; &amp; RHS)</p>
+      <p>Defined at line 120 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="DD922A5A4C45B36B29E42024D568E0A8E68C8799">operator&lt;=</h3>
+      <p>public _Bool operator&lt;=(const PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt; &amp; RHS)</p>
+      <p>Defined at line 122 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+      <h3 id="B13F6C6EBA14C614E972A0FAE336646F680C9359">operator&gt;=</h3>
+      <p>public _Bool operator&gt;=(const PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt; &amp; RHS)</p>
+      <p>Defined at line 126 of file /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C7A0B98506FFBD30C94AFCFB38A06059288E70C1">PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8BD52D851A6E6F35A0EC4903C60B299074A748C9">PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FA65B66DBB9AB3C0C27DF8A70CB259CF6A89880">PointerIntPair&lt;PointerTy, IntBits, IntType, PtrTraits, Info&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6730B5F72D389F7D100B741DEBEFA172FD6B433A">getPointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#46956B9CCD1A4D11A5E61B8DAEAC9F515C7CA9F7">getInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#690058097E86B1BBE0E985902FD36B36093A3115">setPointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#064EAA90734E987B4CDEBA934CFE7D8FD9663E7A">setInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C68EB4FC79108B2E5F61478B678A3CB8ACD6BBA">initWithPointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8634E0D555E8CC8A539631E09073344578564E0C">setPointerAndInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3933A7F1DF7BDD71985BB87CE0E776690DCE9BDF">getAddrOfPointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F31ED7BA13FE7FAE36CD053261837FB7FB753A55">getAddrOfPointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17EF3C152646FD72E4DF50948863E9BC56578B98">getOpaqueValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB6DCE22CB0F546F9006328D9531A198C89593F7">setFromOpaqueValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13E9AEF369E7737B5DE485DBA627B4DD2CB045BB">getFromOpaqueValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83F86633A92A9D4FCC797E848763DCDF1047E004">getFromOpaqueValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5301E5E8BAA34787C477648E15699DEB9A5F53E7">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95117C831630B14F49722D4AC92BAC955D597882">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88C4CF4346EB04DB50ABDA36CCE8932AA5465F3E">operator&lt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#635910D7F5636F8DFA680A67686EBB28764EF3D0">operator&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD922A5A4C45B36B29E42024D568E0A8E68C8799">operator&lt;=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B13F6C6EBA14C614E972A0FAE336646F680C9359">operator&gt;=</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

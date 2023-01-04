@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StringLiteral</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StringLiteral</h1>
+    <p>Defined at line 1777 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> StringLiteral - This represents a string literal expression, e.g. &quot;foo&quot; or L&quot;bar&quot; (wide strings). The actual string data can be obtained with getBytes() and is NOT null-terminated. The length of the string data is determined by calling getByteLength().</p>
+        <p> The C type for a string is always a ConstantArrayType. In C++, the char type is const qualified, in C it is not.</p>
+        <p> Note that strings in C can be formed by concatenation of multiple string literal pptokens in translation phase #6. This keeps track of the locations of each of these pieces.</p>
+        <p> Strings in C can also be truncated and extended by assigning into arrays, e.g. with constructs like:   char X[2] = &quot;foobar&quot;; In this case, getByteLength() will return 6, but the string literal will have type &quot;char[2]&quot;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;StringLiteral, unsigned int, SourceLocation, char&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="810AC4D7AB8F64419A8371D643E2991D607FE7D1">Create</h3>
+      <p>
+        public StringLiteral * Create(const ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Str, 
+        <a href="../clang/StringLiteral/StringKind.html">StringKind</a>
+         Kind, _Bool Pascal, 
+        <a href="QualType.html">QualType</a>
+         Ty, const SourceLocation * Loc, unsigned int NumConcatenated)
+      </p>
+      <div>
+        <div>
+          <p> This is the &quot;fully general&quot; constructor that allows representation of strings formed from multiple concatenated tokens.</p>
+        </div>
+      </div>
+      <h3 id="E6D04EFEEFAC500ED187A15CF403BBE15D9B97CF">Create</h3>
+      <p>
+        public StringLiteral * Create(const ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Str, 
+        <a href="../clang/StringLiteral/StringKind.html">StringKind</a>
+         Kind, _Bool Pascal, 
+        <a href="QualType.html">QualType</a>
+         Ty, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1849 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Simple constructor for string literals made from one token.</p>
+        </div>
+      </div>
+      <h3 id="D753828A28AEF848EA2E935762AEBC24B97574E0">CreateEmpty</h3>
+      <p>public StringLiteral * CreateEmpty(const ASTContext &amp; Ctx, unsigned int NumConcatenated, unsigned int Length, unsigned int CharByteWidth)</p>
+      <div>
+        <div>
+          <p> Construct an empty string literal.</p>
+        </div>
+      </div>
+      <h3 id="75135F29E40FAC238473D245D619DA1BE83E8412">getString</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getString()
+      </p>
+      <p>Defined at line 1860 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="022F337088877B470CF8C465BE80BFE84E436CE5">getBytes</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getBytes()
+      </p>
+      <p>Defined at line 1868 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Allow access to clients that need the byte representation, such as ASTWriterStmt::VisitStringLiteral().</p>
+        </div>
+      </div>
+      <h3 id="450BE874E60876922A04F7A277A9DD6453108A2F">outputString</h3>
+      <p>public void outputString(raw_ostream &amp; OS)</p>
+      <h3 id="FFA29D9733FF326373133AF01B3F503FBE858D4A">getCodeUnit</h3>
+      <p>public uint32_t getCodeUnit(size_t i)</p>
+      <p>Defined at line 1875 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C6C0C59D4BA868C7A76896D6859B57D068E1124A">getByteLength</h3>
+      <p>public unsigned int getByteLength()</p>
+      <p>Defined at line 1888 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="CA5578256793CF07F0034598E38FE834239C3856">getLength</h3>
+      <p>public unsigned int getLength()</p>
+      <p>Defined at line 1889 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8EB6D577625DD1AFEAF440E40793CC30E5138FBE">getCharByteWidth</h3>
+      <p>public unsigned int getCharByteWidth()</p>
+      <p>Defined at line 1890 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E50EE87E3BAB29A6AC33C8F5037029CACDBB7404">getKind</h3>
+      <p>
+        public 
+        <a href="../clang/StringLiteral/StringKind.html">StringKind</a>
+         getKind()
+      </p>
+      <p>Defined at line 1892 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="FE19A70E3C04C3AE9515AA0C5B48E51B2B9A25D2">isOrdinary</h3>
+      <p>public _Bool isOrdinary()</p>
+      <p>Defined at line 1896 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="5B951590115317B7ABC4A9E48AFC35B3546FB183">isWide</h3>
+      <p>public _Bool isWide()</p>
+      <p>Defined at line 1897 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="1D4B287B07ADDA72840BE52034DD293EE1F2C414">isUTF8</h3>
+      <p>public _Bool isUTF8()</p>
+      <p>Defined at line 1898 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7C7E10E4B79D51892EAF2F67D6C60313318262AE">isUTF16</h3>
+      <p>public _Bool isUTF16()</p>
+      <p>Defined at line 1899 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B28F34D077019C380E5102BD30C8E483761DE534">isUTF32</h3>
+      <p>public _Bool isUTF32()</p>
+      <p>Defined at line 1900 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C4435FD5A3B871C8140F3340A78AD7D45586F589">isPascal</h3>
+      <p>public _Bool isPascal()</p>
+      <p>Defined at line 1901 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="57B1D83DC088511AB77DCE535E23D454FC6C602F">containsNonAscii</h3>
+      <p>public _Bool containsNonAscii()</p>
+      <p>Defined at line 1903 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7D07C12A993A06ED2D0BCADA5DAEF2CF74C90BF2">containsNonAsciiOrNull</h3>
+      <p>public _Bool containsNonAsciiOrNull()</p>
+      <p>Defined at line 1910 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="87704EF908BAD87E11359A8E99C3EA5E568C2574">getNumConcatenated</h3>
+      <p>public unsigned int getNumConcatenated()</p>
+      <p>Defined at line 1919 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getNumConcatenated - Get the number of string literal tokens that were concatenated in translation phase #6 to form this string literal.</p>
+        </div>
+      </div>
+      <h3 id="20AB233EC43593C6506D49EA85A5F8EF27ED6E8A">getStrTokenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getStrTokenLoc(unsigned int TokNum)
+      </p>
+      <p>Defined at line 1924 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get one of the string literal token.</p>
+        </div>
+      </div>
+      <h3 id="47A6A4A48E77DD331C05326F9BFA0074927DA214">getLocationOfByte</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocationOfByte(unsigned int ByteNo, const SourceManager &amp; SM, const LangOptions &amp; Features, const TargetInfo &amp; Target, unsigned int * StartToken, unsigned int * StartTokenByteOffset)
+      </p>
+      <div>
+        <div>
+          <p> getLocationOfByte - Return a source location that points to the specified byte of this string literal.</p>
+          <p> Strings are amazingly complex.  They can be formed from multiple tokens and can have escape sequences in them in addition to the usual trigraph and escaped newline business.  This routine handles this complexity.</p>
+        </div>
+      </div>
+      <h3 id="11592FC8AF0558A6E249C26252C71AD2F5B71F11">tokloc_begin</h3>
+      <p>public tokloc_iterator tokloc_begin()</p>
+      <p>Defined at line 1944 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="553FD080D9EC07BFF61C6A22C666E88F4C5AFF5C">tokloc_end</h3>
+      <p>public tokloc_iterator tokloc_end()</p>
+      <p>Defined at line 1948 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9F7A9CC42F14FDD72D204CB27D1EADBBD2F760B3">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1952 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="5314DDEE40969CD5A5C7BB075FF34323ED778A79">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1953 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="1D2BD06B50C13230AF88457E07269787385C709F">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 1955 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="243C92EC668F281B7E41B549D6D51973E9025253">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1960 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="209409162564F9EA9BD4A4FA862B5EBAD4EE41C8">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1963 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="BA5FE8B0338E1D325C092404B9BB44C1BA7522F9">enum StringKind</h3>
+      <ul>
+        <li>Ordinary</li>
+        <li>Wide</li>
+        <li>UTF8</li>
+        <li>UTF16</li>
+        <li>UTF32</li>
+      </ul>
+      <p>Defined at line 1799 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> StringLiteral is followed by several trailing objects. They are in order:</p>
+          <p> * A single unsigned storing the length in characters of this string. The   length in bytes is this length times the width of a single character.   Always present and stored as a trailing objects because storing it in   StringLiteral would increase the size of StringLiteral by sizeof(void *)   due to alignment requirements. If you add some data to StringLiteral,   consider moving it inside StringLiteral.</p>
+          <p> * An array of getNumConcatenated() SourceLocation, one for each of the   token this string is made of.</p>
+          <p> * An array of getByteLength() char used to store the string data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#810AC4D7AB8F64419A8371D643E2991D607FE7D1">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6D04EFEEFAC500ED187A15CF403BBE15D9B97CF">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D753828A28AEF848EA2E935762AEBC24B97574E0">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75135F29E40FAC238473D245D619DA1BE83E8412">getString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#022F337088877B470CF8C465BE80BFE84E436CE5">getBytes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#450BE874E60876922A04F7A277A9DD6453108A2F">outputString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FFA29D9733FF326373133AF01B3F503FBE858D4A">getCodeUnit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6C0C59D4BA868C7A76896D6859B57D068E1124A">getByteLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA5578256793CF07F0034598E38FE834239C3856">getLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8EB6D577625DD1AFEAF440E40793CC30E5138FBE">getCharByteWidth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E50EE87E3BAB29A6AC33C8F5037029CACDBB7404">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE19A70E3C04C3AE9515AA0C5B48E51B2B9A25D2">isOrdinary</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B951590115317B7ABC4A9E48AFC35B3546FB183">isWide</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D4B287B07ADDA72840BE52034DD293EE1F2C414">isUTF8</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C7E10E4B79D51892EAF2F67D6C60313318262AE">isUTF16</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B28F34D077019C380E5102BD30C8E483761DE534">isUTF32</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4435FD5A3B871C8140F3340A78AD7D45586F589">isPascal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57B1D83DC088511AB77DCE535E23D454FC6C602F">containsNonAscii</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D07C12A993A06ED2D0BCADA5DAEF2CF74C90BF2">containsNonAsciiOrNull</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87704EF908BAD87E11359A8E99C3EA5E568C2574">getNumConcatenated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#20AB233EC43593C6506D49EA85A5F8EF27ED6E8A">getStrTokenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47A6A4A48E77DD331C05326F9BFA0074927DA214">getLocationOfByte</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11592FC8AF0558A6E249C26252C71AD2F5B71F11">tokloc_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#553FD080D9EC07BFF61C6A22C666E88F4C5AFF5C">tokloc_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F7A9CC42F14FDD72D204CB27D1EADBBD2F760B3">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5314DDEE40969CD5A5C7BB075FF34323ED778A79">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D2BD06B50C13230AF88457E07269787385C709F">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#243C92EC668F281B7E41B549D6D51973E9025253">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#209409162564F9EA9BD4A4FA862B5EBAD4EE41C8">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BA5FE8B0338E1D325C092404B9BB44C1BA7522F9">StringKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

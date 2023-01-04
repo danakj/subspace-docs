@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TypeRequirement</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/concepts" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TypeRequirement</h1>
+    <p>Defined at line 200 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+    <div>
+      <div></div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Requirement.html">Requirement</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9C5CCA36FDCFF708C443AFA4B912F1FB510E0F9D">TypeRequirement</h3>
+      <p>public void TypeRequirement(TypeSourceInfo * T)</p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="F874478B46A9F735A52CC104D2A9C8A21F7DEB1A">TypeRequirement</h3>
+      <p>public void TypeRequirement(SubstitutionDiagnostic * Diagnostic)</p>
+      <p>Defined at line 222 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="34AFB18BB3E95E4581EC56820DFC9C1E2A778883">getSatisfactionStatus</h3>
+      <p>
+        public 
+        <a href="../../clang/concepts/TypeRequirement/SatisfactionStatus.html">SatisfactionStatus</a>
+         getSatisfactionStatus()
+      </p>
+      <p>Defined at line 226 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="761A2C107A2B483F8FDB907486BC8DA753481118">setSatisfactionStatus</h3>
+      <p>
+        public void setSatisfactionStatus(
+        <a href="../../clang/concepts/TypeRequirement/SatisfactionStatus.html">SatisfactionStatus</a>
+         Status)
+      </p>
+      <p>Defined at line 227 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="86F3B1481339399EA50861F390ABDF90D91315A9">isSubstitutionFailure</h3>
+      <p>public _Bool isSubstitutionFailure()</p>
+      <p>Defined at line 231 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="C78DADFB57F45D0751D3EFDC7F1DD0C4E36544F2">getSubstitutionDiagnostic</h3>
+      <p>public SubstitutionDiagnostic * getSubstitutionDiagnostic()</p>
+      <p>Defined at line 235 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="B8A05F0315295C7DB3C9047CE3FD26BBC459C7D1">getType</h3>
+      <p>public TypeSourceInfo * getType()</p>
+      <p>Defined at line 242 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="462226C3FF2ACFD157BE6734BE89132AB76D5E04">classof</h3>
+      <p>public _Bool classof(const Requirement * R)</p>
+      <p>Defined at line 248 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="2FE466CBCDF1BB3CA18B4A570143183CE7D2614F">enum SatisfactionStatus</h3>
+      <ul>
+        <li>SS_Dependent</li>
+        <li>SS_SubstitutionFailure</li>
+        <li>SS_Satisfied</li>
+      </ul>
+      <p>Defined at line 202 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9C5CCA36FDCFF708C443AFA4B912F1FB510E0F9D">TypeRequirement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F874478B46A9F735A52CC104D2A9C8A21F7DEB1A">TypeRequirement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#34AFB18BB3E95E4581EC56820DFC9C1E2A778883">getSatisfactionStatus</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#761A2C107A2B483F8FDB907486BC8DA753481118">setSatisfactionStatus</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86F3B1481339399EA50861F390ABDF90D91315A9">isSubstitutionFailure</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C78DADFB57F45D0751D3EFDC7F1DD0C4E36544F2">getSubstitutionDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8A05F0315295C7DB3C9047CE3FD26BBC459C7D1">getType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#462226C3FF2ACFD157BE6734BE89132AB76D5E04">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2FE466CBCDF1BB3CA18B4A570143183CE7D2614F">SatisfactionStatus</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

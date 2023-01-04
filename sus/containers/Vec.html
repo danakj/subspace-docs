@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Vec</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/containers" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Vec</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#52">52</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+    </p>
+    <div>
+      <div>
+        <p> A resizeable contiguous buffer of type `T`.</p>
+        <p> Vec requires Move for its items: - They can&apos;t be references as a pointer to reference is not valid. - On realloc, items need to be moved between allocations.</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../sus/containers/Vec/SusUnsafeNeverValueOverlay.html">SusUnsafeNeverValueOverlay</a>
+      </li>
+      <li>
+        <a href="../../sus/containers/Vec/SusUnsafeNeverValueOverlay.html">SusUnsafeNeverValueOverlay</a>
+      </li>
+      <li>
+        <a href="../../sus/containers/Vec/SusUnsafeNeverValueOverlay.html">SusUnsafeNeverValueOverlay</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="762A3147B478B358E2D9709EB081F71FD5AC1EAF">Vec&lt;T&gt;</h3>
+      <p>public void Vec&lt;T&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#64">64</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> sus::construct::Default trait.</p>
+        </div>
+      </div>
+      <h3 id="719CD14996443159386F730EC68669FDA677FD5D">with_capacity</h3>
+      <p>
+        public 
+        <a href="Vec.html">Vec</a>
+         with_capacity(
+        <a href="../../sus/num/usize.html">usize</a>
+         cap)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#68">68</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="57C5593E0BCBD2E1F9A85B02E5F0F9631DF74F8A">from_iter</h3>
+      <p>
+        public 
+        <a href="Vec.html">Vec</a>
+         from_iter(::sus::iter::IteratorBase&lt;T&gt; &amp;&amp; iter)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#75">75</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Constructs a vector by taking all the elements from the iterator.</p>
+          <p> sus::iter::FromIterator trait.</p>
+        </div>
+      </div>
+      <h3 id="A688EE42D1145F2BDC3FFADC80DA48A0370AC95F">~Vec&lt;T&gt;</h3>
+      <p>public void ~Vec&lt;T&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#82">82</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="45A6D1DB06791C335D92A1613D6D8F00D7E1258D">Vec&lt;T&gt;</h3>
+      <p>public void Vec&lt;T&gt;(Vec&lt;T&gt; &amp;&amp; o)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#86">86</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="0B18A3C3BCC22D76D177F05C605131D1104391E5">operator=</h3>
+      <p>public Vec&lt;T&gt; &amp; operator=(Vec&lt;T&gt; &amp;&amp; o)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#90">90</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="677B8B6D6FE073C290749942CFC1EC528D1424C5">clone</h3>
+      <p>
+        public 
+        <a href="Vec.html">Vec</a>
+         clone()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#98">98</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="A011449B5EF8DA2F6782D1A81F523F54BCAD316C">clone_from</h3>
+      <p>public void clone_from(const Vec&lt;T&gt; &amp; source)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#110">110</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="4DFD8F847C82290D542F6DB5FE3F46AC656242DC">clear</h3>
+      <p>public void clear()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#142">142</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Clears the vector, removing all values.</p>
+          <p> Note that this method has no effect on the allocated capacity of the vector.</p>
+        </div>
+      </div>
+      <h3 id="77CBE6428B17591B19753340BE0D7BE6F5717AB7">reserve</h3>
+      <p>
+        public void reserve(
+        <a href="../../sus/num/usize.html">usize</a>
+         additional)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#158">158</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Reserves capacity for at least `additional` more elements to be inserted in the given Vec&lt;T&gt;. The collection may reserve more space to speculatively avoid frequent reallocations. After calling reserve, capacity will be greater than or equal to self.len() + additional. Does nothing if capacity is already sufficient.</p>
+          <p> The `grow_to_exact()` function is similar to std::vector::reserve(), taking a capacity instead of the number of elements to ensure space for.</p>
+          <p> # Panics Panics if the new capacity exceeds isize::MAX() bytes.</p>
+        </div>
+      </div>
+      <h3 id="1B8FDE21981D61A0E9076BEA4DEB184DD909A095">reserve_exact</h3>
+      <p>
+        public void reserve_exact(
+        <a href="../../sus/num/usize.html">usize</a>
+         additional)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#175">175</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Reserves the minimum capacity for at least additional more elements to be inserted in the given Vec&lt;T&gt;. Unlike reserve, this will not deliberately over-allocate to speculatively avoid frequent allocations. After calling reserve_exact, capacity will be greater than or equal to self.len() + additional. Does nothing if the capacity is already sufficient.</p>
+          <p> Note that the allocator may give the collection more space than it requests. Therefore, capacity can not be relied upon to be precisely minimal. Prefer reserve if future insertions are expected.</p>
+          <p> # Panics Panics if the new capacity exceeds isize::MAX bytes.</p>
+        </div>
+      </div>
+      <h3 id="711DA836225AAC60780226F39C816B2741932E0D">grow_to_exact</h3>
+      <p>
+        public void grow_to_exact(
+        <a href="../../sus/num/usize.html">usize</a>
+         cap)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#189">189</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Increase the capacity of the vector (the total number of elements that the vector can hold without requiring reallocation) to `cap`, if there is not already room. Does nothing if capacity is already sufficient.</p>
+          <p> This is similar to std::vector::reserve().</p>
+          <p> # Panics Panics if the new capacity exceeds isize::MAX() bytes.</p>
+        </div>
+      </div>
+      <h3 id="645400B1B32AFAAF3E6A4149F4DF5DBFE68257D3">len</h3>
+      <p>
+        public 
+        <a href="../../sus/num/usize.html">usize</a>
+         len()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#219">219</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the number of elements in the vector.</p>
+        </div>
+      </div>
+      <h3 id="864E99EF49F9AD845F9758D68F91CC5328219EC7">capacity</h3>
+      <p>
+        public 
+        <a href="../../sus/num/usize.html">usize</a>
+         capacity()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#225">225</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the number of elements there is space allocated for in the vector.</p>
+          <p> This may be larger than the number of elements present, which is returned by `len()`.</p>
+        </div>
+      </div>
+      <h3 id="091F2502E6829F3914FD34DEBCB383C4F347BED4">pop</h3>
+      <p>public Option&lt;T&gt; pop()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#229">229</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Removes the last element from a vector and returns it, or None if it is empty.</p>
+        </div>
+      </div>
+      <h3 id="60908BC65FDFEFE48DAC9DA1EBD3E0F4E10147BF">push</h3>
+      <p>public void push(T t)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#245">245</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Appends an element to the back of the vector.</p>
+          <p> # Panics Panics if the new capacity exceeds isize::MAX bytes.</p>
+        </div>
+      </div>
+      <h3 id="C7B7013FDB838138BDA58F5FC66F8F1F87F8B852">get_ref</h3>
+      <p>
+        public Option&lt;const T &amp;&gt; get_ref(
+        <a href="../../sus/num/usize.html">usize</a>
+         i)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#255">255</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a const reference to the element at index `i`.</p>
+        </div>
+      </div>
+      <h3 id="97EE4499D57EDF1E67C8400434A8385F903A58DE">get</h3>
+      <p>
+        public Option&lt;const T &amp;&gt; get(
+        <a href="../../sus/num/usize.html">usize</a>
+         i)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#260">260</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="A0D0A2AC9755D48D64D879ABF9980BCF23E817F9">get_mut</h3>
+      <p>
+        public Option&lt;T &amp;&gt; get_mut(
+        <a href="../../sus/num/usize.html">usize</a>
+         i)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#263">263</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a mutable reference to the element at index `i`.</p>
+        </div>
+      </div>
+      <h3 id="9889BDAFCE6F01DB2989B4FC8DAC953F5093C9D8">get_unchecked</h3>
+      <p>
+        public const T &amp; get_unchecked(
+        <a href="../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , 
+        <a href="../../sus/num/usize.html">usize</a>
+         i)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#275">275</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a const reference to the element at index `i`.</p>
+          <p> # Safety The index `i` must be inside the bounds of the array or Undefined Behaviour results.</p>
+        </div>
+      </div>
+      <h3 id="9E3100732601B66E6042305417921196ACD571A9">get_unchecked</h3>
+      <p>
+        public const T &amp; get_unchecked(
+        <a href="../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , 
+        <a href="../../sus/num/usize.html">usize</a>
+         i)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#279">279</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="61187521A52AA8976621E9376F3830C388F6AFBF">get_unchecked_mut</h3>
+      <p>
+        public T &amp; get_unchecked_mut(
+        <a href="../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , 
+        <a href="../../sus/num/usize.html">usize</a>
+         i)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#287">287</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a mutable reference to the element at index `i`.</p>
+          <p> # Safety The index `i` must be inside the bounds of the array or Undefined Behaviour results.</p>
+        </div>
+      </div>
+      <h3 id="10C92A61F49DC8B955E463E78A176EB0902C1A32">operator[]</h3>
+      <p>
+        public const T &amp; operator[](
+        <a href="../../sus/num/usize.html">usize</a>
+         i)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#292">292</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="FF64F3B53DFC3913805BFDCA2DDC41CE3AE33018">operator[]</h3>
+      <p>
+        public const T &amp; operator[](
+        <a href="../../sus/num/usize.html">usize</a>
+         i)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#296">296</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="CBBB9E6E33216BC65256D93598C3FFD016BFC224">operator[]</h3>
+      <p>
+        public T &amp; operator[](
+        <a href="../../sus/num/usize.html">usize</a>
+         i)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#298">298</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="A9D95970905BA89A2E10407B6E4C059D743BA982">as_ptr</h3>
+      <p>public const T * as_ptr()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#307">307</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a const pointer to the first element in the vector.</p>
+          <p> # Panics Panics if the vector&apos;s capacity is zero.</p>
+        </div>
+      </div>
+      <h3 id="568DAED4936A5450B44F40B9C45CA297DD57BD55">as_ptr</h3>
+      <p>public const T * as_ptr()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#311">311</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="4980210248DC16270211195C408ECD08299C9B8D">as_mut_ptr</h3>
+      <p>public T * as_mut_ptr()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#317">317</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a mutable pointer to the first element in the vector.</p>
+          <p> # Panics Panics if the vector&apos;s capacity is zero.</p>
+        </div>
+      </div>
+      <h3 id="82A81D4D21E467AFB5BC72682AB16CAA089D85CA">as_ref</h3>
+      <p>public Slice&lt;const T&gt; as_ref()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#324">324</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a slice that references all the elements of the vector as const references.</p>
+        </div>
+      </div>
+      <h3 id="7BE2469BBB01A596CCAAAA7AC5355076DCD27A66">as_ref</h3>
+      <p>public Slice&lt;const T&gt; as_ref()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#328">328</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="D2834F96517B7C7126E2BB57FB3CC0BD7ABA6566">as_mut</h3>
+      <p>public Slice&lt;T&gt; as_mut()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#332">332</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a slice that references all the elements of the vector as mutable references.</p>
+        </div>
+      </div>
+      <h3 id="4B383DCD2A7E3349E32E066C6759C6665B86F619">iter</h3>
+      <p>public ::sus::iter::Iterator&lt;SliceIter&lt;T&gt; &gt; iter()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#339">339</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns an iterator over all the elements in the array, visited in the same order they appear in the array. The iterator gives const access to each element.</p>
+        </div>
+      </div>
+      <h3 id="DF7B010E25E275333840C272215022A1C1399B76">iter</h3>
+      <p>public ::sus::iter::Iterator&lt;SliceIter&lt;T&gt; &gt; iter()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#342">342</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <h3 id="8EEC1CF1A816192326CABAEE1ED80A47FA8BECFA">iter_mut</h3>
+      <p>public ::sus::iter::Iterator&lt;SliceIterMut&lt;T&gt; &gt; iter_mut()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#347">347</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns an iterator over all the elements in the array, visited in the same order they appear in the array. The iterator gives mutable access to each element.</p>
+        </div>
+      </div>
+      <h3 id="A3B8CCF39948A1B4B09C0A9F2E02977D54DA84FD">into_iter</h3>
+      <p>public ::sus::iter::Iterator&lt;VecIntoIter&lt;T&gt; &gt; into_iter()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h#353">353</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./containers/vec.h">vec.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Converts the array into an iterator that consumes the array and returns each element in the same order they appear in the array.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#762A3147B478B358E2D9709EB081F71FD5AC1EAF">Vec&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#719CD14996443159386F730EC68669FDA677FD5D">with_capacity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57C5593E0BCBD2E1F9A85B02E5F0F9631DF74F8A">from_iter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A688EE42D1145F2BDC3FFADC80DA48A0370AC95F">~Vec&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45A6D1DB06791C335D92A1613D6D8F00D7E1258D">Vec&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B18A3C3BCC22D76D177F05C605131D1104391E5">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#677B8B6D6FE073C290749942CFC1EC528D1424C5">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A011449B5EF8DA2F6782D1A81F523F54BCAD316C">clone_from</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DFD8F847C82290D542F6DB5FE3F46AC656242DC">clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77CBE6428B17591B19753340BE0D7BE6F5717AB7">reserve</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B8FDE21981D61A0E9076BEA4DEB184DD909A095">reserve_exact</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#711DA836225AAC60780226F39C816B2741932E0D">grow_to_exact</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#645400B1B32AFAAF3E6A4149F4DF5DBFE68257D3">len</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#864E99EF49F9AD845F9758D68F91CC5328219EC7">capacity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#091F2502E6829F3914FD34DEBCB383C4F347BED4">pop</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#60908BC65FDFEFE48DAC9DA1EBD3E0F4E10147BF">push</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7B7013FDB838138BDA58F5FC66F8F1F87F8B852">get_ref</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97EE4499D57EDF1E67C8400434A8385F903A58DE">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0D0A2AC9755D48D64D879ABF9980BCF23E817F9">get_mut</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9889BDAFCE6F01DB2989B4FC8DAC953F5093C9D8">get_unchecked</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9E3100732601B66E6042305417921196ACD571A9">get_unchecked</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61187521A52AA8976621E9376F3830C388F6AFBF">get_unchecked_mut</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10C92A61F49DC8B955E463E78A176EB0902C1A32">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF64F3B53DFC3913805BFDCA2DDC41CE3AE33018">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CBBB9E6E33216BC65256D93598C3FFD016BFC224">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9D95970905BA89A2E10407B6E4C059D743BA982">as_ptr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#568DAED4936A5450B44F40B9C45CA297DD57BD55">as_ptr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4980210248DC16270211195C408ECD08299C9B8D">as_mut_ptr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82A81D4D21E467AFB5BC72682AB16CAA089D85CA">as_ref</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BE2469BBB01A596CCAAAA7AC5355076DCD27A66">as_ref</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2834F96517B7C7126E2BB57FB3CC0BD7ABA6566">as_mut</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B383DCD2A7E3349E32E066C6759C6665B86F619">iter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF7B010E25E275333840C272215022A1C1399B76">iter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8EEC1CF1A816192326CABAEE1ED80A47FA8BECFA">iter_mut</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3B8CCF39948A1B4B09C0A9F2E02977D54DA84FD">into_iter</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

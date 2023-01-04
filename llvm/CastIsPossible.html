@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct CastIsPossible</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct CastIsPossible</h1>
+    <p>Defined at line 265 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    <div>
+      <div>
+        <p> Needed for optional unwrapping. This could be implemented with isa_impl, but we want to implement things in the new method and move old implementations over. In fact, some of the isa_impl templates should be moved over to CastIsPossible.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2E9883118D159F736A5EBDF1091503F6FAA852A2">isPossible</h3>
+      <p>public _Bool isPossible(const std::optional&lt;From&gt; &amp; f)</p>
+      <p>Defined at line 267 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2E9883118D159F736A5EBDF1091503F6FAA852A2">isPossible</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct CastIsPossible</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct CastIsPossible</h1>
+    <p>Defined at line 253 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    <div>
+      <div>
+        <p> This struct provides a way to check if a given cast is possible. It provides a static function called isPossible that is used to check if a cast can be performed. It should be overridden like this:</p>
+        <p> template&lt;&gt; struct CastIsPossible&lt;foo, bar&gt; {   static inline bool isPossible(const bar &amp;b) {     return bar.isFoo();   } };</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="73A1D84641116C00C3628768E2101193E96EA366">isPossible</h3>
+      <p>public _Bool isPossible(const From &amp; f)</p>
+      <p>Defined at line 254 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#73A1D84641116C00C3628768E2101193E96EA366">isPossible</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct CastIsPossible</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct CastIsPossible</h1>
+    <p>Defined at line 277 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    <div>
+      <div>
+        <p> Upcasting (from derived to base) and casting from a type to itself should always be possible.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7F7D662587E99E22733694E71900CE76C8D78749">isPossible</h3>
+      <p>public _Bool isPossible(const From &amp; f)</p>
+      <p>Defined at line 280 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7F7D662587E99E22733694E71900CE76C8D78749">isPossible</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

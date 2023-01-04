@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class NonNullAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class NonNullAttr</h1>
+    <p>Defined at line 7081 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableParamAttr.html">InheritableParamAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="33F0F4A8A20CA2B1AE044BFBC7BF1EAE206660B8">CreateImplicit</h3>
+      <p>public NonNullAttr * CreateImplicit(ASTContext &amp; Ctx, ParamIdx * Args, unsigned int ArgsSize, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="81C7B7865F661ECB79BC79F9A623FA2136BCA6C7">Create</h3>
+      <p>public NonNullAttr * Create(ASTContext &amp; Ctx, ParamIdx * Args, unsigned int ArgsSize, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="440908C41533D3930D1C4C73B29E8EE41C426D14">CreateImplicit</h3>
+      <p>
+        public NonNullAttr * CreateImplicit(ASTContext &amp; Ctx, ParamIdx * Args, unsigned int ArgsSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="25A64CD96BA52A52F47DFCC93F07E6D80547D3BB">Create</h3>
+      <p>
+        public NonNullAttr * Create(ASTContext &amp; Ctx, ParamIdx * Args, unsigned int ArgsSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="A8D587FA6A734E7044C15C1EDF73AFAAABEF0FB6">NonNullAttr</h3>
+      <p>public void NonNullAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, ParamIdx * Args, unsigned int ArgsSize)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="EE2301E078A111466C4B0E0339BFC69017E43D1E">NonNullAttr</h3>
+      <p>public void NonNullAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="A13DB6A984A3F8F3ADF703FC7B159D5D1D2A4EF3">clone</h3>
+      <p>public NonNullAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="4F6ACFF193BAC94A2451D5D6BEB912DBD6B04C82">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="C4EB4489F4E51917967C5B9BCF5F3EF438F7EC7C">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="53EF3F8AA4426DD8378F3D592775506C7ABB83BE">args_begin</h3>
+      <p>public args_iterator args_begin()</p>
+      <p>Defined at line 7112 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="BC9FE2F94719CF31F211682F9B62DCCB7B158D56">args_end</h3>
+      <p>public args_iterator args_end()</p>
+      <p>Defined at line 7113 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="69D8BFA983D6EA5E4E9534937F0A7ACA26D6FB50">args_size</h3>
+      <p>public unsigned int args_size()</p>
+      <p>Defined at line 7114 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="B2BE36E8E9A20C07BE80AAF830247427A82379DD">args</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         args()
+      </p>
+      <p>Defined at line 7115 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="3EEDD79E273B2AA9C3CFD9B28D62316EEB8F5B96">isNonNull</h3>
+      <p>public _Bool isNonNull(unsigned int IdxAST)</p>
+      <p>Defined at line 7119 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="A8C7302C66B4DC0564F1034566F8763E648EE026">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 7128 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="D60C77B59FB95AD41717CCAC929DB193AD75256A">enum Spelling</h3>
+      <ul>
+        <li>GNU_nonnull</li>
+        <li>CXX11_gnu_nonnull</li>
+        <li>C2x_gnu_nonnull</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 7086 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#33F0F4A8A20CA2B1AE044BFBC7BF1EAE206660B8">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81C7B7865F661ECB79BC79F9A623FA2136BCA6C7">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#440908C41533D3930D1C4C73B29E8EE41C426D14">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25A64CD96BA52A52F47DFCC93F07E6D80547D3BB">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8D587FA6A734E7044C15C1EDF73AFAAABEF0FB6">NonNullAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE2301E078A111466C4B0E0339BFC69017E43D1E">NonNullAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A13DB6A984A3F8F3ADF703FC7B159D5D1D2A4EF3">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F6ACFF193BAC94A2451D5D6BEB912DBD6B04C82">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4EB4489F4E51917967C5B9BCF5F3EF438F7EC7C">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53EF3F8AA4426DD8378F3D592775506C7ABB83BE">args_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC9FE2F94719CF31F211682F9B62DCCB7B158D56">args_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69D8BFA983D6EA5E4E9534937F0A7ACA26D6FB50">args_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2BE36E8E9A20C07BE80AAF830247427A82379DD">args</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EEDD79E273B2AA9C3CFD9B28D62316EEB8F5B96">isNonNull</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8C7302C66B4DC0564F1034566F8763E648EE026">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D60C77B59FB95AD41717CCAC929DB193AD75256A">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

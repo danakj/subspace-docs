@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TemplateParmPosition</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TemplateParmPosition</h1>
+    <p>Defined at line 1158 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> Defines the position of a template parameter within a template parameter list.</p>
+        <p> Because template parameter can be listed sequentially for out-of-line template members, each template parameter is given a Depth - the nesting of template parameter scopes - and a Position - the occurrence within the parameter list. This class is inheritedly privately by different kinds of template parameters and is not part of the Decl hierarchy. Just a facility.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected unsigned int Depth</li>
+      <li>protected unsigned int Position</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="459D8355C8729180453E234594C32E5FB19B8526">TemplateParmPosition</h3>
+      <p>protected void TemplateParmPosition(unsigned int D, unsigned int P)</p>
+      <p>Defined at line 1167 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="A69E05376BB9E0F31DCD7368A18278A7344752F7">TemplateParmPosition</h3>
+      <p>public void TemplateParmPosition()</p>
+      <p>Defined at line 1177 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="A8F200C092C4D69EC4A747939E54C01939B8113D">getDepth</h3>
+      <p>public unsigned int getDepth()</p>
+      <p>Defined at line 1180 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Get the nesting depth of the template parameter.</p>
+        </div>
+      </div>
+      <h3 id="766878BC662365AA728ACECDFB08A544A73D9A3B">setDepth</h3>
+      <p>public void setDepth(unsigned int D)</p>
+      <p>Defined at line 1181 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="AC8470BB47F327CC6FA7E1192696BEB20083671A">getPosition</h3>
+      <p>public unsigned int getPosition()</p>
+      <p>Defined at line 1188 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Get the position of the template parameter within its parameter list.</p>
+        </div>
+      </div>
+      <h3 id="1C6111E5F313E88525A6BFDA74DA3F54C4D11A06">setPosition</h3>
+      <p>public void setPosition(unsigned int P)</p>
+      <p>Defined at line 1189 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="D84CC2FB2EC198F523B3F5F063BAD3CAA092BAD1">getIndex</h3>
+      <p>public unsigned int getIndex()</p>
+      <p>Defined at line 1196 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Get the index of the template parameter within its parameter list.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="C105A8A0497D8F1ED2F31AEC53D9D97C1B802B01">enum </h3>
+      <ul>
+        <li>DepthWidth</li>
+        <li>PositionWidth</li>
+      </ul>
+      <p>Defined at line 1160 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#459D8355C8729180453E234594C32E5FB19B8526">TemplateParmPosition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A69E05376BB9E0F31DCD7368A18278A7344752F7">TemplateParmPosition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8F200C092C4D69EC4A747939E54C01939B8113D">getDepth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#766878BC662365AA728ACECDFB08A544A73D9A3B">setDepth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC8470BB47F327CC6FA7E1192696BEB20083671A">getPosition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C6111E5F313E88525A6BFDA74DA3F54C4D11A06">setPosition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D84CC2FB2EC198F523B3F5F063BAD3CAA092BAD1">getIndex</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C105A8A0497D8F1ED2F31AEC53D9D97C1B802B01">@nonymous_enum_C105A8A0497D8F1ED2F31AEC53D9D97C1B802B01</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

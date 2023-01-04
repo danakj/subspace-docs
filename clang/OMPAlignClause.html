@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPAlignClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPAlignClause</h1>
+    <p>Defined at line 387 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents the &apos;align&apos; clause in the &apos;#pragma omp allocate&apos; directive.</p>
+        <p> In this example directive &apos;#pragma omp allocate&apos; has simple &apos;allocator&apos; clause with the allocator &apos;omp_default_mem_alloc&apos; and align clause with value of 8.</p>
+      </div>
+    </div>
+    <p>Inherits from OMPOneStmtClause&lt;llvm::omp::OMPC_align, OMPClause&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="21A82F944EDD2627E78167B8C908CAB94D9605EC">Create</h3>
+      <p>
+        public OMPAlignClause * Create(const ASTContext &amp; C, Expr * A, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <div>
+        <div>
+          <p> Build &apos;align&apos; clause with the given alignment</p>
+        </div>
+      </div>
+      <h3 id="20042C6517E71FD1FD60A931B12E8AECEAA0037F">getAlignment</h3>
+      <p>public Expr * getAlignment()</p>
+      <p>Defined at line 420 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns alignment</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#21A82F944EDD2627E78167B8C908CAB94D9605EC">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#20042C6517E71FD1FD60A931B12E8AECEAA0037F">getAlignment</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

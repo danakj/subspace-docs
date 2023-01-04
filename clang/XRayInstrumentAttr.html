@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class XRayInstrumentAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class XRayInstrumentAttr</h1>
+    <p>Defined at line 13025 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="93DDFF4B1D280CEA39E3EB9D29C7B4D843EEC29F">CreateImplicit</h3>
+      <p>public XRayInstrumentAttr * CreateImplicit(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="DD64FA931E1397DB4042B4E903FE604AB03968B1">Create</h3>
+      <p>public XRayInstrumentAttr * Create(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="A9097F246E4CD4695516DBF8FDE1C41EECCCA376">CreateImplicit</h3>
+      <p>
+        public XRayInstrumentAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax, 
+        <a href="../clang/XRayInstrumentAttr/Spelling.html">Spelling</a>
+         S)
+      </p>
+      <h3 id="B415FEF506D5A088776D1F13D69D63C35A58C177">Create</h3>
+      <p>
+        public XRayInstrumentAttr * Create(ASTContext &amp; Ctx, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax, 
+        <a href="../clang/XRayInstrumentAttr/Spelling.html">Spelling</a>
+         S)
+      </p>
+      <h3 id="0785CF86BDAAA4CEBD9998B10E02164562B658A4">XRayInstrumentAttr</h3>
+      <p>public void XRayInstrumentAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="4C14AB6CD607DA92413EFAF1BBE2B816B38AA243">clone</h3>
+      <p>public XRayInstrumentAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="24E2AA68756EEC2F4731CC5050D51C5B248708A2">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="AAAE5E4CE762EA39A1F6536AC54E8021A0061812">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="58D2C05F19478A0EF76F31C96ADB8D99F658F964">getSemanticSpelling</h3>
+      <p>
+        public 
+        <a href="../clang/XRayInstrumentAttr/Spelling.html">Spelling</a>
+         getSemanticSpelling()
+      </p>
+      <h3 id="1FF32C9CC66593BB3CCA806679B64BDEDF401FA6">alwaysXRayInstrument</h3>
+      <p>public _Bool alwaysXRayInstrument()</p>
+      <p>Defined at line 13053 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="A2CFE3919322E3E121D2D71798E4936B53AD076C">neverXRayInstrument</h3>
+      <p>public _Bool neverXRayInstrument()</p>
+      <p>Defined at line 13056 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="737365A70F9FC3C425837DB5347BE3CC99187538">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 13061 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="834F19F91839E4F8C762B41A276DDA58A4E52BA1">enum Spelling</h3>
+      <ul>
+        <li>GNU_xray_always_instrument</li>
+        <li>CXX11_clang_xray_always_instrument</li>
+        <li>C2x_clang_xray_always_instrument</li>
+        <li>GNU_xray_never_instrument</li>
+        <li>CXX11_clang_xray_never_instrument</li>
+        <li>C2x_clang_xray_never_instrument</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 13027 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#93DDFF4B1D280CEA39E3EB9D29C7B4D843EEC29F">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD64FA931E1397DB4042B4E903FE604AB03968B1">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9097F246E4CD4695516DBF8FDE1C41EECCCA376">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B415FEF506D5A088776D1F13D69D63C35A58C177">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0785CF86BDAAA4CEBD9998B10E02164562B658A4">XRayInstrumentAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C14AB6CD607DA92413EFAF1BBE2B816B38AA243">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24E2AA68756EEC2F4731CC5050D51C5B248708A2">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AAAE5E4CE762EA39A1F6536AC54E8021A0061812">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58D2C05F19478A0EF76F31C96ADB8D99F658F964">getSemanticSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FF32C9CC66593BB3CCA806679B64BDEDF401FA6">alwaysXRayInstrument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2CFE3919322E3E121D2D71798E4936B53AD076C">neverXRayInstrument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#737365A70F9FC3C425837DB5347BE3CC99187538">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#834F19F91839E4F8C762B41A276DDA58A4E52BA1">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

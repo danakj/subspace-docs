@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ClassTemplateSpecializationDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ClassTemplateSpecializationDecl</h1>
+    <p>Defined at line 1826 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> Represents a class template specialization, which refers to a class template with a given set of template arguments.</p>
+        <p> Class template specializations represent both explicit specialization of class templates, as in the example below, and implicit instantiations of class templates.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="CXXRecordDecl.html">CXXRecordDecl</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0411D981FC084F61EF121B2140A251C5F1FF621A">ClassTemplateSpecializationDecl</h3>
+      <p>
+        protected void ClassTemplateSpecializationDecl(ASTContext &amp; Context, 
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, 
+        <a href="TagTypeKind.html">TagTypeKind</a>
+         TK, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, ClassTemplateDecl * SpecializedTemplate, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, ClassTemplateSpecializationDecl * PrevDecl)
+      </p>
+      <h3 id="A653ED0744821FFD5896C41B680FD45CECB1768B">ClassTemplateSpecializationDecl</h3>
+      <p>
+        protected void ClassTemplateSpecializationDecl(ASTContext &amp; C, 
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK)
+      </p>
+      <h3 id="5ACDF7613292A4B1F0CE41042362A6C517CFB252">Create</h3>
+      <p>
+        public ClassTemplateSpecializationDecl * Create(ASTContext &amp; Context, 
+        <a href="TagTypeKind.html">TagTypeKind</a>
+         TK, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, ClassTemplateDecl * SpecializedTemplate, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, ClassTemplateSpecializationDecl * PrevDecl)
+      </p>
+      <h3 id="F2A68003DAF9E02E014AE9E9D9909ED690720100">CreateDeserialized</h3>
+      <p>public ClassTemplateSpecializationDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="E743E66AF5FC3A2F9CF7CADB0A38E8631CB6C97A">getNameForDiagnostic</h3>
+      <p>public void getNameForDiagnostic(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy, _Bool Qualified)</p>
+      <h3 id="3118427CB805B9E0117E2AF3C6828D849ACF1FE5">getMostRecentDecl</h3>
+      <p>public ClassTemplateSpecializationDecl * getMostRecentDecl()</p>
+      <p>Defined at line 1904 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> FIXME: This is broken. CXXRecordDecl::getMostRecentDecl() returns a different &quot;most recent&quot; declaration from this function for the same declaration, because we don&apos;t override getMostRecentDeclImpl(). But it&apos;s not clear that we should override that, because the most recent declaration as a CXXRecordDecl sometimes is the injected-class-name.</p>
+        </div>
+      </div>
+      <h3 id="7FBCC0C13C95023AA7C65BB70799BC4D9191B5E7">getSpecializedTemplate</h3>
+      <p>public ClassTemplateDecl * getSpecializedTemplate()</p>
+      <div>
+        <div>
+          <p> Retrieve the template that this specialization specializes.</p>
+        </div>
+      </div>
+      <h3 id="18D1B8D466B9DE981C7A0978896DDA9B42994A38">getTemplateArgs</h3>
+      <p>public const TemplateArgumentList &amp; getTemplateArgs()</p>
+      <p>Defined at line 1914 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the template arguments of the class template specialization.</p>
+        </div>
+      </div>
+      <h3 id="1823F44246B017B089C08FFEA3603D1398008A80">setTemplateArgs</h3>
+      <p>public void setTemplateArgs(TemplateArgumentList * Args)</p>
+      <p>Defined at line 1918 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="EA9EB32F710491037075E7BCAC4D56751D901246">getSpecializationKind</h3>
+      <p>
+        public 
+        <a href="TemplateSpecializationKind.html">TemplateSpecializationKind</a>
+         getSpecializationKind()
+      </p>
+      <p>Defined at line 1924 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Determine the kind of specialization that this declaration represents.</p>
+        </div>
+      </div>
+      <h3 id="20E4EE699FE67F4BA0539698E5CCC65E9505CD44">isExplicitSpecialization</h3>
+      <p>public _Bool isExplicitSpecialization()</p>
+      <p>Defined at line 1928 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="49C573B82C54B4337563ABED7BA2F61FADEA5073">isClassScopeExplicitSpecialization</h3>
+      <p>public _Bool isClassScopeExplicitSpecialization()</p>
+      <p>Defined at line 1941 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Is this an explicit specialization at class scope (within the class that owns the primary template)? For example:</p>
+        </div>
+      </div>
+      <h3 id="47393A2FE70F8DA8F5C8D7C064AB935C52EABE5F">isExplicitInstantiationOrSpecialization</h3>
+      <p>public _Bool isExplicitInstantiationOrSpecialization()</p>
+      <p>Defined at line 1949 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> True if this declaration is an explicit specialization, explicit instantiation declaration, or explicit instantiation definition.</p>
+        </div>
+      </div>
+      <h3 id="1DBE44D2B87AF4B74266538F35F86DF75D1757EE">setSpecializedTemplate</h3>
+      <p>public void setSpecializedTemplate(ClassTemplateDecl * Specialized)</p>
+      <p>Defined at line 1954 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="FEA011FF798599A2322706AAF65EF3FE22804674">setSpecializationKind</h3>
+      <p>
+        public void setSpecializationKind(
+        <a href="TemplateSpecializationKind.html">TemplateSpecializationKind</a>
+         TSK)
+      </p>
+      <p>Defined at line 1958 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="D94ED6CE814D5387BF37E9D3B2DB7B523C0D91DD">getPointOfInstantiation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getPointOfInstantiation()
+      </p>
+      <p>Defined at line 1963 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Get the point of instantiation (if any), or null if none.</p>
+        </div>
+      </div>
+      <h3 id="628DEB56B89525EBDE6A3B917D05F08F55EC1D12">setPointOfInstantiation</h3>
+      <p>
+        public void setPointOfInstantiation(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1967 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="64F515528E5F7E1604A28758EF60CEE9672990F7">getInstantiatedFrom</h3>
+      <p>
+        public 
+        <a href="../llvm/PointerUnion.html">PointerUnion</a>
+         getInstantiatedFrom()
+      </p>
+      <p>Defined at line 1976 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> If this class template specialization is an instantiation of a template (rather than an explicit specialization), return the class template or class template partial specialization from which it was instantiated.</p>
+        </div>
+      </div>
+      <h3 id="502B496B6DB0A59192E5C9702AAF3169982C611A">getSpecializedTemplateOrPartial</h3>
+      <p>
+        public 
+        <a href="../llvm/PointerUnion.html">PointerUnion</a>
+         getSpecializedTemplateOrPartial()
+      </p>
+      <p>Defined at line 1988 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the class template or class template partial specialization which was specialized by this.</p>
+        </div>
+      </div>
+      <h3 id="623D03F308F3D5B5CE1AB9CF1DDC5F8359A42FC5">getTemplateInstantiationArgs</h3>
+      <p>public const TemplateArgumentList &amp; getTemplateInstantiationArgs()</p>
+      <p>Defined at line 2009 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the set of template arguments that should be used to instantiate members of the class template or class template partial specialization from which this class template specialization was instantiated.</p>
+        </div>
+      </div>
+      <h3 id="7E5FDEEA1A25B625DA92D13BADD1F88AE6B9ADBA">setInstantiationOf</h3>
+      <p>public void setInstantiationOf(ClassTemplatePartialSpecializationDecl * PartialSpec, const TemplateArgumentList * TemplateArgs)</p>
+      <p>Defined at line 2020 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Note that this class template specialization is actually an instantiation of the given class template partial specialization whose template arguments have been deduced.</p>
+        </div>
+      </div>
+      <h3 id="3963CC6110C39A7F8E804A532EE5A122EE9A56B5">setInstantiationOf</h3>
+      <p>public void setInstantiationOf(ClassTemplateDecl * TemplDecl)</p>
+      <p>Defined at line 2032 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Note that this class template specialization is an instantiation of the given class template.</p>
+        </div>
+      </div>
+      <h3 id="7B3B7ED7E7A700E2CC8E407728204A062A205857">setTypeAsWritten</h3>
+      <p>public void setTypeAsWritten(TypeSourceInfo * T)</p>
+      <p>Defined at line 2040 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Sets the type of this specialization as it was written by the user. This will be a class template specialization type.</p>
+        </div>
+      </div>
+      <h3 id="30CC1F103F3EE3E636B55B719FAEFCA555A06B76">getTypeAsWritten</h3>
+      <p>public TypeSourceInfo * getTypeAsWritten()</p>
+      <p>Defined at line 2048 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Gets the type of this specialization as it was written by the user, if it was so written.</p>
+        </div>
+      </div>
+      <h3 id="E90C4BE57DC6343D76BA9C684E141B0DF2FAF790">getExternLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExternLoc()
+      </p>
+      <p>Defined at line 2053 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Gets the location of the extern keyword, if present.</p>
+        </div>
+      </div>
+      <h3 id="9EDA89D1FB4A6546BEC48AC059B979C3DCB5275B">setExternLoc</h3>
+      <p>
+        public void setExternLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 2058 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Sets the location of the extern keyword.</p>
+        </div>
+      </div>
+      <h3 id="CE75216B17A70C5F67E18052E47B488718A605A6">setTemplateKeywordLoc</h3>
+      <p>
+        public void setTemplateKeywordLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 2065 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Sets the location of the template keyword.</p>
+        </div>
+      </div>
+      <h3 id="9EBD239C6548C1C55832813FD5DCC82C33016E76">getTemplateKeywordLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTemplateKeywordLoc()
+      </p>
+      <p>Defined at line 2072 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Gets the location of the template keyword, if present.</p>
+        </div>
+      </div>
+      <h3 id="D61F065CF729A2BEC0A118F9C6875B174F5537E3">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <h3 id="59F21A389CB3FA51E4D1CA3CFFB6F505F0EC0D95">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 2078 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="78FBD95CC98E83BA7180C5AEB69CDCACF0F491B3">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         TemplateArgs, ASTContext &amp; Context)
+      </p>
+      <p>Defined at line 2082 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="D7A578CFD07A21F078979B21803B1A1D2CB7DF7B">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 2090 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="CACE1EBFDDFD256BCF9F0C11E5B659D23EAC9F65">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 2092 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0411D981FC084F61EF121B2140A251C5F1FF621A">ClassTemplateSpecializationDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A653ED0744821FFD5896C41B680FD45CECB1768B">ClassTemplateSpecializationDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5ACDF7613292A4B1F0CE41042362A6C517CFB252">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2A68003DAF9E02E014AE9E9D9909ED690720100">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E743E66AF5FC3A2F9CF7CADB0A38E8631CB6C97A">getNameForDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3118427CB805B9E0117E2AF3C6828D849ACF1FE5">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FBCC0C13C95023AA7C65BB70799BC4D9191B5E7">getSpecializedTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#18D1B8D466B9DE981C7A0978896DDA9B42994A38">getTemplateArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1823F44246B017B089C08FFEA3603D1398008A80">setTemplateArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA9EB32F710491037075E7BCAC4D56751D901246">getSpecializationKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#20E4EE699FE67F4BA0539698E5CCC65E9505CD44">isExplicitSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49C573B82C54B4337563ABED7BA2F61FADEA5073">isClassScopeExplicitSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47393A2FE70F8DA8F5C8D7C064AB935C52EABE5F">isExplicitInstantiationOrSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1DBE44D2B87AF4B74266538F35F86DF75D1757EE">setSpecializedTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FEA011FF798599A2322706AAF65EF3FE22804674">setSpecializationKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D94ED6CE814D5387BF37E9D3B2DB7B523C0D91DD">getPointOfInstantiation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#628DEB56B89525EBDE6A3B917D05F08F55EC1D12">setPointOfInstantiation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64F515528E5F7E1604A28758EF60CEE9672990F7">getInstantiatedFrom</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#502B496B6DB0A59192E5C9702AAF3169982C611A">getSpecializedTemplateOrPartial</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#623D03F308F3D5B5CE1AB9CF1DDC5F8359A42FC5">getTemplateInstantiationArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E5FDEEA1A25B625DA92D13BADD1F88AE6B9ADBA">setInstantiationOf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3963CC6110C39A7F8E804A532EE5A122EE9A56B5">setInstantiationOf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B3B7ED7E7A700E2CC8E407728204A062A205857">setTypeAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30CC1F103F3EE3E636B55B719FAEFCA555A06B76">getTypeAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E90C4BE57DC6343D76BA9C684E141B0DF2FAF790">getExternLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EDA89D1FB4A6546BEC48AC059B979C3DCB5275B">setExternLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE75216B17A70C5F67E18052E47B488718A605A6">setTemplateKeywordLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EBD239C6548C1C55832813FD5DCC82C33016E76">getTemplateKeywordLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D61F065CF729A2BEC0A118F9C6875B174F5537E3">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59F21A389CB3FA51E4D1CA3CFFB6F505F0EC0D95">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78FBD95CC98E83BA7180C5AEB69CDCACF0F491B3">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7A578CFD07A21F078979B21803B1A1D2CB7DF7B">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CACE1EBFDDFD256BCF9F0C11E5B659D23EAC9F65">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

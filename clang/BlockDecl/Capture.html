@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Capture</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/BlockDecl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Capture</h1>
+    <p>Defined at line 4321 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    <div>
+      <div>
+        <p> A class which contains all the information about a particular captured value.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FDE874F2BEFBEEDACA2A25D98E19BB8EF59FEC49">Capture</h3>
+      <p>public void Capture(VarDecl * variable, _Bool byRef, _Bool nested, Expr * copy)</p>
+      <p>Defined at line 4336 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="FDC37C118BC4B76DDDB049CBF5105ACDE9932AA2">getVariable</h3>
+      <p>public VarDecl * getVariable()</p>
+      <p>Defined at line 4342 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> The variable being captured.</p>
+        </div>
+      </div>
+      <h3 id="BDD707B5F8B951BC8CE56622A9EC5C2429F457A0">isByRef</h3>
+      <p>public _Bool isByRef()</p>
+      <p>Defined at line 4346 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Whether this is a &quot;by ref&quot; capture, i.e. a capture of a __block variable.</p>
+        </div>
+      </div>
+      <h3 id="F915688DC06CE8982F6997E4D8D43F815C28C5B6">isEscapingByref</h3>
+      <p>public _Bool isEscapingByref()</p>
+      <p>Defined at line 4348 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="1433AF355DDCBA9F6F6855667B7F525C54398E63">isNonEscapingByref</h3>
+      <p>public _Bool isNonEscapingByref()</p>
+      <p>Defined at line 4352 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="16593B29D2CD3DAA2A47771AEB2C887E548BD3DA">isNested</h3>
+      <p>public _Bool isNested()</p>
+      <p>Defined at line 4358 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Whether this is a nested capture, i.e. the variable captured is not from outside the immediately enclosing function/block.</p>
+        </div>
+      </div>
+      <h3 id="E6DFAE444D291DE6BEFB51B28851CC2C7CE57525">hasCopyExpr</h3>
+      <p>public _Bool hasCopyExpr()</p>
+      <p>Defined at line 4360 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="BBAE6B6812568E218529DF91268DCF69D418EF93">getCopyExpr</h3>
+      <p>public Expr * getCopyExpr()</p>
+      <p>Defined at line 4361 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="1403FC5663E2D6327187A6E67E2032C53F6B0947">setCopyExpr</h3>
+      <p>public void setCopyExpr(Expr * e)</p>
+      <p>Defined at line 4362 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FDE874F2BEFBEEDACA2A25D98E19BB8EF59FEC49">Capture</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FDC37C118BC4B76DDDB049CBF5105ACDE9932AA2">getVariable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDD707B5F8B951BC8CE56622A9EC5C2429F457A0">isByRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F915688DC06CE8982F6997E4D8D43F815C28C5B6">isEscapingByref</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1433AF355DDCBA9F6F6855667B7F525C54398E63">isNonEscapingByref</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16593B29D2CD3DAA2A47771AEB2C887E548BD3DA">isNested</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6DFAE444D291DE6BEFB51B28851CC2C7CE57525">hasCopyExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBAE6B6812568E218529DF91268DCF69D418EF93">getCopyExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1403FC5663E2D6327187A6E67E2032C53F6B0947">setCopyExpr</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

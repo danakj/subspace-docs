@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class EndsWithMatcher</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class EndsWithMatcher</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1077">1077</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Implements the polymorphic EndsWith(substring) matcher, which can be used as a Matcher&lt;T&gt; as long as T can be converted to a string.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FD51428788570BC8736FEB0C3F0AE0E74F3A9BDC">EndsWithMatcher&lt;StringType&gt;</h3>
+      <p>public void EndsWithMatcher&lt;StringType&gt;(const StringType &amp; suffix)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1079">1079</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="928989C43F13C4038F85842A017F480F235EE919">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(const internal::StringView &amp; s, MatchResultListener * listener)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1082">1082</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="ABC9F9DC0E69A4BEF997C20E044A10B433F5C5E9">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(CharType * s, MatchResultListener * listener)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1097">1097</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Accepts pointer types, particularly:   const char*   char*   const wchar_t*   wchar_t*</p>
+        </div>
+      </div>
+      <h3 id="6D5B463F7B1EA690A6981FCB4E24170DA5BAA74F">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(const MatcheeStringType &amp; s, MatchResultListener * )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1106">1106</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Matches anything that can convert to StringType.</p>
+          <p> This is a template, not just a plain function with const StringType&amp;, because StringView has some interfering non-explicit constructors.</p>
+        </div>
+      </div>
+      <h3 id="2F396321DE48BFF27C72121F75BEB066D0772DD7">DescribeTo</h3>
+      <p>public void DescribeTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1113">1113</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="CE7884AF1718C23587F41F4FC7F4B3F6B598F41F">DescribeNegationTo</h3>
+      <p>public void DescribeNegationTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#1118">1118</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FD51428788570BC8736FEB0C3F0AE0E74F3A9BDC">EndsWithMatcher&lt;StringType&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#928989C43F13C4038F85842A017F480F235EE919">MatchAndExplain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ABC9F9DC0E69A4BEF997C20E044A10B433F5C5E9">MatchAndExplain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D5B463F7B1EA690A6981FCB4E24170DA5BAA74F">MatchAndExplain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F396321DE48BFF27C72121F75BEB066D0772DD7">DescribeTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE7884AF1718C23587F41F4FC7F4B3F6B598F41F">DescribeNegationTo</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

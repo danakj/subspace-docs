@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class VariableArrayType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class VariableArrayType</h1>
+    <p>Defined at line 3162 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents a C array with a specified size that is not an integer-constant-expression.  For example, &apos;int s[x+foo()]&apos;. Since the size expression is an arbitrary expression, we store it as such.</p>
+        <p> Note: VariableArrayType&apos;s aren&apos;t uniqued (since the expressions aren&apos;t) and should not be: two lexically equivalent variable array types could mean different things, for example, these variables do not have the same type dynamically:</p>
+        <p> void foo(int x) {   int Y[x];   ++x;   int Z[x]; }</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ArrayType.html">ArrayType</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CCA36A4CA2224633A94B24C5957F52250B3E8E8D">getSizeExpr</h3>
+      <p>public Expr * getSizeExpr()</p>
+      <p>Defined at line 3181 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="305BF4F90E1BD3430E489A51926DDBA051BF7F7A">getBracketsRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getBracketsRange()
+      </p>
+      <p>Defined at line 3187 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="08AF8BCF12195487BB0F1B61D637A6C91595E834">getLBracketLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLBracketLoc()
+      </p>
+      <p>Defined at line 3188 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="5F3FF58A8674B0916449B3669EF6A1B0A012895D">getRBracketLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRBracketLoc()
+      </p>
+      <p>Defined at line 3189 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="BAD7006733FAE26A211A7C1F103E23B5CB162854">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 3191 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="3EA47C115F91AC19ACF60E7FC7C9F7E4E65E8CC2">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 3192 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="8CA626CF3B831C811362AC3DCA4F5DB03F68A409">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 3194 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="DF726F0D2F6E0BB08DF444E2BC5C908D57CD2CDD">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 3198 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CCA36A4CA2224633A94B24C5957F52250B3E8E8D">getSizeExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#305BF4F90E1BD3430E489A51926DDBA051BF7F7A">getBracketsRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08AF8BCF12195487BB0F1B61D637A6C91595E834">getLBracketLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F3FF58A8674B0916449B3669EF6A1B0A012895D">getRBracketLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BAD7006733FAE26A211A7C1F103E23B5CB162854">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EA47C115F91AC19ACF60E7FC7C9F7E4E65E8CC2">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CA626CF3B831C811362AC3DCA4F5DB03F68A409">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF726F0D2F6E0BB08DF444E2BC5C908D57CD2CDD">Profile</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace tooling</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/tooling" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace tooling</h1>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="CompileCommand.html">CompileCommand</a>
+      </li>
+      <li>
+        <a href="CompilationDatabase.html">CompilationDatabase</a>
+      </li>
+      <li>
+        <a href="FixedCompilationDatabase.html">FixedCompilationDatabase</a>
+      </li>
+      <li>
+        <a href="ToolAction.html">ToolAction</a>
+      </li>
+      <li>
+        <a href="FrontendActionFactory.html">FrontendActionFactory</a>
+      </li>
+      <li>
+        <a href="SourceFileCallbacks.html">SourceFileCallbacks</a>
+      </li>
+      <li>
+        <a href="ToolInvocation.html">ToolInvocation</a>
+      </li>
+      <li>
+        <a href="ClangTool.html">ClangTool</a>
+      </li>
+      <li>
+        <a href="CommonOptionsParser.html">CommonOptionsParser</a>
+      </li>
+      <li>
+        <a href="ArgumentsAdjustingCompilations.html">ArgumentsAdjustingCompilations</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4AD3D8A24D99F73DBD6D99803DEB02BB0688FEA6">operator==</h3>
+      <p>_Bool operator==(const CompileCommand &amp; LHS, const CompileCommand &amp; RHS)</p>
+      <p>Defined at line 68 of file /usr/lib/llvm-16/include/clang/Tooling/CompilationDatabase.h</p>
+      <h3 id="ABBDD834E599D0064751156367DCE370B69A9E3C">operator!=</h3>
+      <p>_Bool operator!=(const CompileCommand &amp; LHS, const CompileCommand &amp; RHS)</p>
+      <p>Defined at line 74 of file /usr/lib/llvm-16/include/clang/Tooling/CompilationDatabase.h</p>
+      <h3 id="2239E5314FBE17F11A8366FC74D2125AD4C04EE2">transferCompileCommand</h3>
+      <p>
+        <a href="CompileCommand.html">CompileCommand</a>
+         transferCompileCommand(
+        <a href="CompileCommand.html">CompileCommand</a>
+         , 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Filename)
+      </p>
+      <div>
+        <div>
+          <p> Transforms a compile command so that it applies the same configuration to a different file. Most args are left intact, but tweaks may be needed to certain flags (-x, -std etc).</p>
+          <p> The output command will always end in {&quot;--&quot;, Filename}.</p>
+        </div>
+      </div>
+      <h3 id="A087B25403A096A150AC01D19CAA6DE79FDC111F">inferMissingCompileCommands</h3>
+      <p>std::unique_ptr&lt;CompilationDatabase&gt; inferMissingCompileCommands(std::unique_ptr&lt;CompilationDatabase&gt; )</p>
+      <div>
+        <div>
+          <p> Returns a wrapped CompilationDatabase that defers to the provided one, but getCompileCommands() will infer commands for unknown files. The return value of getAllFiles() or getAllCompileCommands() is unchanged. See InterpolatingCompilationDatabase.cpp for details on heuristics.</p>
+        </div>
+      </div>
+      <h3 id="7A9AD85BE6C312E47B9ECA9CFBCD00AB92703AAB">inferTargetAndDriverMode</h3>
+      <p>std::unique_ptr&lt;CompilationDatabase&gt; inferTargetAndDriverMode(std::unique_ptr&lt;CompilationDatabase&gt; Base)</p>
+      <div>
+        <div>
+          <p> Returns a wrapped CompilationDatabase that will add -target and -mode flags to commandline when they can be deduced from argv[0] of commandline returned by underlying database.</p>
+        </div>
+      </div>
+      <h3 id="01A634C70907726127C79C816A79EE8F015D35C9">expandResponseFiles</h3>
+      <p>
+        std::unique_ptr&lt;CompilationDatabase&gt; expandResponseFiles(std::unique_ptr&lt;CompilationDatabase&gt; Base, 
+        <a href="../../llvm/IntrusiveRefCntPtr.html">IntrusiveRefCntPtr</a>
+         FS)
+      </p>
+      <div>
+        <div>
+          <p> Returns a wrapped CompilationDatabase that will expand all rsp(response) files on commandline returned by underlying database.</p>
+        </div>
+      </div>
+      <h3 id="4F838C61BC09B200D5AE03BF2090EF9C560BDF79">getClangSyntaxOnlyAdjuster</h3>
+      <p>
+        <a href="../../std/function.html">function</a>
+         getClangSyntaxOnlyAdjuster()
+      </p>
+      <div>
+        <div>
+          <p> Gets an argument adjuster that converts input command line arguments to the &quot;syntax check only&quot; variant.</p>
+        </div>
+      </div>
+      <h3 id="DFD94EFBB156F1E5348BF5544C8A17B1C3AE7D6E">getClangStripOutputAdjuster</h3>
+      <p>
+        <a href="../../std/function.html">function</a>
+         getClangStripOutputAdjuster()
+      </p>
+      <div>
+        <div>
+          <p> Gets an argument adjuster which removes output-related command line arguments.</p>
+        </div>
+      </div>
+      <h3 id="F70E705CF314821C160A4DE15408E23EBE66DEAA">getClangStripDependencyFileAdjuster</h3>
+      <p>
+        <a href="../../std/function.html">function</a>
+         getClangStripDependencyFileAdjuster()
+      </p>
+      <div>
+        <div>
+          <p> Gets an argument adjuster which removes dependency-file related command line arguments.</p>
+        </div>
+      </div>
+      <h3 id="DC9282A28735E2F67BD10A2C88E0BA5B352F395D">getInsertArgumentAdjuster</h3>
+      <p>
+        <a href="../../std/function.html">function</a>
+         getInsertArgumentAdjuster(const CommandLineArguments &amp; Extra, 
+        <a href="ArgumentInsertPosition.html">ArgumentInsertPosition</a>
+         Pos)
+      </p>
+      <div>
+        <div>
+          <p> Gets an argument adjuster which inserts  arguments in the specified position.</p>
+        </div>
+      </div>
+      <h3 id="48DC7AF926E63F91BBB3931AC89A28765F6FCFBC">getInsertArgumentAdjuster</h3>
+      <p>
+        <a href="../../std/function.html">function</a>
+         getInsertArgumentAdjuster(const char * Extra, 
+        <a href="ArgumentInsertPosition.html">ArgumentInsertPosition</a>
+         Pos)
+      </p>
+      <div>
+        <div>
+          <p> Gets an argument adjuster which inserts an  argument in the specified position.</p>
+        </div>
+      </div>
+      <h3 id="2E3856430657290B5C3EC8553CAD9E5642B97865">getStripPluginsAdjuster</h3>
+      <p>
+        <a href="../../std/function.html">function</a>
+         getStripPluginsAdjuster()
+      </p>
+      <div>
+        <div>
+          <p> Gets an argument adjuster which strips plugin related command line arguments.</p>
+        </div>
+      </div>
+      <h3 id="B13EF0E56B494C3BE687B8BD96E68ACE9C1BFE20">combineAdjusters</h3>
+      <p>
+        <a href="../../std/function.html">function</a>
+         combineAdjusters(
+        <a href="../../std/function.html">function</a>
+         First, 
+        <a href="../../std/function.html">function</a>
+         Second)
+      </p>
+      <div>
+        <div>
+          <p> Gets an argument adjuster which adjusts the arguments in sequence with the  adjuster and then with the  one.</p>
+        </div>
+      </div>
+      <h3 id="EB931FFEB3DC02F3A6F29B0BC67225714DE42D73">getCC1Arguments</h3>
+      <p>const llvm::opt::ArgStringList * getCC1Arguments(DiagnosticsEngine * Diagnostics, driver::Compilation * Compilation)</p>
+      <div>
+        <div>
+          <p> Retrieves the flags of the `-cc1` job in `Compilation` that has only source files as its inputs. Returns nullptr if there are no such jobs or multiple of them. Note that offloading jobs are ignored.</p>
+        </div>
+      </div>
+      <h3 id="247760704BBA8D3E5990430BA2E3F20139728C22">newFrontendActionFactory</h3>
+      <p>
+        <a href="../../std/unique_ptr.html">unique_ptr</a>
+         newFrontendActionFactory()
+      </p>
+      <p>Defined at line 403 of file /usr/lib/llvm-16/include/clang/Tooling/Tooling.h</p>
+      <div>
+        <div>
+          <p> Returns a new FrontendActionFactory for a given type.</p>
+          <p> T must derive from clang::FrontendAction.</p>
+          <p> Example: std::unique_ptr&lt;FrontendActionFactory&gt; Factory =   newFrontendActionFactory&lt;clang::SyntaxOnlyAction&gt;();</p>
+        </div>
+      </div>
+      <h3 id="BDC2B41DD70639FB2794D886C274DA72ACDC261C">newFrontendActionFactory</h3>
+      <p>
+        <a href="../../std/unique_ptr.html">unique_ptr</a>
+         newFrontendActionFactory(FactoryT * ConsumerFactory, SourceFileCallbacks * Callbacks)
+      </p>
+      <p>Defined at line 416 of file /usr/lib/llvm-16/include/clang/Tooling/Tooling.h</p>
+      <div>
+        <div>
+          <p> Returns a new FrontendActionFactory for any type that provides an implementation of newASTConsumer().</p>
+          <p> FactoryT must implement: ASTConsumer *newASTConsumer().</p>
+          <p> Example: struct ProvidesASTConsumers {   std::unique_ptr&lt;clang::ASTConsumer&gt; newASTConsumer(); } Factory; std::unique_ptr&lt;FrontendActionFactory&gt; FactoryAdapter(   newFrontendActionFactory(&amp;Factory));</p>
+        </div>
+      </div>
+      <h3 id="8454C8323A06D22CEB7CE6A879C0B8D043874260">runToolOnCode</h3>
+      <p>
+        _Bool runToolOnCode(
+        <a href="../../std/unique_ptr.html">unique_ptr</a>
+         ToolAction, const Twine &amp; Code, const Twine &amp; FileName, 
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         PCHContainerOps)
+      </p>
+      <div>
+        <div>
+          <p> Runs (and deletes) the tool on &apos;Code&apos; with the -fsyntax-only flag.</p>
+        </div>
+      </div>
+      <h3 id="14E0A14E75C068EEF5BAD5802D4410349D26E667">runToolOnCodeWithArgs</h3>
+      <p>
+        _Bool runToolOnCodeWithArgs(
+        <a href="../../std/unique_ptr.html">unique_ptr</a>
+         ToolAction, const Twine &amp; Code, const std::vector&lt;std::string&gt; &amp; Args, const Twine &amp; FileName, const Twine &amp; ToolName, 
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         PCHContainerOps, const FileContentMappings &amp; VirtualMappedFiles)
+      </p>
+      <div>
+        <div>
+          <p> Runs (and deletes) the tool on &apos;Code&apos; with the -fsyntax-only flag and        with additional other flags.</p>
+        </div>
+      </div>
+      <h3 id="5A801C04E6FF914C799A2064A410BB6439B64F9E">runToolOnCodeWithArgs</h3>
+      <p>
+        _Bool runToolOnCodeWithArgs(
+        <a href="../../std/unique_ptr.html">unique_ptr</a>
+         ToolAction, const Twine &amp; Code, 
+        <a href="../../llvm/IntrusiveRefCntPtr.html">IntrusiveRefCntPtr</a>
+         VFS, const std::vector&lt;std::string&gt; &amp; Args, const Twine &amp; FileName, const Twine &amp; ToolName, 
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         PCHContainerOps)
+      </p>
+      <div>
+        <div>
+          <p> Similar to the overload except this takes a VFS.</p>
+        </div>
+      </div>
+      <h3 id="19F251C9CC29EBAB1B35EDF504A57DC142613576">buildASTFromCode</h3>
+      <p>
+        <a href="../../std/unique_ptr.html">unique_ptr</a>
+         buildASTFromCode(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Code, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         FileName, 
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         PCHContainerOps)
+      </p>
+      <div>
+        <div>
+          <p> Builds an AST for &apos;Code&apos;.</p>
+        </div>
+      </div>
+      <h3 id="434643C889BC19FA96C1FD52FFC1DEE58685A5AE">buildASTFromCodeWithArgs</h3>
+      <p>
+        <a href="../../std/unique_ptr.html">unique_ptr</a>
+         buildASTFromCodeWithArgs(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Code, const std::vector&lt;std::string&gt; &amp; Args, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         FileName, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         ToolName, 
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         PCHContainerOps, 
+        <a href="../../std/function.html">function</a>
+         Adjuster, const FileContentMappings &amp; VirtualMappedFiles, DiagnosticConsumer * DiagConsumer)
+      </p>
+      <div>
+        <div>
+          <p> Builds an AST for &apos;Code&apos; with additional flags.</p>
+        </div>
+      </div>
+      <h3 id="2FC7D6FC88A87C2C5FAA651CD3EC6813AC5C47A1">getAbsolutePath</h3>
+      <p>
+        <a href="../../std/__cxx11/basic_string.html">basic_string</a>
+         getAbsolutePath(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         File)
+      </p>
+      <div>
+        <div>
+          <p> Returns the absolute path of  by prepending it with the current directory if  is not absolute.</p>
+          <p> Otherwise returns  If &apos;File&apos; starts with &quot;./&quot;, the returned path will not contain the &quot;./&quot;. Otherwise, the returned path will contain the literal path-concatenation of the current directory and </p>
+          <p> The difference to llvm::sys::fs::make_absolute is the canonicalization this does by removing &quot;./&quot; and computing native paths.</p>
+        </div>
+      </div>
+      <h3 id="BDABF0BB1C0B19902F68C09A86147D2BADD7BC6B">getAbsolutePath</h3>
+      <p>
+        llvm::Expected&lt;std::string&gt; getAbsolutePath(llvm::vfs::FileSystem &amp; FS, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         File)
+      </p>
+      <div>
+        <div>
+          <p> An overload of getAbsolutePath that works over the provided </p>
+        </div>
+      </div>
+      <h3 id="6CE210B2216CC5CD3F3CA4C01093FF253F58408E">addTargetAndModeForProgramName</h3>
+      <p>
+        void addTargetAndModeForProgramName(std::vector&lt;std::string&gt; &amp; CommandLine, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         InvokedAs)
+      </p>
+      <div>
+        <div>
+          <p> Changes CommandLine to contain implicit flags that would have been defined had the compiler driver been invoked through the path InvokedAs.</p>
+          <p> For example, when called with  set to `i686-linux-android-g++`, the arguments &apos;-target&apos;, &apos;i686-linux-android`, `--driver-mode=g++` will be inserted after the first argument in </p>
+          <p> This function will not add new `-target` or `--driver-mode` flags if they are already present in `CommandLine` (even if they have different settings than would have been inserted).</p>
+        </div>
+      </div>
+      <h3 id="0F2A41A2BED9EAA2D3C10E9957D2695C10DBACD3">newInvocation</h3>
+      <p>
+        CompilerInvocation * newInvocation(DiagnosticsEngine * Diagnostics, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         CC1Args, const char *const BinaryName)
+      </p>
+      <div>
+        <div>
+          <p> Creates a </p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="8D8D1D7EED8100EEF6BA0B9627458ED9A4AC34E3">enum class ArgumentInsertPosition</h3>
+      <ul>
+        <li>BEGIN</li>
+        <li>END</li>
+      </ul>
+      <p>Defined at line 50 of file /usr/lib/llvm-16/include/clang/Tooling/ArgumentsAdjusters.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4AD3D8A24D99F73DBD6D99803DEB02BB0688FEA6">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ABBDD834E599D0064751156367DCE370B69A9E3C">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2239E5314FBE17F11A8366FC74D2125AD4C04EE2">transferCompileCommand</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A087B25403A096A150AC01D19CAA6DE79FDC111F">inferMissingCompileCommands</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A9AD85BE6C312E47B9ECA9CFBCD00AB92703AAB">inferTargetAndDriverMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01A634C70907726127C79C816A79EE8F015D35C9">expandResponseFiles</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F838C61BC09B200D5AE03BF2090EF9C560BDF79">getClangSyntaxOnlyAdjuster</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DFD94EFBB156F1E5348BF5544C8A17B1C3AE7D6E">getClangStripOutputAdjuster</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F70E705CF314821C160A4DE15408E23EBE66DEAA">getClangStripDependencyFileAdjuster</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC9282A28735E2F67BD10A2C88E0BA5B352F395D">getInsertArgumentAdjuster</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48DC7AF926E63F91BBB3931AC89A28765F6FCFBC">getInsertArgumentAdjuster</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E3856430657290B5C3EC8553CAD9E5642B97865">getStripPluginsAdjuster</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B13EF0E56B494C3BE687B8BD96E68ACE9C1BFE20">combineAdjusters</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB931FFEB3DC02F3A6F29B0BC67225714DE42D73">getCC1Arguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#247760704BBA8D3E5990430BA2E3F20139728C22">newFrontendActionFactory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDC2B41DD70639FB2794D886C274DA72ACDC261C">newFrontendActionFactory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8454C8323A06D22CEB7CE6A879C0B8D043874260">runToolOnCode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14E0A14E75C068EEF5BAD5802D4410349D26E667">runToolOnCodeWithArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A801C04E6FF914C799A2064A410BB6439B64F9E">runToolOnCodeWithArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#19F251C9CC29EBAB1B35EDF504A57DC142613576">buildASTFromCode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#434643C889BC19FA96C1FD52FFC1DEE58685A5AE">buildASTFromCodeWithArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FC7D6FC88A87C2C5FAA651CD3EC6813AC5C47A1">getAbsolutePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDABF0BB1C0B19902F68C09A86147D2BADD7BC6B">getAbsolutePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CE210B2216CC5CD3F3CA4C01093FF253F58408E">addTargetAndModeForProgramName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F2A41A2BED9EAA2D3C10E9957D2695C10DBACD3">newInvocation</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8D8D1D7EED8100EEF6BA0B9627458ED9A4AC34E3">ArgumentInsertPosition</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

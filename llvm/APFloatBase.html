@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct APFloatBase</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct APFloatBase</h1>
+    <p>Defined at line 142 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+    <div>
+      <div>
+        <p> This is the common type definitions shared by APFloat and its internal implementation classes. This struct should not define any non-static data members.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4E88CE6163B938009D9AB5F305F5D620A137D5FF">EnumToSemantics</h3>
+      <p>
+        public const llvm::fltSemantics &amp; EnumToSemantics(
+        <a href="../llvm/APFloatBase/Semantics.html">Semantics</a>
+         S)
+      </p>
+      <h3 id="993C121C0AC268A84639F6E1D6CE1F35A2785EEA">SemanticsToEnum</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/Semantics.html">Semantics</a>
+         SemanticsToEnum(const llvm::fltSemantics &amp; Sem)
+      </p>
+      <h3 id="79235CB952EA0F1914DD2665AE5601D2DA36D66A">IEEEhalf</h3>
+      <p>public const fltSemantics &amp; IEEEhalf()</p>
+      <h3 id="54C0D2591E73F335A73950202967DBD2E7E22992">BFloat</h3>
+      <p>public const fltSemantics &amp; BFloat()</p>
+      <h3 id="7B554ACF6CC50DB58590BE4DDE9562C5C169338C">IEEEsingle</h3>
+      <p>public const fltSemantics &amp; IEEEsingle()</p>
+      <h3 id="5F8EAC7B83A43CC2BD534D97061CA5C65615AE94">IEEEdouble</h3>
+      <p>public const fltSemantics &amp; IEEEdouble()</p>
+      <h3 id="EF58DB0539044F4BEBC7E4BCC4144C5595F05A7E">IEEEquad</h3>
+      <p>public const fltSemantics &amp; IEEEquad()</p>
+      <h3 id="E26F7802575DE036E19ABA966F7734B9C81899DA">PPCDoubleDouble</h3>
+      <p>public const fltSemantics &amp; PPCDoubleDouble()</p>
+      <h3 id="2735C13839BF36805D5BADE9B1C5A5C52DA813B9">Float8E5M2</h3>
+      <p>public const fltSemantics &amp; Float8E5M2()</p>
+      <h3 id="C7B8AD8F99233426AE9544F03A913F5FBF32E44D">Float8E4M3FN</h3>
+      <p>public const fltSemantics &amp; Float8E4M3FN()</p>
+      <h3 id="BE1B55FF7D4D5BED5A3D317D26AE4E9E95F6052D">x87DoubleExtended</h3>
+      <p>public const fltSemantics &amp; x87DoubleExtended()</p>
+      <h3 id="DFDBDA178698061F6BAE631B1923F20EC6DBF43F">Bogus</h3>
+      <p>public const fltSemantics &amp; Bogus()</p>
+      <div>
+        <div>
+          <p> A Pseudo fltsemantic used to construct APFloats that cannot conflict with anything real.</p>
+        </div>
+      </div>
+      <h3 id="A82E35A33809BC0F7AB25078546F67D130469B7F">semanticsPrecision</h3>
+      <p>public unsigned int semanticsPrecision(const fltSemantics &amp; )</p>
+      <h3 id="ADF3937D0FA86A6BF7AECA22D4FD2E3C64D2953B">semanticsMinExponent</h3>
+      <p>public ExponentType semanticsMinExponent(const fltSemantics &amp; )</p>
+      <h3 id="88F574ADF847D33B7C1D6F9DF8EFACBEE4ED6893">semanticsMaxExponent</h3>
+      <p>public ExponentType semanticsMaxExponent(const fltSemantics &amp; )</p>
+      <h3 id="7273E9A668E44E76B9F6195A30C2254C46D05489">semanticsSizeInBits</h3>
+      <p>public unsigned int semanticsSizeInBits(const fltSemantics &amp; )</p>
+      <h3 id="104F6AEEA94BE9EDE1D0389CDD6F78941F64CBFB">getSizeInBits</h3>
+      <p>public unsigned int getSizeInBits(const fltSemantics &amp; Sem)</p>
+      <div>
+        <div>
+          <p> Returns the size of the floating point number (in bits) in the given semantics.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="A2FA0285820D8009BF30187AA3B22EA3C30F2127">enum Semantics</h3>
+      <ul>
+        <li>S_IEEEhalf</li>
+        <li>S_BFloat</li>
+        <li>S_IEEEsingle</li>
+        <li>S_IEEEdouble</li>
+        <li>S_IEEEquad</li>
+        <li>S_PPCDoubleDouble</li>
+        <li>S_Float8E5M2</li>
+        <li>S_Float8E4M3FN</li>
+        <li>S_x87DoubleExtended</li>
+        <li>S_MaxSemantics</li>
+      </ul>
+      <p>Defined at line 151 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="4570E151E4E9AC5C32DE7DB691D503B586BAB1D4">enum cmpResult</h3>
+      <ul>
+        <li>cmpLessThan</li>
+        <li>cmpEqual</li>
+        <li>cmpGreaterThan</li>
+        <li>cmpUnordered</li>
+      </ul>
+      <p>Defined at line 190 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> IEEE-754R 5.11: Floating Point Comparison Relations.</p>
+        </div>
+      </div>
+      <h3 id="0EB6D8693C8E9BCAA77F3A4253F16A1F94B92B39">enum opStatus</h3>
+      <ul>
+        <li>opOK</li>
+        <li>opInvalidOp</li>
+        <li>opDivByZero</li>
+        <li>opOverflow</li>
+        <li>opUnderflow</li>
+        <li>opInexact</li>
+      </ul>
+      <p>Defined at line 216 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> IEEE-754R 7: Default exception handling.</p>
+          <p> opUnderflow or opOverflow are always returned or-ed with opInexact.</p>
+          <p> APFloat models this behavior specified by IEEE-754:   &quot;For operations producing results in floating-point format, the default    result of an operation that signals the invalid operation exception    shall be a quiet NaN.&quot;</p>
+        </div>
+      </div>
+      <h3 id="A7DE3509EECB8D5F28A972334DF311E519506366">enum fltCategory</h3>
+      <ul>
+        <li>fcInfinity</li>
+        <li>fcNaN</li>
+        <li>fcNormal</li>
+        <li>fcZero</li>
+      </ul>
+      <p>Defined at line 226 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Category of internally-represented number.</p>
+        </div>
+      </div>
+      <h3 id="BF5ED85176204B71F6CD5A2CB4007948B0F04729">enum uninitializedTag</h3>
+      <ul>
+        <li>uninitialized</li>
+      </ul>
+      <p>Defined at line 234 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Convenience enum used to construct an uninitialized APFloat.</p>
+        </div>
+      </div>
+      <h3 id="6EFCF083328C99E4DA38F38252EC9E3F2F2647A0">enum IlogbErrorKinds</h3>
+      <ul>
+        <li>IEK_Zero</li>
+        <li>IEK_NaN</li>
+        <li>IEK_Inf</li>
+      </ul>
+      <p>Defined at line 239 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Enumeration of  error results.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4E88CE6163B938009D9AB5F305F5D620A137D5FF">EnumToSemantics</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#993C121C0AC268A84639F6E1D6CE1F35A2785EEA">SemanticsToEnum</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79235CB952EA0F1914DD2665AE5601D2DA36D66A">IEEEhalf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#54C0D2591E73F335A73950202967DBD2E7E22992">BFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B554ACF6CC50DB58590BE4DDE9562C5C169338C">IEEEsingle</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F8EAC7B83A43CC2BD534D97061CA5C65615AE94">IEEEdouble</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF58DB0539044F4BEBC7E4BCC4144C5595F05A7E">IEEEquad</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E26F7802575DE036E19ABA966F7734B9C81899DA">PPCDoubleDouble</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2735C13839BF36805D5BADE9B1C5A5C52DA813B9">Float8E5M2</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7B8AD8F99233426AE9544F03A913F5FBF32E44D">Float8E4M3FN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE1B55FF7D4D5BED5A3D317D26AE4E9E95F6052D">x87DoubleExtended</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DFDBDA178698061F6BAE631B1923F20EC6DBF43F">Bogus</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A82E35A33809BC0F7AB25078546F67D130469B7F">semanticsPrecision</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ADF3937D0FA86A6BF7AECA22D4FD2E3C64D2953B">semanticsMinExponent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88F574ADF847D33B7C1D6F9DF8EFACBEE4ED6893">semanticsMaxExponent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7273E9A668E44E76B9F6195A30C2254C46D05489">semanticsSizeInBits</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#104F6AEEA94BE9EDE1D0389CDD6F78941F64CBFB">getSizeInBits</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A2FA0285820D8009BF30187AA3B22EA3C30F2127">Semantics</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4570E151E4E9AC5C32DE7DB691D503B586BAB1D4">cmpResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EB6D8693C8E9BCAA77F3A4253F16A1F94B92B39">opStatus</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7DE3509EECB8D5F28A972334DF311E519506366">fltCategory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF5ED85176204B71F6CD5A2CB4007948B0F04729">uninitializedTag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6EFCF083328C99E4DA38F38252EC9E3F2F2647A0">IlogbErrorKinds</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

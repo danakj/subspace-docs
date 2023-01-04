@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FlatTuple</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FlatTuple</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1276">1276</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Analog to std::tuple but with different tradeoffs. This class minimizes the template instantiation depth, thus allowing more elements than std::tuple would. std::tuple has been seen to require an instantiation depth of more than 10x the number of elements in some implementations. FlatTuple and ElemFromList are not recursive and have a fixed depth regardless of T... MakeIndexSequence, on the other hand, it is recursive but with an instantiation depth of O(ln(N)).</p>
+      </div>
+    </div>
+    <p>Inherits from FlatTupleBase&lt;FlatTuple&lt;T...&gt;, typename MakeIndexSequence&lt;sizeof...(T)&gt;::type&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FC7DF2AA4D23B9EA07862F77A8C8478069BCEF31">FlatTuple&lt;T...&gt;</h3>
+      <p>public void FlatTuple&lt;T...&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1283">1283</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <h3 id="30E608DF755BE220FAB07A9AF40580451521AEE2">FlatTuple&lt;T...&gt;</h3>
+      <p>
+        public void FlatTuple&lt;T...&gt;(
+        <a href="FlatTupleConstructTag.html">FlatTupleConstructTag</a>
+         tag, Args &amp;&amp;... args)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#1285">1285</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FC7DF2AA4D23B9EA07862F77A8C8478069BCEF31">FlatTuple&lt;T...&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30E608DF755BE220FAB07A9AF40580451521AEE2">FlatTuple&lt;T...&gt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

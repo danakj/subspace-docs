@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MatchMatrix</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MatchMatrix</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3322">3322</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Connectivity matrix of (elements X matchers), in element-major order. Initially, there are no edges. Use NextGraph() to iterate over all possible edge configurations. Use Randomize() to generate a random edge configuration.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C99B9CA546EA730C735A08621455CA1D4C2B8BEE">MatchMatrix</h3>
+      <p>public void MatchMatrix(size_t num_elements, size_t num_matchers)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3324">3324</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="064BB907CB7CEEB66534D13CF4EC16EF0967173E">LhsSize</h3>
+      <p>public size_t LhsSize()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3330">3330</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="3B47E8A6A38BFF3B17E7C5494987F4DAE49D4914">RhsSize</h3>
+      <p>public size_t RhsSize()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3331">3331</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="B3066EFD9A89DD28F6A29A00F55CFB2676FEEDE9">HasEdge</h3>
+      <p>public _Bool HasEdge(size_t ilhs, size_t irhs)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3332">3332</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="99966FADEC7FA0ED43AB0B765532566EB725E6B0">SetEdge</h3>
+      <p>public void SetEdge(size_t ilhs, size_t irhs, _Bool b)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3335">3335</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="F556A2DD0C7288AFC0F2307E4D15B3841997A77C">NextGraph</h3>
+      <p>public _Bool NextGraph()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc#244">244</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc">gmock-matchers.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Treating the connectivity matrix as a (LhsSize()*RhsSize())-bit number, adds 1 to that number; returns false if incrementing the graph left it empty.</p>
+        </div>
+      </div>
+      <h3 id="396AE6C7237B48EC60739AB19DE9730B6F34D561">Randomize</h3>
+      <p>public void Randomize()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc#258">258</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc">gmock-matchers.cc</a>
+      </p>
+      <h3 id="316D3439F182DD61EB01AA8A76811537704BBCEA">DebugString</h3>
+      <p>
+        public 
+        <a href="../../std/__cxx11/basic_string.html">basic_string</a>
+         DebugString()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc#267">267</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc">gmock-matchers.cc</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C99B9CA546EA730C735A08621455CA1D4C2B8BEE">MatchMatrix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#064BB907CB7CEEB66534D13CF4EC16EF0967173E">LhsSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B47E8A6A38BFF3B17E7C5494987F4DAE49D4914">RhsSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3066EFD9A89DD28F6A29A00F55CFB2676FEEDE9">HasEdge</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99966FADEC7FA0ED43AB0B765532566EB725E6B0">SetEdge</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F556A2DD0C7288AFC0F2307E4D15B3841997A77C">NextGraph</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#396AE6C7237B48EC60739AB19DE9730B6F34D561">Randomize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#316D3439F182DD61EB01AA8A76811537704BBCEA">DebugString</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

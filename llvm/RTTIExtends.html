@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class RTTIExtends</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class RTTIExtends</h1>
+    <p>Defined at line 114 of file /usr/lib/llvm-16/include/llvm/Support/ExtensibleRTTI.h</p>
+    <div>
+      <div>
+        <p> Inheritance utility for extensible RTTI.</p>
+        <p> Supports single inheritance only: A class can only have one ExtensibleRTTI-parent (i.e. a parent for which the isa&lt;&gt; test will work), though it can have many non-ExtensibleRTTI parents.</p>
+        <p> RTTIExtents uses CRTP so the first template argument to RTTIExtends is the newly introduced type, and the *second* argument is the parent class.</p>
+        <p> class MyType : public RTTIExtends&lt;MyType, RTTIRoot&gt; { public:   static char ID; };</p>
+        <p> class MyDerivedType : public RTTIExtends&lt;MyDerivedType, MyType&gt; { public:   static char ID; };</p>
+      </div>
+    </div>
+    <p>Inherits from ParentT</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0F17786F8E3556097772C8600844E0F91614C830">classID</h3>
+      <p>public const void * classID()</p>
+      <p>Defined at line 119 of file /usr/lib/llvm-16/include/llvm/Support/ExtensibleRTTI.h</p>
+      <h3 id="556AB2564954887FD4C198463623B84E3CDBF7C8">dynamicClassID</h3>
+      <p>public const void * dynamicClassID()</p>
+      <p>Defined at line 121 of file /usr/lib/llvm-16/include/llvm/Support/ExtensibleRTTI.h</p>
+      <h3 id="8636F3BE1993C8D254B135438048AA84D063FC1D">isA</h3>
+      <p>public _Bool isA(const void *const ClassID)</p>
+      <p>Defined at line 123 of file /usr/lib/llvm-16/include/llvm/Support/ExtensibleRTTI.h</p>
+      <h3 id="584E4A9112FD3258AE44149760DB1870E60A34A3">classof</h3>
+      <p>public _Bool classof(const RTTIRoot * R)</p>
+      <p>Defined at line 127 of file /usr/lib/llvm-16/include/llvm/Support/ExtensibleRTTI.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0F17786F8E3556097772C8600844E0F91614C830">classID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#556AB2564954887FD4C198463623B84E3CDBF7C8">dynamicClassID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8636F3BE1993C8D254B135438048AA84D063FC1D">isA</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#584E4A9112FD3258AE44149760DB1870E60A34A3">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

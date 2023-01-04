@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AssertionResult</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AssertionResult</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#283">283</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+    </p>
+    <div>
+      <div>
+        <p> A class for indicating whether an assertion was successful.  When the assertion wasn&apos;t successful, the AssertionResult object remembers a non-empty message that describes how it failed.</p>
+        <p> To create an instance of this class, use one of the factory functions (AssertionSuccess() and AssertionFailure()).</p>
+        <p> This class is useful for two purposes:   1. Defining predicate functions to be used with Boolean test assertions      EXPECT_TRUE/EXPECT_FALSE and their ASSERT_ counterparts   2. Defining predicate-format functions to be      used with predicate assertions (ASSERT_PRED_FORMAT*, etc).</p>
+        <p> For example, if you define IsEven predicate:</p>
+        <p>   testing::AssertionResult IsEven(int n) {     if ((n % 2) == 0)       return testing::AssertionSuccess();     else       return testing::AssertionFailure() &lt;&lt; n &lt;&lt; &quot; is odd&quot;;   }</p>
+        <p> Then the failed expectation EXPECT_TRUE(IsEven(Fib(5))) will print the message</p>
+        <p>   Value of: IsEven(Fib(5))     Actual: false (5 is odd)   Expected: true</p>
+        <p> instead of a more opaque</p>
+        <p>   Value of: IsEven(Fib(5))     Actual: false   Expected: true</p>
+        <p> in case IsEven is a simple Boolean predicate.</p>
+        <p> If you expect your predicate to be reused and want to support informative messages in EXPECT_FALSE and ASSERT_FALSE (negative assertions show up about half as often as positive ones in our tests), supply messages for both success and failure cases:</p>
+        <p>   testing::AssertionResult IsEven(int n) {     if ((n % 2) == 0)       return testing::AssertionSuccess() &lt;&lt; n &lt;&lt; &quot; is even&quot;;     else       return testing::AssertionFailure() &lt;&lt; n &lt;&lt; &quot; is odd&quot;;   }</p>
+        <p> Then a statement EXPECT_FALSE(IsEven(Fib(6))) will print</p>
+        <p>   Value of: IsEven(Fib(6))     Actual: true (8 is even)   Expected: false</p>
+        <p> NB: Predicates that support negative Boolean assertions have reduced performance in positive ones so be careful not to use them in tests that have lots (tens of thousands) of positive Boolean assertions.</p>
+        <p> To use this class with EXPECT_PRED_FORMAT assertions such as:</p>
+        <p>   // Verifies that Foo() returns an even number.   EXPECT_PRED_FORMAT1(IsEven, Foo());</p>
+        <p> you need to define:</p>
+        <p>   testing::AssertionResult IsEven(const char* expr, int n) {     if ((n % 2) == 0)       return testing::AssertionSuccess();     else       return testing::AssertionFailure()&lt;&lt; &quot;Expected: &quot; &lt;&lt; expr &lt;&lt; &quot; is even\n  Actual: it&apos;s &quot; &lt;&lt; n;   }</p>
+        <p> If Foo() returns 5, you will see the following message:</p>
+        <p>   Expected: Foo() is even     Actual: it&apos;s 5</p>
+      </div>
+      <div>
+        <p> Forward declarations.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="59291A092EB4B21916E75289A23BCB6A5C4CD5E9">AssertionResult</h3>
+      <p>public void AssertionResult(const AssertionResult &amp; other)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1188">1188</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> AssertionResult constructors. Used in EXPECT_TRUE/FALSE(assertion_result).</p>
+        </div>
+        <div>
+          <p> Copy constructor. Used in EXPECT_TRUE/FALSE(assertion_result).</p>
+        </div>
+      </div>
+      <h3 id="B168DEEF8B042A64FE6DA9F1423E32BD27444745">AssertionResult</h3>
+      <p>public void AssertionResult(const T &amp; success, typename std::enable_if&lt;!std::is_convertible&lt;T, AssertionResult&gt;::value&gt;::type * )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#305">305</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Used in the EXPECT_TRUE/FALSE(bool_expression).</p>
+          <p> T must be contextually convertible to bool.</p>
+          <p> The second parameter prevents this overload from being considered if the argument is implicitly convertible to AssertionResult. In that case we want AssertionResult&apos;s copy constructor to be used.</p>
+        </div>
+      </div>
+      <h3 id="61170F2A3E53BDD348AEBAC728DCD18BB1D98D2C">operator=</h3>
+      <p>
+        public AssertionResult &amp; operator=(
+        <a href="AssertionResult.html">AssertionResult</a>
+         other)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#318">318</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Assignment operator.</p>
+        </div>
+      </div>
+      <h3 id="A8103A96830B631822285EEDCB1A6D240CA5A55E">operator bool</h3>
+      <p>public _Bool operator bool()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#324">324</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the assertion succeeded.</p>
+        </div>
+      </div>
+      <h3 id="85DC109F704192FE2FDB5D4AE20D286169913385">operator!</h3>
+      <p>
+        public 
+        <a href="AssertionResult.html">AssertionResult</a>
+         operator!()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1202">1202</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the assertion&apos;s negation. Used with EXPECT/ASSERT_FALSE.</p>
+        </div>
+      </div>
+      <h3 id="53E13B2A69932569E7573403151C91CE4574F7F4">message</h3>
+      <p>public const char * message()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#333">333</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the text streamed into this AssertionResult. Test assertions use it when they fail (i.e., the predicate&apos;s outcome doesn&apos;t match the assertion&apos;s expectation). When nothing has been streamed into the object, returns an empty string.</p>
+        </div>
+      </div>
+      <h3 id="B7D06B4A5E5A29983F0E649355E9E4608AEE4DBE">failure_message</h3>
+      <p>public const char * failure_message()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#337">337</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Deprecated; please use message() instead.</p>
+        </div>
+      </div>
+      <h3 id="A1D94BD93BADE50BB1B938D045337B2DD44CAC87">operator&lt;&lt;</h3>
+      <p>public AssertionResult &amp; operator&lt;&lt;(const T &amp; value)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#340">340</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Streams a custom failure message into this object.</p>
+        </div>
+      </div>
+      <h3 id="65EF52B6D3715BD2E303A6FA5674630EF552B04C">operator&lt;&lt;</h3>
+      <p>public AssertionResult &amp; operator&lt;&lt;(::std::ostream &amp;(*)(::std::ostream &amp;) basic_manipulator)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#347">347</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Allows streaming basic output manipulators such as endl or flush into this object.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#59291A092EB4B21916E75289A23BCB6A5C4CD5E9">AssertionResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B168DEEF8B042A64FE6DA9F1423E32BD27444745">AssertionResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61170F2A3E53BDD348AEBAC728DCD18BB1D98D2C">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8103A96830B631822285EEDCB1A6D240CA5A55E">operator bool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85DC109F704192FE2FDB5D4AE20D286169913385">operator!</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53E13B2A69932569E7573403151C91CE4574F7F4">message</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7D06B4A5E5A29983F0E649355E9E4608AEE4DBE">failure_message</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1D94BD93BADE50BB1B938D045337B2DD44CAC87">operator&lt;&lt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65EF52B6D3715BD2E303A6FA5674630EF552B04C">operator&lt;&lt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

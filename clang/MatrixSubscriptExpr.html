@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MatrixSubscriptExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MatrixSubscriptExpr</h1>
+    <p>Defined at line 2733 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> MatrixSubscriptExpr - Matrix subscript expression for the MatrixType extension. MatrixSubscriptExpr can be either incomplete (only Base and RowIdx are set so far, the type is IncompleteMatrixIdx) or complete (Base, RowIdx and ColumnIdx refer to valid expressions). Incomplete matrix expressions only exist during the initial construction of the AST.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2DF83C2852B7E4C9C1808A6CE73469DA79769144">MatrixSubscriptExpr</h3>
+      <p>
+        public void MatrixSubscriptExpr(Expr * Base, Expr * RowIdx, Expr * ColumnIdx, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RBracketLoc)
+      </p>
+      <p>Defined at line 2738 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="F6B9A34FE8247C0947B96BDB41506C47406BC56C">MatrixSubscriptExpr</h3>
+      <p>
+        public void MatrixSubscriptExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Shell)
+      </p>
+      <p>Defined at line 2750 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Create an empty matrix subscript expression.</p>
+        </div>
+      </div>
+      <h3 id="FA89DCA02DB8F07480D08ED84DA54C8D5740F2E0">isIncomplete</h3>
+      <p>public _Bool isIncomplete()</p>
+      <p>Defined at line 2753 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A7D390B74C3EA159578547D133E0907DAEB9FC7C">getBase</h3>
+      <p>public Expr * getBase()</p>
+      <p>Defined at line 2759 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2E067FF16E71A23EAE8C638ACBA259B9B5A9B47A">getBase</h3>
+      <p>public const Expr * getBase()</p>
+      <p>Defined at line 2760 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="4F2096A0A61AF8454A864F284BE868CD6353168D">setBase</h3>
+      <p>public void setBase(Expr * E)</p>
+      <p>Defined at line 2761 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="16D450CC7434AAFCD68BFE5F692C991353091176">getRowIdx</h3>
+      <p>public Expr * getRowIdx()</p>
+      <p>Defined at line 2763 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="237CB483151332EC99AD1AA3CD3CB39F0E7B7864">getRowIdx</h3>
+      <p>public const Expr * getRowIdx()</p>
+      <p>Defined at line 2764 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="F5824576C01479BD6F68853B6DEB4A0F8E892B13">setRowIdx</h3>
+      <p>public void setRowIdx(Expr * E)</p>
+      <p>Defined at line 2765 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E8CA0CCF82A210D45F8EB390D82C0AF00E4A583D">getColumnIdx</h3>
+      <p>public Expr * getColumnIdx()</p>
+      <p>Defined at line 2767 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8E0840A88AE3FF4DF0777B9F5BAF8D1ECA6630EF">getColumnIdx</h3>
+      <p>public const Expr * getColumnIdx()</p>
+      <p>Defined at line 2768 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="97C9839B77FEF984493E1E32484ED1B43E5B5A24">setColumnIdx</h3>
+      <p>public void setColumnIdx(Expr * E)</p>
+      <p>Defined at line 2773 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="082C049BAF0EC4F51CD13F32DA52F37C7B4C3F2A">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2775 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8498FC69FA32085C86D4D31D09DA3B016D69796C">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2779 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A31D5D64B438D95179F922C3F21C990A214F333A">getExprLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExprLoc()
+      </p>
+      <p>Defined at line 2781 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="50CEC0EAE9FF4949CCFDF00D317BD74BC637F314">getRBracketLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRBracketLoc()
+      </p>
+      <p>Defined at line 2785 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0C4A2FD4F4905B6FCAF232ECDD3A97CB0960E46D">setRBracketLoc</h3>
+      <p>
+        public void setRBracketLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2788 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0143076EE83DAD810D2002032125063FDAF9CE72">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2792 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="320F85ED754CB835113F5185BFE30D335953E470">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2797 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="514D1F8C399706A07DF2D82F8FE0B403CFACE6ED">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2800 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2DF83C2852B7E4C9C1808A6CE73469DA79769144">MatrixSubscriptExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6B9A34FE8247C0947B96BDB41506C47406BC56C">MatrixSubscriptExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA89DCA02DB8F07480D08ED84DA54C8D5740F2E0">isIncomplete</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7D390B74C3EA159578547D133E0907DAEB9FC7C">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E067FF16E71A23EAE8C638ACBA259B9B5A9B47A">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F2096A0A61AF8454A864F284BE868CD6353168D">setBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16D450CC7434AAFCD68BFE5F692C991353091176">getRowIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#237CB483151332EC99AD1AA3CD3CB39F0E7B7864">getRowIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F5824576C01479BD6F68853B6DEB4A0F8E892B13">setRowIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8CA0CCF82A210D45F8EB390D82C0AF00E4A583D">getColumnIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E0840A88AE3FF4DF0777B9F5BAF8D1ECA6630EF">getColumnIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97C9839B77FEF984493E1E32484ED1B43E5B5A24">setColumnIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#082C049BAF0EC4F51CD13F32DA52F37C7B4C3F2A">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8498FC69FA32085C86D4D31D09DA3B016D69796C">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A31D5D64B438D95179F922C3F21C990A214F333A">getExprLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#50CEC0EAE9FF4949CCFDF00D317BD74BC637F314">getRBracketLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C4A2FD4F4905B6FCAF232ECDD3A97CB0960E46D">setRBracketLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0143076EE83DAD810D2002032125063FDAF9CE72">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#320F85ED754CB835113F5185BFE30D335953E470">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#514D1F8C399706A07DF2D82F8FE0B403CFACE6ED">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

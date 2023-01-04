@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class IteratorBase</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/iter" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class IteratorBase</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#57">57</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+    </p>
+    <div>
+      <div>
+        <p> TODO: Do we want to be able to pass IteratorBase&amp; as a &quot;generic&quot; iterator? Then it needs access to the adapator methods of Iterator&lt;T&gt;, so make them virtual methods on IteratorBase?</p>
+        <p> TODO: Do we want to be able to pass Iterator by value as a &quot;generic&quot; iterator? Then we need an opaque Iterator type, which can be returned from an adaptor method (and we can have an explicit operator to convert to it)?</p>
+        <p> TODO: We need virtual methods because we erase the type in SizedIterator and call the virtual methods there. But when the iterator is being used directly, do we need each call to next() to go through virtual? Could CRTP, so we can call `Subclass::next()`, with the next() method being marked `final` in the subclass, bypass the vtable pointer?</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8038B44CA0EEC211C801B278D72C49D0502B4BE4">next</h3>
+      <p>public Option&lt;Item&gt; next()</p>
+      <div>
+        <div>
+          <p> Gets the next element from the iterator, if there is one. Otherwise, it returns an Option holding #None.</p>
+        </div>
+      </div>
+      <h3 id="AB890A37D0F1106A14097B7B5766661446057D49">begin</h3>
+      <p>public auto begin()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#73">73</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Adaptor for use in ranged for loops.</p>
+        </div>
+      </div>
+      <h3 id="5BA55334517A040E5D116971AB29E32EE2A14C7B">end</h3>
+      <p>public auto end()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#77">77</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Adaptor for use in ranged for loops.</p>
+        </div>
+      </div>
+      <h3 id="EBEF97F13853CDE22C2F27B69453E7362C61E524">IteratorBase&lt;ItemT&gt;</h3>
+      <p>protected void IteratorBase&lt;ItemT&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#80">80</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8038B44CA0EEC211C801B278D72C49D0502B4BE4">next</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB890A37D0F1106A14097B7B5766661446057D49">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5BA55334517A040E5D116971AB29E32EE2A14C7B">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EBEF97F13853CDE22C2F27B69453E7362C61E524">IteratorBase&lt;ItemT&gt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

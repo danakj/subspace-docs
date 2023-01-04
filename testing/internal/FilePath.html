@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FilePath</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FilePath</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h#62">62</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h">gtest-filepath.h</a>
+    </p>
+    <div>
+      <div>
+        <p> FilePath - a class for file and directory pathname manipulation which handles platform-specific conventions (like the pathname separator). Used for helper functions for naming files in a directory for xml output. Except for Set methods, all methods are const or static, which provides an &quot;immutable value object&quot; -- useful for peace of mind. A FilePath with a value ending in a path separator (&quot;like/this/&quot;) represents a directory, otherwise it is assumed to represent a file. In either case, it may or may not represent an actual file or directory in the file system. Names are NOT checked for syntax correctness -- no checking for illegal characters, malformed paths, etc.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F4D9C319EF6264D9B6E46BE7A6FED3E3602141A3">FilePath</h3>
+      <p>public void FilePath()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h#64">64</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h">gtest-filepath.h</a>
+      </p>
+      <h3 id="E1991F7D41B0A3BE702C64285086E147E6BE354E">FilePath</h3>
+      <p>public void FilePath(const FilePath &amp; rhs)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h#65">65</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h">gtest-filepath.h</a>
+      </p>
+      <h3 id="7B45AE0F5981AAEAC5FD06F05A145CC787E4F75A">FilePath</h3>
+      <p>public void FilePath(const std::string &amp; pathname)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h#67">67</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h">gtest-filepath.h</a>
+      </p>
+      <h3 id="D575C3DD269D543B34DC2CF2824CF08214F299AF">operator=</h3>
+      <p>public FilePath &amp; operator=(const FilePath &amp; rhs)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h#71">71</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h">gtest-filepath.h</a>
+      </p>
+      <h3 id="FC08F3DBE462C962C40BDF6EB9A11E102C055E9A">Set</h3>
+      <p>public void Set(const FilePath &amp; rhs)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h#76">76</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h">gtest-filepath.h</a>
+      </p>
+      <h3 id="9233448A75B0249E12942F211C760A134843B50D">string</h3>
+      <p>public const std::string &amp; string()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h#80">80</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h">gtest-filepath.h</a>
+      </p>
+      <h3 id="6BAFE67821A91B444CEEC9A5CA6FAEC25D0A7BF9">c_str</h3>
+      <p>public const char * c_str()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h#81">81</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h">gtest-filepath.h</a>
+      </p>
+      <h3 id="9BBABE7B213D7CC5C045B4713F097FD8E1D53657">GetCurrentDir</h3>
+      <p>
+        public 
+        <a href="FilePath.html">FilePath</a>
+         GetCurrentDir()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#94">94</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the current working directory, or &quot;&quot; if unsuccessful.</p>
+        </div>
+      </div>
+      <h3 id="981CAF31B2EA2736105697BF7BBE94B4B441CB59">MakeFileName</h3>
+      <p>
+        public 
+        <a href="FilePath.html">FilePath</a>
+         MakeFileName(const FilePath &amp; directory, const FilePath &amp; base_name, int number, const char * extension)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#180">180</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Given directory = &quot;dir&quot;, base_name = &quot;test&quot;, number = 0, extension = &quot;xml&quot;, returns &quot;dir/test.xml&quot;. If number is greater than zero (e.g., 12), returns &quot;dir/test_12.xml&quot;. On Windows platform, uses \ as the separator rather than /.</p>
+        </div>
+      </div>
+      <h3 id="759651D13B6CE6A67061DEE80EC001BBDA0ABB25">ConcatPaths</h3>
+      <p>
+        public 
+        <a href="FilePath.html">FilePath</a>
+         ConcatPaths(const FilePath &amp; directory, const FilePath &amp; relative_path)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#196">196</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Given directory = &quot;dir&quot;, relative_path = &quot;test.xml&quot;, returns &quot;dir/test.xml&quot;. On Windows, uses \ as the separator rather than /.</p>
+        </div>
+        <div>
+          <p> Given directory = &quot;dir&quot;, relative_path = &quot;test.xml&quot;, returns &quot;dir/test.xml&quot;. On Windows, uses \ as the separator rather than /.</p>
+        </div>
+      </div>
+      <h3 id="83422E5E8497CFEA4C4E2B0183C301167D506987">GenerateUniqueFileName</h3>
+      <p>
+        public 
+        <a href="FilePath.html">FilePath</a>
+         GenerateUniqueFileName(const FilePath &amp; directory, const FilePath &amp; base_name, const char * extension)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#280">280</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a pathname for a file that does not currently exist. The pathname will be directory/base_name.extension or directory/base_name_&lt;number&gt;.extension if directory/base_name.extension already exists. The number will be incremented until a pathname is found that does not already exist. Examples: &apos;dir/foo_test.xml&apos; or &apos;dir/foo_test_1.xml&apos;. There could be a race condition if two or more processes are calling this function at the same time -- they could both pick the same filename.</p>
+        </div>
+      </div>
+      <h3 id="8D1506099AE261CEE50D7B86ED9BCCE6AAE8368A">IsEmpty</h3>
+      <p>public _Bool IsEmpty()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h#114">114</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-filepath.h">gtest-filepath.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the path is &quot;&quot;.</p>
+        </div>
+      </div>
+      <h3 id="7F747F770D738EEC9BC289086D06BDB6DA51F816">RemoveTrailingPathSeparator</h3>
+      <p>
+        public 
+        <a href="FilePath.html">FilePath</a>
+         RemoveTrailingPathSeparator()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#343">343</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> If input name has a trailing separator character, remove it and return the name, otherwise return the name string unmodified. On Windows platform, uses \ as the separator, other platforms use /.</p>
+        </div>
+        <div>
+          <p> If input name has a trailing separator character, removes it and returns the name, otherwise return the name string unmodified. On Windows platform, uses \ as the separator, other platforms use /.</p>
+        </div>
+      </div>
+      <h3 id="E96C51D881F3C9A9B3DF9C9553DDE9A714C9AB30">RemoveDirectoryName</h3>
+      <p>
+        public 
+        <a href="FilePath.html">FilePath</a>
+         RemoveDirectoryName()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#152">152</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a copy of the FilePath with the directory part removed. Example: FilePath(&quot;path/to/file&quot;).RemoveDirectoryName() returns FilePath(&quot;file&quot;). If there is no directory part (&quot;just_a_file&quot;), it returns the FilePath unmodified. If there is no file part (&quot;just_a_dir/&quot;) it returns an empty FilePath (&quot;&quot;). On Windows platform, &apos;\&apos; is the path separator, otherwise it is &apos;/&apos;.</p>
+        </div>
+      </div>
+      <h3 id="315148CC803E73C711E8CA6389BF2D9512AF366A">RemoveFileName</h3>
+      <p>
+        public 
+        <a href="FilePath.html">FilePath</a>
+         RemoveFileName()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#163">163</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> RemoveFileName returns the directory path with the filename removed. Example: FilePath(&quot;path/to/file&quot;).RemoveFileName() returns &quot;path/to/&quot;. If the FilePath is &quot;a_file&quot; or &quot;/a_file&quot;, RemoveFileName returns FilePath(&quot;./&quot;) or, on Windows, FilePath(&quot;.\\&quot;). If the filepath does not have a file, like &quot;just/a/dir/&quot;, it returns the FilePath unmodified. On Windows platform, &apos;\&apos; is the path separator, otherwise it is &apos;/&apos;.</p>
+        </div>
+      </div>
+      <h3 id="049A8215880498CA41134EF2A7EC9AD32D4A9561">RemoveExtension</h3>
+      <p>
+        public 
+        <a href="FilePath.html">FilePath</a>
+         RemoveExtension(const char * extension)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#121">121</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a copy of the FilePath with the case-insensitive extension removed. Example: FilePath(&quot;dir/file.exe&quot;).RemoveExtension(&quot;EXE&quot;) returns FilePath(&quot;dir/file&quot;). If a case-insensitive extension is not found, returns a copy of the original FilePath.</p>
+        </div>
+      </div>
+      <h3 id="8C742E6D5C40EC71C5020260ED8DAE38E64B35E1">CreateDirectoriesRecursively</h3>
+      <p>public _Bool CreateDirectoriesRecursively()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#302">302</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Create directories so that path exists. Returns true if successful or if the directories already exist; returns false if unable to create directories for any reason.</p>
+        </div>
+        <div>
+          <p> Creates directories so that path exists. Returns true if successful or if the directories already exist; returns false if unable to create directories for any reason. Will also return false if the FilePath does not represent a directory (that is, it doesn&apos;t end with a path separator).</p>
+        </div>
+      </div>
+      <h3 id="F4BBF24F700C3BBD499CE66484DF1FD3F7D81F96">CreateFolder</h3>
+      <p>public _Bool CreateFolder()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#319">319</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Create the directory so that path exists. Returns true if successful or if the directory already exists; returns false if unable to create the directory for any reason, including if the parent directory does not exist. Not named &quot;CreateDirectory&quot; because that&apos;s a macro on Windows.</p>
+        </div>
+      </div>
+      <h3 id="A8A6C3600C6B6D7831DA294E4C26FB013907A80C">FileOrDirectoryExists</h3>
+      <p>public _Bool FileOrDirectoryExists()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#206">206</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if FilePath describes something in the file-system, either a file, directory, or whatever, and that something exists.</p>
+        </div>
+        <div>
+          <p> Returns true if pathname describes something findable in the file-system, either a file, directory, or whatever.</p>
+        </div>
+      </div>
+      <h3 id="E5D2CB332C2013CB97F6BBC58127ECB1F328C0AD">DirectoryExists</h3>
+      <p>public _Bool DirectoryExists()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#220">220</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if pathname describes a directory in the file-system that exists.</p>
+        </div>
+      </div>
+      <h3 id="9B353A3F619F538CA9CF7C5AB4ED6A165B2F1942">IsDirectory</h3>
+      <p>public _Bool IsDirectory()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#294">294</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if FilePath ends with a path separator, which indicates that it is intended to represent a directory. Returns false otherwise. This does NOT check that a directory (or file) actually exists.</p>
+        </div>
+      </div>
+      <h3 id="0C8C7181D678E163825F55B4AB439F9E2649FF7D">IsRootDirectory</h3>
+      <p>public _Bool IsRootDirectory()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#250">250</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if pathname describes a root directory. (Windows has one root directory per disk drive.)</p>
+        </div>
+      </div>
+      <h3 id="618686EF403EDE91BAFF655BDC4316C3B621D1AD">IsAbsolutePath</h3>
+      <p>public _Bool IsAbsolutePath()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc#259">259</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-filepath.cc">gtest-filepath.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if pathname describes an absolute path.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F4D9C319EF6264D9B6E46BE7A6FED3E3602141A3">FilePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1991F7D41B0A3BE702C64285086E147E6BE354E">FilePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B45AE0F5981AAEAC5FD06F05A145CC787E4F75A">FilePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D575C3DD269D543B34DC2CF2824CF08214F299AF">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC08F3DBE462C962C40BDF6EB9A11E102C055E9A">Set</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9233448A75B0249E12942F211C760A134843B50D">string</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BAFE67821A91B444CEEC9A5CA6FAEC25D0A7BF9">c_str</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BBABE7B213D7CC5C045B4713F097FD8E1D53657">GetCurrentDir</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#981CAF31B2EA2736105697BF7BBE94B4B441CB59">MakeFileName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#759651D13B6CE6A67061DEE80EC001BBDA0ABB25">ConcatPaths</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83422E5E8497CFEA4C4E2B0183C301167D506987">GenerateUniqueFileName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D1506099AE261CEE50D7B86ED9BCCE6AAE8368A">IsEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F747F770D738EEC9BC289086D06BDB6DA51F816">RemoveTrailingPathSeparator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E96C51D881F3C9A9B3DF9C9553DDE9A714C9AB30">RemoveDirectoryName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#315148CC803E73C711E8CA6389BF2D9512AF366A">RemoveFileName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#049A8215880498CA41134EF2A7EC9AD32D4A9561">RemoveExtension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8C742E6D5C40EC71C5020260ED8DAE38E64B35E1">CreateDirectoriesRecursively</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4BBF24F700C3BBD499CE66484DF1FD3F7D81F96">CreateFolder</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8A6C3600C6B6D7831DA294E4C26FB013907A80C">FileOrDirectoryExists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5D2CB332C2013CB97F6BBC58127ECB1F328C0AD">DirectoryExists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B353A3F619F538CA9CF7C5AB4ED6A165B2F1942">IsDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C8C7181D678E163825F55B4AB439F9E2649FF7D">IsRootDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#618686EF403EDE91BAFF655BDC4316C3B621D1AD">IsAbsolutePath</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

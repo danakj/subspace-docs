@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TypeSize</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TypeSize</h1>
+    <p>Defined at line 443 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+    <div>
+      <div>
+        <p> TODO: Most functionality in this class will gradually be phased out so it will resemble LinearPolySize as much as possible.</p>
+        <p> TypeSize is used to represent the size of types. If the type is of fixed size, it will represent the exact size. If the type is a scalable vector, it will represent the known minimum size.</p>
+      </div>
+      <div>
+        <p> This class is used to represent the size of types. If the type is of fixed</p>
+      </div>
+    </div>
+    <p>Inherits from LinearPolySize&lt;TypeSize&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="03651D2911AD50D9BECD1FE4D855D79515C3FA02">TypeSize</h3>
+      <p>public void TypeSize(const LinearPolySize&lt;TypeSize&gt; &amp; V)</p>
+      <p>Defined at line 445 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="8E8B2450D1039F4CD0F252E982A78C3D7F4CC26A">TypeSize</h3>
+      <p>public void TypeSize(ScalarTy MinVal, _Bool IsScalable)</p>
+      <p>Defined at line 446 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="67273E5C911DDD5CE6DA9BE4C70F5CC377AB8FB7">Fixed</h3>
+      <p>
+        public 
+        <a href="TypeSize.html">TypeSize</a>
+         Fixed(ScalarTy MinVal)
+      </p>
+      <p>Defined at line 449 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="88E4F6E4BD72ED3BDEB3248D07CAC85AE61D54DB">Scalable</h3>
+      <p>
+        public 
+        <a href="TypeSize.html">TypeSize</a>
+         Scalable(ScalarTy MinVal)
+      </p>
+      <p>Defined at line 452 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="15DD7D3EB57F7111660D40342CF22DB65E390850">getFixedSize</h3>
+      <p>public ScalarTy getFixedSize()</p>
+      <p>Defined at line 456 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="7440948427171C68D80E46FDA5EFBEAF5C22A3FB">getKnownMinSize</h3>
+      <p>public ScalarTy getKnownMinSize()</p>
+      <p>Defined at line 457 of file /usr/lib/llvm-16/include/llvm/Support/TypeSize.h</p>
+      <h3 id="CC6A24D841B43F19B45EE34EA97CEAAD0C7D7CBF">operator unsigned long</h3>
+      <p>public ScalarTy operator unsigned long()</p>
+      <div>
+        <div>
+          <p> Casts to a uint64_t if this is a fixed-width size.</p>
+          <p> This interface is deprecated and will be removed in a future version of LLVM in favour of upgrading uses that rely on this implicit conversion to uint64_t. Calls to functions that return a TypeSize should use the proper interfaces to TypeSize. In practice this is mostly calls to MVT/EVT::getSizeInBits().</p>
+          <p> To determine how to upgrade the code:</p>
+          <p>   if (&lt;algorithm works for both scalable and fixed-width vectors&gt;)     use getKnownMinValue()   else if (&lt;algorithm works only for fixed-width vectors&gt;) {     if &lt;algorithm can be adapted for both scalable and fixed-width vectors&gt;       update the algorithm and use getKnownMinValue()     else       bail out early for scalable vectors and use getFixedValue()   }</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#03651D2911AD50D9BECD1FE4D855D79515C3FA02">TypeSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E8B2450D1039F4CD0F252E982A78C3D7F4CC26A">TypeSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67273E5C911DDD5CE6DA9BE4C70F5CC377AB8FB7">Fixed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88E4F6E4BD72ED3BDEB3248D07CAC85AE61D54DB">Scalable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15DD7D3EB57F7111660D40342CF22DB65E390850">getFixedSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7440948427171C68D80E46FDA5EFBEAF5C22A3FB">getKnownMinSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC6A24D841B43F19B45EE34EA97CEAAD0C7D7CBF">operator unsigned long</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

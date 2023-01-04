@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExitOnError</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExitOnError</h1>
+    <p>Defined at line 1355 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+    <div>
+      <div>
+        <p> Helper for check-and-exit error handling.</p>
+        <p> For tool use only. NOT FOR USE IN LIBRARY CODE.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="15E34B8871DE0971FEA23A1D6199443ED98B23B8">ExitOnError</h3>
+      <p>
+        public void ExitOnError(
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         Banner, int DefaultErrorExitCode)
+      </p>
+      <p>Defined at line 1358 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Create an error on exit helper.</p>
+        </div>
+      </div>
+      <h3 id="C64A139272EFE114901C818A563CFF2286EE4A3C">setBanner</h3>
+      <p>
+        public void setBanner(
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         Banner)
+      </p>
+      <p>Defined at line 1363 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Set the banner string for any errors caught by operator().</p>
+        </div>
+      </div>
+      <h3 id="DD7100B7F42709DF96600D262A73A41F20C7B6B6">setExitCodeMapper</h3>
+      <p>
+        public void setExitCodeMapper(
+        <a href="../std/function.html">function</a>
+         GetExitCode)
+      </p>
+      <p>Defined at line 1366 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Set the exit-code mapper function.</p>
+        </div>
+      </div>
+      <h3 id="09B9D42700C5ACE5F37911A702774D6171A7DB71">operator()</h3>
+      <p>
+        public void operator()(
+        <a href="Error.html">Error</a>
+         Err)
+      </p>
+      <p>Defined at line 1371 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Check Err. If it&apos;s in a failure state log the error(s) and exit.</p>
+        </div>
+      </div>
+      <h3 id="B3D5D63091AF7F35658C30A7E98A31FA126C65B8">operator()</h3>
+      <p>public T operator()(Expected&lt;T&gt; &amp;&amp; E)</p>
+      <p>Defined at line 1375 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Check E. If it&apos;s in a success state then return the contained value. If it&apos;s in a failure state log the error(s) and exit.</p>
+        </div>
+      </div>
+      <h3 id="C5F8F7A8B4BF5123B177495854D259B552663E02">operator()</h3>
+      <p>public T &amp; operator()(Expected&lt;T &amp;&gt; &amp;&amp; E)</p>
+      <p>Defined at line 1382 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Check E. If it&apos;s in a success state then return the contained reference. If it&apos;s in a failure state log the error(s) and exit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#15E34B8871DE0971FEA23A1D6199443ED98B23B8">ExitOnError</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C64A139272EFE114901C818A563CFF2286EE4A3C">setBanner</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD7100B7F42709DF96600D262A73A41F20C7B6B6">setExitCodeMapper</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#09B9D42700C5ACE5F37911A702774D6171A7DB71">operator()</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3D5D63091AF7F35658C30A7E98A31FA126C65B8">operator()</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5F8F7A8B4BF5123B177495854D259B552663E02">operator()</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

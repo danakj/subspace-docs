@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPAtomicDefaultMemOrderClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPAtomicDefaultMemOrderClause</h1>
+    <p>Defined at line 1323 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;atomic_default_mem_order&apos; clause in the &apos;#pragma omp requires&apos;  directive.</p>
+        <p> In this example directive &apos;#pragma omp requires&apos; has simple atomic_default_mem_order&apos; clause with kind &apos;seq_cst&apos;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPClause.html">OMPClause</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="53B77BE74E67D78C933249617D0AE59E031E2AEF">OMPAtomicDefaultMemOrderClause</h3>
+      <p>
+        public void OMPAtomicDefaultMemOrderClause(
+        <a href="OpenMPAtomicDefaultMemOrderClauseKind.html">OpenMPAtomicDefaultMemOrderClauseKind</a>
+         A, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ALoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 1359 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build &apos;atomic_default_mem_order&apos; clause with argument  (&apos;seq_cst&apos;, &apos;acq_rel&apos; or &apos;relaxed&apos;).</p>
+        </div>
+      </div>
+      <h3 id="7988983C335317BF15103CC506EF8F84D1F81A1B">OMPAtomicDefaultMemOrderClause</h3>
+      <p>public void OMPAtomicDefaultMemOrderClause()</p>
+      <p>Defined at line 1367 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build an empty clause.</p>
+        </div>
+      </div>
+      <h3 id="78D647B73D8C6E912041BE299562463147CD65EA">setLParenLoc</h3>
+      <p>
+        public void setLParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1372 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Sets the location of &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="B97A743BA5F373D522D4C52C7125B6670C3046FC">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 1375 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the locaiton of &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="28A88FEABE43F30FAA71B459C1042272757955A6">getAtomicDefaultMemOrderKind</h3>
+      <p>
+        public 
+        <a href="OpenMPAtomicDefaultMemOrderClauseKind.html">OpenMPAtomicDefaultMemOrderClauseKind</a>
+         getAtomicDefaultMemOrderKind()
+      </p>
+      <p>Defined at line 1378 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns kind of the clause.</p>
+        </div>
+      </div>
+      <h3 id="C4AE5D9DABE574DE1C9675899E34DF18435EA626">getAtomicDefaultMemOrderKindKwLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAtomicDefaultMemOrderKindKwLoc()
+      </p>
+      <p>Defined at line 1383 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns location of clause kind.</p>
+        </div>
+      </div>
+      <h3 id="5ADB82675AF9C3744CA870BEE3EFEF619C00C3A8">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1385 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="5A4EAD1B8433E6A8D96AACFFC4CD09C73179AE05">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1389 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="E11D0069861D7E2FB9DFB771070995C967B3E6D3">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 1393 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="6EC2AD8F063A1BAD102BC6E56C3DBCF8AF683D20">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 1396 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="6A417C44A27DC680C7C04A21EC852F4D30C45193">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 1400 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#53B77BE74E67D78C933249617D0AE59E031E2AEF">OMPAtomicDefaultMemOrderClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7988983C335317BF15103CC506EF8F84D1F81A1B">OMPAtomicDefaultMemOrderClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78D647B73D8C6E912041BE299562463147CD65EA">setLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B97A743BA5F373D522D4C52C7125B6670C3046FC">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28A88FEABE43F30FAA71B459C1042272757955A6">getAtomicDefaultMemOrderKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4AE5D9DABE574DE1C9675899E34DF18435EA626">getAtomicDefaultMemOrderKindKwLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5ADB82675AF9C3744CA870BEE3EFEF619C00C3A8">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A4EAD1B8433E6A8D96AACFFC4CD09C73179AE05">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E11D0069861D7E2FB9DFB771070995C967B3E6D3">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6EC2AD8F063A1BAD102BC6E56C3DBCF8AF683D20">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A417C44A27DC680C7C04A21EC852F4D30C45193">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

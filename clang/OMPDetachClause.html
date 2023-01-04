@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPDetachClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPDetachClause</h1>
+    <p>Defined at line 8184 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;detach&apos; clause in the &apos;#pragma omp task&apos; directive.</p>
+        <p> In this example directive &apos;#pragma omp detach&apos; has simple &apos;detach&apos; clause with the variable &apos;evt&apos;.</p>
+      </div>
+    </div>
+    <p>Inherits from OMPOneStmtClause&lt;llvm::omp::OMPC_detach, OMPClause&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4436F86E3FC738E30481F14F73DDEFF798B2F04D">OMPDetachClause</h3>
+      <p>
+        public void OMPDetachClause(Expr * Evt, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 8198 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build &apos;detach&apos; clause with event-handler </p>
+        </div>
+      </div>
+      <h3 id="0175694459C9C6BCEC0ED285E9B7335115CE346E">OMPDetachClause</h3>
+      <p>public void OMPDetachClause()</p>
+      <p>Defined at line 8203 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build an empty clause.</p>
+        </div>
+      </div>
+      <h3 id="B4FDBCD6DE4DEE09FFD217BB8F084B978330A5A5">getEventHandler</h3>
+      <p>public Expr * getEventHandler()</p>
+      <p>Defined at line 8206 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns event-handler expression.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4436F86E3FC738E30481F14F73DDEFF798B2F04D">OMPDetachClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0175694459C9C6BCEC0ED285E9B7335115CE346E">OMPDetachClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4FDBCD6DE4DEE09FFD217BB8F084B978330A5A5">getEventHandler</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SubstNonTypeTemplateParmExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SubstNonTypeTemplateParmExpr</h1>
+    <p>Defined at line 4268 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a reference to a non-type template parameter that has been substituted with a template argument.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A4986017B00A446405C828B02B9CBEA9C68D21C0">SubstNonTypeTemplateParmExpr</h3>
+      <p>
+        public void SubstNonTypeTemplateParmExpr(
+        <a href="QualType.html">QualType</a>
+         Ty, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         ValueKind, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, Expr * Replacement, Decl * AssociatedDecl, unsigned int Index, 
+        <a href="../std/optional.html">optional</a>
+         PackIndex, _Bool RefParam)
+      </p>
+      <p>Defined at line 4287 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="72734CBA69618E874A3EF83D8ECDF1AD47B158A5">getNameLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getNameLoc()
+      </p>
+      <p>Defined at line 4300 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="C7C31C81EA796F3A2D49D2FC8A4DB1781DA4E82F">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 4303 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="3CDAB3C44021252AE792ECC1429C366FDBC1E372">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 4304 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="2EC3A441DFB53978BC9165A9FB63DC26FD56B90B">getReplacement</h3>
+      <p>public Expr * getReplacement()</p>
+      <p>Defined at line 4306 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="8F047B8B6CBBEF4E8D7E4BC379BE1A554CD37997">getAssociatedDecl</h3>
+      <p>public Decl * getAssociatedDecl()</p>
+      <p>Defined at line 4310 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> A template-like entity which owns the whole pattern being substituted. This will own a set of template parameters.</p>
+        </div>
+      </div>
+      <h3 id="9104A8A865BDFB368045FD6ACFB3F9C3ED35CEA5">getIndex</h3>
+      <p>public unsigned int getIndex()</p>
+      <p>Defined at line 4314 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Returns the index of the replaced parameter in the associated declaration. This should match the result of `getParameter()-&gt;getIndex()`.</p>
+        </div>
+      </div>
+      <h3 id="46F18D21D745366D0C1830532F39CAF2E0A15259">getPackIndex</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getPackIndex()
+      </p>
+      <p>Defined at line 4316 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="D2E9ABAA607AF94BC6FF6D4AE104CE964DB33427">getParameter</h3>
+      <p>public NonTypeTemplateParmDecl * getParameter()</p>
+      <h3 id="283622E5EF6BFC5769FBE34B2FDD7E8455469961">isReferenceParameter</h3>
+      <p>public _Bool isReferenceParameter()</p>
+      <p>Defined at line 4324 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="3943EE5AE8FBDFC2CF3C5C51EC7ED3BDAE9CC39C">getParameterType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getParameterType(const ASTContext &amp; Ctx)
+      </p>
+      <div>
+        <div>
+          <p> Determine the substituted type of the template parameter.</p>
+        </div>
+      </div>
+      <h3 id="10D205C3A69D94EFCF4EA55A391736F1E76C56BB">classof</h3>
+      <p>public _Bool classof(const Stmt * s)</p>
+      <p>Defined at line 4329 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="730628383C8DBEDEFEA65A964E2455BB3944590C">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4334 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="3A2750C64ECAC8F55FB3F341C638ECAA1B8B40DF">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4336 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A4986017B00A446405C828B02B9CBEA9C68D21C0">SubstNonTypeTemplateParmExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#72734CBA69618E874A3EF83D8ECDF1AD47B158A5">getNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7C31C81EA796F3A2D49D2FC8A4DB1781DA4E82F">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3CDAB3C44021252AE792ECC1429C366FDBC1E372">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2EC3A441DFB53978BC9165A9FB63DC26FD56B90B">getReplacement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F047B8B6CBBEF4E8D7E4BC379BE1A554CD37997">getAssociatedDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9104A8A865BDFB368045FD6ACFB3F9C3ED35CEA5">getIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#46F18D21D745366D0C1830532F39CAF2E0A15259">getPackIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2E9ABAA607AF94BC6FF6D4AE104CE964DB33427">getParameter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#283622E5EF6BFC5769FBE34B2FDD7E8455469961">isReferenceParameter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3943EE5AE8FBDFC2CF3C5C51EC7ED3BDAE9CC39C">getParameterType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10D205C3A69D94EFCF4EA55A391736F1E76C56BB">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#730628383C8DBEDEFEA65A964E2455BB3944590C">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A2750C64ECAC8F55FB3F341C638ECAA1B8B40DF">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

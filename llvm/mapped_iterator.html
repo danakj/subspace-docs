@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class mapped_iterator</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class mapped_iterator</h1>
+    <p>Defined at line 404 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    <div>
+      <div>
+        <p> mapped_iterator - This is a simple iterator adapter that causes a function to be applied whenever operator* is invoked on the iterator.</p>
+      </div>
+    </div>
+    <p>Inherits from iterator_adaptor_base&lt;mapped_iterator&lt;ItTy, FuncTy&gt;, ItTy, typename std::iterator_traits&lt;ItTy&gt;::iterator_category, std::remove_reference_t&lt;ReferenceTy&gt;, typename std::iterator_traits&lt;ItTy&gt;::difference_type, std::remove_reference_t&lt;ReferenceTy&gt; *, ReferenceTy&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4AE91F00BF32033CC65B6D366E14A69F10149099">mapped_iterator&lt;ItTy, FuncTy, ReferenceTy&gt;</h3>
+      <p>public void mapped_iterator&lt;ItTy, FuncTy, ReferenceTy&gt;()</p>
+      <p>Defined at line 412 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="5B037B24FAC67F047FBABB2ABFAF3BE7EA702BCF">mapped_iterator&lt;ItTy, FuncTy, ReferenceTy&gt;</h3>
+      <p>public void mapped_iterator&lt;ItTy, FuncTy, ReferenceTy&gt;(ItTy U, FuncTy F)</p>
+      <p>Defined at line 413 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="41EA5B5A94FB47305362CACC28ED02F5989BF01B">getCurrent</h3>
+      <p>public ItTy getCurrent()</p>
+      <p>Defined at line 416 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="72AEBE3597C05E854671C26041C416798E680F57">getFunction</h3>
+      <p>public const FuncTy &amp; getFunction()</p>
+      <p>Defined at line 418 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="AE096F80E6FD091A5FF70A9D170FE0E17FB81D9F">operator*</h3>
+      <p>public ReferenceTy operator*()</p>
+      <p>Defined at line 420 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4AE91F00BF32033CC65B6D366E14A69F10149099">mapped_iterator&lt;ItTy, FuncTy, ReferenceTy&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B037B24FAC67F047FBABB2ABFAF3BE7EA702BCF">mapped_iterator&lt;ItTy, FuncTy, ReferenceTy&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#41EA5B5A94FB47305362CACC28ED02F5989BF01B">getCurrent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#72AEBE3597C05E854671C26041C416798E680F57">getFunction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE096F80E6FD091A5FF70A9D170FE0E17FB81D9F">operator*</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ImplicitCastExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ImplicitCastExpr</h1>
+    <p>Defined at line 3625 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> ImplicitCastExpr - Allows us to explicitly represent implicit type conversions, which have no direct representation in the original source code. For example: converting T[]-&gt;T*, void f()-&gt;void (*f)(), float-&gt;double, short-&gt;int, etc.</p>
+        <p> In C, implicit casts always produce rvalues. However, in C++, an implicit cast whose result is being bound to a reference will be an lvalue or xvalue. For example:</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="CastExpr.html">CastExpr</a>
+      , llvm::TrailingObjects&lt;ImplicitCastExpr, CXXBaseSpecifier *, FPOptionsOverride&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D36D73E26F8DD8F2643E3DB59713D7371205CA04">ImplicitCastExpr</h3>
+      <p>
+        public void ImplicitCastExpr(
+        <a href="../clang/ImplicitCastExpr/OnStack_t.html">OnStack_t</a>
+         _, 
+        <a href="QualType.html">QualType</a>
+         ty, 
+        <a href="CastKind.html">CastKind</a>
+         kind, Expr * op, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         FPO)
+      </p>
+      <p>Defined at line 3651 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D31F0279DA02C246D2D7459C0582815BF2E307DB">isPartOfExplicitCast</h3>
+      <p>public _Bool isPartOfExplicitCast()</p>
+      <p>Defined at line 3659 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="18998F471D4690F0346DC1A5CAC2001125B5AFA0">setIsPartOfExplicitCast</h3>
+      <p>public void setIsPartOfExplicitCast(_Bool PartOfExplicitCast)</p>
+      <p>Defined at line 3660 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="5DBDBE85A9347A3CF54FEE01BD0DE819A97D7BE3">Create</h3>
+      <p>
+        public ImplicitCastExpr * Create(const ASTContext &amp; Context, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="CastKind.html">CastKind</a>
+         Kind, Expr * Operand, const CXXCastPath * BasePath, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         Cat, 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         FPO)
+      </p>
+      <h3 id="F06E6C6DA895EA1F01202925BAB1EC6196B7A0DC">CreateEmpty</h3>
+      <p>public ImplicitCastExpr * CreateEmpty(const ASTContext &amp; Context, unsigned int PathSize, _Bool HasFPFeatures)</p>
+      <h3 id="479657B7DF7D03DE401E5103574AD2351B411E23">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 3672 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2F33F87FA186222E43DDCCABDD9BEC8EFCF6DA88">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 3675 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E2EF514ED4D49BFB64452FA56173F0585B468472">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 3679 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="187339B1DFB5A44D79A16124B5A652FCBA1D037C">enum OnStack_t</h3>
+      <ul>
+        <li>OnStack</li>
+      </ul>
+      <p>Defined at line 3650 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D36D73E26F8DD8F2643E3DB59713D7371205CA04">ImplicitCastExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D31F0279DA02C246D2D7459C0582815BF2E307DB">isPartOfExplicitCast</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#18998F471D4690F0346DC1A5CAC2001125B5AFA0">setIsPartOfExplicitCast</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5DBDBE85A9347A3CF54FEE01BD0DE819A97D7BE3">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F06E6C6DA895EA1F01202925BAB1EC6196B7A0DC">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#479657B7DF7D03DE401E5103574AD2351B411E23">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F33F87FA186222E43DDCCABDD9BEC8EFCF6DA88">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2EF514ED4D49BFB64452FA56173F0585B468472">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#187339B1DFB5A44D79A16124B5A652FCBA1D037C">OnStack_t</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

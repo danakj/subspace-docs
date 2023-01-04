@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UnaryOperator</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UnaryOperator</h1>
+    <p>Defined at line 2173 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> UnaryOperator - This represents the unary-expression&apos;s (except sizeof and alignof), the postinc/postdec operators from postfix-expression, and various extensions.</p>
+        <p> Notes on various nodes:</p>
+        <p> Real/Imag - These return the real/imag part of a complex operand.  If   applied to a non-complex value, the former returns its operand and the   later returns zero in the type of the operand.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;UnaryOperator, FPOptionsOverride&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2F300610F857E7069D59C3EEE060CDA54EA35057">UnaryOperator</h3>
+      <p>
+        protected void UnaryOperator(const ASTContext &amp; Ctx, Expr * input, 
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         opc, 
+        <a href="QualType.html">QualType</a>
+         type, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         l, _Bool CanOverflow, 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         FPFeatures)
+      </p>
+      <h3 id="D491DE20392B53BFEF6F331FC80C7C036CD11D78">UnaryOperator</h3>
+      <p>
+        protected void UnaryOperator(_Bool HasFPFeatures, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 2201 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Build an empty unary operator.</p>
+        </div>
+      </div>
+      <h3 id="CECD37ACDCFF8A26916F48D49C81522D406160C1">CreateEmpty</h3>
+      <p>public UnaryOperator * CreateEmpty(const ASTContext &amp; C, _Bool hasFPFeatures)</p>
+      <h3 id="77CDF8F5453563A01D02232A937C25E097282BEC">Create</h3>
+      <p>
+        public UnaryOperator * Create(const ASTContext &amp; C, Expr * input, 
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         opc, 
+        <a href="QualType.html">QualType</a>
+         type, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         l, _Bool CanOverflow, 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         FPFeatures)
+      </p>
+      <h3 id="63C77E852408F03DAA335CB7C8B28028B66C15AE">getOpcode</h3>
+      <p>
+        public 
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         getOpcode()
+      </p>
+      <p>Defined at line 2215 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="24AC4FE4CCFC252197CC7D3587A1930113EE8FED">setOpcode</h3>
+      <p>
+        public void setOpcode(
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         Opc)
+      </p>
+      <p>Defined at line 2218 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="14C6498D2CFDAC65F907557B473C8E3C0B258FAF">getSubExpr</h3>
+      <p>public Expr * getSubExpr()</p>
+      <p>Defined at line 2220 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9ED42781E99308290B3851E6AA067037B1A749DD">setSubExpr</h3>
+      <p>public void setSubExpr(Expr * E)</p>
+      <p>Defined at line 2221 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0DE9255101B78C4AA9443D01A244FC9380060FDB">getOperatorLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getOperatorLoc()
+      </p>
+      <p>Defined at line 2224 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getOperatorLoc - Return the location of the operator.</p>
+        </div>
+      </div>
+      <h3 id="F0DB60A7A1CE060ED58DCD8529B9B1F7DD8EF6CE">setOperatorLoc</h3>
+      <p>
+        public void setOperatorLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2225 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="17200984837804B1E5DAF52C6D9BB343C53D443F">canOverflow</h3>
+      <p>public _Bool canOverflow()</p>
+      <p>Defined at line 2233 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Returns true if the unary operator can cause an overflow. For instance,   signed int i = INT_MAX; i++;   signed char c = CHAR_MAX; c++; Due to integer promotions, c++ is promoted to an int before the postfix increment, and the result is an int that cannot overflow. However, i++ can overflow.</p>
+        </div>
+      </div>
+      <h3 id="98C844C9A18DCD762AEE9667F8894920D72EA2F2">setCanOverflow</h3>
+      <p>public void setCanOverflow(_Bool C)</p>
+      <p>Defined at line 2234 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="F0FB1ACC4DE7EC1B09AC483B9B957663D30704BA">isFPContractableWithinStatement</h3>
+      <p>public _Bool isFPContractableWithinStatement(const LangOptions &amp; LO)</p>
+      <p>Defined at line 2238 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the FP contractability status of this operator. Only meaningful for operations on floating point types.</p>
+        </div>
+      </div>
+      <h3 id="1D4C713111011F40B13C855222A6DE281385050C">isFEnvAccessOn</h3>
+      <p>public _Bool isFEnvAccessOn(const LangOptions &amp; LO)</p>
+      <p>Defined at line 2244 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the FENV_ACCESS status of this operator. Only meaningful for operations on floating point types.</p>
+        </div>
+      </div>
+      <h3 id="E5CEC96C3AF675C96689DF5FD11F1060E2A79C7F">isPostfix</h3>
+      <p>
+        public _Bool isPostfix(
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         Op)
+      </p>
+      <p>Defined at line 2249 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> isPostfix - Return true if this is a postfix operation, like x++.</p>
+        </div>
+      </div>
+      <h3 id="1E07954EF37613CED69D1B9A021850E27952E9C5">isPrefix</h3>
+      <p>
+        public _Bool isPrefix(
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         Op)
+      </p>
+      <p>Defined at line 2254 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> isPrefix - Return true if this is a prefix operation, like --x.</p>
+        </div>
+      </div>
+      <h3 id="5ED9FD2414D7DAAB9C4419A3B67B72CB0F3AFAA6">isPrefix</h3>
+      <p>public _Bool isPrefix()</p>
+      <p>Defined at line 2258 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="02772CF99D290EED145B0611DF041B131610DB2E">isPostfix</h3>
+      <p>public _Bool isPostfix()</p>
+      <p>Defined at line 2259 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C750A0CF036F8116C50F1F457843CD0979BE5275">isIncrementOp</h3>
+      <p>
+        public _Bool isIncrementOp(
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         Op)
+      </p>
+      <p>Defined at line 2261 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="CA86828EC6DAAFF102AB44B55E9B98ABDBC31C09">isIncrementOp</h3>
+      <p>public _Bool isIncrementOp()</p>
+      <p>Defined at line 2264 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="947D610F960DE8B91722FE607C959548C70DC5E2">isDecrementOp</h3>
+      <p>
+        public _Bool isDecrementOp(
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         Op)
+      </p>
+      <p>Defined at line 2268 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A709288C344270A78F63C1E95EEA0E4598901E46">isDecrementOp</h3>
+      <p>public _Bool isDecrementOp()</p>
+      <p>Defined at line 2271 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D90534449D27A0D1A6A44838E86ECFD9D083F460">isIncrementDecrementOp</h3>
+      <p>
+        public _Bool isIncrementDecrementOp(
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         Op)
+      </p>
+      <p>Defined at line 2275 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8B04F861D7B7D4DDC734D1BD107AFA84E26F42BC">isIncrementDecrementOp</h3>
+      <p>public _Bool isIncrementDecrementOp()</p>
+      <p>Defined at line 2276 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8214A7E06F6734D2DBC6EE2A4D0729F9BF2195BC">isArithmeticOp</h3>
+      <p>
+        public _Bool isArithmeticOp(
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         Op)
+      </p>
+      <p>Defined at line 2280 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="68D3124A218CC9F0B021ECB2268DFB566BFFF40F">isArithmeticOp</h3>
+      <p>public _Bool isArithmeticOp()</p>
+      <p>Defined at line 2283 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="D6FF1B4F3A9CC7EBFAC91F1F821A2195D6D3D3D5">getOpcodeStr</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getOpcodeStr(
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         Op)
+      </p>
+      <div>
+        <div>
+          <p> getOpcodeStr - Turn an Opcode enum value into the punctuation char it corresponds to, e.g. &quot;sizeof&quot; or &quot;[pre]++&quot;</p>
+        </div>
+      </div>
+      <h3 id="04D7742731F268A5EDB5EEC2BC2839C7D63BBC3D">getOverloadedOpcode</h3>
+      <p>
+        public 
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         getOverloadedOpcode(
+        <a href="OverloadedOperatorKind.html">OverloadedOperatorKind</a>
+         OO, _Bool Postfix)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the unary opcode that corresponds to the given overloaded operator.</p>
+        </div>
+      </div>
+      <h3 id="FE09716C4C28A167734A886FED1E812A9F9BC077">getOverloadedOperator</h3>
+      <p>
+        public 
+        <a href="OverloadedOperatorKind.html">OverloadedOperatorKind</a>
+         getOverloadedOperator(
+        <a href="UnaryOperatorKind.html">UnaryOperatorKind</a>
+         Opc)
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the overloaded operator kind that corresponds to the given unary opcode.</p>
+        </div>
+      </div>
+      <h3 id="E8867D3930A99E283103BBCB544BCFA38ED61A27">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2297 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7F3F0CD718C1A1BDD4E0FCE76232F3346E5C31AD">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2300 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7FE7D4E42276A960F3D81E6D78CD438CB63F901E">getExprLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExprLoc()
+      </p>
+      <p>Defined at line 2303 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="33BEA6EDB3EEA577073FF52D9A5C8689DB5E33AD">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2305 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2230B127233B01094126B0C443FF0FE720A00C9D">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2310 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="314EE1073A4673144B903A2DDB81504591FBBBD7">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2311 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7D788A5CA9DA880D3FB10A4771A0331ED3FECFE7">hasStoredFPFeatures</h3>
+      <p>public _Bool hasStoredFPFeatures()</p>
+      <p>Defined at line 2316 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Is FPFeatures in Trailing Storage?</p>
+        </div>
+      </div>
+      <h3 id="A532296682C12EB26DD52E9CA84126031BF77C89">getStoredFPFeatures</h3>
+      <p>
+        public 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         getStoredFPFeatures()
+      </p>
+      <p>Defined at line 2319 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get FPFeatures from trailing storage.</p>
+        </div>
+      </div>
+      <h3 id="3860ADD0A68025F3098E867F250EB4E5D33E7338">setStoredFPFeatures</h3>
+      <p>
+        protected void setStoredFPFeatures(
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         F)
+      </p>
+      <p>Defined at line 2325 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Set FPFeatures in trailing storage, used only by Serialization</p>
+        </div>
+      </div>
+      <h3 id="AAAED4566ECD81C16862A62FCC351B74B1209440">getFPFeaturesInEffect</h3>
+      <p>
+        public 
+        <a href="FPOptions.html">FPOptions</a>
+         getFPFeaturesInEffect(const LangOptions &amp; LO)
+      </p>
+      <p>Defined at line 2330 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Get the FP features status of this operator. Only meaningful for operations on floating point types.</p>
+        </div>
+      </div>
+      <h3 id="9D5CE4A93561BF4F72903BDBB0C705347FBD0ABE">getFPOptionsOverride</h3>
+      <p>
+        public 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         getFPOptionsOverride()
+      </p>
+      <p>Defined at line 2335 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2F300610F857E7069D59C3EEE060CDA54EA35057">UnaryOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D491DE20392B53BFEF6F331FC80C7C036CD11D78">UnaryOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CECD37ACDCFF8A26916F48D49C81522D406160C1">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77CDF8F5453563A01D02232A937C25E097282BEC">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63C77E852408F03DAA335CB7C8B28028B66C15AE">getOpcode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24AC4FE4CCFC252197CC7D3587A1930113EE8FED">setOpcode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14C6498D2CFDAC65F907557B473C8E3C0B258FAF">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9ED42781E99308290B3851E6AA067037B1A749DD">setSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0DE9255101B78C4AA9443D01A244FC9380060FDB">getOperatorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F0DB60A7A1CE060ED58DCD8529B9B1F7DD8EF6CE">setOperatorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17200984837804B1E5DAF52C6D9BB343C53D443F">canOverflow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98C844C9A18DCD762AEE9667F8894920D72EA2F2">setCanOverflow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F0FB1ACC4DE7EC1B09AC483B9B957663D30704BA">isFPContractableWithinStatement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D4C713111011F40B13C855222A6DE281385050C">isFEnvAccessOn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5CEC96C3AF675C96689DF5FD11F1060E2A79C7F">isPostfix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E07954EF37613CED69D1B9A021850E27952E9C5">isPrefix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5ED9FD2414D7DAAB9C4419A3B67B72CB0F3AFAA6">isPrefix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02772CF99D290EED145B0611DF041B131610DB2E">isPostfix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C750A0CF036F8116C50F1F457843CD0979BE5275">isIncrementOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA86828EC6DAAFF102AB44B55E9B98ABDBC31C09">isIncrementOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#947D610F960DE8B91722FE607C959548C70DC5E2">isDecrementOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A709288C344270A78F63C1E95EEA0E4598901E46">isDecrementOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D90534449D27A0D1A6A44838E86ECFD9D083F460">isIncrementDecrementOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8B04F861D7B7D4DDC734D1BD107AFA84E26F42BC">isIncrementDecrementOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8214A7E06F6734D2DBC6EE2A4D0729F9BF2195BC">isArithmeticOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68D3124A218CC9F0B021ECB2268DFB566BFFF40F">isArithmeticOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6FF1B4F3A9CC7EBFAC91F1F821A2195D6D3D3D5">getOpcodeStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#04D7742731F268A5EDB5EEC2BC2839C7D63BBC3D">getOverloadedOpcode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE09716C4C28A167734A886FED1E812A9F9BC077">getOverloadedOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8867D3930A99E283103BBCB544BCFA38ED61A27">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F3F0CD718C1A1BDD4E0FCE76232F3346E5C31AD">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FE7D4E42276A960F3D81E6D78CD438CB63F901E">getExprLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33BEA6EDB3EEA577073FF52D9A5C8689DB5E33AD">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2230B127233B01094126B0C443FF0FE720A00C9D">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#314EE1073A4673144B903A2DDB81504591FBBBD7">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D788A5CA9DA880D3FB10A4771A0331ED3FECFE7">hasStoredFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A532296682C12EB26DD52E9CA84126031BF77C89">getStoredFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3860ADD0A68025F3098E867F250EB4E5D33E7338">setStoredFPFeatures</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AAAED4566ECD81C16862A62FCC351B74B1209440">getFPFeaturesInEffect</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D5CE4A93561BF4F72903BDBB0C705347FBD0ABE">getFPOptionsOverride</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

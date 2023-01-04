@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace compression</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/compression" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace compression</h1>
+    <h2 id="Namespaces">Namespaces</h2>
+    <ul>
+      <li>
+        <a href="zlib/index.html">zlib</a>
+      </li>
+      <li>
+        <a href="zstd/index.html">zstd</a>
+      </li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="Params.html">Params</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CF869BAA398B23A2E7E145A3307F1A6A1A099112">formatFor</h3>
+      <p>
+        <a href="Format.html">Format</a>
+         formatFor(
+        <a href="../../llvm/DebugCompressionType.html">DebugCompressionType</a>
+         Type)
+      </p>
+      <p>Defined at line 81 of file /usr/lib/llvm-16/include/llvm/Support/Compression.h</p>
+      <h3 id="42CDC945B072E7039B2CB601CAE38CB2DB0DE321">getReasonIfUnsupported</h3>
+      <p>
+        const char * getReasonIfUnsupported(
+        <a href="Format.html">Format</a>
+         F)
+      </p>
+      <div>
+        <div>
+          <p> Return nullptr if LLVM was built with support (LLVM_ENABLE_ZLIB, LLVM_ENABLE_ZSTD) for the specified compression format; otherwise return a string literal describing the reason.</p>
+        </div>
+      </div>
+      <h3 id="3012A55F163B8E234212F9228565A0C9CD5E91C7">compress</h3>
+      <p>
+        void compress(
+        <a href="Params.html">Params</a>
+         P, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         Input, SmallVectorImpl&lt;uint8_t&gt; &amp; Output)
+      </p>
+      <div>
+        <div>
+          <p> Compress Input with the specified format P.Format. If Level is -1, use *::DefaultCompression for the format.</p>
+        </div>
+      </div>
+      <h3 id="3D06BA57FB10E50822BFD83FF371461D751CBB2F">decompress</h3>
+      <p>
+        <a href="../../llvm/Error.html">Error</a>
+         decompress(
+        <a href="../../llvm/DebugCompressionType.html">DebugCompressionType</a>
+         T, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         Input, uint8_t * Output, size_t UncompressedSize)
+      </p>
+      <div>
+        <div>
+          <p> Decompress Input. The uncompressed size must be available.</p>
+        </div>
+      </div>
+      <h3 id="FE5AF121AD3335F1F478C76A65F8821E4C5A021A">decompress</h3>
+      <p>
+        <a href="../../llvm/Error.html">Error</a>
+         decompress(
+        <a href="Format.html">Format</a>
+         F, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         Input, SmallVectorImpl&lt;uint8_t&gt; &amp; Output, size_t UncompressedSize)
+      </p>
+      <h3 id="89EA236CA63EE1B991C6EBFCFB36D60FD3A59808">decompress</h3>
+      <p>
+        <a href="../../llvm/Error.html">Error</a>
+         decompress(
+        <a href="../../llvm/DebugCompressionType.html">DebugCompressionType</a>
+         T, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         Input, SmallVectorImpl&lt;uint8_t&gt; &amp; Output, size_t UncompressedSize)
+      </p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="E988EA1A411B77A214702A8C8170B0F57504A75E">enum class Format</h3>
+      <ul>
+        <li>Zlib</li>
+        <li>Zstd</li>
+      </ul>
+      <p>Defined at line 76 of file /usr/lib/llvm-16/include/llvm/Support/Compression.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Namespaces">Namespaces</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CF869BAA398B23A2E7E145A3307F1A6A1A099112">formatFor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42CDC945B072E7039B2CB601CAE38CB2DB0DE321">getReasonIfUnsupported</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3012A55F163B8E234212F9228565A0C9CD5E91C7">compress</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D06BA57FB10E50822BFD83FF371461D751CBB2F">decompress</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE5AF121AD3335F1F478C76A65F8821E4C5A021A">decompress</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89EA236CA63EE1B991C6EBFCFB36D60FD3A59808">decompress</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E988EA1A411B77A214702A8C8170B0F57504A75E">Format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

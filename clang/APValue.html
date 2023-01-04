@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class APValue</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class APValue</h1>
+    <p>Defined at line 122 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+    <div>
+      <div>
+        <p> APValue - This class implements a discriminated union of [uninitialized] [APSInt] [APFloat], [Complex APSInt] [Complex APFloat], [Expr + Offset], [Vector: N * APValue], [Array: N * APValue]</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/APValue/LValueBase.html">LValueBase</a>
+      </li>
+      <li>
+        <a href="../clang/APValue/LValuePathEntry.html">LValuePathEntry</a>
+      </li>
+      <li>
+        <a href="../clang/APValue/LValuePathSerializationHelper.html">LValuePathSerializationHelper</a>
+      </li>
+      <li>
+        <a href="../clang/APValue/NoLValuePath.html">NoLValuePath</a>
+      </li>
+      <li>
+        <a href="../clang/APValue/UninitArray.html">UninitArray</a>
+      </li>
+      <li>
+        <a href="../clang/APValue/UninitStruct.html">UninitStruct</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C533A899E6A10FF71CC20AB67E542535D32E3BDD">APValue</h3>
+      <p>public void APValue()</p>
+      <p>Defined at line 309 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="A54951BF41D9C39D9715A3329D4882B13D7BD35F">APValue</h3>
+      <p>
+        public void APValue(
+        <a href="../llvm/APSInt.html">APSInt</a>
+         I)
+      </p>
+      <p>Defined at line 310 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="0D9F46A8D98933F91A3F0350195A5D0DD2CAF941">APValue</h3>
+      <p>
+        public void APValue(
+        <a href="../llvm/APFloat.html">APFloat</a>
+         F)
+      </p>
+      <p>Defined at line 313 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="D33ECB158B04337A34B2352A78D5BFB6F0137B34">APValue</h3>
+      <p>
+        public void APValue(
+        <a href="../llvm/APFixedPoint.html">APFixedPoint</a>
+         FX)
+      </p>
+      <p>Defined at line 316 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="4713742B4DACBE1165B52F9D4DC06E46950C1DF6">APValue</h3>
+      <p>public void APValue(const APValue * E, unsigned int N)</p>
+      <p>Defined at line 319 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="2D0708A9CEF211C71C1D32F966267B1327E30A78">APValue</h3>
+      <p>
+        public void APValue(
+        <a href="../llvm/APSInt.html">APSInt</a>
+         R, 
+        <a href="../llvm/APSInt.html">APSInt</a>
+         I)
+      </p>
+      <p>Defined at line 322 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="A2EA67AA6C5F270356FB6318372921CB43F2F9A0">APValue</h3>
+      <p>
+        public void APValue(
+        <a href="../llvm/APFloat.html">APFloat</a>
+         R, 
+        <a href="../llvm/APFloat.html">APFloat</a>
+         I)
+      </p>
+      <p>Defined at line 325 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="E680302E3EEE4711DBABC1AEA3C5082BE2A211B4">APValue</h3>
+      <p>public void APValue(const APValue &amp; RHS)</p>
+      <h3 id="43EDB2A0EEB5E7703D90908F86E18BFDE719B3D3">APValue</h3>
+      <p>public void APValue(APValue &amp;&amp; RHS)</p>
+      <h3 id="D8011EF9F357664885C059870C826F60CC7EAF3E">APValue</h3>
+      <p>
+        public void APValue(
+        <a href="../clang/APValue/LValueBase.html">LValueBase</a>
+         B, const CharUnits &amp; O, 
+        <a href="../clang/APValue/NoLValuePath.html">NoLValuePath</a>
+         N, _Bool IsNullPtr)
+      </p>
+      <p>Defined at line 330 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="24323CCF980E1C4D71F7343FDE570A81BBEE1537">APValue</h3>
+      <p>
+        public void APValue(
+        <a href="../clang/APValue/LValueBase.html">LValueBase</a>
+         B, const CharUnits &amp; O, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Path, _Bool OnePastTheEnd, _Bool IsNullPtr)
+      </p>
+      <p>Defined at line 335 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="24D7EF29B9055DFD923B6E9EFE98C61BAD6DFBAD">APValue</h3>
+      <p>
+        public void APValue(
+        <a href="../clang/APValue/UninitArray.html">UninitArray</a>
+         , unsigned int InitElts, unsigned int Size)
+      </p>
+      <p>Defined at line 340 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="463DBB8A1F266AD3759010516851132A6B7847B1">APValue</h3>
+      <p>
+        public void APValue(
+        <a href="../clang/APValue/UninitStruct.html">UninitStruct</a>
+         , unsigned int B, unsigned int M)
+      </p>
+      <p>Defined at line 343 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="76BD6ECDC07554259A96079311485DCC7D0F166C">APValue</h3>
+      <p>public void APValue(const FieldDecl * D, const APValue &amp; V)</p>
+      <p>Defined at line 346 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="9E1D2046BC527617176D673E577B6225B947A61E">APValue</h3>
+      <p>
+        public void APValue(const ValueDecl * Member, _Bool IsDerivedMember, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Path)
+      </p>
+      <p>Defined at line 350 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="9FF93B1F67A9FFF87243E06DAD1246005073F6E8">APValue</h3>
+      <p>public void APValue(const AddrLabelExpr * LHSExpr, const AddrLabelExpr * RHSExpr)</p>
+      <p>Defined at line 354 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="93E28DB08B8DA352514B582C31BE2D9334C39397">IndeterminateValue</h3>
+      <p>
+        public 
+        <a href="APValue.html">APValue</a>
+         IndeterminateValue()
+      </p>
+      <p>Defined at line 358 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="839B9D58099C196433280F71F465CFBE23816E1F">operator=</h3>
+      <p>public APValue &amp; operator=(const APValue &amp; RHS)</p>
+      <h3 id="6587E6ABAB4EB97A64AB8890F8EAF2C4F9381A36">operator=</h3>
+      <p>public APValue &amp; operator=(APValue &amp;&amp; RHS)</p>
+      <h3 id="6B688BA2BFDDFA45CF7CD2B45FBD99C64FB5C2BC">~APValue</h3>
+      <p>public void ~APValue()</p>
+      <p>Defined at line 367 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="70D8A3C576D4906E4BDBF40A082F1FAA5A01D866">needsCleanup</h3>
+      <p>public _Bool needsCleanup()</p>
+      <div>
+        <div>
+          <p> Returns whether the object performed allocations.</p>
+          <p> If APValues are constructed via placement new,  indicates whether the destructor must be called in order to correctly free all allocated memory.</p>
+        </div>
+      </div>
+      <h3 id="C260795ABFDDCEE11272BE8E953B02AA43177929">swap</h3>
+      <p>public void swap(APValue &amp; RHS)</p>
+      <div>
+        <div>
+          <p> Swaps the contents of this and the given APValue.</p>
+        </div>
+      </div>
+      <h3 id="7ADF1B5F0B27C0FD7463CFC87FE67D16F05C6F70">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <div>
+        <div>
+          <p> profile this value. There is no guarantee that values of different types will not produce the same profiled value, so the type should typically also be profiled if it&apos;s not implied by the context.</p>
+        </div>
+      </div>
+      <h3 id="70B55D66C5DA30AB289BD898D4A2EE9B8F1C3D2C">getKind</h3>
+      <p>
+        public 
+        <a href="../clang/APValue/ValueKind.html">ValueKind</a>
+         getKind()
+      </p>
+      <p>Defined at line 387 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="55B7912E96E1A77E9989CF5A670E37966D4B0C06">isAbsent</h3>
+      <p>public _Bool isAbsent()</p>
+      <p>Defined at line 389 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="95C455489A7C0A2EB4B8A4006C73EBBDE7F018F5">isIndeterminate</h3>
+      <p>public _Bool isIndeterminate()</p>
+      <p>Defined at line 390 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="A23E68744B3C0C7E4F854819120A288CDD544F50">hasValue</h3>
+      <p>public _Bool hasValue()</p>
+      <p>Defined at line 391 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="D57D196121304F47F43EFCE7BF60BBF3BC6ADB4C">isInt</h3>
+      <p>public _Bool isInt()</p>
+      <p>Defined at line 393 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="5F04D72861590C4D6B05B28F26CF88B93ABF7A18">isFloat</h3>
+      <p>public _Bool isFloat()</p>
+      <p>Defined at line 394 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="6B2C366002675028539E839225FF75B828F68457">isFixedPoint</h3>
+      <p>public _Bool isFixedPoint()</p>
+      <p>Defined at line 395 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="50AC7DDBB598131B2051DF0CA5B4AA0F77B4DAC7">isComplexInt</h3>
+      <p>public _Bool isComplexInt()</p>
+      <p>Defined at line 396 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="BFD8E742C994BA3F1256A7893F0ABDFED33C7B72">isComplexFloat</h3>
+      <p>public _Bool isComplexFloat()</p>
+      <p>Defined at line 397 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="6C0335B872B1F1903579BE8F21450F91F7F9D254">isLValue</h3>
+      <p>public _Bool isLValue()</p>
+      <p>Defined at line 398 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="AEAF248924D8FF8C4A93C4720802BE9E0C6CB9F5">isVector</h3>
+      <p>public _Bool isVector()</p>
+      <p>Defined at line 399 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="32F4272718FD13D9698801C8EA91B23FEF4FC6CD">isArray</h3>
+      <p>public _Bool isArray()</p>
+      <p>Defined at line 400 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="D57D7D30F47E3B3E680B2DC910173A97BE865906">isStruct</h3>
+      <p>public _Bool isStruct()</p>
+      <p>Defined at line 401 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="039CD4333AB4718C17415BD0EFE088CBF0C3CA13">isUnion</h3>
+      <p>public _Bool isUnion()</p>
+      <p>Defined at line 402 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="D003A9AB50B1013AC616CF4A97F720BFCE0047B4">isMemberPointer</h3>
+      <p>public _Bool isMemberPointer()</p>
+      <p>Defined at line 403 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="5F6F84521BD9A8123BBC408162CB76A56E070A87">isAddrLabelDiff</h3>
+      <p>public _Bool isAddrLabelDiff()</p>
+      <p>Defined at line 404 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="7942B7A9A84ACADBE010E61918C77A94A94D1A7E">dump</h3>
+      <p>public void dump()</p>
+      <h3 id="BF0C565C9BDDE506A47966FD1CAD3A746690B67F">dump</h3>
+      <p>public void dump(raw_ostream &amp; OS, const ASTContext &amp; Context)</p>
+      <h3 id="CF45E75A40AFB0DAE2440B39A964507EF2B80C8C">printPretty</h3>
+      <p>
+        public void printPretty(raw_ostream &amp; OS, const ASTContext &amp; Ctx, 
+        <a href="QualType.html">QualType</a>
+         Ty)
+      </p>
+      <h3 id="F304951EDDF01082FFC3F18845F2F582E95556AE">printPretty</h3>
+      <p>
+        public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy, 
+        <a href="QualType.html">QualType</a>
+         Ty, const ASTContext * Ctx)
+      </p>
+      <h3 id="3DB517A4AF23F7579E14968267916961249E186F">getAsString</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getAsString(const ASTContext &amp; Ctx, 
+        <a href="QualType.html">QualType</a>
+         Ty)
+      </p>
+      <h3 id="995B839A9D840724AADDC2F6D6AC927018D5465F">getInt</h3>
+      <p>public APSInt &amp; getInt()</p>
+      <p>Defined at line 415 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="A76E312BFD691DA47B661727B19982F20F4F4940">getInt</h3>
+      <p>public const APSInt &amp; getInt()</p>
+      <p>Defined at line 419 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="2986476723AB518FB358633D2E7A09DF440E84EC">toIntegralConstant</h3>
+      <p>
+        public _Bool toIntegralConstant(APSInt &amp; Result, 
+        <a href="QualType.html">QualType</a>
+         SrcTy, const ASTContext &amp; Ctx)
+      </p>
+      <div>
+        <div>
+          <p> Try to convert this value to an integral constant. This works if it&apos;s an integer, null pointer, or offset from a null pointer. Returns true on success.</p>
+        </div>
+      </div>
+      <h3 id="BFE29301BAD5AF095BF6F24CF7777DFE9EEA4BBB">getFloat</h3>
+      <p>public APFloat &amp; getFloat()</p>
+      <p>Defined at line 429 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="DEE7141FAE4A129A4941E94C49B1900F50157543">getFloat</h3>
+      <p>public const APFloat &amp; getFloat()</p>
+      <p>Defined at line 433 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="AD4720D0A0FEAB0CBABF648DA72DAECF1D300280">getFixedPoint</h3>
+      <p>public APFixedPoint &amp; getFixedPoint()</p>
+      <p>Defined at line 437 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="B5DC59D590F7130F821D9FCE9CD70153BFAE43CD">getFixedPoint</h3>
+      <p>public const APFixedPoint &amp; getFixedPoint()</p>
+      <p>Defined at line 441 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="C699DA620A3E3F2D73BFAE7B5E94C8AA1B4FE527">getComplexIntReal</h3>
+      <p>public APSInt &amp; getComplexIntReal()</p>
+      <p>Defined at line 445 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="E206C6BED4DB4F93CD68FB9C3551BEF9BB786F30">getComplexIntReal</h3>
+      <p>public const APSInt &amp; getComplexIntReal()</p>
+      <p>Defined at line 449 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="BB6CED55DB28449364F544D1290590527C2AA6DC">getComplexIntImag</h3>
+      <p>public APSInt &amp; getComplexIntImag()</p>
+      <p>Defined at line 453 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="7F4CB5929B873FD481C4387B2D410970C40DC134">getComplexIntImag</h3>
+      <p>public const APSInt &amp; getComplexIntImag()</p>
+      <p>Defined at line 457 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="ABB3C257BB5CA1C75446F3D691B41A8664D26ED4">getComplexFloatReal</h3>
+      <p>public APFloat &amp; getComplexFloatReal()</p>
+      <p>Defined at line 461 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="D88436DB1D2CCC5E16CFCF41FB3A112ACEBC00D3">getComplexFloatReal</h3>
+      <p>public const APFloat &amp; getComplexFloatReal()</p>
+      <p>Defined at line 465 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="E94100D54AB3D1A22C12281B93415E204EDAD257">getComplexFloatImag</h3>
+      <p>public APFloat &amp; getComplexFloatImag()</p>
+      <p>Defined at line 469 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="D51A430220A9EF12A56502814B9905A0E6832254">getComplexFloatImag</h3>
+      <p>public const APFloat &amp; getComplexFloatImag()</p>
+      <p>Defined at line 473 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="76A9DA63D196F1CA6C0D790BDA49E11C27FA4427">getLValueBase</h3>
+      <p>
+        public 
+        <a href="../clang/APValue/LValueBase.html">LValueBase</a>
+         getLValueBase()
+      </p>
+      <h3 id="176974DF6B39DC042682E926059B4AF12CFE37B7">getLValueOffset</h3>
+      <p>public CharUnits &amp; getLValueOffset()</p>
+      <h3 id="BE2608512E7038EABD08DC07DA2A27BB3996DF78">getLValueOffset</h3>
+      <p>public const CharUnits &amp; getLValueOffset()</p>
+      <p>Defined at line 479 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="1E2AFB760DF1D8EE4CD48B51BDD717A784874E59">isLValueOnePastTheEnd</h3>
+      <p>public _Bool isLValueOnePastTheEnd()</p>
+      <h3 id="B9196D46EB16BD5E27856915AF8028C38C9ACDBB">hasLValuePath</h3>
+      <p>public _Bool hasLValuePath()</p>
+      <h3 id="A09B7FF870EE15DCC4976367E935B70A02A1A5A1">getLValuePath</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getLValuePath()
+      </p>
+      <h3 id="E829375969D07B204DDF6F8CCF4FC28697827F39">getLValueCallIndex</h3>
+      <p>public unsigned int getLValueCallIndex()</p>
+      <h3 id="0A1679C66F8407E68B881F92DC9AA40F145D6870">getLValueVersion</h3>
+      <p>public unsigned int getLValueVersion()</p>
+      <h3 id="6691699DFDE61CA0C04006D2797BE3B3E66251D8">isNullPointer</h3>
+      <p>public _Bool isNullPointer()</p>
+      <h3 id="5629BC871A6B9DCD10BB682FB60D0DB8092E7C62">getVectorElt</h3>
+      <p>public APValue &amp; getVectorElt(unsigned int I)</p>
+      <p>Defined at line 489 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="A9366E790897FB2E8D38D18971D3CD2E77E9CF78">getVectorElt</h3>
+      <p>public const APValue &amp; getVectorElt(unsigned int I)</p>
+      <p>Defined at line 494 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="DF1D4B88D5F2D89C2D8CE79A0100BB9A674624E5">getVectorLength</h3>
+      <p>public unsigned int getVectorLength()</p>
+      <p>Defined at line 497 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="9454ED93A13756A495C16D4785739B2D3C6D2B12">getArrayInitializedElt</h3>
+      <p>public APValue &amp; getArrayInitializedElt(unsigned int I)</p>
+      <p>Defined at line 502 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="3BC0E609CA2AD9E4C0E508E4B617F13226F483C3">getArrayInitializedElt</h3>
+      <p>public const APValue &amp; getArrayInitializedElt(unsigned int I)</p>
+      <p>Defined at line 507 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="7B3FF5E62ED7B44594B27B96625CB39A3BE93685">hasArrayFiller</h3>
+      <p>public _Bool hasArrayFiller()</p>
+      <p>Defined at line 510 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="0EC2384947A2C175473098602A209FD5A99AF7B9">getArrayFiller</h3>
+      <p>public APValue &amp; getArrayFiller()</p>
+      <p>Defined at line 513 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="69AC0B86D519F673664E8C25C7BEBB28E96953D4">getArrayFiller</h3>
+      <p>public const APValue &amp; getArrayFiller()</p>
+      <p>Defined at line 518 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="CA61B0F0111A0F80FD559C1E7661827271F42A75">getArrayInitializedElts</h3>
+      <p>public unsigned int getArrayInitializedElts()</p>
+      <p>Defined at line 521 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="6FEECAF1837B21BF0CAF217BD36E3835183D52A0">getArraySize</h3>
+      <p>public unsigned int getArraySize()</p>
+      <p>Defined at line 525 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="F81B9A0E62DE9E9B0D4E8CA38A706560AC5712AA">getStructNumBases</h3>
+      <p>public unsigned int getStructNumBases()</p>
+      <p>Defined at line 530 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="D68C621DB8B575E031CAD923C7C2BC41A6347759">getStructNumFields</h3>
+      <p>public unsigned int getStructNumFields()</p>
+      <p>Defined at line 534 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="47AA8D82A3DC8A69B5F89DEA23F67499F209F57B">getStructBase</h3>
+      <p>public APValue &amp; getStructBase(unsigned int i)</p>
+      <p>Defined at line 538 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="F0906D847D57C4BFFF33F060E68B94E6B6E30778">getStructField</h3>
+      <p>public APValue &amp; getStructField(unsigned int i)</p>
+      <p>Defined at line 543 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="3879D5BAA5401A8619C1EADB7B7B3149B4BD5835">getStructBase</h3>
+      <p>public const APValue &amp; getStructBase(unsigned int i)</p>
+      <p>Defined at line 548 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="8553DF443FEFC6128E87067CF27A706481B5A19D">getStructField</h3>
+      <p>public const APValue &amp; getStructField(unsigned int i)</p>
+      <p>Defined at line 551 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="83BBA768FC1D0A632BE0F96A74EE7664D167E058">getUnionField</h3>
+      <p>public const FieldDecl * getUnionField()</p>
+      <p>Defined at line 555 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="B3A9785D9E63640B3E79C90A47668C7AFCB83366">getUnionValue</h3>
+      <p>public APValue &amp; getUnionValue()</p>
+      <p>Defined at line 559 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="31112D30C633C98E857F8E8D1F3F65270F625AA3">getUnionValue</h3>
+      <p>public const APValue &amp; getUnionValue()</p>
+      <p>Defined at line 563 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="D00A8E58C86C994095BA5026A0D188ABFCDC4B32">getMemberPointerDecl</h3>
+      <p>public const ValueDecl * getMemberPointerDecl()</p>
+      <h3 id="7CE56BAC77FA0B426FB8D7E39F639C76AE8D4E8D">isMemberPointerToDerivedMember</h3>
+      <p>public _Bool isMemberPointerToDerivedMember()</p>
+      <h3 id="B3061492D23E2839ED945D7138E615D2786A08F5">getMemberPointerPath</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getMemberPointerPath()
+      </p>
+      <h3 id="73A4A7CFE82F092E8709DFA338AE353E15130BEC">getAddrLabelDiffLHS</h3>
+      <p>public const AddrLabelExpr * getAddrLabelDiffLHS()</p>
+      <p>Defined at line 571 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="35CFE36D191732DA3EF5B6F6CEDAEAB72819AF95">getAddrLabelDiffRHS</h3>
+      <p>public const AddrLabelExpr * getAddrLabelDiffRHS()</p>
+      <p>Defined at line 575 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="AAD9104CE902C94ADC8E9EC4C439E7FF02E574C7">setInt</h3>
+      <p>
+        public void setInt(
+        <a href="../llvm/APSInt.html">APSInt</a>
+         I)
+      </p>
+      <p>Defined at line 580 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="851CB6615F8A49A66EFDA3041738568311BAE926">setFloat</h3>
+      <p>
+        public void setFloat(
+        <a href="../llvm/APFloat.html">APFloat</a>
+         F)
+      </p>
+      <p>Defined at line 584 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="5DE5F540CBCF5FD835542121EAA144CD802F14D7">setFixedPoint</h3>
+      <p>
+        public void setFixedPoint(
+        <a href="../llvm/APFixedPoint.html">APFixedPoint</a>
+         FX)
+      </p>
+      <p>Defined at line 588 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="1CAE6809A8DEC6B34F9B2033271D14F50E6F774F">setVector</h3>
+      <p>public void setVector(const APValue * E, unsigned int N)</p>
+      <p>Defined at line 592 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="0A855118C892C73D76792526CD9C9EC6E9964CD8">setComplexInt</h3>
+      <p>
+        public void setComplexInt(
+        <a href="../llvm/APSInt.html">APSInt</a>
+         R, 
+        <a href="../llvm/APSInt.html">APSInt</a>
+         I)
+      </p>
+      <p>Defined at line 597 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="ADB95D4A811AFE43A3AA763CB76B20F2F732BD83">setComplexFloat</h3>
+      <p>
+        public void setComplexFloat(
+        <a href="../llvm/APFloat.html">APFloat</a>
+         R, 
+        <a href="../llvm/APFloat.html">APFloat</a>
+         I)
+      </p>
+      <p>Defined at line 604 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+      <h3 id="53325EB043F6C176E7FA3DE1C490DCE40502DEE0">setLValue</h3>
+      <p>
+        public void setLValue(
+        <a href="../clang/APValue/LValueBase.html">LValueBase</a>
+         B, const CharUnits &amp; O, 
+        <a href="../clang/APValue/NoLValuePath.html">NoLValuePath</a>
+         , _Bool IsNullPtr)
+      </p>
+      <h3 id="BB1DF53435888AA27CAB62AF1562D7909609C159">setLValue</h3>
+      <p>
+        public void setLValue(
+        <a href="../clang/APValue/LValueBase.html">LValueBase</a>
+         B, const CharUnits &amp; O, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Path, _Bool OnePastTheEnd, _Bool IsNullPtr)
+      </p>
+      <h3 id="CF8AAB7F7E5DCA17E8F67FECE22BA75A9043CD1F">setUnion</h3>
+      <p>public void setUnion(const FieldDecl * Field, const APValue &amp; Value)</p>
+      <h3 id="34BF3DE9EDCD9F6731FE8D2C182F939CB2125087">setAddrLabelDiff</h3>
+      <p>public void setAddrLabelDiff(const AddrLabelExpr * LHSExpr, const AddrLabelExpr * RHSExpr)</p>
+      <p>Defined at line 617 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="6AB5D9019100559CC6BE475C628B4CB9D66823D5">enum ValueKind</h3>
+      <ul>
+        <li>None</li>
+        <li>Indeterminate</li>
+        <li>Int</li>
+        <li>Float</li>
+        <li>FixedPoint</li>
+        <li>ComplexInt</li>
+        <li>ComplexFloat</li>
+        <li>LValue</li>
+        <li>Vector</li>
+        <li>Array</li>
+        <li>Struct</li>
+        <li>Union</li>
+        <li>MemberPointer</li>
+        <li>AddrLabelDiff</li>
+      </ul>
+      <p>Defined at line 127 of file /usr/lib/llvm-16/include/clang/AST/APValue.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C533A899E6A10FF71CC20AB67E542535D32E3BDD">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A54951BF41D9C39D9715A3329D4882B13D7BD35F">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D9F46A8D98933F91A3F0350195A5D0DD2CAF941">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D33ECB158B04337A34B2352A78D5BFB6F0137B34">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4713742B4DACBE1165B52F9D4DC06E46950C1DF6">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D0708A9CEF211C71C1D32F966267B1327E30A78">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2EA67AA6C5F270356FB6318372921CB43F2F9A0">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E680302E3EEE4711DBABC1AEA3C5082BE2A211B4">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#43EDB2A0EEB5E7703D90908F86E18BFDE719B3D3">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8011EF9F357664885C059870C826F60CC7EAF3E">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24323CCF980E1C4D71F7343FDE570A81BBEE1537">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24D7EF29B9055DFD923B6E9EFE98C61BAD6DFBAD">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#463DBB8A1F266AD3759010516851132A6B7847B1">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76BD6ECDC07554259A96079311485DCC7D0F166C">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9E1D2046BC527617176D673E577B6225B947A61E">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FF93B1F67A9FFF87243E06DAD1246005073F6E8">APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#93E28DB08B8DA352514B582C31BE2D9334C39397">IndeterminateValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#839B9D58099C196433280F71F465CFBE23816E1F">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6587E6ABAB4EB97A64AB8890F8EAF2C4F9381A36">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B688BA2BFDDFA45CF7CD2B45FBD99C64FB5C2BC">~APValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70D8A3C576D4906E4BDBF40A082F1FAA5A01D866">needsCleanup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C260795ABFDDCEE11272BE8E953B02AA43177929">swap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7ADF1B5F0B27C0FD7463CFC87FE67D16F05C6F70">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70B55D66C5DA30AB289BD898D4A2EE9B8F1C3D2C">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#55B7912E96E1A77E9989CF5A670E37966D4B0C06">isAbsent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95C455489A7C0A2EB4B8A4006C73EBBDE7F018F5">isIndeterminate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A23E68744B3C0C7E4F854819120A288CDD544F50">hasValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D57D196121304F47F43EFCE7BF60BBF3BC6ADB4C">isInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F04D72861590C4D6B05B28F26CF88B93ABF7A18">isFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B2C366002675028539E839225FF75B828F68457">isFixedPoint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#50AC7DDBB598131B2051DF0CA5B4AA0F77B4DAC7">isComplexInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BFD8E742C994BA3F1256A7893F0ABDFED33C7B72">isComplexFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C0335B872B1F1903579BE8F21450F91F7F9D254">isLValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AEAF248924D8FF8C4A93C4720802BE9E0C6CB9F5">isVector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32F4272718FD13D9698801C8EA91B23FEF4FC6CD">isArray</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D57D7D30F47E3B3E680B2DC910173A97BE865906">isStruct</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#039CD4333AB4718C17415BD0EFE088CBF0C3CA13">isUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D003A9AB50B1013AC616CF4A97F720BFCE0047B4">isMemberPointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F6F84521BD9A8123BBC408162CB76A56E070A87">isAddrLabelDiff</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7942B7A9A84ACADBE010E61918C77A94A94D1A7E">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF0C565C9BDDE506A47966FD1CAD3A746690B67F">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF45E75A40AFB0DAE2440B39A964507EF2B80C8C">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F304951EDDF01082FFC3F18845F2F582E95556AE">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3DB517A4AF23F7579E14968267916961249E186F">getAsString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#995B839A9D840724AADDC2F6D6AC927018D5465F">getInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A76E312BFD691DA47B661727B19982F20F4F4940">getInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2986476723AB518FB358633D2E7A09DF440E84EC">toIntegralConstant</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BFE29301BAD5AF095BF6F24CF7777DFE9EEA4BBB">getFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEE7141FAE4A129A4941E94C49B1900F50157543">getFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD4720D0A0FEAB0CBABF648DA72DAECF1D300280">getFixedPoint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5DC59D590F7130F821D9FCE9CD70153BFAE43CD">getFixedPoint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C699DA620A3E3F2D73BFAE7B5E94C8AA1B4FE527">getComplexIntReal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E206C6BED4DB4F93CD68FB9C3551BEF9BB786F30">getComplexIntReal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB6CED55DB28449364F544D1290590527C2AA6DC">getComplexIntImag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F4CB5929B873FD481C4387B2D410970C40DC134">getComplexIntImag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ABB3C257BB5CA1C75446F3D691B41A8664D26ED4">getComplexFloatReal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D88436DB1D2CCC5E16CFCF41FB3A112ACEBC00D3">getComplexFloatReal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E94100D54AB3D1A22C12281B93415E204EDAD257">getComplexFloatImag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D51A430220A9EF12A56502814B9905A0E6832254">getComplexFloatImag</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76A9DA63D196F1CA6C0D790BDA49E11C27FA4427">getLValueBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#176974DF6B39DC042682E926059B4AF12CFE37B7">getLValueOffset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE2608512E7038EABD08DC07DA2A27BB3996DF78">getLValueOffset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E2AFB760DF1D8EE4CD48B51BDD717A784874E59">isLValueOnePastTheEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9196D46EB16BD5E27856915AF8028C38C9ACDBB">hasLValuePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A09B7FF870EE15DCC4976367E935B70A02A1A5A1">getLValuePath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E829375969D07B204DDF6F8CCF4FC28697827F39">getLValueCallIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A1679C66F8407E68B881F92DC9AA40F145D6870">getLValueVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6691699DFDE61CA0C04006D2797BE3B3E66251D8">isNullPointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5629BC871A6B9DCD10BB682FB60D0DB8092E7C62">getVectorElt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9366E790897FB2E8D38D18971D3CD2E77E9CF78">getVectorElt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF1D4B88D5F2D89C2D8CE79A0100BB9A674624E5">getVectorLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9454ED93A13756A495C16D4785739B2D3C6D2B12">getArrayInitializedElt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3BC0E609CA2AD9E4C0E508E4B617F13226F483C3">getArrayInitializedElt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B3FF5E62ED7B44594B27B96625CB39A3BE93685">hasArrayFiller</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EC2384947A2C175473098602A209FD5A99AF7B9">getArrayFiller</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69AC0B86D519F673664E8C25C7BEBB28E96953D4">getArrayFiller</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA61B0F0111A0F80FD559C1E7661827271F42A75">getArrayInitializedElts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6FEECAF1837B21BF0CAF217BD36E3835183D52A0">getArraySize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F81B9A0E62DE9E9B0D4E8CA38A706560AC5712AA">getStructNumBases</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D68C621DB8B575E031CAD923C7C2BC41A6347759">getStructNumFields</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47AA8D82A3DC8A69B5F89DEA23F67499F209F57B">getStructBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F0906D847D57C4BFFF33F060E68B94E6B6E30778">getStructField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3879D5BAA5401A8619C1EADB7B7B3149B4BD5835">getStructBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8553DF443FEFC6128E87067CF27A706481B5A19D">getStructField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83BBA768FC1D0A632BE0F96A74EE7664D167E058">getUnionField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3A9785D9E63640B3E79C90A47668C7AFCB83366">getUnionValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31112D30C633C98E857F8E8D1F3F65270F625AA3">getUnionValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D00A8E58C86C994095BA5026A0D188ABFCDC4B32">getMemberPointerDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7CE56BAC77FA0B426FB8D7E39F639C76AE8D4E8D">isMemberPointerToDerivedMember</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3061492D23E2839ED945D7138E615D2786A08F5">getMemberPointerPath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73A4A7CFE82F092E8709DFA338AE353E15130BEC">getAddrLabelDiffLHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35CFE36D191732DA3EF5B6F6CEDAEAB72819AF95">getAddrLabelDiffRHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AAD9104CE902C94ADC8E9EC4C439E7FF02E574C7">setInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#851CB6615F8A49A66EFDA3041738568311BAE926">setFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5DE5F540CBCF5FD835542121EAA144CD802F14D7">setFixedPoint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1CAE6809A8DEC6B34F9B2033271D14F50E6F774F">setVector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A855118C892C73D76792526CD9C9EC6E9964CD8">setComplexInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ADB95D4A811AFE43A3AA763CB76B20F2F732BD83">setComplexFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53325EB043F6C176E7FA3DE1C490DCE40502DEE0">setLValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB1DF53435888AA27CAB62AF1562D7909609C159">setLValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF8AAB7F7E5DCA17E8F67FECE22BA75A9043CD1F">setUnion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#34BF3DE9EDCD9F6731FE8D2C182F939CB2125087">setAddrLabelDiff</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6AB5D9019100559CC6BE475C628B4CB9D66823D5">ValueKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

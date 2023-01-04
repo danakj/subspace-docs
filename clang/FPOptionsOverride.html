@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FPOptionsOverride</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FPOptionsOverride</h1>
+    <p>Defined at line 803 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+    <div>
+      <div>
+        <p> Floating point control options</p>
+      </div>
+      <div>
+        <p> Represents difference between two FPOptions values.</p>
+        <p> The effect of language constructs changing the set of floating point options is usually a change of some FP properties while leaving others intact. This class describes such changes by keeping information about what FP options are overridden.</p>
+        <p> The integral set of FP options, described by the class FPOptions, may be represented as a default FP option set, defined by language standard and command line options, with the overrides introduced by pragmas.</p>
+        <p> The is implemented as a value of the new FPOptions plus a mask showing which fields are actually set in it.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2CA1B217D4641558E4111EE9299DC776F92584DC">FPOptionsOverride</h3>
+      <p>public void FPOptionsOverride()</p>
+      <p>Defined at line 821 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="AB4E36629258A6961391B3127AA0AB363F74F8B1">FPOptionsOverride</h3>
+      <p>public void FPOptionsOverride(const LangOptions &amp; LO)</p>
+      <p>Defined at line 822 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="619AEF591B9C8032718A95CCF404C7286BD1F934">FPOptionsOverride</h3>
+      <p>
+        public void FPOptionsOverride(
+        <a href="FPOptions.html">FPOptions</a>
+         FPO)
+      </p>
+      <p>Defined at line 824 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="56C8417D35404ACB26417618A75575158DCE3F70">FPOptionsOverride</h3>
+      <p>
+        public void FPOptionsOverride(
+        <a href="FPOptions.html">FPOptions</a>
+         FPO, class FPOptions::storage_type Mask)
+      </p>
+      <p>Defined at line 826 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="2349C2794DA8FBE4E06997B9150F67A965DBFD26">requiresTrailingStorage</h3>
+      <p>public _Bool requiresTrailingStorage()</p>
+      <p>Defined at line 829 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="E32A85A9C3E7218BE50BB245318FB9F6A455F2CC">setAllowFPContractWithinStatement</h3>
+      <p>public void setAllowFPContractWithinStatement()</p>
+      <p>Defined at line 831 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="A6745894F1FB74C115CE66F1C076C61A1323D84A">setAllowFPContractAcrossStatement</h3>
+      <p>public void setAllowFPContractAcrossStatement()</p>
+      <p>Defined at line 835 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="707312BD12F5E177502243569597C0A0DF56E7DB">setDisallowFPContract</h3>
+      <p>public void setDisallowFPContract()</p>
+      <p>Defined at line 839 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="50C30F81201C47F244B28AEE20C97A929CF19615">setFPPreciseEnabled</h3>
+      <p>public void setFPPreciseEnabled(_Bool Value)</p>
+      <p>Defined at line 843 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="4E56A62FC8EFAADE6CEA2D842B1AE2EF065D2F21">getAsOpaqueInt</h3>
+      <p>public storage_type getAsOpaqueInt()</p>
+      <p>Defined at line 858 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="3079A5ACB6D70056393B7CEA438AC63CE8F80393">getFromOpaqueInt</h3>
+      <p>
+        public 
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         getFromOpaqueInt(storage_type I)
+      </p>
+      <p>Defined at line 863 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="661D3FC26E1D63FA4F06DF1F010BAE7952763587">applyOverrides</h3>
+      <p>
+        public 
+        <a href="FPOptions.html">FPOptions</a>
+         applyOverrides(
+        <a href="FPOptions.html">FPOptions</a>
+         Base)
+      </p>
+      <p>Defined at line 870 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="66E14B599BC6285DCDAA0AC7825D72344F39CFC7">applyOverrides</h3>
+      <p>
+        public 
+        <a href="FPOptions.html">FPOptions</a>
+         applyOverrides(const LangOptions &amp; LO)
+      </p>
+      <p>Defined at line 877 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="4B39BEADF206A366981741405272F1239E52191B">operator==</h3>
+      <p>
+        public _Bool operator==(
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         other)
+      </p>
+      <p>Defined at line 881 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="214E11A21A450B6534530A17A93F959AB0C6559E">operator!=</h3>
+      <p>
+        public _Bool operator!=(
+        <a href="FPOptionsOverride.html">FPOptionsOverride</a>
+         other)
+      </p>
+      <p>Defined at line 884 of file /usr/lib/llvm-16/include/clang/Basic/LangOptions.h</p>
+      <h3 id="C7E4E9B24FC7DC1356573C2AB481285B1795A2A8">hasFPContractModeOverride</h3>
+      <p>public _Bool hasFPContractModeOverride()</p>
+      <p>Defined at line 16 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="45DBFE42B4513DC95F3D26E1F4C317781E41561C">getFPContractModeOverride</h3>
+      <p>
+        public 
+        <a href="../clang/LangOptions/FPModeKind.html">FPModeKind</a>
+         getFPContractModeOverride()
+      </p>
+      <p>Defined at line 16 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="1A6F2C4B647CEB62C101972034A9F3E486701F8F">clearFPContractModeOverride</h3>
+      <p>public void clearFPContractModeOverride()</p>
+      <p>Defined at line 16 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="6681D3813B1B5E30BE140BB390300DB709746EDD">setFPContractModeOverride</h3>
+      <p>
+        public void setFPContractModeOverride(
+        <a href="../clang/LangOptions/FPModeKind.html">FPModeKind</a>
+         value)
+      </p>
+      <p>Defined at line 16 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="050D13A1BE501F8490DA678A1629AEBFB3D18B17">hasRoundingMathOverride</h3>
+      <p>public _Bool hasRoundingMathOverride()</p>
+      <p>Defined at line 17 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="E8D81A6D63177F3263C17919035F86495FEFD0CB">getRoundingMathOverride</h3>
+      <p>public _Bool getRoundingMathOverride()</p>
+      <p>Defined at line 17 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="6262056F5D49CA38FBDA4CCFF4B47B2BBE36DC57">clearRoundingMathOverride</h3>
+      <p>public void clearRoundingMathOverride()</p>
+      <p>Defined at line 17 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="E5F894B0D13F9D95680917EF0190D198B1D73570">setRoundingMathOverride</h3>
+      <p>public void setRoundingMathOverride(_Bool value)</p>
+      <p>Defined at line 17 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="44DF886E208436F92D3E41473160DAAF18EB45FB">hasConstRoundingModeOverride</h3>
+      <p>public _Bool hasConstRoundingModeOverride()</p>
+      <p>Defined at line 18 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="65BC7B99FED47336B2C25CF7FB755F2904743F5A">getConstRoundingModeOverride</h3>
+      <p>
+        public 
+        <a href="../llvm/RoundingMode.html">RoundingMode</a>
+         getConstRoundingModeOverride()
+      </p>
+      <p>Defined at line 18 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="C6999BFFED8FC93160C78092034576ACDC0D6BC8">clearConstRoundingModeOverride</h3>
+      <p>public void clearConstRoundingModeOverride()</p>
+      <p>Defined at line 18 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="4838FFFFA70A1A7BE9AE778607A525653471E66B">setConstRoundingModeOverride</h3>
+      <p>
+        public void setConstRoundingModeOverride(
+        <a href="../llvm/RoundingMode.html">RoundingMode</a>
+         value)
+      </p>
+      <p>Defined at line 18 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="BD760478E564FB60EBBA63179342B4A7BA4202A2">hasSpecifiedExceptionModeOverride</h3>
+      <p>public _Bool hasSpecifiedExceptionModeOverride()</p>
+      <p>Defined at line 19 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="6C013BD7D4B23E84F20E572E9AC4D8103E6456FB">getSpecifiedExceptionModeOverride</h3>
+      <p>
+        public 
+        <a href="../clang/LangOptions/FPExceptionModeKind.html">FPExceptionModeKind</a>
+         getSpecifiedExceptionModeOverride()
+      </p>
+      <p>Defined at line 19 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="04A8E0642CA92750B80731EDDEBED35C4E4CB5D4">clearSpecifiedExceptionModeOverride</h3>
+      <p>public void clearSpecifiedExceptionModeOverride()</p>
+      <p>Defined at line 19 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="5A562B893351715009A87120677407A9A173D703">setSpecifiedExceptionModeOverride</h3>
+      <p>
+        public void setSpecifiedExceptionModeOverride(
+        <a href="../clang/LangOptions/FPExceptionModeKind.html">FPExceptionModeKind</a>
+         value)
+      </p>
+      <p>Defined at line 19 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="D928C7AFBE2524A5044990824272DA38BC5BA01C">hasAllowFEnvAccessOverride</h3>
+      <p>public _Bool hasAllowFEnvAccessOverride()</p>
+      <p>Defined at line 20 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="B62E2588526A4A8DBFBDE3F3D2ADB4F3777C709F">getAllowFEnvAccessOverride</h3>
+      <p>public _Bool getAllowFEnvAccessOverride()</p>
+      <p>Defined at line 20 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="171C4535303D5F4FF693101C5562C0D93FAC65F6">clearAllowFEnvAccessOverride</h3>
+      <p>public void clearAllowFEnvAccessOverride()</p>
+      <p>Defined at line 20 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="1FFF0AE41D3F353D3960A6A69428439657115945">setAllowFEnvAccessOverride</h3>
+      <p>public void setAllowFEnvAccessOverride(_Bool value)</p>
+      <p>Defined at line 20 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="2F0147F73E99CEAE6E37D37682BEC97CD50F97B5">hasAllowFPReassociateOverride</h3>
+      <p>public _Bool hasAllowFPReassociateOverride()</p>
+      <p>Defined at line 21 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="6288D21513675C8644EA30F63582AC2334E77E0E">getAllowFPReassociateOverride</h3>
+      <p>public _Bool getAllowFPReassociateOverride()</p>
+      <p>Defined at line 21 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="86F691FC91F0E17353E72020586ECE2BFCBB7849">clearAllowFPReassociateOverride</h3>
+      <p>public void clearAllowFPReassociateOverride()</p>
+      <p>Defined at line 21 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="4323310150A0A8512EFB50EDD62B23B266DD5A50">setAllowFPReassociateOverride</h3>
+      <p>public void setAllowFPReassociateOverride(_Bool value)</p>
+      <p>Defined at line 21 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="0291DBE792997495064F160C24F20BA035B93FCE">hasNoHonorNaNsOverride</h3>
+      <p>public _Bool hasNoHonorNaNsOverride()</p>
+      <p>Defined at line 22 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="763F70DAAA284AF4A0B6537BB4F8F2D430C9AC6A">getNoHonorNaNsOverride</h3>
+      <p>public _Bool getNoHonorNaNsOverride()</p>
+      <p>Defined at line 22 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="66A71DE98DA6640F50B2A0274FDD5EFBB65DA9E6">clearNoHonorNaNsOverride</h3>
+      <p>public void clearNoHonorNaNsOverride()</p>
+      <p>Defined at line 22 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="4F814550E4AF8C6401A55A5F4AC02C55A80ACE2E">setNoHonorNaNsOverride</h3>
+      <p>public void setNoHonorNaNsOverride(_Bool value)</p>
+      <p>Defined at line 22 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="281FB9CBD2AAE3F61B0E649935CF596723E38C59">hasNoHonorInfsOverride</h3>
+      <p>public _Bool hasNoHonorInfsOverride()</p>
+      <p>Defined at line 23 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="225BD1B722A703B1B16B45187F945BD27A97DBC3">getNoHonorInfsOverride</h3>
+      <p>public _Bool getNoHonorInfsOverride()</p>
+      <p>Defined at line 23 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="F52B9516CEFD7CD2A0D2FC150E0639CA1470C68A">clearNoHonorInfsOverride</h3>
+      <p>public void clearNoHonorInfsOverride()</p>
+      <p>Defined at line 23 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="07D434DB583AB0494690DCB2A2DD7ADF845CB832">setNoHonorInfsOverride</h3>
+      <p>public void setNoHonorInfsOverride(_Bool value)</p>
+      <p>Defined at line 23 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="64428B77B0ED6731AE0B7870C89B7E5F42D4457C">hasNoSignedZeroOverride</h3>
+      <p>public _Bool hasNoSignedZeroOverride()</p>
+      <p>Defined at line 24 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="B7FB84EA8F13EA1F22C46D9BB3C03026D2919E35">getNoSignedZeroOverride</h3>
+      <p>public _Bool getNoSignedZeroOverride()</p>
+      <p>Defined at line 24 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="4FB219D903BD1141249795ADCD93D9A6A97EEB19">clearNoSignedZeroOverride</h3>
+      <p>public void clearNoSignedZeroOverride()</p>
+      <p>Defined at line 24 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="CE04D42B7DA9C7646AEB00521FC970552F85D72C">setNoSignedZeroOverride</h3>
+      <p>public void setNoSignedZeroOverride(_Bool value)</p>
+      <p>Defined at line 24 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="86C8C6EDD461739B26FF90D713FDF358D0FD063B">hasAllowReciprocalOverride</h3>
+      <p>public _Bool hasAllowReciprocalOverride()</p>
+      <p>Defined at line 25 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="8BD345D4BCFD0392E3DA0990AA2C92C3CBA54E37">getAllowReciprocalOverride</h3>
+      <p>public _Bool getAllowReciprocalOverride()</p>
+      <p>Defined at line 25 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="86AB0001AD04F6631AE584EBBB75981F39000BD5">clearAllowReciprocalOverride</h3>
+      <p>public void clearAllowReciprocalOverride()</p>
+      <p>Defined at line 25 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="03803751538ACE5C6FEE898E5FD12876FC193139">setAllowReciprocalOverride</h3>
+      <p>public void setAllowReciprocalOverride(_Bool value)</p>
+      <p>Defined at line 25 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="90706964492231C7B7217A93141D863390B203F6">hasAllowApproxFuncOverride</h3>
+      <p>public _Bool hasAllowApproxFuncOverride()</p>
+      <p>Defined at line 26 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="66085DFB61190A193E48DB9A798897E62FC0223F">getAllowApproxFuncOverride</h3>
+      <p>public _Bool getAllowApproxFuncOverride()</p>
+      <p>Defined at line 26 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="5F4541D3B07ADD5E7584B597991626C99B7E5D91">clearAllowApproxFuncOverride</h3>
+      <p>public void clearAllowApproxFuncOverride()</p>
+      <p>Defined at line 26 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="54C2ECF39C628B15477EADE5A43E7959442009B9">setAllowApproxFuncOverride</h3>
+      <p>public void setAllowApproxFuncOverride(_Bool value)</p>
+      <p>Defined at line 26 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="7B9195D0ACEC08710AF1F0014C7D465B221AD0D7">hasFPEvalMethodOverride</h3>
+      <p>public _Bool hasFPEvalMethodOverride()</p>
+      <p>Defined at line 27 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="6BE6EAA1883BDA8EE2F862F2BB53B989BAE96652">getFPEvalMethodOverride</h3>
+      <p>
+        public 
+        <a href="../clang/LangOptions/FPEvalMethodKind.html">FPEvalMethodKind</a>
+         getFPEvalMethodOverride()
+      </p>
+      <p>Defined at line 27 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="3FE6139FC688EDEEAB1DDAFE04F5A5ED4A6211C5">clearFPEvalMethodOverride</h3>
+      <p>public void clearFPEvalMethodOverride()</p>
+      <p>Defined at line 27 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="52CD394C30A9EA0930B6752466B816969C355A4E">setFPEvalMethodOverride</h3>
+      <p>
+        public void setFPEvalMethodOverride(
+        <a href="../clang/LangOptions/FPEvalMethodKind.html">FPEvalMethodKind</a>
+         value)
+      </p>
+      <p>Defined at line 27 of file /usr/lib/llvm-16/include/clang/Basic/FPOptions.def</p>
+      <h3 id="BAEFB946D65BA6EAD360779F874032532428492B">dump</h3>
+      <p>public void dump()</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2CA1B217D4641558E4111EE9299DC776F92584DC">FPOptionsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB4E36629258A6961391B3127AA0AB363F74F8B1">FPOptionsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#619AEF591B9C8032718A95CCF404C7286BD1F934">FPOptionsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#56C8417D35404ACB26417618A75575158DCE3F70">FPOptionsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2349C2794DA8FBE4E06997B9150F67A965DBFD26">requiresTrailingStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E32A85A9C3E7218BE50BB245318FB9F6A455F2CC">setAllowFPContractWithinStatement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6745894F1FB74C115CE66F1C076C61A1323D84A">setAllowFPContractAcrossStatement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#707312BD12F5E177502243569597C0A0DF56E7DB">setDisallowFPContract</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#50C30F81201C47F244B28AEE20C97A929CF19615">setFPPreciseEnabled</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E56A62FC8EFAADE6CEA2D842B1AE2EF065D2F21">getAsOpaqueInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3079A5ACB6D70056393B7CEA438AC63CE8F80393">getFromOpaqueInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#661D3FC26E1D63FA4F06DF1F010BAE7952763587">applyOverrides</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66E14B599BC6285DCDAA0AC7825D72344F39CFC7">applyOverrides</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B39BEADF206A366981741405272F1239E52191B">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#214E11A21A450B6534530A17A93F959AB0C6559E">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7E4E9B24FC7DC1356573C2AB481285B1795A2A8">hasFPContractModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45DBFE42B4513DC95F3D26E1F4C317781E41561C">getFPContractModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1A6F2C4B647CEB62C101972034A9F3E486701F8F">clearFPContractModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6681D3813B1B5E30BE140BB390300DB709746EDD">setFPContractModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#050D13A1BE501F8490DA678A1629AEBFB3D18B17">hasRoundingMathOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8D81A6D63177F3263C17919035F86495FEFD0CB">getRoundingMathOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6262056F5D49CA38FBDA4CCFF4B47B2BBE36DC57">clearRoundingMathOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5F894B0D13F9D95680917EF0190D198B1D73570">setRoundingMathOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44DF886E208436F92D3E41473160DAAF18EB45FB">hasConstRoundingModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65BC7B99FED47336B2C25CF7FB755F2904743F5A">getConstRoundingModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6999BFFED8FC93160C78092034576ACDC0D6BC8">clearConstRoundingModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4838FFFFA70A1A7BE9AE778607A525653471E66B">setConstRoundingModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD760478E564FB60EBBA63179342B4A7BA4202A2">hasSpecifiedExceptionModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C013BD7D4B23E84F20E572E9AC4D8103E6456FB">getSpecifiedExceptionModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#04A8E0642CA92750B80731EDDEBED35C4E4CB5D4">clearSpecifiedExceptionModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A562B893351715009A87120677407A9A173D703">setSpecifiedExceptionModeOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D928C7AFBE2524A5044990824272DA38BC5BA01C">hasAllowFEnvAccessOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B62E2588526A4A8DBFBDE3F3D2ADB4F3777C709F">getAllowFEnvAccessOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#171C4535303D5F4FF693101C5562C0D93FAC65F6">clearAllowFEnvAccessOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FFF0AE41D3F353D3960A6A69428439657115945">setAllowFEnvAccessOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F0147F73E99CEAE6E37D37682BEC97CD50F97B5">hasAllowFPReassociateOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6288D21513675C8644EA30F63582AC2334E77E0E">getAllowFPReassociateOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86F691FC91F0E17353E72020586ECE2BFCBB7849">clearAllowFPReassociateOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4323310150A0A8512EFB50EDD62B23B266DD5A50">setAllowFPReassociateOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0291DBE792997495064F160C24F20BA035B93FCE">hasNoHonorNaNsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#763F70DAAA284AF4A0B6537BB4F8F2D430C9AC6A">getNoHonorNaNsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66A71DE98DA6640F50B2A0274FDD5EFBB65DA9E6">clearNoHonorNaNsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F814550E4AF8C6401A55A5F4AC02C55A80ACE2E">setNoHonorNaNsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#281FB9CBD2AAE3F61B0E649935CF596723E38C59">hasNoHonorInfsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#225BD1B722A703B1B16B45187F945BD27A97DBC3">getNoHonorInfsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F52B9516CEFD7CD2A0D2FC150E0639CA1470C68A">clearNoHonorInfsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07D434DB583AB0494690DCB2A2DD7ADF845CB832">setNoHonorInfsOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64428B77B0ED6731AE0B7870C89B7E5F42D4457C">hasNoSignedZeroOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7FB84EA8F13EA1F22C46D9BB3C03026D2919E35">getNoSignedZeroOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FB219D903BD1141249795ADCD93D9A6A97EEB19">clearNoSignedZeroOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE04D42B7DA9C7646AEB00521FC970552F85D72C">setNoSignedZeroOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86C8C6EDD461739B26FF90D713FDF358D0FD063B">hasAllowReciprocalOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8BD345D4BCFD0392E3DA0990AA2C92C3CBA54E37">getAllowReciprocalOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86AB0001AD04F6631AE584EBBB75981F39000BD5">clearAllowReciprocalOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03803751538ACE5C6FEE898E5FD12876FC193139">setAllowReciprocalOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90706964492231C7B7217A93141D863390B203F6">hasAllowApproxFuncOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66085DFB61190A193E48DB9A798897E62FC0223F">getAllowApproxFuncOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F4541D3B07ADD5E7584B597991626C99B7E5D91">clearAllowApproxFuncOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#54C2ECF39C628B15477EADE5A43E7959442009B9">setAllowApproxFuncOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B9195D0ACEC08710AF1F0014C7D465B221AD0D7">hasFPEvalMethodOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BE6EAA1883BDA8EE2F862F2BB53B989BAE96652">getFPEvalMethodOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3FE6139FC688EDEEAB1DDAFE04F5A5ED4A6211C5">clearFPEvalMethodOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52CD394C30A9EA0930B6752466B816969C355A4E">setFPEvalMethodOverride</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BAEFB946D65BA6EAD360779F874032532428492B">dump</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

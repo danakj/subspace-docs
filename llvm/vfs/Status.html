@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Status</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/vfs" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Status</h1>
+    <p>Defined at line 47 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    <div>
+      <div>
+        <p> The result of a  operation.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public _Bool IsVFSMapped</li>
+      <li>public _Bool ExposesExternalVFSPath</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="91127357C0E3591FE9F8B8EBE7AD04068E737946">Status</h3>
+      <p>public void Status()</p>
+      <p>Defined at line 72 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="24A1AA0C721FA75594A7058D92BA4D588820B1BD">Status</h3>
+      <p>public void Status(const llvm::sys::fs::file_status &amp; Status)</p>
+      <h3 id="05C561AD6BB86A4B3E547D48A5685C958D064A24">Status</h3>
+      <p>
+        public void Status(const Twine &amp; Name, 
+        <a href="../../llvm/sys/fs/UniqueID.html">UniqueID</a>
+         UID, 
+        <a href="../../std/chrono/time_point.html">time_point</a>
+         MTime, uint32_t User, uint32_t Group, uint64_t Size, 
+        <a href="../../llvm/sys/fs/file_type.html">file_type</a>
+         Type, 
+        <a href="../../llvm/sys/fs/perms.html">perms</a>
+         Perms)
+      </p>
+      <h3 id="290C214580985B1BC0D330902697561A0B83684B">copyWithNewSize</h3>
+      <p>
+        public 
+        <a href="Status.html">Status</a>
+         copyWithNewSize(const Status &amp; In, uint64_t NewSize)
+      </p>
+      <div>
+        <div>
+          <p> Get a copy of a Status with a different size.</p>
+        </div>
+      </div>
+      <h3 id="BB9106D7E43D3F49E62979DE4D070366DBFF4898">copyWithNewName</h3>
+      <p>
+        public 
+        <a href="Status.html">Status</a>
+         copyWithNewName(const Status &amp; In, const Twine &amp; NewName)
+      </p>
+      <div>
+        <div>
+          <p> Get a copy of a Status with a different name.</p>
+        </div>
+      </div>
+      <h3 id="E5A997F86248B3561DCE4ED4F9888EE48E14292A">copyWithNewName</h3>
+      <p>
+        public 
+        <a href="Status.html">Status</a>
+         copyWithNewName(const llvm::sys::fs::file_status &amp; In, const Twine &amp; NewName)
+      </p>
+      <h3 id="44ABE41E5214719FF1926A8A4ED019FC09E3080A">getName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getName()
+      </p>
+      <p>Defined at line 87 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <div>
+        <div>
+          <p> Returns the name that should be used for this file or directory.</p>
+        </div>
+      </div>
+      <h3 id="7E13A843B72B8573D2EB677FCC5443247B5C0388">getType</h3>
+      <p>
+        public 
+        <a href="../../llvm/sys/fs/file_type.html">file_type</a>
+         getType()
+      </p>
+      <p>Defined at line 91 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <div>
+        <div>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="C05A07A264EFDC97119E371E23042B11C970DA14">getPermissions</h3>
+      <p>
+        public 
+        <a href="../../llvm/sys/fs/perms.html">perms</a>
+         getPermissions()
+      </p>
+      <p>Defined at line 92 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="B8FCE8D6E44D630B626588218D26B326326EF539">getLastModificationTime</h3>
+      <p>
+        public 
+        <a href="../../std/chrono/time_point.html">time_point</a>
+         getLastModificationTime()
+      </p>
+      <p>Defined at line 93 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="90F1D97C3D11CDF0B1D84B3E5B7906D533CCF218">getUniqueID</h3>
+      <p>
+        public 
+        <a href="../../llvm/sys/fs/UniqueID.html">UniqueID</a>
+         getUniqueID()
+      </p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="1E86E06BFEBEAF172AD8C56B4D5EEED525C29BEF">getUser</h3>
+      <p>public uint32_t getUser()</p>
+      <p>Defined at line 95 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="BECC81D7C08F90ED73F4CA8ACF96BA445126DE1F">getGroup</h3>
+      <p>public uint32_t getGroup()</p>
+      <p>Defined at line 96 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="B35EEC5065A85306BCE9A1A53534107651A8DB16">getSize</h3>
+      <p>public uint64_t getSize()</p>
+      <p>Defined at line 97 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="17E0DCE213B6136B507234A8ACC59DF89ABA544B">equivalent</h3>
+      <p>public _Bool equivalent(const Status &amp; Other)</p>
+      <div>
+        <div>
+          <p>@}</p>
+          <p> These are static queries in llvm::sys::fs.@{</p>
+        </div>
+      </div>
+      <h3 id="D997D4DA06407DC59CE7DE7B521EF2924FC2459D">isDirectory</h3>
+      <p>public _Bool isDirectory()</p>
+      <h3 id="83E29B6362125D9CD23FBC0A5EF9895C2861CA73">isRegularFile</h3>
+      <p>public _Bool isRegularFile()</p>
+      <h3 id="266F6922F5B28E52609B54A6D16483DC1342DD56">isOther</h3>
+      <p>public _Bool isOther()</p>
+      <h3 id="B233FDAF1147EF9B55A38E5DDD7EE3470EBCCA25">isSymlink</h3>
+      <p>public _Bool isSymlink()</p>
+      <h3 id="55216641AE5E62811B3C47C83C09051907A5393E">isStatusKnown</h3>
+      <p>public _Bool isStatusKnown()</p>
+      <h3 id="44844E8648CFD05FCCB188B4FE19AAD0BFFC87F2">exists</h3>
+      <p>public _Bool exists()</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#91127357C0E3591FE9F8B8EBE7AD04068E737946">Status</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24A1AA0C721FA75594A7058D92BA4D588820B1BD">Status</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05C561AD6BB86A4B3E547D48A5685C958D064A24">Status</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#290C214580985B1BC0D330902697561A0B83684B">copyWithNewSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB9106D7E43D3F49E62979DE4D070366DBFF4898">copyWithNewName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5A997F86248B3561DCE4ED4F9888EE48E14292A">copyWithNewName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44ABE41E5214719FF1926A8A4ED019FC09E3080A">getName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E13A843B72B8573D2EB677FCC5443247B5C0388">getType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C05A07A264EFDC97119E371E23042B11C970DA14">getPermissions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8FCE8D6E44D630B626588218D26B326326EF539">getLastModificationTime</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90F1D97C3D11CDF0B1D84B3E5B7906D533CCF218">getUniqueID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E86E06BFEBEAF172AD8C56B4D5EEED525C29BEF">getUser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BECC81D7C08F90ED73F4CA8ACF96BA445126DE1F">getGroup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B35EEC5065A85306BCE9A1A53534107651A8DB16">getSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17E0DCE213B6136B507234A8ACC59DF89ABA544B">equivalent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D997D4DA06407DC59CE7DE7B521EF2924FC2459D">isDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83E29B6362125D9CD23FBC0A5EF9895C2861CA73">isRegularFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#266F6922F5B28E52609B54A6D16483DC1342DD56">isOther</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B233FDAF1147EF9B55A38E5DDD7EE3470EBCCA25">isSymlink</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#55216641AE5E62811B3C47C83C09051907A5393E">isStatusKnown</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44844E8648CFD05FCCB188B4FE19AAD0BFFC87F2">exists</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

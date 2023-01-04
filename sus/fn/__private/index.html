@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace __private</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/fn/__private" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace __private</h1>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="FnStorageBase.html">FnStorageBase</a>
+      </li>
+      <li>
+        <a href="SusBind.html">SusBind</a>
+      </li>
+      <li>
+        <a href="UnsafePointer.html">UnsafePointer</a>
+      </li>
+      <li>
+        <a href="UnsafePointer.html">UnsafePointer</a>
+      </li>
+      <li>
+        <a href="CheckCallableObjectConst.html">CheckCallableObjectConst</a>
+      </li>
+      <li>
+        <a href="CheckCallableObjectConst.html">CheckCallableObjectConst</a>
+      </li>
+      <li>
+        <a href="FnStorageVtableBase.html">FnStorageVtableBase</a>
+      </li>
+      <li>
+        <a href="FnStorageVtable.html">FnStorageVtable</a>
+      </li>
+      <li>
+        <a href="FnStorage.html">FnStorage</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="069D66F0E4661BC8605C664060D8C71E2E76F7C7">&lt;deduction guide for UnsafePointer&gt;</h3>
+      <p>
+        UnsafePointer&lt;T *&gt; &lt;deduction guide for UnsafePointer&gt;(
+        <a href="../../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , T * )
+      </p>
+      <h3 id="B4C9AAE394B47324B48339480E3A39E5B5E49B81">make_storage</h3>
+      <p>auto make_storage(T &amp;&amp; t)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h#200">200</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h">fn_bind.h</a>
+      </p>
+      <h3 id="6F43E8A1D553B565EB2B9E178E916C4AE5B115A7">make_storage</h3>
+      <p>auto make_storage(T * t)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h#204">204</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h">fn_bind.h</a>
+      </p>
+      <h3 id="4AA56042176EFD24CC2E157920ADC18C9384E6FC">make_storage</h3>
+      <p>auto make_storage(UnsafePointer&lt;T *&gt; p)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h#210">210</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h">fn_bind.h</a>
+      </p>
+      <h3 id="82090F3010CCB52ADBD7A4A6C00CBB261EB497DE">make_storage_mut</h3>
+      <p>auto make_storage_mut(T &amp;&amp; t)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h#215">215</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h">fn_bind.h</a>
+      </p>
+      <h3 id="A45A7D1B86A12975C2A4FAFA649BC20051447164">make_storage_mut</h3>
+      <p>auto make_storage_mut(T * t)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h#219">219</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h">fn_bind.h</a>
+      </p>
+      <h3 id="9511905D904221BA7174E20FC424FE4267B62792">make_storage_mut</h3>
+      <p>auto make_storage_mut(UnsafePointer&lt;T *&gt; p)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h#223">223</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_bind.h">fn_bind.h</a>
+      </p>
+      <h3 id="66F92E25AC27235BF018FAD70EB53FA50DE6EE47">is_lvalue</h3>
+      <p>
+        <a href="../../../std/integral_constant.html">integral_constant</a>
+         is_lvalue(T &amp; )
+      </p>
+      <div>
+        <div>
+          <p> Verifies the input is an lvalue (a name), so we can bind it to that same lvalue name in the resuling lambda.</p>
+        </div>
+      </div>
+      <h3 id="B516D2A639C1FD10BB97C97E30D7599024DC5A63">is_lvalue</h3>
+      <p>
+        <a href="../../../std/integral_constant.html">integral_constant</a>
+         is_lvalue()
+      </p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="FC39C8224C9B281FFE6BA81D40B3082CE548FB62">enum StorageConstructionFnOnceType</h3>
+      <ul>
+        <li>StorageConstructionFnOnce</li>
+      </ul>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h#40">40</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h">fn_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Helper to determine which functions need to be instatiated for the closure, to be called from FnOnce, FnMut, and/or Fn.</p>
+          <p> This type indicates the closure can only be called from FnOnce.</p>
+        </div>
+      </div>
+      <h3 id="D406E5169CB4A103718A49643113AA31AA4B016B">enum StorageConstructionFnMutType</h3>
+      <ul>
+        <li>StorageConstructionFnMut</li>
+      </ul>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h#45">45</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h">fn_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Helper to determine which functions need to be instatiated for the closure, to be called from FnOnce, FnMut, and/or Fn.</p>
+          <p> This type indicates the closure can be called from FnMut or FnOnce.</p>
+        </div>
+      </div>
+      <h3 id="978A880E6BF729EEFAB41527C251D9059FC34A0D">enum StorageConstructionFnType</h3>
+      <ul>
+        <li>StorageConstructionFn</li>
+      </ul>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h#50">50</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h">fn_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Helper to determine which functions need to be instatiated for the closure, to be called from FnOnce, FnMut, and/or Fn.</p>
+          <p> This type indicates the closure can be called from Fn, FnMut or FnOnce.</p>
+        </div>
+      </div>
+      <h3 id="6BF8061740A218699C0C20C581AA99508085A143">enum FnType</h3>
+      <ul>
+        <li>FnPointer</li>
+        <li>Storage</li>
+      </ul>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h#54">54</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./fn/fn_defn.h">fn_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Used to indicate if the closure is holding a function pointer or heap-allocated storage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#069D66F0E4661BC8605C664060D8C71E2E76F7C7">&lt;deduction guide for UnsafePointer&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4C9AAE394B47324B48339480E3A39E5B5E49B81">make_storage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F43E8A1D553B565EB2B9E178E916C4AE5B115A7">make_storage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AA56042176EFD24CC2E157920ADC18C9384E6FC">make_storage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82090F3010CCB52ADBD7A4A6C00CBB261EB497DE">make_storage_mut</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A45A7D1B86A12975C2A4FAFA649BC20051447164">make_storage_mut</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9511905D904221BA7174E20FC424FE4267B62792">make_storage_mut</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66F92E25AC27235BF018FAD70EB53FA50DE6EE47">is_lvalue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B516D2A639C1FD10BB97C97E30D7599024DC5A63">is_lvalue</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FC39C8224C9B281FFE6BA81D40B3082CE548FB62">StorageConstructionFnOnceType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D406E5169CB4A103718A49643113AA31AA4B016B">StorageConstructionFnMutType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#978A880E6BF729EEFAB41527C251D9059FC34A0D">StorageConstructionFnType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BF8061740A218699C0C20C581AA99508085A143">FnType</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

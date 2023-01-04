@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FriendDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FriendDecl</h1>
+    <p>Defined at line 52 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+    <div>
+      <div>
+        <p> FriendDecl - Represents the declaration of a friend entity, which can be a function, a type, or a templated function or type. For example:</p>
+        <p> The semantic context of a friend decl is its declaring class.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Decl.html">Decl</a>
+      , llvm::TrailingObjects&lt;FriendDecl, TemplateParameterList *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="678B7040CE226710ED20918560BCCE6EF49C5EFF">Create</h3>
+      <p>
+        public FriendDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="../llvm/PointerUnion.html">PointerUnion</a>
+         Friend_, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         FriendL, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         FriendTypeTPLists)
+      </p>
+      <h3 id="C08BDE38B3292E42C2752C1CE631042D5AFC9703">CreateDeserialized</h3>
+      <p>public FriendDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID, unsigned int FriendTypeNumTPLists)</p>
+      <h3 id="B09CA7B4083F5A7EF0DB2279D893C801EC22B4C1">getFriendType</h3>
+      <p>public TypeSourceInfo * getFriendType()</p>
+      <p>Defined at line 121 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+      <div>
+        <div>
+          <p> If this friend declaration names an (untemplated but possibly dependent) type, return the type; otherwise return null.  This is used for elaborated-type-specifiers and, in C++0x, for arbitrary friend type declarations.</p>
+        </div>
+      </div>
+      <h3 id="A2A7ABEDD0850282C8481461B4052258E2838612">getFriendTypeNumTemplateParameterLists</h3>
+      <p>public unsigned int getFriendTypeNumTemplateParameterLists()</p>
+      <p>Defined at line 125 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+      <h3 id="242DF497DDE1A3AC2F8E7650A8FDAC540F477627">getFriendTypeTemplateParameterList</h3>
+      <p>public TemplateParameterList * getFriendTypeTemplateParameterList(unsigned int N)</p>
+      <p>Defined at line 129 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+      <h3 id="1998905DA39B4205413CD2366723EA04FAF63FDE">getFriendDecl</h3>
+      <p>public NamedDecl * getFriendDecl()</p>
+      <p>Defined at line 136 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+      <div>
+        <div>
+          <p> If this friend declaration doesn&apos;t name a type, return the inner declaration.</p>
+        </div>
+      </div>
+      <h3 id="F8C976D180E807A7C742B779E10FB041CE706C3E">getFriendLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getFriendLoc()
+      </p>
+      <p>Defined at line 141 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+      <div>
+        <div>
+          <p> Retrieves the location of the &apos;friend&apos; keyword.</p>
+        </div>
+      </div>
+      <h3 id="9CF21DB65C6E801E81772E391D70D5AFA8C5A65A">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 146 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+      <div>
+        <div>
+          <p> Retrieves the source range for the friend declaration.</p>
+        </div>
+      </div>
+      <h3 id="4D132641FBF99B80E424497B471FD608E73EC708">isUnsupportedFriend</h3>
+      <p>public _Bool isUnsupportedFriend()</p>
+      <p>Defined at line 172 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+      <div>
+        <div>
+          <p> Determines if this friend kind is unsupported.</p>
+        </div>
+      </div>
+      <h3 id="AC248AB8A44AAAE8B499EADFD5D95BCB6FD94F3F">setUnsupportedFriend</h3>
+      <p>public void setUnsupportedFriend(_Bool Unsupported)</p>
+      <p>Defined at line 175 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+      <h3 id="9D7ABF2204284E045CE1C9DF66E1430AF77DF213">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 180 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="390E513F4D3D0F2DFB317E2A14FC9393246BDA5D">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 181 of file /usr/lib/llvm-16/include/clang/AST/DeclFriend.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#678B7040CE226710ED20918560BCCE6EF49C5EFF">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C08BDE38B3292E42C2752C1CE631042D5AFC9703">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B09CA7B4083F5A7EF0DB2279D893C801EC22B4C1">getFriendType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2A7ABEDD0850282C8481461B4052258E2838612">getFriendTypeNumTemplateParameterLists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#242DF497DDE1A3AC2F8E7650A8FDAC540F477627">getFriendTypeTemplateParameterList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1998905DA39B4205413CD2366723EA04FAF63FDE">getFriendDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8C976D180E807A7C742B779E10FB041CE706C3E">getFriendLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9CF21DB65C6E801E81772E391D70D5AFA8C5A65A">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D132641FBF99B80E424497B471FD608E73EC708">isUnsupportedFriend</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC248AB8A44AAAE8B499EADFD5D95BCB6FD94F3F">setUnsupportedFriend</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D7ABF2204284E045CE1C9DF66E1430AF77DF213">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#390E513F4D3D0F2DFB317E2A14FC9393246BDA5D">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

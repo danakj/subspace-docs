@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCProtocolExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCProtocolExpr</h1>
+    <p>Defined at line 504 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+    <div>
+      <div>
+        <p> ObjCProtocolExpr used for protocol expression in Objective-C.</p>
+        <p> This is used as: @protocol(foo), as in:</p>
+        <p> The return type is &quot;Protocol*&quot;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="716A80EDD2390F3F77A43230634AEDC575938CCB">ObjCProtocolExpr</h3>
+      <p>
+        public void ObjCProtocolExpr(
+        <a href="QualType.html">QualType</a>
+         T, ObjCProtocolDecl * protocol, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         at, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         protoLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         rp)
+      </p>
+      <p>Defined at line 512 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="5D35342AB687CFDCB11A321D565862CEC9BDBF3D">ObjCProtocolExpr</h3>
+      <p>
+        public void ObjCProtocolExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 518 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="AC76BC6004A597F41C6E06B4E89FDB907670C329">getProtocol</h3>
+      <p>public ObjCProtocolDecl * getProtocol()</p>
+      <p>Defined at line 521 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="3529650B54FA28625FA9C5F4A3B5BD1F4C5A5277">setProtocol</h3>
+      <p>public void setProtocol(ObjCProtocolDecl * P)</p>
+      <p>Defined at line 522 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="6CEE81DC1787D67758C23BD96FF590C0A6C41E3B">getProtocolIdLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getProtocolIdLoc()
+      </p>
+      <p>Defined at line 524 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="017C0E7FEB02E8A33C6AE6F98A9C50DA512184B4">getAtLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAtLoc()
+      </p>
+      <p>Defined at line 525 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="CD5C44E27497B9A797FC5A5548E799B9B6A5D64F">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 526 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="4896C1F58CBBD4B2BF4CBFA21FF986203117956B">setAtLoc</h3>
+      <p>
+        public void setAtLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 527 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="8D9D876B3D82D8A2411DB1BB14D7E84D1C60879C">setRParenLoc</h3>
+      <p>
+        public void setRParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 528 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="71F03C468F6889ECC80F0222DAF7F6BAE2AD1A61">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 530 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="CDC34ED767178C718A6FEAE80ECF56B0A19CBFE3">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 531 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="6D9AF06BA71330A56F50AF2F7549B9EC41D4DC2C">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 534 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="68212EE2FDE5094E1E7234AB593BCA6BA31C5CA8">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 538 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="3F0F3E9CBCAAEA26938CDC6F86A50F16B01FBF20">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 542 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#716A80EDD2390F3F77A43230634AEDC575938CCB">ObjCProtocolExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D35342AB687CFDCB11A321D565862CEC9BDBF3D">ObjCProtocolExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC76BC6004A597F41C6E06B4E89FDB907670C329">getProtocol</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3529650B54FA28625FA9C5F4A3B5BD1F4C5A5277">setProtocol</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CEE81DC1787D67758C23BD96FF590C0A6C41E3B">getProtocolIdLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#017C0E7FEB02E8A33C6AE6F98A9C50DA512184B4">getAtLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD5C44E27497B9A797FC5A5548E799B9B6A5D64F">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4896C1F58CBBD4B2BF4CBFA21FF986203117956B">setAtLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D9D876B3D82D8A2411DB1BB14D7E84D1C60879C">setRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71F03C468F6889ECC80F0222DAF7F6BAE2AD1A61">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDC34ED767178C718A6FEAE80ECF56B0A19CBFE3">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D9AF06BA71330A56F50AF2F7549B9EC41D4DC2C">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68212EE2FDE5094E1E7234AB593BCA6BA31C5CA8">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F0F3E9CBCAAEA26938CDC6F86A50F16B01FBF20">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

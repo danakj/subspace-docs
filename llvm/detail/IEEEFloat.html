@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class IEEEFloat</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/detail" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class IEEEFloat</h1>
+    <p>Defined at line 257 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+    <p>
+      Inherits from 
+      <a href="../../llvm/APFloatBase.html">APFloatBase</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="972A19F57E3F6F0AEC74128CF70C6648BF6AD0AF">IEEEFloat</h3>
+      <p>public void IEEEFloat(const fltSemantics &amp; )</p>
+      <div>
+        <div>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="826E880EF08BD8C14F5EAE31F7A6BAF417240EE1">IEEEFloat</h3>
+      <p>public void IEEEFloat(const fltSemantics &amp; , integerPart )</p>
+      <h3 id="C01482F2ED79F0ED3AEDAA8718F265D0FD8BA56A">IEEEFloat</h3>
+      <p>
+        public void IEEEFloat(const fltSemantics &amp; , 
+        <a href="../../llvm/APFloatBase/uninitializedTag.html">uninitializedTag</a>
+         )
+      </p>
+      <h3 id="8A790BC84A14256E12762B5BB72F33655649E5A3">IEEEFloat</h3>
+      <p>public void IEEEFloat(const fltSemantics &amp; , const APInt &amp; )</p>
+      <h3 id="EF1E23496F3371D580FD63B2399E3B9516B17418">IEEEFloat</h3>
+      <p>public void IEEEFloat(double d)</p>
+      <h3 id="27CAC0DDC91A7469383B2C9A948A160EEB79CBE9">IEEEFloat</h3>
+      <p>public void IEEEFloat(float f)</p>
+      <h3 id="B4026183A5EF867CDA2AE880B422713EF5A5DD28">IEEEFloat</h3>
+      <p>public void IEEEFloat(const IEEEFloat &amp; )</p>
+      <h3 id="2965DDE02A49EA792206E8F6CFA5E9EB7B935510">IEEEFloat</h3>
+      <p>public void IEEEFloat(IEEEFloat &amp;&amp; )</p>
+      <h3 id="E7DD08074AD1B7C4F2CCF6EAE923B8CA396B320F">~IEEEFloat</h3>
+      <p>public void ~IEEEFloat()</p>
+      <h3 id="0552057A7749A1CFC2CF41242CEAC3B22B627622">needsCleanup</h3>
+      <p>public _Bool needsCleanup()</p>
+      <p>Defined at line 275 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Returns whether this instance allocated memory.</p>
+        </div>
+      </div>
+      <h3 id="89073932FECF78A50F66F55AB392D0BED2D6224C">add</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         add(const IEEEFloat &amp; , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <div>
+        <div>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="EB83B3682A1C68F059DBC8E1D9B6854919DF7D3F">subtract</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         subtract(const IEEEFloat &amp; , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="16D83351983AE56D86050FC0FC60FA5F2D3B731C">multiply</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         multiply(const IEEEFloat &amp; , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="5D03E2B60406AA0ECFCC0DE9F6FBFAB3DB699A63">divide</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         divide(const IEEEFloat &amp; , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="65772267828D98DD08C584FBA31CA773C5335DBB">remainder</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         remainder(const IEEEFloat &amp; )
+      </p>
+      <div>
+        <div>
+          <p> IEEE remainder.</p>
+        </div>
+      </div>
+      <h3 id="662E8EA9A8A7727ED6D29F7527C8343C0FA8CF79">mod</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         mod(const IEEEFloat &amp; )
+      </p>
+      <div>
+        <div>
+          <p> C fmod, or llvm frem.</p>
+        </div>
+      </div>
+      <h3 id="A1C946226F4DED5512096EB1B4F860D5672520F6">fusedMultiplyAdd</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         fusedMultiplyAdd(const IEEEFloat &amp; , const IEEEFloat &amp; , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="15C8F0847452FA9F5E94E14713AF50C84FB29E9C">roundToIntegral</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         roundToIntegral(
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="C622388EA8A29BC3BB7D60758DA9C95FA4B079D1">next</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         next(_Bool nextDown)
+      </p>
+      <div>
+        <div>
+          <p> IEEE-754R 5.3.1: nextUp/nextDown.</p>
+        </div>
+      </div>
+      <h3 id="EDE1A9CA94F616167315F358388CBB5780982BAC">changeSign</h3>
+      <p>public void changeSign()</p>
+      <div>
+        <div>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="B32A3C8F5DBC4C99BB24E4F4F02B8A800ECA933B">convert</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convert(const fltSemantics &amp; , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         , _Bool * )
+      </p>
+      <div>
+        <div>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="0587DE134AB5CDFF1C04EC5647EC787F3F5DFC80">convertToInteger</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertToInteger(
+        <a href="../../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         , unsigned int , _Bool , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         , _Bool * )
+      </p>
+      <h3 id="F307EA9E63A60CEF817F04A1519A7D133711C6D8">convertFromAPInt</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertFromAPInt(const APInt &amp; , _Bool , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="39F6052FBA915FABA1A2E83B321B59005672B764">convertFromSignExtendedInteger</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertFromSignExtendedInteger(const integerPart * , unsigned int , _Bool , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="42DC571C0F953CEB52BF84125075B9DF5D0E4BD1">convertFromZeroExtendedInteger</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertFromZeroExtendedInteger(const integerPart * , unsigned int , _Bool , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="D6532D9B1D381EE97E052F483030A2A8DC13DE20">convertFromString</h3>
+      <p>
+        public Expected&lt;opStatus&gt; convertFromString(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         , 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="629E1E18246B0C9FDADC48FABAEC0F0D32532A0E">bitcastToAPInt</h3>
+      <p>
+        public 
+        <a href="../../llvm/APInt.html">APInt</a>
+         bitcastToAPInt()
+      </p>
+      <h3 id="C6795F9ACE1882DF408404EF2BB23FAEB6BBE25C">convertToDouble</h3>
+      <p>public double convertToDouble()</p>
+      <h3 id="08017538DC41B9F195BC202F808C93FB28F43166">convertToFloat</h3>
+      <p>public float convertToFloat()</p>
+      <h3 id="8A6988EBF85505DE2E9A317ACF75D5F3FCE5A7FD">operator==</h3>
+      <p>public _Bool operator==(const IEEEFloat &amp; )</p>
+      <p>Defined at line 328 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> The definition of equality is not straightforward for floating point, so we won&apos;t use operator==.  Use one of the following, or write whatever it is you really mean.</p>
+        </div>
+      </div>
+      <h3 id="4DD13B76AA5DC7573E6A65E920097BB742691458">compare</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/cmpResult.html">cmpResult</a>
+         compare(const IEEEFloat &amp; )
+      </p>
+      <div>
+        <div>
+          <p> IEEE comparison with another floating point number (NaNs compare unordered, 0==-0).</p>
+        </div>
+      </div>
+      <h3 id="F87B2D7DF74C44F98251050D90BD1CB84231AF81">bitwiseIsEqual</h3>
+      <p>public _Bool bitwiseIsEqual(const IEEEFloat &amp; )</p>
+      <div>
+        <div>
+          <p> Bitwise comparison for equality (QNaNs compare equal, 0!=-0).</p>
+        </div>
+      </div>
+      <h3 id="CDCABDCC5D5CC75A406DBD2E2388FBEF76F6C1A1">convertToHexString</h3>
+      <p>
+        public unsigned int convertToHexString(char * dst, unsigned int hexDigits, _Bool upperCase, 
+        <a href="../../llvm/RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <div>
+        <div>
+          <p> Write out a hexadecimal representation of the floating point value to DST, which must be of sufficient size, in the C99 form [-]0xh.hhhhp[+-]d. Return the number of characters written, excluding the terminating NUL.</p>
+        </div>
+      </div>
+      <h3 id="3273CC1B3E6FCE58E1B26567E846921164044749">isNegative</h3>
+      <p>public _Bool isNegative()</p>
+      <p>Defined at line 350 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> IEEE-754R isSignMinus: Returns true if and only if the current value is negative.</p>
+          <p> This applies to zeros and NaNs as well.</p>
+        </div>
+      </div>
+      <h3 id="333F80B77C66AEAA6F77D3A8E095435F97073ECE">isNormal</h3>
+      <p>public _Bool isNormal()</p>
+      <p>Defined at line 356 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> IEEE-754R isNormal: Returns true if and only if the current value is normal.</p>
+          <p> This implies that the current value of the float is not zero, subnormal, infinite, or NaN following the definition of normality from IEEE-754R.</p>
+        </div>
+      </div>
+      <h3 id="9429BF9E7CF14D0CE1A43F52B86F0D19E406DCF7">isFinite</h3>
+      <p>public _Bool isFinite()</p>
+      <p>Defined at line 362 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Returns true if and only if the current value is zero, subnormal, or normal.</p>
+          <p> This means that the value is not infinite or NaN.</p>
+        </div>
+      </div>
+      <h3 id="D594AF55B09EEAA14FCEFBC3D7AE606B43248EB4">isZero</h3>
+      <p>public _Bool isZero()</p>
+      <p>Defined at line 365 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Returns true if and only if the float is plus or minus zero.</p>
+        </div>
+      </div>
+      <h3 id="4AAE1E1E5E98C20AEB09046773A2EB6F3330AF1F">isDenormal</h3>
+      <p>public _Bool isDenormal()</p>
+      <div>
+        <div>
+          <p> IEEE-754R isSubnormal(): Returns true if and only if the float is a denormal.</p>
+        </div>
+      </div>
+      <h3 id="0663D48E89EF61A6458740C155CE4A35568267CC">isInfinity</h3>
+      <p>public _Bool isInfinity()</p>
+      <p>Defined at line 372 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> IEEE-754R isInfinite(): Returns true if and only if the float is infinity.</p>
+        </div>
+      </div>
+      <h3 id="7C679ABF5DFD25F7ACAAB94D1F9F847FBA8B78D1">isNaN</h3>
+      <p>public _Bool isNaN()</p>
+      <p>Defined at line 375 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Returns true if and only if the float is a quiet or signaling NaN.</p>
+        </div>
+      </div>
+      <h3 id="7F10C964421670AA090673F13FE4B1FF2895B1EF">isSignaling</h3>
+      <p>public _Bool isSignaling()</p>
+      <div>
+        <div>
+          <p> Returns true if and only if the float is a signaling NaN.</p>
+        </div>
+      </div>
+      <h3 id="27D20CB6C6C66D8EBA02F3A8E8CA29B3A1A61A33">getCategory</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/fltCategory.html">fltCategory</a>
+         getCategory()
+      </p>
+      <p>Defined at line 385 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="2AE78FDEF8E8BBD60AF5D7A135C7BC525621684E">getSemantics</h3>
+      <p>public const fltSemantics &amp; getSemantics()</p>
+      <p>Defined at line 386 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="2A1BEECC888FA665E7D353CBD8560A60E3780416">isNonZero</h3>
+      <p>public _Bool isNonZero()</p>
+      <p>Defined at line 387 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="97B1F0E7DFD4A0D1306862BD5CEA75DE79D6A01E">isFiniteNonZero</h3>
+      <p>public _Bool isFiniteNonZero()</p>
+      <p>Defined at line 388 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="9C9245132228B6449F677A7875275344F548346E">isPosZero</h3>
+      <p>public _Bool isPosZero()</p>
+      <p>Defined at line 389 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="4E8544FBEE497EB7F17EA7C104F3955AD8377CB0">isNegZero</h3>
+      <p>public _Bool isNegZero()</p>
+      <p>Defined at line 390 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="42272059EF3B4F068646254B17712EBADF0577E1">isSmallest</h3>
+      <p>public _Bool isSmallest()</p>
+      <div>
+        <div>
+          <p> Returns true if and only if the number has the smallest possible non-zero magnitude in the current semantics.</p>
+        </div>
+      </div>
+      <h3 id="655504761E3F6A8805266ED86226DFEF1214B86A">isSmallestNormalized</h3>
+      <p>public _Bool isSmallestNormalized()</p>
+      <div>
+        <div>
+          <p> Returns true if this is the smallest (by magnitude) normalized finite number in the given semantics.</p>
+        </div>
+      </div>
+      <h3 id="FA4B7904C1AA7F54327BD563953B3D66F69216A2">isLargest</h3>
+      <p>public _Bool isLargest()</p>
+      <div>
+        <div>
+          <p> Returns true if and only if the number has the largest possible finite magnitude in the current semantics.</p>
+        </div>
+      </div>
+      <h3 id="7E42A220FA9CD7F1686196A74FC5345EF3F5BBFD">isInteger</h3>
+      <p>public _Bool isInteger()</p>
+      <div>
+        <div>
+          <p> Returns true if and only if the number is an exact integer.</p>
+        </div>
+      </div>
+      <h3 id="0DFFCA1691D7C140DDE98FC26903FC7663D732BD">operator=</h3>
+      <p>public IEEEFloat &amp; operator=(const IEEEFloat &amp; )</p>
+      <div>
+        <div>
+          <p>@}</p>
+        </div>
+      </div>
+      <h3 id="C90E5A2C6A8EA813A7B0F5270A0348DF22B2BA2D">operator=</h3>
+      <p>public IEEEFloat &amp; operator=(IEEEFloat &amp;&amp; )</p>
+      <h3 id="AD467D805E89A5067B7F540DF8140C63B2B21F95">toString</h3>
+      <p>public void toString(SmallVectorImpl&lt;char&gt; &amp; Str, unsigned int FormatPrecision, unsigned int FormatMaxPadding, _Bool TruncateZero)</p>
+      <div>
+        <div>
+          <p> Converts this value into a decimal string.</p>
+          <p> Number       Precision    MaxPadding      Result ------       ---------    ----------      ------ 1.01E+4              5             2       10100 1.01E+4              4             2       1.01E+4 1.01E+4              5             1       1.01E+4 1.01E-2              5             2       0.0101 1.01E-2              4             2       0.0101 1.01E-2              4             1       1.01E-2</p>
+        </div>
+      </div>
+      <h3 id="67065768E6311681EF71AF860C53E767D44DF7ED">getExactInverse</h3>
+      <p>public _Bool getExactInverse(APFloat * inv)</p>
+      <div>
+        <div>
+          <p> If this value has an exact multiplicative inverse, store it in inv and return true.</p>
+        </div>
+      </div>
+      <h3 id="7BFE53A9CF4ADDC076BC984F4EAD3D79E761CCD3">makeLargest</h3>
+      <p>public void makeLargest(_Bool Neg)</p>
+      <div>
+        <div>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="D92F87B357A544A92F4EE32371CEC347BC68DC8E">makeSmallest</h3>
+      <p>public void makeSmallest(_Bool Neg)</p>
+      <h3 id="F3CEF522A9DA22408E441D89CF7C26F384FDB843">makeNaN</h3>
+      <p>public void makeNaN(_Bool SNaN, _Bool Neg, const APInt * fill)</p>
+      <h3 id="B72683B973E53D542457C2E3239D1650D5705521">makeInf</h3>
+      <p>public void makeInf(_Bool Neg)</p>
+      <h3 id="EF15A161B7B1231F118BE36C7987DF5CB832B4D4">makeZero</h3>
+      <p>public void makeZero(_Bool Neg)</p>
+      <h3 id="B5621ADEDB538C69B10701012C4C22DA4A82C38E">makeQuiet</h3>
+      <p>public void makeQuiet()</p>
+      <h3 id="232FBC6854FFC19FA39042B438D7FFFD65BED3B1">makeSmallestNormalized</h3>
+      <p>public void makeSmallestNormalized(_Bool Negative)</p>
+      <div>
+        <div>
+          <p> Returns the smallest (by magnitude) normalized finite number in the given semantics.</p>
+        </div>
+      </div>
+      <h3 id="86A378B3CFA46D26D9F1E7148FAF07AD3055DB36">compareAbsoluteValue</h3>
+      <p>
+        public 
+        <a href="../../llvm/APFloatBase/cmpResult.html">cmpResult</a>
+         compareAbsoluteValue(const IEEEFloat &amp; )
+      </p>
+      <div>
+        <div>
+          <p>@}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#972A19F57E3F6F0AEC74128CF70C6648BF6AD0AF">IEEEFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#826E880EF08BD8C14F5EAE31F7A6BAF417240EE1">IEEEFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C01482F2ED79F0ED3AEDAA8718F265D0FD8BA56A">IEEEFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A790BC84A14256E12762B5BB72F33655649E5A3">IEEEFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF1E23496F3371D580FD63B2399E3B9516B17418">IEEEFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27CAC0DDC91A7469383B2C9A948A160EEB79CBE9">IEEEFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4026183A5EF867CDA2AE880B422713EF5A5DD28">IEEEFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2965DDE02A49EA792206E8F6CFA5E9EB7B935510">IEEEFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E7DD08074AD1B7C4F2CCF6EAE923B8CA396B320F">~IEEEFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0552057A7749A1CFC2CF41242CEAC3B22B627622">needsCleanup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89073932FECF78A50F66F55AB392D0BED2D6224C">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB83B3682A1C68F059DBC8E1D9B6854919DF7D3F">subtract</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16D83351983AE56D86050FC0FC60FA5F2D3B731C">multiply</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D03E2B60406AA0ECFCC0DE9F6FBFAB3DB699A63">divide</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65772267828D98DD08C584FBA31CA773C5335DBB">remainder</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#662E8EA9A8A7727ED6D29F7527C8343C0FA8CF79">mod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1C946226F4DED5512096EB1B4F860D5672520F6">fusedMultiplyAdd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15C8F0847452FA9F5E94E14713AF50C84FB29E9C">roundToIntegral</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C622388EA8A29BC3BB7D60758DA9C95FA4B079D1">next</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EDE1A9CA94F616167315F358388CBB5780982BAC">changeSign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B32A3C8F5DBC4C99BB24E4F4F02B8A800ECA933B">convert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0587DE134AB5CDFF1C04EC5647EC787F3F5DFC80">convertToInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F307EA9E63A60CEF817F04A1519A7D133711C6D8">convertFromAPInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39F6052FBA915FABA1A2E83B321B59005672B764">convertFromSignExtendedInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42DC571C0F953CEB52BF84125075B9DF5D0E4BD1">convertFromZeroExtendedInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6532D9B1D381EE97E052F483030A2A8DC13DE20">convertFromString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#629E1E18246B0C9FDADC48FABAEC0F0D32532A0E">bitcastToAPInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6795F9ACE1882DF408404EF2BB23FAEB6BBE25C">convertToDouble</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08017538DC41B9F195BC202F808C93FB28F43166">convertToFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A6988EBF85505DE2E9A317ACF75D5F3FCE5A7FD">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DD13B76AA5DC7573E6A65E920097BB742691458">compare</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F87B2D7DF74C44F98251050D90BD1CB84231AF81">bitwiseIsEqual</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDCABDCC5D5CC75A406DBD2E2388FBEF76F6C1A1">convertToHexString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3273CC1B3E6FCE58E1B26567E846921164044749">isNegative</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#333F80B77C66AEAA6F77D3A8E095435F97073ECE">isNormal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9429BF9E7CF14D0CE1A43F52B86F0D19E406DCF7">isFinite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D594AF55B09EEAA14FCEFBC3D7AE606B43248EB4">isZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AAE1E1E5E98C20AEB09046773A2EB6F3330AF1F">isDenormal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0663D48E89EF61A6458740C155CE4A35568267CC">isInfinity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C679ABF5DFD25F7ACAAB94D1F9F847FBA8B78D1">isNaN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F10C964421670AA090673F13FE4B1FF2895B1EF">isSignaling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27D20CB6C6C66D8EBA02F3A8E8CA29B3A1A61A33">getCategory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2AE78FDEF8E8BBD60AF5D7A135C7BC525621684E">getSemantics</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A1BEECC888FA665E7D353CBD8560A60E3780416">isNonZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97B1F0E7DFD4A0D1306862BD5CEA75DE79D6A01E">isFiniteNonZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C9245132228B6449F677A7875275344F548346E">isPosZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E8544FBEE497EB7F17EA7C104F3955AD8377CB0">isNegZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42272059EF3B4F068646254B17712EBADF0577E1">isSmallest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#655504761E3F6A8805266ED86226DFEF1214B86A">isSmallestNormalized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA4B7904C1AA7F54327BD563953B3D66F69216A2">isLargest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E42A220FA9CD7F1686196A74FC5345EF3F5BBFD">isInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0DFFCA1691D7C140DDE98FC26903FC7663D732BD">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C90E5A2C6A8EA813A7B0F5270A0348DF22B2BA2D">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD467D805E89A5067B7F540DF8140C63B2B21F95">toString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67065768E6311681EF71AF860C53E767D44DF7ED">getExactInverse</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BFE53A9CF4ADDC076BC984F4EAD3D79E761CCD3">makeLargest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D92F87B357A544A92F4EE32371CEC347BC68DC8E">makeSmallest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F3CEF522A9DA22408E441D89CF7C26F384FDB843">makeNaN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B72683B973E53D542457C2E3239D1650D5705521">makeInf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF15A161B7B1231F118BE36C7987DF5CB832B4D4">makeZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5621ADEDB538C69B10701012C4C22DA4A82C38E">makeQuiet</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#232FBC6854FFC19FA39042B438D7FFFD65BED3B1">makeSmallestNormalized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86A378B3CFA46D26D9F1E7148FAF07AD3055DB36">compareAbsoluteValue</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

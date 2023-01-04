@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct LazyGenerationalUpdatePtr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct LazyGenerationalUpdatePtr</h1>
+    <p>Defined at line 388 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+    <div>
+      <div>
+        <p> A lazy value (of type T) that is within an AST node of type Owner, where the value might change in later generations of the external AST source.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public ValueType Value</li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/LazyGenerationalUpdatePtr/LazyData.html">LazyData</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8EE6D7AED3CDFA723DE487B002E89FF0BC274250">LazyGenerationalUpdatePtr&lt;Owner, T, Update&gt;</h3>
+      <p>public void LazyGenerationalUpdatePtr&lt;Owner, T, Update&gt;(ValueType V)</p>
+      <p>Defined at line 404 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <h3 id="CF07D9AB4AE5069E819448C1945DCFAF0CEDADE6">makeValue</h3>
+      <p>public ValueType makeValue(const ASTContext &amp; Ctx, T Value)</p>
+      <p>Defined at line 3445 of file /usr/lib/llvm-16/include/clang/AST/ASTContext.h</p>
+      <div>
+        <div>
+          <p> Create the representation of a LazyGenerationalUpdatePtr.</p>
+        </div>
+        <div>
+          <p> Defined in ASTContext.h</p>
+        </div>
+      </div>
+      <h3 id="380FED9B2F4ADCE194CD4C4385625D3733040058">LazyGenerationalUpdatePtr&lt;Owner, T, Update&gt;</h3>
+      <p>public void LazyGenerationalUpdatePtr&lt;Owner, T, Update&gt;(const ASTContext &amp; Ctx, T Value)</p>
+      <p>Defined at line 410 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <h3 id="7D718ABA6B1A8072F3AC87001BA02042BBFEB6D1">LazyGenerationalUpdatePtr&lt;Owner, T, Update&gt;</h3>
+      <p>
+        public void LazyGenerationalUpdatePtr&lt;Owner, T, Update&gt;(
+        <a href="../clang/LazyGenerationalUpdatePtr/NotUpdatedTag.html">NotUpdatedTag</a>
+         , T Value)
+      </p>
+      <p>Defined at line 416 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <h3 id="20FBA787786661FB0CEEF0BC1FE28E4D85A498BC">markIncomplete</h3>
+      <p>public void markIncomplete()</p>
+      <p>Defined at line 420 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Forcibly set this pointer (which must be lazy) as needing updates.</p>
+        </div>
+      </div>
+      <h3 id="8806D408684FB999E5E8548571B7FBBD6728B685">set</h3>
+      <p>public void set(T NewValue)</p>
+      <p>Defined at line 425 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Set the value of this pointer, in the current generation.</p>
+        </div>
+      </div>
+      <h3 id="D54ACE8645E1265AE5CF78ED552E3EE301CAD454">setNotUpdated</h3>
+      <p>public void setNotUpdated(T NewValue)</p>
+      <p>Defined at line 434 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Set the value of this pointer, for this and all future generations.</p>
+        </div>
+      </div>
+      <h3 id="A4C4ADDA742E88A41527C98C997FABBA0180BFF3">get</h3>
+      <p>public T get(Owner O)</p>
+      <p>Defined at line 437 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Get the value of this pointer, updating its owner if necessary.</p>
+        </div>
+      </div>
+      <h3 id="1B20A8D31D1B441AAFEB420F99BF1E14DA25BF0F">getNotUpdated</h3>
+      <p>public T getNotUpdated()</p>
+      <p>Defined at line 449 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Get the most recently computed value of this pointer without updating it.</p>
+        </div>
+      </div>
+      <h3 id="4001D1710CBE3B92E29F2C7739CBF149AA9B0784">getOpaqueValue</h3>
+      <p>public void * getOpaqueValue()</p>
+      <p>Defined at line 455 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <h3 id="75FE6D96EAC161B7DE7EADFDBD44C352DC181BB5">getFromOpaqueValue</h3>
+      <p>
+        public 
+        <a href="LazyGenerationalUpdatePtr.html">LazyGenerationalUpdatePtr</a>
+         getFromOpaqueValue(void * Ptr)
+      </p>
+      <p>Defined at line 456 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="99B30108BE2267828D19ABDE1CE2DBE17AAF9804">enum NotUpdatedTag</h3>
+      <ul>
+        <li>NotUpdated</li>
+      </ul>
+      <p>Defined at line 415 of file /usr/lib/llvm-16/include/clang/AST/ExternalASTSource.h</p>
+      <div>
+        <div>
+          <p> Create a pointer that is not potentially updated by later generations of the external AST source.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8EE6D7AED3CDFA723DE487B002E89FF0BC274250">LazyGenerationalUpdatePtr&lt;Owner, T, Update&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF07D9AB4AE5069E819448C1945DCFAF0CEDADE6">makeValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#380FED9B2F4ADCE194CD4C4385625D3733040058">LazyGenerationalUpdatePtr&lt;Owner, T, Update&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D718ABA6B1A8072F3AC87001BA02042BBFEB6D1">LazyGenerationalUpdatePtr&lt;Owner, T, Update&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#20FBA787786661FB0CEEF0BC1FE28E4D85A498BC">markIncomplete</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8806D408684FB999E5E8548571B7FBBD6728B685">set</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D54ACE8645E1265AE5CF78ED552E3EE301CAD454">setNotUpdated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4C4ADDA742E88A41527C98C997FABBA0180BFF3">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B20A8D31D1B441AAFEB420F99BF1E14DA25BF0F">getNotUpdated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4001D1710CBE3B92E29F2C7739CBF149AA9B0784">getOpaqueValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75FE6D96EAC161B7DE7EADFDBD44C352DC181BB5">getFromOpaqueValue</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#99B30108BE2267828D19ABDE1CE2DBE17AAF9804">NotUpdatedTag</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

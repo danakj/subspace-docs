@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct FunctionPointerLikeTypeTraits</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct FunctionPointerLikeTypeTraits</h1>
+    <p>Defined at line 125 of file /usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h</p>
+    <div>
+      <div>
+        <p> Provide suitable custom traits struct for function pointers.</p>
+        <p> Function pointers can&apos;t be directly given these traits as functions can&apos;t have their alignment computed with `alignof` and we need different casting.</p>
+        <p> To rely on higher alignment for a specialized use, you can provide a customized form of this template explicitly with higher alignment, and potentially use alignment attributes on functions to satisfy that.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="954825C039BA0A8BF436A4DEA0A3C236B833EF98">getAsVoidPointer</h3>
+      <p>public void * getAsVoidPointer(FunctionPointerT P)</p>
+      <p>Defined at line 128 of file /usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h</p>
+      <h3 id="5B675DB5863C89D159D961B69AC141BE6FE5678E">getFromVoidPointer</h3>
+      <p>public FunctionPointerT getFromVoidPointer(void * P)</p>
+      <p>Defined at line 134 of file /usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#954825C039BA0A8BF436A4DEA0A3C236B833EF98">getAsVoidPointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B675DB5863C89D159D961B69AC141BE6FE5678E">getFromVoidPointer</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

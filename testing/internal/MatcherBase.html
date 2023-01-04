@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MatcherBase</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MatcherBase</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#245">245</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> An internal class for implementing Matcher&lt;T&gt;, which will derive from it.  We put functionalities common to all Matcher&lt;T&gt; specializations here to avoid code duplication.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="../../testing/MatcherDescriberInterface.html">MatcherDescriberInterface</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../testing/internal/MatcherBase/ValuePolicy.html">ValuePolicy</a>
+      </li>
+      <li>
+        <a href="../../testing/internal/MatcherBase/ValuePolicy.html">ValuePolicy</a>
+      </li>
+      <li>
+        <a href="../../testing/internal/MatcherBase/ValuePolicy.html">ValuePolicy</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E40A191F11AB88C389BF6F6A32BC7751EA96CECB">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(const T &amp; x, MatchResultListener * listener)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#249">249</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the matcher matches x; also explains the match result to &apos;listener&apos;.</p>
+        </div>
+      </div>
+      <h3 id="A9FF5FF67A293405E97CC9F017649F6E3F5D1C0A">Matches</h3>
+      <p>public _Bool Matches(const T &amp; x)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#255">255</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if this matcher matches x.</p>
+        </div>
+      </div>
+      <h3 id="21777FC0FBE6D7B449A4AC56E23FFA93EEB1A6C7">DescribeTo</h3>
+      <p>public void DescribeTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#261">261</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Describes this matcher to an ostream.</p>
+        </div>
+      </div>
+      <h3 id="A84BC07C6A14E8127A1710528424358ECD177A51">DescribeNegationTo</h3>
+      <p>public void DescribeNegationTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#267">267</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Describes the negation of this matcher to an ostream.</p>
+        </div>
+      </div>
+      <h3 id="4983A1603B58FE41F3351A7C0EC8D451ACA5251E">ExplainMatchResultTo</h3>
+      <p>public void ExplainMatchResultTo(const T &amp; x, ::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#273">273</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Explains why x matches, or doesn&apos;t match, the matcher.</p>
+        </div>
+      </div>
+      <h3 id="7868C9EA3C69221DA7FF303BB43D25A2B23233CE">GetDescriber</h3>
+      <p>public const MatcherDescriberInterface * GetDescriber()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#281">281</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the describer for this matcher object; retains ownership of the describer, which is only guaranteed to be alive when this matcher object is alive.</p>
+        </div>
+      </div>
+      <h3 id="57A4F4B0C75AA667D60CBCB2DD32CEBC9A529431">MatcherBase&lt;T&gt;</h3>
+      <p>protected void MatcherBase&lt;T&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#287">287</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <h3 id="E29DBDC7AB98DD1DF1ABD930CA49D24EFAEEC8A5">MatcherBase&lt;T&gt;</h3>
+      <p>protected void MatcherBase&lt;T&gt;(const MatcherInterface&lt;U&gt; * impl)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#291">291</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Constructs a matcher from its implementation.</p>
+        </div>
+      </div>
+      <h3 id="9EECCC385BD0D58C6B690C2115CAEE42AB6C3C72">MatcherBase&lt;T&gt;</h3>
+      <p>protected void MatcherBase&lt;T&gt;(M &amp;&amp; m)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#297">297</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <h3 id="7CAD61E3D83BA8D06F98840FA3D181ED64C87462">MatcherBase&lt;T&gt;</h3>
+      <p>protected void MatcherBase&lt;T&gt;(const MatcherBase&lt;T&gt; &amp; other)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#301">301</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <h3 id="0A1962C4169DE3436EC88E60CBD6E5C400C30FD2">operator=</h3>
+      <p>protected MatcherBase&lt;T&gt; &amp; operator=(const MatcherBase&lt;T&gt; &amp; other)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#306">306</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <h3 id="933C770E6943E31F5021DDA2D08F5CFA32B59C37">MatcherBase&lt;T&gt;</h3>
+      <p>protected void MatcherBase&lt;T&gt;(MatcherBase&lt;T&gt; &amp;&amp; other)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#315">315</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <h3 id="3863582B54237B0B8D82F4C6132468C8F621FE3F">operator=</h3>
+      <p>protected MatcherBase&lt;T&gt; &amp; operator=(MatcherBase&lt;T&gt; &amp;&amp; other)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#320">320</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+      <h3 id="0F8EDC5B16EE9BEA8B97C256D5E5865FFA5DCE91">~MatcherBase&lt;T&gt;</h3>
+      <p>protected void ~MatcherBase&lt;T&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#329">329</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E40A191F11AB88C389BF6F6A32BC7751EA96CECB">MatchAndExplain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9FF5FF67A293405E97CC9F017649F6E3F5D1C0A">Matches</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21777FC0FBE6D7B449A4AC56E23FFA93EEB1A6C7">DescribeTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A84BC07C6A14E8127A1710528424358ECD177A51">DescribeNegationTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4983A1603B58FE41F3351A7C0EC8D451ACA5251E">ExplainMatchResultTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7868C9EA3C69221DA7FF303BB43D25A2B23233CE">GetDescriber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57A4F4B0C75AA667D60CBCB2DD32CEBC9A529431">MatcherBase&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E29DBDC7AB98DD1DF1ABD930CA49D24EFAEEC8A5">MatcherBase&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EECCC385BD0D58C6B690C2115CAEE42AB6C3C72">MatcherBase&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7CAD61E3D83BA8D06F98840FA3D181ED64C87462">MatcherBase&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A1962C4169DE3436EC88E60CBD6E5C400C30FD2">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#933C770E6943E31F5021DDA2D08F5CFA32B59C37">MatcherBase&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3863582B54237B0B8D82F4C6132468C8F621FE3F">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F8EDC5B16EE9BEA8B97C256D5E5865FFA5DCE91">~MatcherBase&lt;T&gt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

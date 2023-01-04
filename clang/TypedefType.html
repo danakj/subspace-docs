@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TypedefType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TypedefType</h1>
+    <p>Defined at line 4535 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+      , llvm::TrailingObjects&lt;TypedefType, QualType&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8EEDBD8CF4ABF8ACFA8193B4EE7956D5E85936F5">getDecl</h3>
+      <p>public TypedefNameDecl * getDecl()</p>
+      <p>Defined at line 4546 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="565DC4ECA869DC63199DFF2B93953BFCE0C98DE3">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 4548 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="6EC1AB8A666C3A21BFFE77A95BA89A0748074A6F">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <div>
+        <div>
+          <p> This always has the &apos;same&apos; type as declared, but not necessarily identical.</p>
+        </div>
+      </div>
+      <h3 id="591A9C6FCE7D402DEBCD0E43ADADD7B816764A43">typeMatchesDecl</h3>
+      <p>public _Bool typeMatchesDecl()</p>
+      <p>Defined at line 4554 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Internal helper, for debugging purposes.</p>
+        </div>
+      </div>
+      <h3 id="640131F96C12F872341F997A428228D8B33B9D52">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 4556 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="1329DE4DA88B2CDF09D28066D500A75604E954CA">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, const TypedefNameDecl * Decl, 
+        <a href="QualType.html">QualType</a>
+         Underlying)
+      </p>
+      <p>Defined at line 4559 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="61C167EED00A59F0E8C1CF454D072E1EC6135B50">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 4566 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8EEDBD8CF4ABF8ACFA8193B4EE7956D5E85936F5">getDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#565DC4ECA869DC63199DFF2B93953BFCE0C98DE3">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6EC1AB8A666C3A21BFFE77A95BA89A0748074A6F">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#591A9C6FCE7D402DEBCD0E43ADADD7B816764A43">typeMatchesDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#640131F96C12F872341F997A428228D8B33B9D52">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1329DE4DA88B2CDF09D28066D500A75604E954CA">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61C167EED00A59F0E8C1CF454D072E1EC6135B50">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UnorderedElementsAreMatcherImplBase</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UnorderedElementsAreMatcherImplBase</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3381">3381</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Untyped base class for implementing UnorderedElementsAre.  By putting logic that&apos;s not specific to the element type here, we reduce binary bloat and increase compilation speed.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0088BF9A2446D63F839820AF5BF2204DD9471EE5">UnorderedElementsAreMatcherImplBase</h3>
+      <p>
+        protected void UnorderedElementsAreMatcherImplBase(
+        <a href="../../testing/internal/UnorderedMatcherRequire/Flags.html">Flags</a>
+         matcher_flags)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3383">3383</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="C96E969795C7EDC8CD78A4BB76351AAA93A0BBB2">DescribeToImpl</h3>
+      <p>protected void DescribeToImpl(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc#280">280</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc">gmock-matchers.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Describes this UnorderedElementsAre matcher.</p>
+        </div>
+      </div>
+      <h3 id="BB2C2F0BB2F247751D06BCF12D9591BEF5DCF0BD">DescribeNegationToImpl</h3>
+      <p>protected void DescribeNegationToImpl(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc#321">321</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc">gmock-matchers.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Describes the negation of this UnorderedElementsAre matcher.</p>
+        </div>
+      </div>
+      <h3 id="BE6FAE84295B98382B6054781B5846563D3054B2">VerifyMatchMatrix</h3>
+      <p>protected _Bool VerifyMatchMatrix(const ::std::vector&lt;std::string&gt; &amp; element_printouts, const MatchMatrix &amp; matrix, MatchResultListener * listener)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc#367">367</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc">gmock-matchers.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Checks that all matchers match at least one element, and that all elements match at least one matcher. This enables faster matching and better error reporting. Returns false, writing an explanation to &apos;listener&apos;, if and only if the success criteria are not met.</p>
+        </div>
+      </div>
+      <h3 id="81A0AC70EE225D28A7D908160180AD1B617C666C">FindPairing</h3>
+      <p>protected _Bool FindPairing(const MatchMatrix &amp; matrix, MatchResultListener * listener)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc#417">417</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-matchers.cc">gmock-matchers.cc</a>
+      </p>
+      <h3 id="5AD8CAFC6AC8E1E1ED98B5ECEBDA3546C881968E">matcher_describers</h3>
+      <p>protected MatcherDescriberVec &amp; matcher_describers()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3405">3405</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="AF488A3B44C30BE4D3DCC46F23B6C43B863C2F3F">Elements</h3>
+      <p>
+        protected 
+        <a href="../../testing/Message.html">Message</a>
+         Elements(size_t n)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3409">3409</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="869310102F2B356178F9C79BE4D99D8DA5B260C1">match_flags</h3>
+      <p>
+        protected 
+        <a href="../../testing/internal/UnorderedMatcherRequire/Flags.html">Flags</a>
+         match_flags()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3413">3413</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0088BF9A2446D63F839820AF5BF2204DD9471EE5">UnorderedElementsAreMatcherImplBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C96E969795C7EDC8CD78A4BB76351AAA93A0BBB2">DescribeToImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB2C2F0BB2F247751D06BCF12D9591BEF5DCF0BD">DescribeNegationToImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE6FAE84295B98382B6054781B5846563D3054B2">VerifyMatchMatrix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81A0AC70EE225D28A7D908160180AD1B617C666C">FindPairing</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AD8CAFC6AC8E1E1ED98B5ECEBDA3546C881968E">matcher_describers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF488A3B44C30BE4D3DCC46F23B6C43B863C2F3F">Elements</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#869310102F2B356178F9C79BE4D99D8DA5B260C1">match_flags</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

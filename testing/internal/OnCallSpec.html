@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OnCallSpec</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OnCallSpec</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#302">302</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+    </p>
+    <div>
+      <div>
+        <p> This template class implements an ON_CALL spec.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="UntypedOnCallSpecBase.html">UntypedOnCallSpecBase</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C08E331E8C2F0B03B8FA2DBD8847591FAC49F57D">OnCallSpec&lt;F&gt;</h3>
+      <p>public void OnCallSpec&lt;F&gt;(const char * a_file, int a_line, const ArgumentMatcherTuple &amp; matchers)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#309">309</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Constructs an OnCallSpec object from the information inside the parenthesis of an ON_CALL() statement.</p>
+        </div>
+      </div>
+      <h3 id="31554E21428F64F58032240B82E815A2D11761BE">With</h3>
+      <p>public OnCallSpec&lt;F&gt; &amp; With(const Matcher&lt;const ArgumentTuple &amp;&gt; &amp; m)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#319">319</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Implements the .With() clause.</p>
+        </div>
+      </div>
+      <h3 id="B8C24A5F0F84B45BE220D665ADED05750E032A2A">WillByDefault</h3>
+      <p>public OnCallSpec&lt;F&gt; &amp; WillByDefault(const Action&lt;F&gt; &amp; action)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#331">331</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Implements the .WillByDefault() clause.</p>
+        </div>
+      </div>
+      <h3 id="C758BA47F49B6A74D29F95B996039BCD5F840304">Matches</h3>
+      <p>public _Bool Matches(const ArgumentTuple &amp; args)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#344">344</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the given arguments match the matchers.</p>
+        </div>
+      </div>
+      <h3 id="A951ED3CE7773BAFE7B002F2F5500EEEF5A90F46">GetAction</h3>
+      <p>public const Action&lt;F&gt; &amp; GetAction()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#349">349</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the action specified by the user.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C08E331E8C2F0B03B8FA2DBD8847591FAC49F57D">OnCallSpec&lt;F&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31554E21428F64F58032240B82E815A2D11761BE">With</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8C24A5F0F84B45BE220D665ADED05750E032A2A">WillByDefault</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C758BA47F49B6A74D29F95B996039BCD5F840304">Matches</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A951ED3CE7773BAFE7B002F2F5500EEEF5A90F46">GetAction</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

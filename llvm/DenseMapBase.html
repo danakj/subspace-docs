@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DenseMapBase</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DenseMapBase</h1>
+    <p>Defined at line 61 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+    <p>
+      Inherits from 
+      <a href="DebugEpochBase.html">DebugEpochBase</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="123FD96B2F75EEBA7DF8123D74755A92ACE9DF45">begin</h3>
+      <p>public iterator begin()</p>
+      <p>Defined at line 75 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="D90BB250C3AC4CA7614AFEE08C4EC83D540161F1">end</h3>
+      <p>public iterator end()</p>
+      <p>Defined at line 84 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="A667E0493FFB514A2712C66B59D9231FF2785F59">begin</h3>
+      <p>public const_iterator begin()</p>
+      <p>Defined at line 87 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="6237EA3CF9F14DA5D0E2015F9AB8DBC4E2E4F55F">end</h3>
+      <p>public const_iterator end()</p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="DBE3A711C8A77C0915C619FC90DCAD8909CED86B">empty</h3>
+      <p>public _Bool empty()</p>
+      <p>Defined at line 98 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="57930D3D3000C34559F911214B1E0D04EA391DF2">size</h3>
+      <p>public unsigned int size()</p>
+      <p>Defined at line 99 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="70287C66DA0258AB76369543F3112508F06F8116">reserve</h3>
+      <p>public void reserve(size_type NumEntries)</p>
+      <p>Defined at line 103 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> Grow the densemap so that it can contain at least  items before resizing again.</p>
+        </div>
+      </div>
+      <h3 id="BC04EE56FFC19F7A01DBC93DE9A068CDCED160E8">clear</h3>
+      <p>public void clear()</p>
+      <p>Defined at line 110 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="193BFB930FCD7F5CEF9D4C3CFF030A7D9BFA9A69">count</h3>
+      <p>public size_type count(const_arg_type_t&lt;KeyT&gt; Val)</p>
+      <p>Defined at line 145 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> Return 1 if the specified key is in the map, 0 otherwise.</p>
+        </div>
+      </div>
+      <h3 id="1627AE1AB00856822532A5344D56DE9CD87E35B3">find</h3>
+      <p>public iterator find(const_arg_type_t&lt;KeyT&gt; Val)</p>
+      <p>Defined at line 150 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="72E87273E401B4AF3C66E4C0AB084D8324DDB07C">find</h3>
+      <p>public const_iterator find(const_arg_type_t&lt;KeyT&gt; Val)</p>
+      <p>Defined at line 159 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="571420EE1E6503879DDCA187D303BF93D34F973C">find_as</h3>
+      <p>public iterator find_as(const LookupKeyT &amp; Val)</p>
+      <p>Defined at line 175 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> Alternate version of find() which allows a different, and possibly less expensive, key type. The DenseMapInfo is responsible for supplying methods getHashValue(LookupKeyT) and isEqual(LookupKeyT, KeyT) for each key type used.</p>
+        </div>
+      </div>
+      <h3 id="EE2FCEA6E07031B138CAA4A22F6AD7D0E201E7D2">find_as</h3>
+      <p>public const_iterator find_as(const LookupKeyT &amp; Val)</p>
+      <p>Defined at line 185 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="AD674DA98645179AFAD2DC9BAEDA46FA3F89C550">lookup</h3>
+      <p>public ValueT lookup(const_arg_type_t&lt;KeyT&gt; Val)</p>
+      <p>Defined at line 197 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> lookup - Return the entry for the specified key, or a default constructed value if no such entry exists.</p>
+        </div>
+      </div>
+      <h3 id="82AE4014447746256700F3A14FC595C78C00283B">insert</h3>
+      <p>public std::pair&lt;iterator, _Bool&gt; insert(const std::pair&lt;KeyT, ValueT&gt; &amp; KV)</p>
+      <p>Defined at line 207 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> Inserts key,value pair into the map if the key isn&apos;t already in the map. If the key is already in the map, it returns false and doesn&apos;t update the value.</p>
+        </div>
+      </div>
+      <h3 id="74FB653280AC1290BB7E2464B8AA874BB2926791">insert</h3>
+      <p>public std::pair&lt;iterator, _Bool&gt; insert(std::pair&lt;KeyT, ValueT&gt; &amp;&amp; KV)</p>
+      <p>Defined at line 214 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> Inserts key,value pair into the map if the key isn&apos;t already in the map. If the key is already in the map, it returns false and doesn&apos;t update the value.</p>
+        </div>
+      </div>
+      <h3 id="48AF0B6E3D0F9EB39F36388821B43FFE8A4337B0">try_emplace</h3>
+      <p>public std::pair&lt;iterator, _Bool&gt; try_emplace(KeyT &amp;&amp; Key, Ts &amp;&amp;... Args)</p>
+      <p>Defined at line 222 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> Inserts key,value pair into the map if the key isn&apos;t already in the map. The value is constructed in-place if the key is not in the map, otherwise it is not moved.</p>
+        </div>
+      </div>
+      <h3 id="A7A0A8C973DB7EF6F820F8AB3F1A93C43E3A3F3D">try_emplace</h3>
+      <p>public std::pair&lt;iterator, _Bool&gt; try_emplace(const KeyT &amp; Key, Ts &amp;&amp;... Args)</p>
+      <p>Defined at line 247 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> Inserts key,value pair into the map if the key isn&apos;t already in the map. The value is constructed in-place if the key is not in the map, otherwise it is not moved.</p>
+        </div>
+      </div>
+      <h3 id="F9965DC60184C6A968360C3080300F7DEFF5493F">insert_as</h3>
+      <p>public std::pair&lt;iterator, _Bool&gt; insert_as(std::pair&lt;KeyT, ValueT&gt; &amp;&amp; KV, const LookupKeyT &amp; Val)</p>
+      <p>Defined at line 273 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> Alternate version of insert() which allows a different, and possibly less expensive, key type. The DenseMapInfo is responsible for supplying methods getHashValue(LookupKeyT) and isEqual(LookupKeyT, KeyT) for each key type used.</p>
+        </div>
+      </div>
+      <h3 id="38270EA4FC80F36D1714967221F1B776CBC19BE3">insert</h3>
+      <p>public void insert(InputIt I, InputIt E)</p>
+      <p>Defined at line 297 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> insert - Range insertion of pairs.</p>
+        </div>
+      </div>
+      <h3 id="F479C441635937E216FB520FFB87B628AAABAF56">erase</h3>
+      <p>public _Bool erase(const KeyT &amp; Val)</p>
+      <p>Defined at line 302 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="49F4ADE7FE67C3376D3D7A2A961FFBCB0BC1F898">erase</h3>
+      <p>public void erase(iterator I)</p>
+      <p>Defined at line 313 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="F5B53DF9ACAC1E5D715918782942C25A8BC2E4B9">FindAndConstruct</h3>
+      <p>public value_type &amp; FindAndConstruct(const KeyT &amp; Key)</p>
+      <p>Defined at line 321 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="3BE9E4700680A9D389DF77477F87D9A87F49BA41">operator[]</h3>
+      <p>public ValueT &amp; operator[](const KeyT &amp; Key)</p>
+      <p>Defined at line 329 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="13CCCE22807EC0EF2646DC192BF216F884BAB06A">FindAndConstruct</h3>
+      <p>public value_type &amp; FindAndConstruct(KeyT &amp;&amp; Key)</p>
+      <p>Defined at line 333 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="AC7682CECA4F7984D2A7406A27335A3209B88AE1">operator[]</h3>
+      <p>public ValueT &amp; operator[](KeyT &amp;&amp; Key)</p>
+      <p>Defined at line 341 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="A0C52D3876BAD640306EB861E78B100E9B3EE1F2">isPointerIntoBucketsArray</h3>
+      <p>public _Bool isPointerIntoBucketsArray(const void * Ptr)</p>
+      <p>Defined at line 348 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> isPointerIntoBucketsArray - Return true if the specified pointer points somewhere into the DenseMap&apos;s array of buckets (i.e. either to a key or value in the DenseMap).</p>
+        </div>
+      </div>
+      <h3 id="7756C04E7ABD1DA71178689FC06FF9333131DAE3">getPointerIntoBucketsArray</h3>
+      <p>public const void * getPointerIntoBucketsArray()</p>
+      <p>Defined at line 355 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> getPointerIntoBucketsArray() - Return an opaque pointer into the buckets array.  In conjunction with the previous method, this can be used to determine whether an insertion caused the DenseMap to reallocate.</p>
+        </div>
+      </div>
+      <h3 id="71B7B7DAE9F87F4448AD403623BE8B7292A9BF3A">DenseMapBase&lt;DerivedT, KeyT, ValueT, KeyInfoT, BucketT&gt;</h3>
+      <p>protected void DenseMapBase&lt;DerivedT, KeyT, ValueT, KeyInfoT, BucketT&gt;()</p>
+      <p>Defined at line 358 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="90AA21ED46D1FFF4EE979F8FF27DAB397C4FBEAB">destroyAll</h3>
+      <p>protected void destroyAll()</p>
+      <p>Defined at line 360 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="BED4A55C51D2DA0B47B9847282A8322AC4CBBC53">initEmpty</h3>
+      <p>protected void initEmpty()</p>
+      <p>Defined at line 373 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="496010030A8B9F48B166BD1324CF7D195FBCBC5B">getMinBucketToReserveForEntries</h3>
+      <p>protected unsigned int getMinBucketToReserveForEntries(unsigned int NumEntries)</p>
+      <p>Defined at line 386 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> Returns the number of buckets to allocate to ensure that the DenseMap can accommodate  without need to grow().</p>
+        </div>
+      </div>
+      <h3 id="2F87DFECDBAB47D91F1207DB8EA1A93F229D49FA">moveFromOldBuckets</h3>
+      <p>protected void moveFromOldBuckets(BucketT * OldBucketsBegin, BucketT * OldBucketsEnd)</p>
+      <p>Defined at line 395 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="1E0E2E05DB1B7CD0C16CF5D7B3E63AD90D633376">copyFrom</h3>
+      <p>protected void copyFrom(const DenseMapBase&lt;OtherBaseT, KeyT, ValueT, KeyInfoT, BucketT&gt; &amp; other)</p>
+      <p>Defined at line 421 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="EA95AC934E7DCFBDF53177204CBA633C244B4AE1">getHashValue</h3>
+      <p>protected unsigned int getHashValue(const KeyT &amp; Val)</p>
+      <p>Defined at line 444 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="9F54EA26157F370330D87AFA650A5C40E3F047EA">getHashValue</h3>
+      <p>protected unsigned int getHashValue(const LookupKeyT &amp; Val)</p>
+      <p>Defined at line 449 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="4F0F6138B6C2E69C6AEC43E319533FEB3AF9760A">getEmptyKey</h3>
+      <p>protected const KeyT getEmptyKey()</p>
+      <p>Defined at line 453 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="B5A2D1EA5187D92F33FD2F319C8FB657091CC0BD">getTombstoneKey</h3>
+      <p>protected const KeyT getTombstoneKey()</p>
+      <p>Defined at line 459 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <h3 id="DAF8CC80D8C44A199A985144529625E4DF40B3F5">getMemorySize</h3>
+      <p>public size_t getMemorySize()</p>
+      <p>Defined at line 672 of file /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h</p>
+      <div>
+        <div>
+          <p> Return the approximate size (in bytes) of the actual map. This is just the raw memory used by DenseMap. If entries are pointers to objects, the size of the referenced objects are not included.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#123FD96B2F75EEBA7DF8123D74755A92ACE9DF45">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D90BB250C3AC4CA7614AFEE08C4EC83D540161F1">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A667E0493FFB514A2712C66B59D9231FF2785F59">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6237EA3CF9F14DA5D0E2015F9AB8DBC4E2E4F55F">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DBE3A711C8A77C0915C619FC90DCAD8909CED86B">empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57930D3D3000C34559F911214B1E0D04EA391DF2">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70287C66DA0258AB76369543F3112508F06F8116">reserve</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC04EE56FFC19F7A01DBC93DE9A068CDCED160E8">clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#193BFB930FCD7F5CEF9D4C3CFF030A7D9BFA9A69">count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1627AE1AB00856822532A5344D56DE9CD87E35B3">find</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#72E87273E401B4AF3C66E4C0AB084D8324DDB07C">find</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#571420EE1E6503879DDCA187D303BF93D34F973C">find_as</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE2FCEA6E07031B138CAA4A22F6AD7D0E201E7D2">find_as</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD674DA98645179AFAD2DC9BAEDA46FA3F89C550">lookup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82AE4014447746256700F3A14FC595C78C00283B">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#74FB653280AC1290BB7E2464B8AA874BB2926791">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48AF0B6E3D0F9EB39F36388821B43FFE8A4337B0">try_emplace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7A0A8C973DB7EF6F820F8AB3F1A93C43E3A3F3D">try_emplace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9965DC60184C6A968360C3080300F7DEFF5493F">insert_as</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38270EA4FC80F36D1714967221F1B776CBC19BE3">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F479C441635937E216FB520FFB87B628AAABAF56">erase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49F4ADE7FE67C3376D3D7A2A961FFBCB0BC1F898">erase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F5B53DF9ACAC1E5D715918782942C25A8BC2E4B9">FindAndConstruct</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3BE9E4700680A9D389DF77477F87D9A87F49BA41">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13CCCE22807EC0EF2646DC192BF216F884BAB06A">FindAndConstruct</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC7682CECA4F7984D2A7406A27335A3209B88AE1">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0C52D3876BAD640306EB861E78B100E9B3EE1F2">isPointerIntoBucketsArray</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7756C04E7ABD1DA71178689FC06FF9333131DAE3">getPointerIntoBucketsArray</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#71B7B7DAE9F87F4448AD403623BE8B7292A9BF3A">DenseMapBase&lt;DerivedT, KeyT, ValueT, KeyInfoT, BucketT&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90AA21ED46D1FFF4EE979F8FF27DAB397C4FBEAB">destroyAll</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BED4A55C51D2DA0B47B9847282A8322AC4CBBC53">initEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#496010030A8B9F48B166BD1324CF7D195FBCBC5B">getMinBucketToReserveForEntries</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F87DFECDBAB47D91F1207DB8EA1A93F229D49FA">moveFromOldBuckets</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E0E2E05DB1B7CD0C16CF5D7B3E63AD90D633376">copyFrom</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA95AC934E7DCFBDF53177204CBA633C244B4AE1">getHashValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F54EA26157F370330D87AFA650A5C40E3F047EA">getHashValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F0F6138B6C2E69C6AEC43E319533FEB3AF9760A">getEmptyKey</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5A2D1EA5187D92F33FD2F319C8FB657091CC0BD">getTombstoneKey</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAF8CC80D8C44A199A985144529625E4DF40B3F5">getMemorySize</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

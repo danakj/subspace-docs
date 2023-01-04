@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ClassTemplateDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ClassTemplateDecl</h1>
+    <p>Defined at line 2270 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> Declaration of a class template.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="RedeclarableTemplateDecl.html">RedeclarableTemplateDecl</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/ClassTemplateDecl/Common.html">Common</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FE40AC9CA962E53E510B3632336BA39F50956917">getSpecializations</h3>
+      <p>protected llvm::FoldingSetVector&lt;ClassTemplateSpecializationDecl&gt; &amp; getSpecializations()</p>
+      <div>
+        <div>
+          <p> Retrieve the set of specializations of this class template.</p>
+        </div>
+      </div>
+      <h3 id="6C98BBDD14C8847F43DF3DD766CA50165231E7FC">getPartialSpecializations</h3>
+      <p>protected llvm::FoldingSetVector&lt;ClassTemplatePartialSpecializationDecl&gt; &amp; getPartialSpecializations()</p>
+      <div>
+        <div>
+          <p> Retrieve the set of partial specializations of this class template.</p>
+        </div>
+      </div>
+      <h3 id="3929861D718EF85CACC6080FF48169136923DBCA">ClassTemplateDecl</h3>
+      <p>
+        protected void ClassTemplateDecl(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params, NamedDecl * Decl)
+      </p>
+      <p>Defined at line 2299 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="172E177EE7203DD37D98E429F20A7B4BB87E1DCF">newCommon</h3>
+      <p>protected CommonBase * newCommon(ASTContext &amp; C)</p>
+      <h3 id="B4B24C3C52CD82F34D0704F37D98FBFEFF7F359D">getCommonPtr</h3>
+      <p>protected Common * getCommonPtr()</p>
+      <p>Defined at line 2306 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="F2A1E87D759D18D49A75D5C6E895D345A7E8C9EA">LoadLazySpecializations</h3>
+      <p>public void LoadLazySpecializations()</p>
+      <div>
+        <div>
+          <p> Load any lazily-loaded specializations from the external source.</p>
+        </div>
+      </div>
+      <h3 id="87B37499B9235ECB309A8ADA1BE7B85A10D991B8">getTemplatedDecl</h3>
+      <p>public CXXRecordDecl * getTemplatedDecl()</p>
+      <p>Defined at line 2318 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Get the underlying class declarations of the template.</p>
+        </div>
+      </div>
+      <h3 id="D6C9883BE3EAF92D9F0D92706E05109D72057A21">isThisDeclarationADefinition</h3>
+      <p>public _Bool isThisDeclarationADefinition()</p>
+      <p>Defined at line 2324 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Returns whether this template declaration defines the primary class pattern.</p>
+        </div>
+      </div>
+      <h3 id="2D9E3D4F88CC8D6903F77111059A4F6FC6E61E6F">Create</h3>
+      <p>
+        public ClassTemplateDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params, NamedDecl * Decl)
+      </p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="4DA8CA1CF2F3E4C968A80D86B78F1223B815F513">CreateDeserialized</h3>
+      <p>public ClassTemplateDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <div>
+        <div>
+          <p> Create an empty class template node.</p>
+        </div>
+      </div>
+      <h3 id="CAF4E3DBF801A611A9A1C1259D3503A5A511EE31">findSpecialization</h3>
+      <p>
+        public ClassTemplateSpecializationDecl * findSpecialization(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, void *&amp; InsertPos)
+      </p>
+      <div>
+        <div>
+          <p> Return the specialization with the provided arguments if it exists, otherwise return the insertion point.</p>
+        </div>
+      </div>
+      <h3 id="8A7D08A0717969F3441BBCFA08829F53C94D4AEB">AddSpecialization</h3>
+      <p>public void AddSpecialization(ClassTemplateSpecializationDecl * D, void * InsertPos)</p>
+      <div>
+        <div>
+          <p> Insert the specified specialization knowing that it is not already in. InsertPos must be obtained from findSpecialization.</p>
+        </div>
+      </div>
+      <h3 id="3B5B98A5D5F17137791E41B79A5106EF9BED0A6A">getCanonicalDecl</h3>
+      <p>public ClassTemplateDecl * getCanonicalDecl()</p>
+      <p>Defined at line 2347 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="61537E7F691DCBEFECBE733AC044C7F9FD29716B">getCanonicalDecl</h3>
+      <p>public const ClassTemplateDecl * getCanonicalDecl()</p>
+      <p>Defined at line 2351 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="EFD3CC920A8BE5CF5857C36AF1E2C48AE6B68F17">getPreviousDecl</h3>
+      <p>public ClassTemplateDecl * getPreviousDecl()</p>
+      <p>Defined at line 2358 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the previous declaration of this class template, or nullptr if no such declaration exists.</p>
+        </div>
+      </div>
+      <h3 id="BA8F3EBD2F9A45B4FC1AC94E538B8D1BAE141F09">getPreviousDecl</h3>
+      <p>public const ClassTemplateDecl * getPreviousDecl()</p>
+      <p>Defined at line 2362 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="427CF1A9E2DAAF90C8041627B5774D2D5BAAA9D4">getMostRecentDecl</h3>
+      <p>public ClassTemplateDecl * getMostRecentDecl()</p>
+      <p>Defined at line 2368 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="A86826BBE186A73A10EA236BA5F92A272E3FC311">getMostRecentDecl</h3>
+      <p>public const ClassTemplateDecl * getMostRecentDecl()</p>
+      <p>Defined at line 2372 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="BB7465F3ADBC1F2041E7A8569EAC576D590A1134">getInstantiatedFromMemberTemplate</h3>
+      <p>public ClassTemplateDecl * getInstantiatedFromMemberTemplate()</p>
+      <p>Defined at line 2376 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="00FF6772FCF91A1BA85E6AA630E148394827F42C">findPartialSpecialization</h3>
+      <p>
+        public ClassTemplatePartialSpecializationDecl * findPartialSpecialization(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, TemplateParameterList * TPL, void *&amp; InsertPos)
+      </p>
+      <div>
+        <div>
+          <p> Return the partial specialization with the provided arguments if it exists, otherwise return the insertion point.</p>
+        </div>
+      </div>
+      <h3 id="07508047678352D0A037219553A307B6F64E14BB">AddPartialSpecialization</h3>
+      <p>public void AddPartialSpecialization(ClassTemplatePartialSpecializationDecl * D, void * InsertPos)</p>
+      <div>
+        <div>
+          <p> Insert the specified partial specialization knowing that it is not already in. InsertPos must be obtained from findPartialSpecialization.</p>
+        </div>
+      </div>
+      <h3 id="F5C37F34A1F20BB725746B9F3C00B56D28532C53">getPartialSpecializations</h3>
+      <p>public void getPartialSpecializations(SmallVectorImpl&lt;ClassTemplatePartialSpecializationDecl *&gt; &amp; PS)</p>
+      <div>
+        <div>
+          <p> Retrieve the partial specializations as an ordered list.</p>
+        </div>
+      </div>
+      <h3 id="D02E49C40DD873E4781C561BB1D53091A52D1181">findPartialSpecialization</h3>
+      <p>
+        public ClassTemplatePartialSpecializationDecl * findPartialSpecialization(
+        <a href="QualType.html">QualType</a>
+         T)
+      </p>
+      <div>
+        <div>
+          <p> Find a class template partial specialization with the given type T.</p>
+        </div>
+      </div>
+      <h3 id="53C79544F7FD23688B8D69773BE3900A0F541E2B">findPartialSpecInstantiatedFromMember</h3>
+      <p>public ClassTemplatePartialSpecializationDecl * findPartialSpecInstantiatedFromMember(ClassTemplatePartialSpecializationDecl * D)</p>
+      <div>
+        <div>
+          <p> Find a class template partial specialization which was instantiated from the given member partial specialization.</p>
+        </div>
+      </div>
+      <h3 id="F8348B0DFDECEA771B31F75D6DB06975D1072AB2">getInjectedClassNameSpecialization</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getInjectedClassNameSpecialization()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the template specialization type of the injected-class-name for this class template.</p>
+          <p> The injected-class-name for a class template  is  where  is formed from the template arguments that correspond to the template parameters of For example:</p>
+        </div>
+      </div>
+      <h3 id="2C9F6990146B1A43399524A4FAF09B73A19D1F81">specializations</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         specializations()
+      </p>
+      <p>Defined at line 2437 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="B150F50B46F6842EAD81C9748A0892EC050B9672">spec_begin</h3>
+      <p>
+        public 
+        <a href="../clang/RedeclarableTemplateDecl/SpecIterator.html">SpecIterator</a>
+         spec_begin()
+      </p>
+      <p>Defined at line 2441 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="195000769D98EB745951A1BBEECAF97C42173679">spec_end</h3>
+      <p>
+        public 
+        <a href="../clang/RedeclarableTemplateDecl/SpecIterator.html">SpecIterator</a>
+         spec_end()
+      </p>
+      <p>Defined at line 2445 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="F31D45926B1FF8D32864F1671E4514A5E730FF42">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 2450 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast support</p>
+        </div>
+      </div>
+      <h3 id="456ED2AFB693EF46B175D4DA45095C7AAA27453B">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 2451 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FE40AC9CA962E53E510B3632336BA39F50956917">getSpecializations</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C98BBDD14C8847F43DF3DD766CA50165231E7FC">getPartialSpecializations</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3929861D718EF85CACC6080FF48169136923DBCA">ClassTemplateDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#172E177EE7203DD37D98E429F20A7B4BB87E1DCF">newCommon</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4B24C3C52CD82F34D0704F37D98FBFEFF7F359D">getCommonPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2A1E87D759D18D49A75D5C6E895D345A7E8C9EA">LoadLazySpecializations</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87B37499B9235ECB309A8ADA1BE7B85A10D991B8">getTemplatedDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6C9883BE3EAF92D9F0D92706E05109D72057A21">isThisDeclarationADefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D9E3D4F88CC8D6903F77111059A4F6FC6E61E6F">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DA8CA1CF2F3E4C968A80D86B78F1223B815F513">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CAF4E3DBF801A611A9A1C1259D3503A5A511EE31">findSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A7D08A0717969F3441BBCFA08829F53C94D4AEB">AddSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B5B98A5D5F17137791E41B79A5106EF9BED0A6A">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61537E7F691DCBEFECBE733AC044C7F9FD29716B">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFD3CC920A8BE5CF5857C36AF1E2C48AE6B68F17">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA8F3EBD2F9A45B4FC1AC94E538B8D1BAE141F09">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#427CF1A9E2DAAF90C8041627B5774D2D5BAAA9D4">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A86826BBE186A73A10EA236BA5F92A272E3FC311">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB7465F3ADBC1F2041E7A8569EAC576D590A1134">getInstantiatedFromMemberTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#00FF6772FCF91A1BA85E6AA630E148394827F42C">findPartialSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07508047678352D0A037219553A307B6F64E14BB">AddPartialSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F5C37F34A1F20BB725746B9F3C00B56D28532C53">getPartialSpecializations</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D02E49C40DD873E4781C561BB1D53091A52D1181">findPartialSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53C79544F7FD23688B8D69773BE3900A0F541E2B">findPartialSpecInstantiatedFromMember</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8348B0DFDECEA771B31F75D6DB06975D1072AB2">getInjectedClassNameSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2C9F6990146B1A43399524A4FAF09B73A19D1F81">specializations</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B150F50B46F6842EAD81C9748A0892EC050B9672">spec_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#195000769D98EB745951A1BBEECAF97C42173679">spec_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F31D45926B1FF8D32864F1671E4514A5E730FF42">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#456ED2AFB693EF46B175D4DA45095C7AAA27453B">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

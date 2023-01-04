@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StreamingDiagnostic</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StreamingDiagnostic</h1>
+    <p>Defined at line 1110 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+    <div>
+      <div>
+        <p> Basic</p>
+      </div>
+      <div>
+        <p> The streaming interface shared between DiagnosticBuilder and PartialDiagnostic. This class is not intended to be constructed directly but only as base class of DiagnosticBuilder and PartialDiagnostic builder.</p>
+        <p> Any new type of argument accepted by DiagnosticBuilder and PartialDiagnostic should be implemented as a &apos;&lt;&lt;&apos; operator of StreamingDiagnostic, e.g.</p>
+        <p> const StreamingDiagnostic&amp; operator&lt;&lt;(const StreamingDiagnostic&amp;, NewArgType);</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected DiagnosticStorage * DiagStorage</li>
+      <li>protected DiagStorageAllocator * Allocator</li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/StreamingDiagnostic/DiagStorageAllocator.html">DiagStorageAllocator</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8DB96574740D37D72134952B6F9927CFB5DBD3C6">getStorage</h3>
+      <p>public DiagnosticStorage * getStorage()</p>
+      <p>Defined at line 1155 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Retrieve storage for this particular diagnostic.</p>
+        </div>
+      </div>
+      <h3 id="0A5C423598F9DCE4DBAA8A7EB8D35275B9382523">freeStorage</h3>
+      <p>public void freeStorage()</p>
+      <p>Defined at line 1164 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="880BF2C6B0E533EF3891551E51741E2F37784A68">freeStorageSlow</h3>
+      <p>public void freeStorageSlow()</p>
+      <p>Defined at line 1177 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="B4089E9A11248799861BBB19E305553D20E15391">AddTaggedVal</h3>
+      <p>
+        public void AddTaggedVal(uint64_t V, 
+        <a href="../clang/DiagnosticsEngine/ArgumentKind.html">ArgumentKind</a>
+         Kind)
+      </p>
+      <p>Defined at line 1184 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="534FD9C21F4CEE171712D5CE67A96DB6442D3727">AddString</h3>
+      <p>
+        public void AddString(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         V)
+      </p>
+      <p>Defined at line 1194 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="5D52B09772E9C3B83AA4A801668E07BD62D24530">AddSourceRange</h3>
+      <p>public void AddSourceRange(const CharSourceRange &amp; R)</p>
+      <p>Defined at line 1205 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="BDA80B8627C94067ABCF7F99A5C293BDD3AE4B30">AddFixItHint</h3>
+      <p>public void AddFixItHint(const FixItHint &amp; Hint)</p>
+      <p>Defined at line 1212 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="E823FB029EEEFE6F021BF74A9E40305FCE5225AC">operator bool</h3>
+      <p>public _Bool operator bool()</p>
+      <p>Defined at line 1229 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Conversion of StreamingDiagnostic to bool always returns </p>
+          <p> This allows is to be used in boolean error contexts (where  is used to indicate that an error has occurred), like:</p>
+        </div>
+      </div>
+      <h3 id="BF229FEC19FD8F8E73F41C450BED660119B6A59F">StreamingDiagnostic</h3>
+      <p>protected void StreamingDiagnostic()</p>
+      <p>Defined at line 1232 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="C336ACC855D4E2361E1B14ADA832FCCAFC0EF5B7">StreamingDiagnostic</h3>
+      <p>protected void StreamingDiagnostic(DiagnosticStorage * Storage)</p>
+      <p>Defined at line 1236 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Construct with an external storage not owned by itself. The allocator is a null pointer in this case.</p>
+        </div>
+      </div>
+      <h3 id="08A60838ABC7C36D96F2141F59F0B51D82004F49">StreamingDiagnostic</h3>
+      <p>protected void StreamingDiagnostic(DiagStorageAllocator &amp; Alloc)</p>
+      <p>Defined at line 1241 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Construct with a storage allocator which will manage the storage. The allocator is not a null pointer in this case.</p>
+        </div>
+      </div>
+      <h3 id="DC629AF6F404345932216126EFAA520A51988A49">StreamingDiagnostic</h3>
+      <p>protected void StreamingDiagnostic(const StreamingDiagnostic &amp; Diag)</p>
+      <p>Defined at line 1244 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="3C759539F9830994287FF6B471A78B6C14BBF4F4">StreamingDiagnostic</h3>
+      <p>protected void StreamingDiagnostic(StreamingDiagnostic &amp;&amp; Diag)</p>
+      <p>Defined at line 1245 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="2002B195731179477C8D74C1B21B87EF2BCC95E8">~StreamingDiagnostic</h3>
+      <p>protected void ~StreamingDiagnostic()</p>
+      <p>Defined at line 1247 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8DB96574740D37D72134952B6F9927CFB5DBD3C6">getStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A5C423598F9DCE4DBAA8A7EB8D35275B9382523">freeStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#880BF2C6B0E533EF3891551E51741E2F37784A68">freeStorageSlow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4089E9A11248799861BBB19E305553D20E15391">AddTaggedVal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#534FD9C21F4CEE171712D5CE67A96DB6442D3727">AddString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D52B09772E9C3B83AA4A801668E07BD62D24530">AddSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDA80B8627C94067ABCF7F99A5C293BDD3AE4B30">AddFixItHint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E823FB029EEEFE6F021BF74A9E40305FCE5225AC">operator bool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF229FEC19FD8F8E73F41C450BED660119B6A59F">StreamingDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C336ACC855D4E2361E1B14ADA832FCCAFC0EF5B7">StreamingDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08A60838ABC7C36D96F2141F59F0B51D82004F49">StreamingDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC629AF6F404345932216126EFAA520A51988A49">StreamingDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C759539F9830994287FF6B471A78B6C14BBF4F4">StreamingDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2002B195731179477C8D74C1B21B87EF2BCC95E8">~StreamingDiagnostic</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

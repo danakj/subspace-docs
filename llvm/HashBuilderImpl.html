@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class HashBuilderImpl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class HashBuilderImpl</h1>
+    <p>Defined at line 94 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+    <div>
+      <div>
+        <p> Implementation of the `HashBuilder` interface.</p>
+        <p> `support::endianness::native` is not supported. `HashBuilder` is expected to canonicalize `support::endianness::native` to one of `support::endianness::big` or `support::endianness::little`.</p>
+      </div>
+    </div>
+    <p>Inherits from HashBuilderBase&lt;HasherT&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9CE68441523BF74D10BC42A1417E9B6B11FC0446">HashBuilderImpl&lt;HasherT, Endianness&gt;</h3>
+      <p>public void HashBuilderImpl&lt;HasherT, Endianness&gt;(HasherT &amp; Hasher)</p>
+      <p>Defined at line 99 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <h3 id="9AFEF990AA39E117FF57E8E8D78A06E67CB17851">HashBuilderImpl&lt;HasherT, Endianness&gt;</h3>
+      <p>public void HashBuilderImpl&lt;HasherT, Endianness&gt;(ArgTypes &amp;&amp;... Args)</p>
+      <p>Defined at line 102 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <h3 id="FA6AA6ECCDBE427DA0D6FC68555C9BB176CABBEB">add</h3>
+      <p>public std::enable_if_t&lt;hashbuilder_detail::IsHashableData&lt;T&gt;::value, HashBuilderImpl&lt;HasherT, Endianness&gt; &amp;&gt; add(T Value)</p>
+      <p>Defined at line 107 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <div>
+        <div>
+          <p> Implement hashing for hashable data types, e.g. integral or enum values.</p>
+        </div>
+      </div>
+      <h3 id="CB9CA96D5D9FDFA07A482CBD61B24CBFA7D0F1D1">add</h3>
+      <p>public HashBuilderImpl&lt;HasherT, Endianness&gt; &amp; add(ArrayRef&lt;T&gt; Value)</p>
+      <p>Defined at line 126 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <div>
+        <div>
+          <p> Support hashing `ArrayRef`.</p>
+          <p> `Value.size()` is taken into account to ensure cases like ``` builder.add({1}); builder.add({2, 3}); ``` and ``` builder.add({1, 2}); builder.add({3}); ``` do not collide.</p>
+        </div>
+      </div>
+      <h3 id="B7AF08A47F112A052CF917CE755EA0B1A877210D">add</h3>
+      <p>
+        public HashBuilderImpl&lt;HasherT, Endianness&gt; &amp; add(
+        <a href="StringRef.html">StringRef</a>
+         Value)
+      </p>
+      <p>Defined at line 157 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <div>
+        <div>
+          <p> Support hashing `StringRef`.</p>
+          <p> `Value.size()` is taken into account to ensure cases like ``` builder.add(&quot;a&quot;); builder.add(&quot;bc&quot;); ``` and ``` builder.add(&quot;ab&quot;); builder.add(&quot;c&quot;); ``` do not collide.</p>
+        </div>
+      </div>
+      <h3 id="EB4C9BE5C42385B04F4823DB21664435B22F8547">add</h3>
+      <p>public std::enable_if_t&lt;is_detected&lt;HasAddHashT, T&gt;::value &amp;&amp; !hashbuilder_detail::IsHashableData&lt;T&gt;::value, HashBuilderImpl&lt;HasherT, Endianness&gt; &amp;&gt; add(const T &amp; Value)</p>
+      <p>Defined at line 255 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <div>
+        <div>
+          <p> Implement hashing for user-defined `struct`s.</p>
+          <p> Any user-define `struct` can participate in hashing via `HashBuilder` by providing a `addHash` templated function.</p>
+          <p> ``` template &lt;typename HasherT, support::endianness Endianness&gt; void addHash(HashBuilder&lt;HasherT, Endianness&gt; &amp;HBuilder,              const UserDefinedStruct &amp;Value); ```</p>
+          <p> For example: ``` struct SimpleStruct {   char c;   int i; };</p>
+          <p> template &lt;typename HasherT, support::endianness Endianness&gt; void addHash(HashBuilderImpl&lt;HasherT, Endianness&gt; &amp;HBuilder,              const SimpleStruct &amp;Value) {   HBuilder.add(Value.c);   HBuilder.add(Value.i); } ```</p>
+          <p> To avoid endianness issues, specializations of `addHash` should generally rely on exising `add`, `addRange`, and `addRangeElements` functions. If directly using `update`, an implementation must correctly handle endianness.</p>
+          <p> ``` struct __attribute__ ((packed)) StructWithFastHash {   int I;   char C;</p>
+          <p>   // If possible, we want to hash both `I` and `C` in a single   // `update` call for performance concerns.   template &lt;typename HasherT, support::endianness Endianness&gt;   friend void addHash(HashBuilderImpl&lt;HasherT, Endianness&gt; &amp;HBuilder,                       const StructWithFastHash &amp;Value) {     if (Endianness == support::endian::system_endianness()) {       HBuilder.update(makeArrayRef(           reinterpret_cast&lt;const uint8_t *&gt;(&amp;Value), sizeof(Value)));     } else {       // Rely on existing `add` methods to handle endianness.       HBuilder.add(Value.I);       HBuilder.add(Value.C);     }   } }; ```</p>
+          <p> To avoid collisions, specialization of `addHash` for variable-size types must take the size into account.</p>
+          <p> For example: ``` struct CustomContainer { private:   size_t Size;   int Elements[100];</p>
+          <p> public:   CustomContainer(size_t Size) : Size(Size) {     for (size_t I = 0; I != Size; ++I)       Elements[I] = I;   }   template &lt;typename HasherT, support::endianness Endianness&gt;   friend void addHash(HashBuilderImpl&lt;HasherT, Endianness&gt; &amp;HBuilder,                       const CustomContainer &amp;Value) {     if (Endianness == support::endian::system_endianness()) {       HBuilder.update(makeArrayRef(           reinterpret_cast&lt;const uint8_t *&gt;(&amp;Value.Size),           sizeof(Value.Size) + Value.Size * sizeof(Value.Elements[0])));     } else {       // `addRange` will take care of encoding the size.       HBuilder.addRange(&amp;Value.Elements[0], &amp;Value.Elements[0] +       Value.Size);     }   } }; ```</p>
+        </div>
+      </div>
+      <h3 id="954CF4BC5DE64566BBB29EC8D423CAC2873A0E65">add</h3>
+      <p>public HashBuilderImpl&lt;HasherT, Endianness&gt; &amp; add(const std::pair&lt;T1, T2&gt; &amp; Value)</p>
+      <p>Defined at line 264 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <h3 id="F66BD0C2CA2A73144413042C513805883F44BC5C">add</h3>
+      <p>public HashBuilderImpl&lt;HasherT, Endianness&gt; &amp; add(const std::tuple&lt;Ts...&gt; &amp; Arg)</p>
+      <p>Defined at line 270 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <h3 id="A5A5D8EA0D0A7341194C4C01983C5BA8183934F9">add</h3>
+      <p>public std::enable_if_t&lt;(sizeof...(Ts) &gt;= 1), HashBuilderImpl&lt;HasherT, Endianness&gt; &amp;&gt; add(const T &amp; FirstArg, const Ts &amp;... Args)</p>
+      <p>Defined at line 285 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <div>
+        <div>
+          <p> A convenenience variadic helper. It simply iterates over its arguments, in order. ``` add(Arg1, Arg2); ``` is equivalent to ``` add(Arg1) add(Arg2) ```</p>
+        </div>
+      </div>
+      <h3 id="5146E99672A5BFD82E9F97980393DB17C3E91D36">addRange</h3>
+      <p>public HashBuilderImpl&lt;HasherT, Endianness&gt; &amp; addRange(ForwardIteratorT First, ForwardIteratorT Last)</p>
+      <p>Defined at line 293 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <h3 id="164D809E7C3F53A59A0D7D15B916E3CB6A003864">addRange</h3>
+      <p>public HashBuilderImpl&lt;HasherT, Endianness&gt; &amp; addRange(const RangeT &amp; Range)</p>
+      <p>Defined at line 298 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <h3 id="10BEE64C31857A04806145EC3CF15592D1C9E38A">addRangeElements</h3>
+      <p>public HashBuilderImpl&lt;HasherT, Endianness&gt; &amp; addRangeElements(ForwardIteratorT First, ForwardIteratorT Last)</p>
+      <p>Defined at line 303 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <h3 id="BCCD65BAD629FD0BB924324174B860D0F94DF9B2">addRangeElements</h3>
+      <p>public HashBuilderImpl&lt;HasherT, Endianness&gt; &amp; addRangeElements(const RangeT &amp; Range)</p>
+      <p>Defined at line 311 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <h3 id="6D5CB85A5D77BED3FD53B6245627098F85C93AB5">adjustForEndiannessAndAdd</h3>
+      <p>public std::enable_if_t&lt;is_detected&lt;HasByteSwapT, T&gt;::value, HashBuilderImpl&lt;HasherT, Endianness&gt; &amp;&gt; adjustForEndiannessAndAdd(const T &amp; Value)</p>
+      <p>Defined at line 320 of file /usr/lib/llvm-16/include/llvm/Support/HashBuilder.h</p>
+      <div>
+        <div>
+          <p> Adjust `Value` for the target endianness and add it to the hash.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9CE68441523BF74D10BC42A1417E9B6B11FC0446">HashBuilderImpl&lt;HasherT, Endianness&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9AFEF990AA39E117FF57E8E8D78A06E67CB17851">HashBuilderImpl&lt;HasherT, Endianness&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA6AA6ECCDBE427DA0D6FC68555C9BB176CABBEB">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB9CA96D5D9FDFA07A482CBD61B24CBFA7D0F1D1">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7AF08A47F112A052CF917CE755EA0B1A877210D">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB4C9BE5C42385B04F4823DB21664435B22F8547">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#954CF4BC5DE64566BBB29EC8D423CAC2873A0E65">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F66BD0C2CA2A73144413042C513805883F44BC5C">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A5A5D8EA0D0A7341194C4C01983C5BA8183934F9">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5146E99672A5BFD82E9F97980393DB17C3E91D36">addRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#164D809E7C3F53A59A0D7D15B916E3CB6A003864">addRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10BEE64C31857A04806145EC3CF15592D1C9E38A">addRangeElements</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BCCD65BAD629FD0BB924324174B860D0F94DF9B2">addRangeElements</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D5CB85A5D77BED3FD53B6245627098F85C93AB5">adjustForEndiannessAndAdd</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

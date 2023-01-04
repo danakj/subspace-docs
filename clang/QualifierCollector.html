@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class QualifierCollector</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class QualifierCollector</h1>
+    <p>Defined at line 6569 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> A qualifier set is used to build a set of qualifiers.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Qualifiers.html">Qualifiers</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="21E11478CAA296AC21569B4E3606A564E579D913">QualifierCollector</h3>
+      <p>
+        public void QualifierCollector(
+        <a href="Qualifiers.html">Qualifiers</a>
+         Qs)
+      </p>
+      <p>Defined at line 6571 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="4836215A437BB60BE53D22AEA99E2F8BC1B1A8C8">strip</h3>
+      <p>
+        public const Type * strip(
+        <a href="QualType.html">QualType</a>
+         type)
+      </p>
+      <p>Defined at line 6576 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Collect any qualifiers on the given type and return an unqualified type.  The qualifiers are assumed to be consistent with those already in the type.</p>
+        </div>
+      </div>
+      <h3 id="0CE6A7323FA99D8B5D850FDF1D0494AED6232420">apply</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         apply(const ASTContext &amp; Context, 
+        <a href="QualType.html">QualType</a>
+         QT)
+      </p>
+      <div>
+        <div>
+          <p> Apply the collected qualifiers to the given type.</p>
+        </div>
+      </div>
+      <h3 id="6EFD5321B6EEB59CA33275F3C57903462416E932">apply</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         apply(const ASTContext &amp; Context, const Type * T)
+      </p>
+      <div>
+        <div>
+          <p> Apply the collected qualifiers to the given type.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#21E11478CAA296AC21569B4E3606A564E579D913">QualifierCollector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4836215A437BB60BE53D22AEA99E2F8BC1B1A8C8">strip</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0CE6A7323FA99D8B5D850FDF1D0494AED6232420">apply</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6EFD5321B6EEB59CA33275F3C57903462416E932">apply</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

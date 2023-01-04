@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class InSequence</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class InSequence</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#677">677</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+    </p>
+    <div>
+      <div>
+        <p> An object of this type causes all EXPECT_CALL() statements encountered in its scope to be put in an anonymous sequence.  The work is done in the constructor and destructor.  You should only create an InSequence object on the stack.</p>
+        <p> The sole purpose for this class is to support easy definition of sequential expectations, e.g.</p>
+        <p>   {     InSequence dummy;  // The name of the object doesn&apos;t matter.</p>
+        <p>     // The following expectations must match in the order they appear.     EXPECT_CALL(a, Bar())...;     EXPECT_CALL(a, Baz())...;     ...     EXPECT_CALL(b, Xyz())...;   }</p>
+        <p> You can create InSequence objects in multiple threads, as long as they are used to affect different mock objects.  The idea is that each thread can create and set up its own mocks as if it&apos;s the only thread.  However, for clarity of your tests we recommend you to set up mocks in the main thread unless you have a good reason not to do so.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="DFDF4201699F194FEAB304F98EB120362DFE9B5F">InSequence</h3>
+      <p>public void InSequence()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#884">884</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Creates the implicit sequence if there isn&apos;t one.</p>
+        </div>
+      </div>
+      <h3 id="BBD854A8DA424CA825CDCCD62A0CB0024FB63979">~InSequence</h3>
+      <p>public void ~InSequence()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#895">895</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Deletes the implicit sequence if it was created by the constructor of this object.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#DFDF4201699F194FEAB304F98EB120362DFE9B5F">InSequence</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBD854A8DA424CA825CDCCD62A0CB0024FB63979">~InSequence</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExtVectorType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExtVectorType</h1>
+    <p>Defined at line 3479 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> ExtVectorType - Extended vector type. This type is created using __attribute__((ext_vector_type(n)), where &quot;n&quot; is the number of elements. Unlike vector_size, ext_vector_type is only allowed on typedef&apos;s. This class enables syntactic extensions, like Vector Components for accessing points (as .xyzw), colors (as .rgba), and textures (modeled after OpenGL Shading Language).</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="VectorType.html">VectorType</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B6C31F0C0863BCE7F18896A6238547B001E003A2">getPointAccessorIdx</h3>
+      <p>public int getPointAccessorIdx(char c)</p>
+      <p>Defined at line 3486 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="82500B6377C02824E52C752848D0664C8B1C3773">getNumericAccessorIdx</h3>
+      <p>public int getNumericAccessorIdx(char c)</p>
+      <p>Defined at line 3496 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="C050C0E3F314B07EBE50E6EFD6CC8CE0372516BD">getAccessorIdx</h3>
+      <p>public int getAccessorIdx(char c, _Bool isNumericAccessor)</p>
+      <p>Defined at line 3524 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="BBEA2356C1F2DE124D177D65195F37FB63E313E9">isAccessorWithinNumElements</h3>
+      <p>public _Bool isAccessorWithinNumElements(char c, _Bool isNumericAccessor)</p>
+      <p>Defined at line 3531 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="DA4F20DCA3AD29EC67172902044A4389547921EA">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 3537 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="774A086556428AAF22211D7B9A696DE520AFEB26">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 3538 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="7C406F43B2A6F14ACD3DD661F0F2E73503BAC9DD">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 3540 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B6C31F0C0863BCE7F18896A6238547B001E003A2">getPointAccessorIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82500B6377C02824E52C752848D0664C8B1C3773">getNumericAccessorIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C050C0E3F314B07EBE50E6EFD6CC8CE0372516BD">getAccessorIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBEA2356C1F2DE124D177D65195F37FB63E313E9">isAccessorWithinNumElements</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA4F20DCA3AD29EC67172902044A4389547921EA">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#774A086556428AAF22211D7B9A696DE520AFEB26">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C406F43B2A6F14ACD3DD661F0F2E73503BAC9DD">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

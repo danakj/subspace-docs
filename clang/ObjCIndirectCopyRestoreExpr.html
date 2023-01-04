@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCIndirectCopyRestoreExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCIndirectCopyRestoreExpr</h1>
+    <p>Defined at line 1566 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+    <div>
+      <div>
+        <p> ObjCIndirectCopyRestoreExpr - Represents the passing of a function argument by indirect copy-restore in ARC.  This is used to support passing indirect arguments with the wrong lifetime, e.g. when passing the address of a __strong local variable to an &apos;out&apos; parameter.  This expression kind is only valid in an &quot;argument&quot; position to some sort of call expression.</p>
+        <p> The parameter must have type &apos;pointer to T&apos;, and the argument must have type &apos;pointer to U&apos;, where T and U agree except possibly in qualification.  If the argument value is null, then a null pointer is passed;  otherwise it points to an object A, and: 1. A temporary object B of type T is initialized, either by    zero-initialization (used when initializing an &apos;out&apos; parameter)    or copy-initialization (used when initializing an &apos;inout&apos;    parameter). 2. The address of the temporary is passed to the function. 3. If the call completes normally, A is move-assigned from B. 4. Finally, A is destroyed immediately.</p>
+        <p> Currently &apos;T&apos; must be a retainable object lifetime and must be __autoreleasing;  this qualifier is ignored when initializing the value.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F1407B94B2B3D5976269A7B3E2A5EAB24CD25831">ObjCIndirectCopyRestoreExpr</h3>
+      <p>
+        public void ObjCIndirectCopyRestoreExpr(Expr * operand, 
+        <a href="QualType.html">QualType</a>
+         type, _Bool shouldCopy)
+      </p>
+      <p>Defined at line 1582 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="79258DD7CABF8893861EED55F8866234E018D9B4">getSubExpr</h3>
+      <p>public Expr * getSubExpr()</p>
+      <p>Defined at line 1589 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="7A9EF034319D5C371D49B735A7FB4B4B1C0BEA00">getSubExpr</h3>
+      <p>public const Expr * getSubExpr()</p>
+      <p>Defined at line 1590 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="7D43CB813228A815C9E27104F63144A6E1DE62F3">shouldCopy</h3>
+      <p>public _Bool shouldCopy()</p>
+      <p>Defined at line 1594 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <div>
+        <div>
+          <p> shouldCopy - True if we should do the &apos;copy&apos; part of the copy-restore.  If false, the temporary will be zero-initialized.</p>
+        </div>
+      </div>
+      <h3 id="95B444F5CDA9673741792C8580A16C80F4D593A6">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1596 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="AAEB38AD7D7824026C381169B988DE0480532560">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1598 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="EB467AF874F5E0BCD820999118A19DE952D31FA1">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1603 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <div>
+        <div>
+          <p> Source locations are determined by the subexpression.</p>
+        </div>
+      </div>
+      <h3 id="584092CC7E0C16A12E4E2889336CD8831AB8445A">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1606 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="8172E5676486942013B52C7E11D86C76524CD8F8">getExprLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExprLoc()
+      </p>
+      <p>Defined at line 1610 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="02A416D7CFBD49370300402FE81D334172139699">classof</h3>
+      <p>public _Bool classof(const Stmt * s)</p>
+      <p>Defined at line 1614 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F1407B94B2B3D5976269A7B3E2A5EAB24CD25831">ObjCIndirectCopyRestoreExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79258DD7CABF8893861EED55F8866234E018D9B4">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A9EF034319D5C371D49B735A7FB4B4B1C0BEA00">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D43CB813228A815C9E27104F63144A6E1DE62F3">shouldCopy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95B444F5CDA9673741792C8580A16C80F4D593A6">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AAEB38AD7D7824026C381169B988DE0480532560">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB467AF874F5E0BCD820999118A19DE952D31FA1">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#584092CC7E0C16A12E4E2889336CD8831AB8445A">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8172E5676486942013B52C7E11D86C76524CD8F8">getExprLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02A416D7CFBD49370300402FE81D334172139699">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

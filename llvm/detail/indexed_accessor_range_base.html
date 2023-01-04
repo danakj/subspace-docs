@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class indexed_accessor_range_base</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/detail" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class indexed_accessor_range_base</h1>
+    <p>Defined at line 1270 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    <div>
+      <div>
+        <p> The class represents the base of a range of indexed_accessor_iterators. It provides support for many different range functionalities, e.g. drop_front/slice/etc.. Derived range classes must implement the following static methods:   * ReferenceT dereference_iterator(const BaseT &amp;base, ptrdiff_t index)     - Dereference an iterator pointing to the base object at the given       index.   * BaseT offset_base(const BaseT &amp;base, ptrdiff_t index)     - Return a new base that is offset from the provide base by &apos;index&apos;       elements.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected BaseT base</li>
+      <li>protected ptrdiff_t count</li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../llvm/detail/indexed_accessor_range_base/iterator.html">iterator</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A931DD8F8D9B9BF11A0D1312FD1AE73291E067FB">indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;</h3>
+      <p>
+        public void indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;(
+        <a href="../../llvm/detail/indexed_accessor_range_base/iterator.html">iterator</a>
+         begin, 
+        <a href="../../llvm/detail/indexed_accessor_range_base/iterator.html">iterator</a>
+         end)
+      </p>
+      <p>Defined at line 1292 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="9C21A55545B1B474BD76352CECF0339940FD9285">indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;</h3>
+      <p>public void indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;(const iterator_range&lt;iterator&gt; &amp; range)</p>
+      <p>Defined at line 1295 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="C5E1B07D46C83FDD86FE251CB828DA66C5105DBF">indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;</h3>
+      <p>public void indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;(BaseT base, ptrdiff_t count)</p>
+      <p>Defined at line 1297 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="2CA1147A08B00A48C20F046DB13DE0D7E17CB68F">begin</h3>
+      <p>
+        public 
+        <a href="../../llvm/detail/indexed_accessor_range_base/iterator.html">iterator</a>
+         begin()
+      </p>
+      <p>Defined at line 1300 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="00B9389043C9C21C1C18CDD0381B1354B8D42B1B">end</h3>
+      <p>
+        public 
+        <a href="../../llvm/detail/indexed_accessor_range_base/iterator.html">iterator</a>
+         end()
+      </p>
+      <p>Defined at line 1301 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="D4C7EA28E62021E98009BB1150AE701BB365F141">operator[]</h3>
+      <p>public ReferenceT operator[](size_t Index)</p>
+      <p>Defined at line 1302 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="22F3F0FD0FB8F401347E233C2E618EEDB94FF421">front</h3>
+      <p>public ReferenceT front()</p>
+      <p>Defined at line 1306 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="C450EDFACA34491F3DD15C6A27246AE98514FAF8">back</h3>
+      <p>public ReferenceT back()</p>
+      <p>Defined at line 1310 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="2A9800DEE5C42ABF936374ACFB7D74795AB60DDE">size</h3>
+      <p>public size_t size()</p>
+      <p>Defined at line 1328 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Return the size of this range.</p>
+        </div>
+      </div>
+      <h3 id="91B2D09759F20C88218AF44BEAB2687112F9B2EE">empty</h3>
+      <p>public _Bool empty()</p>
+      <p>Defined at line 1331 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Return if the range is empty.</p>
+        </div>
+      </div>
+      <h3 id="CB1779DEA46EB934FA9C3626CD84212348E8C194">slice</h3>
+      <p>public DerivedT slice(size_t n, size_t m)</p>
+      <p>Defined at line 1334 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Drop the first N elements, and keep M elements.</p>
+        </div>
+      </div>
+      <h3 id="232F0CCD4CCFB818A75A84EDA0CEC76D361EE633">drop_front</h3>
+      <p>public DerivedT drop_front(size_t n)</p>
+      <p>Defined at line 1340 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Drop the first n elements.</p>
+        </div>
+      </div>
+      <h3 id="2EE9C460DBBEC28E08E7CC52FBC229112CD28A27">drop_back</h3>
+      <p>public DerivedT drop_back(size_t n)</p>
+      <p>Defined at line 1345 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Drop the last n elements.</p>
+        </div>
+      </div>
+      <h3 id="CC1FFA359EA01C8FAC023B50FE58FFCDDC110B2E">take_front</h3>
+      <p>public DerivedT take_front(size_t n)</p>
+      <p>Defined at line 1351 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Take the first n elements.</p>
+        </div>
+      </div>
+      <h3 id="5627E2B245233556C8BC191CDFB4C682DF410753">take_back</h3>
+      <p>public DerivedT take_back(size_t n)</p>
+      <p>Defined at line 1357 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Take the last n elements.</p>
+        </div>
+      </div>
+      <h3 id="6AFCF3DF762A7778B30F84BE48513D695FFDF2A9">operator type-parameter-1-0</h3>
+      <p>public RangeT operator type-parameter-1-0()</p>
+      <p>Defined at line 1365 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Allow conversion to any type accepting an iterator_range.</p>
+        </div>
+      </div>
+      <h3 id="E2C0E5A5C8ABC93B9810D9AE2E788A8539A888F5">getBase</h3>
+      <p>public const BaseT &amp; getBase()</p>
+      <p>Defined at line 1370 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <div>
+        <div>
+          <p> Returns the base of this range.</p>
+        </div>
+      </div>
+      <h3 id="2B88F4E44BAAB297E249AA40AD699B1AECA53EB0">indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;</h3>
+      <p>protected void indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;(const indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt; &amp; )</p>
+      <p>Defined at line 1379 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="E85763006B60BAFE67B331597F29F283C180C50A">indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;</h3>
+      <p>protected void indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;(indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt; &amp;&amp; )</p>
+      <p>Defined at line 1380 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="86B6CC003E961A628B6B0457CCACB71CD69BC589">operator=</h3>
+      <p>protected indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt; &amp; operator=(const indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt; &amp; )</p>
+      <p>Defined at line 1381 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A931DD8F8D9B9BF11A0D1312FD1AE73291E067FB">indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C21A55545B1B474BD76352CECF0339940FD9285">indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5E1B07D46C83FDD86FE251CB828DA66C5105DBF">indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2CA1147A08B00A48C20F046DB13DE0D7E17CB68F">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#00B9389043C9C21C1C18CDD0381B1354B8D42B1B">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4C7EA28E62021E98009BB1150AE701BB365F141">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22F3F0FD0FB8F401347E233C2E618EEDB94FF421">front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C450EDFACA34491F3DD15C6A27246AE98514FAF8">back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A9800DEE5C42ABF936374ACFB7D74795AB60DDE">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#91B2D09759F20C88218AF44BEAB2687112F9B2EE">empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB1779DEA46EB934FA9C3626CD84212348E8C194">slice</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#232F0CCD4CCFB818A75A84EDA0CEC76D361EE633">drop_front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2EE9C460DBBEC28E08E7CC52FBC229112CD28A27">drop_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC1FFA359EA01C8FAC023B50FE58FFCDDC110B2E">take_front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5627E2B245233556C8BC191CDFB4C682DF410753">take_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AFCF3DF762A7778B30F84BE48513D695FFDF2A9">operator type-parameter-1-0</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2C0E5A5C8ABC93B9810D9AE2E788A8539A888F5">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B88F4E44BAAB297E249AA40AD699B1AECA53EB0">indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E85763006B60BAFE67B331597F29F283C180C50A">indexed_accessor_range_base&lt;DerivedT, BaseT, T, PointerT, ReferenceT&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86B6CC003E961A628B6B0457CCACB71CD69BC589">operator=</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

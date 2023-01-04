@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SwiftErrorAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SwiftErrorAttr</h1>
+    <p>Defined at line 11242 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D1CB8D202D7309F5163E219E5B2733DFF4DF9962">CreateImplicit</h3>
+      <p>
+        public SwiftErrorAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../clang/SwiftErrorAttr/ConventionKind.html">ConventionKind</a>
+         Convention, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="C2CF72AF46B83686EFE2B1075E15338D95A13DE7">Create</h3>
+      <p>
+        public SwiftErrorAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../clang/SwiftErrorAttr/ConventionKind.html">ConventionKind</a>
+         Convention, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="932EAF79EE015203CA9C7404E12E88E4AF95B443">CreateImplicit</h3>
+      <p>
+        public SwiftErrorAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../clang/SwiftErrorAttr/ConventionKind.html">ConventionKind</a>
+         Convention, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="91007C44003A6E35A53D13162427136F37BBA5AE">Create</h3>
+      <p>
+        public SwiftErrorAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../clang/SwiftErrorAttr/ConventionKind.html">ConventionKind</a>
+         Convention, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="B487F7920AF30E2D0F302B04BD3772687D26CE8F">SwiftErrorAttr</h3>
+      <p>
+        public void SwiftErrorAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../clang/SwiftErrorAttr/ConventionKind.html">ConventionKind</a>
+         Convention)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="44681DA21B3A24BD28DF9A08429023AA3195FA74">clone</h3>
+      <p>public SwiftErrorAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="741BCCA3C0AB2EEC9E49172782FC873F18E689AD">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="967E518B5C3ECBFA26B54D2E5D5520C4EC96FD80">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="13FA9047A1BF28F2575D73D22FB98C9CEC0D7974">getConvention</h3>
+      <p>
+        public 
+        <a href="../clang/SwiftErrorAttr/ConventionKind.html">ConventionKind</a>
+         getConvention()
+      </p>
+      <p>Defined at line 11270 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="33A333780077D28A07D445EC86B40F62C3DFD690">ConvertStrToConventionKind</h3>
+      <p>
+        public _Bool ConvertStrToConventionKind(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Val, ConventionKind &amp; Out)
+      </p>
+      <h3 id="284DABB240B8DF18CE78B14F9297A76DD62A8B74">ConvertConventionKindToStr</h3>
+      <p>
+        public const char * ConvertConventionKindToStr(
+        <a href="../clang/SwiftErrorAttr/ConventionKind.html">ConventionKind</a>
+         Val)
+      </p>
+      <h3 id="1B2EBEFB8377F7FDC571746A230E9D4F100367D3">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 11278 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="DDB32566CB8B99DA53A79ACB6DF5013C12B438E0">enum ConventionKind</h3>
+      <ul>
+        <li>None</li>
+        <li>NonNullError</li>
+        <li>NullResult</li>
+        <li>ZeroResult</li>
+        <li>NonZeroResult</li>
+      </ul>
+      <p>Defined at line 11244 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D1CB8D202D7309F5163E219E5B2733DFF4DF9962">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2CF72AF46B83686EFE2B1075E15338D95A13DE7">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#932EAF79EE015203CA9C7404E12E88E4AF95B443">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#91007C44003A6E35A53D13162427136F37BBA5AE">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B487F7920AF30E2D0F302B04BD3772687D26CE8F">SwiftErrorAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44681DA21B3A24BD28DF9A08429023AA3195FA74">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#741BCCA3C0AB2EEC9E49172782FC873F18E689AD">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#967E518B5C3ECBFA26B54D2E5D5520C4EC96FD80">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13FA9047A1BF28F2575D73D22FB98C9CEC0D7974">getConvention</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33A333780077D28A07D445EC86B40F62C3DFD690">ConvertStrToConventionKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#284DABB240B8DF18CE78B14F9297A76DD62A8B74">ConvertConventionKindToStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B2EBEFB8377F7FDC571746A230E9D4F100367D3">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#DDB32566CB8B99DA53A79ACB6DF5013C12B438E0">ConventionKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

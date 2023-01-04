@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ConstantMatrixType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ConstantMatrixType</h1>
+    <p>Defined at line 3584 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents a concrete matrix type with constant number of rows and columns</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="MatrixType.html">MatrixType</a>
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected unsigned int NumRows</li>
+      <li>protected unsigned int NumColumns</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C9F82EC6A15DFB8B33825BF0B06F0F322202A077">ConstantMatrixType</h3>
+      <p>
+        protected void ConstantMatrixType(
+        <a href="QualType.html">QualType</a>
+         MatrixElementType, unsigned int NRows, unsigned int NColumns, 
+        <a href="QualType.html">QualType</a>
+         CanonElementType)
+      </p>
+      <h3 id="A3F73E41D15958A346DA4968639D85E166D67914">ConstantMatrixType</h3>
+      <p>
+        protected void ConstantMatrixType(
+        <a href="../clang/Type/TypeClass.html">TypeClass</a>
+         typeClass, 
+        <a href="QualType.html">QualType</a>
+         MatrixType, unsigned int NRows, unsigned int NColumns, 
+        <a href="QualType.html">QualType</a>
+         CanonElementType)
+      </p>
+      <h3 id="6D9A365FCB1863598BDA0DF2A2E91BABDC160322">getNumRows</h3>
+      <p>public unsigned int getNumRows()</p>
+      <p>Defined at line 3602 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Returns the number of rows in the matrix.</p>
+        </div>
+      </div>
+      <h3 id="02DD4D1AA439347B3C81D7D061327C4CB4E77713">getNumColumns</h3>
+      <p>public unsigned int getNumColumns()</p>
+      <p>Defined at line 3605 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Returns the number of columns in the matrix.</p>
+        </div>
+      </div>
+      <h3 id="457CE6A0F9BD550CEA6F022F61E3711FA32AD38E">getNumElementsFlattened</h3>
+      <p>public unsigned int getNumElementsFlattened()</p>
+      <p>Defined at line 3608 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Returns the number of elements required to embed the matrix into a vector.</p>
+        </div>
+      </div>
+      <h3 id="52D0164C68C764FC41E529D9C41EF40FD04807CD">isDimensionValid</h3>
+      <p>public _Bool isDimensionValid(size_t NumElements)</p>
+      <p>Defined at line 3613 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Returns true if  is a valid matrix dimension.</p>
+        </div>
+      </div>
+      <h3 id="F6489B96D32262DC38D54A270944CC451AD29172">getMaxElementsPerDimension</h3>
+      <p>public unsigned int getMaxElementsPerDimension()</p>
+      <p>Defined at line 3618 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Returns the maximum number of elements per dimension.</p>
+        </div>
+      </div>
+      <h3 id="27751282B69BD0E3D45ABEC5DF9C7EDBDF30C652">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 3622 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="9000FBFABE31DC1FB1F509F903AF948C8ECADD99">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="QualType.html">QualType</a>
+         ElementType, unsigned int NumRows, unsigned int NumColumns, 
+        <a href="../clang/Type/TypeClass.html">TypeClass</a>
+         TypeClass)
+      </p>
+      <p>Defined at line 3627 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="E451F340B63A70516EE482704E0C14E44CA512A5">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 3636 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C9F82EC6A15DFB8B33825BF0B06F0F322202A077">ConstantMatrixType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3F73E41D15958A346DA4968639D85E166D67914">ConstantMatrixType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D9A365FCB1863598BDA0DF2A2E91BABDC160322">getNumRows</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02DD4D1AA439347B3C81D7D061327C4CB4E77713">getNumColumns</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#457CE6A0F9BD550CEA6F022F61E3711FA32AD38E">getNumElementsFlattened</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52D0164C68C764FC41E529D9C41EF40FD04807CD">isDimensionValid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6489B96D32262DC38D54A270944CC451AD29172">getMaxElementsPerDimension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27751282B69BD0E3D45ABEC5DF9C7EDBDF30C652">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9000FBFABE31DC1FB1F509F903AF948C8ECADD99">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E451F340B63A70516EE482704E0C14E44CA512A5">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

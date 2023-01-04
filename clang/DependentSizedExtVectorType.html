@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DependentSizedExtVectorType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DependentSizedExtVectorType</h1>
+    <p>Defined at line 3318 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents an extended vector type where either the type or size is dependent.</p>
+        <p> For example:</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FC727D572784C4391A00AA4B0E1A65CE48A857A8">getSizeExpr</h3>
+      <p>public Expr * getSizeExpr()</p>
+      <p>Defined at line 3333 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="0627945EE9448C26A61D9FD62058156BAAF433D1">getElementType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getElementType()
+      </p>
+      <p>Defined at line 3334 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="E3E47D001C9878A577FB5A69E59DD1DE88A0B323">getAttributeLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAttributeLoc()
+      </p>
+      <p>Defined at line 3335 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="0A7E4D57C3A24551C0996A836F485E70AD45F507">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 3337 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="89487961312437C93A535B106C754FF8B184656E">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 3338 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="D49748154501981B9823C62CE550627C5B41476E">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 3340 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="789EE625C7648895B2C56DEF7D6ED5C3B60EA1E8">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 3344 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="C94E74068172DAEA18FA77136F6EA1AECBF3655E">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, const ASTContext &amp; Context, 
+        <a href="QualType.html">QualType</a>
+         ElementType, Expr * SizeExpr)
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FC727D572784C4391A00AA4B0E1A65CE48A857A8">getSizeExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0627945EE9448C26A61D9FD62058156BAAF433D1">getElementType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E3E47D001C9878A577FB5A69E59DD1DE88A0B323">getAttributeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A7E4D57C3A24551C0996A836F485E70AD45F507">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89487961312437C93A535B106C754FF8B184656E">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D49748154501981B9823C62CE550627C5B41476E">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#789EE625C7648895B2C56DEF7D6ED5C3B60EA1E8">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C94E74068172DAEA18FA77136F6EA1AECBF3655E">Profile</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class early_inc_iterator_impl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class early_inc_iterator_impl</h1>
+    <p>Defined at line 659 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    <div>
+      <div>
+        <p> A pseudo-iterator adaptor that is designed to implement &quot;early increment&quot; style loops.</p>
+        <p> This is *not a normal iterator* and should almost never be used directly. It is intended primarily to be used with range based for loops and some range algorithms.</p>
+        <p> The iterator isn&apos;t quite an `OutputIterator` or an `InputIterator` but somewhere between them. The constraints of these iterators are:</p>
+        <p> - On construction or after being incremented, it is comparable and   dereferencable. It is *not* incrementable. - After being dereferenced, it is neither comparable nor dereferencable, it   is only incrementable.</p>
+        <p> This means you can only dereference the iterator once, and you can only increment it once between dereferences.</p>
+      </div>
+    </div>
+    <p>Inherits from iterator_adaptor_base&lt;early_inc_iterator_impl&lt;WrappedIteratorT&gt;, WrappedIteratorT, std::input_iterator_tag&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="196650BE9B6C075A1952DA2A8F2EC774B04349C3">early_inc_iterator_impl&lt;WrappedIteratorT&gt;</h3>
+      <p>public void early_inc_iterator_impl&lt;WrappedIteratorT&gt;(WrappedIteratorT I)</p>
+      <p>Defined at line 672 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="3A64C548CDEFD276F916BBF565BDC2D5A024405F">operator*</h3>
+      <p>public decltype(* std::declval&lt;WrappedIteratorT&gt;()) operator*()</p>
+      <p>Defined at line 675 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+      <h3 id="FCE07EF0BAF7B8A77D6E5470032AA5462857BFED">operator++</h3>
+      <p>public early_inc_iterator_impl&lt;WrappedIteratorT&gt; &amp; operator++()</p>
+      <p>Defined at line 684 of file /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#196650BE9B6C075A1952DA2A8F2EC774B04349C3">early_inc_iterator_impl&lt;WrappedIteratorT&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A64C548CDEFD276F916BBF565BDC2D5A024405F">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCE07EF0BAF7B8A77D6E5470032AA5462857BFED">operator++</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

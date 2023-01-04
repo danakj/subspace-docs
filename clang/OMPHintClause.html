@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPHintClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPHintClause</h1>
+    <p>Defined at line 6437 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;hint&apos; clause in the &apos;#pragma omp ...&apos; directive.</p>
+        <p> In this example directive &apos;#pragma omp critical&apos; has name &apos;name&apos; and clause &apos;hint&apos; with argument &apos;6&apos;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPClause.html">OMPClause</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="AC7D8322382B86903141B1D51C1B9D1D2E1DDB24">OMPHintClause</h3>
+      <p>
+        public void OMPHintClause(Expr * Hint, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 6456 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build &apos;hint&apos; clause with expression </p>
+        </div>
+      </div>
+      <h3 id="0C62B2B2C81709F7FF266C9D826D97F944819972">OMPHintClause</h3>
+      <p>public void OMPHintClause()</p>
+      <p>Defined at line 6462 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build an empty clause.</p>
+        </div>
+      </div>
+      <h3 id="EE59D26D3C3984A5E255124C896868CC60C2AF08">setLParenLoc</h3>
+      <p>
+        public void setLParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 6466 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Sets the location of &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="E836E09A796BFC5B6971E7D4D87C124051B2A131">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 6469 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the location of &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="740275724254D603D3FC2E0A7F468CFAB713C27E">getHint</h3>
+      <p>public Expr * getHint()</p>
+      <p>Defined at line 6472 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns number of threads.</p>
+        </div>
+      </div>
+      <h3 id="5149A2D40DF56F3B486FDE65D49654A7AF3BB423">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 6474 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="C9B77F57640C75B18005EE8E4DEFD9F9419E4B8A">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 6476 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="97BA699A48D5182F01469BD6D09F208B22B3B1EB">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 6480 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="2D80D8E7702781728016A3A09CDFA596A2ECBEB4">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 6483 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="74C8874AD57FD4BCB2DC8C790435F7E406996194">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 6487 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#AC7D8322382B86903141B1D51C1B9D1D2E1DDB24">OMPHintClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C62B2B2C81709F7FF266C9D826D97F944819972">OMPHintClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE59D26D3C3984A5E255124C896868CC60C2AF08">setLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E836E09A796BFC5B6971E7D4D87C124051B2A131">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#740275724254D603D3FC2E0A7F468CFAB713C27E">getHint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5149A2D40DF56F3B486FDE65D49654A7AF3BB423">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C9B77F57640C75B18005EE8E4DEFD9F9419E4B8A">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97BA699A48D5182F01469BD6D09F208B22B3B1EB">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D80D8E7702781728016A3A09CDFA596A2ECBEB4">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#74C8874AD57FD4BCB2DC8C790435F7E406996194">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

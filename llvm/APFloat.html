@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class APFloat</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class APFloat</h1>
+    <p>Defined at line 722 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+    <div>
+      <div>
+        <p> This is a interface class that is currently forwarding functionalities from detail::IEEEFloat.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="APFloatBase.html">APFloatBase</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C2883CE0431F923DDA74A25AD3B561FF67B07965">APFloat</h3>
+      <p>public void APFloat(const fltSemantics &amp; Semantics)</p>
+      <p>Defined at line 877 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="B94EE1C5D7F22FB4F1EABF28ADFD27659AFF4E57">APFloat</h3>
+      <p>
+        public void APFloat(const fltSemantics &amp; Semantics, 
+        <a href="StringRef.html">StringRef</a>
+         S)
+      </p>
+      <h3 id="B2433C1663E3084C712A36A9C2E59F93E6F66898">APFloat</h3>
+      <p>public void APFloat(const fltSemantics &amp; Semantics, integerPart I)</p>
+      <p>Defined at line 879 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="F9E98A06B398F37BA32C19AEF09BD55F6C77988D">APFloat</h3>
+      <p>public void APFloat(const fltSemantics &amp; Semantics, T V)</p>
+      <p>Defined at line 882 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="81066EF9825546F572642DE0930AD130B8548D8E">APFloat</h3>
+      <p>
+        public void APFloat(const fltSemantics &amp; Semantics, 
+        <a href="../llvm/APFloatBase/uninitializedTag.html">uninitializedTag</a>
+         )
+      </p>
+      <p>Defined at line 884 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> TODO: Remove this constructor. This isn&apos;t faster than the first one.</p>
+        </div>
+      </div>
+      <h3 id="EEFF45450B6E591417E7F8FC549101530644BB24">APFloat</h3>
+      <p>public void APFloat(const fltSemantics &amp; Semantics, const APInt &amp; I)</p>
+      <p>Defined at line 886 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="F329BD93710A3213B330E258740F581EFD5C8B15">APFloat</h3>
+      <p>public void APFloat(double d)</p>
+      <p>Defined at line 887 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="680E8F8E73AF2CD066BAB8B783F04AAFE5754C1A">APFloat</h3>
+      <p>public void APFloat(float f)</p>
+      <p>Defined at line 888 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="D8F03CEF48117EA3E294D0E0741F9EDD9E9367B5">APFloat</h3>
+      <p>public void APFloat(const APFloat &amp; RHS)</p>
+      <p>Defined at line 889 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="7252D7570371F6D11AF16529283301F76FF99DE3">APFloat</h3>
+      <p>public void APFloat(APFloat &amp;&amp; RHS)</p>
+      <p>Defined at line 890 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="9AE6534C9253883652D8DEEABFF1FF057A06542D">~APFloat</h3>
+      <p>public void ~APFloat()</p>
+      <p>Defined at line 892 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="22CAEEF56C0B39BDC876F04930DF847C6DCFBD9D">needsCleanup</h3>
+      <p>public _Bool needsCleanup()</p>
+      <p>Defined at line 894 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="CD353DF91107528C9059B4E453D78C5D3E02B4CF">getZero</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         getZero(const fltSemantics &amp; Sem, _Bool Negative)
+      </p>
+      <p>Defined at line 899 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Factory for Positive and Negative Zero.</p>
+        </div>
+      </div>
+      <h3 id="95A8F6781947FD4DA422C62DB2E2414E75D18719">getInf</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         getInf(const fltSemantics &amp; Sem, _Bool Negative)
+      </p>
+      <p>Defined at line 908 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Factory for Positive and Negative Infinity.</p>
+        </div>
+      </div>
+      <h3 id="D0B65B8EBC949E04D639289C4F3E2D3B6E4238B6">getNaN</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         getNaN(const fltSemantics &amp; Sem, _Bool Negative, uint64_t payload)
+      </p>
+      <p>Defined at line 919 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Factory for NaN values.</p>
+        </div>
+      </div>
+      <h3 id="BDCB4AD68C610A91D0DFC73DA2F02ED33449DA79">getQNaN</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         getQNaN(const fltSemantics &amp; Sem, _Bool Negative, const APInt * payload)
+      </p>
+      <p>Defined at line 930 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Factory for QNaN values.</p>
+        </div>
+      </div>
+      <h3 id="7AA73E1B0EE5B4697641792AF5961634E2B0EAAE">getSNaN</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         getSNaN(const fltSemantics &amp; Sem, _Bool Negative, const APInt * payload)
+      </p>
+      <p>Defined at line 938 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Factory for SNaN values.</p>
+        </div>
+      </div>
+      <h3 id="237EFADC3869AF25E9B5D64AF2D20F9F4EB5D786">getLargest</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         getLargest(const fltSemantics &amp; Sem, _Bool Negative)
+      </p>
+      <p>Defined at line 948 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Returns the largest finite number in the given semantics.</p>
+        </div>
+      </div>
+      <h3 id="4843BB526D6274AF3D5A0C30DE446C44AD42C34C">getSmallest</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         getSmallest(const fltSemantics &amp; Sem, _Bool Negative)
+      </p>
+      <p>Defined at line 958 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Returns the smallest (by magnitude) finite number in the given semantics. Might be denormalized, which implies a relative loss of precision.</p>
+        </div>
+      </div>
+      <h3 id="681E59E10CF6B02F6C412B56F29DCA49E861E537">getSmallestNormalized</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         getSmallestNormalized(const fltSemantics &amp; Sem, _Bool Negative)
+      </p>
+      <p>Defined at line 968 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Returns the smallest (by magnitude) normalized finite number in the given semantics.</p>
+        </div>
+      </div>
+      <h3 id="10AB0F4515C7C29BB20EEECA77977EC1814ED272">getAllOnesValue</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         getAllOnesValue(const fltSemantics &amp; Semantics)
+      </p>
+      <div>
+        <div>
+          <p> Returns a float which is bitcasted from an all one value int.</p>
+        </div>
+      </div>
+      <h3 id="154B7EDDC96AAAAC5C06D2CE7781DE380D76741A">Profile</h3>
+      <p>public void Profile(FoldingSetNodeID &amp; NID)</p>
+      <div>
+        <div>
+          <p> Used to insert APFloat objects, or objects that contain APFloat objects, into FoldingSets.</p>
+        </div>
+      </div>
+      <h3 id="B4F2DB1531D3C1696EF0E061D6BE3F850E54829B">add</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         add(const APFloat &amp; RHS, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <p>Defined at line 984 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="A544621AC763339041984091762AF1F126544E09">subtract</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         subtract(const APFloat &amp; RHS, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <p>Defined at line 993 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="25B61C7B79B4974C330ACAC59180B8ECA293CB5D">multiply</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         multiply(const APFloat &amp; RHS, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <p>Defined at line 1002 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="D5F5DD37ED392B9F6A293751F8AA7EFB0EB88602">divide</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         divide(const APFloat &amp; RHS, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <p>Defined at line 1011 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="6D7356182A0D0211CAD74D89D93C1CF1C312C0D0">remainder</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         remainder(const APFloat &amp; RHS)
+      </p>
+      <p>Defined at line 1020 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="F42ECFDA599726BE7981D6D8FEC1054FD1738A58">mod</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         mod(const APFloat &amp; RHS)
+      </p>
+      <p>Defined at line 1029 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="DB6EE7D57CE253C08E6FB926F3A1539F85B615E9">fusedMultiplyAdd</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         fusedMultiplyAdd(const APFloat &amp; Multiplicand, const APFloat &amp; Addend, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <p>Defined at line 1038 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="22414BA1BAD66C025EB47AAD7D98670D6E790548">roundToIntegral</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         roundToIntegral(
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <p>Defined at line 1051 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="AA7591FAD6566E13549E8AF87C33576E04E7DC1E">next</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         next(_Bool nextDown)
+      </p>
+      <p>Defined at line 1057 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> TODO: bool parameters are not readable and a source of bugs. Do something.</p>
+        </div>
+      </div>
+      <h3 id="A71EAAB56D2BC7396A1DCAD367CE36641DF6F7F3">operator-</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         operator-()
+      </p>
+      <p>Defined at line 1062 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Negate an APFloat.</p>
+        </div>
+      </div>
+      <h3 id="1E549B1C1F40BA4796A60C4581064A24A373712F">operator+</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         operator+(const APFloat &amp; RHS)
+      </p>
+      <p>Defined at line 1070 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Add two APFloats, rounding ties to the nearest even. No error checking.</p>
+        </div>
+      </div>
+      <h3 id="20ED68FFD5EC257932C7934A5C3991C11C4BA43A">operator-</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         operator-(const APFloat &amp; RHS)
+      </p>
+      <p>Defined at line 1078 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Subtract two APFloats, rounding ties to the nearest even. No error checking.</p>
+        </div>
+      </div>
+      <h3 id="990EC5BBAC18B5CB00363D0A50704F384D1BB3E9">operator*</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         operator*(const APFloat &amp; RHS)
+      </p>
+      <p>Defined at line 1086 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Multiply two APFloats, rounding ties to the nearest even. No error checking.</p>
+        </div>
+      </div>
+      <h3 id="C8DAF662558C3DC4EAD5D3CD70AB83319472F017">operator/</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         operator/(const APFloat &amp; RHS)
+      </p>
+      <p>Defined at line 1094 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> Divide the first APFloat by the second, rounding ties to the nearest even. No error checking.</p>
+        </div>
+      </div>
+      <h3 id="80F264FD140D139F5FD18841391C71CE05F7F0D0">changeSign</h3>
+      <p>public void changeSign()</p>
+      <p>Defined at line 1100 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="673345186FD9394BCD09BE47711C352502C03859">clearSign</h3>
+      <p>public void clearSign()</p>
+      <p>Defined at line 1101 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="FCD9DBF02D67DADA2C8A32A76380470D97F2CCDB">copySign</h3>
+      <p>public void copySign(const APFloat &amp; RHS)</p>
+      <p>Defined at line 1105 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="6CDE503085474B39A8D06439DA263AE360ACB6F9">copySign</h3>
+      <p>
+        public 
+        <a href="APFloat.html">APFloat</a>
+         copySign(
+        <a href="APFloat.html">APFloat</a>
+         Value, const APFloat &amp; Sign)
+      </p>
+      <p>Defined at line 1112 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> A static helper to produce a copy of an APFloat value with its sign copied from some other APFloat.</p>
+        </div>
+      </div>
+      <h3 id="75138B421334188BA05BECEE3002979F0D43DD91">convert</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convert(const fltSemantics &amp; ToSemantics, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM, _Bool * losesInfo)
+      </p>
+      <h3 id="F92C9DD8DE3DE466D72301372A006D72233D0873">convertToInteger</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertToInteger(
+        <a href="MutableArrayRef.html">MutableArrayRef</a>
+         Input, unsigned int Width, _Bool IsSigned, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM, _Bool * IsExact)
+      </p>
+      <p>Defined at line 1119 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="1E87381E2BB96AD3B48F516866C2CD76ADE3E385">convertToInteger</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertToInteger(APSInt &amp; Result, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM, _Bool * IsExact)
+      </p>
+      <h3 id="531413B7E23355705B05386EACAFF1919D494009">convertFromAPInt</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertFromAPInt(const APInt &amp; Input, _Bool IsSigned, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <p>Defined at line 1127 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="A54892B9A4FBFF4113CE71BE66D37E3EBCC9E41C">convertFromSignExtendedInteger</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertFromSignExtendedInteger(const integerPart * Input, unsigned int InputSize, _Bool IsSigned, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <p>Defined at line 1131 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="63C21C11D0DBB648AFFDBC13DE013C0AA7A60CCF">convertFromZeroExtendedInteger</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/opStatus.html">opStatus</a>
+         convertFromZeroExtendedInteger(const integerPart * Input, unsigned int InputSize, _Bool IsSigned, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <p>Defined at line 1137 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="FD3107B7F786243121A742779388FEF4C7EF2B04">convertFromString</h3>
+      <p>
+        public Expected&lt;opStatus&gt; convertFromString(
+        <a href="StringRef.html">StringRef</a>
+         , 
+        <a href="RoundingMode.html">RoundingMode</a>
+         )
+      </p>
+      <h3 id="0D35899905B2206433279992313A1BE0B2417437">bitcastToAPInt</h3>
+      <p>
+        public 
+        <a href="APInt.html">APInt</a>
+         bitcastToAPInt()
+      </p>
+      <p>Defined at line 1144 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="437F45E25708D634FFA00B876A2E35B05E65BFEC">convertToDouble</h3>
+      <p>public double convertToDouble()</p>
+      <div>
+        <div>
+          <p> Converts this APFloat to host double value.</p>
+        </div>
+      </div>
+      <h3 id="F307BB721C5873BA5FE0C16A2D0517187831418B">convertToFloat</h3>
+      <p>public float convertToFloat()</p>
+      <div>
+        <div>
+          <p> Converts this APFloat to host float value.</p>
+        </div>
+      </div>
+      <h3 id="73E09EB1204C97B255C96B8425F83ED5E7753817">operator==</h3>
+      <p>public _Bool operator==(const APFloat &amp; RHS)</p>
+      <p>Defined at line 1162 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="943128612AEAF27BA38212E5C4516211B6A418D3">operator!=</h3>
+      <p>public _Bool operator!=(const APFloat &amp; RHS)</p>
+      <p>Defined at line 1164 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="67199A71CD75152A694B711ECED008C69D429344">operator&lt;</h3>
+      <p>public _Bool operator&lt;(const APFloat &amp; RHS)</p>
+      <p>Defined at line 1166 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="82593408BC192EF1E9225916F985900BCF9D584D">operator&gt;</h3>
+      <p>public _Bool operator&gt;(const APFloat &amp; RHS)</p>
+      <p>Defined at line 1170 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="142A5F086A4D5900A8CF06C273E19AB66D28986B">operator&lt;=</h3>
+      <p>public _Bool operator&lt;=(const APFloat &amp; RHS)</p>
+      <p>Defined at line 1174 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="42B7914C6ACF64D5105529F3E9076C176AE3ECCF">operator&gt;=</h3>
+      <p>public _Bool operator&gt;=(const APFloat &amp; RHS)</p>
+      <p>Defined at line 1179 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="B2FF628A9F2A48341487E997CA9D26638C401F41">compare</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/cmpResult.html">cmpResult</a>
+         compare(const APFloat &amp; RHS)
+      </p>
+      <p>Defined at line 1184 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="0D92FB54D85DBC86AE242774DF5A9C3C3AD912CC">bitwiseIsEqual</h3>
+      <p>public _Bool bitwiseIsEqual(const APFloat &amp; RHS)</p>
+      <p>Defined at line 1194 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="EEB8647B47A9B1E90127270D2BCA681C7B59DAD0">isExactlyValue</h3>
+      <p>public _Bool isExactlyValue(double V)</p>
+      <p>Defined at line 1212 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <div>
+        <div>
+          <p> We don&apos;t rely on operator== working on double values, as it returns true for things that are clearly not equal, like -0.0 and 0.0. As such, this method can be used to do an exact bit-for-bit comparison of two floating point values.</p>
+          <p> We leave the version with the double argument here because it&apos;s just so convenient to write &quot;2.0&quot; and the like.  Without this function we&apos;d have to duplicate its logic everywhere it&apos;s called.</p>
+        </div>
+      </div>
+      <h3 id="16B8BD499FEAE226F13D22B7A1BE9CCCBA9D7A1B">convertToHexString</h3>
+      <p>
+        public unsigned int convertToHexString(char * DST, unsigned int HexDigits, _Bool UpperCase, 
+        <a href="RoundingMode.html">RoundingMode</a>
+         RM)
+      </p>
+      <p>Defined at line 1219 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="21A1A00B4E18D8C36F055E480F6D278E6B66716A">isZero</h3>
+      <p>public _Bool isZero()</p>
+      <p>Defined at line 1225 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="571CD669AC6F1D796EB77FCA5168680F15413A7F">isInfinity</h3>
+      <p>public _Bool isInfinity()</p>
+      <p>Defined at line 1226 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="E4EDD5B14106B7AFFB8FB6D0031A73D9D2EC9026">isNaN</h3>
+      <p>public _Bool isNaN()</p>
+      <p>Defined at line 1227 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="10F4945E9DA2385DDF8420DD0A8291B04568CC59">isNegative</h3>
+      <p>public _Bool isNegative()</p>
+      <p>Defined at line 1229 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="F043586674E1F0285CF54B5DAED5022A7F7348D1">isDenormal</h3>
+      <p>public _Bool isDenormal()</p>
+      <p>Defined at line 1230 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="A1FF9F300873ACB328E5199750C2698D5F421B66">isSignaling</h3>
+      <p>public _Bool isSignaling()</p>
+      <p>Defined at line 1231 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="601DC7ADE88BAEF248EEBFA7E5D0DC0A88FED610">isNormal</h3>
+      <p>public _Bool isNormal()</p>
+      <p>Defined at line 1233 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="22486C2DE80832E63AE103E6677ED990D0558E75">isFinite</h3>
+      <p>public _Bool isFinite()</p>
+      <p>Defined at line 1234 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="0A23DF14376E530CA08A23233B5FC871C07C4B8E">getCategory</h3>
+      <p>
+        public 
+        <a href="../llvm/APFloatBase/fltCategory.html">fltCategory</a>
+         getCategory()
+      </p>
+      <p>Defined at line 1236 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="3751E4D30D7D5F09A40D86B430C51885ECFDEAE2">getSemantics</h3>
+      <p>public const fltSemantics &amp; getSemantics()</p>
+      <p>Defined at line 1237 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="874B722E5BFFF7CC362A1EEF4F320D2383C9EB85">isNonZero</h3>
+      <p>public _Bool isNonZero()</p>
+      <p>Defined at line 1238 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="392FDBA6C35FC3D766757C688F84C537F4B03CB7">isFiniteNonZero</h3>
+      <p>public _Bool isFiniteNonZero()</p>
+      <p>Defined at line 1239 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="55EAB0E7671DA542198836AEE3E747AAF03061F6">isPosZero</h3>
+      <p>public _Bool isPosZero()</p>
+      <p>Defined at line 1240 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="A37AEADD645C249C68D0443D2C6F2667EC2EA1AE">isNegZero</h3>
+      <p>public _Bool isNegZero()</p>
+      <p>Defined at line 1241 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="A65697B6C3DB30DEFAE4245593ED20215E0BB19E">isPosInfinity</h3>
+      <p>public _Bool isPosInfinity()</p>
+      <p>Defined at line 1242 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="9A8356CA36F4337CC00D314F5A7831197D7F0948">isNegInfinity</h3>
+      <p>public _Bool isNegInfinity()</p>
+      <p>Defined at line 1243 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="70A706AAD2C57BBFBEA7B2EC3F8A942E8EF91A65">isSmallest</h3>
+      <p>public _Bool isSmallest()</p>
+      <p>Defined at line 1244 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="01C08395E41193FC0CB98EB3410B055E3F6ED625">isLargest</h3>
+      <p>public _Bool isLargest()</p>
+      <p>Defined at line 1245 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="7EDF831895DDB959715A1A5C1ECBAF6D37C8586F">isInteger</h3>
+      <p>public _Bool isInteger()</p>
+      <p>Defined at line 1246 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="D6D147DDA636E4E9C3CBA2BE61B2C359BAAB4D88">isIEEE</h3>
+      <p>public _Bool isIEEE()</p>
+      <p>Defined at line 1247 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="A65164303E0AA838593660A40C617507AD79CD8C">isSmallestNormalized</h3>
+      <p>public _Bool isSmallestNormalized()</p>
+      <p>Defined at line 1249 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="ECF63764CADF7DAFCC7A2AB0D70B6A388F34C756">operator=</h3>
+      <p>public APFloat &amp; operator=(const APFloat &amp; RHS)</p>
+      <p>Defined at line 1253 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="D15E0FA03B31E59136D5609A5A2E0263DCB1C266">operator=</h3>
+      <p>public APFloat &amp; operator=(APFloat &amp;&amp; RHS)</p>
+      <p>Defined at line 1254 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="04F516B2F88BBB679AE69956392B936E25F91A00">toString</h3>
+      <p>public void toString(SmallVectorImpl&lt;char&gt; &amp; Str, unsigned int FormatPrecision, unsigned int FormatMaxPadding, _Bool TruncateZero)</p>
+      <p>Defined at line 1256 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+      <h3 id="96BBAC6C8CDBE5E2B0FA3E934320CDEDB265EDFD">print</h3>
+      <p>public void print(raw_ostream &amp; )</p>
+      <h3 id="3ED88C3FAD3D38A1720DF2A476A10A92F5193DB4">dump</h3>
+      <p>public void dump()</p>
+      <h3 id="D28E5F5A3D561B7DC29B00FEBF53EB83C5C14683">getExactInverse</h3>
+      <p>public _Bool getExactInverse(APFloat * inv)</p>
+      <p>Defined at line 1265 of file /usr/lib/llvm-16/include/llvm/ADT/APFloat.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C2883CE0431F923DDA74A25AD3B561FF67B07965">APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B94EE1C5D7F22FB4F1EABF28ADFD27659AFF4E57">APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2433C1663E3084C712A36A9C2E59F93E6F66898">APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9E98A06B398F37BA32C19AEF09BD55F6C77988D">APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81066EF9825546F572642DE0930AD130B8548D8E">APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EEFF45450B6E591417E7F8FC549101530644BB24">APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F329BD93710A3213B330E258740F581EFD5C8B15">APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#680E8F8E73AF2CD066BAB8B783F04AAFE5754C1A">APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8F03CEF48117EA3E294D0E0741F9EDD9E9367B5">APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7252D7570371F6D11AF16529283301F76FF99DE3">APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9AE6534C9253883652D8DEEABFF1FF057A06542D">~APFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22CAEEF56C0B39BDC876F04930DF847C6DCFBD9D">needsCleanup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD353DF91107528C9059B4E453D78C5D3E02B4CF">getZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95A8F6781947FD4DA422C62DB2E2414E75D18719">getInf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0B65B8EBC949E04D639289C4F3E2D3B6E4238B6">getNaN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDCB4AD68C610A91D0DFC73DA2F02ED33449DA79">getQNaN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7AA73E1B0EE5B4697641792AF5961634E2B0EAAE">getSNaN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#237EFADC3869AF25E9B5D64AF2D20F9F4EB5D786">getLargest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4843BB526D6274AF3D5A0C30DE446C44AD42C34C">getSmallest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#681E59E10CF6B02F6C412B56F29DCA49E861E537">getSmallestNormalized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10AB0F4515C7C29BB20EEECA77977EC1814ED272">getAllOnesValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#154B7EDDC96AAAAC5C06D2CE7781DE380D76741A">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4F2DB1531D3C1696EF0E061D6BE3F850E54829B">add</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A544621AC763339041984091762AF1F126544E09">subtract</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25B61C7B79B4974C330ACAC59180B8ECA293CB5D">multiply</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5F5DD37ED392B9F6A293751F8AA7EFB0EB88602">divide</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D7356182A0D0211CAD74D89D93C1CF1C312C0D0">remainder</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F42ECFDA599726BE7981D6D8FEC1054FD1738A58">mod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB6EE7D57CE253C08E6FB926F3A1539F85B615E9">fusedMultiplyAdd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22414BA1BAD66C025EB47AAD7D98670D6E790548">roundToIntegral</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA7591FAD6566E13549E8AF87C33576E04E7DC1E">next</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A71EAAB56D2BC7396A1DCAD367CE36641DF6F7F3">operator-</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E549B1C1F40BA4796A60C4581064A24A373712F">operator+</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#20ED68FFD5EC257932C7934A5C3991C11C4BA43A">operator-</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#990EC5BBAC18B5CB00363D0A50704F384D1BB3E9">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C8DAF662558C3DC4EAD5D3CD70AB83319472F017">operator/</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#80F264FD140D139F5FD18841391C71CE05F7F0D0">changeSign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#673345186FD9394BCD09BE47711C352502C03859">clearSign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCD9DBF02D67DADA2C8A32A76380470D97F2CCDB">copySign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CDE503085474B39A8D06439DA263AE360ACB6F9">copySign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75138B421334188BA05BECEE3002979F0D43DD91">convert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F92C9DD8DE3DE466D72301372A006D72233D0873">convertToInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E87381E2BB96AD3B48F516866C2CD76ADE3E385">convertToInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#531413B7E23355705B05386EACAFF1919D494009">convertFromAPInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A54892B9A4FBFF4113CE71BE66D37E3EBCC9E41C">convertFromSignExtendedInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63C21C11D0DBB648AFFDBC13DE013C0AA7A60CCF">convertFromZeroExtendedInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD3107B7F786243121A742779388FEF4C7EF2B04">convertFromString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D35899905B2206433279992313A1BE0B2417437">bitcastToAPInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#437F45E25708D634FFA00B876A2E35B05E65BFEC">convertToDouble</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F307BB721C5873BA5FE0C16A2D0517187831418B">convertToFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73E09EB1204C97B255C96B8425F83ED5E7753817">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#943128612AEAF27BA38212E5C4516211B6A418D3">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67199A71CD75152A694B711ECED008C69D429344">operator&lt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82593408BC192EF1E9225916F985900BCF9D584D">operator&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#142A5F086A4D5900A8CF06C273E19AB66D28986B">operator&lt;=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42B7914C6ACF64D5105529F3E9076C176AE3ECCF">operator&gt;=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2FF628A9F2A48341487E997CA9D26638C401F41">compare</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D92FB54D85DBC86AE242774DF5A9C3C3AD912CC">bitwiseIsEqual</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EEB8647B47A9B1E90127270D2BCA681C7B59DAD0">isExactlyValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16B8BD499FEAE226F13D22B7A1BE9CCCBA9D7A1B">convertToHexString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21A1A00B4E18D8C36F055E480F6D278E6B66716A">isZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#571CD669AC6F1D796EB77FCA5168680F15413A7F">isInfinity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E4EDD5B14106B7AFFB8FB6D0031A73D9D2EC9026">isNaN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10F4945E9DA2385DDF8420DD0A8291B04568CC59">isNegative</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F043586674E1F0285CF54B5DAED5022A7F7348D1">isDenormal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1FF9F300873ACB328E5199750C2698D5F421B66">isSignaling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#601DC7ADE88BAEF248EEBFA7E5D0DC0A88FED610">isNormal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22486C2DE80832E63AE103E6677ED990D0558E75">isFinite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A23DF14376E530CA08A23233B5FC871C07C4B8E">getCategory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3751E4D30D7D5F09A40D86B430C51885ECFDEAE2">getSemantics</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#874B722E5BFFF7CC362A1EEF4F320D2383C9EB85">isNonZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#392FDBA6C35FC3D766757C688F84C537F4B03CB7">isFiniteNonZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#55EAB0E7671DA542198836AEE3E747AAF03061F6">isPosZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A37AEADD645C249C68D0443D2C6F2667EC2EA1AE">isNegZero</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A65697B6C3DB30DEFAE4245593ED20215E0BB19E">isPosInfinity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A8356CA36F4337CC00D314F5A7831197D7F0948">isNegInfinity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70A706AAD2C57BBFBEA7B2EC3F8A942E8EF91A65">isSmallest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01C08395E41193FC0CB98EB3410B055E3F6ED625">isLargest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7EDF831895DDB959715A1A5C1ECBAF6D37C8586F">isInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6D147DDA636E4E9C3CBA2BE61B2C359BAAB4D88">isIEEE</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A65164303E0AA838593660A40C617507AD79CD8C">isSmallestNormalized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ECF63764CADF7DAFCC7A2AB0D70B6A388F34C756">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D15E0FA03B31E59136D5609A5A2E0263DCB1C266">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#04F516B2F88BBB679AE69956392B936E25F91A00">toString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96BBAC6C8CDBE5E2B0FA3E934320CDEDB265EDFD">print</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3ED88C3FAD3D38A1720DF2A476A10A92F5193DB4">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D28E5F5A3D561B7DC29B00FEBF53EB83C5C14683">getExactInverse</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

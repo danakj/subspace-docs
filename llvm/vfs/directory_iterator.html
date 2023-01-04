@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class directory_iterator</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/vfs" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class directory_iterator</h1>
+    <p>Defined at line 181 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    <div>
+      <div>
+        <p> An input iterator over the entries in a virtual path, similar to llvm::sys::fs::directory_iterator.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="1A04D111C301AB302B644689281CD8EC7AA089E4">directory_iterator</h3>
+      <p>
+        public void directory_iterator(
+        <a href="../../std/shared_ptr.html">shared_ptr</a>
+         I)
+      </p>
+      <p>Defined at line 185 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="38B306BE659AC2CF58FF830F2AFED10F92F943F7">directory_iterator</h3>
+      <p>public void directory_iterator()</p>
+      <p>Defined at line 193 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <div>
+        <div>
+          <p> Construct an &apos;end&apos; iterator.</p>
+        </div>
+      </div>
+      <h3 id="0810461576BAA5F2CB37D1EB0E30904C470755D2">increment</h3>
+      <p>public directory_iterator &amp; increment(std::error_code &amp; EC)</p>
+      <p>Defined at line 196 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <div>
+        <div>
+          <p> Equivalent to operator++, with an error code.</p>
+        </div>
+      </div>
+      <h3 id="A0B7ABADDFB76E88E1EFCFA300E1C6146623D732">operator*</h3>
+      <p>public const directory_entry &amp; operator*()</p>
+      <p>Defined at line 204 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="51F778B27CAF60CD48BF8CA392D867217AA56F1E">operator-&gt;</h3>
+      <p>public const directory_entry * operator-&gt;()</p>
+      <p>Defined at line 205 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="4E54D7F0DF240CC74B46BB6A79769EF695BBEA5D">operator==</h3>
+      <p>public _Bool operator==(const directory_iterator &amp; RHS)</p>
+      <p>Defined at line 207 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="B8AA857D0263576494B4BC71B899737200AA0AE9">operator!=</h3>
+      <p>public _Bool operator!=(const directory_iterator &amp; RHS)</p>
+      <p>Defined at line 212 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#1A04D111C301AB302B644689281CD8EC7AA089E4">directory_iterator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38B306BE659AC2CF58FF830F2AFED10F92F943F7">directory_iterator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0810461576BAA5F2CB37D1EB0E30904C470755D2">increment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0B7ABADDFB76E88E1EFCFA300E1C6146623D732">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#51F778B27CAF60CD48BF8CA392D867217AA56F1E">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E54D7F0DF240CC74B46BB6A79769EF695BBEA5D">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8AA857D0263576494B4BC71B899737200AA0AE9">operator!=</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

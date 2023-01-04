@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DeclarationNameLoc</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DeclarationNameLoc</h1>
+    <p>Defined at line 659 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+    <div>
+      <div>
+        <p> DeclarationNameLoc - Additional source/type location info for a declaration name. Needs a DeclarationName in order to be interpreted correctly.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="70F0738C5973634DF9059A7A9C75C55A754DB901">DeclarationNameLoc</h3>
+      <p>
+        public void DeclarationNameLoc(
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name)
+      </p>
+      <h3 id="21B2126AE28774E0C0B77CCBADD22C03CFE99104">DeclarationNameLoc</h3>
+      <p>public void DeclarationNameLoc()</p>
+      <p>Defined at line 705 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> FIXME: this should go away once all DNLocs are properly initialized.</p>
+        </div>
+      </div>
+      <h3 id="ACB0C2DF61E6639D674650D0882E9BC4FC362BE0">getNamedTypeInfo</h3>
+      <p>public TypeSourceInfo * getNamedTypeInfo()</p>
+      <p>Defined at line 709 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Returns the source type info. Assumes that the object stores location information of a constructor, destructor or conversion operator.</p>
+        </div>
+      </div>
+      <h3 id="5C786AF8630AE77E9366C6B0613E4A92AD3BBFBE">getCXXOperatorNameBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getCXXOperatorNameBeginLoc()
+      </p>
+      <p>Defined at line 712 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Return the beginning location of the getCXXOperatorNameRange() range.</p>
+        </div>
+      </div>
+      <h3 id="AA5D073496422E5B3ED461A091E8C4173522C2DD">getCXXOperatorNameEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getCXXOperatorNameEndLoc()
+      </p>
+      <p>Defined at line 717 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Return the end location of the getCXXOperatorNameRange() range.</p>
+        </div>
+      </div>
+      <h3 id="BC66FDF2AE168CCC73B7F8D5E1109EBE8E57D92E">getCXXOperatorNameRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getCXXOperatorNameRange()
+      </p>
+      <p>Defined at line 724 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Return the range of the operator name (without the operator keyword). Assumes that the object stores location information of a (non-literal) operator.</p>
+        </div>
+      </div>
+      <h3 id="098F8ECAC01FFE020A110736368C4F2001FD46B6">getCXXLiteralOperatorNameLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getCXXLiteralOperatorNameLoc()
+      </p>
+      <p>Defined at line 732 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Return the location of the literal operator name (without the operator keyword). Assumes that the object stores location information of a literal operator.</p>
+        </div>
+      </div>
+      <h3 id="5F32262992CD5775AA576E12792D6161CC12C67B">makeNamedTypeLoc</h3>
+      <p>
+        public 
+        <a href="DeclarationNameLoc.html">DeclarationNameLoc</a>
+         makeNamedTypeLoc(TypeSourceInfo * TInfo)
+      </p>
+      <p>Defined at line 738 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Construct location information for a constructor, destructor or conversion operator.</p>
+        </div>
+      </div>
+      <h3 id="C36BC6BBAB6EE99BE83F88609CC8B53B1622FB5F">makeCXXOperatorNameLoc</h3>
+      <p>
+        public 
+        <a href="DeclarationNameLoc.html">DeclarationNameLoc</a>
+         makeCXXOperatorNameLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         BeginLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 745 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Construct location information for a non-literal C++ operator.</p>
+        </div>
+      </div>
+      <h3 id="BAFEC3ACAA757BFE03FCD98618DC0F2AE30F40B7">makeCXXOperatorNameLoc</h3>
+      <p>
+        public 
+        <a href="DeclarationNameLoc.html">DeclarationNameLoc</a>
+         makeCXXOperatorNameLoc(
+        <a href="SourceRange.html">SourceRange</a>
+         Range)
+      </p>
+      <p>Defined at line 751 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Construct location information for a non-literal C++ operator.</p>
+        </div>
+      </div>
+      <h3 id="A1921D5E1D4F44F1FAF2A89217B7CE2BBD122821">makeCXXLiteralOperatorNameLoc</h3>
+      <p>
+        public 
+        <a href="DeclarationNameLoc.html">DeclarationNameLoc</a>
+         makeCXXLiteralOperatorNameLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 758 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Construct location information for a literal C++ operator.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#70F0738C5973634DF9059A7A9C75C55A754DB901">DeclarationNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21B2126AE28774E0C0B77CCBADD22C03CFE99104">DeclarationNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ACB0C2DF61E6639D674650D0882E9BC4FC362BE0">getNamedTypeInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5C786AF8630AE77E9366C6B0613E4A92AD3BBFBE">getCXXOperatorNameBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA5D073496422E5B3ED461A091E8C4173522C2DD">getCXXOperatorNameEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC66FDF2AE168CCC73B7F8D5E1109EBE8E57D92E">getCXXOperatorNameRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#098F8ECAC01FFE020A110736368C4F2001FD46B6">getCXXLiteralOperatorNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F32262992CD5775AA576E12792D6161CC12C67B">makeNamedTypeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C36BC6BBAB6EE99BE83F88609CC8B53B1622FB5F">makeCXXOperatorNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BAFEC3ACAA757BFE03FCD98618DC0F2AE30F40B7">makeCXXOperatorNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1921D5E1D4F44F1FAF2A89217B7CE2BBD122821">makeCXXLiteralOperatorNameLoc</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class const_component_lists_iterator</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/OMPMappableExprListClause" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class const_component_lists_iterator</h1>
+    <p>Defined at line 5476 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> Iterator that browse the components by lists. It also allows browsing components of a single declaration.</p>
+      </div>
+    </div>
+    <p>Inherits from llvm::iterator_adaptor_base&lt;const_component_lists_iterator, MappableExprComponentListRef::const_iterator, std::forward_iterator_tag, MappableComponent, ptrdiff_t, MappableComponent, MappableComponent&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="1A0D00B2AC75C868D6FC625DCFF24A39139F6F67">const_component_lists_iterator</h3>
+      <p>
+        public void const_component_lists_iterator(
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         UniqueDecls, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         DeclsListNum, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         CumulativeListSizes, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         Components, _Bool SupportsMapper, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         Mappers)
+      </p>
+      <p>Defined at line 5511 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Construct an iterator that scans all lists.</p>
+        </div>
+      </div>
+      <h3 id="F6AD561E713E17874BC3B72392D86A1F1258CA62">const_component_lists_iterator</h3>
+      <p>
+        public void const_component_lists_iterator(const ValueDecl * Declaration, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         UniqueDecls, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         DeclsListNum, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         CumulativeListSizes, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         Components, _Bool SupportsMapper, 
+        <a href="../../llvm/ArrayRef.html">ArrayRef</a>
+         Mappers)
+      </p>
+      <p>Defined at line 5532 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Construct an iterator that scan lists for a given declaration </p>
+        </div>
+      </div>
+      <h3 id="81CB7B3DEB4F91918A9E908B370ABD8419BF3D38">operator*</h3>
+      <p>
+        public 
+        <a href="../../std/tuple.html">tuple</a>
+         operator*()
+      </p>
+      <p>Defined at line 5582 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Return the array with the current list. The sizes are cumulative, so the array size is the difference between the current size and previous one.</p>
+        </div>
+      </div>
+      <h3 id="11776DE9E3278BAA910B6B6A8EC508C75CA6A6E3">operator-&gt;</h3>
+      <p>
+        public 
+        <a href="../../std/tuple.html">tuple</a>
+         operator-&gt;()
+      </p>
+      <p>Defined at line 5594 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="0195BB1D92A6FDE45BA5DF4096F2349C340F61F1">operator++</h3>
+      <p>public const_component_lists_iterator &amp; operator++()</p>
+      <p>Defined at line 5601 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Skip the components of the current list.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#1A0D00B2AC75C868D6FC625DCFF24A39139F6F67">const_component_lists_iterator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6AD561E713E17874BC3B72392D86A1F1258CA62">const_component_lists_iterator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81CB7B3DEB4F91918A9E908B370ABD8419BF3D38">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11776DE9E3278BAA910B6B6A8EC508C75CA6A6E3">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0195BB1D92A6FDE45BA5DF4096F2349C340F61F1">operator++</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

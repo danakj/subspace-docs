@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCPropertyRefExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCPropertyRefExpr</h1>
+    <p>Defined at line 614 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+    <div>
+      <div>
+        <p> ObjCPropertyRefExpr - A dot-syntax expression to access an ObjC property.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4022320FCF4DAB26B9264A0F3DA9CA95BC5E2779">ObjCPropertyRefExpr</h3>
+      <p>
+        public void ObjCPropertyRefExpr(ObjCPropertyDecl * PD, 
+        <a href="QualType.html">QualType</a>
+         t, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         l, Expr * base)
+      </p>
+      <p>Defined at line 648 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="73E435DA3D7721A8BB99A6EF2E142574E2388041">ObjCPropertyRefExpr</h3>
+      <p>
+        public void ObjCPropertyRefExpr(ObjCPropertyDecl * PD, 
+        <a href="QualType.html">QualType</a>
+         t, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         l, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         sl, 
+        <a href="QualType.html">QualType</a>
+         st)
+      </p>
+      <p>Defined at line 656 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="1BF7C273FE2F8AE956852448F1F5EF8AD291944F">ObjCPropertyRefExpr</h3>
+      <p>
+        public void ObjCPropertyRefExpr(ObjCMethodDecl * Getter, ObjCMethodDecl * Setter, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, Expr * Base)
+      </p>
+      <p>Defined at line 665 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="D220617E3EC93921D961258321360333989E9698">ObjCPropertyRefExpr</h3>
+      <p>
+        public void ObjCPropertyRefExpr(ObjCMethodDecl * Getter, ObjCMethodDecl * Setter, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         SuperLoc, 
+        <a href="QualType.html">QualType</a>
+         SuperTy)
+      </p>
+      <p>Defined at line 675 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="7600DC8FE146C6F96A88150879F705DC3BFFDED1">ObjCPropertyRefExpr</h3>
+      <p>
+        public void ObjCPropertyRefExpr(ObjCMethodDecl * Getter, ObjCMethodDecl * Setter, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ReceiverLoc, ObjCInterfaceDecl * Receiver)
+      </p>
+      <p>Defined at line 686 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="75511262FEFD5FB347745C156714DB21EE9BCD3C">ObjCPropertyRefExpr</h3>
+      <p>
+        public void ObjCPropertyRefExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 697 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="60CB12EFC2A4B50EBF6671A937CCE5DEAF862421">isImplicitProperty</h3>
+      <p>public _Bool isImplicitProperty()</p>
+      <p>Defined at line 700 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="CC56198B56345B803B4804C37C67836430FAADD6">isExplicitProperty</h3>
+      <p>public _Bool isExplicitProperty()</p>
+      <p>Defined at line 701 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="29BDF3B58D920919694F33093D5D4D37A8831CCC">getExplicitProperty</h3>
+      <p>public ObjCPropertyDecl * getExplicitProperty()</p>
+      <p>Defined at line 703 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="17CBABF65A6DAB2650FC3E363D1809F4093C6727">getImplicitPropertyGetter</h3>
+      <p>public ObjCMethodDecl * getImplicitPropertyGetter()</p>
+      <p>Defined at line 708 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="97B6B740564E73E819DB6EF8F16B5DB389826F03">getImplicitPropertySetter</h3>
+      <p>public ObjCMethodDecl * getImplicitPropertySetter()</p>
+      <p>Defined at line 713 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="3C72239273102796DCB89C733927EAC7980CCEAD">getGetterSelector</h3>
+      <p>
+        public 
+        <a href="Selector.html">Selector</a>
+         getGetterSelector()
+      </p>
+      <p>Defined at line 718 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="C6A6E913DCC21E4DA420114EE63C3E55630AD9DD">getSetterSelector</h3>
+      <p>
+        public 
+        <a href="Selector.html">Selector</a>
+         getSetterSelector()
+      </p>
+      <p>Defined at line 724 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="DC6E03C9A0499F023ABF862758B93BB6C786F802">isMessagingGetter</h3>
+      <p>public _Bool isMessagingGetter()</p>
+      <p>Defined at line 733 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <div>
+        <div>
+          <p> True if the property reference will result in a message to the getter. This applies to both implicit and explicit property references.</p>
+        </div>
+      </div>
+      <h3 id="7C87FA448C07E6C81A8CF6617DA86E728770592D">isMessagingSetter</h3>
+      <p>public _Bool isMessagingSetter()</p>
+      <p>Defined at line 740 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <div>
+        <div>
+          <p> True if the property reference will result in a message to the setter. This applies to both implicit and explicit property references.</p>
+        </div>
+      </div>
+      <h3 id="08C1CB216471A34C9B113D275CD8451CC4B37120">setIsMessagingGetter</h3>
+      <p>public void setIsMessagingGetter(_Bool val)</p>
+      <p>Defined at line 744 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="A8C846F77AB0D7C9F67B98493A8B1D2170BF517D">setIsMessagingSetter</h3>
+      <p>public void setIsMessagingSetter(_Bool val)</p>
+      <p>Defined at line 748 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="E5E9EE95A30A3D2C83BD5E56325266FA410F58A1">getBase</h3>
+      <p>public const Expr * getBase()</p>
+      <p>Defined at line 752 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="A66024CF80574957F91A485D13AAED7B0CCE61E4">getBase</h3>
+      <p>public Expr * getBase()</p>
+      <p>Defined at line 755 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="F9CAAB0EBA770B84E61126782508BD765F7D5D57">getLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 759 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="E119B4C702B163F7889C4A652CF297BA695F1022">getReceiverLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getReceiverLocation()
+      </p>
+      <p>Defined at line 761 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="61F8D91CF2432613D5AC464FE3B270C2851026A9">getSuperReceiverType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getSuperReceiverType()
+      </p>
+      <p>Defined at line 763 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="33651D1CEEBB2D4C0D9B69260AB97251D017F4A9">getClassReceiver</h3>
+      <p>public ObjCInterfaceDecl * getClassReceiver()</p>
+      <p>Defined at line 767 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="9A15F5EAF3B42B3287DBB3678F0E266DCBC1C6A5">isObjectReceiver</h3>
+      <p>public _Bool isObjectReceiver()</p>
+      <p>Defined at line 771 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="315B05B4C681C4793DE50657C77263200B653799">isSuperReceiver</h3>
+      <p>public _Bool isSuperReceiver()</p>
+      <p>Defined at line 772 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="AFB6C8EEA54CEC487B13C34B3C680D8FCECC61D3">isClassReceiver</h3>
+      <p>public _Bool isClassReceiver()</p>
+      <p>Defined at line 773 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="2D7723E4BD94EE1AA028DF0ECBB08E986311EAD0">getReceiverType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getReceiverType(const ASTContext &amp; ctx)
+      </p>
+      <div>
+        <div>
+          <p> Determine the type of the base, regardless of the kind of receiver.</p>
+        </div>
+      </div>
+      <h3 id="27CFA65003F5B844ED86798CFB96C1028A6F7A77">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 778 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="CF5416555B6E1945823B60EAD001EF923DA9F29A">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 783 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="85B42FD5D691611CDD0DF61CFF1D3E0F4CCA974A">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 786 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="81CD1848F97280A918B67DC508C6345072477907">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 794 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="A80E6AD46407978885C58E09D58DCBC065F247EA">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 799 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4022320FCF4DAB26B9264A0F3DA9CA95BC5E2779">ObjCPropertyRefExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73E435DA3D7721A8BB99A6EF2E142574E2388041">ObjCPropertyRefExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BF7C273FE2F8AE956852448F1F5EF8AD291944F">ObjCPropertyRefExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D220617E3EC93921D961258321360333989E9698">ObjCPropertyRefExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7600DC8FE146C6F96A88150879F705DC3BFFDED1">ObjCPropertyRefExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75511262FEFD5FB347745C156714DB21EE9BCD3C">ObjCPropertyRefExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#60CB12EFC2A4B50EBF6671A937CCE5DEAF862421">isImplicitProperty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC56198B56345B803B4804C37C67836430FAADD6">isExplicitProperty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#29BDF3B58D920919694F33093D5D4D37A8831CCC">getExplicitProperty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17CBABF65A6DAB2650FC3E363D1809F4093C6727">getImplicitPropertyGetter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97B6B740564E73E819DB6EF8F16B5DB389826F03">getImplicitPropertySetter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C72239273102796DCB89C733927EAC7980CCEAD">getGetterSelector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6A6E913DCC21E4DA420114EE63C3E55630AD9DD">getSetterSelector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC6E03C9A0499F023ABF862758B93BB6C786F802">isMessagingGetter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C87FA448C07E6C81A8CF6617DA86E728770592D">isMessagingSetter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08C1CB216471A34C9B113D275CD8451CC4B37120">setIsMessagingGetter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8C846F77AB0D7C9F67B98493A8B1D2170BF517D">setIsMessagingSetter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5E9EE95A30A3D2C83BD5E56325266FA410F58A1">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A66024CF80574957F91A485D13AAED7B0CCE61E4">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9CAAB0EBA770B84E61126782508BD765F7D5D57">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E119B4C702B163F7889C4A652CF297BA695F1022">getReceiverLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61F8D91CF2432613D5AC464FE3B270C2851026A9">getSuperReceiverType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33651D1CEEBB2D4C0D9B69260AB97251D017F4A9">getClassReceiver</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A15F5EAF3B42B3287DBB3678F0E266DCBC1C6A5">isObjectReceiver</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#315B05B4C681C4793DE50657C77263200B653799">isSuperReceiver</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFB6C8EEA54CEC487B13C34B3C680D8FCECC61D3">isClassReceiver</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D7723E4BD94EE1AA028DF0ECBB08E986311EAD0">getReceiverType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27CFA65003F5B844ED86798CFB96C1028A6F7A77">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF5416555B6E1945823B60EAD001EF923DA9F29A">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85B42FD5D691611CDD0DF61CFF1D3E0F4CCA974A">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81CD1848F97280A918B67DC508C6345072477907">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A80E6AD46407978885C58E09D58DCBC065F247EA">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

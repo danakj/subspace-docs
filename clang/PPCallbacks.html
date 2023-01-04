@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class PPCallbacks</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class PPCallbacks</h1>
+    <p>Defined at line 35 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+    <div>
+      <div>
+        <p> This interface provides a way to observe the actions of the preprocessor as it does its thing.</p>
+        <p> Clients can define their hooks here to implement preprocessor level tools.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="02E485A97F70AEF53AE83A5D71D4357AFCFCCF93">~PPCallbacks</h3>
+      <p>public void ~PPCallbacks()</p>
+      <h3 id="D96259555B7717E248A49E264885F8BE1D67899C">FileChanged</h3>
+      <p>
+        public void FileChanged(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../clang/PPCallbacks/FileChangeReason.html">FileChangeReason</a>
+         Reason, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileType, 
+        <a href="FileID.html">FileID</a>
+         PrevFID)
+      </p>
+      <p>Defined at line 48 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked whenever a source file is entered or exited.</p>
+        </div>
+      </div>
+      <h3 id="8D6EA91DDB67AD236AD3C43564CE3FD393BEF36F">LexedFileChanged</h3>
+      <p>
+        public void LexedFileChanged(
+        <a href="FileID.html">FileID</a>
+         FID, 
+        <a href="../clang/PPCallbacks/LexedFileChangeReason.html">LexedFileChangeReason</a>
+         Reason, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileType, 
+        <a href="FileID.html">FileID</a>
+         PrevFID, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 70 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked whenever the  moves to a different file for lexing. Unlike  line number directives and other related pragmas do not trigger callbacks to </p>
+        </div>
+      </div>
+      <h3 id="81BF34D7C379265BA04A1C1ED2A269989397253A">FileSkipped</h3>
+      <p>
+        public void FileSkipped(const FileEntryRef &amp; SkippedFile, const Token &amp; FilenameTok, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileType)
+      </p>
+      <p>Defined at line 82 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked whenever a source file is skipped as the result of header guard optimization.</p>
+        </div>
+      </div>
+      <h3 id="842DBB7D3A5D8EDD75DC6EC0B1443479191672DA">InclusionDirective</h3>
+      <p>
+        public void InclusionDirective(
+        <a href="SourceLocation.html">SourceLocation</a>
+         HashLoc, const Token &amp; IncludeTok, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         FileName, _Bool IsAngled, 
+        <a href="CharSourceRange.html">CharSourceRange</a>
+         FilenameRange, 
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         File, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         SearchPath, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         RelativePath, const Module * Imported, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileType)
+      </p>
+      <p>Defined at line 127 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked whenever an inclusion directive of any kind ( etc.) has been processed, regardless of whether the inclusion will actually result in an inclusion.</p>
+        </div>
+      </div>
+      <h3 id="4655784CA794E51DD54B684523B5687CF6A69A4D">EnteredSubmodule</h3>
+      <p>
+        public void EnteredSubmodule(Module * M, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ImportLoc, _Bool ForPragma)
+      </p>
+      <p>Defined at line 143 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked whenever a submodule was entered.</p>
+        </div>
+      </div>
+      <h3 id="1EC1B99AE1243C656394437FDB7A1A3DFFA0D498">LeftSubmodule</h3>
+      <p>
+        public void LeftSubmodule(Module * M, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ImportLoc, _Bool ForPragma)
+      </p>
+      <p>Defined at line 154 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked whenever a submodule was left.</p>
+        </div>
+      </div>
+      <h3 id="DC8BE9364422F005AB0D86AD99344F9B5A0C0EC7">moduleImport</h3>
+      <p>
+        public void moduleImport(
+        <a href="SourceLocation.html">SourceLocation</a>
+         ImportLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Path, const Module * Imported)
+      </p>
+      <p>Defined at line 167 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked whenever there was an explicit module-import syntax.</p>
+        </div>
+      </div>
+      <h3 id="6DDDF8B2D02076FB30BAB7B8C6BA51F3924405F6">EndOfMainFile</h3>
+      <p>public void EndOfMainFile()</p>
+      <p>Defined at line 175 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when the end of the main file is reached.</p>
+          <p> No subsequent callbacks will be made.</p>
+        </div>
+      </div>
+      <h3 id="F6937976B1E984AB6369C1A21BE5EEBD46270F44">Ident</h3>
+      <p>
+        public void Ident(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         str)
+      </p>
+      <p>Defined at line 182 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #ident or #sccs directive is read.</p>
+        </div>
+      </div>
+      <h3 id="C748BEE509569B59A6589C173F1AA5B49CF51D59">PragmaDirective</h3>
+      <p>
+        public void PragmaDirective(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="PragmaIntroducerKind.html">PragmaIntroducerKind</a>
+         Introducer)
+      </p>
+      <p>Defined at line 186 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when start reading any pragma directive.</p>
+        </div>
+      </div>
+      <h3 id="7F07797E6D35E61CB570F052EE1E4517AB521556">PragmaComment</h3>
+      <p>
+        public void PragmaComment(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const IdentifierInfo * Kind, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <p>Defined at line 191 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma comment directive is read.</p>
+        </div>
+      </div>
+      <h3 id="06273D5528DDCB33BE464B7D44F01EB9AAF48259">PragmaMark</h3>
+      <p>
+        public void PragmaMark(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Trivia)
+      </p>
+      <p>Defined at line 196 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma mark comment is read.</p>
+        </div>
+      </div>
+      <h3 id="6EAB41F4CEF46FDA7457CEB16311F8F94F9C378F">PragmaDetectMismatch</h3>
+      <p>
+        public void PragmaDetectMismatch(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Value)
+      </p>
+      <p>Defined at line 201 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma detect_mismatch directive is read.</p>
+        </div>
+      </div>
+      <h3 id="C20F8380E4688FB7D8D2C4AE5B11AD4C84B73763">PragmaDebug</h3>
+      <p>
+        public void PragmaDebug(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         DebugType)
+      </p>
+      <p>Defined at line 208 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma clang __debug directive is read.</p>
+        </div>
+      </div>
+      <h3 id="CA3535D8FFBE3E8E2B98E84EF2BFC5D8FED31D83">PragmaMessage</h3>
+      <p>
+        public void PragmaMessage(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Namespace, 
+        <a href="../clang/PPCallbacks/PragmaMessageKind.html">PragmaMessageKind</a>
+         Kind, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <p>Defined at line 228 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma message directive is read.</p>
+        </div>
+      </div>
+      <h3 id="42F1D5460DEA38A39E67B38044B022607DEFF53C">PragmaDiagnosticPush</h3>
+      <p>
+        public void PragmaDiagnosticPush(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Namespace)
+      </p>
+      <p>Defined at line 234 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma gcc diagnostic push directive is read.</p>
+        </div>
+      </div>
+      <h3 id="2EF7FC27B964233523943181C8489BBAF682F5BD">PragmaDiagnosticPop</h3>
+      <p>
+        public void PragmaDiagnosticPop(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Namespace)
+      </p>
+      <p>Defined at line 240 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma gcc diagnostic pop directive is read.</p>
+        </div>
+      </div>
+      <h3 id="FE934284051B4A55FECAD8EDBE163431126C26F1">PragmaDiagnostic</h3>
+      <p>
+        public void PragmaDiagnostic(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Namespace, 
+        <a href="../clang/diag/Severity.html">Severity</a>
+         mapping, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <p>Defined at line 245 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma gcc diagnostic directive is read.</p>
+        </div>
+      </div>
+      <h3 id="5F446A38548DC6DFAAFE79F638066338E9508864">PragmaOpenCLExtension</h3>
+      <p>
+        public void PragmaOpenCLExtension(
+        <a href="SourceLocation.html">SourceLocation</a>
+         NameLoc, const IdentifierInfo * Name, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StateLoc, unsigned int State)
+      </p>
+      <p>Defined at line 250 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Called when an OpenCL extension is either disabled or enabled with a pragma.</p>
+        </div>
+      </div>
+      <h3 id="4B057A7D00EBAAF72ABA8543E1FA68BB2A925C1E">PragmaWarning</h3>
+      <p>
+        public void PragmaWarning(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../clang/PPCallbacks/PragmaWarningSpecifier.html">PragmaWarningSpecifier</a>
+         WarningSpec, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Ids)
+      </p>
+      <p>Defined at line 267 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <h3 id="9B833A68D3780D358C8B9FC225BD7DA86D9E6C40">PragmaWarningPush</h3>
+      <p>
+        public void PragmaWarningPush(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, int Level)
+      </p>
+      <p>Defined at line 272 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma warning(push) directive is read.</p>
+        </div>
+      </div>
+      <h3 id="B1E8F76470FFC15FB1F52F042AEBB3DD50A4966F">PragmaWarningPop</h3>
+      <p>
+        public void PragmaWarningPop(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 276 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma warning(pop) directive is read.</p>
+        </div>
+      </div>
+      <h3 id="029A6F923C9BDD2B96389F02A9E72F9E2BE8B764">PragmaExecCharsetPush</h3>
+      <p>
+        public void PragmaExecCharsetPush(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <p>Defined at line 281 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma execution_character_set(push) directive is read.</p>
+        </div>
+      </div>
+      <h3 id="4E47696A91FA7BC7055C8CA3E706D3F242AA7B4B">PragmaExecCharsetPop</h3>
+      <p>
+        public void PragmaExecCharsetPop(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 285 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma execution_character_set(pop) directive is read.</p>
+        </div>
+      </div>
+      <h3 id="8D19842C47C61A379628ADF03B4619879ED7063A">PragmaAssumeNonNullBegin</h3>
+      <p>
+        public void PragmaAssumeNonNullBegin(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 289 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma clang assume_nonnull begin directive is read.</p>
+        </div>
+      </div>
+      <h3 id="27BB87BD9AABA3B91796F712DC6C9C2B79ACD7B8">PragmaAssumeNonNullEnd</h3>
+      <p>
+        public void PragmaAssumeNonNullEnd(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 293 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma clang assume_nonnull end directive is read.</p>
+        </div>
+      </div>
+      <h3 id="D190EB6657908E90AF3EE225BF1D83FD19D18CAA">MacroExpands</h3>
+      <p>
+        public void MacroExpands(const Token &amp; MacroNameTok, const MacroDefinition &amp; MD, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, const MacroArgs * Args)
+      </p>
+      <p>Defined at line 297 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Called by Preprocessor::HandleMacroExpandedIdentifier when a macro invocation is found.</p>
+        </div>
+      </div>
+      <h3 id="49859C9ECB4205F2F90C4BCBC3C2ED8AC28162EB">MacroDefined</h3>
+      <p>public void MacroDefined(const Token &amp; MacroNameTok, const MacroDirective * MD)</p>
+      <p>Defined at line 302 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever a macro definition is seen.</p>
+        </div>
+      </div>
+      <h3 id="4A361EBD1AC204BFF406A36C100D3EEA01DE1FC5">MacroUndefined</h3>
+      <p>public void MacroUndefined(const Token &amp; MacroNameTok, const MacroDefinition &amp; MD, const MacroDirective * Undef)</p>
+      <p>Defined at line 312 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever a macro #undef is seen.</p>
+          <p> MD is released immediately following this callback.</p>
+        </div>
+      </div>
+      <h3 id="E2F5D9364A57AB9ACF46A04BAA049CF9D8C899AA">Defined</h3>
+      <p>
+        public void Defined(const Token &amp; MacroNameTok, const MacroDefinition &amp; MD, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range)
+      </p>
+      <p>Defined at line 319 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever the &apos;defined&apos; operator is seen.</p>
+        </div>
+      </div>
+      <h3 id="F4640B6F10702346C4FF5CCE39EE1C81AC293C33">HasInclude</h3>
+      <p>
+        public void HasInclude(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         FileName, _Bool IsAngled, 
+        <a href="CustomizableOptional.html">CustomizableOptional</a>
+         File, 
+        <a href="../clang/SrcMgr/CharacteristicKind.html">CharacteristicKind</a>
+         FileType)
+      </p>
+      <div>
+        <div>
+          <p> Hook called when a &apos;__has_include&apos; or &apos;__has_include_next&apos; directive is read.</p>
+        </div>
+      </div>
+      <h3 id="CEF1C055A580236A5C1C32F57D7563E70C642FE5">SourceRangeSkipped</h3>
+      <p>
+        public void SourceRangeSkipped(
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndifLoc)
+      </p>
+      <p>Defined at line 335 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called when a source range is skipped.</p>
+        </div>
+      </div>
+      <h3 id="F7401DEC08FD21E63D2C00F0BACE4C1888A6A386">If</h3>
+      <p>
+        public void If(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="SourceRange.html">SourceRange</a>
+         ConditionRange, 
+        <a href="../clang/PPCallbacks/ConditionValueKind.html">ConditionValueKind</a>
+         ConditionValue)
+      </p>
+      <p>Defined at line 348 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever an #if is seen.</p>
+          <p> FIXME: better to pass in a list (or tree!) of Tokens.</p>
+        </div>
+      </div>
+      <h3 id="BC7418FAE928481DB07F62B10CD3734B33B290F1">Elif</h3>
+      <p>
+        public void Elif(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="SourceRange.html">SourceRange</a>
+         ConditionRange, 
+        <a href="../clang/PPCallbacks/ConditionValueKind.html">ConditionValueKind</a>
+         ConditionValue, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IfLoc)
+      </p>
+      <p>Defined at line 358 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever an #elif is seen.</p>
+        </div>
+      </div>
+      <h3 id="9BD6A296F4DC4313F1242E76D62950522049F551">Ifdef</h3>
+      <p>
+        public void Ifdef(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const Token &amp; MacroNameTok, const MacroDefinition &amp; MD)
+      </p>
+      <p>Defined at line 366 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever an #ifdef is seen.</p>
+        </div>
+      </div>
+      <h3 id="381650466E3867ECF752BA4D273CBBF92FF4B8DF">Elifdef</h3>
+      <p>
+        public void Elifdef(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const Token &amp; MacroNameTok, const MacroDefinition &amp; MD)
+      </p>
+      <p>Defined at line 374 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever an #elifdef branch is taken.</p>
+        </div>
+      </div>
+      <h3 id="0E3FC968AE17BC83E0F2B7CE149834F2D26B1269">Elifdef</h3>
+      <p>
+        public void Elifdef(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="SourceRange.html">SourceRange</a>
+         ConditionRange, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IfLoc)
+      </p>
+      <p>Defined at line 382 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever an #elifdef is skipped.</p>
+        </div>
+      </div>
+      <h3 id="4CB84EDEFC0F8B74E09E3E2FEF6C82DD80415DCC">Ifndef</h3>
+      <p>
+        public void Ifndef(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const Token &amp; MacroNameTok, const MacroDefinition &amp; MD)
+      </p>
+      <p>Defined at line 390 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever an #ifndef is seen.</p>
+        </div>
+      </div>
+      <h3 id="DB478F47271626A7CDCF879B1FE061BC3FBAC26C">Elifndef</h3>
+      <p>
+        public void Elifndef(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const Token &amp; MacroNameTok, const MacroDefinition &amp; MD)
+      </p>
+      <p>Defined at line 398 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever an #elifndef branch is taken.</p>
+        </div>
+      </div>
+      <h3 id="A0453CB19933A894568387BA92C6AE09123B3EEF">Elifndef</h3>
+      <p>
+        public void Elifndef(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="SourceRange.html">SourceRange</a>
+         ConditionRange, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IfLoc)
+      </p>
+      <p>Defined at line 406 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever an #elifndef is skipped.</p>
+        </div>
+      </div>
+      <h3 id="C727F0D0F2C6ECEB828CDD9A78ECF64AAAD943B2">Else</h3>
+      <p>
+        public void Else(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IfLoc)
+      </p>
+      <p>Defined at line 413 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever an #else is seen.</p>
+        </div>
+      </div>
+      <h3 id="3A8F39D677E0E1E7CC0BDF8351AD32D54950BA01">Endif</h3>
+      <p>
+        public void Endif(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IfLoc)
+      </p>
+      <p>Defined at line 419 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Hook called whenever an #endif is seen.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="30F840CA44964F56978A7E1808B02EFF46048728">enum FileChangeReason</h3>
+      <ul>
+        <li>EnterFile</li>
+        <li>ExitFile</li>
+        <li>SystemHeaderPragma</li>
+        <li>RenameFile</li>
+      </ul>
+      <p>Defined at line 39 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <h3 id="D69B42CC7DCD923CAD5AB1C885C201AC4DB8383B">enum class LexedFileChangeReason</h3>
+      <ul>
+        <li>EnterFile</li>
+        <li>ExitFile</li>
+      </ul>
+      <p>Defined at line 53 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <h3 id="5E835E81B65A92BF8CC34FBCFA8B391662FC0150">enum PragmaMessageKind</h3>
+      <ul>
+        <li>PMK_Message</li>
+        <li>PMK_Warning</li>
+        <li>PMK_Error</li>
+      </ul>
+      <p>Defined at line 212 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Determines the kind of #pragma invoking a call to PragmaMessage.</p>
+        </div>
+      </div>
+      <h3 id="D16194819B11979CC69D1BE977D81D5FD9328F4B">enum PragmaWarningSpecifier</h3>
+      <ul>
+        <li>PWS_Default</li>
+        <li>PWS_Disable</li>
+        <li>PWS_Error</li>
+        <li>PWS_Once</li>
+        <li>PWS_Suppress</li>
+        <li>PWS_Level1</li>
+        <li>PWS_Level2</li>
+        <li>PWS_Level3</li>
+        <li>PWS_Level4</li>
+      </ul>
+      <p>Defined at line 256 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+      <div>
+        <div>
+          <p> Callback invoked when a #pragma warning directive is read.</p>
+        </div>
+      </div>
+      <h3 id="BDFBEEEB394FC99C0188BD7E8B0594CB38B690C1">enum ConditionValueKind</h3>
+      <ul>
+        <li>CVK_NotEvaluated</li>
+        <li>CVK_False</li>
+        <li>CVK_True</li>
+      </ul>
+      <p>Defined at line 338 of file /usr/lib/llvm-16/include/clang/Lex/PPCallbacks.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#02E485A97F70AEF53AE83A5D71D4357AFCFCCF93">~PPCallbacks</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D96259555B7717E248A49E264885F8BE1D67899C">FileChanged</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D6EA91DDB67AD236AD3C43564CE3FD393BEF36F">LexedFileChanged</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81BF34D7C379265BA04A1C1ED2A269989397253A">FileSkipped</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#842DBB7D3A5D8EDD75DC6EC0B1443479191672DA">InclusionDirective</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4655784CA794E51DD54B684523B5687CF6A69A4D">EnteredSubmodule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1EC1B99AE1243C656394437FDB7A1A3DFFA0D498">LeftSubmodule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC8BE9364422F005AB0D86AD99344F9B5A0C0EC7">moduleImport</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DDDF8B2D02076FB30BAB7B8C6BA51F3924405F6">EndOfMainFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6937976B1E984AB6369C1A21BE5EEBD46270F44">Ident</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C748BEE509569B59A6589C173F1AA5B49CF51D59">PragmaDirective</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F07797E6D35E61CB570F052EE1E4517AB521556">PragmaComment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#06273D5528DDCB33BE464B7D44F01EB9AAF48259">PragmaMark</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6EAB41F4CEF46FDA7457CEB16311F8F94F9C378F">PragmaDetectMismatch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C20F8380E4688FB7D8D2C4AE5B11AD4C84B73763">PragmaDebug</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA3535D8FFBE3E8E2B98E84EF2BFC5D8FED31D83">PragmaMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42F1D5460DEA38A39E67B38044B022607DEFF53C">PragmaDiagnosticPush</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2EF7FC27B964233523943181C8489BBAF682F5BD">PragmaDiagnosticPop</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE934284051B4A55FECAD8EDBE163431126C26F1">PragmaDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F446A38548DC6DFAAFE79F638066338E9508864">PragmaOpenCLExtension</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B057A7D00EBAAF72ABA8543E1FA68BB2A925C1E">PragmaWarning</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B833A68D3780D358C8B9FC225BD7DA86D9E6C40">PragmaWarningPush</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B1E8F76470FFC15FB1F52F042AEBB3DD50A4966F">PragmaWarningPop</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#029A6F923C9BDD2B96389F02A9E72F9E2BE8B764">PragmaExecCharsetPush</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E47696A91FA7BC7055C8CA3E706D3F242AA7B4B">PragmaExecCharsetPop</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D19842C47C61A379628ADF03B4619879ED7063A">PragmaAssumeNonNullBegin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27BB87BD9AABA3B91796F712DC6C9C2B79ACD7B8">PragmaAssumeNonNullEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D190EB6657908E90AF3EE225BF1D83FD19D18CAA">MacroExpands</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49859C9ECB4205F2F90C4BCBC3C2ED8AC28162EB">MacroDefined</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A361EBD1AC204BFF406A36C100D3EEA01DE1FC5">MacroUndefined</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2F5D9364A57AB9ACF46A04BAA049CF9D8C899AA">Defined</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4640B6F10702346C4FF5CCE39EE1C81AC293C33">HasInclude</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CEF1C055A580236A5C1C32F57D7563E70C642FE5">SourceRangeSkipped</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7401DEC08FD21E63D2C00F0BACE4C1888A6A386">If</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC7418FAE928481DB07F62B10CD3734B33B290F1">Elif</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BD6A296F4DC4313F1242E76D62950522049F551">Ifdef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#381650466E3867ECF752BA4D273CBBF92FF4B8DF">Elifdef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E3FC968AE17BC83E0F2B7CE149834F2D26B1269">Elifdef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CB84EDEFC0F8B74E09E3E2FEF6C82DD80415DCC">Ifndef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB478F47271626A7CDCF879B1FE061BC3FBAC26C">Elifndef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0453CB19933A894568387BA92C6AE09123B3EEF">Elifndef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C727F0D0F2C6ECEB828CDD9A78ECF64AAAD943B2">Else</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A8F39D677E0E1E7CC0BDF8351AD32D54950BA01">Endif</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#30F840CA44964F56978A7E1808B02EFF46048728">FileChangeReason</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D69B42CC7DCD923CAD5AB1C885C201AC4DB8383B">LexedFileChangeReason</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E835E81B65A92BF8CC34FBCFA8B391662FC0150">PragmaMessageKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D16194819B11979CC69D1BE977D81D5FD9328F4B">PragmaWarningSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDFBEEEB394FC99C0188BD7E8B0594CB38B690C1">ConditionValueKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

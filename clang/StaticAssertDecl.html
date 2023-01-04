@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StaticAssertDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StaticAssertDecl</h1>
+    <p>Defined at line 3971 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a C++11 static_assert declaration.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Decl.html">Decl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="10E7670226EC86F21F001923C4954191A07CBF8F">Create</h3>
+      <p>
+        public StaticAssertDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StaticAssertLoc, Expr * AssertExpr, StringLiteral * Message, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParenLoc, _Bool Failed)
+      </p>
+      <h3 id="9838BF038F0529BCFF144CCA5C6C4AE7F0FADED2">CreateDeserialized</h3>
+      <p>public StaticAssertDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="5CC7401B53050672EF74B7FFE21A5084FCCD888B">getAssertExpr</h3>
+      <p>public Expr * getAssertExpr()</p>
+      <p>Defined at line 3994 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="AA896900FA8E63BB112172973F2D953A11A4E8D8">getAssertExpr</h3>
+      <p>public const Expr * getAssertExpr()</p>
+      <p>Defined at line 3995 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="36F494EEF3073AD14396315407A7864B61512262">getMessage</h3>
+      <p>public StringLiteral * getMessage()</p>
+      <p>Defined at line 3997 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="FFBC259387EB92A558241566576C91CB31BF670B">getMessage</h3>
+      <p>public const StringLiteral * getMessage()</p>
+      <p>Defined at line 3998 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="D57C874B4F4C2709C5CB91A51FC602F8F69461C1">isFailed</h3>
+      <p>public _Bool isFailed()</p>
+      <p>Defined at line 4000 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="9C1D2F56FF1C5548BE2C0097F9D250CFB29FEFFB">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 4002 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="25E6A949369373C3B83AF2E6DCBF2FE1CE03A4BA">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 4004 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="5AB2D302840719062F84E87A300587811F2BD201">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 4008 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="F8E1CBCC68655C6E19595A96DA3396C9B16D3556">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 4009 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#10E7670226EC86F21F001923C4954191A07CBF8F">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9838BF038F0529BCFF144CCA5C6C4AE7F0FADED2">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5CC7401B53050672EF74B7FFE21A5084FCCD888B">getAssertExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA896900FA8E63BB112172973F2D953A11A4E8D8">getAssertExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#36F494EEF3073AD14396315407A7864B61512262">getMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FFBC259387EB92A558241566576C91CB31BF670B">getMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D57C874B4F4C2709C5CB91A51FC602F8F69461C1">isFailed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C1D2F56FF1C5548BE2C0097F9D250CFB29FEFFB">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25E6A949369373C3B83AF2E6DCBF2FE1CE03A4BA">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AB2D302840719062F84E87A300587811F2BD201">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8E1CBCC68655C6E19595A96DA3396C9B16D3556">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

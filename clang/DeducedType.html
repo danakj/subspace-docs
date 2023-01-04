@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DeducedType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DeducedType</h1>
+    <p>Defined at line 5212 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Common base class for placeholders for types that get replaced by placeholder type deduction: C++11 auto, C++14 decltype(auto), C++17 deduced class template types, and constrained type names.</p>
+        <p> These types are usually a placeholder for a deduced type. However, before the initializer is attached, or (usually) if the initializer is type-dependent, there is no deduced type and the type is canonical. In the latter case, it is also a dependent type.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4F522968585010C4CB669D7C118E4150388BB1DB">DeducedType</h3>
+      <p>
+        protected void DeducedType(
+        <a href="../clang/Type/TypeClass.html">TypeClass</a>
+         TC, 
+        <a href="QualType.html">QualType</a>
+         DeducedAsType, 
+        <a href="../clang/TypeDependenceScope/TypeDependence.html">TypeDependence</a>
+         ExtraDependence, 
+        <a href="QualType.html">QualType</a>
+         Canon)
+      </p>
+      <p>Defined at line 5216 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="6458F1B6C528756CC32CBB4FB16D5B7954B74EBF">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 5226 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="B28E1710B3E5025C69B71C14930810A2A92D6B5D">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 5227 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="144C4441B0F575E3CDDA8DD2512D3BB635473E0D">getDeducedType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getDeducedType()
+      </p>
+      <p>Defined at line 5233 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Get the type deduced for this placeholder type, or null if it has not been deduced.</p>
+        </div>
+      </div>
+      <h3 id="9500BD74C0D8B0665285A10AC7C3C456904085BB">isDeduced</h3>
+      <p>public _Bool isDeduced()</p>
+      <p>Defined at line 5234 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="C8D35DC303A727C84368EF2FD15CFBF71C1FB7A5">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 5238 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4F522968585010C4CB669D7C118E4150388BB1DB">DeducedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6458F1B6C528756CC32CBB4FB16D5B7954B74EBF">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B28E1710B3E5025C69B71C14930810A2A92D6B5D">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#144C4441B0F575E3CDDA8DD2512D3BB635473E0D">getDeducedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9500BD74C0D8B0665285A10AC7C3C456904085BB">isDeduced</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C8D35DC303A727C84368EF2FD15CFBF71C1FB7A5">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

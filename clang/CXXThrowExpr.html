@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXThrowExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXThrowExpr</h1>
+    <p>Defined at line 1187 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> A C++ throw-expression (C++ [except.throw]).</p>
+        <p> This handles &apos;throw&apos; (for re-throwing the current exception) and &apos;throw&apos; assignment-expression.  When assignment-expression isn&apos;t present, Op will be null.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E8815D5180E23FAA595E8033337E95CF208773E2">CXXThrowExpr</h3>
+      <p>
+        public void CXXThrowExpr(Expr * Operand, 
+        <a href="QualType.html">QualType</a>
+         Ty, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, _Bool IsThrownVariableInScope)
+      </p>
+      <p>Defined at line 1198 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> is the void type which is used as the result type of the expression. The  is the location of the throw keyword. is the expression in the throw statement, and can be null if not present.</p>
+        </div>
+      </div>
+      <h3 id="F7B38A48BBC5DA330A5D30E3BCA6D700CC53057A">CXXThrowExpr</h3>
+      <p>
+        public void CXXThrowExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 1205 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="17B5E08F7DF50FE30D66F94CF00F93EAF832AEE1">getSubExpr</h3>
+      <p>public const Expr * getSubExpr()</p>
+      <p>Defined at line 1207 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="320871DFB26EFCBD0C026615D182A43D6350678A">getSubExpr</h3>
+      <p>public Expr * getSubExpr()</p>
+      <p>Defined at line 1208 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="793312C34576418479485683834DC9F61D2C62C4">getThrowLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getThrowLoc()
+      </p>
+      <p>Defined at line 1210 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="7CFFF9F56E50E4C818E96D4E5731A10F5187B231">isThrownVariableInScope</h3>
+      <p>public _Bool isThrownVariableInScope()</p>
+      <p>Defined at line 1217 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determines whether the variable thrown by this expression (if any!) is within the innermost try block.</p>
+          <p> This information is required to determine whether the NRVO can apply to this variable.</p>
+        </div>
+      </div>
+      <h3 id="E569854BD7960FE2D334F32A016AA63AF3A2C5F3">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1221 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="0C000A3560B52A2D8EBBDF59D427CBCCCF47E7D5">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1222 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="AEBD981299268340FF66999A7B1BD1507CECB3F2">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 1228 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="24C4354C83F587DCA922A0074433C5145C4482C0">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1233 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="E08D3F63B07FC9E0BD0EDE67D51455418B034C52">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1237 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E8815D5180E23FAA595E8033337E95CF208773E2">CXXThrowExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7B38A48BBC5DA330A5D30E3BCA6D700CC53057A">CXXThrowExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17B5E08F7DF50FE30D66F94CF00F93EAF832AEE1">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#320871DFB26EFCBD0C026615D182A43D6350678A">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#793312C34576418479485683834DC9F61D2C62C4">getThrowLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7CFFF9F56E50E4C818E96D4E5731A10F5187B231">isThrownVariableInScope</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E569854BD7960FE2D334F32A016AA63AF3A2C5F3">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C000A3560B52A2D8EBBDF59D427CBCCCF47E7D5">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AEBD981299268340FF66999A7B1BD1507CECB3F2">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24C4354C83F587DCA922A0074433C5145C4482C0">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E08D3F63B07FC9E0BD0EDE67D51455418B034C52">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

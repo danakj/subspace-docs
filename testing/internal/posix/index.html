@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace posix</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal/posix" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace posix</h1>
+    <div>
+      <div>
+        <p> The testing::internal::posix namespace holds wrappers for common POSIX functions.  These wrappers hide the differences between Windows/MSVC and POSIX systems.  Since some compilers define these standard functions as macros, the wrapper cannot have the same name as the wrapped function.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0CBC158C027E5E16713A7242188F97AF9607EFC0">FileNo</h3>
+      <p>int FileNo(FILE * file)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2040">2040</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="CCC63C501D20C95B2C3A6D61C912ACBBFACB36C8">DoIsATTY</h3>
+      <p>int DoIsATTY(int fd)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2041">2041</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="BD53F5F599FF717A903B7AC71423F4DB0E8FEEFE">Stat</h3>
+      <p>int Stat(const char * path, StatStruct * buf)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2042">2042</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="FC0DDB173A91EF3724E0DE8AECABEA8879452651">StrCaseCmp</h3>
+      <p>int StrCaseCmp(const char * s1, const char * s2)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2043">2043</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="829BF788BF8E9A0239B520CBAE8726E09A13F67F">StrDup</h3>
+      <p>char * StrDup(const char * src)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2046">2046</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="CA1EC8A9E85EDF9C5ED79C5C0172C22830C48932">RmDir</h3>
+      <p>int RmDir(const char * dir)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2047">2047</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="D5DEAB1EA3ACD7C33A0A9BE3DCC28F61146EFD94">IsDir</h3>
+      <p>_Bool IsDir(const StatStruct &amp; st)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2048">2048</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="7E10A92A49A4B895F9F6F9A05A25F469A0E1A50E">IsATTY</h3>
+      <p>int IsATTY(int fd)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2052">2052</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="B5700C776F5DDD613118042A0118C02EBB00206E">ChDir</h3>
+      <p>int ChDir(const char * dir)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2073">2073</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="F25324632F615716ECC67B86C5A1E5394584A962">FOpen</h3>
+      <p>FILE * FOpen(const char * path, const char * mode)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2075">2075</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="9B5AF4A1BABD57E8841A2EF1CF5D1E4E48B2D8BE">FReopen</h3>
+      <p>FILE * FReopen(const char * path, const char * mode, FILE * stream)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2087">2087</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="7F1D0E4D62CBB0305A3A832F421022BD2B056789">FDOpen</h3>
+      <p>FILE * FDOpen(int fd, const char * mode)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2090">2090</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="F1D369FEBC9E4175461F470AE295558CD6218CD7">FClose</h3>
+      <p>int FClose(FILE * fp)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2092">2092</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="ECC6F26CE39B01EE63CFA20AAD21F92BB07849BD">Read</h3>
+      <p>int Read(int fd, void * buf, unsigned int count)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2094">2094</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="E91578A14EBC16D8169917A1CCD2E38702C785E1">Write</h3>
+      <p>int Write(int fd, const void * buf, unsigned int count)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2097">2097</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="B1A50B8219C996312D81A3F365AAF5A71A6B76DC">Close</h3>
+      <p>int Close(int fd)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2100">2100</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="39DD8A9D8ADB2577D7757945F9C8F491C4DC5158">StrError</h3>
+      <p>const char * StrError(int errnum)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2101">2101</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="10D72EE1378DF4BA5B0AF6D23A2DD79E04BCF15B">GetEnv</h3>
+      <p>const char * GetEnv(const char * name)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2103">2103</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="A7DB6A665AC2AEF6570760F0AFAA7BD13654985B">Abort</h3>
+      <p>void Abort()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#2127">2127</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0CBC158C027E5E16713A7242188F97AF9607EFC0">FileNo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CCC63C501D20C95B2C3A6D61C912ACBBFACB36C8">DoIsATTY</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD53F5F599FF717A903B7AC71423F4DB0E8FEEFE">Stat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC0DDB173A91EF3724E0DE8AECABEA8879452651">StrCaseCmp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#829BF788BF8E9A0239B520CBAE8726E09A13F67F">StrDup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA1EC8A9E85EDF9C5ED79C5C0172C22830C48932">RmDir</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5DEAB1EA3ACD7C33A0A9BE3DCC28F61146EFD94">IsDir</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E10A92A49A4B895F9F6F9A05A25F469A0E1A50E">IsATTY</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5700C776F5DDD613118042A0118C02EBB00206E">ChDir</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F25324632F615716ECC67B86C5A1E5394584A962">FOpen</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B5AF4A1BABD57E8841A2EF1CF5D1E4E48B2D8BE">FReopen</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F1D0E4D62CBB0305A3A832F421022BD2B056789">FDOpen</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1D369FEBC9E4175461F470AE295558CD6218CD7">FClose</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ECC6F26CE39B01EE63CFA20AAD21F92BB07849BD">Read</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E91578A14EBC16D8169917A1CCD2E38702C785E1">Write</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B1A50B8219C996312D81A3F365AAF5A71A6B76DC">Close</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39DD8A9D8ADB2577D7757945F9C8F491C4DC5158">StrError</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10D72EE1378DF4BA5B0AF6D23A2DD79E04BCF15B">GetEnv</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7DB6A665AC2AEF6570760F0AFAA7BD13654985B">Abort</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

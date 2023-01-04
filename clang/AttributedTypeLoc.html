@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AttributedTypeLoc</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AttributedTypeLoc</h1>
+    <p>Defined at line 860 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+    <div>
+      <div>
+        <p> Type source information for an attributed type.</p>
+      </div>
+    </div>
+    <p>Inherits from ConcreteTypeLoc&lt;UnqualTypeLoc, AttributedTypeLoc, AttributedType, AttributedLocInfo&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5673A547CB2545ABD380953AEF3DCA2B99745F77">getAttrKind</h3>
+      <p>
+        public 
+        <a href="../clang/attr/Kind.html">Kind</a>
+         getAttrKind()
+      </p>
+      <p>Defined at line 865 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="0EE14FA801DFD99A4AE39AAD450C4A2D821A625A">isQualifier</h3>
+      <p>public _Bool isQualifier()</p>
+      <p>Defined at line 869 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="8C0284DD10B5CF8036D0C00296073755C13A0499">getModifiedLoc</h3>
+      <p>
+        public 
+        <a href="TypeLoc.html">TypeLoc</a>
+         getModifiedLoc()
+      </p>
+      <p>Defined at line 877 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> The modified type, which is generally canonically different from the attribute type.    int main(int, char**) __attribute__((noreturn))    ~~~     ~~~~~~~~~~~~~</p>
+        </div>
+      </div>
+      <h3 id="97FA585DB409C7C3D5E800E89E299216767CE513">getAttr</h3>
+      <p>public const Attr * getAttr()</p>
+      <p>Defined at line 882 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> The type attribute.</p>
+        </div>
+      </div>
+      <h3 id="40255F129A49D1CDCDDB1FCED2E78CCD6B5A995A">setAttr</h3>
+      <p>public void setAttr(const Attr * A)</p>
+      <p>Defined at line 885 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="4A4B811F6CC95DE4EDD4444E1FE4EF4B29103756">getAttrAs</h3>
+      <p>public const T * getAttrAs()</p>
+      <p>Defined at line 889 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="512D1BB28A6E26E7CDA029436685855D7433352A">getLocalSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getLocalSourceRange()
+      </p>
+      <h3 id="97ABC8E5C6A46D29AB232E42CBEA347CBB44DF4B">initializeLocal</h3>
+      <p>
+        public void initializeLocal(ASTContext &amp; Context, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         loc)
+      </p>
+      <p>Defined at line 895 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="584244E80645370642FB9707A8AAAD0A0C001FD5">getInnerType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getInnerType()
+      </p>
+      <p>Defined at line 899 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5673A547CB2545ABD380953AEF3DCA2B99745F77">getAttrKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EE14FA801DFD99A4AE39AAD450C4A2D821A625A">isQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8C0284DD10B5CF8036D0C00296073755C13A0499">getModifiedLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97FA585DB409C7C3D5E800E89E299216767CE513">getAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#40255F129A49D1CDCDDB1FCED2E78CCD6B5A995A">setAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A4B811F6CC95DE4EDD4444E1FE4EF4B29103756">getAttrAs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#512D1BB28A6E26E7CDA029436685855D7433352A">getLocalSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97ABC8E5C6A46D29AB232E42CBEA347CBB44DF4B">initializeLocal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#584244E80645370642FB9707A8AAAD0A0C001FD5">getInnerType</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

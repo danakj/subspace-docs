@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ContainerEqMatcher</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ContainerEqMatcher</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#2336">2336</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Implements an equality matcher for any STL-style container whose elements support ==. This matcher is like Eq(), but its failure explanations provide more detailed information that is useful when the container is used as a set. The failure message reports elements that are in one of the operands but not the other. The failure messages do not report duplicate or out-of-order elements in the containers (which don&apos;t properly matter to sets, but can occur if the containers are vectors or lists, for example).</p>
+        <p> Uses the container&apos;s const_iterator, value_type, operator ==, begin(), and end().</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="665E69EE774D0832BB852A208CEBCF9D918187FF">ContainerEqMatcher&lt;Container&gt;</h3>
+      <p>public void ContainerEqMatcher&lt;Container&gt;(const Container &amp; expected)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#2349">2349</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> We make a copy of expected in case the elements in it are modified after this matcher is created.</p>
+        </div>
+      </div>
+      <h3 id="D5646BD93233E7D31291D7B5F3D117661F034C26">DescribeTo</h3>
+      <p>public void DescribeTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#2352">2352</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="DA5B544E282E46F4A98AEE712DAAAA1DD479A0EE">DescribeNegationTo</h3>
+      <p>public void DescribeNegationTo(::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#2356">2356</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <h3 id="0982B00141CC27757DE77A55AB46E83474B1800A">MatchAndExplain</h3>
+      <p>public _Bool MatchAndExplain(const LhsContainer &amp; lhs, MatchResultListener * listener)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#2362">2362</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#665E69EE774D0832BB852A208CEBCF9D918187FF">ContainerEqMatcher&lt;Container&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5646BD93233E7D31291D7B5F3D117661F034C26">DescribeTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA5B544E282E46F4A98AEE712DAAAA1DD479A0EE">DescribeNegationTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0982B00141CC27757DE77A55AB46E83474B1800A">MatchAndExplain</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

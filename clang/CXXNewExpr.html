@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXNewExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXNewExpr</h1>
+    <p>Defined at line 2145 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a new-expression for memory allocation and constructor calls, e.g: &quot;new CXXNewExpr(foo)&quot;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;CXXNewExpr, Stmt *, SourceRange&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B034E868995567A2FB8B0044AB3EDC46DD069FA7">Create</h3>
+      <p>
+        public CXXNewExpr * Create(const ASTContext &amp; Ctx, _Bool IsGlobalNew, FunctionDecl * OperatorNew, FunctionDecl * OperatorDelete, _Bool ShouldPassAlignment, _Bool UsualArrayDeleteWantsSize, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         PlacementArgs, 
+        <a href="SourceRange.html">SourceRange</a>
+         TypeIdParens, 
+        <a href="../std/optional.html">optional</a>
+         ArraySize, 
+        <a href="../clang/CXXNewExpr/InitializationStyle.html">InitializationStyle</a>
+         InitializationStyle, Expr * Initializer, 
+        <a href="QualType.html">QualType</a>
+         Ty, TypeSourceInfo * AllocatedTypeInfo, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="SourceRange.html">SourceRange</a>
+         DirectInitRange)
+      </p>
+      <div>
+        <div>
+          <p> Create a c++ new expression.</p>
+        </div>
+      </div>
+      <h3 id="A0E11DA33C779368DC150D7514C7835CC38BE35B">CreateEmpty</h3>
+      <p>public CXXNewExpr * CreateEmpty(const ASTContext &amp; Ctx, _Bool IsArray, _Bool HasInit, unsigned int NumPlacementArgs, _Bool IsParenTypeId)</p>
+      <div>
+        <div>
+          <p> Create an empty c++ new expression.</p>
+        </div>
+      </div>
+      <h3 id="8E17FAC64A7DEEA4C932B252DFA293F01C910E16">getAllocatedType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getAllocatedType()
+      </p>
+      <p>Defined at line 2238 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="9F5E68B3865ACB358B6287FAF4175C40C335ACE7">getAllocatedTypeSourceInfo</h3>
+      <p>public TypeSourceInfo * getAllocatedTypeSourceInfo()</p>
+      <p>Defined at line 2242 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B173343A5A270135E66FDE14F89922400E9D21D4">shouldNullCheckAllocation</h3>
+      <p>public _Bool shouldNullCheckAllocation()</p>
+      <div>
+        <div>
+          <p> True if the allocation result needs to be null-checked.</p>
+          <p> C++11 [expr.new]p13:   If the allocation function returns null, initialization shall   not be done, the deallocation function shall not be called,   and the value of the new-expression shall be null.</p>
+          <p> C++ DR1748:   If the allocation function is a reserved placement allocation   function that returns null, the behavior is undefined.</p>
+          <p> An allocation function is not allowed to return null unless it has a non-throwing exception-specification.  The &apos;03 rule is identical except that the definition of a non-throwing exception specification is just &quot;is it throw()?&quot;.</p>
+        </div>
+      </div>
+      <h3 id="79673194BBD81F8F04F821947B92574D02F83D93">getOperatorNew</h3>
+      <p>public FunctionDecl * getOperatorNew()</p>
+      <p>Defined at line 2263 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="EECA245F5FD8769467C4B5DF14CCC67A091105BA">setOperatorNew</h3>
+      <p>public void setOperatorNew(FunctionDecl * D)</p>
+      <p>Defined at line 2264 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="EE6C6F64964F83CE86EDAE45956BC81998C94906">getOperatorDelete</h3>
+      <p>public FunctionDecl * getOperatorDelete()</p>
+      <p>Defined at line 2265 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="A8416D41D0DA93FC7849DF008BB4DCBAB774DD13">setOperatorDelete</h3>
+      <p>public void setOperatorDelete(FunctionDecl * D)</p>
+      <p>Defined at line 2266 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="487206C9CD661235C9F4F10F2FFA32050B81A268">isArray</h3>
+      <p>public _Bool isArray()</p>
+      <p>Defined at line 2268 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="CE88DA21851F76CA8051F2B70F32BE474C3C0178">getArraySize</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getArraySize()
+      </p>
+      <p>Defined at line 2273 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> This might return std::nullopt even if isArray() returns true, since there might not be an array size expression. If the result is not-None, it will never wrap a nullptr.</p>
+        </div>
+      </div>
+      <h3 id="D7312358824E8C52C59DC50AF038F21513C9F75A">getArraySize</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getArraySize()
+      </p>
+      <p>Defined at line 2287 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> This might return std::nullopt even if isArray() returns true, since there might not be an array size expression. If the result is not-None, it will never wrap a nullptr.</p>
+        </div>
+      </div>
+      <h3 id="B4014F0596710BD9B09B1DBB333A7B77A76A115D">getNumPlacementArgs</h3>
+      <p>public unsigned int getNumPlacementArgs()</p>
+      <p>Defined at line 2298 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="AB3CB5BA9320E604BAC5153134A9A34E3DBBF5FE">getPlacementArgs</h3>
+      <p>public Expr ** getPlacementArgs()</p>
+      <p>Defined at line 2302 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="61C41866FD80DCA2A165CE7EC4E5CF68098DB2C6">getPlacementArg</h3>
+      <p>public Expr * getPlacementArg(unsigned int I)</p>
+      <p>Defined at line 2307 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="D7B356DAB711EAA1CB7824FDC835EECF6B13A544">getPlacementArg</h3>
+      <p>public const Expr * getPlacementArg(unsigned int I)</p>
+      <p>Defined at line 2311 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="C95B074DC86EC82B67F6E4FCDBE3E188E1B7FACB">isParenTypeId</h3>
+      <p>public _Bool isParenTypeId()</p>
+      <p>Defined at line 2315 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="D3DBB45B14752B0169C5EEECBE9685F4AF33F93C">getTypeIdParens</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getTypeIdParens()
+      </p>
+      <p>Defined at line 2316 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="9BB070AA83859BE16A392B8014510EC718BFA9DE">isGlobalNew</h3>
+      <p>public _Bool isGlobalNew()</p>
+      <p>Defined at line 2321 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="1490D1A81B7483131908C1D9336A27B3CD799209">hasInitializer</h3>
+      <p>public _Bool hasInitializer()</p>
+      <p>Defined at line 2324 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Whether this new-expression has any initializer at all.</p>
+        </div>
+      </div>
+      <h3 id="6C90D321B55F374534E6BE3814211C98B7893016">getInitializationStyle</h3>
+      <p>
+        public 
+        <a href="../clang/CXXNewExpr/InitializationStyle.html">InitializationStyle</a>
+         getInitializationStyle()
+      </p>
+      <p>Defined at line 2329 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> The kind of initializer this new-expression has.</p>
+        </div>
+      </div>
+      <h3 id="FE3DC5BF8AA1E0D1E81637A4A701BA634411F8F8">getInitializer</h3>
+      <p>public Expr * getInitializer()</p>
+      <p>Defined at line 2337 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> The initializer of this new-expression.</p>
+        </div>
+      </div>
+      <h3 id="883C5B276AAA07AB47DC1B9423AD18BA536F81D7">getInitializer</h3>
+      <p>public const Expr * getInitializer()</p>
+      <p>Defined at line 2342 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="4E2C5D08B741405172A01E03D53D17020CCC29D0">getConstructExpr</h3>
+      <p>public const CXXConstructExpr * getConstructExpr()</p>
+      <p>Defined at line 2349 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Returns the CXXConstructExpr from this new-expression, or null.</p>
+        </div>
+      </div>
+      <h3 id="64CD3D94C449A2C7BF072322AC55AF079DF3C422">passAlignment</h3>
+      <p>public _Bool passAlignment()</p>
+      <p>Defined at line 2355 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Indicates whether the required alignment should be implicitly passed to the allocation function.</p>
+        </div>
+      </div>
+      <h3 id="305A198BD801D3D2A3524220CAF7CD148856A3CD">doesUsualArrayDeleteWantSize</h3>
+      <p>public _Bool doesUsualArrayDeleteWantSize()</p>
+      <p>Defined at line 2360 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Answers whether the usual array deallocation function for the allocated type expects the size of the allocation as a parameter.</p>
+        </div>
+      </div>
+      <h3 id="41F501B946DD14D54252FEA12E904F5955369EC8">placement_arguments</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         placement_arguments()
+      </p>
+      <p>Defined at line 2367 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="6833CFB6212F466337EB0A1A4CACA33AE2A6DC15">placement_arguments</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         placement_arguments()
+      </p>
+      <p>Defined at line 2371 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="12AC2532932E21EFFE18E4DE89BC2138873EF030">placement_arg_begin</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         placement_arg_begin()
+      </p>
+      <p>Defined at line 2375 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="07FE630F452618901A329988B8D5F0FB4D5F849C">placement_arg_end</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         placement_arg_end()
+      </p>
+      <p>Defined at line 2378 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="48311E0FA8015252CD1D8980C2955D6BB7969A9A">placement_arg_begin</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         placement_arg_begin()
+      </p>
+      <p>Defined at line 2381 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="FDD663C118C86D874C22E96D7809A154165BA2CC">placement_arg_end</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         placement_arg_end()
+      </p>
+      <p>Defined at line 2384 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="06639EDB438C5FCB148EED5DDCA3E8F7257F3C0F">raw_arg_begin</h3>
+      <p>public raw_arg_iterator raw_arg_begin()</p>
+      <p>Defined at line 2390 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="FA15F7738B27F570176333884951F0FE8A2408CD">raw_arg_end</h3>
+      <p>public raw_arg_iterator raw_arg_end()</p>
+      <p>Defined at line 2391 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B5E92802AB118F688E57F70BC63966C60BBB6DC1">raw_arg_begin</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         raw_arg_begin()
+      </p>
+      <p>Defined at line 2394 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="746BBA31A1BA57C42F32421A8C36101130625E22">raw_arg_end</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         raw_arg_end()
+      </p>
+      <p>Defined at line 2397 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="747AF8FC19EE04ED27185BE43C1CA741BD0D654B">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2401 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="A02685B144DF83759D60195BE42051119A3733B1">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2402 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="45B3D84184511620FB93E406C5CD0A50A34AFB33">getDirectInitRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getDirectInitRange()
+      </p>
+      <p>Defined at line 2404 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="02CE6BF17CC8A2444D80931D2168C5CB26305BFF">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 2405 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="A3D6202E35574F4BB9ACE4922C6344301EC78A98">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2407 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="D8C28B849F5B016FF6E099D0CCF8ADC90CE1CD40">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2412 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="2EBAFE4163584870C2EE39E1832BF35D35F7C3FD">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2414 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="AC1882A95844EF6F44839D4550CB76149212A2E3">enum InitializationStyle</h3>
+      <ul>
+        <li>NoInit</li>
+        <li>CallInit</li>
+        <li>ListInit</li>
+      </ul>
+      <p>Defined at line 2197 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B034E868995567A2FB8B0044AB3EDC46DD069FA7">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0E11DA33C779368DC150D7514C7835CC38BE35B">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E17FAC64A7DEEA4C932B252DFA293F01C910E16">getAllocatedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F5E68B3865ACB358B6287FAF4175C40C335ACE7">getAllocatedTypeSourceInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B173343A5A270135E66FDE14F89922400E9D21D4">shouldNullCheckAllocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79673194BBD81F8F04F821947B92574D02F83D93">getOperatorNew</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EECA245F5FD8769467C4B5DF14CCC67A091105BA">setOperatorNew</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE6C6F64964F83CE86EDAE45956BC81998C94906">getOperatorDelete</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8416D41D0DA93FC7849DF008BB4DCBAB774DD13">setOperatorDelete</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#487206C9CD661235C9F4F10F2FFA32050B81A268">isArray</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE88DA21851F76CA8051F2B70F32BE474C3C0178">getArraySize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7312358824E8C52C59DC50AF038F21513C9F75A">getArraySize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4014F0596710BD9B09B1DBB333A7B77A76A115D">getNumPlacementArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB3CB5BA9320E604BAC5153134A9A34E3DBBF5FE">getPlacementArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61C41866FD80DCA2A165CE7EC4E5CF68098DB2C6">getPlacementArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7B356DAB711EAA1CB7824FDC835EECF6B13A544">getPlacementArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C95B074DC86EC82B67F6E4FCDBE3E188E1B7FACB">isParenTypeId</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3DBB45B14752B0169C5EEECBE9685F4AF33F93C">getTypeIdParens</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BB070AA83859BE16A392B8014510EC718BFA9DE">isGlobalNew</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1490D1A81B7483131908C1D9336A27B3CD799209">hasInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C90D321B55F374534E6BE3814211C98B7893016">getInitializationStyle</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE3DC5BF8AA1E0D1E81637A4A701BA634411F8F8">getInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#883C5B276AAA07AB47DC1B9423AD18BA536F81D7">getInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E2C5D08B741405172A01E03D53D17020CCC29D0">getConstructExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64CD3D94C449A2C7BF072322AC55AF079DF3C422">passAlignment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#305A198BD801D3D2A3524220CAF7CD148856A3CD">doesUsualArrayDeleteWantSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#41F501B946DD14D54252FEA12E904F5955369EC8">placement_arguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6833CFB6212F466337EB0A1A4CACA33AE2A6DC15">placement_arguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12AC2532932E21EFFE18E4DE89BC2138873EF030">placement_arg_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07FE630F452618901A329988B8D5F0FB4D5F849C">placement_arg_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48311E0FA8015252CD1D8980C2955D6BB7969A9A">placement_arg_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FDD663C118C86D874C22E96D7809A154165BA2CC">placement_arg_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#06639EDB438C5FCB148EED5DDCA3E8F7257F3C0F">raw_arg_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA15F7738B27F570176333884951F0FE8A2408CD">raw_arg_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5E92802AB118F688E57F70BC63966C60BBB6DC1">raw_arg_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#746BBA31A1BA57C42F32421A8C36101130625E22">raw_arg_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#747AF8FC19EE04ED27185BE43C1CA741BD0D654B">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A02685B144DF83759D60195BE42051119A3733B1">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45B3D84184511620FB93E406C5CD0A50A34AFB33">getDirectInitRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02CE6BF17CC8A2444D80931D2168C5CB26305BFF">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3D6202E35574F4BB9ACE4922C6344301EC78A98">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8C28B849F5B016FF6E099D0CCF8ADC90CE1CD40">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2EBAFE4163584870C2EE39E1832BF35D35F7C3FD">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#AC1882A95844EF6F44839D4550CB76149212A2E3">InitializationStyle</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

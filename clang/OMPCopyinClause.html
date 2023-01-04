@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPCopyinClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPCopyinClause</h1>
+    <p>Defined at line 4279 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents clause &apos;copyin&apos; in the &apos;#pragma omp ...&apos; directives.</p>
+        <p> In this example directive &apos;#pragma omp parallel&apos; has clause &apos;copyin&apos; with the variables &apos;a&apos; and &apos;b&apos;.</p>
+      </div>
+    </div>
+    <p>Inherits from OMPVarListClause&lt;OMPCopyinClause&gt;, llvm::TrailingObjects&lt;OMPCopyinClause, Expr *&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="12C4708DB9D4E39CB1A0E4E65AE591F602DDC8E8">Create</h3>
+      <p>
+        public OMPCopyinClause * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         VL, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         SrcExprs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         DstExprs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         AssignmentOps)
+      </p>
+      <div>
+        <div>
+          <p> Creates clause with a list of variables </p>
+          <p> Required for proper codegen of propagation of master&apos;s thread values of threadprivate variables to local instances of that variables in other implicit threads.</p>
+        </div>
+      </div>
+      <h3 id="C58C32401139522291FD22AEAD019938AFC3E905">CreateEmpty</h3>
+      <p>public OMPCopyinClause * CreateEmpty(const ASTContext &amp; C, unsigned int N)</p>
+      <div>
+        <div>
+          <p> Creates an empty clause with  variables.</p>
+        </div>
+      </div>
+      <h3 id="EEDFC6225AEE896009EEB14C49CF6820E47AD4B5">source_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         source_exprs()
+      </p>
+      <p>Defined at line 4397 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="4EE64C8E8B9D8E11FE7CD936C8DC5A9B92DF6C2E">source_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         source_exprs()
+      </p>
+      <p>Defined at line 4402 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="DF5E16A3834C194739AE3A5292CCD324D6AF398F">destination_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         destination_exprs()
+      </p>
+      <p>Defined at line 4406 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="FE638926F7F0D03D242971EF53D6CCBB10A9393F">destination_exprs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         destination_exprs()
+      </p>
+      <p>Defined at line 4411 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="3944166F2931BEB385A2163CFC897B012859D33E">assignment_ops</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         assignment_ops()
+      </p>
+      <p>Defined at line 4416 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="051B25D25F8A96DEA283AB59CA5667B19C83C588">assignment_ops</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         assignment_ops()
+      </p>
+      <p>Defined at line 4421 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="94152801CC07EBC7A027218F9B82F5A0C4C5CF68">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4426 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="176038C91292AC594453E73674EFD714F5586604">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4431 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="6D36DAF46F175386D3E6153D165BDB37311A4C84">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 4436 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="43A6BE53E9F3773E443D5008E9535C5036AE31A4">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 4439 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="4923AC3F35E9C12B7D6F76A2436A76901374BD14">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 4443 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#12C4708DB9D4E39CB1A0E4E65AE591F602DDC8E8">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C58C32401139522291FD22AEAD019938AFC3E905">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EEDFC6225AEE896009EEB14C49CF6820E47AD4B5">source_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4EE64C8E8B9D8E11FE7CD936C8DC5A9B92DF6C2E">source_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF5E16A3834C194739AE3A5292CCD324D6AF398F">destination_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE638926F7F0D03D242971EF53D6CCBB10A9393F">destination_exprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3944166F2931BEB385A2163CFC897B012859D33E">assignment_ops</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#051B25D25F8A96DEA283AB59CA5667B19C83C588">assignment_ops</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#94152801CC07EBC7A027218F9B82F5A0C4C5CF68">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#176038C91292AC594453E73674EFD714F5586604">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D36DAF46F175386D3E6153D165BDB37311A4C84">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#43A6BE53E9F3773E443D5008E9535C5036AE31A4">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4923AC3F35E9C12B7D6F76A2436A76901374BD14">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

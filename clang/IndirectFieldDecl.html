@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class IndirectFieldDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class IndirectFieldDecl</h1>
+    <p>Defined at line 3188 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    <div>
+      <div>
+        <p> Represents a field injected from an anonymous union/struct into the parent scope. These are always implicit.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ValueDecl.html">ValueDecl</a>
+      , Mergeable&lt;IndirectFieldDecl&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="86BB1EF8BEBDBACFDC3B14B6E2EA91B10D8CDF9D">Create</h3>
+      <p>
+        public IndirectFieldDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, IdentifierInfo * Id, 
+        <a href="QualType.html">QualType</a>
+         T, llvm::MutableArrayRef&lt;NamedDecl *&gt; CH)
+      </p>
+      <h3 id="277D2EC029554E9691A3395FC5ABC164AE4EB742">CreateDeserialized</h3>
+      <p>public IndirectFieldDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="9401AF7B716176A0D2F55B9566537333F4607DAE">chain</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         chain()
+      </p>
+      <p>Defined at line 3210 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="A79C504ABBBD56EE16B64402E9386B80E63F02FF">chain_begin</h3>
+      <p>public chain_iterator chain_begin()</p>
+      <p>Defined at line 3213 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="747CCDF204CFEFB7F2D4514825667C67018E9DEA">chain_end</h3>
+      <p>public chain_iterator chain_end()</p>
+      <p>Defined at line 3214 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="6B8D8730F34EAC8F7EB521879C32E7EE2B72EF73">getChainingSize</h3>
+      <p>public unsigned int getChainingSize()</p>
+      <p>Defined at line 3216 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="42DA60A8511841C8BA688CD0812F9898EF69644F">getAnonField</h3>
+      <p>public FieldDecl * getAnonField()</p>
+      <p>Defined at line 3218 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="FE6CC746CB4BA7B71C830289C75CD62EBA0EB58F">getVarDecl</h3>
+      <p>public VarDecl * getVarDecl()</p>
+      <p>Defined at line 3223 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="CB48B302C0284A93BD0E443C7FB0A60EBC151CCB">getCanonicalDecl</h3>
+      <p>public IndirectFieldDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3228 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="7EED0F8A703F6DEBFEEB166919F1934B3305D208">getCanonicalDecl</h3>
+      <p>public const IndirectFieldDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3229 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="13A4F16AD60765133CCC95509C312246676F5A5C">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3232 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="8489D2537F243E1C6E0909F0520CB942455B42C9">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3233 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#86BB1EF8BEBDBACFDC3B14B6E2EA91B10D8CDF9D">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#277D2EC029554E9691A3395FC5ABC164AE4EB742">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9401AF7B716176A0D2F55B9566537333F4607DAE">chain</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A79C504ABBBD56EE16B64402E9386B80E63F02FF">chain_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#747CCDF204CFEFB7F2D4514825667C67018E9DEA">chain_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B8D8730F34EAC8F7EB521879C32E7EE2B72EF73">getChainingSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42DA60A8511841C8BA688CD0812F9898EF69644F">getAnonField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE6CC746CB4BA7B71C830289C75CD62EBA0EB58F">getVarDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB48B302C0284A93BD0E443C7FB0A60EBC151CCB">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7EED0F8A703F6DEBFEEB166919F1934B3305D208">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13A4F16AD60765133CCC95509C312246676F5A5C">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8489D2537F243E1C6E0909F0520CB942455B42C9">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

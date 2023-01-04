@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class WebAssemblyImportNameAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class WebAssemblyImportNameAttr</h1>
+    <p>Defined at line 12908 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B787B4B21D44DC547ABD5A93DCA38CBD31427E1A">CreateImplicit</h3>
+      <p>
+        public WebAssemblyImportNameAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ImportName, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="50A5D3F179A79F79141CCFBDDA99537CC2D2A55A">Create</h3>
+      <p>
+        public WebAssemblyImportNameAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ImportName, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="866A9994D2BE7C2F0D36A681BF0EF952BC93E0E0">CreateImplicit</h3>
+      <p>
+        public WebAssemblyImportNameAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ImportName, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="BC60830F05D479D1AD0D018D659D297DFBF653BD">Create</h3>
+      <p>
+        public WebAssemblyImportNameAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ImportName, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="B3626CD7BD8373BCCBEF7986D07C2AC4274CCE2B">WebAssemblyImportNameAttr</h3>
+      <p>
+        public void WebAssemblyImportNameAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         ImportName)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="8BF6C1D8B183C2051BE0E406365C43B27373E264">clone</h3>
+      <p>public WebAssemblyImportNameAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="8F60291A2C3C69AD61AF5CCCB8F6136D31ECB093">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="0D31F2E55907AA17C1D025F1343FFAEB3F8A0F71">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="E59CDBD0DFCF789E0F1B37B0BE9F37EA63ED9D3F">getImportName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getImportName()
+      </p>
+      <p>Defined at line 12936 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="49A6A71CA163124894BCC4EFAA490693B643FCB0">getImportNameLength</h3>
+      <p>public unsigned int getImportNameLength()</p>
+      <p>Defined at line 12939 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="7D686FCA8AC90E299DD8DC1C3EF31D89664E0551">setImportName</h3>
+      <p>
+        public void setImportName(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 12942 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="96257E3CD17CBD33D9C48664E586299232AFE2C3">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 12951 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="A339EB088DFA91D8C3BE6BF3BC95A51BFC15E6EA">enum Spelling</h3>
+      <ul>
+        <li>GNU_import_name</li>
+        <li>CXX11_clang_import_name</li>
+        <li>C2x_clang_import_name</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 12913 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B787B4B21D44DC547ABD5A93DCA38CBD31427E1A">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#50A5D3F179A79F79141CCFBDDA99537CC2D2A55A">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#866A9994D2BE7C2F0D36A681BF0EF952BC93E0E0">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC60830F05D479D1AD0D018D659D297DFBF653BD">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3626CD7BD8373BCCBEF7986D07C2AC4274CCE2B">WebAssemblyImportNameAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8BF6C1D8B183C2051BE0E406365C43B27373E264">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F60291A2C3C69AD61AF5CCCB8F6136D31ECB093">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D31F2E55907AA17C1D025F1343FFAEB3F8A0F71">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E59CDBD0DFCF789E0F1B37B0BE9F37EA63ED9D3F">getImportName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49A6A71CA163124894BCC4EFAA490693B643FCB0">getImportNameLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D686FCA8AC90E299DD8DC1C3EF31D89664E0551">setImportName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96257E3CD17CBD33D9C48664E586299232AFE2C3">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A339EB088DFA91D8C3BE6BF3BC95A51BFC15E6EA">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

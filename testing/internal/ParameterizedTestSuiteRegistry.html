@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ParameterizedTestSuiteRegistry</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ParameterizedTestSuiteRegistry</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h#684">684</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h">gtest-param-util.h</a>
+    </p>
+    <div>
+      <div>
+        <p> INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.</p>
+        <p> ParameterizedTestSuiteRegistry contains a map of ParameterizedTestSuiteInfoBase classes accessed by test suite names. TEST_P and INSTANTIATE_TEST_SUITE_P macros use it to locate their corresponding ParameterizedTestSuiteInfo descriptors.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8B6DA66523D5132101989E344CDC724CCDDA4FA3">ParameterizedTestSuiteRegistry</h3>
+      <p>public void ParameterizedTestSuiteRegistry()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h#686">686</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h">gtest-param-util.h</a>
+      </p>
+      <h3 id="C96C075985ECF2EF80945F28BEEF0DD9C8C1B472">~ParameterizedTestSuiteRegistry</h3>
+      <p>public void ~ParameterizedTestSuiteRegistry()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h#687">687</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h">gtest-param-util.h</a>
+      </p>
+      <h3 id="0A74E0EA5C9A8FA64F1EA36925DA5D7D36DE56F2">GetTestSuitePatternHolder</h3>
+      <p>
+        public ParameterizedTestSuiteInfo&lt;TestSuite&gt; * GetTestSuitePatternHolder(const char * test_suite_name, 
+        <a href="CodeLocation.html">CodeLocation</a>
+         code_location)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h#696">696</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h">gtest-param-util.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Looks up or creates and returns a structure containing information about tests and instantiations of a particular test suite.</p>
+        </div>
+      </div>
+      <h3 id="6A1E0598BEA811FAF28A0E743F8D81AF59E03DE5">RegisterTests</h3>
+      <p>public void RegisterTests()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h#724">724</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h">gtest-param-util.h</a>
+      </p>
+      <h3 id="248ED641227739DBB7D3A08DDF00DA415E5D6E40">GetTestCasePatternHolder</h3>
+      <p>
+        public ParameterizedTestCaseInfo&lt;TestCase&gt; * GetTestCasePatternHolder(const char * test_case_name, 
+        <a href="CodeLocation.html">CodeLocation</a>
+         code_location)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h#732">732</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-param-util.h">gtest-param-util.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8B6DA66523D5132101989E344CDC724CCDDA4FA3">ParameterizedTestSuiteRegistry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C96C075985ECF2EF80945F28BEEF0DD9C8C1B472">~ParameterizedTestSuiteRegistry</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A74E0EA5C9A8FA64F1EA36925DA5D7D36DE56F2">GetTestSuitePatternHolder</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A1E0598BEA811FAF28A0E743F8D81AF59E03DE5">RegisterTests</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#248ED641227739DBB7D3A08DDF00DA415E5D6E40">GetTestCasePatternHolder</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

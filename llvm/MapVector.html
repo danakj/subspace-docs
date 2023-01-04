@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MapVector</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MapVector</h1>
+    <p>Defined at line 37 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+    <div>
+      <div>
+        <p> This class implements a map that also provides access to all stored values in a deterministic order. The values are kept in a std::vector and the mapping is done with DenseMap from Keys to indexes in that vector.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="57A2D45F20B4B96098CA967526836FE12E3236EC">takeVector</h3>
+      <p>public VectorType takeVector()</p>
+      <p>Defined at line 56 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <div>
+        <div>
+          <p> Clear the MapVector and return the underlying vector.</p>
+        </div>
+      </div>
+      <h3 id="FF6F21B82CCC1113BB8E252E51196DEF082A6AC3">size</h3>
+      <p>public size_type size()</p>
+      <p>Defined at line 61 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="F034515D2680F662D5754A90FB266ECF792CE068">reserve</h3>
+      <p>public void reserve(size_type NumEntries)</p>
+      <p>Defined at line 65 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <div>
+        <div>
+          <p> Grow the MapVector so that it can contain at least  items before resizing again.</p>
+        </div>
+      </div>
+      <h3 id="0391C43C43BECA3E9D5812C449B006744ADBBDF3">begin</h3>
+      <p>public iterator begin()</p>
+      <p>Defined at line 70 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="E1E1FF4676358163DD9E4BB91A1875DC1859497F">begin</h3>
+      <p>public const_iterator begin()</p>
+      <p>Defined at line 71 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="DE5B957690F7C2C7B41FE8760956635AE5B9DAB4">end</h3>
+      <p>public iterator end()</p>
+      <p>Defined at line 72 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="D7C9570B8079BB0754064E01B26BDF64596430F3">end</h3>
+      <p>public const_iterator end()</p>
+      <p>Defined at line 73 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="1B0333E0471F51E0433467375BA45B493DAC2E72">rbegin</h3>
+      <p>public reverse_iterator rbegin()</p>
+      <p>Defined at line 75 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="CF60F4F60283ECF577CDA76298DAE6BE406A5B82">rbegin</h3>
+      <p>public const_reverse_iterator rbegin()</p>
+      <p>Defined at line 76 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="38504F07F2F712B36ABBC5E40EA9D34C4AE3D3C1">rend</h3>
+      <p>public reverse_iterator rend()</p>
+      <p>Defined at line 77 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="D8CE6D63D480F736D889F44362C20DECE0A552F8">rend</h3>
+      <p>public const_reverse_iterator rend()</p>
+      <p>Defined at line 78 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="81809693AEBF708E5266A03735F4D1C7F104D95F">empty</h3>
+      <p>public _Bool empty()</p>
+      <p>Defined at line 80 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="82C16603FC54441367B321959300ED6EC0360E2C">front</h3>
+      <p>public std::pair&lt;KeyT, ValueT&gt; &amp; front()</p>
+      <p>Defined at line 84 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="76C5F86B0A585C27ADD70611F7FC6A5552FCF105">front</h3>
+      <p>public const std::pair&lt;KeyT, ValueT&gt; &amp; front()</p>
+      <p>Defined at line 85 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="1D585BD1366C126733796A333A0A676FCEEB598C">back</h3>
+      <p>public std::pair&lt;KeyT, ValueT&gt; &amp; back()</p>
+      <p>Defined at line 86 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="E711439AF037B521BEFB1FC363D00473AA7318E7">back</h3>
+      <p>public const std::pair&lt;KeyT, ValueT&gt; &amp; back()</p>
+      <p>Defined at line 87 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="AEFB6F371A83EC087CCA12CABDDEB98DBB9BF387">clear</h3>
+      <p>public void clear()</p>
+      <p>Defined at line 89 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="1B4B1965B462D0C1A06CB90B029A0D69C16B27EA">swap</h3>
+      <p>public void swap(MapVector&lt;KeyT, ValueT, MapType, VectorType&gt; &amp; RHS)</p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="3EE44C2AF34A080B7408811968D2D0C98FE6A946">operator[]</h3>
+      <p>public ValueT &amp; operator[](const KeyT &amp; Key)</p>
+      <p>Defined at line 99 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="DA897C9439E950B982320A3638048B03C0DB9A33">lookup</h3>
+      <p>public ValueT lookup(const KeyT &amp; Key)</p>
+      <p>Defined at line 111 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <div>
+        <div>
+          <p> Returns a copy of the value.  Only allowed if ValueT is copyable.</p>
+        </div>
+      </div>
+      <h3 id="A1AC4D9D069E0F9D3F59A122EC8E9ACED7A09129">insert</h3>
+      <p>public std::pair&lt;iterator, _Bool&gt; insert(const std::pair&lt;KeyT, ValueT&gt; &amp; KV)</p>
+      <p>Defined at line 118 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="EA66982DD66DCACF7515FD1842D3D4326F6760A0">insert</h3>
+      <p>public std::pair&lt;iterator, _Bool&gt; insert(std::pair&lt;KeyT, ValueT&gt; &amp;&amp; KV)</p>
+      <p>Defined at line 130 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="94A2FC9D22094247E1DD0D94E348B1ED6C6957A8">count</h3>
+      <p>public size_type count(const KeyT &amp; Key)</p>
+      <p>Defined at line 143 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="1CE23FD60271289E5DE0FBF23A55E4BA0BCED15A">find</h3>
+      <p>public iterator find(const KeyT &amp; Key)</p>
+      <p>Defined at line 148 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="D3993391F5F88EDFE2A630D83C78396F0577C95F">find</h3>
+      <p>public const_iterator find(const KeyT &amp; Key)</p>
+      <p>Defined at line 154 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <h3 id="526580A0EB11C4A5659DE6711E9346A2155DEB84">pop_back</h3>
+      <p>public void pop_back()</p>
+      <p>Defined at line 161 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <div>
+        <div>
+          <p> Remove the last element from the vector.</p>
+        </div>
+      </div>
+      <h3 id="347C66DC7053DD0B90F3D9D057E7348D93B294EA">erase</h3>
+      <p>public typename VectorType::iterator erase(typename VectorType::iterator Iterator)</p>
+      <p>Defined at line 174 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <div>
+        <div>
+          <p> Remove the element given by Iterator.</p>
+          <p> Returns an iterator to the element following the one which was removed, which may be end().</p>
+        </div>
+      </div>
+      <h3 id="7FFCAD7FA192C05D993B4A9AC0820023F68F1268">erase</h3>
+      <p>public size_type erase(const KeyT &amp; Key)</p>
+      <p>Defined at line 193 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <div>
+        <div>
+          <p> Remove all elements with the key value Key.</p>
+          <p> Returns the number of elements removed.</p>
+        </div>
+      </div>
+      <h3 id="C0842C1E52E7899BB57E753A19929CE086C73E65">remove_if</h3>
+      <p>public void remove_if(Predicate Pred)</p>
+      <p>Defined at line 208 of file /usr/lib/llvm-16/include/llvm/ADT/MapVector.h</p>
+      <div>
+        <div>
+          <p> Remove the elements that match the predicate.</p>
+          <p> Erase all elements that match  in a single pass.  Takes linear time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#57A2D45F20B4B96098CA967526836FE12E3236EC">takeVector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF6F21B82CCC1113BB8E252E51196DEF082A6AC3">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F034515D2680F662D5754A90FB266ECF792CE068">reserve</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0391C43C43BECA3E9D5812C449B006744ADBBDF3">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1E1FF4676358163DD9E4BB91A1875DC1859497F">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE5B957690F7C2C7B41FE8760956635AE5B9DAB4">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7C9570B8079BB0754064E01B26BDF64596430F3">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B0333E0471F51E0433467375BA45B493DAC2E72">rbegin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF60F4F60283ECF577CDA76298DAE6BE406A5B82">rbegin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38504F07F2F712B36ABBC5E40EA9D34C4AE3D3C1">rend</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8CE6D63D480F736D889F44362C20DECE0A552F8">rend</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81809693AEBF708E5266A03735F4D1C7F104D95F">empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82C16603FC54441367B321959300ED6EC0360E2C">front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76C5F86B0A585C27ADD70611F7FC6A5552FCF105">front</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D585BD1366C126733796A333A0A676FCEEB598C">back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E711439AF037B521BEFB1FC363D00473AA7318E7">back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AEFB6F371A83EC087CCA12CABDDEB98DBB9BF387">clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B4B1965B462D0C1A06CB90B029A0D69C16B27EA">swap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EE44C2AF34A080B7408811968D2D0C98FE6A946">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA897C9439E950B982320A3638048B03C0DB9A33">lookup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1AC4D9D069E0F9D3F59A122EC8E9ACED7A09129">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA66982DD66DCACF7515FD1842D3D4326F6760A0">insert</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#94A2FC9D22094247E1DD0D94E348B1ED6C6957A8">count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1CE23FD60271289E5DE0FBF23A55E4BA0BCED15A">find</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3993391F5F88EDFE2A630D83C78396F0577C95F">find</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#526580A0EB11C4A5659DE6711E9346A2155DEB84">pop_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#347C66DC7053DD0B90F3D9D057E7348D93B294EA">erase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FFCAD7FA192C05D993B4A9AC0820023F68F1268">erase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0842C1E52E7899BB57E753A19929CE086C73E65">remove_if</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

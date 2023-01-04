@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPClausePrinter</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPClausePrinter</h1>
+    <p>Defined at line 8738 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <p>Inherits from OMPClauseVisitor&lt;OMPClausePrinter&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="92EF3E000DE48BB10653F4D2353683EC2C24667E">OMPClausePrinter</h3>
+      <p>public void OMPClausePrinter(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <p>Defined at line 8748 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="6891F1CA91C0209E12B1C6B277D8B7F96BFD5025">VisitOMPAcqRelClause</h3>
+      <p>public void VisitOMPAcqRelClause(OMPAcqRelClause * S)</p>
+      <h3 id="84E4C1F01E0BC9D41F7B9AA10F25C89C0F1DFA64">VisitOMPAcquireClause</h3>
+      <p>public void VisitOMPAcquireClause(OMPAcquireClause * S)</p>
+      <h3 id="8291C743F5DFD82174F6D08C07DDFAE74D27EE19">VisitOMPAffinityClause</h3>
+      <p>public void VisitOMPAffinityClause(OMPAffinityClause * S)</p>
+      <h3 id="C982F965C506FC65B3C17141210D52E3ACEC575A">VisitOMPAlignClause</h3>
+      <p>public void VisitOMPAlignClause(OMPAlignClause * S)</p>
+      <h3 id="52AFEADC339C8EA32C6A623C1B77A2AA127E8BB2">VisitOMPAlignedClause</h3>
+      <p>public void VisitOMPAlignedClause(OMPAlignedClause * S)</p>
+      <h3 id="5A5C43D639686232FF30871461E631769A6E2AA7">VisitOMPAllocateClause</h3>
+      <p>public void VisitOMPAllocateClause(OMPAllocateClause * S)</p>
+      <h3 id="AF97A14A185E4BAF088B704583B5B9991B7B5F46">VisitOMPAllocatorClause</h3>
+      <p>public void VisitOMPAllocatorClause(OMPAllocatorClause * S)</p>
+      <h3 id="447113D9B2D5A3E79B057B4BF9F1D65B05ABB431">VisitOMPAtClause</h3>
+      <p>public void VisitOMPAtClause(OMPAtClause * S)</p>
+      <h3 id="2306F666194FA6A014B7A7FD42B8CA9726893911">VisitOMPAtomicDefaultMemOrderClause</h3>
+      <p>public void VisitOMPAtomicDefaultMemOrderClause(OMPAtomicDefaultMemOrderClause * S)</p>
+      <h3 id="D7B478D572A97AF40630A3322B6D28B55EF8A9CD">VisitOMPBindClause</h3>
+      <p>public void VisitOMPBindClause(OMPBindClause * S)</p>
+      <h3 id="0170717CDCD97ABC53CEFE84F824FC77929E996D">VisitOMPCaptureClause</h3>
+      <p>public void VisitOMPCaptureClause(OMPCaptureClause * S)</p>
+      <h3 id="32687BDD7549525786A299B4B6C17880B52C50FE">VisitOMPCollapseClause</h3>
+      <p>public void VisitOMPCollapseClause(OMPCollapseClause * S)</p>
+      <h3 id="8B7ECAEA9324E73A06316D8C4266581D0F6E17FE">VisitOMPCompareClause</h3>
+      <p>public void VisitOMPCompareClause(OMPCompareClause * S)</p>
+      <h3 id="12D60E725457FCB6EF897DB1F214316977608EE1">VisitOMPCopyprivateClause</h3>
+      <p>public void VisitOMPCopyprivateClause(OMPCopyprivateClause * S)</p>
+      <h3 id="7DB2D88512F683066B5EA3881B844681BC356DCE">VisitOMPCopyinClause</h3>
+      <p>public void VisitOMPCopyinClause(OMPCopyinClause * S)</p>
+      <h3 id="B5AEBD82C076BD681794259A2F14B0E82ED1E002">VisitOMPDefaultClause</h3>
+      <p>public void VisitOMPDefaultClause(OMPDefaultClause * S)</p>
+      <h3 id="0C84A14E56485439485E12E7392834FCCD45270D">VisitOMPDefaultmapClause</h3>
+      <p>public void VisitOMPDefaultmapClause(OMPDefaultmapClause * S)</p>
+      <h3 id="0A5AF9AB23B659C910259785D4FA5698B842534D">VisitOMPDependClause</h3>
+      <p>public void VisitOMPDependClause(OMPDependClause * S)</p>
+      <h3 id="9893221FDCC5F0E0007D57963B3CC33CB4711A5F">VisitOMPDepobjClause</h3>
+      <p>public void VisitOMPDepobjClause(OMPDepobjClause * S)</p>
+      <h3 id="8A9B217281C78E767EEB1B1E72DB09B01F6C66E1">VisitOMPDestroyClause</h3>
+      <p>public void VisitOMPDestroyClause(OMPDestroyClause * S)</p>
+      <h3 id="C1E8FCF68B61C553056903B0A93D9D5319104BF3">VisitOMPDetachClause</h3>
+      <p>public void VisitOMPDetachClause(OMPDetachClause * S)</p>
+      <h3 id="8B48AD0262B77E1AA7D7E1BAC4D0FEFAF6631F46">VisitOMPDeviceClause</h3>
+      <p>public void VisitOMPDeviceClause(OMPDeviceClause * S)</p>
+      <h3 id="447647C13FB12A3F6DF32BBFAA78D55858BD4CE7">VisitOMPDistScheduleClause</h3>
+      <p>public void VisitOMPDistScheduleClause(OMPDistScheduleClause * S)</p>
+      <h3 id="A179A95C9EDE600171F60EADE27566FED7A81ECA">VisitOMPDynamicAllocatorsClause</h3>
+      <p>public void VisitOMPDynamicAllocatorsClause(OMPDynamicAllocatorsClause * S)</p>
+      <h3 id="6C6E651B94C5796926FAFCCED67259463B7895CB">VisitOMPExclusiveClause</h3>
+      <p>public void VisitOMPExclusiveClause(OMPExclusiveClause * S)</p>
+      <h3 id="BFD33F36ADCBA2067FF051E8A53B947AB3DE3DDA">VisitOMPFilterClause</h3>
+      <p>public void VisitOMPFilterClause(OMPFilterClause * S)</p>
+      <h3 id="EE9C8939B831FB6A457553961329CD0D81E5AD47">VisitOMPFinalClause</h3>
+      <p>public void VisitOMPFinalClause(OMPFinalClause * S)</p>
+      <h3 id="0560D13F7EDD0823D4513EDFE2990870E46161EB">VisitOMPFirstprivateClause</h3>
+      <p>public void VisitOMPFirstprivateClause(OMPFirstprivateClause * S)</p>
+      <h3 id="548F9A7C0C5C8543037C56AD6707C292FAF9AA2D">VisitOMPFlushClause</h3>
+      <p>public void VisitOMPFlushClause(OMPFlushClause * S)</p>
+      <h3 id="88E5931071FD532ACB4B685445C3F71CE04B5FF4">VisitOMPFromClause</h3>
+      <p>public void VisitOMPFromClause(OMPFromClause * S)</p>
+      <h3 id="0BAA8AA1185AB9EF80A4F375A78E9559EB010686">VisitOMPFullClause</h3>
+      <p>public void VisitOMPFullClause(OMPFullClause * S)</p>
+      <h3 id="1902951A55ED0D456DC3A535F8A7FA8B82254C1B">VisitOMPGrainsizeClause</h3>
+      <p>public void VisitOMPGrainsizeClause(OMPGrainsizeClause * S)</p>
+      <h3 id="CC0F3AEB1CE66A1D35334412E6260351121A5597">VisitOMPHasDeviceAddrClause</h3>
+      <p>public void VisitOMPHasDeviceAddrClause(OMPHasDeviceAddrClause * S)</p>
+      <h3 id="BBAD2D3AE488F733DB09CA3E5B2247736F6439AC">VisitOMPHintClause</h3>
+      <p>public void VisitOMPHintClause(OMPHintClause * S)</p>
+      <h3 id="7D11D1351B132D84F620B1F4740403E8E8712980">VisitOMPIfClause</h3>
+      <p>public void VisitOMPIfClause(OMPIfClause * S)</p>
+      <h3 id="418CB9DEBEE82200C8FCF259D271BE7FC94314A6">VisitOMPInReductionClause</h3>
+      <p>public void VisitOMPInReductionClause(OMPInReductionClause * S)</p>
+      <h3 id="6F99D873C04BF006E4471120377861FA500A91BE">VisitOMPInclusiveClause</h3>
+      <p>public void VisitOMPInclusiveClause(OMPInclusiveClause * S)</p>
+      <h3 id="DD2169A99A755F35D8D9A9269270C69DC0B5EC24">VisitOMPInitClause</h3>
+      <p>public void VisitOMPInitClause(OMPInitClause * S)</p>
+      <h3 id="DD2070A9CB2ECBD6BBDBE1654DADA5244C71C28B">VisitOMPIsDevicePtrClause</h3>
+      <p>public void VisitOMPIsDevicePtrClause(OMPIsDevicePtrClause * S)</p>
+      <h3 id="C6094FF8E931D27B91C899CE1AD38F88484C21C6">VisitOMPLastprivateClause</h3>
+      <p>public void VisitOMPLastprivateClause(OMPLastprivateClause * S)</p>
+      <h3 id="96CBF83B917FB00F0A20929755ED897CE2CB7133">VisitOMPLinearClause</h3>
+      <p>public void VisitOMPLinearClause(OMPLinearClause * S)</p>
+      <h3 id="8E7249B02DAD88EB801579C96DF77AE3EDCA38A4">VisitOMPMapClause</h3>
+      <p>public void VisitOMPMapClause(OMPMapClause * S)</p>
+      <h3 id="9315ABE2C7614925A64D8BEB1EC60B115D888F2C">VisitOMPMergeableClause</h3>
+      <p>public void VisitOMPMergeableClause(OMPMergeableClause * S)</p>
+      <h3 id="FC139F89FBBF016F175B4C9911326D1DB3F8874E">VisitOMPMessageClause</h3>
+      <p>public void VisitOMPMessageClause(OMPMessageClause * S)</p>
+      <h3 id="9A9608CC9670F38E2F5D342EEB071218C5E8B6E6">VisitOMPNogroupClause</h3>
+      <p>public void VisitOMPNogroupClause(OMPNogroupClause * S)</p>
+      <h3 id="E8B2F5D313D4A2F0AEFF9BB5D873112D3E8F71AF">VisitOMPNowaitClause</h3>
+      <p>public void VisitOMPNowaitClause(OMPNowaitClause * S)</p>
+      <h3 id="6926D5D4633E935E1670955D13AB162A9179427B">VisitOMPNocontextClause</h3>
+      <p>public void VisitOMPNocontextClause(OMPNocontextClause * S)</p>
+      <h3 id="B38F80189FF558C8798A670878E8F0671B133EC3">VisitOMPNontemporalClause</h3>
+      <p>public void VisitOMPNontemporalClause(OMPNontemporalClause * S)</p>
+      <h3 id="47A07D7951DE897293D0D76349B33A262CAC86F7">VisitOMPNovariantsClause</h3>
+      <p>public void VisitOMPNovariantsClause(OMPNovariantsClause * S)</p>
+      <h3 id="768BCFA6650355C3BE34945C0E17A8B72E04DAC0">VisitOMPNumTasksClause</h3>
+      <p>public void VisitOMPNumTasksClause(OMPNumTasksClause * S)</p>
+      <h3 id="0C1A325378663545DA59C68F3BC3324817244A04">VisitOMPNumTeamsClause</h3>
+      <p>public void VisitOMPNumTeamsClause(OMPNumTeamsClause * S)</p>
+      <h3 id="3AE762A9427AD29C211639E08084AF7C40B637C2">VisitOMPNumThreadsClause</h3>
+      <p>public void VisitOMPNumThreadsClause(OMPNumThreadsClause * S)</p>
+      <h3 id="53CD6A8DFDF10B5758E289AB6A977F168400A2EF">VisitOMPOrderClause</h3>
+      <p>public void VisitOMPOrderClause(OMPOrderClause * S)</p>
+      <h3 id="E9A76123164EAC82F8AC9FDBF38AFBEAD23D3D35">VisitOMPOrderedClause</h3>
+      <p>public void VisitOMPOrderedClause(OMPOrderedClause * S)</p>
+      <h3 id="BE20D0AE27A3450C7748FC2E76219B1EC87DA4EB">VisitOMPPartialClause</h3>
+      <p>public void VisitOMPPartialClause(OMPPartialClause * S)</p>
+      <h3 id="EC8742E95C081FBD17659E28BDC801B669C72BD8">VisitOMPPriorityClause</h3>
+      <p>public void VisitOMPPriorityClause(OMPPriorityClause * S)</p>
+      <h3 id="3437F85AE8EF9E116667620BC16F3D9321809C08">VisitOMPPrivateClause</h3>
+      <p>public void VisitOMPPrivateClause(OMPPrivateClause * S)</p>
+      <h3 id="5FF2F97E9364280919496A0F417C6A47B88770F4">VisitOMPProcBindClause</h3>
+      <p>public void VisitOMPProcBindClause(OMPProcBindClause * S)</p>
+      <h3 id="5FAB1100BF144EBE28BD2E53519A74D40784EE50">VisitOMPReadClause</h3>
+      <p>public void VisitOMPReadClause(OMPReadClause * S)</p>
+      <h3 id="CAD85E60FB9626030A123D4F59FF077AD4992EE2">VisitOMPReductionClause</h3>
+      <p>public void VisitOMPReductionClause(OMPReductionClause * S)</p>
+      <h3 id="52A69D6786F6EF49E51682F0B734C5530B0964DC">VisitOMPRelaxedClause</h3>
+      <p>public void VisitOMPRelaxedClause(OMPRelaxedClause * S)</p>
+      <h3 id="41C2FE14CA9432D44AEE9F45BCB254D61BD7EC6F">VisitOMPReleaseClause</h3>
+      <p>public void VisitOMPReleaseClause(OMPReleaseClause * S)</p>
+      <h3 id="08E47DD8DD5A3CDA135C51CA2B24888BED1BE74C">VisitOMPReverseOffloadClause</h3>
+      <p>public void VisitOMPReverseOffloadClause(OMPReverseOffloadClause * S)</p>
+      <h3 id="53F581BA8124D37D62FF10F4D38280CC5C139DDD">VisitOMPSafelenClause</h3>
+      <p>public void VisitOMPSafelenClause(OMPSafelenClause * S)</p>
+      <h3 id="1E63A1766B92C4006CA6DD5E6D8F8085CC878603">VisitOMPScheduleClause</h3>
+      <p>public void VisitOMPScheduleClause(OMPScheduleClause * S)</p>
+      <h3 id="B5EDFC6BD466F58CC7021A230F9D5E1624847C5E">VisitOMPSeqCstClause</h3>
+      <p>public void VisitOMPSeqCstClause(OMPSeqCstClause * S)</p>
+      <h3 id="1C443A48A878C91BE197C902C9D2D8BE1462D7AB">VisitOMPSeverityClause</h3>
+      <p>public void VisitOMPSeverityClause(OMPSeverityClause * S)</p>
+      <h3 id="D5F4C3F037E89B2812AE235567FE65A47D8872ED">VisitOMPSharedClause</h3>
+      <p>public void VisitOMPSharedClause(OMPSharedClause * S)</p>
+      <h3 id="249022CF84B1646EF4202A4011CCD3E8A7903112">VisitOMPSIMDClause</h3>
+      <p>public void VisitOMPSIMDClause(OMPSIMDClause * S)</p>
+      <h3 id="4DC5F5BE954874FC68FFD005D36B04FE5C9F1325">VisitOMPSimdlenClause</h3>
+      <p>public void VisitOMPSimdlenClause(OMPSimdlenClause * S)</p>
+      <h3 id="E10468ADEA9A78A189CE1A3A4C1294A7A24D5178">VisitOMPSizesClause</h3>
+      <p>public void VisitOMPSizesClause(OMPSizesClause * S)</p>
+      <h3 id="8EE6460565A8AAD682FD51E60AA2E9F222558B06">VisitOMPTaskReductionClause</h3>
+      <p>public void VisitOMPTaskReductionClause(OMPTaskReductionClause * S)</p>
+      <h3 id="33762F19A938CDFB3BF5CC7A7E796F42EC2DC328">VisitOMPThreadLimitClause</h3>
+      <p>public void VisitOMPThreadLimitClause(OMPThreadLimitClause * S)</p>
+      <h3 id="C0D4E6F96767662E0BAA8B2DD856C9C55EA4DF4E">VisitOMPThreadsClause</h3>
+      <p>public void VisitOMPThreadsClause(OMPThreadsClause * S)</p>
+      <h3 id="A68B3F42C3AB314E45345D6C88A54EA3C67B9BE5">VisitOMPToClause</h3>
+      <p>public void VisitOMPToClause(OMPToClause * S)</p>
+      <h3 id="4FD858701F54291C272DBFA7852FAAD363C0FF8B">VisitOMPUnifiedAddressClause</h3>
+      <p>public void VisitOMPUnifiedAddressClause(OMPUnifiedAddressClause * S)</p>
+      <h3 id="F8D1C0A059AD692E4564586FC8705F8FBB064D28">VisitOMPUnifiedSharedMemoryClause</h3>
+      <p>public void VisitOMPUnifiedSharedMemoryClause(OMPUnifiedSharedMemoryClause * S)</p>
+      <h3 id="5511DEA950D94187838EAA28F41D636EA50ACD0C">VisitOMPUntiedClause</h3>
+      <p>public void VisitOMPUntiedClause(OMPUntiedClause * S)</p>
+      <h3 id="A71A425433D0D7ABF5DA12F53D8D428F342A1963">VisitOMPUpdateClause</h3>
+      <p>public void VisitOMPUpdateClause(OMPUpdateClause * S)</p>
+      <h3 id="D8899020F2939A5DDF39E481E2207AA5D753FAFD">VisitOMPUseClause</h3>
+      <p>public void VisitOMPUseClause(OMPUseClause * S)</p>
+      <h3 id="3688245E11860C0CE651D2F5FFEFC21B978000C3">VisitOMPUseDeviceAddrClause</h3>
+      <p>public void VisitOMPUseDeviceAddrClause(OMPUseDeviceAddrClause * S)</p>
+      <h3 id="9A211BE47F8A11F2B34FFEAEDA8EC636D76F3B8D">VisitOMPUseDevicePtrClause</h3>
+      <p>public void VisitOMPUseDevicePtrClause(OMPUseDevicePtrClause * S)</p>
+      <h3 id="908121D4D0425FB42541F36EDC961A4F5D6575FD">VisitOMPUsesAllocatorsClause</h3>
+      <p>public void VisitOMPUsesAllocatorsClause(OMPUsesAllocatorsClause * S)</p>
+      <h3 id="B5604A262FFDA61824C8772E8BB2BD57A934F812">VisitOMPWriteClause</h3>
+      <p>public void VisitOMPWriteClause(OMPWriteClause * S)</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#92EF3E000DE48BB10653F4D2353683EC2C24667E">OMPClausePrinter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6891F1CA91C0209E12B1C6B277D8B7F96BFD5025">VisitOMPAcqRelClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84E4C1F01E0BC9D41F7B9AA10F25C89C0F1DFA64">VisitOMPAcquireClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8291C743F5DFD82174F6D08C07DDFAE74D27EE19">VisitOMPAffinityClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C982F965C506FC65B3C17141210D52E3ACEC575A">VisitOMPAlignClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52AFEADC339C8EA32C6A623C1B77A2AA127E8BB2">VisitOMPAlignedClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5A5C43D639686232FF30871461E631769A6E2AA7">VisitOMPAllocateClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF97A14A185E4BAF088B704583B5B9991B7B5F46">VisitOMPAllocatorClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#447113D9B2D5A3E79B057B4BF9F1D65B05ABB431">VisitOMPAtClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2306F666194FA6A014B7A7FD42B8CA9726893911">VisitOMPAtomicDefaultMemOrderClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7B478D572A97AF40630A3322B6D28B55EF8A9CD">VisitOMPBindClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0170717CDCD97ABC53CEFE84F824FC77929E996D">VisitOMPCaptureClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32687BDD7549525786A299B4B6C17880B52C50FE">VisitOMPCollapseClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8B7ECAEA9324E73A06316D8C4266581D0F6E17FE">VisitOMPCompareClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12D60E725457FCB6EF897DB1F214316977608EE1">VisitOMPCopyprivateClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7DB2D88512F683066B5EA3881B844681BC356DCE">VisitOMPCopyinClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5AEBD82C076BD681794259A2F14B0E82ED1E002">VisitOMPDefaultClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C84A14E56485439485E12E7392834FCCD45270D">VisitOMPDefaultmapClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A5AF9AB23B659C910259785D4FA5698B842534D">VisitOMPDependClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9893221FDCC5F0E0007D57963B3CC33CB4711A5F">VisitOMPDepobjClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A9B217281C78E767EEB1B1E72DB09B01F6C66E1">VisitOMPDestroyClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1E8FCF68B61C553056903B0A93D9D5319104BF3">VisitOMPDetachClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8B48AD0262B77E1AA7D7E1BAC4D0FEFAF6631F46">VisitOMPDeviceClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#447647C13FB12A3F6DF32BBFAA78D55858BD4CE7">VisitOMPDistScheduleClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A179A95C9EDE600171F60EADE27566FED7A81ECA">VisitOMPDynamicAllocatorsClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C6E651B94C5796926FAFCCED67259463B7895CB">VisitOMPExclusiveClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BFD33F36ADCBA2067FF051E8A53B947AB3DE3DDA">VisitOMPFilterClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE9C8939B831FB6A457553961329CD0D81E5AD47">VisitOMPFinalClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0560D13F7EDD0823D4513EDFE2990870E46161EB">VisitOMPFirstprivateClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#548F9A7C0C5C8543037C56AD6707C292FAF9AA2D">VisitOMPFlushClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88E5931071FD532ACB4B685445C3F71CE04B5FF4">VisitOMPFromClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0BAA8AA1185AB9EF80A4F375A78E9559EB010686">VisitOMPFullClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1902951A55ED0D456DC3A535F8A7FA8B82254C1B">VisitOMPGrainsizeClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC0F3AEB1CE66A1D35334412E6260351121A5597">VisitOMPHasDeviceAddrClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BBAD2D3AE488F733DB09CA3E5B2247736F6439AC">VisitOMPHintClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D11D1351B132D84F620B1F4740403E8E8712980">VisitOMPIfClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#418CB9DEBEE82200C8FCF259D271BE7FC94314A6">VisitOMPInReductionClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F99D873C04BF006E4471120377861FA500A91BE">VisitOMPInclusiveClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD2169A99A755F35D8D9A9269270C69DC0B5EC24">VisitOMPInitClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD2070A9CB2ECBD6BBDBE1654DADA5244C71C28B">VisitOMPIsDevicePtrClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6094FF8E931D27B91C899CE1AD38F88484C21C6">VisitOMPLastprivateClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96CBF83B917FB00F0A20929755ED897CE2CB7133">VisitOMPLinearClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E7249B02DAD88EB801579C96DF77AE3EDCA38A4">VisitOMPMapClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9315ABE2C7614925A64D8BEB1EC60B115D888F2C">VisitOMPMergeableClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC139F89FBBF016F175B4C9911326D1DB3F8874E">VisitOMPMessageClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A9608CC9670F38E2F5D342EEB071218C5E8B6E6">VisitOMPNogroupClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8B2F5D313D4A2F0AEFF9BB5D873112D3E8F71AF">VisitOMPNowaitClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6926D5D4633E935E1670955D13AB162A9179427B">VisitOMPNocontextClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B38F80189FF558C8798A670878E8F0671B133EC3">VisitOMPNontemporalClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47A07D7951DE897293D0D76349B33A262CAC86F7">VisitOMPNovariantsClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#768BCFA6650355C3BE34945C0E17A8B72E04DAC0">VisitOMPNumTasksClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C1A325378663545DA59C68F3BC3324817244A04">VisitOMPNumTeamsClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3AE762A9427AD29C211639E08084AF7C40B637C2">VisitOMPNumThreadsClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53CD6A8DFDF10B5758E289AB6A977F168400A2EF">VisitOMPOrderClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9A76123164EAC82F8AC9FDBF38AFBEAD23D3D35">VisitOMPOrderedClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE20D0AE27A3450C7748FC2E76219B1EC87DA4EB">VisitOMPPartialClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC8742E95C081FBD17659E28BDC801B669C72BD8">VisitOMPPriorityClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3437F85AE8EF9E116667620BC16F3D9321809C08">VisitOMPPrivateClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FF2F97E9364280919496A0F417C6A47B88770F4">VisitOMPProcBindClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FAB1100BF144EBE28BD2E53519A74D40784EE50">VisitOMPReadClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CAD85E60FB9626030A123D4F59FF077AD4992EE2">VisitOMPReductionClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52A69D6786F6EF49E51682F0B734C5530B0964DC">VisitOMPRelaxedClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#41C2FE14CA9432D44AEE9F45BCB254D61BD7EC6F">VisitOMPReleaseClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08E47DD8DD5A3CDA135C51CA2B24888BED1BE74C">VisitOMPReverseOffloadClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53F581BA8124D37D62FF10F4D38280CC5C139DDD">VisitOMPSafelenClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E63A1766B92C4006CA6DD5E6D8F8085CC878603">VisitOMPScheduleClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5EDFC6BD466F58CC7021A230F9D5E1624847C5E">VisitOMPSeqCstClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C443A48A878C91BE197C902C9D2D8BE1462D7AB">VisitOMPSeverityClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5F4C3F037E89B2812AE235567FE65A47D8872ED">VisitOMPSharedClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#249022CF84B1646EF4202A4011CCD3E8A7903112">VisitOMPSIMDClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DC5F5BE954874FC68FFD005D36B04FE5C9F1325">VisitOMPSimdlenClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E10468ADEA9A78A189CE1A3A4C1294A7A24D5178">VisitOMPSizesClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8EE6460565A8AAD682FD51E60AA2E9F222558B06">VisitOMPTaskReductionClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33762F19A938CDFB3BF5CC7A7E796F42EC2DC328">VisitOMPThreadLimitClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0D4E6F96767662E0BAA8B2DD856C9C55EA4DF4E">VisitOMPThreadsClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A68B3F42C3AB314E45345D6C88A54EA3C67B9BE5">VisitOMPToClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FD858701F54291C272DBFA7852FAAD363C0FF8B">VisitOMPUnifiedAddressClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8D1C0A059AD692E4564586FC8705F8FBB064D28">VisitOMPUnifiedSharedMemoryClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5511DEA950D94187838EAA28F41D636EA50ACD0C">VisitOMPUntiedClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A71A425433D0D7ABF5DA12F53D8D428F342A1963">VisitOMPUpdateClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8899020F2939A5DDF39E481E2207AA5D753FAFD">VisitOMPUseClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3688245E11860C0CE651D2F5FFEFC21B978000C3">VisitOMPUseDeviceAddrClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A211BE47F8A11F2B34FFEAEDA8EC636D76F3B8D">VisitOMPUseDevicePtrClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#908121D4D0425FB42541F36EDC961A4F5D6575FD">VisitOMPUsesAllocatorsClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5604A262FFDA61824C8772E8BB2BD57A934F812">VisitOMPWriteClause</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCInterfaceDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCInterfaceDecl</h1>
+    <p>Defined at line 1147 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    <div>
+      <div>
+        <p> Represents an ObjC class declaration.</p>
+        <p> For example:</p>
+        <p>   Unlike C/C++, forward class declarations are accomplished with @class.   Unlike C/C++, @class allows for a list of classes to be forward declared.   Unlike C++, ObjC is a single-rooted class model. In Cocoa, classes   typically inherit from NSObject (an exception is NSProxy).</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ObjCContainerDecl.html">ObjCContainerDecl</a>
+      , Redeclarable&lt;ObjCInterfaceDecl&gt;
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/ObjCInterfaceDecl/filtered_category_iterator.html">filtered_category_iterator</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="93663F7909C21F561D48407AAFC111B88667733E">Create</h3>
+      <p>
+        public ObjCInterfaceDecl * Create(const ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         atLoc, IdentifierInfo * Id, ObjCTypeParamList * typeParamList, ObjCInterfaceDecl * PrevDecl, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ClassLoc, _Bool isInternal)
+      </p>
+      <h3 id="403389AFDA60385148A972BD0E823FFFED65A632">CreateDeserialized</h3>
+      <p>public ObjCInterfaceDecl * CreateDeserialized(const ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="AB71EB3C2D4DEFB23ECA03E999C39133C88EDDE4">getTypeParamList</h3>
+      <p>public ObjCTypeParamList * getTypeParamList()</p>
+      <div>
+        <div>
+          <p> Retrieve the type parameters of this class.</p>
+          <p> This function looks for a type parameter list for the given class; if the class has been declared (with  but not defined (with  it will search for a declaration that has type parameters, skipping any declarations that do not.</p>
+        </div>
+      </div>
+      <h3 id="5BD63CA255AFBC0936C1454EEEEB0234F9B539DA">setTypeParamList</h3>
+      <p>public void setTypeParamList(ObjCTypeParamList * TPL)</p>
+      <div>
+        <div>
+          <p> Set the type parameters of this class.</p>
+          <p> This function is used by the AST importer, which must import the type parameters after creating their DeclContext to avoid loops.</p>
+        </div>
+      </div>
+      <h3 id="B77587BAB2B33E3869EEA844073FBACED87C1C56">getTypeParamListAsWritten</h3>
+      <p>public ObjCTypeParamList * getTypeParamListAsWritten()</p>
+      <p>Defined at line 1286 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the type parameters written on this particular declaration of the class.</p>
+        </div>
+      </div>
+      <h3 id="DBE9EA06B18C975C8DCFB0CFA108792624939A57">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 1290 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="7A66603EA6C6970AD1AB7CCB2123A024DE721394">setExternallyCompleted</h3>
+      <p>public void setExternallyCompleted()</p>
+      <div>
+        <div>
+          <p> Indicate that this Objective-C class is complete, but that the external AST source will be responsible for filling in its contents when a complete class is required.</p>
+        </div>
+      </div>
+      <h3 id="BE1D0F26584229AC4C2075B4180F1114810797F5">setHasDesignatedInitializers</h3>
+      <p>public void setHasDesignatedInitializers()</p>
+      <div>
+        <div>
+          <p> Indicate that this interface decl contains at least one initializer marked with the &apos;objc_designated_initializer&apos; attribute.</p>
+        </div>
+      </div>
+      <h3 id="689117B9F106DAB8063E9BD5D08A0CB69D8DF7B2">hasDesignatedInitializers</h3>
+      <p>public _Bool hasDesignatedInitializers()</p>
+      <div>
+        <div>
+          <p> Returns true if this interface decl contains at least one initializer marked with the &apos;objc_designated_initializer&apos; attribute.</p>
+        </div>
+      </div>
+      <h3 id="BA544AF244B30D9C0C24593927EB8270FBF758B3">declaresOrInheritsDesignatedInitializers</h3>
+      <p>public _Bool declaresOrInheritsDesignatedInitializers()</p>
+      <p>Defined at line 1312 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Returns true if this interface decl declares a designated initializer or it inherites one from its super class.</p>
+        </div>
+      </div>
+      <h3 id="5763129B2F782A2AD60E23EE592E94B587C964F0">getReferencedProtocols</h3>
+      <p>public const ObjCProtocolList &amp; getReferencedProtocols()</p>
+      <p>Defined at line 1316 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="FBADE188E3D7F990619FFE8A5F5D2593A8DB7731">getImplementation</h3>
+      <p>public ObjCImplementationDecl * getImplementation()</p>
+      <h3 id="FE70E0A960E4577EA2E6E3A7733B52B1BDCF8905">setImplementation</h3>
+      <p>public void setImplementation(ObjCImplementationDecl * ImplD)</p>
+      <h3 id="5B1CB0735A94C0EB025C4B5C229F359B377798B2">FindCategoryDeclaration</h3>
+      <p>public ObjCCategoryDecl * FindCategoryDeclaration(IdentifierInfo * CategoryId)</p>
+      <h3 id="E3BE42A6F999D40D21C00C4E10F21D27E2E24311">getCategoryInstanceMethod</h3>
+      <p>
+        public ObjCMethodDecl * getCategoryInstanceMethod(
+        <a href="Selector.html">Selector</a>
+         Sel)
+      </p>
+      <div>
+        <div>
+          <p> Get the local instance/class method declared in a category.</p>
+        </div>
+      </div>
+      <h3 id="54BCB2F675A3964CE5CC1A874434200BB0713B81">getCategoryClassMethod</h3>
+      <p>
+        public ObjCMethodDecl * getCategoryClassMethod(
+        <a href="Selector.html">Selector</a>
+         Sel)
+      </p>
+      <h3 id="70D994F597C75EF4CF05A7C8717CAA2F11EDE5EC">getCategoryMethod</h3>
+      <p>
+        public ObjCMethodDecl * getCategoryMethod(
+        <a href="Selector.html">Selector</a>
+         Sel, _Bool isInstance)
+      </p>
+      <p>Defined at line 1333 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="562BB6FED7D465807759952C218DE617AD708B54">protocols</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         protocols()
+      </p>
+      <p>Defined at line 1341 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="4EF07B23382011676E54E3091FA173C408FE7A68">protocol_begin</h3>
+      <p>public protocol_iterator protocol_begin()</p>
+      <p>Defined at line 1345 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="B04286C921B1AD5BAE20A3D094125B6AB7419594">protocol_end</h3>
+      <p>public protocol_iterator protocol_end()</p>
+      <p>Defined at line 1356 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="4D91C228D8A25AE77A972431C59BA4CDFACC71E1">protocol_locs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         protocol_locs()
+      </p>
+      <p>Defined at line 1370 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="8451D4036713DCA54F9C7AE98262F46D474C2E4B">protocol_loc_begin</h3>
+      <p>public protocol_loc_iterator protocol_loc_begin()</p>
+      <p>Defined at line 1374 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="679419DFC217055A3EDB698D163E4CBB42C7CC7D">protocol_loc_end</h3>
+      <p>public protocol_loc_iterator protocol_loc_end()</p>
+      <p>Defined at line 1385 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="3F1E8D32B274DFD763BE3828BC7A54E27C653906">all_referenced_protocols</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         all_referenced_protocols()
+      </p>
+      <p>Defined at line 1399 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="27EED18BD8DF8683B29B12AC8E62A52DF7DBD1D7">all_referenced_protocol_begin</h3>
+      <p>public all_protocol_iterator all_referenced_protocol_begin()</p>
+      <p>Defined at line 1404 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="DBAB993BD01C05ECD4C4250BC86651198029270D">all_referenced_protocol_end</h3>
+      <p>public all_protocol_iterator all_referenced_protocol_end()</p>
+      <p>Defined at line 1417 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="60205C307C4E19B8D5942BB547D8909732B88E7B">ivars</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         ivars()
+      </p>
+      <p>Defined at line 1433 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="99A40AD6AC5A674356A422D65A2BE716C3F13752">ivar_begin</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         ivar_begin()
+      </p>
+      <p>Defined at line 1435 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="E06476CF207AC10B9B874A8CF067CC9E0FED7B83">ivar_end</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         ivar_end()
+      </p>
+      <p>Defined at line 1443 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="6145B1BB0B2AB5090889390005D8CEE207E7BB39">ivar_size</h3>
+      <p>public unsigned int ivar_size()</p>
+      <p>Defined at line 1451 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="34B7EE0052A62EA77CB15AB17ACD2808878226D2">ivar_empty</h3>
+      <p>public _Bool ivar_empty()</p>
+      <p>Defined at line 1455 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="037B057CAB6342A645F51D1594FD91F24603C0D0">all_declared_ivar_begin</h3>
+      <p>public ObjCIvarDecl * all_declared_ivar_begin()</p>
+      <h3 id="1FBF62438E5E827A0C2DCBF0DDB0BEA3B006F323">all_declared_ivar_begin</h3>
+      <p>public const ObjCIvarDecl * all_declared_ivar_begin()</p>
+      <p>Defined at line 1458 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="F2FDEA68D3D60B0E8167D94A54C38E7B76753054">setIvarList</h3>
+      <p>public void setIvarList(ObjCIvarDecl * ivar)</p>
+      <p>Defined at line 1463 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="7817E08B5CD8851D10B5204C13BCEE8879489779">setProtocolList</h3>
+      <p>public void setProtocolList(ObjCProtocolDecl *const * List, unsigned int Num, const SourceLocation * Locs, ASTContext &amp; C)</p>
+      <p>Defined at line 1467 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> setProtocolList - Set the list of protocols that this interface implements.</p>
+        </div>
+      </div>
+      <h3 id="3573E65FF33478DC0998FDA815418D61C0EB02BD">mergeClassExtensionProtocolList</h3>
+      <p>public void mergeClassExtensionProtocolList(ObjCProtocolDecl *const * List, unsigned int Num, ASTContext &amp; C)</p>
+      <div>
+        <div>
+          <p> mergeClassExtensionProtocolList - Merge class extension&apos;s protocol list into the protocol list for this class.</p>
+        </div>
+      </div>
+      <h3 id="3F2D4B4DD8686D1C7E382DA46F2F1A0FC0613FB3">getObjCRuntimeNameAsString</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getObjCRuntimeNameAsString()
+      </p>
+      <div>
+        <div>
+          <p> Produce a name to be used for class&apos;s metadata. It comes either via objc_runtime_name attribute or class name.</p>
+        </div>
+      </div>
+      <h3 id="D116BACFF00D6BD94CA28B848F8121ED8563A0D3">getDesignatedInitializers</h3>
+      <p>public void getDesignatedInitializers(llvm::SmallVectorImpl&lt;const ObjCMethodDecl *&gt; &amp; Methods)</p>
+      <div>
+        <div>
+          <p> Returns the designated initializers for the interface.</p>
+          <p> If this declaration does not have methods marked as designated initializers then the interface inherits the designated initializers of its super class.</p>
+        </div>
+      </div>
+      <h3 id="67F8D87E74BA687CD830EDD775C975E4BE53F985">isDesignatedInitializer</h3>
+      <p>
+        public _Bool isDesignatedInitializer(
+        <a href="Selector.html">Selector</a>
+         Sel, const ObjCMethodDecl ** InitMethod)
+      </p>
+      <div>
+        <div>
+          <p> Returns true if the given selector is a designated initializer for the interface.</p>
+          <p> If this declaration does not have methods marked as designated initializers then the interface inherits the designated initializers of its super class.</p>
+        </div>
+      </div>
+      <h3 id="8872AB22CAFABFA0E11894B47F828FB1D978F8C0">isThisDeclarationADefinition</h3>
+      <p>public _Bool isThisDeclarationADefinition()</p>
+      <p>Defined at line 1505 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Determine whether this particular declaration of this class is actually also a definition.</p>
+        </div>
+      </div>
+      <h3 id="DA5B1E7104F4F768B19EE0E5B42FA85F819A4353">hasDefinition</h3>
+      <p>public _Bool hasDefinition()</p>
+      <p>Defined at line 1510 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Determine whether this class has been defined.</p>
+        </div>
+      </div>
+      <h3 id="B829FD86361344CFF658A69BDEF7D55F8D25FA73">getDefinition</h3>
+      <p>public ObjCInterfaceDecl * getDefinition()</p>
+      <p>Defined at line 1524 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the definition of this class, or NULL if this class has been forward-declared (with @class) but not yet defined (with@interface).</p>
+        </div>
+      </div>
+      <h3 id="323CE0DE3D09FD4AADC29C8F20B7485DAE255053">getDefinition</h3>
+      <p>public const ObjCInterfaceDecl * getDefinition()</p>
+      <p>Defined at line 1531 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the definition of this class, or NULL if this class has been forward-declared (with @class) but not yet defined (with@interface).</p>
+        </div>
+      </div>
+      <h3 id="D8ABDCDFC9E9092663E50601BB156CDFA738621C">startDefinition</h3>
+      <p>public void startDefinition()</p>
+      <div>
+        <div>
+          <p> Starts the definition of this Objective-C class, taking it from a forward declaration (@class) to a definition (@interface).</p>
+        </div>
+      </div>
+      <h3 id="7ED2C65B6DB9DD6B5046C0481CE3C5E6B8B1F38D">getSuperClassType</h3>
+      <p>public const ObjCObjectType * getSuperClassType()</p>
+      <p>Defined at line 1540 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the superclass type.</p>
+        </div>
+      </div>
+      <h3 id="26B35C64248677366B808723D8F3FA8743563FA1">getSuperClassTInfo</h3>
+      <p>public TypeSourceInfo * getSuperClassTInfo()</p>
+      <p>Defined at line 1548 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the type source information for the superclass.</p>
+        </div>
+      </div>
+      <h3 id="2C92B05204346D8CADB2F2089B5E9488E8E49B1D">getSuperClass</h3>
+      <p>public ObjCInterfaceDecl * getSuperClass()</p>
+      <div>
+        <div>
+          <p> Retrieve the declaration for the superclass of this class, which does not include any type arguments that apply to the superclass.</p>
+        </div>
+      </div>
+      <h3 id="A3394AB540EF0F85E329CA2E3C694D26B400E106">setSuperClass</h3>
+      <p>public void setSuperClass(TypeSourceInfo * superClass)</p>
+      <p>Defined at line 1563 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="A2B9833312D9E9DE538F96369DE72EBE1AEDBF95">visible_categories</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         visible_categories()
+      </p>
+      <p>Defined at line 1628 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="33421A1566E6FCFD1AE3FCCEDF7BBDFB37ABF825">visible_categories_begin</h3>
+      <p>
+        public 
+        <a href="../clang/ObjCInterfaceDecl/filtered_category_iterator.html">filtered_category_iterator</a>
+         visible_categories_begin()
+      </p>
+      <p>Defined at line 1635 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve an iterator to the beginning of the visible-categories list.</p>
+        </div>
+      </div>
+      <h3 id="D30FE3A0EF081D18ACDCBA4AC9BA07D68A8D1F0E">visible_categories_end</h3>
+      <p>
+        public 
+        <a href="../clang/ObjCInterfaceDecl/filtered_category_iterator.html">filtered_category_iterator</a>
+         visible_categories_end()
+      </p>
+      <p>Defined at line 1640 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve an iterator to the end of the visible-categories list.</p>
+        </div>
+      </div>
+      <h3 id="D396B141A8B6B3A769C9DD312EB6BE858D6AAC5F">visible_categories_empty</h3>
+      <p>public _Bool visible_categories_empty()</p>
+      <p>Defined at line 1645 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Determine whether the visible-categories list is empty.</p>
+        </div>
+      </div>
+      <h3 id="CE2A0DC8C674CD22ED2C6BF8A1B326A74B6EDE65">known_categories</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         known_categories()
+      </p>
+      <p>Defined at line 1662 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="2BC7B7A59F6165A9F6101C7380F819DACA808B17">known_categories_begin</h3>
+      <p>
+        public 
+        <a href="../clang/ObjCInterfaceDecl/filtered_category_iterator.html">filtered_category_iterator</a>
+         known_categories_begin()
+      </p>
+      <p>Defined at line 1669 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve an iterator to the beginning of the known-categories list.</p>
+        </div>
+      </div>
+      <h3 id="49FCB75FDC76D3ED6CB47E0263846700BD510818">known_categories_end</h3>
+      <p>
+        public 
+        <a href="../clang/ObjCInterfaceDecl/filtered_category_iterator.html">filtered_category_iterator</a>
+         known_categories_end()
+      </p>
+      <p>Defined at line 1674 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve an iterator to the end of the known-categories list.</p>
+        </div>
+      </div>
+      <h3 id="C03DDD580E84F5C6803C1D8C8ADFD8ED9E2FA02B">known_categories_empty</h3>
+      <p>public _Bool known_categories_empty()</p>
+      <p>Defined at line 1679 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Determine whether the known-categories list is empty.</p>
+        </div>
+      </div>
+      <h3 id="525C0D1D955A7072DE815206130B45AA62121C35">visible_extensions</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         visible_extensions()
+      </p>
+      <p>Defined at line 1698 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="43D10033104EBCC47A18B492D634B187C7BF0718">visible_extensions_begin</h3>
+      <p>
+        public 
+        <a href="../clang/ObjCInterfaceDecl/filtered_category_iterator.html">filtered_category_iterator</a>
+         visible_extensions_begin()
+      </p>
+      <p>Defined at line 1705 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve an iterator to the beginning of the visible-extensions list.</p>
+        </div>
+      </div>
+      <h3 id="90AC8C41E2556342340FFC7922EF7D39FD246432">visible_extensions_end</h3>
+      <p>
+        public 
+        <a href="../clang/ObjCInterfaceDecl/filtered_category_iterator.html">filtered_category_iterator</a>
+         visible_extensions_end()
+      </p>
+      <p>Defined at line 1710 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve an iterator to the end of the visible-extensions list.</p>
+        </div>
+      </div>
+      <h3 id="655EC2A88EB6FE3838E31F4505A0424043FFE6B9">visible_extensions_empty</h3>
+      <p>public _Bool visible_extensions_empty()</p>
+      <p>Defined at line 1715 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Determine whether the visible-extensions list is empty.</p>
+        </div>
+      </div>
+      <h3 id="8DCC228204C1CE8676BFA8DA34798797E1D9AF8D">known_extensions</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         known_extensions()
+      </p>
+      <p>Defined at line 1736 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="D48137B8882764B6E02000CE8374F4793F298457">known_extensions_begin</h3>
+      <p>
+        public 
+        <a href="../clang/ObjCInterfaceDecl/filtered_category_iterator.html">filtered_category_iterator</a>
+         known_extensions_begin()
+      </p>
+      <p>Defined at line 1743 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve an iterator to the beginning of the known-extensions list.</p>
+        </div>
+      </div>
+      <h3 id="03CAEF41C19AB5426C399A6DB478D589FD68C544">known_extensions_end</h3>
+      <p>
+        public 
+        <a href="../clang/ObjCInterfaceDecl/filtered_category_iterator.html">filtered_category_iterator</a>
+         known_extensions_end()
+      </p>
+      <p>Defined at line 1748 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve an iterator to the end of the known-extensions list.</p>
+        </div>
+      </div>
+      <h3 id="28F411EFDB82569C50E9BEAFCA073C2F7A21F47C">known_extensions_empty</h3>
+      <p>public _Bool known_extensions_empty()</p>
+      <p>Defined at line 1753 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Determine whether the known-extensions list is empty.</p>
+        </div>
+      </div>
+      <h3 id="C0569B19B63B1B49C8C772298B26A62992CE8F69">getCategoryListRaw</h3>
+      <p>public ObjCCategoryDecl * getCategoryListRaw()</p>
+      <p>Defined at line 1759 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the raw pointer to the start of the category/extension list.</p>
+        </div>
+      </div>
+      <h3 id="67C587023E55998870809B3185C39DB4AF062B20">setCategoryListRaw</h3>
+      <p>public void setCategoryListRaw(ObjCCategoryDecl * category)</p>
+      <p>Defined at line 1772 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Set the raw pointer to the start of the category/extension list.</p>
+        </div>
+      </div>
+      <h3 id="F19434F74E4205D671DCF4230D2B95F00D5F82C4">FindPropertyVisibleInPrimaryClass</h3>
+      <p>
+        public ObjCPropertyDecl * FindPropertyVisibleInPrimaryClass(IdentifierInfo * PropertyId, 
+        <a href="ObjCPropertyQueryKind.html">ObjCPropertyQueryKind</a>
+         QueryKind)
+      </p>
+      <h3 id="58A326848418AD89BB6EDC377BF5706EC310650A">collectPropertiesToImplement</h3>
+      <p>public void collectPropertiesToImplement(PropertyMap &amp; PM)</p>
+      <h3 id="EFE584341EC709DB0FED8E3539587CBBCEC22C75">isSuperClassOf</h3>
+      <p>public _Bool isSuperClassOf(const ObjCInterfaceDecl * I)</p>
+      <p>Defined at line 1784 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> isSuperClassOf - Return true if this class is the specified class or is a super class of the specified interface class.</p>
+        </div>
+      </div>
+      <h3 id="B32728555DF4101EE08983A5A070AD256DB31847">isArcWeakrefUnavailable</h3>
+      <p>public _Bool isArcWeakrefUnavailable()</p>
+      <div>
+        <div>
+          <p> isArcWeakrefUnavailable - Checks for a class or one of its super classes to be incompatible with __weak references. Returns true if it is.</p>
+        </div>
+      </div>
+      <h3 id="FAEE4EA48DF3B2813CF74DCA83C914AF5C35AA11">isObjCRequiresPropertyDefs</h3>
+      <p>public const ObjCInterfaceDecl * isObjCRequiresPropertyDefs()</p>
+      <div>
+        <div>
+          <p> isObjCRequiresPropertyDefs - Checks that a class or one of its super classes must not be auto-synthesized. Returns class decl. if it must not be; 0, otherwise.</p>
+        </div>
+      </div>
+      <h3 id="C7FA10661C53881C62C5F215CFB9434711B646B9">lookupInstanceVariable</h3>
+      <p>public ObjCIvarDecl * lookupInstanceVariable(IdentifierInfo * IVarName, ObjCInterfaceDecl *&amp; ClassDeclared)</p>
+      <h3 id="A165EEC77FD6637F2F564FB456312BFAD1D708A3">lookupInstanceVariable</h3>
+      <p>public ObjCIvarDecl * lookupInstanceVariable(IdentifierInfo * IVarName)</p>
+      <p>Defined at line 1806 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="EA071AFF8A8BDEECF27FBFF7750A967E91F940BC">lookupNestedProtocol</h3>
+      <p>public ObjCProtocolDecl * lookupNestedProtocol(IdentifierInfo * Name)</p>
+      <h3 id="D718B6200EBBCC04B9B1E9B90C330F68E86911A3">lookupMethod</h3>
+      <p>
+        public ObjCMethodDecl * lookupMethod(
+        <a href="Selector.html">Selector</a>
+         Sel, _Bool isInstance, _Bool shallowCategoryLookup, _Bool followSuper, const ObjCCategoryDecl * C)
+      </p>
+      <div>
+        <div>
+          <p> Lookup a method. First, we search locally. If a method isn&apos;t found, we search referenced protocols and class categories.</p>
+        </div>
+      </div>
+      <h3 id="2C08CABB3B0D065DBBEFCFD73832EB7E2E655267">lookupInstanceMethod</h3>
+      <p>
+        public ObjCMethodDecl * lookupInstanceMethod(
+        <a href="Selector.html">Selector</a>
+         Sel)
+      </p>
+      <p>Defined at line 1821 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Lookup an instance method for a given selector.</p>
+        </div>
+      </div>
+      <h3 id="50AE0534D81E677AD3E4A1FF35465B8D9E174AA9">lookupClassMethod</h3>
+      <p>
+        public ObjCMethodDecl * lookupClassMethod(
+        <a href="Selector.html">Selector</a>
+         Sel)
+      </p>
+      <p>Defined at line 1826 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Lookup a class method for a given selector.</p>
+        </div>
+      </div>
+      <h3 id="5D79C54A38D45153F41262EA94B5DAA451BFC839">lookupInheritedClass</h3>
+      <p>public ObjCInterfaceDecl * lookupInheritedClass(const IdentifierInfo * ICName)</p>
+      <h3 id="B50F2A72802D0C2DE76B242771CF4247FF53E27F">lookupPrivateMethod</h3>
+      <p>public ObjCMethodDecl * lookupPrivateMethod(const Selector &amp; Sel, _Bool Instance)</p>
+      <div>
+        <div>
+          <p> Lookup a method in the classes implementation hierarchy.</p>
+        </div>
+      </div>
+      <h3 id="5FEECA3B92E63ECEB734D897D0DF047B52CBD9F4">lookupPrivateClassMethod</h3>
+      <p>public ObjCMethodDecl * lookupPrivateClassMethod(const Selector &amp; Sel)</p>
+      <p>Defined at line 1836 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="A11512A7EB613355EFCF824C72BF3F4D5DE96CC6">lookupPropertyAccessor</h3>
+      <p>
+        public ObjCMethodDecl * lookupPropertyAccessor(
+        <a href="Selector.html">Selector</a>
+         Sel, const ObjCCategoryDecl * Cat, _Bool IsClassProperty)
+      </p>
+      <p>Defined at line 1843 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Lookup a setter or getter in the class hierarchy, including in all categories except for category passed as argument.</p>
+        </div>
+      </div>
+      <h3 id="CC3727970B13C170761C5C984588CB0D8AB9B233">getEndOfDefinitionLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndOfDefinitionLoc()
+      </p>
+      <p>Defined at line 1852 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="81CC71516F11433F9F666B6C6201375AC034367E">setEndOfDefinitionLoc</h3>
+      <p>
+        public void setEndOfDefinitionLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         LE)
+      </p>
+      <p>Defined at line 1859 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="3C45B30D00A33A1953A54FD353E965FE2146F05B">getSuperClassLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getSuperClassLoc()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the starting location of the superclass.</p>
+        </div>
+      </div>
+      <h3 id="6B66CD2E2FB54EEDAAA73577C45918FE259B869E">isImplicitInterfaceDecl</h3>
+      <p>public _Bool isImplicitInterfaceDecl()</p>
+      <p>Defined at line 1867 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> isImplicitInterfaceDecl - check that this is an implicitly declared ObjCInterfaceDecl node. This is for legacy objective-c @implementation declaration without an @interface declaration.</p>
+        </div>
+      </div>
+      <h3 id="289456871BCED934E72672682AE97508E3D2DEB0">ClassImplementsProtocol</h3>
+      <p>public _Bool ClassImplementsProtocol(ObjCProtocolDecl * lProto, _Bool lookupCategory, _Bool RHSIsQualifiedID)</p>
+      <div>
+        <div>
+          <p> ClassImplementsProtocol - Checks that &apos;lProto&apos; protocol has been implemented in IDecl class, its super class or categories (if lookupCategory is true).</p>
+        </div>
+      </div>
+      <h3 id="624B4D142F28DEF16EEB979B61A3D525DE9F31E9">getCanonicalDecl</h3>
+      <p>public ObjCInterfaceDecl * getCanonicalDecl()</p>
+      <p>Defined at line 1889 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieves the canonical declaration of this Objective-C class.</p>
+        </div>
+      </div>
+      <h3 id="42A3E9E1B6CC10E90AB0B6FEB6847B2E68DA4EA3">getCanonicalDecl</h3>
+      <p>public const ObjCInterfaceDecl * getCanonicalDecl()</p>
+      <p>Defined at line 1890 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="C089EC845777E24474211EE4C3F462A640741812">getTypeForDecl</h3>
+      <p>public const Type * getTypeForDecl()</p>
+      <p>Defined at line 1893 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Low-level accessor</p>
+        </div>
+      </div>
+      <h3 id="9A4D864FBE4A2DD47509B654CCDB23B0D362F663">setTypeForDecl</h3>
+      <p>public void setTypeForDecl(const Type * TD)</p>
+      <p>Defined at line 1894 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="49492B41C353B42C55EF8F6B36D615F9ACC275EC">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 1896 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="08B82F2D1949B5096D12C69CD6FA19C11C0FA6C8">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 1897 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#93663F7909C21F561D48407AAFC111B88667733E">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#403389AFDA60385148A972BD0E823FFFED65A632">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB71EB3C2D4DEFB23ECA03E999C39133C88EDDE4">getTypeParamList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5BD63CA255AFBC0936C1454EEEEB0234F9B539DA">setTypeParamList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B77587BAB2B33E3869EEA844073FBACED87C1C56">getTypeParamListAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DBE9EA06B18C975C8DCFB0CFA108792624939A57">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A66603EA6C6970AD1AB7CCB2123A024DE721394">setExternallyCompleted</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE1D0F26584229AC4C2075B4180F1114810797F5">setHasDesignatedInitializers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#689117B9F106DAB8063E9BD5D08A0CB69D8DF7B2">hasDesignatedInitializers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA544AF244B30D9C0C24593927EB8270FBF758B3">declaresOrInheritsDesignatedInitializers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5763129B2F782A2AD60E23EE592E94B587C964F0">getReferencedProtocols</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBADE188E3D7F990619FFE8A5F5D2593A8DB7731">getImplementation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE70E0A960E4577EA2E6E3A7733B52B1BDCF8905">setImplementation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B1CB0735A94C0EB025C4B5C229F359B377798B2">FindCategoryDeclaration</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E3BE42A6F999D40D21C00C4E10F21D27E2E24311">getCategoryInstanceMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#54BCB2F675A3964CE5CC1A874434200BB0713B81">getCategoryClassMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70D994F597C75EF4CF05A7C8717CAA2F11EDE5EC">getCategoryMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#562BB6FED7D465807759952C218DE617AD708B54">protocols</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4EF07B23382011676E54E3091FA173C408FE7A68">protocol_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B04286C921B1AD5BAE20A3D094125B6AB7419594">protocol_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D91C228D8A25AE77A972431C59BA4CDFACC71E1">protocol_locs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8451D4036713DCA54F9C7AE98262F46D474C2E4B">protocol_loc_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#679419DFC217055A3EDB698D163E4CBB42C7CC7D">protocol_loc_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F1E8D32B274DFD763BE3828BC7A54E27C653906">all_referenced_protocols</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27EED18BD8DF8683B29B12AC8E62A52DF7DBD1D7">all_referenced_protocol_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DBAB993BD01C05ECD4C4250BC86651198029270D">all_referenced_protocol_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#60205C307C4E19B8D5942BB547D8909732B88E7B">ivars</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99A40AD6AC5A674356A422D65A2BE716C3F13752">ivar_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E06476CF207AC10B9B874A8CF067CC9E0FED7B83">ivar_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6145B1BB0B2AB5090889390005D8CEE207E7BB39">ivar_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#34B7EE0052A62EA77CB15AB17ACD2808878226D2">ivar_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#037B057CAB6342A645F51D1594FD91F24603C0D0">all_declared_ivar_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FBF62438E5E827A0C2DCBF0DDB0BEA3B006F323">all_declared_ivar_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2FDEA68D3D60B0E8167D94A54C38E7B76753054">setIvarList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7817E08B5CD8851D10B5204C13BCEE8879489779">setProtocolList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3573E65FF33478DC0998FDA815418D61C0EB02BD">mergeClassExtensionProtocolList</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F2D4B4DD8686D1C7E382DA46F2F1A0FC0613FB3">getObjCRuntimeNameAsString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D116BACFF00D6BD94CA28B848F8121ED8563A0D3">getDesignatedInitializers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67F8D87E74BA687CD830EDD775C975E4BE53F985">isDesignatedInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8872AB22CAFABFA0E11894B47F828FB1D978F8C0">isThisDeclarationADefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA5B1E7104F4F768B19EE0E5B42FA85F819A4353">hasDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B829FD86361344CFF658A69BDEF7D55F8D25FA73">getDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#323CE0DE3D09FD4AADC29C8F20B7485DAE255053">getDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8ABDCDFC9E9092663E50601BB156CDFA738621C">startDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7ED2C65B6DB9DD6B5046C0481CE3C5E6B8B1F38D">getSuperClassType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#26B35C64248677366B808723D8F3FA8743563FA1">getSuperClassTInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2C92B05204346D8CADB2F2089B5E9488E8E49B1D">getSuperClass</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3394AB540EF0F85E329CA2E3C694D26B400E106">setSuperClass</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2B9833312D9E9DE538F96369DE72EBE1AEDBF95">visible_categories</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33421A1566E6FCFD1AE3FCCEDF7BBDFB37ABF825">visible_categories_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D30FE3A0EF081D18ACDCBA4AC9BA07D68A8D1F0E">visible_categories_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D396B141A8B6B3A769C9DD312EB6BE858D6AAC5F">visible_categories_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE2A0DC8C674CD22ED2C6BF8A1B326A74B6EDE65">known_categories</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BC7B7A59F6165A9F6101C7380F819DACA808B17">known_categories_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49FCB75FDC76D3ED6CB47E0263846700BD510818">known_categories_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C03DDD580E84F5C6803C1D8C8ADFD8ED9E2FA02B">known_categories_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#525C0D1D955A7072DE815206130B45AA62121C35">visible_extensions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#43D10033104EBCC47A18B492D634B187C7BF0718">visible_extensions_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90AC8C41E2556342340FFC7922EF7D39FD246432">visible_extensions_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#655EC2A88EB6FE3838E31F4505A0424043FFE6B9">visible_extensions_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DCC228204C1CE8676BFA8DA34798797E1D9AF8D">known_extensions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D48137B8882764B6E02000CE8374F4793F298457">known_extensions_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03CAEF41C19AB5426C399A6DB478D589FD68C544">known_extensions_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28F411EFDB82569C50E9BEAFCA073C2F7A21F47C">known_extensions_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0569B19B63B1B49C8C772298B26A62992CE8F69">getCategoryListRaw</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67C587023E55998870809B3185C39DB4AF062B20">setCategoryListRaw</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F19434F74E4205D671DCF4230D2B95F00D5F82C4">FindPropertyVisibleInPrimaryClass</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58A326848418AD89BB6EDC377BF5706EC310650A">collectPropertiesToImplement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFE584341EC709DB0FED8E3539587CBBCEC22C75">isSuperClassOf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B32728555DF4101EE08983A5A070AD256DB31847">isArcWeakrefUnavailable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FAEE4EA48DF3B2813CF74DCA83C914AF5C35AA11">isObjCRequiresPropertyDefs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7FA10661C53881C62C5F215CFB9434711B646B9">lookupInstanceVariable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A165EEC77FD6637F2F564FB456312BFAD1D708A3">lookupInstanceVariable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA071AFF8A8BDEECF27FBFF7750A967E91F940BC">lookupNestedProtocol</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D718B6200EBBCC04B9B1E9B90C330F68E86911A3">lookupMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2C08CABB3B0D065DBBEFCFD73832EB7E2E655267">lookupInstanceMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#50AE0534D81E677AD3E4A1FF35465B8D9E174AA9">lookupClassMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D79C54A38D45153F41262EA94B5DAA451BFC839">lookupInheritedClass</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B50F2A72802D0C2DE76B242771CF4247FF53E27F">lookupPrivateMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FEECA3B92E63ECEB734D897D0DF047B52CBD9F4">lookupPrivateClassMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A11512A7EB613355EFCF824C72BF3F4D5DE96CC6">lookupPropertyAccessor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC3727970B13C170761C5C984588CB0D8AB9B233">getEndOfDefinitionLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81CC71516F11433F9F666B6C6201375AC034367E">setEndOfDefinitionLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C45B30D00A33A1953A54FD353E965FE2146F05B">getSuperClassLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B66CD2E2FB54EEDAAA73577C45918FE259B869E">isImplicitInterfaceDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#289456871BCED934E72672682AE97508E3D2DEB0">ClassImplementsProtocol</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#624B4D142F28DEF16EEB979B61A3D525DE9F31E9">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42A3E9E1B6CC10E90AB0B6FEB6847B2E68DA4EA3">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C089EC845777E24474211EE4C3F462A640741812">getTypeForDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A4D864FBE4A2DD47509B654CCDB23B0D362F663">setTypeForDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49492B41C353B42C55EF8F6B36D615F9ACC275EC">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08B82F2D1949B5096D12C69CD6FA19C11C0FA6C8">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MayAliasAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MayAliasAttr</h1>
+    <p>Defined at line 5786 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="86AE995CA322015B5EE6C3C0FB0C3FFDFFD73747">CreateImplicit</h3>
+      <p>public MayAliasAttr * CreateImplicit(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="AA2E551634A51B24EBB285ABB27E022442086989">Create</h3>
+      <p>public MayAliasAttr * Create(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="17A53F1E60B7B119C873B8B17948E1BE4FA2BAA1">CreateImplicit</h3>
+      <p>
+        public MayAliasAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="0BB640B71FBA072D35A6399FF83ED8C5DD8438F6">Create</h3>
+      <p>
+        public MayAliasAttr * Create(ASTContext &amp; Ctx, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="975371EBA538075D1E8F2021CC10EC3AFD012757">MayAliasAttr</h3>
+      <p>public void MayAliasAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="CEF5EEBA09D4676A7462ED1C282356B61350BAC4">clone</h3>
+      <p>public MayAliasAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="CBCFAEFD2B1487A351724BA84581E30D0E930E5A">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="160CC9BEC901D7E01A2A71E31AF542DFE022DB1F">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="FCE8324247BA4CB7A424C436D1BAE57740D4B559">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 5812 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="47F79A27DFB6812D185EEDC34C83B9A8346AC2C3">enum Spelling</h3>
+      <ul>
+        <li>GNU_may_alias</li>
+        <li>CXX11_gnu_may_alias</li>
+        <li>C2x_gnu_may_alias</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 5788 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#86AE995CA322015B5EE6C3C0FB0C3FFDFFD73747">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA2E551634A51B24EBB285ABB27E022442086989">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17A53F1E60B7B119C873B8B17948E1BE4FA2BAA1">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0BB640B71FBA072D35A6399FF83ED8C5DD8438F6">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#975371EBA538075D1E8F2021CC10EC3AFD012757">MayAliasAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CEF5EEBA09D4676A7462ED1C282356B61350BAC4">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CBCFAEFD2B1487A351724BA84581E30D0E930E5A">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#160CC9BEC901D7E01A2A71E31AF542DFE022DB1F">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCE8324247BA4CB7A424C436D1BAE57740D4B559">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#47F79A27DFB6812D185EEDC34C83B9A8346AC2C3">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPMapClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPMapClause</h1>
+    <p>Defined at line 5734 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents clause &apos;map&apos; in the &apos;#pragma omp ...&apos; directives.</p>
+        <p> In this example directive &apos;#pragma omp target&apos; has clause &apos;map&apos; with the variables &apos;a&apos; and &apos;b&apos;.</p>
+      </div>
+    </div>
+    <p>Inherits from OMPMappableExprListClause&lt;OMPMapClause&gt;, llvm::TrailingObjects&lt;OMPMapClause, Expr *, ValueDecl *, unsigned int, OMPClauseMappableExprCommon::MappableComponent&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="659A63BB36F380D9ED70272DFF2023BFBA639B03">Create</h3>
+      <p>
+        public OMPMapClause * Create(const ASTContext &amp; C, const OMPVarListLocTy &amp; Locs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Vars, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Declarations, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         ComponentLists, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         UDMapperRefs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         MapModifiers, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         MapModifiersLoc, 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         UDMQualifierLoc, 
+        <a href="DeclarationNameInfo.html">DeclarationNameInfo</a>
+         MapperId, 
+        <a href="OpenMPMapClauseKind.html">OpenMPMapClauseKind</a>
+         Type, _Bool TypeIsImplicit, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TypeLoc)
+      </p>
+      <div>
+        <div>
+          <p> Creates clause with a list of variables </p>
+        </div>
+      </div>
+      <h3 id="A23B9DD3D0ACCB25A584206367D0BCBC683DBE0B">CreateEmpty</h3>
+      <p>public OMPMapClause * CreateEmpty(const ASTContext &amp; C, const OMPMappableExprListSizeTy &amp; Sizes)</p>
+      <div>
+        <div>
+          <p> Creates an empty clause with the place for  original expressions,  declarations,  lists, and  expression components.</p>
+        </div>
+      </div>
+      <h3 id="6B593E72B4D44F07188E6C605FDD51797F80012F">getMapType</h3>
+      <p>
+        public 
+        <a href="OpenMPMapClauseKind.html">OpenMPMapClauseKind</a>
+         getMapType()
+      </p>
+      <p>Defined at line 5907 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fetches mapping kind for the clause.</p>
+        </div>
+      </div>
+      <h3 id="3B05AA1D8FAAC48F6EF76F57A2232CE97E5EE20E">isImplicitMapType</h3>
+      <p>public _Bool isImplicitMapType()</p>
+      <p>Defined at line 5914 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Is this an implicit map type? We have to capture &apos;IsMapTypeImplicit&apos; from the parser for more informative error messages.  It helps distinguish map(r) from map(tofrom: r), which is important to print more helpful error messages for some target directives.</p>
+        </div>
+      </div>
+      <h3 id="8CD17FC9C96D3A01EE2D0A2963369A92DABE5C71">getMapTypeModifier</h3>
+      <p>
+        public 
+        <a href="OpenMPMapModifierKind.html">OpenMPMapModifierKind</a>
+         getMapTypeModifier(unsigned int Cnt)
+      </p>
+      <p>Defined at line 5919 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fetches the map-type-modifier at &apos;Cnt&apos; index of array of modifiers.</p>
+        </div>
+      </div>
+      <h3 id="E6278F28D19C367274BBBF7DBD7C3AA4735E23C7">getMapTypeModifierLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getMapTypeModifierLoc(unsigned int Cnt)
+      </p>
+      <p>Defined at line 5929 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fetches the map-type-modifier location at &apos;Cnt&apos; index of array of modifiers&apos; locations.</p>
+        </div>
+      </div>
+      <h3 id="346727D0263A34F5DC6B9DABE36359E2CC4D6A93">getMapTypeModifiers</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getMapTypeModifiers()
+      </p>
+      <p>Defined at line 5936 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fetches ArrayRef of map-type-modifiers.</p>
+        </div>
+      </div>
+      <h3 id="BE4225E82F12FB1BA7C3F5FCFA478A92CB6FA545">getMapTypeModifiersLoc</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getMapTypeModifiersLoc()
+      </p>
+      <p>Defined at line 5941 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fetches ArrayRef of location of map-type-modifiers.</p>
+        </div>
+      </div>
+      <h3 id="2531859CE6D5C0F471699E06F810821924E318C3">getMapLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getMapLoc()
+      </p>
+      <p>Defined at line 5946 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fetches location of clause mapping kind.</p>
+        </div>
+      </div>
+      <h3 id="E9C3AD9218182CB6A57F23348B0A66C8BD63372F">getColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getColonLoc()
+      </p>
+      <p>Defined at line 5949 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get colon location.</p>
+        </div>
+      </div>
+      <h3 id="A8AC2F0BB6C5E4F08B95F726C691DDEE72C80B48">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 5951 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="A70E967FA5DC5251482208F87BFEF367B6DC793A">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 5957 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="93B100A611E4BDB19BD16C49B092D7B120A6D2C6">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 5962 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="14F7A893C0FA31423F9D3ED670BD68D6AE6874C2">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 5968 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="A6BED70C14DA0BC3A3FB9C6CF18C17F9F0DE399B">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 5974 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#659A63BB36F380D9ED70272DFF2023BFBA639B03">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A23B9DD3D0ACCB25A584206367D0BCBC683DBE0B">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B593E72B4D44F07188E6C605FDD51797F80012F">getMapType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B05AA1D8FAAC48F6EF76F57A2232CE97E5EE20E">isImplicitMapType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CD17FC9C96D3A01EE2D0A2963369A92DABE5C71">getMapTypeModifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6278F28D19C367274BBBF7DBD7C3AA4735E23C7">getMapTypeModifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#346727D0263A34F5DC6B9DABE36359E2CC4D6A93">getMapTypeModifiers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE4225E82F12FB1BA7C3F5FCFA478A92CB6FA545">getMapTypeModifiersLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2531859CE6D5C0F471699E06F810821924E318C3">getMapLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9C3AD9218182CB6A57F23348B0A66C8BD63372F">getColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8AC2F0BB6C5E4F08B95F726C691DDEE72C80B48">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A70E967FA5DC5251482208F87BFEF367B6DC793A">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#93B100A611E4BDB19BD16C49B092D7B120A6D2C6">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14F7A893C0FA31423F9D3ED670BD68D6AE6874C2">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6BED70C14DA0BC3A3FB9C6CF18C17F9F0DE399B">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

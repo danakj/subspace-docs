@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class BumpPtrAllocatorImpl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class BumpPtrAllocatorImpl</h1>
+    <p>Defined at line 63 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+    <div>
+      <div>
+        <p> Allocate memory in an ever growing pool, as if by bump-pointer.</p>
+        <p> This isn&apos;t strictly a bump-pointer allocator as it uses backing slabs of memory rather than relying on a boundless contiguous heap. However, it has bump-pointer semantics in that it is a monotonically growing pool of memory where every allocation is found by merely allocating the next N bytes in the slab, or the next N bytes in the next slab.</p>
+        <p> Note that this also has a threshold for forcing allocations above a certain size into their own slab.</p>
+        <p> The BumpPtrAllocatorImpl template defaults to using a MallocAllocator object, which wraps malloc, to allocate memory, but it can be changed to use a custom allocator.</p>
+        <p> The GrowthDelay specifies after how many allocated slabs the allocator increases the size of the slabs.</p>
+      </div>
+    </div>
+    <p>Inherits from AllocatorBase&lt;BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt; &gt;, detail::AllocatorHolder&lt;AllocatorT&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="270730114D802FE2A755C8F410AFECCDED233E65">BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;</h3>
+      <p>public void BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;()</p>
+      <p>Defined at line 78 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <h3 id="499EECA71D7BBC869FBC5AE147594B6262AA567E">BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;</h3>
+      <p>public void BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;(T &amp;&amp; Allocator)</p>
+      <p>Defined at line 81 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <h3 id="90A4CB55F7FEBD52D74A839D6367D8A7608AC585">BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;</h3>
+      <p>public void BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;(BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt; &amp;&amp; Old)</p>
+      <p>Defined at line 86 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <div>
+        <div>
+          <p> Manually implement a move constructor as we must clear the old allocator&apos;s slabs as a matter of correctness.</p>
+        </div>
+      </div>
+      <h3 id="609C0EA589923151F41BFA9D4E95C08B31F42166">~BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;</h3>
+      <p>public void ~BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;()</p>
+      <p>Defined at line 97 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <h3 id="627CC22A6A42200F8AE46B73140AC9931615D6D9">operator=</h3>
+      <p>public BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt; &amp; operator=(BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt; &amp;&amp; RHS)</p>
+      <p>Defined at line 102 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <h3 id="68149F217ECCB7DEF19D335EC492B8F7006D6195">Reset</h3>
+      <p>public void Reset()</p>
+      <p>Defined at line 123 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <div>
+        <div>
+          <p> Deallocate all but the current slab and reset the current pointer to the beginning of it, freeing all memory allocated so far.</p>
+        </div>
+      </div>
+      <h3 id="CA0E2315CDF47C1A4E540C435CA9BDD72E3FE423">Allocate</h3>
+      <p>
+        public void * Allocate(size_t Size, 
+        <a href="Align.html">Align</a>
+         Alignment)
+      </p>
+      <p>Defined at line 148 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <div>
+        <div>
+          <p> Allocate space at the specified alignment. This method is *not* marked noalias, because SpecificBumpPtrAllocator::DestroyAll() loops over all allocations, and that loop is not based on the Allocate() return value.</p>
+          <p> Allocate(0, N) is valid, it returns a non-null pointer (which should not be dereferenced).</p>
+        </div>
+      </div>
+      <h3 id="477D9A4C213B3202DF36CF8F6B0D1A742FB98676">Allocate</h3>
+      <p>public void * Allocate(size_t Size, size_t Alignment)</p>
+      <p>Defined at line 206 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <h3 id="5C8551947363561338A94D966AEFADA5D7A3FB42">Deallocate</h3>
+      <p>public void Deallocate(const void * Ptr, size_t Size, size_t )</p>
+      <p>Defined at line 218 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <div>
+        <div>
+          <p> Bump pointer allocators are expected to never free their storage; and clients expect pointers to remain valid for non-dereferencing uses even after deallocation.</p>
+        </div>
+      </div>
+      <h3 id="32F08EC885EC0B6A6F459A1C6360DEB2FB45210F">GetNumSlabs</h3>
+      <p>public size_t GetNumSlabs()</p>
+      <p>Defined at line 225 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <h3 id="E9A15687EE8012289DE61115BADB09C297F0A214">identifyObject</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         identifyObject(const void * Ptr)
+      </p>
+      <p>Defined at line 232 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="47D3D3EAE214FD8D05321195534192ABCA5BD793">identifyKnownObject</h3>
+      <p>public int64_t identifyKnownObject(const void * Ptr)</p>
+      <p>Defined at line 258 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <div>
+        <div>
+          <p> A wrapper around identifyObject that additionally asserts that the object is indeed within the allocator.</p>
+        </div>
+      </div>
+      <h3 id="A4E3C1BE6067F840E832232E0E4A7D0988B3EF4C">identifyKnownAlignedObject</h3>
+      <p>public int64_t identifyKnownAlignedObject(const void * Ptr)</p>
+      <p>Defined at line 275 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <div>
+        <div>
+          <p> A wrapper around identifyKnownObject. Accepts type information about the object and produces a smaller identifier by relying on the alignment information. Note that sub-classes may have different alignment, so the most base class should be passed as template parameter in order to obtain correct results. For that reason automatic template parameter deduction is disabled.</p>
+        </div>
+      </div>
+      <h3 id="16A5DEBD4ADAB6D3BE865EDCAD20C6D1F4E7153C">getTotalMemory</h3>
+      <p>public size_t getTotalMemory()</p>
+      <p>Defined at line 281 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <h3 id="54032D8E53853A8C5EFF4CFEF5CFF891AD1E8F4B">getBytesAllocated</h3>
+      <p>public size_t getBytesAllocated()</p>
+      <p>Defined at line 290 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <h3 id="2A70109B7F2D8A539A50988146FF3BF136FDBBFF">setRedZoneSize</h3>
+      <p>public void setRedZoneSize(size_t NewSize)</p>
+      <p>Defined at line 292 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+      <h3 id="08BA9E372BA2EDB54337F49A3F22D3EA3AF622F0">PrintStats</h3>
+      <p>public void PrintStats()</p>
+      <p>Defined at line 296 of file /usr/lib/llvm-16/include/llvm/Support/Allocator.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#270730114D802FE2A755C8F410AFECCDED233E65">BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#499EECA71D7BBC869FBC5AE147594B6262AA567E">BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90A4CB55F7FEBD52D74A839D6367D8A7608AC585">BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#609C0EA589923151F41BFA9D4E95C08B31F42166">~BumpPtrAllocatorImpl&lt;AllocatorT, SlabSize, SizeThreshold, GrowthDelay&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#627CC22A6A42200F8AE46B73140AC9931615D6D9">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68149F217ECCB7DEF19D335EC492B8F7006D6195">Reset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA0E2315CDF47C1A4E540C435CA9BDD72E3FE423">Allocate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#477D9A4C213B3202DF36CF8F6B0D1A742FB98676">Allocate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5C8551947363561338A94D966AEFADA5D7A3FB42">Deallocate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32F08EC885EC0B6A6F459A1C6360DEB2FB45210F">GetNumSlabs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9A15687EE8012289DE61115BADB09C297F0A214">identifyObject</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47D3D3EAE214FD8D05321195534192ABCA5BD793">identifyKnownObject</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4E3C1BE6067F840E832232E0E4A7D0988B3EF4C">identifyKnownAlignedObject</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16A5DEBD4ADAB6D3BE865EDCAD20C6D1F4E7153C">getTotalMemory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#54032D8E53853A8C5EFF4CFEF5CFF891AD1E8F4B">getBytesAllocated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A70109B7F2D8A539A50988146FF3BF136FDBBFF">setRedZoneSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08BA9E372BA2EDB54337F49A3F22D3EA3AF622F0">PrintStats</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DiagnosticMapping</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DiagnosticMapping</h1>
+    <p>Defined at line 101 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4ACC82E1C9006AC12AD38C57334AEBCE97ACCF19">Make</h3>
+      <p>
+        public 
+        <a href="DiagnosticMapping.html">DiagnosticMapping</a>
+         Make(
+        <a href="../clang/diag/Severity.html">Severity</a>
+         Severity, _Bool IsUser, _Bool IsPragma)
+      </p>
+      <p>Defined at line 110 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="B659A12117C968A4544541DDC915D062DB008AF2">getSeverity</h3>
+      <p>
+        public 
+        <a href="../clang/diag/Severity.html">Severity</a>
+         getSeverity()
+      </p>
+      <p>Defined at line 122 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="EDCCEAD04BF9BE9F9F8B311C6991AB2028D13F9D">setSeverity</h3>
+      <p>
+        public void setSeverity(
+        <a href="../clang/diag/Severity.html">Severity</a>
+         Value)
+      </p>
+      <p>Defined at line 123 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="9A6E8055CC0777172485F6529C50CC035923E48D">isUser</h3>
+      <p>public _Bool isUser()</p>
+      <p>Defined at line 125 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="F4972434DCED9B798EF6C39A3EBA935A409A3D68">isPragma</h3>
+      <p>public _Bool isPragma()</p>
+      <p>Defined at line 126 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="B69BBB181371833F7289D3A88DF8E4402EA37052">isErrorOrFatal</h3>
+      <p>public _Bool isErrorOrFatal()</p>
+      <p>Defined at line 128 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="3F4734609AA00C4E6BC176C3C9330CA4B4BE9DFB">hasNoWarningAsError</h3>
+      <p>public _Bool hasNoWarningAsError()</p>
+      <p>Defined at line 133 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="4720CB3305239647A2EF9714B3AA3AC38CD7A3C6">setNoWarningAsError</h3>
+      <p>public void setNoWarningAsError(_Bool Value)</p>
+      <p>Defined at line 134 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="F47F1FEB034C87E3DD18EEE1EFEBC1C5363A9CE1">hasNoErrorAsFatal</h3>
+      <p>public _Bool hasNoErrorAsFatal()</p>
+      <p>Defined at line 136 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="C850E0257096347B35390AAB992B04E26951B395">setNoErrorAsFatal</h3>
+      <p>public void setNoErrorAsFatal(_Bool Value)</p>
+      <p>Defined at line 137 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="E4CB759A5920E378C950C14C5B5D0502AD8A50CC">wasUpgradedFromWarning</h3>
+      <p>public _Bool wasUpgradedFromWarning()</p>
+      <p>Defined at line 142 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <div>
+        <div>
+          <p> Whether this mapping attempted to map the diagnostic to a warning, but was overruled because the diagnostic was already mapped to an error or fatal error.</p>
+        </div>
+      </div>
+      <h3 id="5738476B949CC3FA7AA7529C9175FAFE161FBC6C">setUpgradedFromWarning</h3>
+      <p>public void setUpgradedFromWarning(_Bool Value)</p>
+      <p>Defined at line 143 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <h3 id="A41F3FBC58720C8032548A55E5172483D6142EF8">serialize</h3>
+      <p>public unsigned int serialize()</p>
+      <p>Defined at line 146 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <div>
+        <div>
+          <p> Serialize this mapping as a raw integer.</p>
+        </div>
+      </div>
+      <h3 id="E1C5A281CE4D71D8BC0B98883A9EB28A69D0E7F9">deserialize</h3>
+      <p>
+        public 
+        <a href="DiagnosticMapping.html">DiagnosticMapping</a>
+         deserialize(unsigned int Bits)
+      </p>
+      <p>Defined at line 151 of file /usr/lib/llvm-16/include/clang/Basic/DiagnosticIDs.h</p>
+      <div>
+        <div>
+          <p> Deserialize a mapping.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4ACC82E1C9006AC12AD38C57334AEBCE97ACCF19">Make</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B659A12117C968A4544541DDC915D062DB008AF2">getSeverity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EDCCEAD04BF9BE9F9F8B311C6991AB2028D13F9D">setSeverity</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A6E8055CC0777172485F6529C50CC035923E48D">isUser</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4972434DCED9B798EF6C39A3EBA935A409A3D68">isPragma</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B69BBB181371833F7289D3A88DF8E4402EA37052">isErrorOrFatal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F4734609AA00C4E6BC176C3C9330CA4B4BE9DFB">hasNoWarningAsError</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4720CB3305239647A2EF9714B3AA3AC38CD7A3C6">setNoWarningAsError</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F47F1FEB034C87E3DD18EEE1EFEBC1C5363A9CE1">hasNoErrorAsFatal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C850E0257096347B35390AAB992B04E26951B395">setNoErrorAsFatal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E4CB759A5920E378C950C14C5B5D0502AD8A50CC">wasUpgradedFromWarning</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5738476B949CC3FA7AA7529C9175FAFE161FBC6C">setUpgradedFromWarning</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A41F3FBC58720C8032548A55E5172483D6142EF8">serialize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1C5A281CE4D71D8BC0B98883A9EB28A69D0E7F9">deserialize</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

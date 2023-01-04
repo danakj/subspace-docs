@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class VectorType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class VectorType</h1>
+    <p>Defined at line 3358 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents a GCC generic vector type. This type is created using __attribute__((vector_size(n)), where &quot;n&quot; specifies the vector size in bytes; or from an Altivec __vector or vector declaration. Since the constructor takes the number of vector elements, the client is responsible for converting the size into the number of elements.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        protected 
+        <a href="QualType.html">QualType</a>
+         ElementType
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3D5C6B07A3AAD3577E3B0964DD01D897EFE038BA">VectorType</h3>
+      <p>
+        protected void VectorType(
+        <a href="QualType.html">QualType</a>
+         vecType, unsigned int nElements, 
+        <a href="QualType.html">QualType</a>
+         canonType, 
+        <a href="../clang/VectorType/VectorKind.html">VectorKind</a>
+         vecKind)
+      </p>
+      <h3 id="9C2B6DF6C56606DAE45383B5937439EBF0CFA580">VectorType</h3>
+      <p>
+        protected void VectorType(
+        <a href="../clang/Type/TypeClass.html">TypeClass</a>
+         tc, 
+        <a href="QualType.html">QualType</a>
+         vecType, unsigned int nElements, 
+        <a href="QualType.html">QualType</a>
+         canonType, 
+        <a href="../clang/VectorType/VectorKind.html">VectorKind</a>
+         vecKind)
+      </p>
+      <h3 id="EA526731A9FD469658E783BB225ACCDCA4245F8A">getElementType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getElementType()
+      </p>
+      <p>Defined at line 3399 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="70536E0DDD272D8C120B63A13920A0E308518E9F">getNumElements</h3>
+      <p>public unsigned int getNumElements()</p>
+      <p>Defined at line 3400 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="87B1902752AAE9057AA0DD483C211A4C47E65BDC">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 3402 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="8ACC9B1B536D71DCE4553317AC078479F430F077">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 3403 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="F214F5B63B25AA90E2755388CB1201F1C8DEA322">getVectorKind</h3>
+      <p>
+        public 
+        <a href="../clang/VectorType/VectorKind.html">VectorKind</a>
+         getVectorKind()
+      </p>
+      <p>Defined at line 3405 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="A61D48CC7D4440B735406ED92ADC6B9719B24955">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 3409 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="207F4CAA3B3E399AEE2B56428694E3226F94ADBB">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="QualType.html">QualType</a>
+         ElementType, unsigned int NumElements, 
+        <a href="../clang/Type/TypeClass.html">TypeClass</a>
+         TypeClass, 
+        <a href="../clang/VectorType/VectorKind.html">VectorKind</a>
+         VecKind)
+      </p>
+      <p>Defined at line 3414 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="3C923C01F1A442FC28219C9C6E71B02D3F90B6E6">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 3423 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="6563AB7AF9532DA9040382A22D2653258E93634C">enum VectorKind</h3>
+      <ul>
+        <li>GenericVector</li>
+        <li>AltiVecVector</li>
+        <li>AltiVecPixel</li>
+        <li>AltiVecBool</li>
+        <li>NeonVector</li>
+        <li>NeonPolyVector</li>
+        <li>SveFixedLengthDataVector</li>
+        <li>SveFixedLengthPredicateVector</li>
+      </ul>
+      <p>Defined at line 3360 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3D5C6B07A3AAD3577E3B0964DD01D897EFE038BA">VectorType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C2B6DF6C56606DAE45383B5937439EBF0CFA580">VectorType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA526731A9FD469658E783BB225ACCDCA4245F8A">getElementType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70536E0DDD272D8C120B63A13920A0E308518E9F">getNumElements</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87B1902752AAE9057AA0DD483C211A4C47E65BDC">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8ACC9B1B536D71DCE4553317AC078479F430F077">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F214F5B63B25AA90E2755388CB1201F1C8DEA322">getVectorKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A61D48CC7D4440B735406ED92ADC6B9719B24955">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#207F4CAA3B3E399AEE2B56428694E3226F94ADBB">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C923C01F1A442FC28219C9C6E71B02D3F90B6E6">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6563AB7AF9532DA9040382A22D2653258E93634C">VectorKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

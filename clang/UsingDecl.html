@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UsingDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UsingDecl</h1>
+    <p>Defined at line 3426 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a C++ using-declaration.</p>
+        <p> For example:</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="BaseUsingDecl.html">BaseUsingDecl</a>
+      , Mergeable&lt;UsingDecl&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="39DE285968CB53932DFA93D980F296916F63F487">getUsingLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getUsingLoc()
+      </p>
+      <p>Defined at line 3453 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Return the source location of the &apos;using&apos; keyword.</p>
+        </div>
+      </div>
+      <h3 id="C5FE14F6E4ADAD59672211CDFB5B7FD117C3C890">setUsingLoc</h3>
+      <p>
+        public void setUsingLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 3456 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Set the source location of the &apos;using&apos; keyword.</p>
+        </div>
+      </div>
+      <h3 id="FD977D58AF756C75F016CA11A043993C3480363A">getQualifierLoc</h3>
+      <p>
+        public 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         getQualifierLoc()
+      </p>
+      <p>Defined at line 3460 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the nested-name-specifier that qualifies the name, with source-location information.</p>
+        </div>
+      </div>
+      <h3 id="413B5AE2B1B1A4B4E5C25ADCE483E841FFF63845">getQualifier</h3>
+      <p>public NestedNameSpecifier * getQualifier()</p>
+      <p>Defined at line 3463 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the nested-name-specifier that qualifies the name.</p>
+        </div>
+      </div>
+      <h3 id="25F2947103376F27A1C49A1337287767BD5C9058">getNameInfo</h3>
+      <p>
+        public 
+        <a href="DeclarationNameInfo.html">DeclarationNameInfo</a>
+         getNameInfo()
+      </p>
+      <p>Defined at line 3467 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="642B2D6BF60AF8C3613F151CBB17B6685C6C7DCD">isAccessDeclaration</h3>
+      <p>public _Bool isAccessDeclaration()</p>
+      <p>Defined at line 3472 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Return true if it is a C++03 access declaration (no &apos;using&apos;).</p>
+        </div>
+      </div>
+      <h3 id="F055FCF98AEFE9EC474B400EE4675565B7CE5480">hasTypename</h3>
+      <p>public _Bool hasTypename()</p>
+      <p>Defined at line 3475 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Return true if the using declaration has &apos;typename&apos;.</p>
+        </div>
+      </div>
+      <h3 id="D43C6DC819666091AA3FD99E1584E62391CDAD88">setTypename</h3>
+      <p>public void setTypename(_Bool TN)</p>
+      <p>Defined at line 3478 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Sets whether the using declaration has &apos;typename&apos;.</p>
+        </div>
+      </div>
+      <h3 id="09D167B1E342C55D4A257A1F2A303ADDDC5BB645">Create</h3>
+      <p>
+        public UsingDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         UsingL, 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         QualifierLoc, const DeclarationNameInfo &amp; NameInfo, _Bool HasTypenameKeyword)
+      </p>
+      <h3 id="625880385E8D7C1A1AC07C81C849C29C3D2FB4CE">CreateDeserialized</h3>
+      <p>public UsingDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="B6C32DC36D61268AE38E2F25D7F6028DBA9E9496">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <h3 id="E8254CBBE1EB3692B3EF2DB282920CCB8A58F89C">getCanonicalDecl</h3>
+      <p>public UsingDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3491 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieves the canonical declaration of this declaration.</p>
+        </div>
+      </div>
+      <h3 id="B095234FB47D3DB9662586985786F4CB66CB0C05">getCanonicalDecl</h3>
+      <p>public const UsingDecl * getCanonicalDecl()</p>
+      <p>Defined at line 3494 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="48C04C04C201F85914B10DF39C9591A5A52AC912">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 3498 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="027F8A74A8BB8D4879F44E5D7540F8E131853562">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 3499 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#39DE285968CB53932DFA93D980F296916F63F487">getUsingLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C5FE14F6E4ADAD59672211CDFB5B7FD117C3C890">setUsingLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD977D58AF756C75F016CA11A043993C3480363A">getQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#413B5AE2B1B1A4B4E5C25ADCE483E841FFF63845">getQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#25F2947103376F27A1C49A1337287767BD5C9058">getNameInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#642B2D6BF60AF8C3613F151CBB17B6685C6C7DCD">isAccessDeclaration</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F055FCF98AEFE9EC474B400EE4675565B7CE5480">hasTypename</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D43C6DC819666091AA3FD99E1584E62391CDAD88">setTypename</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#09D167B1E342C55D4A257A1F2A303ADDDC5BB645">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#625880385E8D7C1A1AC07C81C849C29C3D2FB4CE">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B6C32DC36D61268AE38E2F25D7F6028DBA9E9496">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8254CBBE1EB3692B3EF2DB282920CCB8A58F89C">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B095234FB47D3DB9662586985786F4CB66CB0C05">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48C04C04C201F85914B10DF39C9591A5A52AC912">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#027F8A74A8BB8D4879F44E5D7540F8E131853562">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

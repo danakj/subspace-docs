@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class EnforceTCBLeafAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class EnforceTCBLeafAttr</h1>
+    <p>Defined at line 3870 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="57063D0CC1DC30C534C76B8D556CEB794F6A5D9E">CreateImplicit</h3>
+      <p>
+        public EnforceTCBLeafAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         TCBName, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="6D58444398DA0F98CD5CF5C81D9CBDEE805BE5D0">Create</h3>
+      <p>
+        public EnforceTCBLeafAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         TCBName, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="7EE0DAC43C37D522967A500D17CBC412A5BF8FED">CreateImplicit</h3>
+      <p>
+        public EnforceTCBLeafAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         TCBName, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="3145B72661D701B8F967C381691A8EB6563E4ABE">Create</h3>
+      <p>
+        public EnforceTCBLeafAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         TCBName, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="86C92EBAA547DBA0FFF7D1C43CDE88056A7731C5">EnforceTCBLeafAttr</h3>
+      <p>
+        public void EnforceTCBLeafAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         TCBName)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="DF143A9810E02ED34FA816FFA991756C265658FD">clone</h3>
+      <p>public EnforceTCBLeafAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="09F2688DE2F01BEC8C492D76A7B3CF4EB06ACE4C">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="E7D83CD0EB01D2C30DE17493A3FDBA25CD075BB1">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="C40DF4A71AD83A046E00025F13D35CA65095038E">getTCBName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getTCBName()
+      </p>
+      <p>Defined at line 3898 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="5E5C49DB5B4D76F39F48D40DDBE46F6A9CC99A0D">getTCBNameLength</h3>
+      <p>public unsigned int getTCBNameLength()</p>
+      <p>Defined at line 3901 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="B74B28B7C8D42A2DFEB4FD4466F40DC2859D8180">setTCBName</h3>
+      <p>
+        public void setTCBName(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 3904 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="9EB3A4EC70817BD514C16D8F26F74ED4CC0823EE">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 3913 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="F7310E628EA80189939C1643460ADB2A796E770D">enum Spelling</h3>
+      <ul>
+        <li>GNU_enforce_tcb_leaf</li>
+        <li>CXX11_clang_enforce_tcb_leaf</li>
+        <li>C2x_clang_enforce_tcb_leaf</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 3875 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#57063D0CC1DC30C534C76B8D556CEB794F6A5D9E">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D58444398DA0F98CD5CF5C81D9CBDEE805BE5D0">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7EE0DAC43C37D522967A500D17CBC412A5BF8FED">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3145B72661D701B8F967C381691A8EB6563E4ABE">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86C92EBAA547DBA0FFF7D1C43CDE88056A7731C5">EnforceTCBLeafAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF143A9810E02ED34FA816FFA991756C265658FD">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#09F2688DE2F01BEC8C492D76A7B3CF4EB06ACE4C">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E7D83CD0EB01D2C30DE17493A3FDBA25CD075BB1">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C40DF4A71AD83A046E00025F13D35CA65095038E">getTCBName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E5C49DB5B4D76F39F48D40DDBE46F6A9CC99A0D">getTCBNameLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B74B28B7C8D42A2DFEB4FD4466F40DC2859D8180">setTCBName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EB3A4EC70817BD514C16D8F26F74ED4CC0823EE">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F7310E628EA80189939C1643460ADB2A796E770D">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

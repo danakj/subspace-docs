@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExprRequirement</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/concepts" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExprRequirement</h1>
+    <p>Defined at line 255 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+    <div>
+      <div></div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Requirement.html">Requirement</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../clang/concepts/ExprRequirement/ReturnTypeRequirement.html">ReturnTypeRequirement</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8E0C17F15A4A596B631C0EA5E62C7D9676A9F7CD">ExprRequirement</h3>
+      <p>
+        public void ExprRequirement(Expr * E, _Bool IsSimple, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         NoexceptLoc, 
+        <a href="../../clang/concepts/ExprRequirement/ReturnTypeRequirement.html">ReturnTypeRequirement</a>
+         Req, 
+        <a href="../../clang/concepts/ExprRequirement/SatisfactionStatus.html">SatisfactionStatus</a>
+         Status, ConceptSpecializationExpr * SubstitutedConstraintExpr)
+      </p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="BA41A8A9D572EEFC2A7B0EB9CF82A86F9ED89671">ExprRequirement</h3>
+      <p>
+        public void ExprRequirement(SubstitutionDiagnostic * E, _Bool IsSimple, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         NoexceptLoc, 
+        <a href="../../clang/concepts/ExprRequirement/ReturnTypeRequirement.html">ReturnTypeRequirement</a>
+         Req)
+      </p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="B5416CE4C9B84BB559E80FDB35EF965948E01660">isSimple</h3>
+      <p>public _Bool isSimple()</p>
+      <p>Defined at line 361 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="BD98FB6CB372E537BBFD5C51784F2A9116346E04">isCompound</h3>
+      <p>public _Bool isCompound()</p>
+      <p>Defined at line 362 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="67E78ED9E26F4DF3C3F197E84B17445B2D69749A">hasNoexceptRequirement</h3>
+      <p>public _Bool hasNoexceptRequirement()</p>
+      <p>Defined at line 364 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="6E58EAC066705BAC27008DD167012F425EC50F9E">getNoexceptLoc</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getNoexceptLoc()
+      </p>
+      <p>Defined at line 365 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="209F1081EB3A61C0835C12D24A9DD4C370C02F74">getSatisfactionStatus</h3>
+      <p>
+        public 
+        <a href="../../clang/concepts/ExprRequirement/SatisfactionStatus.html">SatisfactionStatus</a>
+         getSatisfactionStatus()
+      </p>
+      <p>Defined at line 367 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="B55BB8491077C77F715EA4916888575E879822B3">isExprSubstitutionFailure</h3>
+      <p>public _Bool isExprSubstitutionFailure()</p>
+      <p>Defined at line 369 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="8222C559994A062B6D4EB3F7BB8B2698E7C1E701">getReturnTypeRequirement</h3>
+      <p>public const ReturnTypeRequirement &amp; getReturnTypeRequirement()</p>
+      <p>Defined at line 373 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="03CAEE67718C1E2C078FE97C6DA63AE0A3CB2227">getReturnTypeRequirementSubstitutedConstraintExpr</h3>
+      <p>public ConceptSpecializationExpr * getReturnTypeRequirementSubstitutedConstraintExpr()</p>
+      <p>Defined at line 377 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="5EB0835BD8C8C0F3542A5C3CE3561063D23C8089">getExprSubstitutionDiagnostic</h3>
+      <p>public SubstitutionDiagnostic * getExprSubstitutionDiagnostic()</p>
+      <p>Defined at line 383 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="0829C543F9D66C010D5DDCFFD9A6D2D09F1E32C6">getExpr</h3>
+      <p>public Expr * getExpr()</p>
+      <p>Defined at line 390 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+      <h3 id="759798779E72C31E0A967911F85E6202284BF978">classof</h3>
+      <p>public _Bool classof(const Requirement * R)</p>
+      <p>Defined at line 397 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="0E9530DBCA95158371F886C230A6FDFECB440DC8">enum SatisfactionStatus</h3>
+      <ul>
+        <li>SS_Dependent</li>
+        <li>SS_ExprSubstitutionFailure</li>
+        <li>SS_NoexceptNotMet</li>
+        <li>SS_TypeRequirementSubstitutionFailure</li>
+        <li>SS_ConstraintsNotSatisfied</li>
+        <li>SS_Satisfied</li>
+      </ul>
+      <p>Defined at line 257 of file /usr/lib/llvm-16/include/clang/AST/ExprConcepts.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8E0C17F15A4A596B631C0EA5E62C7D9676A9F7CD">ExprRequirement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA41A8A9D572EEFC2A7B0EB9CF82A86F9ED89671">ExprRequirement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5416CE4C9B84BB559E80FDB35EF965948E01660">isSimple</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD98FB6CB372E537BBFD5C51784F2A9116346E04">isCompound</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67E78ED9E26F4DF3C3F197E84B17445B2D69749A">hasNoexceptRequirement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E58EAC066705BAC27008DD167012F425EC50F9E">getNoexceptLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#209F1081EB3A61C0835C12D24A9DD4C370C02F74">getSatisfactionStatus</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B55BB8491077C77F715EA4916888575E879822B3">isExprSubstitutionFailure</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8222C559994A062B6D4EB3F7BB8B2698E7C1E701">getReturnTypeRequirement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03CAEE67718C1E2C078FE97C6DA63AE0A3CB2227">getReturnTypeRequirementSubstitutedConstraintExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5EB0835BD8C8C0F3542A5C3CE3561063D23C8089">getExprSubstitutionDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0829C543F9D66C010D5DDCFFD9A6D2D09F1E32C6">getExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#759798779E72C31E0A967911F85E6202284BF978">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0E9530DBCA95158371F886C230A6FDFECB440DC8">SatisfactionStatus</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

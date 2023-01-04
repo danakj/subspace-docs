@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class PluginASTAction</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class PluginASTAction</h1>
+    <p>Defined at line 257 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+    <p>
+      Inherits from 
+      <a href="ASTFrontendAction.html">ASTFrontendAction</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="22ED14A57279D0208D675B9EB40892AC2576D0AF">CreateASTConsumer</h3>
+      <p>
+        public 
+        <a href="../std/unique_ptr.html">unique_ptr</a>
+         CreateASTConsumer(CompilerInstance &amp; CI, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         InFile)
+      </p>
+      <h3 id="6794605E984138DD953A7BCD3BF7DC93ADF42F69">ParseArgs</h3>
+      <p>public _Bool ParseArgs(const CompilerInstance &amp; CI, const std::vector&lt;std::string&gt; &amp; arg)</p>
+      <div>
+        <div>
+          <p> Parse the given plugin command line arguments.</p>
+        </div>
+      </div>
+      <h3 id="CB594F494BF37A6EA04D775353D20F4C511D0C50">getActionType</h3>
+      <p>
+        public 
+        <a href="../clang/PluginASTAction/ActionType.html">ActionType</a>
+         getActionType()
+      </p>
+      <p>Defined at line 284 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Get the action type for this plugin</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="358F583B470526E1792564253F40CA3C7F089E91">enum ActionType</h3>
+      <ul>
+        <li>CmdlineBeforeMainAction</li>
+        <li>CmdlineAfterMainAction</li>
+        <li>ReplaceAction</li>
+        <li>AddBeforeMainAction</li>
+        <li>AddAfterMainAction</li>
+      </ul>
+      <p>Defined at line 272 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#22ED14A57279D0208D675B9EB40892AC2576D0AF">CreateASTConsumer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6794605E984138DD953A7BCD3BF7DC93ADF42F69">ParseArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB594F494BF37A6EA04D775353D20F4C511D0C50">getActionType</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#358F583B470526E1792564253F40CA3C7F089E91">ActionType</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

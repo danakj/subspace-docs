@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Designator</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/DesignatedInitExpr" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Designator</h1>
+    <p>Defined at line 5110 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> Forward declaration of the Designator class.</p>
+      </div>
+      <div>
+        <p> Represents a single C99 designator.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="17712E11A720C84B1B1595D47FD5DD76B72FFA76">Designator</h3>
+      <p>public void Designator()</p>
+      <p>Defined at line 5127 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="BE278CB7AF8148185EE903BE24A5F2F13688BF5B">Designator</h3>
+      <p>
+        public void Designator(const IdentifierInfo * FieldName, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         DotLoc, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         FieldLoc)
+      </p>
+      <p>Defined at line 5130 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Initializes a field designator.</p>
+        </div>
+      </div>
+      <h3 id="01DBC1E2B6FDCF1BAE49A6EB7C85321A873B401A">Designator</h3>
+      <p>
+        public void Designator(unsigned int Index, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         LBracketLoc, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         RBracketLoc)
+      </p>
+      <p>Defined at line 5140 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Initializes an array designator.</p>
+        </div>
+      </div>
+      <h3 id="C6CFF7C073E61744575BBEA43170EF81B8B94195">Designator</h3>
+      <p>
+        public void Designator(unsigned int Index, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         LBracketLoc, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         EllipsisLoc, 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         RBracketLoc)
+      </p>
+      <p>Defined at line 5151 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Initializes a GNU array-range designator.</p>
+        </div>
+      </div>
+      <h3 id="78D354117F6B1A9215D23F17FA02D6256E98DBA7">isFieldDesignator</h3>
+      <p>public _Bool isFieldDesignator()</p>
+      <p>Defined at line 5161 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="CA89071190797A3574E27E19C4E33C5A331A09B0">isArrayDesignator</h3>
+      <p>public _Bool isArrayDesignator()</p>
+      <p>Defined at line 5162 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="43967ED952A09FEAEBE2ED5A6CF6C78FC5CC143C">isArrayRangeDesignator</h3>
+      <p>public _Bool isArrayRangeDesignator()</p>
+      <p>Defined at line 5163 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="73664BB6EB6AF8232F0203AE28654D8BC582316C">getFieldName</h3>
+      <p>public IdentifierInfo * getFieldName()</p>
+      <h3 id="9686880E7AEEBEED6655FE027DD765C4287D1D20">getField</h3>
+      <p>public FieldDecl * getField()</p>
+      <p>Defined at line 5167 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="BE867BC3B7E1A034778743CDE76093955FF8BF9E">setField</h3>
+      <p>public void setField(FieldDecl * FD)</p>
+      <p>Defined at line 5175 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C1B940B0A41F636CA0A7BBC4C0F06AF520AAA8E1">getDotLoc</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getDotLoc()
+      </p>
+      <p>Defined at line 5180 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="45166BAFACD145A1ABF279069AD0784267DA861F">getFieldLoc</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getFieldLoc()
+      </p>
+      <p>Defined at line 5185 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="3071A885A1C4E5D3F47A4D9D850E289F670F62C7">getLBracketLoc</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getLBracketLoc()
+      </p>
+      <p>Defined at line 5190 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="DCDD79A30CD4963B10DDE3A7488CADF3FA68676B">getRBracketLoc</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getRBracketLoc()
+      </p>
+      <p>Defined at line 5196 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="B53F405C5D05CF095416357F3A2E669CEC9F0C87">getEllipsisLoc</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getEllipsisLoc()
+      </p>
+      <p>Defined at line 5202 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="7CD2EB01BE086AB88526BC1055965EEBEB8D79E3">getFirstExprIndex</h3>
+      <p>public unsigned int getFirstExprIndex()</p>
+      <p>Defined at line 5208 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="6DAF7EFEA1D83B10B1F79CDBCEEAEB9E89229B5E">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 5214 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="809D53F25BDD6BEEE2F223BD55C671AFFCE21278">getEndLoc</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 5220 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8AA0694E1EA4A69A07F460A76E19D53546AB450F">getSourceRange</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 5223 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#17712E11A720C84B1B1595D47FD5DD76B72FFA76">Designator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE278CB7AF8148185EE903BE24A5F2F13688BF5B">Designator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01DBC1E2B6FDCF1BAE49A6EB7C85321A873B401A">Designator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6CFF7C073E61744575BBEA43170EF81B8B94195">Designator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78D354117F6B1A9215D23F17FA02D6256E98DBA7">isFieldDesignator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA89071190797A3574E27E19C4E33C5A331A09B0">isArrayDesignator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#43967ED952A09FEAEBE2ED5A6CF6C78FC5CC143C">isArrayRangeDesignator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73664BB6EB6AF8232F0203AE28654D8BC582316C">getFieldName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9686880E7AEEBEED6655FE027DD765C4287D1D20">getField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE867BC3B7E1A034778743CDE76093955FF8BF9E">setField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1B940B0A41F636CA0A7BBC4C0F06AF520AAA8E1">getDotLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45166BAFACD145A1ABF279069AD0784267DA861F">getFieldLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3071A885A1C4E5D3F47A4D9D850E289F670F62C7">getLBracketLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DCDD79A30CD4963B10DDE3A7488CADF3FA68676B">getRBracketLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B53F405C5D05CF095416357F3A2E669CEC9F0C87">getEllipsisLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7CD2EB01BE086AB88526BC1055965EEBEB8D79E3">getFirstExprIndex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DAF7EFEA1D83B10B1F79CDBCEEAEB9E89229B5E">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#809D53F25BDD6BEEE2F223BD55C671AFFCE21278">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AA0694E1EA4A69A07F460A76E19D53546AB450F">getSourceRange</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

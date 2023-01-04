@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Registry</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Registry</h1>
+    <p>Defined at line 44 of file /usr/lib/llvm-16/include/llvm/Support/Registry.h</p>
+    <div>
+      <div>
+        <p> A global registry used in conjunction with static constructors to make pluggable components (like targets or garbage collectors) &quot;just work&quot; when linked with an executable.</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../llvm/Registry/node.html">node</a>
+      </li>
+      <li>
+        <a href="../llvm/Registry/iterator.html">iterator</a>
+      </li>
+      <li>
+        <a href="../llvm/Registry/Add.html">Add</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FA5E7BB7104C53E8EDFFE4F9E9707DFC34F5F81F">add_node</h3>
+      <p>public void add_node(node * N)</p>
+      <div>
+        <div>
+          <p> Add a node to the Registry: this is the interface between the plugin and the executable.</p>
+          <p> This function is exported by the executable and called by the plugin to add a node to the executable&apos;s registry. Therefore it&apos;s not defined here to avoid it being instantiated in the plugin and is instead defined in the executable (see LLVM_INSTANTIATE_REGISTRY below).</p>
+        </div>
+      </div>
+      <h3 id="949D6EAA184A0F663B10A66515AD4EE37E973488">begin</h3>
+      <p>
+        public 
+        <a href="../llvm/Registry/iterator.html">iterator</a>
+         begin()
+      </p>
+      <div>
+        <div>
+          <p> begin is not defined here in order to avoid usage of an undefined static data member, instead it&apos;s instantiated by LLVM_INSTANTIATE_REGISTRY.</p>
+        </div>
+      </div>
+      <h3 id="97D8E72115B588B85520BF3F854CB7DDA87D574A">end</h3>
+      <p>
+        public 
+        <a href="../llvm/Registry/iterator.html">iterator</a>
+         end()
+      </p>
+      <p>Defined at line 99 of file /usr/lib/llvm-16/include/llvm/Support/Registry.h</p>
+      <h3 id="7080D2533E1BDEC99EADCA59A768BB8CFE81CC80">entries</h3>
+      <p>public iterator_range&lt;iterator&gt; entries()</p>
+      <p>Defined at line 101 of file /usr/lib/llvm-16/include/llvm/Support/Registry.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FA5E7BB7104C53E8EDFFE4F9E9707DFC34F5F81F">add_node</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#949D6EAA184A0F663B10A66515AD4EE37E973488">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97D8E72115B588B85520BF3F854CB7DDA87D574A">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7080D2533E1BDEC99EADCA59A768BB8CFE81CC80">entries</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

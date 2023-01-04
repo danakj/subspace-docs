@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StringMapImpl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StringMapImpl</h1>
+    <p>Defined at line 32 of file /usr/lib/llvm-16/include/llvm/ADT/StringMap.h</p>
+    <div>
+      <div>
+        <p> StringMapImpl - This is the base class of StringMap that is shared among all of its instantiations.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected StringMapEntryBase ** TheTable</li>
+      <li>protected unsigned int NumBuckets</li>
+      <li>protected unsigned int NumItems</li>
+      <li>protected unsigned int NumTombstones</li>
+      <li>protected unsigned int ItemSize</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="ED08DFA9D05AF4075B86D31C26EF237010BB948F">StringMapImpl</h3>
+      <p>protected void StringMapImpl(unsigned int itemSize)</p>
+      <p>Defined at line 44 of file /usr/lib/llvm-16/include/llvm/ADT/StringMap.h</p>
+      <h3 id="9F6F16713FDEE2FA717418326127A3A9FA1D76F7">StringMapImpl</h3>
+      <p>protected void StringMapImpl(StringMapImpl &amp;&amp; RHS)</p>
+      <p>Defined at line 45 of file /usr/lib/llvm-16/include/llvm/ADT/StringMap.h</p>
+      <h3 id="F9A2D69C4F189F03EC947DBF96CB65B0FDC0C5EE">StringMapImpl</h3>
+      <p>protected void StringMapImpl(unsigned int InitSize, unsigned int ItemSize)</p>
+      <h3 id="970A40ACE4250AEC1A01C4289BBE444B0F329E27">RehashTable</h3>
+      <p>protected unsigned int RehashTable(unsigned int BucketNo)</p>
+      <h3 id="242151BAC4589E96DE6B66B1997A6419006A7A94">LookupBucketFor</h3>
+      <p>
+        protected unsigned int LookupBucketFor(
+        <a href="StringRef.html">StringRef</a>
+         Key)
+      </p>
+      <div>
+        <div>
+          <p> LookupBucketFor - Look up the bucket that the specified string should end up in.  If it already exists as a key in the map, the Item pointer for the specified bucket will be non-null.  Otherwise, it will be null.  In either case, the FullHashValue field of the bucket will be set to the hash value of the string.</p>
+        </div>
+      </div>
+      <h3 id="4128B572DD1C1DFB7634F92319D263A7A6F7CC04">FindKey</h3>
+      <p>
+        protected int FindKey(
+        <a href="StringRef.html">StringRef</a>
+         Key)
+      </p>
+      <div>
+        <div>
+          <p> FindKey - Look up the bucket that contains the specified key. If it exists in the map, return the bucket number of the key.  Otherwise return -1. This does not modify the map.</p>
+        </div>
+      </div>
+      <h3 id="AD298799CA364542B835C63A3420DB109FCFD97A">RemoveKey</h3>
+      <p>protected void RemoveKey(StringMapEntryBase * V)</p>
+      <div>
+        <div>
+          <p> RemoveKey - Remove the specified StringMapEntry from the table, but do not delete it.  This aborts if the value isn&apos;t in the table.</p>
+        </div>
+      </div>
+      <h3 id="AE62DE8913455151F8E292005E6BE94F22A8B40C">RemoveKey</h3>
+      <p>
+        protected StringMapEntryBase * RemoveKey(
+        <a href="StringRef.html">StringRef</a>
+         Key)
+      </p>
+      <div>
+        <div>
+          <p> RemoveKey - Remove the StringMapEntry for the specified key from the table, returning it.  If the key is not in the table, this returns null.</p>
+        </div>
+      </div>
+      <h3 id="69073B39FC5EEFF062C541BB8DB959E15CE0E50C">init</h3>
+      <p>protected void init(unsigned int Size)</p>
+      <div>
+        <div>
+          <p> Allocate the table with the specified number of buckets and otherwise setup the map as empty.</p>
+        </div>
+      </div>
+      <h3 id="7DB5E85C7A0718371B7FCCCFCCB65717CE58D449">getTombstoneVal</h3>
+      <p>public StringMapEntryBase * getTombstoneVal()</p>
+      <p>Defined at line 87 of file /usr/lib/llvm-16/include/llvm/ADT/StringMap.h</p>
+      <h3 id="81A5025E9A530B1313BFE10C3F0F97F957E75960">getNumBuckets</h3>
+      <p>public unsigned int getNumBuckets()</p>
+      <p>Defined at line 91 of file /usr/lib/llvm-16/include/llvm/ADT/StringMap.h</p>
+      <h3 id="5D69280E2724D81355EDD624C77F6D2D56D6B492">getNumItems</h3>
+      <p>public unsigned int getNumItems()</p>
+      <p>Defined at line 92 of file /usr/lib/llvm-16/include/llvm/ADT/StringMap.h</p>
+      <h3 id="C1E2DE844F91C60B41C3EF48196CE41542C8F1C0">empty</h3>
+      <p>public _Bool empty()</p>
+      <p>Defined at line 94 of file /usr/lib/llvm-16/include/llvm/ADT/StringMap.h</p>
+      <h3 id="D571FCB85F59E961A450FD11F3C9DDC32E0D20A8">size</h3>
+      <p>public unsigned int size()</p>
+      <p>Defined at line 95 of file /usr/lib/llvm-16/include/llvm/ADT/StringMap.h</p>
+      <h3 id="D5FAB90995A2BC60E6908A2DAC56990CE95CBF35">swap</h3>
+      <p>public void swap(StringMapImpl &amp; Other)</p>
+      <p>Defined at line 97 of file /usr/lib/llvm-16/include/llvm/ADT/StringMap.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#ED08DFA9D05AF4075B86D31C26EF237010BB948F">StringMapImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F6F16713FDEE2FA717418326127A3A9FA1D76F7">StringMapImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9A2D69C4F189F03EC947DBF96CB65B0FDC0C5EE">StringMapImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#970A40ACE4250AEC1A01C4289BBE444B0F329E27">RehashTable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#242151BAC4589E96DE6B66B1997A6419006A7A94">LookupBucketFor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4128B572DD1C1DFB7634F92319D263A7A6F7CC04">FindKey</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD298799CA364542B835C63A3420DB109FCFD97A">RemoveKey</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE62DE8913455151F8E292005E6BE94F22A8B40C">RemoveKey</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69073B39FC5EEFF062C541BB8DB959E15CE0E50C">init</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7DB5E85C7A0718371B7FCCCFCCB65717CE58D449">getTombstoneVal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81A5025E9A530B1313BFE10C3F0F97F957E75960">getNumBuckets</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D69280E2724D81355EDD624C77F6D2D56D6B492">getNumItems</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1E2DE844F91C60B41C3EF48196CE41542C8F1C0">empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D571FCB85F59E961A450FD11F3C9DDC32E0D20A8">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5FAB90995A2BC60E6908A2DAC56990CE95CBF35">swap</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

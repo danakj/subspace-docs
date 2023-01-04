@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TargetOptions</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TargetOptions</h1>
+    <p>Defined at line 124 of file /usr/lib/llvm-16/include/llvm/Target/TargetOptions.h</p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        public 
+        <a href="../std/pair.html">pair</a>
+         BinutilsVersion
+      </li>
+      <li>public unsigned int UnsafeFPMath</li>
+      <li>public unsigned int NoInfsFPMath</li>
+      <li>public unsigned int NoNaNsFPMath</li>
+      <li>public unsigned int NoTrappingFPMath</li>
+      <li>public unsigned int NoSignedZerosFPMath</li>
+      <li>public unsigned int ApproxFuncFPMath</li>
+      <li>public unsigned int EnableAIXExtendedAltivecABI</li>
+      <li>public unsigned int HonorSignDependentRoundingFPMathOption</li>
+      <li>public unsigned int NoZerosInBSS</li>
+      <li>public unsigned int GuaranteedTailCallOpt</li>
+      <li>public unsigned int StackSymbolOrdering</li>
+      <li>public unsigned int EnableFastISel</li>
+      <li>public unsigned int EnableGlobalISel</li>
+      <li>
+        public 
+        <a href="GlobalISelAbortMode.html">GlobalISelAbortMode</a>
+         GlobalISelAbort
+      </li>
+      <li>
+        public 
+        <a href="SwiftAsyncFramePointerMode.html">SwiftAsyncFramePointerMode</a>
+         SwiftAsyncFramePointer
+      </li>
+      <li>public unsigned int UseInitArray</li>
+      <li>public unsigned int LowerGlobalDtorsViaCxaAtExit</li>
+      <li>public unsigned int DisableIntegratedAS</li>
+      <li>
+        public 
+        <a href="DebugCompressionType.html">DebugCompressionType</a>
+         CompressDebugSections
+      </li>
+      <li>public unsigned int RelaxELFRelocations</li>
+      <li>public unsigned int FunctionSections</li>
+      <li>public unsigned int DataSections</li>
+      <li>public unsigned int IgnoreXCOFFVisibility</li>
+      <li>public unsigned int XCOFFTracebackTable</li>
+      <li>public unsigned int UniqueSectionNames</li>
+      <li>public unsigned int UniqueBasicBlockSectionNames</li>
+      <li>public unsigned int TrapUnreachable</li>
+      <li>public unsigned int NoTrapAfterNoreturn</li>
+      <li>public unsigned int TLSSize</li>
+      <li>public unsigned int EmulatedTLS</li>
+      <li>public unsigned int ExplicitEmulatedTLS</li>
+      <li>public unsigned int EnableIPRA</li>
+      <li>public unsigned int EmitStackSizeSection</li>
+      <li>public unsigned int EnableMachineOutliner</li>
+      <li>public unsigned int EnableMachineFunctionSplitter</li>
+      <li>public unsigned int SupportsDefaultOutlining</li>
+      <li>public unsigned int EmitAddrsig</li>
+      <li>
+        public 
+        <a href="BasicBlockSection.html">BasicBlockSection</a>
+         BBSections
+      </li>
+      <li>
+        public 
+        <a href="../std/shared_ptr.html">shared_ptr</a>
+         BBSectionsFuncListBuf
+      </li>
+      <li>public unsigned int EmitCallSiteInfo</li>
+      <li>public unsigned int SupportsDebugEntryValues</li>
+      <li>public unsigned int EnableDebugEntryValues</li>
+      <li>public unsigned int ValueTrackingVariableLocations</li>
+      <li>public unsigned int ForceDwarfFrameSection</li>
+      <li>public unsigned int XRayOmitFunctionIndex</li>
+      <li>public unsigned int DebugStrictDwarf</li>
+      <li>public unsigned int Hotpatch</li>
+      <li>public unsigned int PPCGenScalarMASSEntries</li>
+      <li>public unsigned int JMCInstrument</li>
+      <li>public unsigned int EnableCFIFixup</li>
+      <li>public unsigned int MisExpect</li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         StackUsageOutput
+      </li>
+      <li>public unsigned int LoopAlignment</li>
+      <li>
+        public 
+        <a href="../llvm/FloatABI/ABIType.html">ABIType</a>
+         FloatABIType
+      </li>
+      <li>
+        public 
+        <a href="../llvm/FPOpFusion/FPOpFusionMode.html">FPOpFusionMode</a>
+         AllowFPOpFusion
+      </li>
+      <li>
+        public 
+        <a href="../llvm/ThreadModel/Model.html">Model</a>
+         ThreadModel
+      </li>
+      <li>
+        public 
+        <a href="EABI.html">EABI</a>
+         EABIVersion
+      </li>
+      <li>
+        public 
+        <a href="DebuggerKind.html">DebuggerKind</a>
+         DebuggerTuning
+      </li>
+      <li>
+        public 
+        <a href="ExceptionHandling.html">ExceptionHandling</a>
+         ExceptionModel
+      </li>
+      <li>
+        public 
+        <a href="MCTargetOptions.html">MCTargetOptions</a>
+         MCOptions
+      </li>
+      <li>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         ObjectFilenameForDebug
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="50AF971626D5E0634477388BAC9EE70FD5CFBC7D">TargetOptions</h3>
+      <p>public void TargetOptions()</p>
+      <p>Defined at line 126 of file /usr/lib/llvm-16/include/llvm/Target/TargetOptions.h</p>
+      <h3 id="DB1AC1899A26835BFDAF8A64258D1E6F4968CF43">DisableFramePointerElim</h3>
+      <p>public _Bool DisableFramePointerElim(const MachineFunction &amp; MF)</p>
+      <div>
+        <div>
+          <p> DisableFramePointerElim - This returns true if frame pointer elimination optimization should be disabled for the given machine function.</p>
+        </div>
+      </div>
+      <h3 id="9282E799103948C6BB2F9D121AC2D0839C7F0211">HonorSignDependentRoundingFPMath</h3>
+      <p>public _Bool HonorSignDependentRoundingFPMath()</p>
+      <h3 id="6614BCB6405FD897623F98F3F173FC65C3EE07E5">ShouldEmitDebugEntryValues</h3>
+      <p>public _Bool ShouldEmitDebugEntryValues()</p>
+      <div>
+        <div>
+          <p> NOTE: There are targets that still do not support the debug entry values production.</p>
+        </div>
+      </div>
+      <h3 id="A96A93A69B5FB54B2862A8F0ED6BCCF533F24715">setFPDenormalMode</h3>
+      <p>
+        public void setFPDenormalMode(
+        <a href="DenormalMode.html">DenormalMode</a>
+         Mode)
+      </p>
+      <p>Defined at line 420 of file /usr/lib/llvm-16/include/llvm/Target/TargetOptions.h</p>
+      <h3 id="5847D12FE45CF62592B8B0946D3AAD73E069C6D0">setFP32DenormalMode</h3>
+      <p>
+        public void setFP32DenormalMode(
+        <a href="DenormalMode.html">DenormalMode</a>
+         Mode)
+      </p>
+      <p>Defined at line 424 of file /usr/lib/llvm-16/include/llvm/Target/TargetOptions.h</p>
+      <h3 id="E432180213F0CFC7862B9C136F38C5BA7E4B2747">getRawFPDenormalMode</h3>
+      <p>
+        public 
+        <a href="DenormalMode.html">DenormalMode</a>
+         getRawFPDenormalMode()
+      </p>
+      <p>Defined at line 428 of file /usr/lib/llvm-16/include/llvm/Target/TargetOptions.h</p>
+      <h3 id="78519D2F9CC218449C630254AA845B839DE8B497">getRawFP32DenormalMode</h3>
+      <p>
+        public 
+        <a href="DenormalMode.html">DenormalMode</a>
+         getRawFP32DenormalMode()
+      </p>
+      <p>Defined at line 432 of file /usr/lib/llvm-16/include/llvm/Target/TargetOptions.h</p>
+      <h3 id="5B0AE377D5C38887D51A311D868419C0B3CA2F41">getDenormalMode</h3>
+      <p>
+        public 
+        <a href="DenormalMode.html">DenormalMode</a>
+         getDenormalMode(const fltSemantics &amp; FPType)
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#50AF971626D5E0634477388BAC9EE70FD5CFBC7D">TargetOptions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB1AC1899A26835BFDAF8A64258D1E6F4968CF43">DisableFramePointerElim</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9282E799103948C6BB2F9D121AC2D0839C7F0211">HonorSignDependentRoundingFPMath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6614BCB6405FD897623F98F3F173FC65C3EE07E5">ShouldEmitDebugEntryValues</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A96A93A69B5FB54B2862A8F0ED6BCCF533F24715">setFPDenormalMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5847D12FE45CF62592B8B0946D3AAD73E069C6D0">setFP32DenormalMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E432180213F0CFC7862B9C136F38C5BA7E4B2747">getRawFPDenormalMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78519D2F9CC218449C630254AA845B839DE8B497">getRawFP32DenormalMode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B0AE377D5C38887D51A311D868419C0B3CA2F41">getDenormalMode</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

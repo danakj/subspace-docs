@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CustomizableOptional</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CustomizableOptional</h1>
+    <p>Defined at line 28 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+    <div>
+      <div>
+        <p> Optional type which internal storage can be specialized by providing OptionalStorage. The interface follows std::optional.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CF3A9D6664ADD3DE62A47E733FE550A065FED466">CustomizableOptional&lt;T&gt;</h3>
+      <p>public void CustomizableOptional&lt;T&gt;()</p>
+      <p>Defined at line 34 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="75E133D647743A745A7308F38E87D3FA5A92BFB9">CustomizableOptional&lt;T&gt;</h3>
+      <p>
+        public void CustomizableOptional&lt;T&gt;(
+        <a href="../std/nullopt_t.html">nullopt_t</a>
+         )
+      </p>
+      <p>Defined at line 35 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="DAFFE30F7A2F056797A414C3E951D3AD88D419BF">CustomizableOptional&lt;T&gt;</h3>
+      <p>public void CustomizableOptional&lt;T&gt;(const T &amp; y)</p>
+      <p>Defined at line 37 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="08AEA1F0B340F1606A404FDBA2906F3FB871D93D">CustomizableOptional&lt;T&gt;</h3>
+      <p>public void CustomizableOptional&lt;T&gt;(const CustomizableOptional&lt;T&gt; &amp; O)</p>
+      <p>Defined at line 38 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="6B1E43B09DC130AF9CA0B24561E670037E773657">CustomizableOptional&lt;T&gt;</h3>
+      <p>public void CustomizableOptional&lt;T&gt;(T &amp;&amp; y)</p>
+      <p>Defined at line 40 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="83945E6561D6DF480008EBFD2BC71CF755CF5764">CustomizableOptional&lt;T&gt;</h3>
+      <p>public void CustomizableOptional&lt;T&gt;(CustomizableOptional&lt;T&gt; &amp;&amp; O)</p>
+      <p>Defined at line 42 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="FB5AFDA7F313AAC41845449F3E5FC44B90C024E6">CustomizableOptional&lt;T&gt;</h3>
+      <p>
+        public void CustomizableOptional&lt;T&gt;(
+        <a href="../std/in_place_t.html">in_place_t</a>
+         , ArgTypes &amp;&amp;... Args)
+      </p>
+      <p>Defined at line 45 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="7B77CD31A11AE2E752F7D8527262B0F2161FCF66">CustomizableOptional&lt;T&gt;</h3>
+      <p>public void CustomizableOptional&lt;T&gt;(const std::optional&lt;T&gt; &amp; y)</p>
+      <p>Defined at line 49 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <div>
+        <div>
+          <p> Allow conversion from Optional&lt;T&gt;.</p>
+        </div>
+      </div>
+      <h3 id="7AF57D8697D847346137BB198DD9722F5B17F832">CustomizableOptional&lt;T&gt;</h3>
+      <p>public void CustomizableOptional&lt;T&gt;(std::optional&lt;T&gt; &amp;&amp; y)</p>
+      <p>Defined at line 51 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="EC9F021C0C0C241FAB59C4E76DD4DCE1ED60C743">operator=</h3>
+      <p>public CustomizableOptional&lt;T&gt; &amp; operator=(T &amp;&amp; y)</p>
+      <p>Defined at line 54 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="9377B57EDF399DC95A637227B8DAA5CD117969FE">operator=</h3>
+      <p>public CustomizableOptional&lt;T&gt; &amp; operator=(CustomizableOptional&lt;T&gt; &amp;&amp; O)</p>
+      <p>Defined at line 58 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="9B1015DDB0044A1B189B290263C49C62EB15AE60">emplace</h3>
+      <p>public void emplace(ArgTypes &amp;&amp;... Args)</p>
+      <p>Defined at line 61 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <div>
+        <div>
+          <p> Create a new object by constructing it in place with the given arguments.</p>
+        </div>
+      </div>
+      <h3 id="B08F0F7CBB522281819E4915490308F15E8E0F0E">operator=</h3>
+      <p>public CustomizableOptional&lt;T&gt; &amp; operator=(const T &amp; y)</p>
+      <p>Defined at line 65 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="A3B52B3DDFF08AB315A12C8E76D6709094BCBA85">operator=</h3>
+      <p>public CustomizableOptional&lt;T&gt; &amp; operator=(const CustomizableOptional&lt;T&gt; &amp; O)</p>
+      <p>Defined at line 69 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="35502E4984D75EF39F846334BB038081823CDABB">reset</h3>
+      <p>public void reset()</p>
+      <p>Defined at line 71 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="2BE97960EB78AB0974F9DC73654C653A1FBC1489">getPointer</h3>
+      <p>public const T * getPointer()</p>
+      <p>Defined at line 73 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="97F155AD9A75D381E2BB4A6768BBCD7DD2B96B28">getPointer</h3>
+      <p>public T * getPointer()</p>
+      <p>Defined at line 75 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="EF1770E1C28BD95D1C472B640382E9A48B169B9B">value</h3>
+      <p>public const T &amp; value()</p>
+      <p>Defined at line 77 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="F9B09D1B40BC8BAD9BEA7A295F5A28D391F72B24">value</h3>
+      <p>public T &amp; value()</p>
+      <p>Defined at line 79 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="E0D4F7A9B9637E4A3B4D45481DC28F3144132304">operator bool</h3>
+      <p>public _Bool operator bool()</p>
+      <p>Defined at line 82 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="4CC504343B00F844665179A622577E5044840093">has_value</h3>
+      <p>public _Bool has_value()</p>
+      <p>Defined at line 83 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="B68C5FB483D12895B7305883237773047EF066A4">operator-&gt;</h3>
+      <p>public const T * operator-&gt;()</p>
+      <p>Defined at line 84 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="0DB1C6A4026A470289F4B4CA638575649D75EF83">operator-&gt;</h3>
+      <p>public T * operator-&gt;()</p>
+      <p>Defined at line 85 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="5498429B2A1BEE81B9B304C717798C3B94304669">operator*</h3>
+      <p>public const T &amp; operator*()</p>
+      <p>Defined at line 86 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="429CA9309BB001FA7C570D5D7F6B4675A38B0775">operator*</h3>
+      <p>public T &amp; operator*()</p>
+      <p>Defined at line 87 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="AE9F644AA31B6CA3905C5B8DDADC60DE439E7723">value_or</h3>
+      <p>public T value_or(U &amp;&amp; alt)</p>
+      <p>Defined at line 89 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="82E76D5DAF35E39D6034209A6D089A3AEAAE0F1E">value</h3>
+      <p>public T &amp;&amp; value()</p>
+      <p>Defined at line 93 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="F7717594A8485A0E9C956B7A8C1493F066212752">operator*</h3>
+      <p>public T &amp;&amp; operator*()</p>
+      <p>Defined at line 95 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="14CB04D45122F7ED6195D63FC2F749C86A2D9FEC">value_or</h3>
+      <p>public T value_or(U &amp;&amp; alt)</p>
+      <p>Defined at line 97 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <h3 id="D529D5137356E21C0B3BE4EF49CA1819B5CA9855">operator optional&lt;type-parameter-0-0&gt; &amp;</h3>
+      <p>public std::optional&lt;T&gt; &amp; operator optional&lt;type-parameter-0-0&gt; &amp;()</p>
+      <p>Defined at line 102 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+      <div>
+        <div>
+          <p> Allow conversion to Optional&lt;T&gt;.</p>
+        </div>
+      </div>
+      <h3 id="89F62AA633A6208D9F1CB46CEA5F7AB757279A26">operator optional&lt;type-parameter-0-0&gt; &amp;&amp;</h3>
+      <p>public std::optional&lt;T&gt; &amp;&amp; operator optional&lt;type-parameter-0-0&gt; &amp;&amp;()</p>
+      <p>Defined at line 105 of file /usr/lib/llvm-16/include/clang/Basic/CustomizableOptional.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CF3A9D6664ADD3DE62A47E733FE550A065FED466">CustomizableOptional&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75E133D647743A745A7308F38E87D3FA5A92BFB9">CustomizableOptional&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAFFE30F7A2F056797A414C3E951D3AD88D419BF">CustomizableOptional&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08AEA1F0B340F1606A404FDBA2906F3FB871D93D">CustomizableOptional&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B1E43B09DC130AF9CA0B24561E670037E773657">CustomizableOptional&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83945E6561D6DF480008EBFD2BC71CF755CF5764">CustomizableOptional&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB5AFDA7F313AAC41845449F3E5FC44B90C024E6">CustomizableOptional&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B77CD31A11AE2E752F7D8527262B0F2161FCF66">CustomizableOptional&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7AF57D8697D847346137BB198DD9722F5B17F832">CustomizableOptional&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC9F021C0C0C241FAB59C4E76DD4DCE1ED60C743">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9377B57EDF399DC95A637227B8DAA5CD117969FE">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B1015DDB0044A1B189B290263C49C62EB15AE60">emplace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B08F0F7CBB522281819E4915490308F15E8E0F0E">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A3B52B3DDFF08AB315A12C8E76D6709094BCBA85">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#35502E4984D75EF39F846334BB038081823CDABB">reset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BE97960EB78AB0974F9DC73654C653A1FBC1489">getPointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97F155AD9A75D381E2BB4A6768BBCD7DD2B96B28">getPointer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF1770E1C28BD95D1C472B640382E9A48B169B9B">value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9B09D1B40BC8BAD9BEA7A295F5A28D391F72B24">value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0D4F7A9B9637E4A3B4D45481DC28F3144132304">operator bool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CC504343B00F844665179A622577E5044840093">has_value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B68C5FB483D12895B7305883237773047EF066A4">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0DB1C6A4026A470289F4B4CA638575649D75EF83">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5498429B2A1BEE81B9B304C717798C3B94304669">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#429CA9309BB001FA7C570D5D7F6B4675A38B0775">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE9F644AA31B6CA3905C5B8DDADC60DE439E7723">value_or</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82E76D5DAF35E39D6034209A6D089A3AEAAE0F1E">value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7717594A8485A0E9C956B7A8C1493F066212752">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14CB04D45122F7ED6195D63FC2F749C86A2D9FEC">value_or</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D529D5137356E21C0B3BE4EF49CA1819B5CA9855">operator optional&lt;type-parameter-0-0&gt; &amp;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89F62AA633A6208D9F1CB46CEA5F7AB757279A26">operator optional&lt;type-parameter-0-0&gt; &amp;&amp;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Triple</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Triple</h1>
+    <p>Defined at line 44 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+    <div>
+      <div>
+        <p> Triple - Helper class for working with autoconf configuration names. For historical reasons, we also call these &apos;triples&apos; (they used to contain exactly three fields).</p>
+        <p> Configuration names are strings in the canonical form:   ARCHITECTURE-VENDOR-OPERATING_SYSTEM or   ARCHITECTURE-VENDOR-OPERATING_SYSTEM-ENVIRONMENT</p>
+        <p> This class is used for clients which want to support arbitrary configuration names, but also want to implement certain special behavior for particular configurations. This class isolates the mapping from the components of the configuration name to well known IDs.</p>
+        <p> At its core the Triple class is designed to be a wrapper for a triple string; the constructor does not change or normalize the triple string. Clients that need to handle the non-canonical triples that users often specify should use the normalize method.</p>
+        <p> See autoconf/config.guess for a glimpse into what configuration names look like in practice.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D2AF6C7E9B6767014B5DADD25C006B3DFB6A92D5">Triple</h3>
+      <p>public void Triple()</p>
+      <p>Defined at line 319 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Default constructor is the same as an empty string and leaves all triple fields unknown.</p>
+        </div>
+      </div>
+      <h3 id="B19E913983C73AFCC024450EA01FA31A1888FFCB">Triple</h3>
+      <p>public void Triple(const Twine &amp; Str)</p>
+      <h3 id="F218C38FA699BC7FA44AAF67726EB3D6D5C4465F">Triple</h3>
+      <p>public void Triple(const Twine &amp; ArchStr, const Twine &amp; VendorStr, const Twine &amp; OSStr)</p>
+      <h3 id="7B8918EC2A8925CAC43E22659C4ED32586554C59">Triple</h3>
+      <p>public void Triple(const Twine &amp; ArchStr, const Twine &amp; VendorStr, const Twine &amp; OSStr, const Twine &amp; EnvironmentStr)</p>
+      <h3 id="73834C44B6242775EFFB65B67D4C688464F6EB84">operator==</h3>
+      <p>public _Bool operator==(const Triple &amp; Other)</p>
+      <p>Defined at line 326 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="B3A807509FF334D28491DAE67645997EAAD3CC0D">operator!=</h3>
+      <p>public _Bool operator!=(const Triple &amp; Other)</p>
+      <p>Defined at line 333 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="F4D773271D1425E57F00FD0A25D8D661BFE5332F">normalize</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         normalize(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> Turn an arbitrary machine specification into the canonical triple form (or something sensible that the Triple class understands if nothing better can reasonably be done).  In particular, it handles the common case in which otherwise valid components are in the wrong order.</p>
+        </div>
+      </div>
+      <h3 id="CDCA20029CA1590962B7C664AA0EF71E6D21795F">normalize</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         normalize()
+      </p>
+      <p>Defined at line 348 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Return the normalized form of this triple&apos;s string.</p>
+        </div>
+      </div>
+      <h3 id="E9D41858174AFAA2EAADD752A80B2167EE0E8D4E">getArch</h3>
+      <p>
+        public 
+        <a href="../llvm/Triple/ArchType.html">ArchType</a>
+         getArch()
+      </p>
+      <p>Defined at line 355 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Get the parsed architecture type of this triple.</p>
+        </div>
+      </div>
+      <h3 id="15C26FCA8D62D015649ACE5F48E1CB0900B3DCE2">getSubArch</h3>
+      <p>
+        public 
+        <a href="../llvm/Triple/SubArchType.html">SubArchType</a>
+         getSubArch()
+      </p>
+      <p>Defined at line 358 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> get the parsed subarchitecture type for this triple.</p>
+        </div>
+      </div>
+      <h3 id="6C32B14893580163E06FCF12BD337B356AFBCEE9">getVendor</h3>
+      <p>
+        public 
+        <a href="../llvm/Triple/VendorType.html">VendorType</a>
+         getVendor()
+      </p>
+      <p>Defined at line 361 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Get the parsed vendor type of this triple.</p>
+        </div>
+      </div>
+      <h3 id="1F3959821002CF935C27B8DBD377819E973012CA">getOS</h3>
+      <p>
+        public 
+        <a href="../llvm/Triple/OSType.html">OSType</a>
+         getOS()
+      </p>
+      <p>Defined at line 364 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Get the parsed operating system type of this triple.</p>
+        </div>
+      </div>
+      <h3 id="6A4786A7983E61B7A318BEADBCD30511B4CA9538">hasEnvironment</h3>
+      <p>public _Bool hasEnvironment()</p>
+      <p>Defined at line 367 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Does this triple have the optional environment (fourth) component?</p>
+        </div>
+      </div>
+      <h3 id="DC92AE9C0B7BC8D930B5600EFAC4E575887D297D">getEnvironment</h3>
+      <p>
+        public 
+        <a href="../llvm/Triple/EnvironmentType.html">EnvironmentType</a>
+         getEnvironment()
+      </p>
+      <p>Defined at line 372 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Get the parsed environment type of this triple.</p>
+        </div>
+      </div>
+      <h3 id="A6A051EF8831F34E73024AE03000A0003E57AD95">getEnvironmentVersion</h3>
+      <p>
+        public 
+        <a href="VersionTuple.html">VersionTuple</a>
+         getEnvironmentVersion()
+      </p>
+      <div>
+        <div>
+          <p> Parse the version number from the OS name component of the triple, if present.</p>
+          <p> For example, &quot;fooos1.2.3&quot; would return (1, 2, 3).</p>
+        </div>
+      </div>
+      <h3 id="79E8E27DC4657AF60FC5553F22B17D934281CB08">getObjectFormat</h3>
+      <p>
+        public 
+        <a href="../llvm/Triple/ObjectFormatType.html">ObjectFormatType</a>
+         getObjectFormat()
+      </p>
+      <p>Defined at line 381 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Get the object format for this triple.</p>
+        </div>
+      </div>
+      <h3 id="42FAE63EAAC24662D2C4112BF5D923233618E406">getOSVersion</h3>
+      <p>
+        public 
+        <a href="VersionTuple.html">VersionTuple</a>
+         getOSVersion()
+      </p>
+      <div>
+        <div>
+          <p> Parse the version number from the OS name component of the triple, if present.</p>
+          <p> For example, &quot;fooos1.2.3&quot; would return (1, 2, 3).</p>
+        </div>
+      </div>
+      <h3 id="C0BC84B421DF96A989BFAE7437A3806E775CDEF1">getOSMajorVersion</h3>
+      <p>public unsigned int getOSMajorVersion()</p>
+      <p>Defined at line 391 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Return just the major version number, this is specialized because it is a common query.</p>
+        </div>
+      </div>
+      <h3 id="20366FCAE20942F43FF9A24381CA2CAC6A041883">getMacOSXVersion</h3>
+      <p>public _Bool getMacOSXVersion(VersionTuple &amp; Version)</p>
+      <div>
+        <div>
+          <p> Parse the version number as with getOSVersion and then translate generic &quot;darwin&quot; versions to the corresponding OS X versions.  This may also be called with IOS triples but the OS X version number is just set to a constant 10.4.0 in that case.  Returns true if successful.</p>
+        </div>
+      </div>
+      <h3 id="9E72A5DAB471BA4210D925FA2EC195A80203A0EB">getiOSVersion</h3>
+      <p>
+        public 
+        <a href="VersionTuple.html">VersionTuple</a>
+         getiOSVersion()
+      </p>
+      <div>
+        <div>
+          <p> Parse the version number as with getOSVersion.  This should only be called with IOS or generic triples.</p>
+        </div>
+      </div>
+      <h3 id="0BD5D4A32D117763AFD952F2E6ED7C8D5606E02A">getWatchOSVersion</h3>
+      <p>
+        public 
+        <a href="VersionTuple.html">VersionTuple</a>
+         getWatchOSVersion()
+      </p>
+      <div>
+        <div>
+          <p> Parse the version number as with getOSVersion.  This should only be called with WatchOS or generic triples.</p>
+        </div>
+      </div>
+      <h3 id="AAF04DE3DFFD552603A77F2787A38A5D45BF1CD7">getDriverKitVersion</h3>
+      <p>
+        public 
+        <a href="VersionTuple.html">VersionTuple</a>
+         getDriverKitVersion()
+      </p>
+      <div>
+        <div>
+          <p> Parse the version number as with getOSVersion.</p>
+        </div>
+      </div>
+      <h3 id="3AFBAD5DB59C7E8F01B9C4FB013BA0B435B4DDC8">str</h3>
+      <p>public const std::string &amp; str()</p>
+      <p>Defined at line 414 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p>@}</p>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="C49E571A37C943C92C6B75567B059E88A4FA8DB7">getTriple</h3>
+      <p>public const std::string &amp; getTriple()</p>
+      <p>Defined at line 416 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="B776D3939C878095BDEDB8731C82597F4F0F8DBB">getArchName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getArchName()
+      </p>
+      <div>
+        <div>
+          <p> Get the architecture (first) component of the triple.</p>
+        </div>
+      </div>
+      <h3 id="3C4679F42EEEE2631CD859216FF05F55A70FD4AD">getArchName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getArchName(
+        <a href="../llvm/Triple/ArchType.html">ArchType</a>
+         Kind, 
+        <a href="../llvm/Triple/SubArchType.html">SubArchType</a>
+         SubArch)
+      </p>
+      <div>
+        <div>
+          <p> Get the architecture name based on Kind and SubArch.</p>
+        </div>
+      </div>
+      <h3 id="F8E74FAB2FA00E11F59673142CF5704ADEBCB7E5">getVendorName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getVendorName()
+      </p>
+      <div>
+        <div>
+          <p> Get the vendor (second) component of the triple.</p>
+        </div>
+      </div>
+      <h3 id="123AC2E35D836AECB608E8315E124EB4641AAE53">getOSName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getOSName()
+      </p>
+      <div>
+        <div>
+          <p> Get the operating system (third) component of the triple.</p>
+        </div>
+      </div>
+      <h3 id="CAC442B8B3DB3D7DF9AE09792AFA48DB0584D0D2">getEnvironmentName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getEnvironmentName()
+      </p>
+      <div>
+        <div>
+          <p> Get the optional environment (fourth) component of the triple, or &quot;&quot; if empty.</p>
+        </div>
+      </div>
+      <h3 id="795909E65636401B59E6046B6E5F127397416BFC">getOSAndEnvironmentName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getOSAndEnvironmentName()
+      </p>
+      <div>
+        <div>
+          <p> Get the operating system and optional environment components as a single string (separated by a &apos;-&apos; if the environment component is present).</p>
+        </div>
+      </div>
+      <h3 id="207D0C5659A1CEFB44EBA8DEBC7A0413BB942C79">isArch64Bit</h3>
+      <p>public _Bool isArch64Bit()</p>
+      <div>
+        <div>
+          <p> Test whether the architecture is 64-bit</p>
+          <p> Note that this tests for 64-bit pointer width, and nothing else. Note that we intentionally expose only three predicates, 64-bit, 32-bit, and 16-bit. The inner details of pointer width for particular architectures is not summed up in the triple, and so only a coarse grained predicate system is provided.</p>
+        </div>
+      </div>
+      <h3 id="9AF8F2897694C7744DC9449D923AC6C831352BC1">isArch32Bit</h3>
+      <p>public _Bool isArch32Bit()</p>
+      <div>
+        <div>
+          <p> Test whether the architecture is 32-bit</p>
+          <p> Note that this tests for 32-bit pointer width, and nothing else.</p>
+        </div>
+      </div>
+      <h3 id="262B97F56C09EE98FACEAE07B2C70E5828736047">isArch16Bit</h3>
+      <p>public _Bool isArch16Bit()</p>
+      <div>
+        <div>
+          <p> Test whether the architecture is 16-bit</p>
+          <p> Note that this tests for 16-bit pointer width, and nothing else.</p>
+        </div>
+      </div>
+      <h3 id="266799461CB38624F5A3359A30260E67B72CDE03">isOSVersionLT</h3>
+      <p>public _Bool isOSVersionLT(unsigned int Major, unsigned int Minor, unsigned int Micro)</p>
+      <p>Defined at line 463 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Helper function for doing comparisons against version numbers included in the target triple.</p>
+        </div>
+      </div>
+      <h3 id="3DF6073F557A0062B491E467AE30C451905A6F3B">isOSVersionLT</h3>
+      <p>public _Bool isOSVersionLT(const Triple &amp; Other)</p>
+      <p>Defined at line 474 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="A26B4C84E5570369A25EF716AFBC49C40B6D17BB">isMacOSXVersionLT</h3>
+      <p>public _Bool isMacOSXVersionLT(unsigned int Major, unsigned int Minor, unsigned int Micro)</p>
+      <div>
+        <div>
+          <p> Comparison function for checking OS X version compatibility, which handles supporting skewed version numbering schemes used by the &quot;darwin&quot; triples.</p>
+        </div>
+      </div>
+      <h3 id="52AC30E0F35D1A8696EC62DA2B17AD5EAAB62FC3">isMacOSX</h3>
+      <p>public _Bool isMacOSX()</p>
+      <p>Defined at line 485 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Is this a Mac OS X triple. For legacy reasons, we support both &quot;darwin&quot; and &quot;osx&quot; as OS X triples.</p>
+        </div>
+      </div>
+      <h3 id="11DD65B95D65A97F95392445F0F990EF2EAD7687">isiOS</h3>
+      <p>public _Bool isiOS()</p>
+      <p>Defined at line 494 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Is this an iOS triple. Note: This identifies tvOS as a variant of iOS. If that ever changes, i.e., if the two operating systems diverge or their version numbers get out of sync, that will need to be changed. watchOS has completely different version numbers so it is not included.</p>
+        </div>
+      </div>
+      <h3 id="B58707F7BC1A2368FC4D50D5C2C4F482ED40FB19">isTvOS</h3>
+      <p>public _Bool isTvOS()</p>
+      <p>Defined at line 499 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Is this an Apple tvOS triple.</p>
+        </div>
+      </div>
+      <h3 id="1D5ADB921FDCAD02CAE2F10CBD209A19D27CDC94">isWatchOS</h3>
+      <p>public _Bool isWatchOS()</p>
+      <p>Defined at line 504 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Is this an Apple watchOS triple.</p>
+        </div>
+      </div>
+      <h3 id="92C486AEB8932D47EEF4E6046289DE7B31DE8FC5">isWatchABI</h3>
+      <p>public _Bool isWatchABI()</p>
+      <p>Defined at line 508 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="E3BE869A42F468D6CAE634472EC508B2B8FFEAA6">isDriverKit</h3>
+      <p>public _Bool isDriverKit()</p>
+      <p>Defined at line 513 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Is this an Apple DriverKit triple.</p>
+        </div>
+      </div>
+      <h3 id="2E41CB0B2C6A8AE83D46630DB5438D2D11544F1F">isOSzOS</h3>
+      <p>public _Bool isOSzOS()</p>
+      <p>Defined at line 515 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="0A1A934286E2AB7E374CDA614D960A2C22BC29CB">isOSDarwin</h3>
+      <p>public _Bool isOSDarwin()</p>
+      <p>Defined at line 518 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Is this a &quot;Darwin&quot; OS (macOS, iOS, tvOS, watchOS, or DriverKit).</p>
+        </div>
+      </div>
+      <h3 id="4B517CFEFA174F6E741D22B0026F72F392897BB3">isSimulatorEnvironment</h3>
+      <p>public _Bool isSimulatorEnvironment()</p>
+      <p>Defined at line 522 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="FA0C129EE8475F388BBA007B5FF5E9F1871474A1">isMacCatalystEnvironment</h3>
+      <p>public _Bool isMacCatalystEnvironment()</p>
+      <p>Defined at line 526 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="AEDE2FE095EAF7C7095E0E3B9EDCD3A1DAF4E37B">isTargetMachineMac</h3>
+      <p>public _Bool isTargetMachineMac()</p>
+      <p>Defined at line 531 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Returns true for targets that run on a macOS machine.</p>
+        </div>
+      </div>
+      <h3 id="C567D2C684C0A9015AD7A66776C933DE1B946826">isOSNetBSD</h3>
+      <p>public _Bool isOSNetBSD()</p>
+      <p>Defined at line 536 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="1674AD67A1EACEBEFCFD226AD7758D6A65808683">isOSOpenBSD</h3>
+      <p>public _Bool isOSOpenBSD()</p>
+      <p>Defined at line 540 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="22E9862D2671B573C9443090965239205D3E0074">isOSFreeBSD</h3>
+      <p>public _Bool isOSFreeBSD()</p>
+      <p>Defined at line 544 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="D29D26F9648BECAB6DE63DA240279BCED13DE0E3">isOSFuchsia</h3>
+      <p>public _Bool isOSFuchsia()</p>
+      <p>Defined at line 548 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="210C2CDF18D4BBED951C9D74AF7866E3CBA549ED">isOSDragonFly</h3>
+      <p>public _Bool isOSDragonFly()</p>
+      <p>Defined at line 552 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="4DB00AD57FB886EBE701595F10B3F1941593C489">isOSSolaris</h3>
+      <p>public _Bool isOSSolaris()</p>
+      <p>Defined at line 554 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="E7F67C2BAE8538AF6B341F0EFC88346F641B45CA">isOSIAMCU</h3>
+      <p>public _Bool isOSIAMCU()</p>
+      <p>Defined at line 558 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="A28D4E98E6D040CEE2C67A421F2A4FC99F94B216">isOSUnknown</h3>
+      <p>public _Bool isOSUnknown()</p>
+      <p>Defined at line 562 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="B022F71EA4D627B6F8707B8AC26355AC9DB317BF">isGNUEnvironment</h3>
+      <p>public _Bool isGNUEnvironment()</p>
+      <p>Defined at line 564 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="4018B4A89E51425CF362C7831386401ED3DE2099">isOSContiki</h3>
+      <p>public _Bool isOSContiki()</p>
+      <p>Defined at line 573 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="05A85D0F8BF7D2DFF6BDE260B8F0B30E8E9521AD">isOSHaiku</h3>
+      <p>public _Bool isOSHaiku()</p>
+      <p>Defined at line 578 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS is Haiku.</p>
+        </div>
+      </div>
+      <h3 id="267CA5E1597FA6C19AF109659A870C25D64919F4">isOSWindows</h3>
+      <p>public _Bool isOSWindows()</p>
+      <p>Defined at line 583 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS is Windows.</p>
+        </div>
+      </div>
+      <h3 id="FF157F2FA088D816EC9E8EF6C54EDC756808FFA4">isKnownWindowsMSVCEnvironment</h3>
+      <p>public _Bool isKnownWindowsMSVCEnvironment()</p>
+      <p>Defined at line 588 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Checks if the environment is MSVC.</p>
+        </div>
+      </div>
+      <h3 id="A88B9A6CF84A5424567E51A723EC6081018450AE">isWindowsMSVCEnvironment</h3>
+      <p>public _Bool isWindowsMSVCEnvironment()</p>
+      <p>Defined at line 593 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Checks if the environment could be MSVC.</p>
+        </div>
+      </div>
+      <h3 id="027731930A9B41B2BA963DB833E6C15F84E2C732">isWindowsArm64EC</h3>
+      <p>public _Bool isWindowsArm64EC()</p>
+      <p>Defined at line 599 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Checks if we&apos;re using the Windows Arm64EC ABI.</p>
+        </div>
+      </div>
+      <h3 id="C7E9EAB58D1B2F621ACD1D6B6A98A271922D6AD1">isWindowsCoreCLREnvironment</h3>
+      <p>public _Bool isWindowsCoreCLREnvironment()</p>
+      <p>Defined at line 604 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="DE98F95F2D7D9A7680857B168BB6E729B41A0258">isWindowsItaniumEnvironment</h3>
+      <p>public _Bool isWindowsItaniumEnvironment()</p>
+      <p>Defined at line 608 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="0A32E536487AB0E8F0720787C1A21BEE84C54591">isWindowsCygwinEnvironment</h3>
+      <p>public _Bool isWindowsCygwinEnvironment()</p>
+      <p>Defined at line 612 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="4FC8337ADDDDDD1693095B833AC2B9D79C780534">isWindowsGNUEnvironment</h3>
+      <p>public _Bool isWindowsGNUEnvironment()</p>
+      <p>Defined at line 616 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="258B77C3153FD269126A20BB2EC2D3BA8880C208">isOSCygMing</h3>
+      <p>public _Bool isOSCygMing()</p>
+      <p>Defined at line 621 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests for either Cygwin or MinGW OS</p>
+        </div>
+      </div>
+      <h3 id="BF209AD572F2E0F8C41B44B28B4DFDB012BBC649">isOSMSVCRT</h3>
+      <p>public _Bool isOSMSVCRT()</p>
+      <p>Defined at line 626 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Is this a &quot;Windows&quot; OS targeting a &quot;MSVCRT.dll&quot; environment.</p>
+        </div>
+      </div>
+      <h3 id="1BB035FDF2793E9BEAC6512799D12E86D29BA99B">isOSNaCl</h3>
+      <p>public _Bool isOSNaCl()</p>
+      <p>Defined at line 632 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS is NaCl (Native Client)</p>
+        </div>
+      </div>
+      <h3 id="173E8ADDF4ADEE9222ADFB5FAD51932DC13C9B28">isOSLinux</h3>
+      <p>public _Bool isOSLinux()</p>
+      <p>Defined at line 637 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS is Linux.</p>
+        </div>
+      </div>
+      <h3 id="5579ED6D476979CC07398955C2827B046D8E242A">isOSKFreeBSD</h3>
+      <p>public _Bool isOSKFreeBSD()</p>
+      <p>Defined at line 642 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS is kFreeBSD.</p>
+        </div>
+      </div>
+      <h3 id="771A22977D120D00A4EFF3EAC980AD9FD4ECC8D7">isOSHurd</h3>
+      <p>public _Bool isOSHurd()</p>
+      <p>Defined at line 647 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS is Hurd.</p>
+        </div>
+      </div>
+      <h3 id="6BC1AE9878AEF9051B50779DECD0483B79B7FD83">isOSWASI</h3>
+      <p>public _Bool isOSWASI()</p>
+      <p>Defined at line 652 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS is WASI.</p>
+        </div>
+      </div>
+      <h3 id="7FD92F2B6EBE30BBDE914F4052767A81F9821EAA">isOSEmscripten</h3>
+      <p>public _Bool isOSEmscripten()</p>
+      <p>Defined at line 657 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS is Emscripten.</p>
+        </div>
+      </div>
+      <h3 id="82186F773D75EAE297603CBC49899BE1315525EB">isOSGlibc</h3>
+      <p>public _Bool isOSGlibc()</p>
+      <p>Defined at line 662 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS uses glibc.</p>
+        </div>
+      </div>
+      <h3 id="88C0825E9F10AAF46CAFA5111E7419227E886EAE">isOSAIX</h3>
+      <p>public _Bool isOSAIX()</p>
+      <p>Defined at line 669 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS is AIX.</p>
+        </div>
+      </div>
+      <h3 id="A2B47F2099F053AC11857943CDEF4500230CF4EC">isOSBinFormatELF</h3>
+      <p>public _Bool isOSBinFormatELF()</p>
+      <p>Defined at line 674 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS uses the ELF binary format.</p>
+        </div>
+      </div>
+      <h3 id="F88F02B47CD6801A28D8D76FC6BB75C447072721">isOSBinFormatCOFF</h3>
+      <p>public _Bool isOSBinFormatCOFF()</p>
+      <p>Defined at line 679 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS uses the COFF binary format.</p>
+        </div>
+      </div>
+      <h3 id="99CC1C46ACA5DFB15687D3F132C37C8D13812037">isOSBinFormatGOFF</h3>
+      <p>public _Bool isOSBinFormatGOFF()</p>
+      <p>Defined at line 684 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS uses the GOFF binary format.</p>
+        </div>
+      </div>
+      <h3 id="0A5E4A54A7680DBACF1A4898B9A406414D38656D">isOSBinFormatMachO</h3>
+      <p>public _Bool isOSBinFormatMachO()</p>
+      <p>Defined at line 687 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the environment is MachO.</p>
+        </div>
+      </div>
+      <h3 id="C4A970745B8346FCDBC581AD4F4CFAC09EBE3FDF">isOSBinFormatWasm</h3>
+      <p>public _Bool isOSBinFormatWasm()</p>
+      <p>Defined at line 692 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS uses the Wasm binary format.</p>
+        </div>
+      </div>
+      <h3 id="04AA2FBB228E8B8D8B25DA344BB8F3E123C8509B">isOSBinFormatXCOFF</h3>
+      <p>public _Bool isOSBinFormatXCOFF()</p>
+      <p>Defined at line 697 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS uses the XCOFF binary format.</p>
+        </div>
+      </div>
+      <h3 id="F6546DCE306959B1C8DF699B70F4905A74E01B10">isOSBinFormatDXContainer</h3>
+      <p>public _Bool isOSBinFormatDXContainer()</p>
+      <p>Defined at line 702 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the OS uses the DXContainer binary format.</p>
+        </div>
+      </div>
+      <h3 id="9ED842E3FFA9E03244FA5A6B6AFDB29A1124C948">isPS4</h3>
+      <p>public _Bool isPS4()</p>
+      <p>Defined at line 707 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is the PS4 platform.</p>
+        </div>
+      </div>
+      <h3 id="178D41090B7B0C93E4AE169B48E2771EDA0342B2">isPS5</h3>
+      <p>public _Bool isPS5()</p>
+      <p>Defined at line 714 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is the PS5 platform.</p>
+        </div>
+      </div>
+      <h3 id="D403748947EBE4A59B7A8487533F1215A4D86F89">isPS</h3>
+      <p>public _Bool isPS()</p>
+      <p>Defined at line 721 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is the PS4 or PS5 platform.</p>
+        </div>
+      </div>
+      <h3 id="A91408959C93D49C46BB50A993A63084F9AA9D7F">isAndroid</h3>
+      <p>public _Bool isAndroid()</p>
+      <p>Defined at line 724 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is Android</p>
+        </div>
+      </div>
+      <h3 id="A8E257944A69D974571675D87BD9C4036EE6E0D1">isAndroidVersionLT</h3>
+      <p>public _Bool isAndroidVersionLT(unsigned int Major)</p>
+      <p>Defined at line 726 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="F16522BBF24F2695D0264CA3836B39F5D8102AA4">isMusl</h3>
+      <p>public _Bool isMusl()</p>
+      <p>Defined at line 739 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the environment is musl-libc</p>
+        </div>
+      </div>
+      <h3 id="F4C03D271B39D68E0CDD7B6475642BE5ABCBDC88">isDXIL</h3>
+      <p>public _Bool isDXIL()</p>
+      <p>Defined at line 747 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is DXIL.</p>
+        </div>
+      </div>
+      <h3 id="A570193685B8C15D63985CFE679AF1EE3EE80B07">isSPIR</h3>
+      <p>public _Bool isSPIR()</p>
+      <p>Defined at line 752 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is SPIR (32- or 64-bit).</p>
+        </div>
+      </div>
+      <h3 id="0781C92A28659D16D07275DE222C7214E79C7DC4">isSPIRV</h3>
+      <p>public _Bool isSPIRV()</p>
+      <p>Defined at line 757 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is SPIR-V (32/64-bit).</p>
+        </div>
+      </div>
+      <h3 id="EB2DE9993E18B69EBE058BC84445CF68CDFD5752">isNVPTX</h3>
+      <p>public _Bool isNVPTX()</p>
+      <p>Defined at line 762 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is NVPTX (32- or 64-bit).</p>
+        </div>
+      </div>
+      <h3 id="ABF2667EAD7394CA4D34F8D4FB8497875A3488F2">isAMDGCN</h3>
+      <p>public _Bool isAMDGCN()</p>
+      <p>Defined at line 767 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is AMDGCN</p>
+        </div>
+      </div>
+      <h3 id="10854CBAC593B9C628AB474335A95BEE0CF32FFC">isAMDGPU</h3>
+      <p>public _Bool isAMDGPU()</p>
+      <p>Defined at line 769 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="2FBAE072D1B64F657A9A2F32AA3F8C26DF6F1B72">isThumb</h3>
+      <p>public _Bool isThumb()</p>
+      <p>Defined at line 774 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is Thumb (little and big endian).</p>
+        </div>
+      </div>
+      <h3 id="F8A0033A8690B815F9A8389298BEAEBF155E2774">isARM</h3>
+      <p>public _Bool isARM()</p>
+      <p>Defined at line 779 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is ARM (little and big endian).</p>
+        </div>
+      </div>
+      <h3 id="04DA0BD1BD58DFBE5A8A6154A6FFA2D278AACF49">isTargetEHABICompatible</h3>
+      <p>public _Bool isTargetEHABICompatible()</p>
+      <p>Defined at line 785 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target supports the EHABI exception handling standard.</p>
+        </div>
+      </div>
+      <h3 id="77331E6162672E595BB1EF4721DCF52D5F68AF45">isArmT32</h3>
+      <p>public _Bool isArmT32()</p>
+      <p>Defined at line 797 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is T32.</p>
+        </div>
+      </div>
+      <h3 id="15CC34311073D78AF22F28938FCDD10CA19A4C37">isArmMClass</h3>
+      <p>public _Bool isArmMClass()</p>
+      <p>Defined at line 817 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is an M-class.</p>
+        </div>
+      </div>
+      <h3 id="84FE59FF531746CE9A433CD54BE70D708514FF5B">isAArch64</h3>
+      <p>public _Bool isAArch64()</p>
+      <p>Defined at line 832 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is AArch64 (little and big endian).</p>
+        </div>
+      </div>
+      <h3 id="E55C6DE1F202473B67C5EA06284A940E4B1E3988">isAArch64</h3>
+      <p>public _Bool isAArch64(int PointerWidth)</p>
+      <p>Defined at line 839 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is AArch64 and pointers are the size specified by</p>
+        </div>
+      </div>
+      <h3 id="A2C71D9F733927354836C6B0824DDAA5A3C8DA68">isLoongArch</h3>
+      <p>public _Bool isLoongArch()</p>
+      <p>Defined at line 850 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is LoongArch (32- and 64-bit).</p>
+        </div>
+      </div>
+      <h3 id="4E4C65B8B75962A98065D1B7A8967F552A663068">isMIPS32</h3>
+      <p>public _Bool isMIPS32()</p>
+      <p>Defined at line 855 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is MIPS 32-bit (little and big endian).</p>
+        </div>
+      </div>
+      <h3 id="B203A200D0EE9A379B0434C2C1B641F1AF70311C">isMIPS64</h3>
+      <p>public _Bool isMIPS64()</p>
+      <p>Defined at line 860 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is MIPS 64-bit (little and big endian).</p>
+        </div>
+      </div>
+      <h3 id="BB06FF25D07F7E0600A45A5A0A42410418A74D83">isMIPS</h3>
+      <p>public _Bool isMIPS()</p>
+      <p>Defined at line 865 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is MIPS (little and big endian, 32- or 64-bit).</p>
+        </div>
+      </div>
+      <h3 id="91223B45FCB096CDE80BC96E750998B9ECFCED31">isPPC</h3>
+      <p>public _Bool isPPC()</p>
+      <p>Defined at line 870 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is PowerPC (32- or 64-bit LE or BE).</p>
+        </div>
+      </div>
+      <h3 id="9130A80626F37E76AC582F7ABDFB8497C1054386">isPPC32</h3>
+      <p>public _Bool isPPC32()</p>
+      <p>Defined at line 876 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is 32-bit PowerPC (little and big endian).</p>
+        </div>
+      </div>
+      <h3 id="6BCC323A2E4473BF6BE027BBA950D2AFD0CDC50E">isPPC64</h3>
+      <p>public _Bool isPPC64()</p>
+      <p>Defined at line 881 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is 64-bit PowerPC (little and big endian).</p>
+        </div>
+      </div>
+      <h3 id="3D0FEB57CE3060274D062B6802DE25019555644B">isRISCV32</h3>
+      <p>public _Bool isRISCV32()</p>
+      <p>Defined at line 886 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is 32-bit RISC-V.</p>
+        </div>
+      </div>
+      <h3 id="FE7589999B7742AF10D8E4ABD03CFFE3AEF33DA5">isRISCV64</h3>
+      <p>public _Bool isRISCV64()</p>
+      <p>Defined at line 889 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is 64-bit RISC-V.</p>
+        </div>
+      </div>
+      <h3 id="4018A1D4B46DB5BC9DF5774C24B6B13DCCDA576E">isRISCV</h3>
+      <p>public _Bool isRISCV()</p>
+      <p>Defined at line 892 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is RISC-V (32- and 64-bit).</p>
+        </div>
+      </div>
+      <h3 id="874B945F1D9166E4C42EE34CC67045E86D9CBE40">isSPARC32</h3>
+      <p>public _Bool isSPARC32()</p>
+      <p>Defined at line 895 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is 32-bit SPARC (little and big endian).</p>
+        </div>
+      </div>
+      <h3 id="282BD3B17172A9C3803D9BFCEEE88B54971A2388">isSPARC64</h3>
+      <p>public _Bool isSPARC64()</p>
+      <p>Defined at line 900 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is 64-bit SPARC (big endian).</p>
+        </div>
+      </div>
+      <h3 id="07CED88A478FC67464628BEE21A6DC0F2C2AC654">isSPARC</h3>
+      <p>public _Bool isSPARC()</p>
+      <p>Defined at line 903 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is SPARC.</p>
+        </div>
+      </div>
+      <h3 id="45F968DFAD4BBDD1EC9FEC87A61E22327C23061A">isSystemZ</h3>
+      <p>public _Bool isSystemZ()</p>
+      <p>Defined at line 906 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is SystemZ.</p>
+        </div>
+      </div>
+      <h3 id="D54BD5FC922E0EAFC66B08F440AA5D0EB9331F3B">isX86</h3>
+      <p>public _Bool isX86()</p>
+      <p>Defined at line 911 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is x86 (32- or 64-bit).</p>
+        </div>
+      </div>
+      <h3 id="9B179B3784861738EE9253E12B4C9E07209CDA8E">isVE</h3>
+      <p>public _Bool isVE()</p>
+      <p>Defined at line 916 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is VE</p>
+        </div>
+      </div>
+      <h3 id="4CA09D74AF049303834B27E5F65A42BDAD6FD26E">isWasm</h3>
+      <p>public _Bool isWasm()</p>
+      <p>Defined at line 921 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is wasm (32- and 64-bit).</p>
+        </div>
+      </div>
+      <h3 id="3B5ECBC062DB5523CD67EFB5EEDE6476773D1611">isCSKY</h3>
+      <p>public _Bool isCSKY()</p>
+      <p>Defined at line 926 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is CSKY</p>
+        </div>
+      </div>
+      <h3 id="0021040EFB948D1ED52BCA75C4FABAA2C1406856">isArm64e</h3>
+      <p>public _Bool isArm64e()</p>
+      <p>Defined at line 931 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is the Apple &quot;arm64e&quot; AArch64 subarch.</p>
+        </div>
+      </div>
+      <h3 id="1084CFB798766D6C192209F0D7BEDAB9F045A1BC">isX32</h3>
+      <p>public _Bool isX32()</p>
+      <p>Defined at line 937 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target is X32.</p>
+        </div>
+      </div>
+      <h3 id="0F0A0C43DC8A2820F23091D3293983A882EB6447">supportsCOMDAT</h3>
+      <p>public _Bool supportsCOMDAT()</p>
+      <p>Defined at line 943 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target supports comdat</p>
+        </div>
+      </div>
+      <h3 id="D799DB8F745B97B11330F16744FA209C31755755">hasDefaultEmulatedTLS</h3>
+      <p>public _Bool hasDefaultEmulatedTLS()</p>
+      <p>Defined at line 949 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target uses emulated TLS as default.</p>
+        </div>
+      </div>
+      <h3 id="52049D44134D753CD9A8F38E86E915B41221E0E4">hasDefaultDataSections</h3>
+      <p>public _Bool hasDefaultDataSections()</p>
+      <p>Defined at line 954 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests whether the target uses -data-sections as default.</p>
+        </div>
+      </div>
+      <h3 id="DEF6F50B0524C0407615073975A2908787F956A6">hasDLLImportExport</h3>
+      <p>public _Bool hasDLLImportExport()</p>
+      <p>Defined at line 959 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <div>
+        <div>
+          <p> Tests if the environment supports dllimport/export annotations.</p>
+        </div>
+      </div>
+      <h3 id="B3200AFA0309EC4A7B840EF5F354554C0DABD930">setArch</h3>
+      <p>
+        public void setArch(
+        <a href="../llvm/Triple/ArchType.html">ArchType</a>
+         Kind, 
+        <a href="../llvm/Triple/SubArchType.html">SubArchType</a>
+         SubArch)
+      </p>
+      <div>
+        <div>
+          <p> Set the architecture (first) component of the triple to a known type.</p>
+        </div>
+      </div>
+      <h3 id="62CCDEE500F5768AD23018E0938DA59BBCBD723E">setVendor</h3>
+      <p>
+        public void setVendor(
+        <a href="../llvm/Triple/VendorType.html">VendorType</a>
+         Kind)
+      </p>
+      <div>
+        <div>
+          <p> Set the vendor (second) component of the triple to a known type.</p>
+        </div>
+      </div>
+      <h3 id="F3F016D0CB80EB520466F114B20E81FF779E52BD">setOS</h3>
+      <p>
+        public void setOS(
+        <a href="../llvm/Triple/OSType.html">OSType</a>
+         Kind)
+      </p>
+      <div>
+        <div>
+          <p> Set the operating system (third) component of the triple to a known type.</p>
+        </div>
+      </div>
+      <h3 id="015593297F621A0ED45F5C6E4640D430908ABB72">setEnvironment</h3>
+      <p>
+        public void setEnvironment(
+        <a href="../llvm/Triple/EnvironmentType.html">EnvironmentType</a>
+         Kind)
+      </p>
+      <div>
+        <div>
+          <p> Set the environment (fourth) component of the triple to a known type.</p>
+        </div>
+      </div>
+      <h3 id="D215AB84D9689EDA4D81623C0E34A4C5631D5E7F">setObjectFormat</h3>
+      <p>
+        public void setObjectFormat(
+        <a href="../llvm/Triple/ObjectFormatType.html">ObjectFormatType</a>
+         Kind)
+      </p>
+      <div>
+        <div>
+          <p> Set the object file format.</p>
+        </div>
+      </div>
+      <h3 id="BAC836229F238D5D8212F12DC1E447EDEF1B240B">setTriple</h3>
+      <p>public void setTriple(const Twine &amp; Str)</p>
+      <div>
+        <div>
+          <p> Set all components to the new triple </p>
+        </div>
+      </div>
+      <h3 id="E6834F69C3F0BD1E3BEDADEF99A7E7917E7E8B36">setArchName</h3>
+      <p>
+        public void setArchName(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> Set the architecture (first) component of the triple by name.</p>
+        </div>
+      </div>
+      <h3 id="0E39E88263FAFCB4DBBA8550DBD7E3EFE0B2C4F9">setVendorName</h3>
+      <p>
+        public void setVendorName(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> Set the vendor (second) component of the triple by name.</p>
+        </div>
+      </div>
+      <h3 id="47846730BC04DA58406FB8E982802CB1FDFB5CC0">setOSName</h3>
+      <p>
+        public void setOSName(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> Set the operating system (third) component of the triple by name.</p>
+        </div>
+      </div>
+      <h3 id="15FA59398998CFAA0728777A363946DCC72DC3B5">setEnvironmentName</h3>
+      <p>
+        public void setEnvironmentName(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> Set the optional environment (fourth) component of the triple by name.</p>
+        </div>
+      </div>
+      <h3 id="2BFC8EA3B8B48FDA6F1809521317C1FAF212CC1F">setOSAndEnvironmentName</h3>
+      <p>
+        public void setOSAndEnvironmentName(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> Set the operating system and optional environment components with a single string.</p>
+        </div>
+      </div>
+      <h3 id="7FD6C19EB7D15ACB48684F4A60E50C1A77BEB33E">get32BitArchVariant</h3>
+      <p>
+        public 
+        <a href="Triple.html">Triple</a>
+         get32BitArchVariant()
+      </p>
+      <div>
+        <div>
+          <p> Form a triple with a 32-bit variant of the current architecture.</p>
+          <p> This can be used to move across &quot;families&quot; of architectures where useful.</p>
+        </div>
+      </div>
+      <h3 id="116D670A8F5D60EC1143B03B27973773882C6FA0">get64BitArchVariant</h3>
+      <p>
+        public 
+        <a href="Triple.html">Triple</a>
+         get64BitArchVariant()
+      </p>
+      <div>
+        <div>
+          <p> Form a triple with a 64-bit variant of the current architecture.</p>
+          <p> This can be used to move across &quot;families&quot; of architectures where useful.</p>
+        </div>
+      </div>
+      <h3 id="57C3C1D9378470BCF0EF5F3CF23B41005872521E">getBigEndianArchVariant</h3>
+      <p>
+        public 
+        <a href="Triple.html">Triple</a>
+         getBigEndianArchVariant()
+      </p>
+      <div>
+        <div>
+          <p> Form a triple with a big endian variant of the current architecture.</p>
+          <p> This can be used to move across &quot;families&quot; of architectures where useful.</p>
+        </div>
+      </div>
+      <h3 id="95AC20470A79A2B069B4FF0427F0F02DB1E14291">getLittleEndianArchVariant</h3>
+      <p>
+        public 
+        <a href="Triple.html">Triple</a>
+         getLittleEndianArchVariant()
+      </p>
+      <div>
+        <div>
+          <p> Form a triple with a little endian variant of the current architecture.</p>
+          <p> This can be used to move across &quot;families&quot; of architectures where useful.</p>
+        </div>
+      </div>
+      <h3 id="D79F57853777870A9C3E64B6DE833EEF89AB03C0">isLittleEndian</h3>
+      <p>public _Bool isLittleEndian()</p>
+      <div>
+        <div>
+          <p> Tests whether the target triple is little endian.</p>
+        </div>
+      </div>
+      <h3 id="EDC9ED496D3BFFDE31443D1CCAC3F73327C40B20">isCompatibleWith</h3>
+      <p>public _Bool isCompatibleWith(const Triple &amp; Other)</p>
+      <div>
+        <div>
+          <p> Test whether target triples are compatible.</p>
+        </div>
+      </div>
+      <h3 id="03CD9CFB8E8A3A2C05089AF4925538B228885B60">merge</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         merge(const Triple &amp; Other)
+      </p>
+      <div>
+        <div>
+          <p> Merge target triples.</p>
+        </div>
+      </div>
+      <h3 id="4D444588928AD2659028ADDA6CF2CB07E535534C">getMinimumSupportedOSVersion</h3>
+      <p>
+        public 
+        <a href="VersionTuple.html">VersionTuple</a>
+         getMinimumSupportedOSVersion()
+      </p>
+      <div>
+        <div>
+          <p> Some platforms have different minimum supported OS versions that varies by the architecture specified in the triple. This function returns the minimum supported OS version for this triple if one an exists, or an invalid version tuple if this triple doesn&apos;t have one.</p>
+        </div>
+      </div>
+      <h3 id="B4B4DCF51FA34151BE3ABAF64AC8BD9B7CF1FDF3">getArchTypeName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getArchTypeName(
+        <a href="../llvm/Triple/ArchType.html">ArchType</a>
+         Kind)
+      </p>
+      <div>
+        <div>
+          <p> Get the canonical name for the  architecture.</p>
+        </div>
+      </div>
+      <h3 id="1383B1C5604C4867E35E260AFEED97EBA1E61FC5">getArchTypePrefix</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getArchTypePrefix(
+        <a href="../llvm/Triple/ArchType.html">ArchType</a>
+         Kind)
+      </p>
+      <div>
+        <div>
+          <p> Get the &quot;prefix&quot; canonical name for the  architecture. This is the prefix used by the architecture specific builtins, and is suitable for passing to </p>
+        </div>
+      </div>
+      <h3 id="01F0A7D2D063E1E1837E7E260565AA08056EE94C">getVendorTypeName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getVendorTypeName(
+        <a href="../llvm/Triple/VendorType.html">VendorType</a>
+         Kind)
+      </p>
+      <div>
+        <div>
+          <p> Get the canonical name for the  vendor.</p>
+        </div>
+      </div>
+      <h3 id="06FA8BEF8B5057DDFAD38117E9197C8DC4C0D4E0">getOSTypeName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getOSTypeName(
+        <a href="../llvm/Triple/OSType.html">OSType</a>
+         Kind)
+      </p>
+      <div>
+        <div>
+          <p> Get the canonical name for the  operating system.</p>
+        </div>
+      </div>
+      <h3 id="0E7E9250BF227B022A60EC8EF7865CBB0AFA5A75">getEnvironmentTypeName</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getEnvironmentTypeName(
+        <a href="../llvm/Triple/EnvironmentType.html">EnvironmentType</a>
+         Kind)
+      </p>
+      <div>
+        <div>
+          <p> Get the canonical name for the  environment.</p>
+        </div>
+      </div>
+      <h3 id="5D699336C035689EF0DAEB3AC11E69B8D09F5650">getArchTypeForLLVMName</h3>
+      <p>
+        public 
+        <a href="../llvm/Triple/ArchType.html">ArchType</a>
+         getArchTypeForLLVMName(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> The canonical type for the given LLVM architecture name (e.g., &quot;x86&quot;).</p>
+        </div>
+      </div>
+      <h3 id="FF0899746082D4CBE9D8960D91B74B892BA6F8CE">getCanonicalVersionForOS</h3>
+      <p>
+        public 
+        <a href="VersionTuple.html">VersionTuple</a>
+         getCanonicalVersionForOS(
+        <a href="../llvm/Triple/OSType.html">OSType</a>
+         OSKind, const VersionTuple &amp; Version)
+      </p>
+      <div>
+        <div>
+          <p> Returns a canonicalized OS version number for the specified OS.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="7448FE517F46F81CCB54AD7182FFBCAA537F16B4">enum ArchType</h3>
+      <ul>
+        <li>UnknownArch</li>
+        <li>arm</li>
+        <li>armeb</li>
+        <li>aarch64</li>
+        <li>aarch64_be</li>
+        <li>aarch64_32</li>
+        <li>arc</li>
+        <li>avr</li>
+        <li>bpfel</li>
+        <li>bpfeb</li>
+        <li>csky</li>
+        <li>dxil</li>
+        <li>hexagon</li>
+        <li>loongarch32</li>
+        <li>loongarch64</li>
+        <li>m68k</li>
+        <li>mips</li>
+        <li>mipsel</li>
+        <li>mips64</li>
+        <li>mips64el</li>
+        <li>msp430</li>
+        <li>ppc</li>
+        <li>ppcle</li>
+        <li>ppc64</li>
+        <li>ppc64le</li>
+        <li>r600</li>
+        <li>amdgcn</li>
+        <li>riscv32</li>
+        <li>riscv64</li>
+        <li>sparc</li>
+        <li>sparcv9</li>
+        <li>sparcel</li>
+        <li>systemz</li>
+        <li>tce</li>
+        <li>tcele</li>
+        <li>thumb</li>
+        <li>thumbeb</li>
+        <li>x86</li>
+        <li>x86_64</li>
+        <li>xcore</li>
+        <li>xtensa</li>
+        <li>nvptx</li>
+        <li>nvptx64</li>
+        <li>le32</li>
+        <li>le64</li>
+        <li>amdil</li>
+        <li>amdil64</li>
+        <li>hsail</li>
+        <li>hsail64</li>
+        <li>spir</li>
+        <li>spir64</li>
+        <li>spirv32</li>
+        <li>spirv64</li>
+        <li>kalimba</li>
+        <li>shave</li>
+        <li>lanai</li>
+        <li>wasm32</li>
+        <li>wasm64</li>
+        <li>renderscript32</li>
+        <li>renderscript64</li>
+        <li>ve</li>
+        <li>LastArchType</li>
+      </ul>
+      <p>Defined at line 46 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="9FCF3EE3FFBE942DE73C8032DCE0573BC0EF59AC">enum SubArchType</h3>
+      <ul>
+        <li>NoSubArch</li>
+        <li>ARMSubArch_v9_4a</li>
+        <li>ARMSubArch_v9_3a</li>
+        <li>ARMSubArch_v9_2a</li>
+        <li>ARMSubArch_v9_1a</li>
+        <li>ARMSubArch_v9</li>
+        <li>ARMSubArch_v8_9a</li>
+        <li>ARMSubArch_v8_8a</li>
+        <li>ARMSubArch_v8_7a</li>
+        <li>ARMSubArch_v8_6a</li>
+        <li>ARMSubArch_v8_5a</li>
+        <li>ARMSubArch_v8_4a</li>
+        <li>ARMSubArch_v8_3a</li>
+        <li>ARMSubArch_v8_2a</li>
+        <li>ARMSubArch_v8_1a</li>
+        <li>ARMSubArch_v8</li>
+        <li>ARMSubArch_v8r</li>
+        <li>ARMSubArch_v8m_baseline</li>
+        <li>ARMSubArch_v8m_mainline</li>
+        <li>ARMSubArch_v8_1m_mainline</li>
+        <li>ARMSubArch_v7</li>
+        <li>ARMSubArch_v7em</li>
+        <li>ARMSubArch_v7m</li>
+        <li>ARMSubArch_v7s</li>
+        <li>ARMSubArch_v7k</li>
+        <li>ARMSubArch_v7ve</li>
+        <li>ARMSubArch_v6</li>
+        <li>ARMSubArch_v6m</li>
+        <li>ARMSubArch_v6k</li>
+        <li>ARMSubArch_v6t2</li>
+        <li>ARMSubArch_v5</li>
+        <li>ARMSubArch_v5te</li>
+        <li>ARMSubArch_v4t</li>
+        <li>AArch64SubArch_arm64e</li>
+        <li>AArch64SubArch_arm64ec</li>
+        <li>KalimbaSubArch_v3</li>
+        <li>KalimbaSubArch_v4</li>
+        <li>KalimbaSubArch_v5</li>
+        <li>MipsSubArch_r6</li>
+        <li>PPCSubArch_spe</li>
+        <li>SPIRVSubArch_v10</li>
+        <li>SPIRVSubArch_v11</li>
+        <li>SPIRVSubArch_v12</li>
+        <li>SPIRVSubArch_v13</li>
+        <li>SPIRVSubArch_v14</li>
+        <li>SPIRVSubArch_v15</li>
+      </ul>
+      <p>Defined at line 111 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="92978FA1669C858279562AFF3572B419E269CC6C">enum VendorType</h3>
+      <ul>
+        <li>UnknownVendor</li>
+        <li>Apple</li>
+        <li>PC</li>
+        <li>SCEI</li>
+        <li>Freescale</li>
+        <li>IBM</li>
+        <li>ImaginationTechnologies</li>
+        <li>MipsTechnologies</li>
+        <li>NVIDIA</li>
+        <li>CSR</li>
+        <li>Myriad</li>
+        <li>AMD</li>
+        <li>Mesa</li>
+        <li>SUSE</li>
+        <li>OpenEmbedded</li>
+        <li>LastVendorType</li>
+      </ul>
+      <p>Defined at line 166 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="C47964EB6A521B89B9454A2AA76C5E732A2133A1">enum OSType</h3>
+      <ul>
+        <li>UnknownOS</li>
+        <li>Ananas</li>
+        <li>CloudABI</li>
+        <li>Darwin</li>
+        <li>DragonFly</li>
+        <li>FreeBSD</li>
+        <li>Fuchsia</li>
+        <li>IOS</li>
+        <li>KFreeBSD</li>
+        <li>Linux</li>
+        <li>Lv2</li>
+        <li>MacOSX</li>
+        <li>NetBSD</li>
+        <li>OpenBSD</li>
+        <li>Solaris</li>
+        <li>Win32</li>
+        <li>ZOS</li>
+        <li>Haiku</li>
+        <li>Minix</li>
+        <li>RTEMS</li>
+        <li>NaCl</li>
+        <li>AIX</li>
+        <li>CUDA</li>
+        <li>NVCL</li>
+        <li>AMDHSA</li>
+        <li>PS4</li>
+        <li>PS5</li>
+        <li>ELFIAMCU</li>
+        <li>TvOS</li>
+        <li>WatchOS</li>
+        <li>DriverKit</li>
+        <li>Mesa3D</li>
+        <li>Contiki</li>
+        <li>AMDPAL</li>
+        <li>HermitCore</li>
+        <li>Hurd</li>
+        <li>WASI</li>
+        <li>Emscripten</li>
+        <li>ShaderModel</li>
+        <li>LastOSType</li>
+      </ul>
+      <p>Defined at line 185 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="E1163B2435F883B789EC531FB30285108099D739">enum EnvironmentType</h3>
+      <ul>
+        <li>UnknownEnvironment</li>
+        <li>GNU</li>
+        <li>GNUABIN32</li>
+        <li>GNUABI64</li>
+        <li>GNUEABI</li>
+        <li>GNUEABIHF</li>
+        <li>GNUF32</li>
+        <li>GNUF64</li>
+        <li>GNUSF</li>
+        <li>GNUX32</li>
+        <li>GNUILP32</li>
+        <li>CODE16</li>
+        <li>EABI</li>
+        <li>EABIHF</li>
+        <li>Android</li>
+        <li>Musl</li>
+        <li>MuslEABI</li>
+        <li>MuslEABIHF</li>
+        <li>MuslX32</li>
+        <li>MSVC</li>
+        <li>Itanium</li>
+        <li>Cygnus</li>
+        <li>CoreCLR</li>
+        <li>Simulator</li>
+        <li>MacABI</li>
+        <li>Pixel</li>
+        <li>Vertex</li>
+        <li>Geometry</li>
+        <li>Hull</li>
+        <li>Domain</li>
+        <li>Compute</li>
+        <li>Library</li>
+        <li>RayGeneration</li>
+        <li>Intersection</li>
+        <li>AnyHit</li>
+        <li>ClosestHit</li>
+        <li>Miss</li>
+        <li>Callable</li>
+        <li>Mesh</li>
+        <li>Amplification</li>
+        <li>LastEnvironmentType</li>
+      </ul>
+      <p>Defined at line 228 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+      <h3 id="EAE9D4058C8C45EE9AA29D3A5232D465B4D090D8">enum ObjectFormatType</h3>
+      <ul>
+        <li>UnknownObjectFormat</li>
+        <li>COFF</li>
+        <li>DXContainer</li>
+        <li>ELF</li>
+        <li>GOFF</li>
+        <li>MachO</li>
+        <li>SPIRV</li>
+        <li>Wasm</li>
+        <li>XCOFF</li>
+      </ul>
+      <p>Defined at line 279 of file /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D2AF6C7E9B6767014B5DADD25C006B3DFB6A92D5">Triple</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B19E913983C73AFCC024450EA01FA31A1888FFCB">Triple</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F218C38FA699BC7FA44AAF67726EB3D6D5C4465F">Triple</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B8918EC2A8925CAC43E22659C4ED32586554C59">Triple</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73834C44B6242775EFFB65B67D4C688464F6EB84">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3A807509FF334D28491DAE67645997EAAD3CC0D">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4D773271D1425E57F00FD0A25D8D661BFE5332F">normalize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDCA20029CA1590962B7C664AA0EF71E6D21795F">normalize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9D41858174AFAA2EAADD752A80B2167EE0E8D4E">getArch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15C26FCA8D62D015649ACE5F48E1CB0900B3DCE2">getSubArch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C32B14893580163E06FCF12BD337B356AFBCEE9">getVendor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1F3959821002CF935C27B8DBD377819E973012CA">getOS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A4786A7983E61B7A318BEADBCD30511B4CA9538">hasEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC92AE9C0B7BC8D930B5600EFAC4E575887D297D">getEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6A051EF8831F34E73024AE03000A0003E57AD95">getEnvironmentVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79E8E27DC4657AF60FC5553F22B17D934281CB08">getObjectFormat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42FAE63EAAC24662D2C4112BF5D923233618E406">getOSVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0BC84B421DF96A989BFAE7437A3806E775CDEF1">getOSMajorVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#20366FCAE20942F43FF9A24381CA2CAC6A041883">getMacOSXVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9E72A5DAB471BA4210D925FA2EC195A80203A0EB">getiOSVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0BD5D4A32D117763AFD952F2E6ED7C8D5606E02A">getWatchOSVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AAF04DE3DFFD552603A77F2787A38A5D45BF1CD7">getDriverKitVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3AFBAD5DB59C7E8F01B9C4FB013BA0B435B4DDC8">str</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C49E571A37C943C92C6B75567B059E88A4FA8DB7">getTriple</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B776D3939C878095BDEDB8731C82597F4F0F8DBB">getArchName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C4679F42EEEE2631CD859216FF05F55A70FD4AD">getArchName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8E74FAB2FA00E11F59673142CF5704ADEBCB7E5">getVendorName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#123AC2E35D836AECB608E8315E124EB4641AAE53">getOSName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CAC442B8B3DB3D7DF9AE09792AFA48DB0584D0D2">getEnvironmentName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#795909E65636401B59E6046B6E5F127397416BFC">getOSAndEnvironmentName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#207D0C5659A1CEFB44EBA8DEBC7A0413BB942C79">isArch64Bit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9AF8F2897694C7744DC9449D923AC6C831352BC1">isArch32Bit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#262B97F56C09EE98FACEAE07B2C70E5828736047">isArch16Bit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#266799461CB38624F5A3359A30260E67B72CDE03">isOSVersionLT</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3DF6073F557A0062B491E467AE30C451905A6F3B">isOSVersionLT</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A26B4C84E5570369A25EF716AFBC49C40B6D17BB">isMacOSXVersionLT</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52AC30E0F35D1A8696EC62DA2B17AD5EAAB62FC3">isMacOSX</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#11DD65B95D65A97F95392445F0F990EF2EAD7687">isiOS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B58707F7BC1A2368FC4D50D5C2C4F482ED40FB19">isTvOS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D5ADB921FDCAD02CAE2F10CBD209A19D27CDC94">isWatchOS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92C486AEB8932D47EEF4E6046289DE7B31DE8FC5">isWatchABI</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E3BE869A42F468D6CAE634472EC508B2B8FFEAA6">isDriverKit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E41CB0B2C6A8AE83D46630DB5438D2D11544F1F">isOSzOS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A1A934286E2AB7E374CDA614D960A2C22BC29CB">isOSDarwin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B517CFEFA174F6E741D22B0026F72F392897BB3">isSimulatorEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA0C129EE8475F388BBA007B5FF5E9F1871474A1">isMacCatalystEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AEDE2FE095EAF7C7095E0E3B9EDCD3A1DAF4E37B">isTargetMachineMac</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C567D2C684C0A9015AD7A66776C933DE1B946826">isOSNetBSD</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1674AD67A1EACEBEFCFD226AD7758D6A65808683">isOSOpenBSD</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22E9862D2671B573C9443090965239205D3E0074">isOSFreeBSD</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D29D26F9648BECAB6DE63DA240279BCED13DE0E3">isOSFuchsia</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#210C2CDF18D4BBED951C9D74AF7866E3CBA549ED">isOSDragonFly</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DB00AD57FB886EBE701595F10B3F1941593C489">isOSSolaris</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E7F67C2BAE8538AF6B341F0EFC88346F641B45CA">isOSIAMCU</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A28D4E98E6D040CEE2C67A421F2A4FC99F94B216">isOSUnknown</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B022F71EA4D627B6F8707B8AC26355AC9DB317BF">isGNUEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4018B4A89E51425CF362C7831386401ED3DE2099">isOSContiki</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05A85D0F8BF7D2DFF6BDE260B8F0B30E8E9521AD">isOSHaiku</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#267CA5E1597FA6C19AF109659A870C25D64919F4">isOSWindows</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF157F2FA088D816EC9E8EF6C54EDC756808FFA4">isKnownWindowsMSVCEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A88B9A6CF84A5424567E51A723EC6081018450AE">isWindowsMSVCEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#027731930A9B41B2BA963DB833E6C15F84E2C732">isWindowsArm64EC</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7E9EAB58D1B2F621ACD1D6B6A98A271922D6AD1">isWindowsCoreCLREnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE98F95F2D7D9A7680857B168BB6E729B41A0258">isWindowsItaniumEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A32E536487AB0E8F0720787C1A21BEE84C54591">isWindowsCygwinEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FC8337ADDDDDD1693095B833AC2B9D79C780534">isWindowsGNUEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#258B77C3153FD269126A20BB2EC2D3BA8880C208">isOSCygMing</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF209AD572F2E0F8C41B44B28B4DFDB012BBC649">isOSMSVCRT</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BB035FDF2793E9BEAC6512799D12E86D29BA99B">isOSNaCl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#173E8ADDF4ADEE9222ADFB5FAD51932DC13C9B28">isOSLinux</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5579ED6D476979CC07398955C2827B046D8E242A">isOSKFreeBSD</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#771A22977D120D00A4EFF3EAC980AD9FD4ECC8D7">isOSHurd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BC1AE9878AEF9051B50779DECD0483B79B7FD83">isOSWASI</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FD92F2B6EBE30BBDE914F4052767A81F9821EAA">isOSEmscripten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82186F773D75EAE297603CBC49899BE1315525EB">isOSGlibc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88C0825E9F10AAF46CAFA5111E7419227E886EAE">isOSAIX</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2B47F2099F053AC11857943CDEF4500230CF4EC">isOSBinFormatELF</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F88F02B47CD6801A28D8D76FC6BB75C447072721">isOSBinFormatCOFF</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99CC1C46ACA5DFB15687D3F132C37C8D13812037">isOSBinFormatGOFF</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A5E4A54A7680DBACF1A4898B9A406414D38656D">isOSBinFormatMachO</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4A970745B8346FCDBC581AD4F4CFAC09EBE3FDF">isOSBinFormatWasm</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#04AA2FBB228E8B8D8B25DA344BB8F3E123C8509B">isOSBinFormatXCOFF</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6546DCE306959B1C8DF699B70F4905A74E01B10">isOSBinFormatDXContainer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9ED842E3FFA9E03244FA5A6B6AFDB29A1124C948">isPS4</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#178D41090B7B0C93E4AE169B48E2771EDA0342B2">isPS5</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D403748947EBE4A59B7A8487533F1215A4D86F89">isPS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A91408959C93D49C46BB50A993A63084F9AA9D7F">isAndroid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8E257944A69D974571675D87BD9C4036EE6E0D1">isAndroidVersionLT</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F16522BBF24F2695D0264CA3836B39F5D8102AA4">isMusl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4C03D271B39D68E0CDD7B6475642BE5ABCBDC88">isDXIL</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A570193685B8C15D63985CFE679AF1EE3EE80B07">isSPIR</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0781C92A28659D16D07275DE222C7214E79C7DC4">isSPIRV</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB2DE9993E18B69EBE058BC84445CF68CDFD5752">isNVPTX</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ABF2667EAD7394CA4D34F8D4FB8497875A3488F2">isAMDGCN</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10854CBAC593B9C628AB474335A95BEE0CF32FFC">isAMDGPU</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FBAE072D1B64F657A9A2F32AA3F8C26DF6F1B72">isThumb</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F8A0033A8690B815F9A8389298BEAEBF155E2774">isARM</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#04DA0BD1BD58DFBE5A8A6154A6FFA2D278AACF49">isTargetEHABICompatible</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77331E6162672E595BB1EF4721DCF52D5F68AF45">isArmT32</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15CC34311073D78AF22F28938FCDD10CA19A4C37">isArmMClass</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84FE59FF531746CE9A433CD54BE70D708514FF5B">isAArch64</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E55C6DE1F202473B67C5EA06284A940E4B1E3988">isAArch64</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2C71D9F733927354836C6B0824DDAA5A3C8DA68">isLoongArch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E4C65B8B75962A98065D1B7A8967F552A663068">isMIPS32</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B203A200D0EE9A379B0434C2C1B641F1AF70311C">isMIPS64</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB06FF25D07F7E0600A45A5A0A42410418A74D83">isMIPS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#91223B45FCB096CDE80BC96E750998B9ECFCED31">isPPC</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9130A80626F37E76AC582F7ABDFB8497C1054386">isPPC32</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BCC323A2E4473BF6BE027BBA950D2AFD0CDC50E">isPPC64</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D0FEB57CE3060274D062B6802DE25019555644B">isRISCV32</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE7589999B7742AF10D8E4ABD03CFFE3AEF33DA5">isRISCV64</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4018A1D4B46DB5BC9DF5774C24B6B13DCCDA576E">isRISCV</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#874B945F1D9166E4C42EE34CC67045E86D9CBE40">isSPARC32</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#282BD3B17172A9C3803D9BFCEEE88B54971A2388">isSPARC64</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07CED88A478FC67464628BEE21A6DC0F2C2AC654">isSPARC</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45F968DFAD4BBDD1EC9FEC87A61E22327C23061A">isSystemZ</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D54BD5FC922E0EAFC66B08F440AA5D0EB9331F3B">isX86</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B179B3784861738EE9253E12B4C9E07209CDA8E">isVE</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CA09D74AF049303834B27E5F65A42BDAD6FD26E">isWasm</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B5ECBC062DB5523CD67EFB5EEDE6476773D1611">isCSKY</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0021040EFB948D1ED52BCA75C4FABAA2C1406856">isArm64e</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1084CFB798766D6C192209F0D7BEDAB9F045A1BC">isX32</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F0A0C43DC8A2820F23091D3293983A882EB6447">supportsCOMDAT</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D799DB8F745B97B11330F16744FA209C31755755">hasDefaultEmulatedTLS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52049D44134D753CD9A8F38E86E915B41221E0E4">hasDefaultDataSections</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEF6F50B0524C0407615073975A2908787F956A6">hasDLLImportExport</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3200AFA0309EC4A7B840EF5F354554C0DABD930">setArch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#62CCDEE500F5768AD23018E0938DA59BBCBD723E">setVendor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F3F016D0CB80EB520466F114B20E81FF779E52BD">setOS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#015593297F621A0ED45F5C6E4640D430908ABB72">setEnvironment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D215AB84D9689EDA4D81623C0E34A4C5631D5E7F">setObjectFormat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BAC836229F238D5D8212F12DC1E447EDEF1B240B">setTriple</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6834F69C3F0BD1E3BEDADEF99A7E7917E7E8B36">setArchName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E39E88263FAFCB4DBBA8550DBD7E3EFE0B2C4F9">setVendorName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47846730BC04DA58406FB8E982802CB1FDFB5CC0">setOSName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15FA59398998CFAA0728777A363946DCC72DC3B5">setEnvironmentName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BFC8EA3B8B48FDA6F1809521317C1FAF212CC1F">setOSAndEnvironmentName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FD6C19EB7D15ACB48684F4A60E50C1A77BEB33E">get32BitArchVariant</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#116D670A8F5D60EC1143B03B27973773882C6FA0">get64BitArchVariant</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57C3C1D9378470BCF0EF5F3CF23B41005872521E">getBigEndianArchVariant</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95AC20470A79A2B069B4FF0427F0F02DB1E14291">getLittleEndianArchVariant</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D79F57853777870A9C3E64B6DE833EEF89AB03C0">isLittleEndian</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EDC9ED496D3BFFDE31443D1CCAC3F73327C40B20">isCompatibleWith</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03CD9CFB8E8A3A2C05089AF4925538B228885B60">merge</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D444588928AD2659028ADDA6CF2CB07E535534C">getMinimumSupportedOSVersion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4B4DCF51FA34151BE3ABAF64AC8BD9B7CF1FDF3">getArchTypeName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1383B1C5604C4867E35E260AFEED97EBA1E61FC5">getArchTypePrefix</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01F0A7D2D063E1E1837E7E260565AA08056EE94C">getVendorTypeName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#06FA8BEF8B5057DDFAD38117E9197C8DC4C0D4E0">getOSTypeName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E7E9250BF227B022A60EC8EF7865CBB0AFA5A75">getEnvironmentTypeName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D699336C035689EF0DAEB3AC11E69B8D09F5650">getArchTypeForLLVMName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF0899746082D4CBE9D8960D91B74B892BA6F8CE">getCanonicalVersionForOS</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7448FE517F46F81CCB54AD7182FFBCAA537F16B4">ArchType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FCF3EE3FFBE942DE73C8032DCE0573BC0EF59AC">SubArchType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92978FA1669C858279562AFF3572B419E269CC6C">VendorType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C47964EB6A521B89B9454A2AA76C5E732A2133A1">OSType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1163B2435F883B789EC531FB30285108099D739">EnvironmentType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EAE9D4058C8C45EE9AA29D3A5232D465B4D090D8">ObjectFormatType</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

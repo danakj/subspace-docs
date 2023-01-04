@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct UnderalignedInt64</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/serialization" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct UnderalignedInt64</h1>
+    <p>Defined at line 223 of file /usr/lib/llvm-16/include/clang/Serialization/ASTBitCodes.h</p>
+    <div>
+      <div>
+        <p> Offset in the AST file. Use splitted 64-bit integer into low/high parts to keep structure alignment 32-bit (it is important because blobs in bitstream are 32-bit aligned). This structure is serialized &quot;as is&quot; to the AST file.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public uint32_t BitOffsetLow</li>
+      <li>public uint32_t BitOffsetHigh</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="32BB6DF7B885035A4CA8FBFCD1F1EE167F57B877">UnderalignedInt64</h3>
+      <p>public void UnderalignedInt64()</p>
+      <p>Defined at line 227 of file /usr/lib/llvm-16/include/clang/Serialization/ASTBitCodes.h</p>
+      <h3 id="DECFBB5F1C7D6B46361B0EE11A9700F7A550DEF0">UnderalignedInt64</h3>
+      <p>public void UnderalignedInt64(uint64_t BitOffset)</p>
+      <p>Defined at line 228 of file /usr/lib/llvm-16/include/clang/Serialization/ASTBitCodes.h</p>
+      <h3 id="A126A761ABC3468496A680ECD3B1CBD7124C72C6">setBitOffset</h3>
+      <p>public void setBitOffset(uint64_t Offset)</p>
+      <p>Defined at line 230 of file /usr/lib/llvm-16/include/clang/Serialization/ASTBitCodes.h</p>
+      <h3 id="487733084B419CEC9CA20F819581787FD68A96DB">getBitOffset</h3>
+      <p>public uint64_t getBitOffset()</p>
+      <p>Defined at line 235 of file /usr/lib/llvm-16/include/clang/Serialization/ASTBitCodes.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#32BB6DF7B885035A4CA8FBFCD1F1EE167F57B877">UnderalignedInt64</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DECFBB5F1C7D6B46361B0EE11A9700F7A550DEF0">UnderalignedInt64</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A126A761ABC3468496A680ECD3B1CBD7124C72C6">setBitOffset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#487733084B419CEC9CA20F819581787FD68A96DB">getBitOffset</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

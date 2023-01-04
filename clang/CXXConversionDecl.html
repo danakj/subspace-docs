@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXConversionDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXConversionDecl</h1>
+    <p>Defined at line 2778 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a C++ conversion function within a class.</p>
+        <p> For example:</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="CXXMethodDecl.html">CXXMethodDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2E7080D5CDD317A37408AFF2A211FD81E9A40B80">Create</h3>
+      <p>
+        public CXXConversionDecl * Create(ASTContext &amp; C, CXXRecordDecl * RD, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, const DeclarationNameInfo &amp; NameInfo, 
+        <a href="QualType.html">QualType</a>
+         T, TypeSourceInfo * TInfo, _Bool UsesFPIntrin, _Bool isInline, 
+        <a href="ExplicitSpecifier.html">ExplicitSpecifier</a>
+         ES, 
+        <a href="ConstexprSpecKind.html">ConstexprSpecKind</a>
+         ConstexprKind, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLocation, Expr * TrailingRequiresClause)
+      </p>
+      <h3 id="E5C4C118C9A17F8A919A90118CB99EBFD857467D">CreateDeserialized</h3>
+      <p>public CXXConversionDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="D8029D69AAF15CAABBCF2D7B264EACCCA7A1D241">getExplicitSpecifier</h3>
+      <p>
+        public 
+        <a href="ExplicitSpecifier.html">ExplicitSpecifier</a>
+         getExplicitSpecifier()
+      </p>
+      <p>Defined at line 2805 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="C9755543DA75C0185FB1E8248A63786ADE4AD2DC">getExplicitSpecifier</h3>
+      <p>
+        public 
+        <a href="ExplicitSpecifier.html">ExplicitSpecifier</a>
+         getExplicitSpecifier()
+      </p>
+      <p>Defined at line 2809 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="5B249BEAE3F66F944F7A952BF4B3C86D0A56D65E">isExplicit</h3>
+      <p>public _Bool isExplicit()</p>
+      <p>Defined at line 2814 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Return true if the declaration is already resolved to be explicit.</p>
+        </div>
+      </div>
+      <h3 id="B5586CFE6F51E659491FA6014DFBF6290503754D">setExplicitSpecifier</h3>
+      <p>
+        public void setExplicitSpecifier(
+        <a href="ExplicitSpecifier.html">ExplicitSpecifier</a>
+         ES)
+      </p>
+      <p>Defined at line 2815 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="0EC1AA1C2B01D8ED6CFF8EE407E1AF30E69B4B50">getConversionType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getConversionType()
+      </p>
+      <p>Defined at line 2818 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Returns the type that this conversion function is converting to.</p>
+        </div>
+      </div>
+      <h3 id="2328E6C0955F26CB533F4685F83CA883872F6637">isLambdaToBlockPointerConversion</h3>
+      <p>public _Bool isLambdaToBlockPointerConversion()</p>
+      <div>
+        <div>
+          <p> Determine whether this conversion function is a conversion from a lambda closure type to a block pointer.</p>
+        </div>
+      </div>
+      <h3 id="E789068889B3BA3FBBEBE49042FE5E44EDDA8B39">getCanonicalDecl</h3>
+      <p>public CXXConversionDecl * getCanonicalDecl()</p>
+      <p>Defined at line 2826 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="7B2120CE0B68D22BE6B270EA9091169359A96B80">getCanonicalDecl</h3>
+      <p>public const CXXConversionDecl * getCanonicalDecl()</p>
+      <p>Defined at line 2829 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="DA23511699388EAE02E6266A1B57E0A5DBC151E9">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 2834 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="87ED180989286D645081EC962F326F434799E24A">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 2835 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2E7080D5CDD317A37408AFF2A211FD81E9A40B80">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5C4C118C9A17F8A919A90118CB99EBFD857467D">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8029D69AAF15CAABBCF2D7B264EACCCA7A1D241">getExplicitSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C9755543DA75C0185FB1E8248A63786ADE4AD2DC">getExplicitSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B249BEAE3F66F944F7A952BF4B3C86D0A56D65E">isExplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5586CFE6F51E659491FA6014DFBF6290503754D">setExplicitSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EC1AA1C2B01D8ED6CFF8EE407E1AF30E69B4B50">getConversionType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2328E6C0955F26CB533F4685F83CA883872F6637">isLambdaToBlockPointerConversion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E789068889B3BA3FBBEBE49042FE5E44EDDA8B39">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B2120CE0B68D22BE6B270EA9091169359A96B80">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA23511699388EAE02E6266A1B57E0A5DBC151E9">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87ED180989286D645081EC962F326F434799E24A">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

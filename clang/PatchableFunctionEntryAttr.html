@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class PatchableFunctionEntryAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class PatchableFunctionEntryAttr</h1>
+    <p>Defined at line 9321 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="6EBF8B3DFC32151FC62B597475975AFD1D727B75">CreateImplicit</h3>
+      <p>public PatchableFunctionEntryAttr * CreateImplicit(ASTContext &amp; Ctx, unsigned int Count, int Offset, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="23C578F63186F73519C1F3A7034A4755D86E5C8A">Create</h3>
+      <p>public PatchableFunctionEntryAttr * Create(ASTContext &amp; Ctx, unsigned int Count, int Offset, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="BABF6B19C855EC91DF7C7CCA74995E1DFA6ABF94">CreateImplicit</h3>
+      <p>
+        public PatchableFunctionEntryAttr * CreateImplicit(ASTContext &amp; Ctx, unsigned int Count, int Offset, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="F79A8E74734315D15BE4945BF858429486AC7B69">Create</h3>
+      <p>
+        public PatchableFunctionEntryAttr * Create(ASTContext &amp; Ctx, unsigned int Count, int Offset, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="06662AD48A0490B95CDF9B1D6434B15AFBD80258">PatchableFunctionEntryAttr</h3>
+      <p>public void PatchableFunctionEntryAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, unsigned int Count, int Offset)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="8557FD01E450377E732506270F50F78AAFA9918C">PatchableFunctionEntryAttr</h3>
+      <p>public void PatchableFunctionEntryAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, unsigned int Count)</p>
+      <h3 id="C9C036A6E16A23F2AB0B51A05077920069EADF64">clone</h3>
+      <p>public PatchableFunctionEntryAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="3E0DF9948B2228CF757BC9797220018D38A13C6D">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="9E3BF354BDDD11044FFD8185864BABA12BECF3DB">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="136CC0D347C2F29756222E640D9CA8DD533ECFE0">getCount</h3>
+      <p>public unsigned int getCount()</p>
+      <p>Defined at line 9354 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="B79ECC59E64E651BF3F65C24306217661C4B38AC">getOffset</h3>
+      <p>public int getOffset()</p>
+      <p>Defined at line 9358 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="6C34946F704794FEF2A8EFAA8376DA861F783ECF">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 9366 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="D22ADB4EF06D5415C7347FDF1C19FC70A28828BD">enum Spelling</h3>
+      <ul>
+        <li>GNU_patchable_function_entry</li>
+        <li>CXX11_gnu_patchable_function_entry</li>
+        <li>C2x_gnu_patchable_function_entry</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 9327 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6EBF8B3DFC32151FC62B597475975AFD1D727B75">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23C578F63186F73519C1F3A7034A4755D86E5C8A">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BABF6B19C855EC91DF7C7CCA74995E1DFA6ABF94">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F79A8E74734315D15BE4945BF858429486AC7B69">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#06662AD48A0490B95CDF9B1D6434B15AFBD80258">PatchableFunctionEntryAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8557FD01E450377E732506270F50F78AAFA9918C">PatchableFunctionEntryAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C9C036A6E16A23F2AB0B51A05077920069EADF64">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3E0DF9948B2228CF757BC9797220018D38A13C6D">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9E3BF354BDDD11044FFD8185864BABA12BECF3DB">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#136CC0D347C2F29756222E640D9CA8DD533ECFE0">getCount</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B79ECC59E64E651BF3F65C24306217661C4B38AC">getOffset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C34946F704794FEF2A8EFAA8376DA861F783ECF">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D22ADB4EF06D5415C7347FDF1C19FC70A28828BD">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

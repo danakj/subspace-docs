@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OwnershipAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OwnershipAttr</h1>
+    <p>Defined at line 9102 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="82F61A43AA02FC8DD6C710B78AFC92005B9AF314">CreateImplicit</h3>
+      <p>public OwnershipAttr * CreateImplicit(ASTContext &amp; Ctx, IdentifierInfo * Module, ParamIdx * Args, unsigned int ArgsSize, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="197842A9BECE5BD2BA8DF001FB3B2F0FF9653A14">Create</h3>
+      <p>public OwnershipAttr * Create(ASTContext &amp; Ctx, IdentifierInfo * Module, ParamIdx * Args, unsigned int ArgsSize, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="6B755282EAB6183A19D98978CE654EB77C1941B8">CreateImplicit</h3>
+      <p>
+        public OwnershipAttr * CreateImplicit(ASTContext &amp; Ctx, IdentifierInfo * Module, ParamIdx * Args, unsigned int ArgsSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax, 
+        <a href="../clang/OwnershipAttr/Spelling.html">Spelling</a>
+         S)
+      </p>
+      <h3 id="D0F18AC45FC9E9AE6D18854C9ED9BDFD696E2980">Create</h3>
+      <p>
+        public OwnershipAttr * Create(ASTContext &amp; Ctx, IdentifierInfo * Module, ParamIdx * Args, unsigned int ArgsSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax, 
+        <a href="../clang/OwnershipAttr/Spelling.html">Spelling</a>
+         S)
+      </p>
+      <h3 id="47838617719848334DB89AB46E149BBDB42B2A4B">OwnershipAttr</h3>
+      <p>public void OwnershipAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, IdentifierInfo * Module, ParamIdx * Args, unsigned int ArgsSize)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="B1A12A69EA48A6A22965E948D24C50C266D79CC0">OwnershipAttr</h3>
+      <p>public void OwnershipAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, IdentifierInfo * Module)</p>
+      <h3 id="238C007FA59A6143D89B1790B9C536680FA71D8C">clone</h3>
+      <p>public OwnershipAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="BE62848FDA26ACB1AC23899EA9271EEA674E861F">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="1F7489DC3F3529AB8532A2C033AAD8107A07E06B">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="2475196D59D094F070BCC867497CD2C5B8FEAC10">getSemanticSpelling</h3>
+      <p>
+        public 
+        <a href="../clang/OwnershipAttr/Spelling.html">Spelling</a>
+         getSemanticSpelling()
+      </p>
+      <h3 id="FE07D226BBC201D4630CFCF18356AC2CCE723051">isHolds</h3>
+      <p>public _Bool isHolds()</p>
+      <p>Defined at line 9143 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C011D7E1F88253AF4144F6B0CB8E2B0D131489F9">isReturns</h3>
+      <p>public _Bool isReturns()</p>
+      <p>Defined at line 9146 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="AAC60D3765CE5E45D327BD510892B68E08C3B1AA">isTakes</h3>
+      <p>public _Bool isTakes()</p>
+      <p>Defined at line 9149 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="6514B3733473A6B3E4D6E8F2C72D3C527438C565">getModule</h3>
+      <p>public IdentifierInfo * getModule()</p>
+      <p>Defined at line 9152 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="372DD3067755D5AC0B421BFDD12CA02CC7CD7243">args_begin</h3>
+      <p>public args_iterator args_begin()</p>
+      <p>Defined at line 9157 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="31D4092A89ECE15E646349128959FEBDB51814F3">args_end</h3>
+      <p>public args_iterator args_end()</p>
+      <p>Defined at line 9158 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="A2A1D6A70716900D242D848EDEB386F3C5072914">args_size</h3>
+      <p>public unsigned int args_size()</p>
+      <p>Defined at line 9159 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="53257545D68B42DA727C563179AD658A61AD168D">args</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         args()
+      </p>
+      <p>Defined at line 9160 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="255024AFCE53BB1D9857DD28456BC7D76EDD549F">getOwnKind</h3>
+      <p>
+        public 
+        <a href="../clang/OwnershipAttr/OwnershipKind.html">OwnershipKind</a>
+         getOwnKind()
+      </p>
+      <p>Defined at line 9165 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="92DE5B5AAABFE283188DCBBC3DF60CD39BE88E45">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 9172 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="25DB714A9CD175B3F525140776FF730013874E1D">enum Spelling</h3>
+      <ul>
+        <li>GNU_ownership_holds</li>
+        <li>CXX11_clang_ownership_holds</li>
+        <li>C2x_clang_ownership_holds</li>
+        <li>GNU_ownership_returns</li>
+        <li>CXX11_clang_ownership_returns</li>
+        <li>C2x_clang_ownership_returns</li>
+        <li>GNU_ownership_takes</li>
+        <li>CXX11_clang_ownership_takes</li>
+        <li>C2x_clang_ownership_takes</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 9109 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C70DA8A4C395856CA6B61FABCC890041B07341A8">enum OwnershipKind</h3>
+      <ul>
+        <li>Holds</li>
+        <li>Returns</li>
+        <li>Takes</li>
+      </ul>
+      <p>Defined at line 9164 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#82F61A43AA02FC8DD6C710B78AFC92005B9AF314">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#197842A9BECE5BD2BA8DF001FB3B2F0FF9653A14">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B755282EAB6183A19D98978CE654EB77C1941B8">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0F18AC45FC9E9AE6D18854C9ED9BDFD696E2980">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#47838617719848334DB89AB46E149BBDB42B2A4B">OwnershipAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B1A12A69EA48A6A22965E948D24C50C266D79CC0">OwnershipAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#238C007FA59A6143D89B1790B9C536680FA71D8C">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE62848FDA26ACB1AC23899EA9271EEA674E861F">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1F7489DC3F3529AB8532A2C033AAD8107A07E06B">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2475196D59D094F070BCC867497CD2C5B8FEAC10">getSemanticSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE07D226BBC201D4630CFCF18356AC2CCE723051">isHolds</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C011D7E1F88253AF4144F6B0CB8E2B0D131489F9">isReturns</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AAC60D3765CE5E45D327BD510892B68E08C3B1AA">isTakes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6514B3733473A6B3E4D6E8F2C72D3C527438C565">getModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#372DD3067755D5AC0B421BFDD12CA02CC7CD7243">args_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31D4092A89ECE15E646349128959FEBDB51814F3">args_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2A1D6A70716900D242D848EDEB386F3C5072914">args_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53257545D68B42DA727C563179AD658A61AD168D">args</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#255024AFCE53BB1D9857DD28456BC7D76EDD549F">getOwnKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92DE5B5AAABFE283188DCBBC3DF60CD39BE88E45">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#25DB714A9CD175B3F525140776FF730013874E1D">Spelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C70DA8A4C395856CA6B61FABCC890041B07341A8">OwnershipKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

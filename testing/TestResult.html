@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TestResult</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TestResult</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#571">571</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+    </p>
+    <div>
+      <div>
+        <p> The result of a single Test.  This includes a list of TestPartResults, a list of TestProperties, a count of how many death tests there are in the Test, and how much time it took to run the Test.</p>
+        <p> TestResult is not copyable.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="717E761D4FD9B1219F5D24CDF10ECC170A9E297D">TestResult</h3>
+      <p>public void TestResult()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2201">2201</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Creates an empty TestResult.</p>
+        </div>
+      </div>
+      <h3 id="69F32066137AD6E888A10C420E0507B6FD4B34EC">~TestResult</h3>
+      <p>public void ~TestResult()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2205">2205</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> D&apos;tor.</p>
+        </div>
+        <div>
+          <p> D&apos;tor.  Do not inherit from TestResult.</p>
+        </div>
+      </div>
+      <h3 id="45FAEEC54ABEB432172C25FBE0BA630C3A3596B1">total_part_count</h3>
+      <p>public int total_part_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2405">2405</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the number of all test parts.  This is the sum of the number of successful test parts and the number of failed test parts.</p>
+        </div>
+      </div>
+      <h3 id="8F24BE1C5ECE8C4C02C93A25AC7C36BB1AACC301">test_property_count</h3>
+      <p>public int test_property_count()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2410">2410</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the number of the test properties.</p>
+        </div>
+      </div>
+      <h3 id="BDE791C169CF8137D48DDADB37A2CE5F5DD0B14E">Passed</h3>
+      <p>public _Bool Passed()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#587">587</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test passed (i.e. no test part failed).</p>
+        </div>
+      </div>
+      <h3 id="27D41D44DA446AC3A5BDD4DBCFBE135E0432F414">Skipped</h3>
+      <p>public _Bool Skipped()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2370">2370</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test was skipped.</p>
+        </div>
+      </div>
+      <h3 id="FFB50106FFD9E851D7C8D4ADFF881AEE29086CDD">Failed</h3>
+      <p>public _Bool Failed()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2375">2375</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test failed.</p>
+        </div>
+      </div>
+      <h3 id="2AEE4AD47E08434BFA63EBFB2A9800BC7662A7B8">HasFatalFailure</h3>
+      <p>public _Bool HasFatalFailure()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2389">2389</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test fatally failed.</p>
+        </div>
+      </div>
+      <h3 id="3EB9404D8A6477EF4628AAE2196579E63CA6E1CE">HasNonfatalFailure</h3>
+      <p>public _Bool HasNonfatalFailure()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2399">2399</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the test has a non-fatal failure.</p>
+        </div>
+      </div>
+      <h3 id="5CE65CED666ABC91574FA7826AC9DA1DD2AF917D">elapsed_time</h3>
+      <p>public TimeInMillis elapsed_time()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#602">602</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the elapsed time, in milliseconds.</p>
+        </div>
+      </div>
+      <h3 id="E0DA7F5F4765F7F6421894620C398A52E30A0606">start_timestamp</h3>
+      <p>public TimeInMillis start_timestamp()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#606">606</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Gets the time of the test case start, in ms from the start of the UNIX epoch.</p>
+        </div>
+      </div>
+      <h3 id="B3E9FD46E0FF7AEA566FA9FE4A81BE7B56AFBE28">GetTestPartResult</h3>
+      <p>public const TestPartResult &amp; GetTestPartResult(int i)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2211">2211</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the i-th test part result among all the results. i can range from 0 to total_part_count() - 1. If i is not in that range, aborts the program.</p>
+        </div>
+        <div>
+          <p> Returns the i-th test part result among all the results. i can range from 0 to total_part_count() - 1. If i is not in that range, aborts the program.</p>
+        </div>
+      </div>
+      <h3 id="E54D458C2D11D18C82FF6ADDB579E6D183E54FD6">GetTestProperty</h3>
+      <p>public const TestProperty &amp; GetTestProperty(int i)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2220">2220</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the i-th test property. i can range from 0 to test_property_count() - 1. If i is not in that range, aborts the program.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#717E761D4FD9B1219F5D24CDF10ECC170A9E297D">TestResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69F32066137AD6E888A10C420E0507B6FD4B34EC">~TestResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45FAEEC54ABEB432172C25FBE0BA630C3A3596B1">total_part_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F24BE1C5ECE8C4C02C93A25AC7C36BB1AACC301">test_property_count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDE791C169CF8137D48DDADB37A2CE5F5DD0B14E">Passed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27D41D44DA446AC3A5BDD4DBCFBE135E0432F414">Skipped</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FFB50106FFD9E851D7C8D4ADFF881AEE29086CDD">Failed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2AEE4AD47E08434BFA63EBFB2A9800BC7662A7B8">HasFatalFailure</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EB9404D8A6477EF4628AAE2196579E63CA6E1CE">HasNonfatalFailure</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5CE65CED666ABC91574FA7826AC9DA1DD2AF917D">elapsed_time</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0DA7F5F4765F7F6421894620C398A52E30A0606">start_timestamp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3E9FD46E0FF7AEA566FA9FE4A81BE7B56AFBE28">GetTestPartResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E54D458C2D11D18C82FF6ADDB579E6D183E54FD6">GetTestProperty</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

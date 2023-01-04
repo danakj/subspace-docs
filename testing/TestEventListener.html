@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TestEventListener</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TestEventListener</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1093">1093</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+    </p>
+    <div>
+      <div>
+        <p> The interface for tracing execution of tests. The methods are organized in the order the corresponding events are fired.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5AFF58650AF7E9CFB72F561EAB15DDA4DF727843">~TestEventListener</h3>
+      <p>public void ~TestEventListener()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1095">1095</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <h3 id="7B28AC6AFDBDE34D971456BD4D07AE3D7FB6B49E">OnTestProgramStart</h3>
+      <p>public void OnTestProgramStart(const UnitTest &amp; unit_test)</p>
+      <div>
+        <div>
+          <p> Fired before any test activity starts.</p>
+        </div>
+      </div>
+      <h3 id="BDA39EBC12BABA663CB2213FDA5F81199935C3DE">OnTestIterationStart</h3>
+      <p>public void OnTestIterationStart(const UnitTest &amp; unit_test, int iteration)</p>
+      <div>
+        <div>
+          <p> Fired before each iteration of tests starts.  There may be more than one iteration if GTEST_FLAG(repeat) is set. iteration is the iteration index, starting from 0.</p>
+        </div>
+      </div>
+      <h3 id="381E9A2DB597B57350474BA95510308EA2D38E27">OnEnvironmentsSetUpStart</h3>
+      <p>public void OnEnvironmentsSetUpStart(const UnitTest &amp; unit_test)</p>
+      <div>
+        <div>
+          <p> Fired before environment set-up for each iteration of tests starts.</p>
+        </div>
+      </div>
+      <h3 id="4D2F3370EFD97097D26081C360602EEADA771456">OnEnvironmentsSetUpEnd</h3>
+      <p>public void OnEnvironmentsSetUpEnd(const UnitTest &amp; unit_test)</p>
+      <div>
+        <div>
+          <p> Fired after environment set-up for each iteration of tests ends.</p>
+        </div>
+      </div>
+      <h3 id="EC1C30EDE82E1336635DDC44692CECE7A580B664">OnTestSuiteStart</h3>
+      <p>public void OnTestSuiteStart(const TestSuite &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1113">1113</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Fired before the test suite starts.</p>
+        </div>
+      </div>
+      <h3 id="6F4BDC6908C9439B83831491E00014509F0EA1A4">OnTestCaseStart</h3>
+      <p>public void OnTestCaseStart(const TestCase &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1117">1117</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <h3 id="8AE19115AF593B63ADF77CB3044AF6EA31DD8C5C">OnTestStart</h3>
+      <p>public void OnTestStart(const TestInfo &amp; test_info)</p>
+      <div>
+        <div>
+          <p> Fired before the test starts.</p>
+        </div>
+      </div>
+      <h3 id="0B572E8E1F29F4F7EFC323745C451ADDE8C7EC48">OnTestPartResult</h3>
+      <p>public void OnTestPartResult(const TestPartResult &amp; test_part_result)</p>
+      <div>
+        <div>
+          <p> Fired after a failed assertion or a SUCCEED() invocation. If you want to throw an exception from this function to skip to the next TEST, it must be AssertionException defined above, or inherited from it.</p>
+        </div>
+      </div>
+      <h3 id="9FAB54E7650A596881EDCA5965374F4E2B24655B">OnTestEnd</h3>
+      <p>public void OnTestEnd(const TestInfo &amp; test_info)</p>
+      <div>
+        <div>
+          <p> Fired after the test ends.</p>
+        </div>
+      </div>
+      <h3 id="9D5F8ECC072AB8CADC94B67C5FE325D0F9A24A33">OnTestSuiteEnd</h3>
+      <p>public void OnTestSuiteEnd(const TestSuite &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1132">1132</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Fired after the test suite ends.</p>
+        </div>
+      </div>
+      <h3 id="3D8DACA74423C057D9CD5798CE2A4BF5444755D9">OnTestCaseEnd</h3>
+      <p>public void OnTestCaseEnd(const TestCase &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#1136">1136</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <h3 id="13F75F9E67FD59CCF18FB4F5916F3647C0D2CC5A">OnEnvironmentsTearDownStart</h3>
+      <p>public void OnEnvironmentsTearDownStart(const UnitTest &amp; unit_test)</p>
+      <div>
+        <div>
+          <p> Fired before environment tear-down for each iteration of tests starts.</p>
+        </div>
+      </div>
+      <h3 id="D65E72A385DF77A55DAE0F803E45667D8B81468B">OnEnvironmentsTearDownEnd</h3>
+      <p>public void OnEnvironmentsTearDownEnd(const UnitTest &amp; unit_test)</p>
+      <div>
+        <div>
+          <p> Fired after environment tear-down for each iteration of tests ends.</p>
+        </div>
+      </div>
+      <h3 id="36D3AFB4504E30191D32B3CD5961D71A00691364">OnTestIterationEnd</h3>
+      <p>public void OnTestIterationEnd(const UnitTest &amp; unit_test, int iteration)</p>
+      <div>
+        <div>
+          <p> Fired after each iteration of tests finishes.</p>
+        </div>
+      </div>
+      <h3 id="413E14E999C9D2E9163CA44F78590784F9DD7B7C">OnTestProgramEnd</h3>
+      <p>public void OnTestProgramEnd(const UnitTest &amp; unit_test)</p>
+      <div>
+        <div>
+          <p> Fired after all test activities have ended.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5AFF58650AF7E9CFB72F561EAB15DDA4DF727843">~TestEventListener</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B28AC6AFDBDE34D971456BD4D07AE3D7FB6B49E">OnTestProgramStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BDA39EBC12BABA663CB2213FDA5F81199935C3DE">OnTestIterationStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#381E9A2DB597B57350474BA95510308EA2D38E27">OnEnvironmentsSetUpStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D2F3370EFD97097D26081C360602EEADA771456">OnEnvironmentsSetUpEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EC1C30EDE82E1336635DDC44692CECE7A580B664">OnTestSuiteStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F4BDC6908C9439B83831491E00014509F0EA1A4">OnTestCaseStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AE19115AF593B63ADF77CB3044AF6EA31DD8C5C">OnTestStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B572E8E1F29F4F7EFC323745C451ADDE8C7EC48">OnTestPartResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FAB54E7650A596881EDCA5965374F4E2B24655B">OnTestEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D5F8ECC072AB8CADC94B67C5FE325D0F9A24A33">OnTestSuiteEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D8DACA74423C057D9CD5798CE2A4BF5444755D9">OnTestCaseEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13F75F9E67FD59CCF18FB4F5916F3647C0D2CC5A">OnEnvironmentsTearDownStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D65E72A385DF77A55DAE0F803E45667D8B81468B">OnEnvironmentsTearDownEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#36D3AFB4504E30191D32B3CD5961D71A00691364">OnTestIterationEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#413E14E999C9D2E9163CA44F78590784F9DD7B7C">OnTestProgramEnd</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class IdentifierInfoLookup</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class IdentifierInfoLookup</h1>
+    <p>Defined at line 535 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+    <div>
+      <div>
+        <p> Provides lookups to, and iteration over, IdentiferInfo objects.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8963D58643ED25A2F97AFE674C78866B0DE16011">~IdentifierInfoLookup</h3>
+      <p>public void ~IdentifierInfoLookup()</p>
+      <h3 id="B75640363E21A16755797A0DB0B932128C6F06EE">get</h3>
+      <p>
+        public IdentifierInfo * get(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <div>
+        <div>
+          <p> Return the IdentifierInfo for the specified named identifier.</p>
+          <p> Unlike the version in IdentifierTable, this returns a pointer instead of a reference.  If the pointer is null then the IdentifierInfo cannot be found.</p>
+        </div>
+      </div>
+      <h3 id="5EE66EF3F42FA81E21F0E5813C8BE573D2C9AA69">getIdentifiers</h3>
+      <p>public IdentifierIterator * getIdentifiers()</p>
+      <div>
+        <div>
+          <p> Retrieve an iterator into the set of all identifiers known to this identifier lookup source.</p>
+          <p> This routine provides access to all of the identifiers known to the identifier lookup, allowing access to the contents of the identifiers without introducing the overhead of constructing IdentifierInfo objects for each.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8963D58643ED25A2F97AFE674C78866B0DE16011">~IdentifierInfoLookup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B75640363E21A16755797A0DB0B932128C6F06EE">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5EE66EF3F42FA81E21F0E5813C8BE573D2C9AA69">getIdentifiers</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

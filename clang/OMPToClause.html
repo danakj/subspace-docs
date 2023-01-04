@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPToClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPToClause</h1>
+    <p>Defined at line 6734 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents clause &apos;to&apos; in the &apos;#pragma omp ...&apos; directives.</p>
+        <p> In this example directive &apos;#pragma omp target update&apos; has clause &apos;to&apos; with the variables &apos;a&apos; and &apos;b&apos;.</p>
+      </div>
+    </div>
+    <p>Inherits from OMPMappableExprListClause&lt;OMPToClause&gt;, llvm::TrailingObjects&lt;OMPToClause, Expr *, ValueDecl *, unsigned int, OMPClauseMappableExprCommon::MappableComponent&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D40247FA3476D50BCCA05263F7EFF011D8938160">Create</h3>
+      <p>
+        public OMPToClause * Create(const ASTContext &amp; C, const OMPVarListLocTy &amp; Locs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Vars, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Declarations, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         ComponentLists, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         UDMapperRefs, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         MotionModifiers, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         MotionModifiersLoc, 
+        <a href="NestedNameSpecifierLoc.html">NestedNameSpecifierLoc</a>
+         UDMQualifierLoc, 
+        <a href="DeclarationNameInfo.html">DeclarationNameInfo</a>
+         MapperId)
+      </p>
+      <div>
+        <div>
+          <p> Creates clause with a list of variables </p>
+        </div>
+      </div>
+      <h3 id="07FE89525F8C975C15749C6474B08F3A6E4D26D2">CreateEmpty</h3>
+      <p>public OMPToClause * CreateEmpty(const ASTContext &amp; C, const OMPMappableExprListSizeTy &amp; Sizes)</p>
+      <div>
+        <div>
+          <p> Creates an empty clause with the place for  variables.</p>
+        </div>
+      </div>
+      <h3 id="B56E47FFAC75F0EFC0ADF2B1C7B89A009D34824E">getMotionModifier</h3>
+      <p>
+        public 
+        <a href="OpenMPMotionModifierKind.html">OpenMPMotionModifierKind</a>
+         getMotionModifier(unsigned int Cnt)
+      </p>
+      <p>Defined at line 6875 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fetches the motion-modifier at &apos;Cnt&apos; index of array of modifiers.</p>
+        </div>
+      </div>
+      <h3 id="1F0F4FA9F96A346BFED8B920D21FD0B2C66118F4">getMotionModifierLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getMotionModifierLoc(unsigned int Cnt)
+      </p>
+      <p>Defined at line 6885 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fetches the motion-modifier location at &apos;Cnt&apos; index of array of modifiers&apos; locations.</p>
+        </div>
+      </div>
+      <h3 id="AA37316DAFE47CA2B0DD18152BFF513FF006E881">getMotionModifiers</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getMotionModifiers()
+      </p>
+      <p>Defined at line 6892 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fetches ArrayRef of motion-modifiers.</p>
+        </div>
+      </div>
+      <h3 id="509E05627EB1C1BACE5CDA9B0109FABDCF1F3C87">getMotionModifiersLoc</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getMotionModifiersLoc()
+      </p>
+      <p>Defined at line 6897 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Fetches ArrayRef of location of motion-modifiers.</p>
+        </div>
+      </div>
+      <h3 id="255DC05D3F5B661485E4E9C0E2B811357ACDDE74">getColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getColonLoc()
+      </p>
+      <p>Defined at line 6902 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get colon location.</p>
+        </div>
+      </div>
+      <h3 id="6B0026656F35E4846188E58A1C9678EC5CC079B3">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 6904 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="3E312DF7551E6250047D9A3946D03ACB12E43512">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 6909 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="9D41C34E6DE1A03B58B3825619B90DAD40B9E903">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 6914 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="81B2AFAC0EB0487E7F412FD0E6433CF735734097">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 6917 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="154B7E3A7B42804AF410B972ADCB30974E065961">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 6921 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D40247FA3476D50BCCA05263F7EFF011D8938160">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#07FE89525F8C975C15749C6474B08F3A6E4D26D2">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B56E47FFAC75F0EFC0ADF2B1C7B89A009D34824E">getMotionModifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1F0F4FA9F96A346BFED8B920D21FD0B2C66118F4">getMotionModifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA37316DAFE47CA2B0DD18152BFF513FF006E881">getMotionModifiers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#509E05627EB1C1BACE5CDA9B0109FABDCF1F3C87">getMotionModifiersLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#255DC05D3F5B661485E4E9C0E2B811357ACDDE74">getColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B0026656F35E4846188E58A1C9678EC5CC079B3">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3E312DF7551E6250047D9A3946D03ACB12E43512">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D41C34E6DE1A03B58B3825619B90DAD40B9E903">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81B2AFAC0EB0487E7F412FD0E6433CF735734097">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#154B7E3A7B42804AF410B972ADCB30974E065961">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

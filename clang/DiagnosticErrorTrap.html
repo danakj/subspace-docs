@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DiagnosticErrorTrap</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DiagnosticErrorTrap</h1>
+    <p>Defined at line 1072 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+    <div>
+      <div>
+        <p> RAII class that determines when any errors have occurred between the time the instance was created and the time it was queried.</p>
+        <p> Note that you almost certainly do not want to use this. It&apos;s usually meaningless to ask whether a particular scope triggered an error message, because error messages outside that scope can mark things invalid (or cause us to reach an error limit), which can suppress errors within that scope.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="373ED45978D879896C4048F8807FEE8B65819600">DiagnosticErrorTrap</h3>
+      <p>public void DiagnosticErrorTrap(DiagnosticsEngine &amp; Diag)</p>
+      <p>Defined at line 1078 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="FA8B79CE182BE9B8A19F80B859C2850D8913A27D">hasErrorOccurred</h3>
+      <p>public _Bool hasErrorOccurred()</p>
+      <p>Defined at line 1083 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Determine whether any errors have occurred since this object instance was created.</p>
+        </div>
+      </div>
+      <h3 id="73F58ACD5C8F56B4F9CE960675223DC6C45BFC41">hasUnrecoverableErrorOccurred</h3>
+      <p>public _Bool hasUnrecoverableErrorOccurred()</p>
+      <p>Defined at line 1089 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Determine whether any unrecoverable errors have occurred since this object instance was created.</p>
+        </div>
+      </div>
+      <h3 id="44CE090816F41241A5E67E8637E256F870CFF827">reset</h3>
+      <p>public void reset()</p>
+      <p>Defined at line 1094 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Set to initial state of &quot;no errors occurred&quot;.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#373ED45978D879896C4048F8807FEE8B65819600">DiagnosticErrorTrap</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA8B79CE182BE9B8A19F80B859C2850D8913A27D">hasErrorOccurred</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73F58ACD5C8F56B4F9CE960675223DC6C45BFC41">hasUnrecoverableErrorOccurred</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44CE090816F41241A5E67E8637E256F870CFF827">reset</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DeclarationName</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DeclarationName</h1>
+    <p>Defined at line 144 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+    <div>
+      <div>
+        <p> The name of a declaration. In the common case, this just stores an IdentifierInfo pointer to a normal name. However, it also provides encodings for Objective-C selectors (optimizing zero- and one-argument selectors, which make up 78% percent of all selectors in Cocoa.h), special C++ names for constructors, destructors, and conversion functions, and C++ overloaded operators.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3660DCA974323AF562D26D4BD85CA7C6C9F22A7B">DeclarationName</h3>
+      <p>public void DeclarationName()</p>
+      <p>Defined at line 357 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Construct an empty declaration name.</p>
+        </div>
+      </div>
+      <h3 id="6AA55A5E887AA8168A10D24B9C3AAAEFDD200D11">DeclarationName</h3>
+      <p>public void DeclarationName(const IdentifierInfo * II)</p>
+      <p>Defined at line 360 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Construct a declaration name from an IdentifierInfo *.</p>
+        </div>
+      </div>
+      <h3 id="491F0E214430C85EC1C54D8886FE93A6732F4E0A">DeclarationName</h3>
+      <p>
+        public void DeclarationName(
+        <a href="Selector.html">Selector</a>
+         Sel)
+      </p>
+      <p>Defined at line 365 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Construct a declaration name from an Objective-C selector.</p>
+        </div>
+      </div>
+      <h3 id="504D501DA9986019BEC4E089136256ADEC8F10AC">getUsingDirectiveName</h3>
+      <p>
+        public 
+        <a href="DeclarationName.html">DeclarationName</a>
+         getUsingDirectiveName()
+      </p>
+      <p>Defined at line 368 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Returns the name for all C++ using-directives.</p>
+        </div>
+      </div>
+      <h3 id="97E8CBE6521B7BEE2EB3B8C960E5DDCA8086AE96">operator bool</h3>
+      <p>public _Bool operator bool()</p>
+      <p>Defined at line 376 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Evaluates true when this declaration name is non-empty.</p>
+        </div>
+      </div>
+      <h3 id="1C8B737B5B41C122D3D39CFE1A500FB95795C8DB">isEmpty</h3>
+      <p>public _Bool isEmpty()</p>
+      <p>Defined at line 381 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Evaluates true when this declaration name is empty.</p>
+        </div>
+      </div>
+      <h3 id="6853D8E3795B01A4546C7DDE990100F19D80F80A">isIdentifier</h3>
+      <p>public _Bool isIdentifier()</p>
+      <p>Defined at line 384 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Predicate functions for querying what type of name this is.</p>
+        </div>
+      </div>
+      <h3 id="94A5CEB29C82CA7F03548CDD00EDB8ECBEB71076">isObjCZeroArgSelector</h3>
+      <p>public _Bool isObjCZeroArgSelector()</p>
+      <p>Defined at line 385 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <h3 id="651175C9B22D7B4C271B11AC7ED9369758D01F4F">isObjCOneArgSelector</h3>
+      <p>public _Bool isObjCOneArgSelector()</p>
+      <p>Defined at line 388 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <h3 id="C07402B6CBE7A647484245ED1E994F431E6A10D5">getNameKind</h3>
+      <p>
+        public 
+        <a href="../clang/DeclarationName/NameKind.html">NameKind</a>
+         getNameKind()
+      </p>
+      <p>Defined at line 393 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Determine what kind of name this is.</p>
+        </div>
+      </div>
+      <h3 id="F971F858180F9BFFF57C40E5245CFB6CF6E6D940">isDependentName</h3>
+      <p>public _Bool isDependentName()</p>
+      <div>
+        <div>
+          <p> Determines whether the name itself is dependent, e.g., because it involves a C++ type that is itself dependent.</p>
+          <p> Note that this does not capture all of the notions of &quot;dependent name&quot;, because an identifier can be a dependent name if it is used as the callee in a call expression with dependent arguments.</p>
+        </div>
+      </div>
+      <h3 id="3B46EE6C683C04AF6AC91BCAF6AE90669473D615">getAsString</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getAsString()
+      </p>
+      <div>
+        <div>
+          <p> Retrieve the human-readable string for this name.</p>
+        </div>
+      </div>
+      <h3 id="841EE33641373D9756FC290C4E741438ACB8FCA0">getAsIdentifierInfo</h3>
+      <p>public IdentifierInfo * getAsIdentifierInfo()</p>
+      <p>Defined at line 419 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Retrieve the IdentifierInfo * stored in this declaration name, or null if this declaration name isn&apos;t a simple identifier.</p>
+        </div>
+      </div>
+      <h3 id="7A5D6FCE2FE86F872A68E7112FB3B4151C9156A5">getAsOpaqueInteger</h3>
+      <p>public uintptr_t getAsOpaqueInteger()</p>
+      <p>Defined at line 426 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Get the representation of this declaration name as an opaque integer.</p>
+        </div>
+      </div>
+      <h3 id="233DF49FABCADF9E00608F3EB008BF2A07B1A80B">getAsOpaquePtr</h3>
+      <p>public void * getAsOpaquePtr()</p>
+      <p>Defined at line 429 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Get the representation of this declaration name as an opaque pointer.</p>
+        </div>
+      </div>
+      <h3 id="AC7DEABBF57CCCA6C7BF3C54AEDF9501F092C19A">getFromOpaquePtr</h3>
+      <p>
+        public 
+        <a href="DeclarationName.html">DeclarationName</a>
+         getFromOpaquePtr(void * P)
+      </p>
+      <p>Defined at line 432 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Get a declaration name from an opaque pointer returned by getAsOpaquePtr.</p>
+        </div>
+      </div>
+      <h3 id="F1B592231561B7D9C28482A6DF4F9F568E08B4C0">getFromOpaqueInteger</h3>
+      <p>
+        public 
+        <a href="DeclarationName.html">DeclarationName</a>
+         getFromOpaqueInteger(uintptr_t P)
+      </p>
+      <p>Defined at line 440 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Get a declaration name from an opaque integer returned by getAsOpaqueInteger.</p>
+        </div>
+      </div>
+      <h3 id="EF6F7D3D57C27F1567ADA47DB4F46520AD17CADD">getCXXNameType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getCXXNameType()
+      </p>
+      <p>Defined at line 448 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> If this name is one of the C++ names (of a constructor, destructor, or conversion function), return the type associated with that name.</p>
+        </div>
+      </div>
+      <h3 id="EAAD30CCBE1741FD3801006CDD76870F3E957B0C">getCXXDeductionGuideTemplate</h3>
+      <p>public TemplateDecl * getCXXDeductionGuideTemplate()</p>
+      <p>Defined at line 460 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> If this name is the name of a C++ deduction guide, return the template associated with that name.</p>
+        </div>
+      </div>
+      <h3 id="E7CD8274C3CC6D762818E8E25659EA3D1DEF070E">getCXXOverloadedOperator</h3>
+      <p>
+        public 
+        <a href="OverloadedOperatorKind.html">OverloadedOperatorKind</a>
+         getCXXOverloadedOperator()
+      </p>
+      <p>Defined at line 471 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> If this name is the name of an overloadable operator in C++ (e.g.,  retrieve the kind of overloaded operator.</p>
+        </div>
+      </div>
+      <h3 id="49253DCDAC520745E863548058E87779C97EA87E">getCXXLiteralIdentifier</h3>
+      <p>public IdentifierInfo * getCXXLiteralIdentifier()</p>
+      <p>Defined at line 481 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> If this name is the name of a literal operator, retrieve the identifier associated with it.</p>
+        </div>
+      </div>
+      <h3 id="5ACE4B76C5B9991B6C3A755145BF4D7D1EF5393D">getObjCSelector</h3>
+      <p>
+        public 
+        <a href="Selector.html">Selector</a>
+         getObjCSelector()
+      </p>
+      <p>Defined at line 490 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Get the Objective-C selector stored in this declaration name.</p>
+        </div>
+      </div>
+      <h3 id="8CD47B7F42352DCA1636D842871F1D4E78E4B195">getFETokenInfo</h3>
+      <p>public void * getFETokenInfo()</p>
+      <p>Defined at line 501 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> Get and set FETokenInfo. The language front-end is allowed to associate arbitrary metadata with some kinds of declaration names, including normal identifiers and C++ constructors, destructors, and conversion functions.</p>
+        </div>
+      </div>
+      <h3 id="BD1D73BCF8A1AF92D6C2646B1D154FD5E778F863">setFETokenInfo</h3>
+      <p>public void setFETokenInfo(void * T)</p>
+      <p>Defined at line 508 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <h3 id="E860CD4C058125633F18819868A607A4C6ECEC64">getEmptyMarker</h3>
+      <p>
+        public 
+        <a href="DeclarationName.html">DeclarationName</a>
+         getEmptyMarker()
+      </p>
+      <p>Defined at line 526 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <h3 id="27F51C12ABD61E59F74EE59A9402C2F8F52DDA44">getTombstoneMarker</h3>
+      <p>
+        public 
+        <a href="DeclarationName.html">DeclarationName</a>
+         getTombstoneMarker()
+      </p>
+      <p>Defined at line 532 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <h3 id="5C696434CC700747A3021133C1D8DFE7263942F9">compare</h3>
+      <p>
+        public int compare(
+        <a href="DeclarationName.html">DeclarationName</a>
+         LHS, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         RHS)
+      </p>
+      <h3 id="5FF7ED653B2683BF2D22DEE492E5ACEFC7428E70">print</h3>
+      <p>public void print(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="5E527A7030EE9B79EC6E2B52740B6A42B9591ABC">dump</h3>
+      <p>public void dump()</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="B4D25855CD7A82C9FFD706003C58AAF743C81D2A">enum NameKind</h3>
+      <ul>
+        <li>Identifier</li>
+        <li>ObjCZeroArgSelector</li>
+        <li>ObjCOneArgSelector</li>
+        <li>CXXConstructorName</li>
+        <li>CXXDestructorName</li>
+        <li>CXXConversionFunctionName</li>
+        <li>CXXOperatorName</li>
+        <li>CXXDeductionGuideName</li>
+        <li>CXXLiteralOperatorName</li>
+        <li>CXXUsingDirective</li>
+        <li>ObjCMultiArgSelector</li>
+      </ul>
+      <p>Defined at line 208 of file /usr/lib/llvm-16/include/clang/AST/DeclarationName.h</p>
+      <div>
+        <div>
+          <p> The kind of the name stored in this DeclarationName. The first 7 enumeration values are stored inline and correspond to frequently used kinds. The rest is stored in DeclarationNameExtra and correspond to infrequently used kinds.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3660DCA974323AF562D26D4BD85CA7C6C9F22A7B">DeclarationName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AA55A5E887AA8168A10D24B9C3AAAEFDD200D11">DeclarationName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#491F0E214430C85EC1C54D8886FE93A6732F4E0A">DeclarationName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#504D501DA9986019BEC4E089136256ADEC8F10AC">getUsingDirectiveName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97E8CBE6521B7BEE2EB3B8C960E5DDCA8086AE96">operator bool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C8B737B5B41C122D3D39CFE1A500FB95795C8DB">isEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6853D8E3795B01A4546C7DDE990100F19D80F80A">isIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#94A5CEB29C82CA7F03548CDD00EDB8ECBEB71076">isObjCZeroArgSelector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#651175C9B22D7B4C271B11AC7ED9369758D01F4F">isObjCOneArgSelector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C07402B6CBE7A647484245ED1E994F431E6A10D5">getNameKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F971F858180F9BFFF57C40E5245CFB6CF6E6D940">isDependentName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B46EE6C683C04AF6AC91BCAF6AE90669473D615">getAsString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#841EE33641373D9756FC290C4E741438ACB8FCA0">getAsIdentifierInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A5D6FCE2FE86F872A68E7112FB3B4151C9156A5">getAsOpaqueInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#233DF49FABCADF9E00608F3EB008BF2A07B1A80B">getAsOpaquePtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC7DEABBF57CCCA6C7BF3C54AEDF9501F092C19A">getFromOpaquePtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1B592231561B7D9C28482A6DF4F9F568E08B4C0">getFromOpaqueInteger</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF6F7D3D57C27F1567ADA47DB4F46520AD17CADD">getCXXNameType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EAAD30CCBE1741FD3801006CDD76870F3E957B0C">getCXXDeductionGuideTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E7CD8274C3CC6D762818E8E25659EA3D1DEF070E">getCXXOverloadedOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49253DCDAC520745E863548058E87779C97EA87E">getCXXLiteralIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5ACE4B76C5B9991B6C3A755145BF4D7D1EF5393D">getObjCSelector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CD47B7F42352DCA1636D842871F1D4E78E4B195">getFETokenInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD1D73BCF8A1AF92D6C2646B1D154FD5E778F863">setFETokenInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E860CD4C058125633F18819868A607A4C6ECEC64">getEmptyMarker</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27F51C12ABD61E59F74EE59A9402C2F8F52DDA44">getTombstoneMarker</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5C696434CC700747A3021133C1D8DFE7263942F9">compare</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FF7ED653B2683BF2D22DEE492E5ACEFC7428E70">print</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E527A7030EE9B79EC6E2B52740B6A42B9591ABC">dump</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B4D25855CD7A82C9FFD706003C58AAF743C81D2A">NameKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

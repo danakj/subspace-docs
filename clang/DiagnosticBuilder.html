@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DiagnosticBuilder</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DiagnosticBuilder</h1>
+    <p>Defined at line 1266 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+    <div>
+      <div>
+        <p> A little helper class used to produce diagnostics.</p>
+        <p> This is constructed by the DiagnosticsEngine::Report method, and allows insertion of extra information (arguments and source ranges) into the currently &quot;in flight&quot; diagnostic.  When the temporary for the builder is destroyed, the diagnostic is issued.</p>
+        <p> Note that many of these will be created as temporary objects (many call sites), so we want them to be small and we never want their address taken. This ensures that compilers with somewhat reasonable optimizers will promote the common fields to registers, eliminating increments of the NumArgs field, for example.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="StreamingDiagnostic.html">StreamingDiagnostic</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B68D9B569F6B5C299E727F82A43B215899BDB089">Clear</h3>
+      <p>protected void Clear()</p>
+      <p>Defined at line 1298 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Clear out the current diagnostic.</p>
+        </div>
+      </div>
+      <h3 id="4152BCAB33FCF70A95FEF0AF0446866AEBED97A5">isActive</h3>
+      <p>protected _Bool isActive()</p>
+      <p>Defined at line 1305 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Determine whether this diagnostic is still active.</p>
+        </div>
+      </div>
+      <h3 id="14593E2BF5266C78B7ABA07AC413A1B6037E56BC">Emit</h3>
+      <p>protected _Bool Emit()</p>
+      <p>Defined at line 1314 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Force the diagnostic builder to emit the diagnostic now.</p>
+          <p> Once this function has been called, the DiagnosticBuilder object should not be used again before it is destroyed.</p>
+        </div>
+      </div>
+      <h3 id="8F7B893ADB461DA7D1F5C0484CE221413F5DD1F5">DiagnosticBuilder</h3>
+      <p>public void DiagnosticBuilder(const DiagnosticBuilder &amp; D)</p>
+      <p>Defined at line 1331 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Copy constructor.  When copied, this &quot;takes&quot; the diagnostic info from the input and neuters it.</p>
+        </div>
+      </div>
+      <h3 id="DB7E8DFE12A16BBD6F7F952E740D35CABD0ACA16">operator&lt;&lt;</h3>
+      <p>public const DiagnosticBuilder &amp; operator&lt;&lt;(const T &amp; V)</p>
+      <p>Defined at line 1339 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="1C924CF76D8C9A0A9E4C0890A7A3071271D70F20">operator&lt;&lt;</h3>
+      <p>public const DiagnosticBuilder &amp; operator&lt;&lt;(T &amp;&amp; V)</p>
+      <p>Defined at line 1351 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> It is necessary to limit this to rvalue reference to avoid calling this function with a bitfield lvalue argument since non-const reference to bitfield is not allowed.</p>
+        </div>
+      </div>
+      <h3 id="264EA11EABD04B18FF13892E7E6B8801B89FF659">operator=</h3>
+      <p>public DiagnosticBuilder &amp; operator=(const DiagnosticBuilder &amp; )</p>
+      <p>Defined at line 1358 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="A6FD3ED40FB2A64D26D0997EC9C28C50F82D7650">~DiagnosticBuilder</h3>
+      <p>public void ~DiagnosticBuilder()</p>
+      <p>Defined at line 1361 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Emits the diagnostic.</p>
+        </div>
+      </div>
+      <h3 id="3582F1571048472B488EC6AA41C1323A9225B773">setForceEmit</h3>
+      <p>public const DiagnosticBuilder &amp; setForceEmit()</p>
+      <p>Defined at line 1364 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Forces the diagnostic to be emitted.</p>
+        </div>
+      </div>
+      <h3 id="76365F23A7229F1B80887C9E5DE267B0999DA177">addFlagValue</h3>
+      <p>
+        public void addFlagValue(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         V)
+      </p>
+      <p>Defined at line 1369 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B68D9B569F6B5C299E727F82A43B215899BDB089">Clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4152BCAB33FCF70A95FEF0AF0446866AEBED97A5">isActive</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14593E2BF5266C78B7ABA07AC413A1B6037E56BC">Emit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F7B893ADB461DA7D1F5C0484CE221413F5DD1F5">DiagnosticBuilder</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB7E8DFE12A16BBD6F7F952E740D35CABD0ACA16">operator&lt;&lt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C924CF76D8C9A0A9E4C0890A7A3071271D70F20">operator&lt;&lt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#264EA11EABD04B18FF13892E7E6B8801B89FF659">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6FD3ED40FB2A64D26D0997EC9C28C50F82D7650">~DiagnosticBuilder</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3582F1571048472B488EC6AA41C1323A9225B773">setForceEmit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76365F23A7229F1B80887C9E5DE267B0999DA177">addFlagValue</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

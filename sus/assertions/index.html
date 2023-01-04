@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace assertions</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/assertions" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace assertions</h1>
+    <h2 id="Namespaces">Namespaces</h2>
+    <ul>
+      <li>
+        <a href="__private/index.html">__private</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5CAE7A8DB1A59E83495F1F530D6D0D8579E25FCC">panic</h3>
+      <p>void panic()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/panic.h#52">52</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/panic.h">panic.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Terminate the program.</p>
+          <p> The default behaviour of this function is to abort(). The behaviour of this function can be overridden by defining a `SUS_PROVIDE_PANIC_HANDLER()` macro when compiling the library.</p>
+          <p> # Safety If `SUS_PROVIDE_PANIC_HANDLER()` is defined, the macro _must_ not return of Undefined Behaviour will result.</p>
+        </div>
+      </div>
+      <h3 id="DAB4944D20228611A774CF51652BDFB3D9293F4C">panic_with_message</h3>
+      <p>void panic_with_message(const char &amp; msg)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/panic.h#72">72</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/panic.h">panic.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Terminate the program, after printing a message.</p>
+          <p> The default behaviour of this function is to print the message to stderr. The behaviour of this function can be overridden by defining a SUS_PROVIDE_PRINT_PANIC_MESSAGE_HANDLER() macro when compiling the library.</p>
+          <p> After printing the message, the function will `panic()`.</p>
+        </div>
+      </div>
+      <h3 id="555C686157D1717052A487EA562BB7D116FF84C6">check</h3>
+      <p>void check(_Bool cond)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/check.h#24">24</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/check.h">check.h</a>
+      </p>
+      <h3 id="06E5C6588E1129D8E0EF86E50519FFD18E698690">check_with_message</h3>
+      <p>void check_with_message(_Bool cond, const char &amp; msg)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/check.h#29">29</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/check.h">check.h</a>
+      </p>
+      <h3 id="C79F0AED34E72B919FAFD4E2AF297053CEB51DF7">unreachable</h3>
+      <p>void unreachable()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/unreachable.h#24">24</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/unreachable.h">unreachable.h</a>
+      </p>
+      <h3 id="EEE77D1C388C49AD557D71335B86F4A642891282">unreachable_unchecked</h3>
+      <p>
+        void unreachable_unchecked(
+        <a href="../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         )
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/unreachable.h#26">26</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/unreachable.h">unreachable.h</a>
+      </p>
+      <h3 id="217DFCDB5A1A528AD50F59AEB2B927732F65EC2E">is_big_endian</h3>
+      <p>_Bool is_big_endian()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/endian.h#21">21</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/endian.h">endian.h</a>
+      </p>
+      <h3 id="CC8867429E1B478E79DBBDEAF37A273AE821E0E9">is_little_endian</h3>
+      <p>_Bool is_little_endian()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/endian.h#45">45</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./assertions/endian.h">endian.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Namespaces">Namespaces</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5CAE7A8DB1A59E83495F1F530D6D0D8579E25FCC">panic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAB4944D20228611A774CF51652BDFB3D9293F4C">panic_with_message</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#555C686157D1717052A487EA562BB7D116FF84C6">check</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#06E5C6588E1129D8E0EF86E50519FFD18E698690">check_with_message</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C79F0AED34E72B919FAFD4E2AF297053CEB51DF7">unreachable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EEE77D1C388C49AD557D71335B86F4A642891282">unreachable_unchecked</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#217DFCDB5A1A528AD50F59AEB2B927732F65EC2E">is_big_endian</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC8867429E1B478E79DBBDEAF37A273AE821E0E9">is_little_endian</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

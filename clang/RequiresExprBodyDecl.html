@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class RequiresExprBodyDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class RequiresExprBodyDecl</h1>
+    <p>Defined at line 1973 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> This decl exists merely to serve as the DeclContext for the local parameters of the requires expression as well as other declarations inside it.</p>
+        <p> In this example, a RequiresExpr object will be generated for the expression, and a RequiresExprBodyDecl will be created to hold the parameter t and the template argument list imposed by the compound requirement.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Decl.html">Decl</a>
+      , 
+      <a href="DeclContext.html">DeclContext</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="1F4E4C20372551C6E0D522332AFD2E7388219D9A">Create</h3>
+      <p>
+        public RequiresExprBodyDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc)
+      </p>
+      <h3 id="C358E6C087CE331A4181C559E0F4406A08B6A088">CreateDeserialized</h3>
+      <p>public RequiresExprBodyDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <h3 id="5CACA5CB58885EB5DBD20282FCADF278F57A22D1">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 1987 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="9D18B2E7B9A54224CA16AC47D1E67AA4006D09F6">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 1988 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#1F4E4C20372551C6E0D522332AFD2E7388219D9A">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C358E6C087CE331A4181C559E0F4406A08B6A088">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5CACA5CB58885EB5DBD20282FCADF278F57A22D1">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D18B2E7B9A54224CA16AC47D1E67AA4006D09F6">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

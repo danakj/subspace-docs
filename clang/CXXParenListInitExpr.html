@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXParenListInitExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXParenListInitExpr</h1>
+    <p>Defined at line 4744 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a list-initialization with parenthesis.</p>
+        <p> As per P0960R3, this is a C++20 feature that allows aggregate to be initialized with a parenthesized list of values: ``` struct A {   int a;   double b; };</p>
+        <p> void foo() {   A a1(0);        // Well-formed in C++20   A a2(1.5, 1.0); // Well-formed in C++20 } ``` It has some sort of similiarity to braced list-initialization, with some differences such as it allows narrowing conversion whilst braced list-initialization doesn&apos;t. ``` struct A {   char a; }; void foo() {   A a(1.5); // Well-formed in C++20   A b{1.5}; // Ill-formed ! } ```</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;CXXParenListInitExpr, Expr *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5D269E7F1E7DC6FDE6E43CF7A782656BB7A77B4A">Create</h3>
+      <p>
+        public CXXParenListInitExpr * Create(ASTContext &amp; C, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, 
+        <a href="QualType.html">QualType</a>
+         T, unsigned int NumUserSpecifiedExprs, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         InitLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParenLoc)
+      </p>
+      <h3 id="E6BE292A249C7BD0AE5E3888C8D7270B7A6A0E7A">CreateEmpty</h3>
+      <p>
+        public CXXParenListInitExpr * CreateEmpty(ASTContext &amp; C, unsigned int numExprs, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <h3 id="BADCC6917CAFD230130AE9B22830FA5307B6CCF8">CXXParenListInitExpr</h3>
+      <p>
+        public void CXXParenListInitExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty, unsigned int NumExprs)
+      </p>
+      <p>Defined at line 4784 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B851662D3337BD4018F41FBAA421A8042A4E275D">updateDependence</h3>
+      <p>public void updateDependence()</p>
+      <p>Defined at line 4788 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="F07F6C4DB5F346E9BAA3FEFAA0BEC64C74A113BC">getInitExprs</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getInitExprs()
+      </p>
+      <p>Defined at line 4790 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="692AAD18670F41503069059B9119112C674151C4">getInitExprs</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getInitExprs()
+      </p>
+      <p>Defined at line 4794 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="34996CACA6F6B90BB0F2557A6DB8AE0659BEAFD5">getUserSpecifiedInitExprs</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getUserSpecifiedInitExprs()
+      </p>
+      <p>Defined at line 4798 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="2534970F46AF9DE54FD68189A968825D31339ACE">getUserSpecifiedInitExprs</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getUserSpecifiedInitExprs()
+      </p>
+      <p>Defined at line 4803 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="A58854DA7670C9B6525212DDC7D8EBC9E94C8D7E">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 4808 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="8C118536F4AB7E89859E85AEF5CEB64A3EBD46AF">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 4810 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="722A66F92A4D756C2201E7AD30BD59F1FD4733DC">getInitLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getInitLoc()
+      </p>
+      <p>Defined at line 4812 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="1B754FE3672AA3119BC581025585CE296661BE54">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 4814 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="1ACEA0F0868C771C8AC9AD95B5775CBF7EE4F6F8">setArrayFiller</h3>
+      <p>public void setArrayFiller(Expr * E)</p>
+      <p>Defined at line 4818 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="989F6DDEBD0EC12988970EFA443C7CA037C350BC">getArrayFiller</h3>
+      <p>public Expr * getArrayFiller()</p>
+      <p>Defined at line 4820 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="CA3DC49AF46C602EC65BD66714681631F93FA964">getArrayFiller</h3>
+      <p>public const Expr * getArrayFiller()</p>
+      <p>Defined at line 4822 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="1815513F57DEDA176E5E1A3BDACC1DDFD8376D34">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4824 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="A2DD72FF438DB7B0D78B3C4F35E63B0A03721586">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4829 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="37DEF7C1435FCF0891837CE42529AF9D42E3AEF7">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 4835 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5D269E7F1E7DC6FDE6E43CF7A782656BB7A77B4A">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6BE292A249C7BD0AE5E3888C8D7270B7A6A0E7A">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BADCC6917CAFD230130AE9B22830FA5307B6CCF8">CXXParenListInitExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B851662D3337BD4018F41FBAA421A8042A4E275D">updateDependence</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F07F6C4DB5F346E9BAA3FEFAA0BEC64C74A113BC">getInitExprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#692AAD18670F41503069059B9119112C674151C4">getInitExprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#34996CACA6F6B90BB0F2557A6DB8AE0659BEAFD5">getUserSpecifiedInitExprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2534970F46AF9DE54FD68189A968825D31339ACE">getUserSpecifiedInitExprs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A58854DA7670C9B6525212DDC7D8EBC9E94C8D7E">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8C118536F4AB7E89859E85AEF5CEB64A3EBD46AF">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#722A66F92A4D756C2201E7AD30BD59F1FD4733DC">getInitLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B754FE3672AA3119BC581025585CE296661BE54">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1ACEA0F0868C771C8AC9AD95B5775CBF7EE4F6F8">setArrayFiller</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#989F6DDEBD0EC12988970EFA443C7CA037C350BC">getArrayFiller</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA3DC49AF46C602EC65BD66714681631F93FA964">getArrayFiller</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1815513F57DEDA176E5E1A3BDACC1DDFD8376D34">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2DD72FF438DB7B0D78B3C4F35E63B0A03721586">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37DEF7C1435FCF0891837CE42529AF9D42E3AEF7">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

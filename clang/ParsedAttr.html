@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ParsedAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ParsedAttr</h1>
+    <p>Defined at line 233 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+    <div>
+      <div>
+        <p> ParsedAttr - Represents a syntactic attribute.</p>
+        <p> For a GNU attribute, there are four forms of this construct:</p>
+        <p> 1: __attribute__(( const )). ParmName/Args/NumArgs will all be unused. 2: __attribute__(( mode(byte) )). ParmName used, Args/NumArgs unused. 3: __attribute__(( format(printf, 1, 2) )). ParmName/Args/NumArgs all used. 4: __attribute__(( aligned(16) )). ParmName is unused, Args/Num used.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="AttributeCommonInfo.html">AttributeCommonInfo</a>
+      , llvm::TrailingObjects&lt;ParsedAttr, ArgsUnion, detail::AvailabilityData, detail::TypeTagForDatatypeData, ParsedType, detail::PropertyData&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9EB1DBB4DFFB84E3EE05D17EBE295A4AEDCBEB31">ParsedAttr</h3>
+      <p>public void ParsedAttr(const ParsedAttr &amp; )</p>
+      <p>Defined at line 449 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="1311D4D076B3F9C86E7460139721C29644724528">ParsedAttr</h3>
+      <p>public void ParsedAttr(ParsedAttr &amp;&amp; )</p>
+      <p>Defined at line 450 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="1B12F1C2993228E1395E19A594E13EDB2FEA2EC0">operator=</h3>
+      <p>public ParsedAttr &amp; operator=(const ParsedAttr &amp; )</p>
+      <p>Defined at line 451 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="AC120F8392E834989AFCC004A9EE54884871017E">operator=</h3>
+      <p>public ParsedAttr &amp; operator=(ParsedAttr &amp;&amp; )</p>
+      <p>Defined at line 452 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="C55AA39E293FF6A7D7564610C4FF6AB42B112E37">~ParsedAttr</h3>
+      <p>public void ~ParsedAttr()</p>
+      <p>Defined at line 453 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="B6D136969C6C74B1CAAAFEC7BEC0EBB21838CDEB">operator delete</h3>
+      <p>public void operator delete(void * )</p>
+      <p>Defined at line 455 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="16375B088FEC81537811689065095C51D70CA004">hasParsedType</h3>
+      <p>public _Bool hasParsedType()</p>
+      <p>Defined at line 457 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="FC2BA67AB3B816FA537BF5DED372D607508AC1F5">isDeclspecPropertyAttribute</h3>
+      <p>public _Bool isDeclspecPropertyAttribute()</p>
+      <p>Defined at line 460 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Is this the Microsoft __declspec(property) attribute?</p>
+        </div>
+      </div>
+      <h3 id="445498858CA4FDF7B17FF942C1A82E91413EE402">isInvalid</h3>
+      <p>public _Bool isInvalid()</p>
+      <p>Defined at line 464 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="A8115E86BED7B42E3843373CB5E2044DF04ED9FE">setInvalid</h3>
+      <p>public void setInvalid(_Bool b)</p>
+      <p>Defined at line 465 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="B7DCA07209A1F364085DB3C8273899FDD9C913B4">hasProcessingCache</h3>
+      <p>public _Bool hasProcessingCache()</p>
+      <p>Defined at line 467 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="5488A6B02896DC995E2C50784619456F6004A0EA">getProcessingCache</h3>
+      <p>public unsigned int getProcessingCache()</p>
+      <p>Defined at line 469 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="88F527360CB967AA61FFAB1DE06D7DEABB2BDC17">setProcessingCache</h3>
+      <p>public void setProcessingCache(unsigned int value)</p>
+      <p>Defined at line 474 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="B350435DFC0E3543E189274BA55EEB7DE0EAA693">isUsedAsTypeAttr</h3>
+      <p>public _Bool isUsedAsTypeAttr()</p>
+      <p>Defined at line 479 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="38AC7EF62805BF7972AA29BD22463C07140B969A">setUsedAsTypeAttr</h3>
+      <p>public void setUsedAsTypeAttr(_Bool Used)</p>
+      <p>Defined at line 480 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="AE8B71120395377160738D6BFC00D709A7825996">isPragmaClangAttribute</h3>
+      <p>public _Bool isPragmaClangAttribute()</p>
+      <p>Defined at line 483 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> True if the attribute is specified using &apos;#pragma clang attribute&apos;.</p>
+        </div>
+      </div>
+      <h3 id="0567E85D2E99431F0E877A6AAA37F5804B7BE066">setIsPragmaClangAttribute</h3>
+      <p>public void setIsPragmaClangAttribute()</p>
+      <p>Defined at line 485 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="85F3DF3A4C60E27DED83D20EBAF240B3EA814CD6">isPackExpansion</h3>
+      <p>public _Bool isPackExpansion()</p>
+      <p>Defined at line 487 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="67576FD5A7AE2EEEF6576EA46A44F0F7C82ABA55">getEllipsisLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEllipsisLoc()
+      </p>
+      <p>Defined at line 488 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="747CFE425644D54CDD7058F40B4D3177AB4E6F92">getNumArgs</h3>
+      <p>public unsigned int getNumArgs()</p>
+      <p>Defined at line 491 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> getNumArgs - Return the number of actual arguments to this attribute.</p>
+        </div>
+      </div>
+      <h3 id="D6DF07862E60914DC70C4CDA3E8E0150FF4C5754">getArg</h3>
+      <p>
+        public 
+        <a href="../llvm/PointerUnion.html">PointerUnion</a>
+         getArg(unsigned int Arg)
+      </p>
+      <p>Defined at line 494 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> getArg - Return the specified argument.</p>
+        </div>
+      </div>
+      <h3 id="5FDD182CD9F84E83869240614CC55C49F237406E">isArgExpr</h3>
+      <p>public _Bool isArgExpr(unsigned int Arg)</p>
+      <p>Defined at line 499 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="46DA4E32F52A439510189B4E180465A5517F3422">getArgAsExpr</h3>
+      <p>public Expr * getArgAsExpr(unsigned int Arg)</p>
+      <p>Defined at line 503 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="0E9516114293F1DD7085CB089DBDDA681575B993">isArgIdent</h3>
+      <p>public _Bool isArgIdent(unsigned int Arg)</p>
+      <p>Defined at line 507 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="6BFA13D95E75B54957A262871165170D26CAB659">getArgAsIdent</h3>
+      <p>public IdentifierLoc * getArgAsIdent(unsigned int Arg)</p>
+      <p>Defined at line 511 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="61721AD2C845D0FEBA8524A8080730B7489A27C4">getAvailabilityIntroduced</h3>
+      <p>public const AvailabilityChange &amp; getAvailabilityIntroduced()</p>
+      <p>Defined at line 515 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="102F96689666E7B2DA709F1ACAEBEF14710AD705">getAvailabilityDeprecated</h3>
+      <p>public const AvailabilityChange &amp; getAvailabilityDeprecated()</p>
+      <p>Defined at line 521 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="23F91B9E3193107869A6ECF61F4D873705E3767A">getAvailabilityObsoleted</h3>
+      <p>public const AvailabilityChange &amp; getAvailabilityObsoleted()</p>
+      <p>Defined at line 527 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="36B3D3EAE59240D39483F5A4951B3132E226B2FB">getStrictLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getStrictLoc()
+      </p>
+      <p>Defined at line 533 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="53EFF4C72B9BF11D53417C844CEE3738AE692FA5">getUnavailableLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getUnavailableLoc()
+      </p>
+      <p>Defined at line 539 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="D7F65F48D07991203803CA70DD1A462ED00155AD">getMessageExpr</h3>
+      <p>public const Expr * getMessageExpr()</p>
+      <p>Defined at line 545 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="CFC6BA8D1025C72B8FD8F7F4FC9FCA19B71E79FD">getReplacementExpr</h3>
+      <p>public const Expr * getReplacementExpr()</p>
+      <p>Defined at line 551 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="724690E8997FDE2E7FAE117A8B775F474482BF46">getMatchingCType</h3>
+      <p>public const ParsedType &amp; getMatchingCType()</p>
+      <p>Defined at line 557 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="7A7E268F42A76D813CEE0637E41EC360CFC34EC9">getLayoutCompatible</h3>
+      <p>public _Bool getLayoutCompatible()</p>
+      <p>Defined at line 563 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="86253D6F6B37AD618E13B0234167260DBE0B4A91">getMustBeNull</h3>
+      <p>public _Bool getMustBeNull()</p>
+      <p>Defined at line 569 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="A0EBCFF9264AA56D4FF1D9E97CC81C4A710F2FEC">getTypeArg</h3>
+      <p>public const ParsedType &amp; getTypeArg()</p>
+      <p>Defined at line 575 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="1BFCC928BF0DC4952A81B72B8E416911D9EDEC32">getPropertyDataGetter</h3>
+      <p>public IdentifierInfo * getPropertyDataGetter()</p>
+      <p>Defined at line 580 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="DAC867F07E3989D4F78D230A949274EB24544D4C">getPropertyDataSetter</h3>
+      <p>public IdentifierInfo * getPropertyDataSetter()</p>
+      <p>Defined at line 586 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="4B9EDD7B7992805F85CAF1108CFBF6E075FE91BF">setMacroIdentifier</h3>
+      <p>
+        public void setMacroIdentifier(IdentifierInfo * MacroName, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 595 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Set the macro identifier info object that this parsed attribute was declared in if it was declared in a macro. Also set the expansion location of the macro.</p>
+        </div>
+      </div>
+      <h3 id="57FF0A032A8B5F825D32F892A5FA4FCFF7956B22">hasMacroIdentifier</h3>
+      <p>public _Bool hasMacroIdentifier()</p>
+      <p>Defined at line 601 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Returns true if this attribute was declared in a macro.</p>
+        </div>
+      </div>
+      <h3 id="98C930ACD535BCF1CD8D711C7DA8C9CC35BE59D7">getMacroIdentifier</h3>
+      <p>public IdentifierInfo * getMacroIdentifier()</p>
+      <p>Defined at line 605 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> Return the macro identifier if this attribute was declared in a macro. nullptr is returned if it was not declared in a macro.</p>
+        </div>
+      </div>
+      <h3 id="339D947D900D7FFDECAFDADBC560573AC53EF30A">getMacroExpansionLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getMacroExpansionLoc()
+      </p>
+      <p>Defined at line 607 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="D8B9491A5A69D9E5ECD03C217772E13D883A6987">checkExactlyNumArgs</h3>
+      <p>public _Bool checkExactlyNumArgs(class Sema &amp; S, unsigned int Num)</p>
+      <div>
+        <div>
+          <p> Check if the attribute has exactly as many args as Num. May output an error. Returns false if a diagnostic is produced.</p>
+        </div>
+      </div>
+      <h3 id="976D2787D336109E3821FF54BDC20A96C2E2EAE4">checkAtLeastNumArgs</h3>
+      <p>public _Bool checkAtLeastNumArgs(class Sema &amp; S, unsigned int Num)</p>
+      <div>
+        <div>
+          <p> Check if the attribute has at least as many args as Num. May output an error. Returns false if a diagnostic is produced.</p>
+        </div>
+      </div>
+      <h3 id="FC9AE90330B96D4B1B7B621AC5991118595AEFC1">checkAtMostNumArgs</h3>
+      <p>public _Bool checkAtMostNumArgs(class Sema &amp; S, unsigned int Num)</p>
+      <div>
+        <div>
+          <p> Check if the attribute has at most as many args as Num. May output an error. Returns false if a diagnostic is produced.</p>
+        </div>
+      </div>
+      <h3 id="D881AC55AB15C503B401461834215AB85A932228">isTargetSpecificAttr</h3>
+      <p>public _Bool isTargetSpecificAttr()</p>
+      <h3 id="3E6AF760EE1C995F1473CAC9C66ADECA2D4857AB">isTypeAttr</h3>
+      <p>public _Bool isTypeAttr()</p>
+      <h3 id="294CE5E953326B06FD6EF3951B24338740454979">isStmtAttr</h3>
+      <p>public _Bool isStmtAttr()</p>
+      <h3 id="157E8F312FEA7BA8A36BB424D3BB5182C9A23C50">hasCustomParsing</h3>
+      <p>public _Bool hasCustomParsing()</p>
+      <h3 id="AD7B1C1BCE1ABAF5EFF48E8B84C5A01B26D985E9">acceptsExprPack</h3>
+      <p>public _Bool acceptsExprPack()</p>
+      <h3 id="B5D7A29F75FD4E72EAD117A5C53706EF7034548A">isParamExpr</h3>
+      <p>public _Bool isParamExpr(size_t N)</p>
+      <h3 id="548C55BF1D6959638C1F1C03DB1EB8D40915641C">getMinArgs</h3>
+      <p>public unsigned int getMinArgs()</p>
+      <h3 id="0BA4763D4E7044385652CA390E4BBBC10B25F4CA">getMaxArgs</h3>
+      <p>public unsigned int getMaxArgs()</p>
+      <h3 id="FECBF233CB4E506D3E8D368D9D15BCE52D235541">getNumArgMembers</h3>
+      <p>public unsigned int getNumArgMembers()</p>
+      <h3 id="5B3F3D6DD51847C6AAB92A262D7DB2182B0DB265">hasVariadicArg</h3>
+      <p>public _Bool hasVariadicArg()</p>
+      <h3 id="8E236E24917535089F5E264191D629776E7843AC">handleAttrWithDelayedArgs</h3>
+      <p>public void handleAttrWithDelayedArgs(Sema &amp; S, Decl * D)</p>
+      <h3 id="FA7655D3036796EB7DD4A740EA67E9E108E32318">diagnoseAppertainsTo</h3>
+      <p>public _Bool diagnoseAppertainsTo(class Sema &amp; S, const Decl * D)</p>
+      <h3 id="370AA790102D1C9B74EABDC0C0AB187AC682DC2E">diagnoseAppertainsTo</h3>
+      <p>public _Bool diagnoseAppertainsTo(class Sema &amp; S, const Stmt * St)</p>
+      <h3 id="A4003DB5A1F4FF06ED511235F166711A4E577C1B">diagnoseMutualExclusion</h3>
+      <p>public _Bool diagnoseMutualExclusion(class Sema &amp; S, const Decl * D)</p>
+      <h3 id="5AAC493B7A456BD6F1EE3531DD04ED8F777F4825">diagnoseMutualExclusion</h3>
+      <p>public _Bool diagnoseMutualExclusion(class Sema &amp; S, const Stmt * St)</p>
+      <p>Defined at line 641 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> This function stub exists for parity with the declaration checking code so that checkCommonAttributeFeatures() can work generically on declarations or statements.</p>
+        </div>
+      </div>
+      <h3 id="617D1D203659485185CBCF2E5AC670A48854706B">appliesToDecl</h3>
+      <p>
+        public _Bool appliesToDecl(const Decl * D, 
+        <a href="../clang/attr/SubjectMatchRule.html">SubjectMatchRule</a>
+         MatchRule)
+      </p>
+      <h3 id="C9CACD5A97D781E6D10E423461BC70A032D1D458">getMatchRules</h3>
+      <p>public void getMatchRules(const LangOptions &amp; LangOpts, SmallVectorImpl&lt;std::pair&lt;attr::SubjectMatchRule, _Bool&gt; &gt; &amp; MatchRules)</p>
+      <h3 id="A6C0D03232849F842855C2B17CDA97E5312084CC">diagnoseLangOpts</h3>
+      <p>public _Bool diagnoseLangOpts(class Sema &amp; S)</p>
+      <h3 id="BD7C36321E7A79316BDA5D6D8CFDBB706C1506A0">existsInTarget</h3>
+      <p>public _Bool existsInTarget(const TargetInfo &amp; Target)</p>
+      <h3 id="6039C2289FE931AC3625E71FD9415D4FFC1FF406">isKnownToGCC</h3>
+      <p>public _Bool isKnownToGCC()</p>
+      <h3 id="D5EBEF92F3198A604F0F5F7FED58916A1158910C">isSupportedByPragmaAttribute</h3>
+      <p>public _Bool isSupportedByPragmaAttribute()</p>
+      <h3 id="CD2C1FA00F5669DD0929D718C6B72DE6BFA7DFA8">slidesFromDeclToDeclSpecLegacyBehavior</h3>
+      <p>public _Bool slidesFromDeclToDeclSpecLegacyBehavior()</p>
+      <div>
+        <div>
+          <p> Returns whether a [[]] attribute, if specified ahead of a declaration, should be applied to the decl-specifier-seq instead (i.e. whether it &quot;slides&quot; to the decl-specifier-seq).</p>
+          <p> By the standard, attributes specified before the declaration always appertain to the declaration, but historically we have allowed some of these attributes to slide to the decl-specifier-seq, so we need to keep supporting this behavior.</p>
+          <p> This may only be called if isStandardAttributeSyntax() returns true.</p>
+        </div>
+      </div>
+      <h3 id="B613D29584B68568EAB2EB9D7E62C868B4BD3274">getSemanticSpelling</h3>
+      <p>public unsigned int getSemanticSpelling()</p>
+      <div>
+        <div>
+          <p> If the parsed attribute has a semantic equivalent, and it would have a semantic Spelling enumeration (due to having semantically-distinct spelling variations), return the value of that semantic spelling. If the parsed attribute does not have a semantic equivalent, or would not have a Spelling enumeration, the value UINT_MAX is returned.</p>
+        </div>
+      </div>
+      <h3 id="1B80A771C9CD5482BA389BE03724861501BA3CA5">asOpenCLLangAS</h3>
+      <p>
+        public 
+        <a href="LangAS.html">LangAS</a>
+         asOpenCLLangAS()
+      </p>
+      <p>Defined at line 674 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> If this is an OpenCL address space attribute, returns its representation in LangAS, otherwise returns default address space.</p>
+        </div>
+      </div>
+      <h3 id="90DD0DBBC26D8D99811E261AA1567C4F36984D70">asSYCLLangAS</h3>
+      <p>
+        public 
+        <a href="LangAS.html">LangAS</a>
+         asSYCLLangAS()
+      </p>
+      <p>Defined at line 697 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> If this is an OpenCL address space attribute, returns its SYCL representation in LangAS, otherwise returns default address space.</p>
+        </div>
+      </div>
+      <h3 id="F725CF57F487128712B7795B4878CDB8E4F5D3FF">asHLSLLangAS</h3>
+      <p>
+        public 
+        <a href="LangAS.html">LangAS</a>
+         asHLSLLangAS()
+      </p>
+      <p>Defined at line 717 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <div>
+        <div>
+          <p> If this is an HLSL address space attribute, returns its representation in LangAS, otherwise returns default address space.</p>
+        </div>
+      </div>
+      <h3 id="081112A61AB8C2FFC2FC8979D821F437F6FB85F9">getKind</h3>
+      <p>
+        public 
+        <a href="../clang/AttributeCommonInfo/Kind.html">Kind</a>
+         getKind()
+      </p>
+      <p>Defined at line 726 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+      <h3 id="8DA55242B39B509F881EC4ECAFA83662E4D2D06E">getInfo</h3>
+      <p>public const ParsedAttrInfo &amp; getInfo()</p>
+      <p>Defined at line 729 of file /usr/lib/llvm-16/include/clang/Sema/ParsedAttr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9EB1DBB4DFFB84E3EE05D17EBE295A4AEDCBEB31">ParsedAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1311D4D076B3F9C86E7460139721C29644724528">ParsedAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B12F1C2993228E1395E19A594E13EDB2FEA2EC0">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC120F8392E834989AFCC004A9EE54884871017E">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C55AA39E293FF6A7D7564610C4FF6AB42B112E37">~ParsedAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B6D136969C6C74B1CAAAFEC7BEC0EBB21838CDEB">operator delete</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16375B088FEC81537811689065095C51D70CA004">hasParsedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC2BA67AB3B816FA537BF5DED372D607508AC1F5">isDeclspecPropertyAttribute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#445498858CA4FDF7B17FF942C1A82E91413EE402">isInvalid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8115E86BED7B42E3843373CB5E2044DF04ED9FE">setInvalid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7DCA07209A1F364085DB3C8273899FDD9C913B4">hasProcessingCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5488A6B02896DC995E2C50784619456F6004A0EA">getProcessingCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88F527360CB967AA61FFAB1DE06D7DEABB2BDC17">setProcessingCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B350435DFC0E3543E189274BA55EEB7DE0EAA693">isUsedAsTypeAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38AC7EF62805BF7972AA29BD22463C07140B969A">setUsedAsTypeAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE8B71120395377160738D6BFC00D709A7825996">isPragmaClangAttribute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0567E85D2E99431F0E877A6AAA37F5804B7BE066">setIsPragmaClangAttribute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85F3DF3A4C60E27DED83D20EBAF240B3EA814CD6">isPackExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67576FD5A7AE2EEEF6576EA46A44F0F7C82ABA55">getEllipsisLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#747CFE425644D54CDD7058F40B4D3177AB4E6F92">getNumArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6DF07862E60914DC70C4CDA3E8E0150FF4C5754">getArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FDD182CD9F84E83869240614CC55C49F237406E">isArgExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#46DA4E32F52A439510189B4E180465A5517F3422">getArgAsExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E9516114293F1DD7085CB089DBDDA681575B993">isArgIdent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BFA13D95E75B54957A262871165170D26CAB659">getArgAsIdent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61721AD2C845D0FEBA8524A8080730B7489A27C4">getAvailabilityIntroduced</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#102F96689666E7B2DA709F1ACAEBEF14710AD705">getAvailabilityDeprecated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23F91B9E3193107869A6ECF61F4D873705E3767A">getAvailabilityObsoleted</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#36B3D3EAE59240D39483F5A4951B3132E226B2FB">getStrictLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53EFF4C72B9BF11D53417C844CEE3738AE692FA5">getUnavailableLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7F65F48D07991203803CA70DD1A462ED00155AD">getMessageExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CFC6BA8D1025C72B8FD8F7F4FC9FCA19B71E79FD">getReplacementExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#724690E8997FDE2E7FAE117A8B775F474482BF46">getMatchingCType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A7E268F42A76D813CEE0637E41EC360CFC34EC9">getLayoutCompatible</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86253D6F6B37AD618E13B0234167260DBE0B4A91">getMustBeNull</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0EBCFF9264AA56D4FF1D9E97CC81C4A710F2FEC">getTypeArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BFCC928BF0DC4952A81B72B8E416911D9EDEC32">getPropertyDataGetter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAC867F07E3989D4F78D230A949274EB24544D4C">getPropertyDataSetter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B9EDD7B7992805F85CAF1108CFBF6E075FE91BF">setMacroIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57FF0A032A8B5F825D32F892A5FA4FCFF7956B22">hasMacroIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98C930ACD535BCF1CD8D711C7DA8C9CC35BE59D7">getMacroIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#339D947D900D7FFDECAFDADBC560573AC53EF30A">getMacroExpansionLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8B9491A5A69D9E5ECD03C217772E13D883A6987">checkExactlyNumArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#976D2787D336109E3821FF54BDC20A96C2E2EAE4">checkAtLeastNumArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC9AE90330B96D4B1B7B621AC5991118595AEFC1">checkAtMostNumArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D881AC55AB15C503B401461834215AB85A932228">isTargetSpecificAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3E6AF760EE1C995F1473CAC9C66ADECA2D4857AB">isTypeAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#294CE5E953326B06FD6EF3951B24338740454979">isStmtAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#157E8F312FEA7BA8A36BB424D3BB5182C9A23C50">hasCustomParsing</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD7B1C1BCE1ABAF5EFF48E8B84C5A01B26D985E9">acceptsExprPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5D7A29F75FD4E72EAD117A5C53706EF7034548A">isParamExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#548C55BF1D6959638C1F1C03DB1EB8D40915641C">getMinArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0BA4763D4E7044385652CA390E4BBBC10B25F4CA">getMaxArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FECBF233CB4E506D3E8D368D9D15BCE52D235541">getNumArgMembers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B3F3D6DD51847C6AAB92A262D7DB2182B0DB265">hasVariadicArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E236E24917535089F5E264191D629776E7843AC">handleAttrWithDelayedArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA7655D3036796EB7DD4A740EA67E9E108E32318">diagnoseAppertainsTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#370AA790102D1C9B74EABDC0C0AB187AC682DC2E">diagnoseAppertainsTo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4003DB5A1F4FF06ED511235F166711A4E577C1B">diagnoseMutualExclusion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AAC493B7A456BD6F1EE3531DD04ED8F777F4825">diagnoseMutualExclusion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#617D1D203659485185CBCF2E5AC670A48854706B">appliesToDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C9CACD5A97D781E6D10E423461BC70A032D1D458">getMatchRules</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6C0D03232849F842855C2B17CDA97E5312084CC">diagnoseLangOpts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD7C36321E7A79316BDA5D6D8CFDBB706C1506A0">existsInTarget</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6039C2289FE931AC3625E71FD9415D4FFC1FF406">isKnownToGCC</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5EBEF92F3198A604F0F5F7FED58916A1158910C">isSupportedByPragmaAttribute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD2C1FA00F5669DD0929D718C6B72DE6BFA7DFA8">slidesFromDeclToDeclSpecLegacyBehavior</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B613D29584B68568EAB2EB9D7E62C868B4BD3274">getSemanticSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B80A771C9CD5482BA389BE03724861501BA3CA5">asOpenCLLangAS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90DD0DBBC26D8D99811E261AA1567C4F36984D70">asSYCLLangAS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F725CF57F487128712B7795B4878CDB8E4F5D3FF">asHLSLLangAS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#081112A61AB8C2FFC2FC8979D821F437F6FB85F9">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DA55242B39B509F881EC4ECAFA83662E4D2D06E">getInfo</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

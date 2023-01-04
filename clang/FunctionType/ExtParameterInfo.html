@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExtParameterInfo</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/FunctionType" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExtParameterInfo</h1>
+    <p>Defined at line 3701 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Interesting information about a specific parameter that can&apos;t simply be reflected in parameter&apos;s type. This is only used by FunctionProtoType but is in FunctionType to make this class available during the specification of the bases of FunctionProtoType.</p>
+        <p> It makes sense to model language features this way when there&apos;s some sort of parameter-specific override (such as an attribute) that affects how the function is called.  For example, the ARC ns_consumed attribute changes whether a parameter is passed at +0 (the default) or +1 (ns_consumed).  This must be reflected in the function type, but isn&apos;t really a change to the parameter type.</p>
+        <p> One serious disadvantage of modelling language features this way is that they generally do not work with language features that attempt to destructure types.  For example, template argument deduction will not be able to match a parameter declared as   T (*)(U) against an argument of type   void (*)(__attribute__((ns_consumed)) id) because the substitution of T=void, U=id into the former will not produce the latter.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C9A909E7C0FDBC3F62F1D191E331F2863D817225">ExtParameterInfo</h3>
+      <p>public void ExtParameterInfo()</p>
+      <p>Defined at line 3711 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="01E9E4DB0E8AC2B1970DDD5C78040DF99CA8A08F">getABI</h3>
+      <p>
+        public 
+        <a href="../../clang/ParameterABI.html">ParameterABI</a>
+         getABI()
+      </p>
+      <p>Defined at line 3714 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Return the ABI treatment of this parameter.</p>
+        </div>
+      </div>
+      <h3 id="6DDA07AB9DEC433C1F49A5F467720B83F4023712">withABI</h3>
+      <p>
+        public 
+        <a href="ExtParameterInfo.html">ExtParameterInfo</a>
+         withABI(
+        <a href="../../clang/ParameterABI.html">ParameterABI</a>
+         kind)
+      </p>
+      <p>Defined at line 3715 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="6B091575C5896DF302F6A25C6F808C1CCC1E95CD">isConsumed</h3>
+      <p>public _Bool isConsumed()</p>
+      <p>Defined at line 3723 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Is this parameter considered &quot;consumed&quot; by Objective-C ARC? Consumed parameters must have retainable object type.</p>
+        </div>
+      </div>
+      <h3 id="48239780BD772F977866288A098E484521AE5953">withIsConsumed</h3>
+      <p>
+        public 
+        <a href="ExtParameterInfo.html">ExtParameterInfo</a>
+         withIsConsumed(_Bool consumed)
+      </p>
+      <p>Defined at line 3724 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="87D49634F7153617CDFFE2F048474DAF55DE148B">hasPassObjectSize</h3>
+      <p>public _Bool hasPassObjectSize()</p>
+      <p>Defined at line 3733 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="5577AD36C830E08CC951DFA9AE82DBE8E084DF68">withHasPassObjectSize</h3>
+      <p>
+        public 
+        <a href="ExtParameterInfo.html">ExtParameterInfo</a>
+         withHasPassObjectSize()
+      </p>
+      <p>Defined at line 3734 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="0B7723E6212F5211B55929CC4E47621FBA332885">isNoEscape</h3>
+      <p>public _Bool isNoEscape()</p>
+      <p>Defined at line 3740 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="FC5EF63E5135DA4BD79C6D0D7F00BAA06D5832FA">withIsNoEscape</h3>
+      <p>
+        public 
+        <a href="ExtParameterInfo.html">ExtParameterInfo</a>
+         withIsNoEscape(_Bool NoEscape)
+      </p>
+      <p>Defined at line 3741 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="378106F35B979C5C917585D438ACAF06FCC9D76A">getOpaqueValue</h3>
+      <p>public unsigned char getOpaqueValue()</p>
+      <p>Defined at line 3750 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="912912F400F6B7D2EA0EC737F0C4DAFDC691F663">getFromOpaqueValue</h3>
+      <p>
+        public 
+        <a href="ExtParameterInfo.html">ExtParameterInfo</a>
+         getFromOpaqueValue(unsigned char data)
+      </p>
+      <p>Defined at line 3751 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C9A909E7C0FDBC3F62F1D191E331F2863D817225">ExtParameterInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01E9E4DB0E8AC2B1970DDD5C78040DF99CA8A08F">getABI</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DDA07AB9DEC433C1F49A5F467720B83F4023712">withABI</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B091575C5896DF302F6A25C6F808C1CCC1E95CD">isConsumed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48239780BD772F977866288A098E484521AE5953">withIsConsumed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87D49634F7153617CDFFE2F048474DAF55DE148B">hasPassObjectSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5577AD36C830E08CC951DFA9AE82DBE8E084DF68">withHasPassObjectSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B7723E6212F5211B55929CC4E47621FBA332885">isNoEscape</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC5EF63E5135DA4BD79C6D0D7F00BAA06D5832FA">withIsNoEscape</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#378106F35B979C5C917585D438ACAF06FCC9D76A">getOpaqueValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#912912F400F6B7D2EA0EC737F0C4DAFDC691F663">getFromOpaqueValue</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

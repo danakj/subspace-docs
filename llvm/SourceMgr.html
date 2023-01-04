@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SourceMgr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SourceMgr</h1>
+    <p>Defined at line 31 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+    <div>
+      <div>
+        <p> This owns the files read by a parser, handles include stacks, and handles diagnostic wrangling.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="06A34DE657F720EF91325CA474DB5C31FDB3DDB1">SourceMgr</h3>
+      <p>public void SourceMgr()</p>
+      <p>Defined at line 96 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="CD6505A24AF3FC1184D966DA83E4BD8F7DB6CD80">SourceMgr</h3>
+      <p>public void SourceMgr(const SourceMgr &amp; )</p>
+      <p>Defined at line 97 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="871CF893E8B6B57D14C859EA2911FB61F1E9A980">operator=</h3>
+      <p>public SourceMgr &amp; operator=(const SourceMgr &amp; )</p>
+      <p>Defined at line 98 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="AD3241FC6DFFF98E3EEB6B6A7B657E17744004F6">SourceMgr</h3>
+      <p>public void SourceMgr(SourceMgr &amp;&amp; )</p>
+      <p>Defined at line 99 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="EF609F7A0B23A36886E2285AFA6C89EB3D4776F3">operator=</h3>
+      <p>public SourceMgr &amp; operator=(SourceMgr &amp;&amp; )</p>
+      <p>Defined at line 100 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="180A8AC771E5B37F648912258C8A7BECFC649D5B">~SourceMgr</h3>
+      <p>public void ~SourceMgr()</p>
+      <p>Defined at line 101 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="E6834F4EC2DFDD2166B6E522F9C019AD10E7A95B">getIncludeDirs</h3>
+      <p>
+        public 
+        <a href="ArrayRef.html">ArrayRef</a>
+         getIncludeDirs()
+      </p>
+      <p>Defined at line 104 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <div>
+        <div>
+          <p> Return the include directories of this source manager.</p>
+        </div>
+      </div>
+      <h3 id="447D059DBF17C20F46EA9B1CE86B8CE6C87D991F">setIncludeDirs</h3>
+      <p>public void setIncludeDirs(const std::vector&lt;std::string&gt; &amp; Dirs)</p>
+      <p>Defined at line 106 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="F94343DCD271B36ECDCA417A5BE1FB4D1000C7AD">setDiagHandler</h3>
+      <p>public void setDiagHandler(DiagHandlerTy DH, void * Ctx)</p>
+      <p>Defined at line 112 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <div>
+        <div>
+          <p> Specify a diagnostic handler to be invoked every time PrintMessage is called.  is passed into the handler when it is invoked.</p>
+        </div>
+      </div>
+      <h3 id="022CD632F2722CB95529C8E65EB1CC7AE7D105B0">getDiagHandler</h3>
+      <p>public DiagHandlerTy getDiagHandler()</p>
+      <p>Defined at line 117 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="88D7E27AB6CC06DB725291D407CB48D88D98926C">getDiagContext</h3>
+      <p>public void * getDiagContext()</p>
+      <p>Defined at line 118 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="3CBFE07D158F092E32F4F102FC909D971738735B">getBufferInfo</h3>
+      <p>public const SrcBuffer &amp; getBufferInfo(unsigned int i)</p>
+      <p>Defined at line 120 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="D4D53F89B23F7CE85EC998C291EACD18A23CE92A">getMemoryBuffer</h3>
+      <p>public const MemoryBuffer * getMemoryBuffer(unsigned int i)</p>
+      <p>Defined at line 125 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="9A39A13955E928041AEF632C3490D702B2221283">getNumBuffers</h3>
+      <p>public unsigned int getNumBuffers()</p>
+      <p>Defined at line 130 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="88AB9AE008C6B4A8BF55BB52D92BC084215163FC">getMainFileID</h3>
+      <p>public unsigned int getMainFileID()</p>
+      <p>Defined at line 132 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="708915DA88582253BECDB936DCC94AE96DEB95C8">getParentIncludeLoc</h3>
+      <p>
+        public 
+        <a href="SMLoc.html">SMLoc</a>
+         getParentIncludeLoc(unsigned int i)
+      </p>
+      <p>Defined at line 137 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <h3 id="2F0E900181AD9097C02760F0314156CF3616E697">AddNewSourceBuffer</h3>
+      <p>
+        public unsigned int AddNewSourceBuffer(
+        <a href="../std/unique_ptr.html">unique_ptr</a>
+         F, 
+        <a href="SMLoc.html">SMLoc</a>
+         IncludeLoc)
+      </p>
+      <p>Defined at line 144 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <div>
+        <div>
+          <p> Add a new source buffer to this source manager. This takes ownership of the memory buffer.</p>
+        </div>
+      </div>
+      <h3 id="2D275238E4C6E0CB9429F0A5D3519D86B5B8EE36">takeSourceBuffersFrom</h3>
+      <p>
+        public void takeSourceBuffersFrom(SourceMgr &amp; SrcMgr, 
+        <a href="SMLoc.html">SMLoc</a>
+         MainBufferIncludeLoc)
+      </p>
+      <p>Defined at line 157 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <div>
+        <div>
+          <p> Takes the source buffers from the given source manager and append them to the current manager. `MainBufferIncludeLoc` is an optional include location to attach to the main buffer of `SrcMgr` after it gets moved to the current manager.</p>
+        </div>
+      </div>
+      <h3 id="1E22BBC78EF9E20E5370E47CDC55BE3C80F0FEF0">AddIncludeFile</h3>
+      <p>
+        public unsigned int AddIncludeFile(const std::string &amp; Filename, 
+        <a href="SMLoc.html">SMLoc</a>
+         IncludeLoc, std::string &amp; IncludedFile)
+      </p>
+      <div>
+        <div>
+          <p> Search for a file with the specified name in the current directory or in one of the IncludeDirs.</p>
+          <p> If no file is found, this returns 0, otherwise it returns the buffer ID of the stacked file. The full path to the included file can be found in</p>
+        </div>
+      </div>
+      <h3 id="2D39E0F0F804BCAE0CD678EB1E1EA479931AA033">OpenIncludeFile</h3>
+      <p>
+        public 
+        <a href="ErrorOr.html">ErrorOr</a>
+         OpenIncludeFile(const std::string &amp; Filename, std::string &amp; IncludedFile)
+      </p>
+      <div>
+        <div>
+          <p> Search for a file with the specified name in the current directory or in one of the IncludeDirs, and try to open it **without** adding to the SourceMgr. If the opened file is intended to be added to the source manager, prefer `AddIncludeFile` instead.</p>
+          <p> If no file is found, this returns an Error, otherwise it returns the buffer of the stacked file. The full path to the included file can be found in </p>
+        </div>
+      </div>
+      <h3 id="36EE4CE4F0D27283B2AD3ADDBC5F30AE22298E93">FindBufferContainingLoc</h3>
+      <p>
+        public unsigned int FindBufferContainingLoc(
+        <a href="SMLoc.html">SMLoc</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> Return the ID of the buffer containing the specified location.</p>
+          <p> 0 is returned if the buffer is not found.</p>
+        </div>
+      </div>
+      <h3 id="6B2D7D0DD38B0B85C1B02A1690F608AF12E7F4D0">FindLineNumber</h3>
+      <p>
+        public unsigned int FindLineNumber(
+        <a href="SMLoc.html">SMLoc</a>
+         Loc, unsigned int BufferID)
+      </p>
+      <p>Defined at line 196 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+      <div>
+        <div>
+          <p> Find the line number for the specified location in the specified file. This is not a fast method.</p>
+        </div>
+      </div>
+      <h3 id="E0462CAF1A1D83422FB31654EAB5D8D8980FB1B6">getLineAndColumn</h3>
+      <p>
+        public 
+        <a href="../std/pair.html">pair</a>
+         getLineAndColumn(
+        <a href="SMLoc.html">SMLoc</a>
+         Loc, unsigned int BufferID)
+      </p>
+      <div>
+        <div>
+          <p> Find the line and column number for the specified location in the specified file. This is not a fast method.</p>
+        </div>
+      </div>
+      <h3 id="5B722870BB880A3165E20888969CB62FC10CBFD3">getFormattedLocationNoOffset</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getFormattedLocationNoOffset(
+        <a href="SMLoc.html">SMLoc</a>
+         Loc, _Bool IncludePath)
+      </p>
+      <div>
+        <div>
+          <p> Get a string with the  filename and line number formatted in the standard style.</p>
+        </div>
+      </div>
+      <h3 id="D3D20D1183C5741FF43CED0C2E8FAD096251EC35">FindLocForLineAndColumn</h3>
+      <p>
+        public 
+        <a href="SMLoc.html">SMLoc</a>
+         FindLocForLineAndColumn(unsigned int BufferID, unsigned int LineNo, unsigned int ColNo)
+      </p>
+      <div>
+        <div>
+          <p> Given a line and column number in a mapped buffer, turn it into an SMLoc. This will return a null SMLoc if the line/column location is invalid.</p>
+        </div>
+      </div>
+      <h3 id="C42C8463887B711C859CC45CB8FB36262765FD18">PrintMessage</h3>
+      <p>
+        public void PrintMessage(raw_ostream &amp; OS, 
+        <a href="SMLoc.html">SMLoc</a>
+         Loc, 
+        <a href="../llvm/SourceMgr/DiagKind.html">DiagKind</a>
+         Kind, const Twine &amp; Msg, 
+        <a href="ArrayRef.html">ArrayRef</a>
+         Ranges, 
+        <a href="ArrayRef.html">ArrayRef</a>
+         FixIts, _Bool ShowColors)
+      </p>
+      <div>
+        <div>
+          <p> Emit a message about the specified location with the specified string.</p>
+        </div>
+      </div>
+      <h3 id="5CC3C8417792808856098EF0489507816EA9F3B6">PrintMessage</h3>
+      <p>
+        public void PrintMessage(
+        <a href="SMLoc.html">SMLoc</a>
+         Loc, 
+        <a href="../llvm/SourceMgr/DiagKind.html">DiagKind</a>
+         Kind, const Twine &amp; Msg, 
+        <a href="ArrayRef.html">ArrayRef</a>
+         Ranges, 
+        <a href="ArrayRef.html">ArrayRef</a>
+         FixIts, _Bool ShowColors)
+      </p>
+      <div>
+        <div>
+          <p> Emits a diagnostic to llvm::errs().</p>
+        </div>
+      </div>
+      <h3 id="45418E31DA64E14A66C1EACE2299A052380BD011">PrintMessage</h3>
+      <p>public void PrintMessage(raw_ostream &amp; OS, const SMDiagnostic &amp; Diagnostic, _Bool ShowColors)</p>
+      <div>
+        <div>
+          <p> Emits a manually-constructed diagnostic to the given output stream.</p>
+        </div>
+      </div>
+      <h3 id="974642B3B80C95C31284EA6E3290A94992AC5EE4">GetMessage</h3>
+      <p>
+        public 
+        <a href="SMDiagnostic.html">SMDiagnostic</a>
+         GetMessage(
+        <a href="SMLoc.html">SMLoc</a>
+         Loc, 
+        <a href="../llvm/SourceMgr/DiagKind.html">DiagKind</a>
+         Kind, const Twine &amp; Msg, 
+        <a href="ArrayRef.html">ArrayRef</a>
+         Ranges, 
+        <a href="ArrayRef.html">ArrayRef</a>
+         FixIts)
+      </p>
+      <div>
+        <div>
+          <p> Return an SMDiagnostic at the specified location with the specified string.</p>
+        </div>
+      </div>
+      <h3 id="BF348F8C205F42EEE20C63FAFC86CCDA67D6CD08">PrintIncludeStack</h3>
+      <p>
+        public void PrintIncludeStack(
+        <a href="SMLoc.html">SMLoc</a>
+         IncludeLoc, raw_ostream &amp; OS)
+      </p>
+      <div>
+        <div>
+          <p> Prints the names of included files and the line of the file they were included from. A diagnostic handler can use this before printing its custom formatted message.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="F74353D73564365C9C7AC7ED63F09C31222C7936">enum DiagKind</h3>
+      <ul>
+        <li>DK_Error</li>
+        <li>DK_Warning</li>
+        <li>DK_Remark</li>
+        <li>DK_Note</li>
+      </ul>
+      <p>Defined at line 33 of file /usr/lib/llvm-16/include/llvm/Support/SourceMgr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#06A34DE657F720EF91325CA474DB5C31FDB3DDB1">SourceMgr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD6505A24AF3FC1184D966DA83E4BD8F7DB6CD80">SourceMgr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#871CF893E8B6B57D14C859EA2911FB61F1E9A980">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD3241FC6DFFF98E3EEB6B6A7B657E17744004F6">SourceMgr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF609F7A0B23A36886E2285AFA6C89EB3D4776F3">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#180A8AC771E5B37F648912258C8A7BECFC649D5B">~SourceMgr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6834F4EC2DFDD2166B6E522F9C019AD10E7A95B">getIncludeDirs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#447D059DBF17C20F46EA9B1CE86B8CE6C87D991F">setIncludeDirs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F94343DCD271B36ECDCA417A5BE1FB4D1000C7AD">setDiagHandler</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#022CD632F2722CB95529C8E65EB1CC7AE7D105B0">getDiagHandler</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88D7E27AB6CC06DB725291D407CB48D88D98926C">getDiagContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3CBFE07D158F092E32F4F102FC909D971738735B">getBufferInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4D53F89B23F7CE85EC998C291EACD18A23CE92A">getMemoryBuffer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A39A13955E928041AEF632C3490D702B2221283">getNumBuffers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88AB9AE008C6B4A8BF55BB52D92BC084215163FC">getMainFileID</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#708915DA88582253BECDB936DCC94AE96DEB95C8">getParentIncludeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F0E900181AD9097C02760F0314156CF3616E697">AddNewSourceBuffer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D275238E4C6E0CB9429F0A5D3519D86B5B8EE36">takeSourceBuffersFrom</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E22BBC78EF9E20E5370E47CDC55BE3C80F0FEF0">AddIncludeFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D39E0F0F804BCAE0CD678EB1E1EA479931AA033">OpenIncludeFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#36EE4CE4F0D27283B2AD3ADDBC5F30AE22298E93">FindBufferContainingLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B2D7D0DD38B0B85C1B02A1690F608AF12E7F4D0">FindLineNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0462CAF1A1D83422FB31654EAB5D8D8980FB1B6">getLineAndColumn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B722870BB880A3165E20888969CB62FC10CBFD3">getFormattedLocationNoOffset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3D20D1183C5741FF43CED0C2E8FAD096251EC35">FindLocForLineAndColumn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C42C8463887B711C859CC45CB8FB36262765FD18">PrintMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5CC3C8417792808856098EF0489507816EA9F3B6">PrintMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45418E31DA64E14A66C1EACE2299A052380BD011">PrintMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#974642B3B80C95C31284EA6E3290A94992AC5EE4">GetMessage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF348F8C205F42EEE20C63FAFC86CCDA67D6CD08">PrintIncludeStack</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F74353D73564365C9C7AC7ED63F09C31222C7936">DiagKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

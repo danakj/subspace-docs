@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCAtTryStmt</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCAtTryStmt</h1>
+    <p>Defined at line 165 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+    <div>
+      <div>
+        <p> Represents Objective-C&apos;s @try ... @catch ... @finally statement.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Stmt.html">Stmt</a>
+      , llvm::TrailingObjects&lt;ObjCAtTryStmt, Stmt *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="92F8F1732FE87054B0A1CD71488E67C3311DAEC3">Create</h3>
+      <p>
+        public ObjCAtTryStmt * Create(const ASTContext &amp; Context, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         atTryLoc, Stmt * atTryStmt, Stmt ** CatchStmts, unsigned int NumCatchStmts, Stmt * atFinallyStmt)
+      </p>
+      <h3 id="02D66628885888CBCE8FBE630968FCD53B69B5E8">CreateEmpty</h3>
+      <p>public ObjCAtTryStmt * CreateEmpty(const ASTContext &amp; Context, unsigned int NumCatchStmts, _Bool HasFinally)</p>
+      <h3 id="D5DF4E570AD938729C985EA61CB97E30937F3CD1">getAtTryLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAtTryLoc()
+      </p>
+      <p>Defined at line 208 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location of the @ in the @try.</p>
+        </div>
+      </div>
+      <h3 id="5765B9EF7CAE65A9CE246693DAED3047CB187F0D">setAtTryLoc</h3>
+      <p>
+        public void setAtTryLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 209 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="9FF64E1477FB4774E94A2F8B112581035AB0B43A">getTryBody</h3>
+      <p>public const Stmt * getTryBody()</p>
+      <p>Defined at line 212 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the @try body.</p>
+        </div>
+      </div>
+      <h3 id="29177F600ED212FD4C2C0084BA964514B7695A8E">getTryBody</h3>
+      <p>public Stmt * getTryBody()</p>
+      <p>Defined at line 213 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="EB12607DA0E01206A25F63FC79EE3A926443F5B0">setTryBody</h3>
+      <p>public void setTryBody(Stmt * S)</p>
+      <p>Defined at line 214 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="BC50733F7534BCC7A69BD5D2AA139215DE199860">getNumCatchStmts</h3>
+      <p>public unsigned int getNumCatchStmts()</p>
+      <p>Defined at line 218 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the number of @catch statements in this try-catch-finally block.</p>
+        </div>
+      </div>
+      <h3 id="9AAE1CF76DD332ABB1E687847A8590ECB410E076">getCatchStmt</h3>
+      <p>public const ObjCAtCatchStmt * getCatchStmt(unsigned int I)</p>
+      <p>Defined at line 221 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve a @catch statement.</p>
+        </div>
+      </div>
+      <h3 id="FCBF0DBD4F1513EA3B6393426B0593B91C94E17B">getCatchStmt</h3>
+      <p>public ObjCAtCatchStmt * getCatchStmt(unsigned int I)</p>
+      <p>Defined at line 227 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve a @catch statement.</p>
+        </div>
+      </div>
+      <h3 id="004EBFFF3AD2BA689854A00B2C5AE1BED9CB20F9">setCatchStmt</h3>
+      <p>public void setCatchStmt(unsigned int I, ObjCAtCatchStmt * S)</p>
+      <p>Defined at line 233 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <div>
+        <div>
+          <p> Set a particular catch statement.</p>
+        </div>
+      </div>
+      <h3 id="608FD05AC820B5201B4B6972D67955D9A9B5DB31">getFinallyStmt</h3>
+      <p>public const ObjCAtFinallyStmt * getFinallyStmt()</p>
+      <p>Defined at line 239 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <div>
+        <div>
+          <p> Retrieve the @finally statement, if any.</p>
+        </div>
+      </div>
+      <h3 id="0B8278DD4AEF786B8384C48DDB60E85B6711FEC8">getFinallyStmt</h3>
+      <p>public ObjCAtFinallyStmt * getFinallyStmt()</p>
+      <p>Defined at line 245 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="0E8E0A5A6A1563C2C3A05FA98CC2953AAFF07C2C">setFinallyStmt</h3>
+      <p>public void setFinallyStmt(Stmt * S)</p>
+      <p>Defined at line 251 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="226ED7D3C9544EB8119F96DD99588598D0001F3D">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 256 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="C4D189842853377EFE54EA2DA529E8A61CA4E7A0">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <h3 id="ED5F878849AACD0A3716B0F3F61CEF14D962C07A">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 259 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="938B9249BBD6BC8A4E7C82A3119B5C67E96DA67F">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 263 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="73D99C8D490A3392147F24D1166128BE08E6931C">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 268 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="9127880E73BC44FB39E641758B4CA5190639713C">catch_stmts_begin</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         catch_stmts_begin()
+      </p>
+      <p>Defined at line 277 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="9A6B453A44C40D9328E10A20492F900D091BCA05">catch_stmts_end</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         catch_stmts_end()
+      </p>
+      <p>Defined at line 278 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="92279EB05CFD4F6CEDEC7C462A7989C92933B74F">catch_stmts</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         catch_stmts()
+      </p>
+      <p>Defined at line 281 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="827C1339BC0958E243E00EE3E63E01B7B5D4C467">catch_stmts_begin</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         catch_stmts_begin()
+      </p>
+      <p>Defined at line 285 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="C78D7BCB79099290378D018079B89301C129E4B2">catch_stmts_end</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         catch_stmts_end()
+      </p>
+      <p>Defined at line 286 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+      <h3 id="FBE8BEDCF61F61F33A7030F2F7E2CB3F93CD6030">catch_stmts</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         catch_stmts()
+      </p>
+      <p>Defined at line 289 of file /usr/lib/llvm-16/include/clang/AST/StmtObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#92F8F1732FE87054B0A1CD71488E67C3311DAEC3">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02D66628885888CBCE8FBE630968FCD53B69B5E8">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5DF4E570AD938729C985EA61CB97E30937F3CD1">getAtTryLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5765B9EF7CAE65A9CE246693DAED3047CB187F0D">setAtTryLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FF64E1477FB4774E94A2F8B112581035AB0B43A">getTryBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#29177F600ED212FD4C2C0084BA964514B7695A8E">getTryBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB12607DA0E01206A25F63FC79EE3A926443F5B0">setTryBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BC50733F7534BCC7A69BD5D2AA139215DE199860">getNumCatchStmts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9AAE1CF76DD332ABB1E687847A8590ECB410E076">getCatchStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCBF0DBD4F1513EA3B6393426B0593B91C94E17B">getCatchStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#004EBFFF3AD2BA689854A00B2C5AE1BED9CB20F9">setCatchStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#608FD05AC820B5201B4B6972D67955D9A9B5DB31">getFinallyStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B8278DD4AEF786B8384C48DDB60E85B6711FEC8">getFinallyStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E8E0A5A6A1563C2C3A05FA98CC2953AAFF07C2C">setFinallyStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#226ED7D3C9544EB8119F96DD99588598D0001F3D">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4D189842853377EFE54EA2DA529E8A61CA4E7A0">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ED5F878849AACD0A3716B0F3F61CEF14D962C07A">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#938B9249BBD6BC8A4E7C82A3119B5C67E96DA67F">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73D99C8D490A3392147F24D1166128BE08E6931C">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9127880E73BC44FB39E641758B4CA5190639713C">catch_stmts_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A6B453A44C40D9328E10A20492F900D091BCA05">catch_stmts_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92279EB05CFD4F6CEDEC7C462A7989C92933B74F">catch_stmts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#827C1339BC0958E243E00EE3E63E01B7B5D4C467">catch_stmts_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C78D7BCB79099290378D018079B89301C129E4B2">catch_stmts_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBE8BEDCF61F61F33A7030F2F7E2CB3F93CD6030">catch_stmts</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

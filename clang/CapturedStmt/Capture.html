@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Capture</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/CapturedStmt" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Capture</h1>
+    <p>Defined at line 3549 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    <div>
+      <div>
+        <p> Describes the capture of either a variable, or &apos;this&apos;, or variable-length array type.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2A5E097E6872E9A669D64389ED8BF31AA4F42F1D">Capture</h3>
+      <p>
+        public void Capture(
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="VariableCaptureKind.html">VariableCaptureKind</a>
+         Kind, VarDecl * Var)
+      </p>
+      <div>
+        <div>
+          <p> Create a new capture.</p>
+        </div>
+      </div>
+      <h3 id="5D92E182E824847AE5397C4F56BA63BAE6EFA945">getCaptureKind</h3>
+      <p>
+        public 
+        <a href="VariableCaptureKind.html">VariableCaptureKind</a>
+         getCaptureKind()
+      </p>
+      <div>
+        <div>
+          <p> Determine the kind of capture.</p>
+        </div>
+      </div>
+      <h3 id="9053B9A6C7C3A848C4E678280381512680AC4472">getLocation</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 3571 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> Retrieve the source location at which the variable or &apos;this&apos; was first used.</p>
+        </div>
+      </div>
+      <h3 id="2AA9D3BFAADC0F1AA8BC311DA27AD019ED9AA70B">capturesThis</h3>
+      <p>public _Bool capturesThis()</p>
+      <p>Defined at line 3574 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> Determine whether this capture handles the C++ &apos;this&apos; pointer.</p>
+        </div>
+      </div>
+      <h3 id="666BD9DDC7F469576C07A634E609D2F110B132EC">capturesVariable</h3>
+      <p>public _Bool capturesVariable()</p>
+      <p>Defined at line 3577 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> Determine whether this capture handles a variable (by reference).</p>
+        </div>
+      </div>
+      <h3 id="7BE96B354E61232BA5AC088C77542956ADAFEC9D">capturesVariableByCopy</h3>
+      <p>public _Bool capturesVariableByCopy()</p>
+      <p>Defined at line 3580 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> Determine whether this capture handles a variable by copy.</p>
+        </div>
+      </div>
+      <h3 id="A79F4CC1BBD00877B6C95682023025AC37D97BD8">capturesVariableArrayType</h3>
+      <p>public _Bool capturesVariableArrayType()</p>
+      <p>Defined at line 3586 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> Determine whether this capture handles a variable-length array type.</p>
+        </div>
+      </div>
+      <h3 id="67D4565A7175C93F09A45393FBF785C518AA262E">getCapturedVar</h3>
+      <p>public VarDecl * getCapturedVar()</p>
+      <div>
+        <div>
+          <p> Retrieve the declaration of the variable being captured.</p>
+          <p> This operation is only valid if this capture captures a variable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2A5E097E6872E9A669D64389ED8BF31AA4F42F1D">Capture</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D92E182E824847AE5397C4F56BA63BAE6EFA945">getCaptureKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9053B9A6C7C3A848C4E678280381512680AC4472">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2AA9D3BFAADC0F1AA8BC311DA27AD019ED9AA70B">capturesThis</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#666BD9DDC7F469576C07A634E609D2F110B132EC">capturesVariable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BE96B354E61232BA5AC088C77542956ADAFEC9D">capturesVariableByCopy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A79F4CC1BBD00877B6C95682023025AC37D97BD8">capturesVariableArrayType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67D4565A7175C93F09A45393FBF785C518AA262E">getCapturedVar</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

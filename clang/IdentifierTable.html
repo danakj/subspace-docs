@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class IdentifierTable</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class IdentifierTable</h1>
+    <p>Defined at line 564 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+    <div>
+      <div>
+        <p> Implements an efficient mapping from strings to IdentifierInfo nodes.</p>
+        <p> This has no other purpose, but this is an extremely performance-critical piece of the code, as each occurrence of every identifier goes through here when lexed.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="DC8D3A1149A08372C7D7171FD20D28B925DB28AF">IdentifierTable</h3>
+      <p>public void IdentifierTable(IdentifierInfoLookup * ExternalLookup)</p>
+      <div>
+        <div>
+          <p> Create the identifier table.</p>
+        </div>
+      </div>
+      <h3 id="F72480E3CAEF498277EE013F125DB17D953930CE">IdentifierTable</h3>
+      <p>public void IdentifierTable(const LangOptions &amp; LangOpts, IdentifierInfoLookup * ExternalLookup)</p>
+      <div>
+        <div>
+          <p> Create the identifier table, populating it with info about the language keywords for the language specified by </p>
+        </div>
+      </div>
+      <h3 id="AA8C26B31C2CA529B2D98DB33EB3200B112CFDF3">setExternalIdentifierLookup</h3>
+      <p>public void setExternalIdentifierLookup(IdentifierInfoLookup * IILookup)</p>
+      <p>Defined at line 582 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> Set the external identifier lookup mechanism.</p>
+        </div>
+      </div>
+      <h3 id="F43CBC0E69F85174841D06E373542979D2902D23">getExternalIdentifierLookup</h3>
+      <p>public IdentifierInfoLookup * getExternalIdentifierLookup()</p>
+      <p>Defined at line 587 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> Retrieve the external identifier lookup object, if any.</p>
+        </div>
+      </div>
+      <h3 id="9C822111D1B99E39B5D780509A6D640399D0A23D">getAllocator</h3>
+      <p>public llvm::BumpPtrAllocator &amp; getAllocator()</p>
+      <p>Defined at line 591 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="45BD6E9AC82AE0EDCCE9046CE63C92BF75E74D00">get</h3>
+      <p>
+        public IdentifierInfo &amp; get(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <p>Defined at line 597 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> Return the identifier token info for the specified named identifier.</p>
+        </div>
+      </div>
+      <h3 id="F6E3D47B78C1339BF348ACD3D126E2E290CF2B3C">get</h3>
+      <p>
+        public IdentifierInfo &amp; get(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name, 
+        <a href="../clang/tok/TokenKind.html">TokenKind</a>
+         TokenCode)
+      </p>
+      <p>Defined at line 621 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="9516FEC3DD776FF729A52645A0924D6495A6BFB4">getOwn</h3>
+      <p>
+        public IdentifierInfo &amp; getOwn(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <p>Defined at line 634 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <div>
+        <div>
+          <p> Gets an IdentifierInfo for the given name without consulting        external sources.</p>
+          <p> This is a version of get() meant for external sources that want to introduce or modify an identifier. If they called get(), they would likely end up in a recursion.</p>
+        </div>
+      </div>
+      <h3 id="37CFB08A876CF2ABCECC39B3936E568CC3AEDE40">begin</h3>
+      <p>
+        public 
+        <a href="../llvm/StringMapConstIterator.html">StringMapConstIterator</a>
+         begin()
+      </p>
+      <p>Defined at line 659 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="F40D8961908DE50D379F98944AD5EC005EB504F3">end</h3>
+      <p>
+        public 
+        <a href="../llvm/StringMapConstIterator.html">StringMapConstIterator</a>
+         end()
+      </p>
+      <p>Defined at line 660 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="6BE534E572FDDAC454E3AB3748F0287AD8461369">size</h3>
+      <p>public unsigned int size()</p>
+      <p>Defined at line 661 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="75DE2C7FD8133BBA1A4E084635935EB480CC71BD">find</h3>
+      <p>
+        public 
+        <a href="../llvm/StringMapConstIterator.html">StringMapConstIterator</a>
+         find(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Name)
+      </p>
+      <p>Defined at line 663 of file /usr/lib/llvm-16/include/clang/Basic/IdentifierTable.h</p>
+      <h3 id="6DD82C3165FC578B923FD195543FB4CCCED4921F">PrintStats</h3>
+      <p>public void PrintStats()</p>
+      <div>
+        <div>
+          <p> Print some statistics to stderr that indicate how well the hashing is doing.</p>
+        </div>
+      </div>
+      <h3 id="0C81C5C69B813E9EC7BF21F2040711B1E4A85BA4">AddKeywords</h3>
+      <p>public void AddKeywords(const LangOptions &amp; LangOpts)</p>
+      <div>
+        <div>
+          <p> Populate the identifier table with info about the language keywords for the language specified by </p>
+        </div>
+      </div>
+      <h3 id="DC0A8C718AA691E0A22F31BBBE0AE8E41177EB70">getFutureCompatDiagKind</h3>
+      <p>public diag::kind getFutureCompatDiagKind(const IdentifierInfo &amp; II, const LangOptions &amp; LangOpts)</p>
+      <div>
+        <div>
+          <p> Returns the correct diagnostic to issue for a future-compat diagnostic warning. Note, this function assumes the identifier passed has already been determined to be a future compatible keyword.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#DC8D3A1149A08372C7D7171FD20D28B925DB28AF">IdentifierTable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F72480E3CAEF498277EE013F125DB17D953930CE">IdentifierTable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA8C26B31C2CA529B2D98DB33EB3200B112CFDF3">setExternalIdentifierLookup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F43CBC0E69F85174841D06E373542979D2902D23">getExternalIdentifierLookup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C822111D1B99E39B5D780509A6D640399D0A23D">getAllocator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45BD6E9AC82AE0EDCCE9046CE63C92BF75E74D00">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6E3D47B78C1339BF348ACD3D126E2E290CF2B3C">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9516FEC3DD776FF729A52645A0924D6495A6BFB4">getOwn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37CFB08A876CF2ABCECC39B3936E568CC3AEDE40">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F40D8961908DE50D379F98944AD5EC005EB504F3">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BE534E572FDDAC454E3AB3748F0287AD8461369">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75DE2C7FD8133BBA1A4E084635935EB480CC71BD">find</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6DD82C3165FC578B923FD195543FB4CCCED4921F">PrintStats</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C81C5C69B813E9EC7BF21F2040711B1E4A85BA4">AddKeywords</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC0A8C718AA691E0A22F31BBBE0AE8E41177EB70">getFutureCompatDiagKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

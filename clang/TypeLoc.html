@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TypeLoc</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TypeLoc</h1>
+    <p>Defined at line 58 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+    <div>
+      <div>
+        <p> Base wrapper for a particular &quot;section&quot; of type source info.</p>
+        <p> A client should use the TypeLoc subclasses through castAs()/getAs() in order to get at the actual information.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected const void * Ty</li>
+      <li>protected void * Data</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="87D20EC42CE9D5350EBD162302699827CFEC7E45">TypeLoc</h3>
+      <p>public void TypeLoc()</p>
+      <p>Defined at line 66 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="C33E4D017DB044FFB3A57E473230D2315CB5132C">TypeLoc</h3>
+      <p>
+        public void TypeLoc(
+        <a href="QualType.html">QualType</a>
+         ty, void * opaqueData)
+      </p>
+      <p>Defined at line 67 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="393FED46DCDE7CB163FF0F5720A946558399CC52">TypeLoc</h3>
+      <p>public void TypeLoc(const Type * ty, void * opaqueData)</p>
+      <p>Defined at line 69 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="BF19D00D77B253FB4126516AC310122E448757D9">castAs</h3>
+      <p>public T castAs()</p>
+      <p>Defined at line 77 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Convert to the specified TypeLoc type, asserting that this TypeLoc is of the desired type.</p>
+        </div>
+      </div>
+      <h3 id="910AD68B3585E53A7B17C6DFFA70486F373DA8FA">getAs</h3>
+      <p>public T getAs()</p>
+      <p>Defined at line 88 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Convert to the specified TypeLoc type, returning a null TypeLoc if this TypeLoc is not of the desired type.</p>
+        </div>
+      </div>
+      <h3 id="CCC12EE2748140C73459E1E8C3ED9FB63A8B69F8">getAsAdjusted</h3>
+      <p>public T getAsAdjusted()</p>
+      <p>Defined at line 2631 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Convert to the specified TypeLoc type, returning a null TypeLoc if this TypeLoc is not of the desired type. It will consider type adjustments from a type that was written as a T to another type that is still canonically a T (ignores parens, attributes, elaborated types, etc).</p>
+        </div>
+      </div>
+      <h3 id="AB50FD23286894A6EA25AE5E33C2FA943169DE26">getTypeLocClass</h3>
+      <p>
+        public 
+        <a href="../clang/TypeLoc/TypeLocClass.html">TypeLocClass</a>
+         getTypeLocClass()
+      </p>
+      <p>Defined at line 115 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="67116A0FC440B076DCCF1B1A4897077C931F544A">isNull</h3>
+      <p>public _Bool isNull()</p>
+      <p>Defined at line 120 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="5EF6BE358F5AB056BCDBAE8AD217B0E11840BC2A">operator bool</h3>
+      <p>public _Bool operator bool()</p>
+      <p>Defined at line 121 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="9CE67A3A0564162B40CE9B2505CC66A92B72003D">getFullDataSizeForType</h3>
+      <p>
+        public unsigned int getFullDataSizeForType(
+        <a href="QualType.html">QualType</a>
+         Ty)
+      </p>
+      <div>
+        <div>
+          <p> Returns the size of type source info data block for the given type.</p>
+        </div>
+      </div>
+      <h3 id="0A754C6312A91282CEBDA153DED7722B241B7987">getLocalAlignmentForType</h3>
+      <p>
+        public unsigned int getLocalAlignmentForType(
+        <a href="QualType.html">QualType</a>
+         Ty)
+      </p>
+      <div>
+        <div>
+          <p> Returns the alignment of type source info data block for the given type.</p>
+        </div>
+      </div>
+      <h3 id="7D2826F5A3BFB325DE5F44C52536F612D1EB028E">getType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getType()
+      </p>
+      <p>Defined at line 132 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Get the type for which this source info wrapper provides information.</p>
+        </div>
+      </div>
+      <h3 id="E42184150B8023DA06C06D1D0FB5D40AAA8C0E45">getTypePtr</h3>
+      <p>public const Type * getTypePtr()</p>
+      <p>Defined at line 136 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="6ADABE657E4F5E12D62ABA0C20FC6D603D7DCDE4">getOpaqueData</h3>
+      <p>public void * getOpaqueData()</p>
+      <p>Defined at line 141 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Get the pointer where source information is stored.</p>
+        </div>
+      </div>
+      <h3 id="A6DFF81046AE9C15014541F8BE7A03C52E3978DD">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <div>
+        <div>
+          <p> Get the begin source location.</p>
+        </div>
+      </div>
+      <h3 id="5E190E5273D3FFD741413AC18488321A8052BC98">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <div>
+        <div>
+          <p> Get the end source location.</p>
+        </div>
+      </div>
+      <h3 id="E8799B9C1A0B264ADA8C3DF76A206DD8E461E59D">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 152 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Get the full source range.</p>
+        </div>
+      </div>
+      <h3 id="302FF71ABFEF17D685B3C52EE9FF7FD73697EACE">getLocalSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getLocalSourceRange()
+      </p>
+      <p>Defined at line 158 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Get the local source range.</p>
+        </div>
+      </div>
+      <h3 id="F73EFA4420C23F50DA9C9E719CE75370F75D1D76">getFullDataSize</h3>
+      <p>public unsigned int getFullDataSize()</p>
+      <p>Defined at line 163 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Returns the size of the type source info data block.</p>
+        </div>
+      </div>
+      <h3 id="A8105E008CBE196702AE053C3FF603C2E7105DD2">getNextTypeLoc</h3>
+      <p>
+        public 
+        <a href="TypeLoc.html">TypeLoc</a>
+         getNextTypeLoc()
+      </p>
+      <p>Defined at line 169 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Get the next TypeLoc pointed by this TypeLoc, e.g for &quot;int*&quot; the TypeLoc is a PointerLoc and next TypeLoc is for &quot;int&quot;.</p>
+        </div>
+      </div>
+      <h3 id="BA1270382F6E259865179DD971EBFE13B5375151">getUnqualifiedLoc</h3>
+      <p>
+        public 
+        <a href="UnqualTypeLoc.html">UnqualTypeLoc</a>
+         getUnqualifiedLoc()
+      </p>
+      <p>Defined at line 326 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Skips past any qualifiers, if this is qualified.</p>
+        </div>
+      </div>
+      <h3 id="B80936FD69CF3011B1F285F1551E1482883E7234">IgnoreParens</h3>
+      <p>
+        public 
+        <a href="TypeLoc.html">TypeLoc</a>
+         IgnoreParens()
+      </p>
+      <p>Defined at line 1183 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <h3 id="81C63924871678BC9E5DB09C3430091DB9AB1D46">findExplicitQualifierLoc</h3>
+      <p>
+        public 
+        <a href="TypeLoc.html">TypeLoc</a>
+         findExplicitQualifierLoc()
+      </p>
+      <div>
+        <div>
+          <p> Find a type with the location of an explicit type qualifier.</p>
+          <p> The result, if non-null, will be one of:   QualifiedTypeLoc   AtomicTypeLoc   AttributedTypeLoc, for those type attributes that behave as qualifiers</p>
+        </div>
+      </div>
+      <h3 id="9D1340DB2FE5477EF232D4D0D5B94576D5B29336">getContainedAutoTypeLoc</h3>
+      <p>
+        public 
+        <a href="AutoTypeLoc.html">AutoTypeLoc</a>
+         getContainedAutoTypeLoc()
+      </p>
+      <div>
+        <div>
+          <p> Get the typeloc of an AutoType whose type will be deduced for a variable with an initializer of this type. This looks through declarators like pointer types, but not through decltype or typedefs.</p>
+        </div>
+      </div>
+      <h3 id="4C1EFA4B5615CE1A59214D31A218134904AF7D0B">initialize</h3>
+      <p>
+        public void initialize(ASTContext &amp; Context, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 196 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Initializes this to state that every location in this type is the given location.</p>
+          <p> This method exists to provide a simple transition for code that relies on location-less types.</p>
+        </div>
+      </div>
+      <h3 id="8CFC70F31549430AEF3D1A36FC63EF16CD581DE8">initializeFullCopy</h3>
+      <p>
+        public void initializeFullCopy(
+        <a href="TypeLoc.html">TypeLoc</a>
+         Other)
+      </p>
+      <p>Defined at line 202 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Initializes this by copying its information from another TypeLoc of the same type.</p>
+        </div>
+      </div>
+      <h3 id="833782BAD79BC59EB23AA4D17B282ED8C4A0DB68">initializeFullCopy</h3>
+      <p>
+        public void initializeFullCopy(
+        <a href="TypeLoc.html">TypeLoc</a>
+         Other, unsigned int Size)
+      </p>
+      <p>Defined at line 210 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> Initializes this by copying its information from another TypeLoc of the same type.  The given size must be the full data size.</p>
+        </div>
+      </div>
+      <h3 id="289318A5497F84C6BCFFFBBA6A8FB701AC7E3E5E">copy</h3>
+      <p>
+        public void copy(
+        <a href="TypeLoc.html">TypeLoc</a>
+         other)
+      </p>
+      <div>
+        <div>
+          <p> Copies the other type loc into this one.</p>
+        </div>
+      </div>
+      <h3 id="D91679100ED4E150C109D1830FC44AECF5650D48">findNullabilityLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         findNullabilityLoc()
+      </p>
+      <div>
+        <div>
+          <p> Find the location of the nullability specifier (__nonnull, __nullable, or __null_unspecifier), if there is one.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="030F073C50922420AED08A95152BA002E27E7A75">enum TypeLocClass</h3>
+      <ul>
+        <li>Adjusted</li>
+        <li>Decayed</li>
+        <li>ConstantArray</li>
+        <li>DependentSizedArray</li>
+        <li>IncompleteArray</li>
+        <li>VariableArray</li>
+        <li>Atomic</li>
+        <li>Attributed</li>
+        <li>BTFTagAttributed</li>
+        <li>BitInt</li>
+        <li>BlockPointer</li>
+        <li>Builtin</li>
+        <li>Complex</li>
+        <li>Decltype</li>
+        <li>Auto</li>
+        <li>DeducedTemplateSpecialization</li>
+        <li>DependentAddressSpace</li>
+        <li>DependentBitInt</li>
+        <li>DependentName</li>
+        <li>DependentSizedExtVector</li>
+        <li>DependentTemplateSpecialization</li>
+        <li>DependentVector</li>
+        <li>Elaborated</li>
+        <li>FunctionNoProto</li>
+        <li>FunctionProto</li>
+        <li>InjectedClassName</li>
+        <li>MacroQualified</li>
+        <li>ConstantMatrix</li>
+        <li>DependentSizedMatrix</li>
+        <li>MemberPointer</li>
+        <li>ObjCObjectPointer</li>
+        <li>ObjCObject</li>
+        <li>ObjCInterface</li>
+        <li>ObjCTypeParam</li>
+        <li>PackExpansion</li>
+        <li>Paren</li>
+        <li>Pipe</li>
+        <li>Pointer</li>
+        <li>LValueReference</li>
+        <li>RValueReference</li>
+        <li>SubstTemplateTypeParmPack</li>
+        <li>SubstTemplateTypeParm</li>
+        <li>Enum</li>
+        <li>Record</li>
+        <li>TemplateSpecialization</li>
+        <li>TemplateTypeParm</li>
+        <li>TypeOfExpr</li>
+        <li>TypeOf</li>
+        <li>Typedef</li>
+        <li>UnaryTransform</li>
+        <li>UnresolvedUsing</li>
+        <li>Using</li>
+        <li>Vector</li>
+        <li>ExtVector</li>
+        <li>Qualified</li>
+      </ul>
+      <p>Defined at line 107 of file /usr/lib/llvm-16/include/clang/AST/TypeLoc.h</p>
+      <div>
+        <div>
+          <p> The kinds of TypeLocs.  Equivalent to the Type::TypeClass enum, except it also defines a Qualified enum that corresponds to the QualifiedLoc class.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#87D20EC42CE9D5350EBD162302699827CFEC7E45">TypeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C33E4D017DB044FFB3A57E473230D2315CB5132C">TypeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#393FED46DCDE7CB163FF0F5720A946558399CC52">TypeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF19D00D77B253FB4126516AC310122E448757D9">castAs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#910AD68B3585E53A7B17C6DFFA70486F373DA8FA">getAs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CCC12EE2748140C73459E1E8C3ED9FB63A8B69F8">getAsAdjusted</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB50FD23286894A6EA25AE5E33C2FA943169DE26">getTypeLocClass</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67116A0FC440B076DCCF1B1A4897077C931F544A">isNull</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5EF6BE358F5AB056BCDBAE8AD217B0E11840BC2A">operator bool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9CE67A3A0564162B40CE9B2505CC66A92B72003D">getFullDataSizeForType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A754C6312A91282CEBDA153DED7722B241B7987">getLocalAlignmentForType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7D2826F5A3BFB325DE5F44C52536F612D1EB028E">getType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E42184150B8023DA06C06D1D0FB5D40AAA8C0E45">getTypePtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6ADABE657E4F5E12D62ABA0C20FC6D603D7DCDE4">getOpaqueData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6DFF81046AE9C15014541F8BE7A03C52E3978DD">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E190E5273D3FFD741413AC18488321A8052BC98">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8799B9C1A0B264ADA8C3DF76A206DD8E461E59D">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#302FF71ABFEF17D685B3C52EE9FF7FD73697EACE">getLocalSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F73EFA4420C23F50DA9C9E719CE75370F75D1D76">getFullDataSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8105E008CBE196702AE053C3FF603C2E7105DD2">getNextTypeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA1270382F6E259865179DD971EBFE13B5375151">getUnqualifiedLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B80936FD69CF3011B1F285F1551E1482883E7234">IgnoreParens</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81C63924871678BC9E5DB09C3430091DB9AB1D46">findExplicitQualifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D1340DB2FE5477EF232D4D0D5B94576D5B29336">getContainedAutoTypeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C1EFA4B5615CE1A59214D31A218134904AF7D0B">initialize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CFC70F31549430AEF3D1A36FC63EF16CD581DE8">initializeFullCopy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#833782BAD79BC59EB23AA4D17B282ED8C4A0DB68">initializeFullCopy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#289318A5497F84C6BCFFFBBA6A8FB701AC7E3E5E">copy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D91679100ED4E150C109D1830FC44AECF5650D48">findNullabilityLoc</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#030F073C50922420AED08A95152BA002E27E7A75">TypeLocClass</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

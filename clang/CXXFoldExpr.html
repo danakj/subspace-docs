@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXFoldExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXFoldExpr</h1>
+    <p>Defined at line 4624 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a folding of a pack over an operator.</p>
+        <p> This expression is always dependent and represents a pack expansion of the forms:</p>
+        <p>    ( expr op ... )    ( ... op expr )    ( expr op ... op expr )</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="910F6C46FF76458FAC5C96F9A02318723A464A67">CXXFoldExpr</h3>
+      <p>
+        public void CXXFoldExpr(
+        <a href="QualType.html">QualType</a>
+         T, UnresolvedLookupExpr * Callee, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, Expr * LHS, 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Opcode, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EllipsisLoc, Expr * RHS, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParenLoc, 
+        <a href="../std/optional.html">optional</a>
+         NumExpansions)
+      </p>
+      <p>Defined at line 4640 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="92B7253BE9EBE5CC3F04890518E32E2FB2A39E9A">CXXFoldExpr</h3>
+      <p>
+        public void CXXFoldExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 4653 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="D595E1B382F1A6556373560BD2E9B6751BF9B367">getCallee</h3>
+      <p>public UnresolvedLookupExpr * getCallee()</p>
+      <p>Defined at line 4655 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="60081D8B1F0022ADEF31F94C08533F4F40495596">getLHS</h3>
+      <p>public Expr * getLHS()</p>
+      <p>Defined at line 4658 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="024EF86EF3E6F003B817B12CB6169364B6CDFDD4">getRHS</h3>
+      <p>public Expr * getRHS()</p>
+      <p>Defined at line 4659 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="F73DBD465841ABB8EA42D3997F24ECCF4F8B29B6">isRightFold</h3>
+      <p>public _Bool isRightFold()</p>
+      <p>Defined at line 4662 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Does this produce a right-associated sequence of operators?</p>
+        </div>
+      </div>
+      <h3 id="0149375E2EC7C2242D13202238257667465413B4">isLeftFold</h3>
+      <p>public _Bool isLeftFold()</p>
+      <p>Defined at line 4667 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Does this produce a left-associated sequence of operators?</p>
+        </div>
+      </div>
+      <h3 id="73E930087C4EA1BD081D202CB0BB883D4F129314">getPattern</h3>
+      <p>public Expr * getPattern()</p>
+      <p>Defined at line 4670 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the pattern, that is, the operand that contains an unexpanded pack.</p>
+        </div>
+      </div>
+      <h3 id="38FBB6EA43C8FC4DE4840DD75D46A00438FF270F">getInit</h3>
+      <p>public Expr * getInit()</p>
+      <p>Defined at line 4673 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the operand that doesn&apos;t contain a pack, for a binary fold.</p>
+        </div>
+      </div>
+      <h3 id="16863A5796ECE7A8E2B998EA84F4CFE6E2B000E8">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 4675 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="AA6FB0FD0E02DC1A8A46098D55C91321AF2D4C47">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 4676 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="41197113B745245EEBE9FFDF538CD65CB1853DCC">getEllipsisLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEllipsisLoc()
+      </p>
+      <p>Defined at line 4677 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="63DAEE330AEEB23991C6923C6B0D8713B66F2DE8">getOperator</h3>
+      <p>
+        public 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         getOperator()
+      </p>
+      <p>Defined at line 4678 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B3BF7167998CDC8B97C8A5FC7529D3CEE4C014DE">getNumExpansions</h3>
+      <p>
+        public 
+        <a href="../std/optional.html">optional</a>
+         getNumExpansions()
+      </p>
+      <p>Defined at line 4680 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="AD91AEA2F3CF6B77D54984863C7053C93C7E7DED">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 4686 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="74A1903F2614CC7B8620AF61D70C460EE5EFBC73">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 4694 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="87A260C0083559E28E18FF8C90CBB21ADDC964C6">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 4702 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="1E49F2BECB488D10E4838342C247A4D2C0F2108B">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4707 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="240B3872010DD4EA4E1BB762020BA96CE663A6DD">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4711 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#910F6C46FF76458FAC5C96F9A02318723A464A67">CXXFoldExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92B7253BE9EBE5CC3F04890518E32E2FB2A39E9A">CXXFoldExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D595E1B382F1A6556373560BD2E9B6751BF9B367">getCallee</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#60081D8B1F0022ADEF31F94C08533F4F40495596">getLHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#024EF86EF3E6F003B817B12CB6169364B6CDFDD4">getRHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F73DBD465841ABB8EA42D3997F24ECCF4F8B29B6">isRightFold</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0149375E2EC7C2242D13202238257667465413B4">isLeftFold</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73E930087C4EA1BD081D202CB0BB883D4F129314">getPattern</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38FBB6EA43C8FC4DE4840DD75D46A00438FF270F">getInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16863A5796ECE7A8E2B998EA84F4CFE6E2B000E8">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA6FB0FD0E02DC1A8A46098D55C91321AF2D4C47">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#41197113B745245EEBE9FFDF538CD65CB1853DCC">getEllipsisLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63DAEE330AEEB23991C6923C6B0D8713B66F2DE8">getOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3BF7167998CDC8B97C8A5FC7529D3CEE4C014DE">getNumExpansions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD91AEA2F3CF6B77D54984863C7053C93C7E7DED">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#74A1903F2614CC7B8620AF61D70C460EE5EFBC73">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87A260C0083559E28E18FF8C90CBB21ADDC964C6">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E49F2BECB488D10E4838342C247A4D2C0F2108B">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#240B3872010DD4EA4E1BB762020BA96CE663A6DD">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

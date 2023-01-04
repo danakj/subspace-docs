@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Expected</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Expected</h1>
+    <p>Defined at line 470 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+    <div>
+      <div>
+        <p> Expected&lt;T&gt; needs to be able to steal the payload when constructed from an error.</p>
+      </div>
+      <div>
+        <p> Tagged union holding either a T or a Error.</p>
+        <p> This class parallels ErrorOr, but replaces error_code with Error. Since Error cannot be copied, this class replaces getError() with takeError(). It also adds an bool errorIsA&lt;ErrT&gt;() method for testing the error class type.</p>
+        <p> Example usage of &apos;Expected&lt;T&gt;&apos; as a function return type:</p>
+        <p>   Checking the results of to a function returning &apos;Expected&lt;T&gt;&apos;:</p>
+        <p>  For unit-testing a function returning an &apos;Expected&lt;T&gt;&apos;, see the  &apos;EXPECT_THAT_EXPECTED&apos; macros in llvm/Testing/Support/Error.h</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3F08CA7A344B9A628FD848846932BCC2642B7358">Expected&lt;T&gt;</h3>
+      <p>
+        public void Expected&lt;T&gt;(
+        <a href="Error.html">Error</a>
+         Err)
+      </p>
+      <p>Defined at line 492 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Create an Expected&lt;T&gt; error value from the given Error.</p>
+        </div>
+      </div>
+      <h3 id="6A54F895CB1BEAEDA2F7341C3F21C6493E2E80DA">Expected&lt;T&gt;</h3>
+      <p>
+        public void Expected&lt;T&gt;(
+        <a href="ErrorSuccess.html">ErrorSuccess</a>
+         )
+      </p>
+      <p>Defined at line 506 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Forbid to convert from Error::success() implicitly, this avoids having Expected&lt;T&gt; foo() { return Error::success(); } which compiles otherwise but triggers the assertion above.</p>
+        </div>
+      </div>
+      <h3 id="A8D61D1A6444AD00B75644B653D9C63CD73743E0">Expected&lt;T&gt;</h3>
+      <p>public void Expected&lt;T&gt;(OtherT &amp;&amp; Val, std::enable_if_t&lt;std::is_convertible_v&lt;OtherT, T&gt; &gt; * )</p>
+      <p>Defined at line 511 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Create an Expected&lt;T&gt; success value from the given OtherT value, which must be convertible to T.</p>
+        </div>
+      </div>
+      <h3 id="820AC2AFC2322503F19B7551BAAF8FBBCB465FBA">Expected&lt;T&gt;</h3>
+      <p>public void Expected&lt;T&gt;(Expected&lt;T&gt; &amp;&amp; Other)</p>
+      <p>Defined at line 524 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Move construct an Expected&lt;T&gt; value.</p>
+        </div>
+      </div>
+      <h3 id="0C24944EBA2000F6CB79785F43A76406369A345A">Expected&lt;T&gt;</h3>
+      <p>public void Expected&lt;T&gt;(Expected&lt;OtherT&gt; &amp;&amp; Other, std::enable_if_t&lt;std::is_convertible_v&lt;OtherT, T&gt; &gt; * )</p>
+      <p>Defined at line 529 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Move construct an Expected&lt;T&gt; value from an Expected&lt;OtherT&gt;, where OtherT must be convertible to T.</p>
+        </div>
+      </div>
+      <h3 id="51CF87E35F81EAF0029C1F45DAFF957D704CCDF7">Expected&lt;T&gt;</h3>
+      <p>public void Expected&lt;T&gt;(Expected&lt;OtherT&gt; &amp;&amp; Other, std::enable_if_t&lt;!std::is_convertible_v&lt;OtherT, T&gt; &gt; * )</p>
+      <p>Defined at line 537 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Move construct an Expected&lt;T&gt; value from an Expected&lt;OtherT&gt;, where OtherT isn&apos;t convertible to T.</p>
+        </div>
+      </div>
+      <h3 id="4B1E8E43BB457028531FC054382BA4253CA528EA">operator=</h3>
+      <p>public Expected&lt;T&gt; &amp; operator=(Expected&lt;T&gt; &amp;&amp; Other)</p>
+      <p>Defined at line 544 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Move-assign from another Expected&lt;T&gt;.</p>
+        </div>
+      </div>
+      <h3 id="A43C4EFE4C24734233927B56D3B2AA40FCD430DA">~Expected&lt;T&gt;</h3>
+      <p>public void ~Expected&lt;T&gt;()</p>
+      <p>Defined at line 550 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Destroy an Expected&lt;T&gt;.</p>
+        </div>
+      </div>
+      <h3 id="4E25942D171BB94280D4D4B70B611048E21C2FFB">operator bool</h3>
+      <p>public _Bool operator bool()</p>
+      <p>Defined at line 559 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Return false if there is an error.</p>
+        </div>
+      </div>
+      <h3 id="271698ABC69C102346F54417DD6AF1E954245997">get</h3>
+      <p>public reference get()</p>
+      <p>Defined at line 567 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Returns a reference to the stored T value.</p>
+        </div>
+      </div>
+      <h3 id="4E1958999E75E170CB44281E509C2D07B1EDFEA7">get</h3>
+      <p>public const_reference get()</p>
+      <p>Defined at line 573 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Returns a const reference to the stored T value.</p>
+        </div>
+      </div>
+      <h3 id="C193CD73C6A46C26B7940900B8B5906DAA91BF32">moveInto</h3>
+      <p>
+        public 
+        <a href="Error.html">Error</a>
+         moveInto(OtherT &amp; Value, std::enable_if_t&lt;std::is_assignable&lt;OtherT &amp;, T &amp;&amp;&gt;::value&gt; * )
+      </p>
+      <p>Defined at line 580 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Returns  after moving the held T (if any) into </p>
+        </div>
+      </div>
+      <h3 id="EA20847E5DBB0DA130279F30B1B65B7E0A0183B6">errorIsA</h3>
+      <p>public _Bool errorIsA()</p>
+      <p>Defined at line 589 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Check that this Expected&lt;T&gt; is an error of type ErrT.</p>
+        </div>
+      </div>
+      <h3 id="DDF1F7A85A31AFA1F0A42F9218C09573175D90F7">takeError</h3>
+      <p>
+        public 
+        <a href="Error.html">Error</a>
+         takeError()
+      </p>
+      <p>Defined at line 597 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Take ownership of the stored error. After calling this the Expected&lt;T&gt; is in an indeterminate state that can only be safely destructed. No further calls (beside the destructor) should be made on the Expected&lt;T&gt; value.</p>
+        </div>
+      </div>
+      <h3 id="2555134698B8853653795FCEEA352F58487E1342">operator-&gt;</h3>
+      <p>public pointer operator-&gt;()</p>
+      <p>Defined at line 605 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Returns a pointer to the stored T value.</p>
+        </div>
+      </div>
+      <h3 id="AE075CAD7BA2BD1F0B13AE774898AB737B2EA492">operator-&gt;</h3>
+      <p>public const_pointer operator-&gt;()</p>
+      <p>Defined at line 611 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Returns a const pointer to the stored T value.</p>
+        </div>
+      </div>
+      <h3 id="2ECC759091982D5EA4F1FE11D09C480EEA8A6FFE">operator*</h3>
+      <p>public reference operator*()</p>
+      <p>Defined at line 617 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Returns a reference to the stored T value.</p>
+        </div>
+      </div>
+      <h3 id="22B46F831B00DEED02D14A539A448BA786889B8A">operator*</h3>
+      <p>public const_reference operator*()</p>
+      <p>Defined at line 623 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <div>
+        <div>
+          <p> Returns a const reference to the stored T value.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3F08CA7A344B9A628FD848846932BCC2642B7358">Expected&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A54F895CB1BEAEDA2F7341C3F21C6493E2E80DA">Expected&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8D61D1A6444AD00B75644B653D9C63CD73743E0">Expected&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#820AC2AFC2322503F19B7551BAAF8FBBCB465FBA">Expected&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C24944EBA2000F6CB79785F43A76406369A345A">Expected&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#51CF87E35F81EAF0029C1F45DAFF957D704CCDF7">Expected&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B1E8E43BB457028531FC054382BA4253CA528EA">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A43C4EFE4C24734233927B56D3B2AA40FCD430DA">~Expected&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E25942D171BB94280D4D4B70B611048E21C2FFB">operator bool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#271698ABC69C102346F54417DD6AF1E954245997">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E1958999E75E170CB44281E509C2D07B1EDFEA7">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C193CD73C6A46C26B7940900B8B5906DAA91BF32">moveInto</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA20847E5DBB0DA130279F30B1B65B7E0A0183B6">errorIsA</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DDF1F7A85A31AFA1F0A42F9218C09573175D90F7">takeError</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2555134698B8853653795FCEEA352F58487E1342">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE075CAD7BA2BD1F0B13AE774898AB737B2EA492">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2ECC759091982D5EA4F1FE11D09C480EEA8A6FFE">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22B46F831B00DEED02D14A539A448BA786889B8A">operator*</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

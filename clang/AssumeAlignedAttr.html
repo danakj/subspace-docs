@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AssumeAlignedAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AssumeAlignedAttr</h1>
+    <p>Defined at line 1579 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2B4F4B6A68803954A644E6347C38462C86205912">CreateImplicit</h3>
+      <p>public AssumeAlignedAttr * CreateImplicit(ASTContext &amp; Ctx, Expr * Alignment, Expr * Offset, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="3443873B1DA80054D6A6C1A812A5F085C1603BD3">Create</h3>
+      <p>public AssumeAlignedAttr * Create(ASTContext &amp; Ctx, Expr * Alignment, Expr * Offset, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="C4F88C2B91DF6D7EBBEC725E4F710E08B1AA63B5">CreateImplicit</h3>
+      <p>
+        public AssumeAlignedAttr * CreateImplicit(ASTContext &amp; Ctx, Expr * Alignment, Expr * Offset, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="E6510D6913A5793DB4DD34F61B226B630A4134C8">Create</h3>
+      <p>
+        public AssumeAlignedAttr * Create(ASTContext &amp; Ctx, Expr * Alignment, Expr * Offset, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="8F6F43A4E9B2981AAEBF3243B218A6FD3D27AA64">AssumeAlignedAttr</h3>
+      <p>public void AssumeAlignedAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, Expr * Alignment, Expr * Offset)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="39F2020A73716C5D849360FB23DAC72BAB78500D">AssumeAlignedAttr</h3>
+      <p>public void AssumeAlignedAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, Expr * Alignment)</p>
+      <h3 id="37C696357A1BA6FFAF60D6F8F11FA0D5FACD41A7">clone</h3>
+      <p>public AssumeAlignedAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="BAF2C376C3F0B923E9832116112AB8236D71F9D1">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="F722F22CCBDFD17B065C976B496EB578FBFFD8D2">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="3EEADC38737B4D795E9622ED0900AB0BE09E2BBA">getAlignment</h3>
+      <p>public Expr * getAlignment()</p>
+      <p>Defined at line 1612 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="6AA78DC9323979CD63B2A60E34DDE66B6148389C">getOffset</h3>
+      <p>public Expr * getOffset()</p>
+      <p>Defined at line 1616 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="0D736E91FFBBECCFCD0801D5C9D6B8E4256CF586">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 1622 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="812F6AE74CEE1E80BFDDCF8CF78754458F3805DB">enum Spelling</h3>
+      <ul>
+        <li>GNU_assume_aligned</li>
+        <li>CXX11_gnu_assume_aligned</li>
+        <li>C2x_gnu_assume_aligned</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 1585 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2B4F4B6A68803954A644E6347C38462C86205912">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3443873B1DA80054D6A6C1A812A5F085C1603BD3">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4F88C2B91DF6D7EBBEC725E4F710E08B1AA63B5">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6510D6913A5793DB4DD34F61B226B630A4134C8">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F6F43A4E9B2981AAEBF3243B218A6FD3D27AA64">AssumeAlignedAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39F2020A73716C5D849360FB23DAC72BAB78500D">AssumeAlignedAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37C696357A1BA6FFAF60D6F8F11FA0D5FACD41A7">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BAF2C376C3F0B923E9832116112AB8236D71F9D1">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F722F22CCBDFD17B065C976B496EB578FBFFD8D2">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EEADC38737B4D795E9622ED0900AB0BE09E2BBA">getAlignment</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AA78DC9323979CD63B2A60E34DDE66B6148389C">getOffset</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D736E91FFBBECCFCD0801D5C9D6B8E4256CF586">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#812F6AE74CEE1E80BFDDCF8CF78754458F3805DB">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

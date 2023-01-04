@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Regex</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Regex</h1>
+    <p>Defined at line 28 of file /usr/lib/llvm-16/include/llvm/Support/Regex.h</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8206B42271D5F6535523B66BE35EE81E8AF369D1">Regex</h3>
+      <p>public void Regex()</p>
+      <h3 id="99A65865DBD627F3A95621E4E0A70A8CFFE6F97C">Regex</h3>
+      <p>
+        public void Regex(
+        <a href="StringRef.html">StringRef</a>
+         Regex, 
+        <a href="../llvm/Regex/RegexFlags.html">RegexFlags</a>
+         Flags)
+      </p>
+      <div>
+        <div>
+          <p> Compiles the given regular expression </p>
+        </div>
+      </div>
+      <h3 id="9A99C2A4DA40BA46C612F2DACABA5DDCA538514A">Regex</h3>
+      <p>
+        public void Regex(
+        <a href="StringRef.html">StringRef</a>
+         Regex, unsigned int Flags)
+      </p>
+      <h3 id="D396EBC4935A48C5798613AC078236B9BD58C67D">Regex</h3>
+      <p>public void Regex(const Regex &amp; )</p>
+      <p>Defined at line 55 of file /usr/lib/llvm-16/include/llvm/Support/Regex.h</p>
+      <h3 id="F078B641616221753950CB2BD8E19E5517516681">operator=</h3>
+      <p>
+        public Regex &amp; operator=(
+        <a href="Regex.html">Regex</a>
+         regex)
+      </p>
+      <p>Defined at line 56 of file /usr/lib/llvm-16/include/llvm/Support/Regex.h</p>
+      <h3 id="F4575F9A7192CB0FFBC7206C4E1F847AC00DD1E9">Regex</h3>
+      <p>public void Regex(Regex &amp;&amp; regex)</p>
+      <h3 id="FEAE8E7FBC64C9E64536499B469FE430D6F8E110">~Regex</h3>
+      <p>public void ~Regex()</p>
+      <h3 id="357FA593E5B712911F62C3875BB0CC012E4CD0B6">isValid</h3>
+      <p>public _Bool isValid(std::string &amp; Error)</p>
+      <div>
+        <div>
+          <p> isValid - returns the error encountered during regex compilation, if any.</p>
+        </div>
+      </div>
+      <h3 id="9CE0DD4CAB33FFF74FC2E089536C7C4BC30AE30F">isValid</h3>
+      <p>public _Bool isValid()</p>
+      <p>Defined at line 67 of file /usr/lib/llvm-16/include/llvm/Support/Regex.h</p>
+      <h3 id="DBC5D2BACA5D920E939AAA6C212A15F85AB1E44E">getNumMatches</h3>
+      <p>public unsigned int getNumMatches()</p>
+      <div>
+        <div>
+          <p> getNumMatches - In a valid regex, return the number of parenthesized matches it contains.  The number filled in by match will include this many entries plus one for the whole regex (as element 0).</p>
+        </div>
+      </div>
+      <h3 id="732434F48878C8A1E92FE5FD4F7BDE2112DBCDB0">match</h3>
+      <p>
+        public _Bool match(
+        <a href="StringRef.html">StringRef</a>
+         String, SmallVectorImpl&lt;StringRef&gt; * Matches, std::string * Error)
+      </p>
+      <div>
+        <div>
+          <p> matches - Match the regex against a given </p>
+          <p> This returns true on a successful match.</p>
+        </div>
+      </div>
+      <h3 id="E52D9666C4876FC122E5A07BB7E4117FD57288BD">sub</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         sub(
+        <a href="StringRef.html">StringRef</a>
+         Repl, 
+        <a href="StringRef.html">StringRef</a>
+         String, std::string * Error)
+      </p>
+      <div>
+        <div>
+          <p> sub - Return the result of replacing the first match of the regex in with the  string. Backreferences like &quot;\0&quot; in the replacement string are replaced with the appropriate match substring.</p>
+          <p> Note that the replacement string has backslash escaping performed on it. Invalid backreferences are ignored (replaced by empty strings).</p>
+        </div>
+      </div>
+      <h3 id="D10820CF3DDC9D7CD1C9F83FE38EBAFB2D24E6AC">isLiteralERE</h3>
+      <p>
+        public _Bool isLiteralERE(
+        <a href="StringRef.html">StringRef</a>
+         Str)
+      </p>
+      <div>
+        <div>
+          <p> If this function returns true, ^Str$ is an extended regular expression that matches Str and only Str.</p>
+        </div>
+      </div>
+      <h3 id="EBA35EAAAB80FBC9D843EF322763B885EEE1C628">escape</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         escape(
+        <a href="StringRef.html">StringRef</a>
+         String)
+      </p>
+      <div>
+        <div>
+          <p> Turn String into a regex by escaping its special characters.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="EF8BC57662AB1CBB6367D8AF4F961F267C5C8CB5">enum RegexFlags</h3>
+      <ul>
+        <li>NoFlags</li>
+        <li>IgnoreCase</li>
+        <li>Newline</li>
+        <li>BasicRegex</li>
+        <li>LLVM_BITMASK_LARGEST_ENUMERATOR</li>
+      </ul>
+      <p>Defined at line 30 of file /usr/lib/llvm-16/include/llvm/Support/Regex.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8206B42271D5F6535523B66BE35EE81E8AF369D1">Regex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99A65865DBD627F3A95621E4E0A70A8CFFE6F97C">Regex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A99C2A4DA40BA46C612F2DACABA5DDCA538514A">Regex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D396EBC4935A48C5798613AC078236B9BD58C67D">Regex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F078B641616221753950CB2BD8E19E5517516681">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F4575F9A7192CB0FFBC7206C4E1F847AC00DD1E9">Regex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FEAE8E7FBC64C9E64536499B469FE430D6F8E110">~Regex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#357FA593E5B712911F62C3875BB0CC012E4CD0B6">isValid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9CE0DD4CAB33FFF74FC2E089536C7C4BC30AE30F">isValid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DBC5D2BACA5D920E939AAA6C212A15F85AB1E44E">getNumMatches</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#732434F48878C8A1E92FE5FD4F7BDE2112DBCDB0">match</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E52D9666C4876FC122E5A07BB7E4117FD57288BD">sub</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D10820CF3DDC9D7CD1C9F83FE38EBAFB2D24E6AC">isLiteralERE</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EBA35EAAAB80FBC9D843EF322763B885EEE1C628">escape</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#EF8BC57662AB1CBB6367D8AF4F961F267C5C8CB5">RegexFlags</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

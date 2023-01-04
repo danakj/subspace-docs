@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TemplateArgumentListInfo</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TemplateArgumentListInfo</h1>
+    <p>Defined at line 564 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+    <div>
+      <div>
+        <p> A convenient class for passing around template argument information.  Designed to be passed by reference.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="75072BFBF01A1CF2D75C336A341827F99B9132B0">TemplateArgumentListInfo</h3>
+      <p>public void TemplateArgumentListInfo()</p>
+      <p>Defined at line 570 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="6E23C81A5DAB0C1435938491B12D649FA6DDD2A5">TemplateArgumentListInfo</h3>
+      <p>
+        public void TemplateArgumentListInfo(
+        <a href="SourceLocation.html">SourceLocation</a>
+         LAngleLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RAngleLoc)
+      </p>
+      <p>Defined at line 572 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="0A9D6E3F340BE82DA64092E2E5E2BD3B3FC5A8C0">operator new</h3>
+      <p>public void * operator new(size_t bytes, ASTContext &amp; C)</p>
+      <p>Defined at line 578 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <div>
+        <div>
+          <p> This can leak if used in an AST node, use ASTTemplateArgumentListInfo instead.</p>
+        </div>
+      </div>
+      <h3 id="FBAB891E60EC12E702032987B0AE6423272CA604">getLAngleLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLAngleLoc()
+      </p>
+      <p>Defined at line 580 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="8DD7B3964BE12B951C44080A2BE5AD77820E5642">getRAngleLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRAngleLoc()
+      </p>
+      <p>Defined at line 581 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="0F57F7D532F06C15D0C215AC80F629B5915A3BDF">setLAngleLoc</h3>
+      <p>
+        public void setLAngleLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 583 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="EACE13B992341FD471D678D680CD6046B6C9E6C8">setRAngleLoc</h3>
+      <p>
+        public void setRAngleLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 584 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="BE851B0F109EE7FBABC73A3B8D2047FBB07C546F">size</h3>
+      <p>public unsigned int size()</p>
+      <p>Defined at line 586 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="9D6BC40AD792A7A2213107160E3014245CD2AC37">getArgumentArray</h3>
+      <p>public const TemplateArgumentLoc * getArgumentArray()</p>
+      <p>Defined at line 588 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="5CB3C91F467A81246DB0D965E99FE072E036E645">arguments</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         arguments()
+      </p>
+      <p>Defined at line 592 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="D6EF1F36603C4DEE9AF8075AED88FE8A949AB8B1">operator[]</h3>
+      <p>public const TemplateArgumentLoc &amp; operator[](unsigned int I)</p>
+      <p>Defined at line 596 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="8E6779EFB7CD651BEA7645D09417A7EADE82730C">operator[]</h3>
+      <p>public TemplateArgumentLoc &amp; operator[](unsigned int I)</p>
+      <p>Defined at line 600 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+      <h3 id="C796B774557E530E626F82D46D43D17F84E8B5AE">addArgument</h3>
+      <p>public void addArgument(const TemplateArgumentLoc &amp; Loc)</p>
+      <p>Defined at line 604 of file /usr/lib/llvm-16/include/clang/AST/TemplateBase.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#75072BFBF01A1CF2D75C336A341827F99B9132B0">TemplateArgumentListInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E23C81A5DAB0C1435938491B12D649FA6DDD2A5">TemplateArgumentListInfo</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A9D6E3F340BE82DA64092E2E5E2BD3B3FC5A8C0">operator new</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBAB891E60EC12E702032987B0AE6423272CA604">getLAngleLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DD7B3964BE12B951C44080A2BE5AD77820E5642">getRAngleLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F57F7D532F06C15D0C215AC80F629B5915A3BDF">setLAngleLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EACE13B992341FD471D678D680CD6046B6C9E6C8">setRAngleLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE851B0F109EE7FBABC73A3B8D2047FBB07C546F">size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D6BC40AD792A7A2213107160E3014245CD2AC37">getArgumentArray</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5CB3C91F467A81246DB0D965E99FE072E036E645">arguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D6EF1F36603C4DEE9AF8075AED88FE8A949AB8B1">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E6779EFB7CD651BEA7645D09417A7EADE82730C">operator[]</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C796B774557E530E626F82D46D43D17F84E8B5AE">addArgument</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

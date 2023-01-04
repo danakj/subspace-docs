@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CompilationDatabase</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/tooling" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CompilationDatabase</h1>
+    <p>Defined at line 87 of file /usr/lib/llvm-16/include/clang/Tooling/CompilationDatabase.h</p>
+    <div>
+      <div>
+        <p> Interface for compilation databases.</p>
+        <p> A compilation database allows the user to retrieve compile command lines for the files in a project.</p>
+        <p> Many implementations are enumerable, allowing all command lines to be retrieved. These can be used to run clang tools over a subset of the files in a project.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="97BFDDE566DC7D24C92467B30CC85C20764E9AE6">~CompilationDatabase</h3>
+      <p>public void ~CompilationDatabase()</p>
+      <h3 id="E25A641E95F60D8EDCF2C8386ABB2675E3205B80">loadFromDirectory</h3>
+      <p>
+        public std::unique_ptr&lt;CompilationDatabase&gt; loadFromDirectory(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         BuildDirectory, std::string &amp; ErrorMessage)
+      </p>
+      <div>
+        <div>
+          <p> Loads a compilation database from a build directory.</p>
+          <p> Looks at the specified &apos;BuildDirectory&apos; and creates a compilation database that allows to query compile commands for source files in the corresponding source tree.</p>
+          <p> Returns NULL and sets ErrorMessage if we were not able to build up a compilation database for the build directory.</p>
+          <p> FIXME: Currently only supports JSON compilation databases, which are named &apos;compile_commands.json&apos; in the given directory. Extend this for other build types (like ninja build files).</p>
+        </div>
+      </div>
+      <h3 id="16DD19074E19A28DFA42D102055BE1214C468884">autoDetectFromSource</h3>
+      <p>
+        public std::unique_ptr&lt;CompilationDatabase&gt; autoDetectFromSource(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         SourceFile, std::string &amp; ErrorMessage)
+      </p>
+      <div>
+        <div>
+          <p> Tries to detect a compilation database location and load it.</p>
+          <p> Looks for a compilation database in all parent paths of file &apos;SourceFile&apos; by calling loadFromDirectory.</p>
+        </div>
+      </div>
+      <h3 id="8E599CB98D96A1F0BF2EFEC1E209E239481D8918">autoDetectFromDirectory</h3>
+      <p>
+        public std::unique_ptr&lt;CompilationDatabase&gt; autoDetectFromDirectory(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         SourceDir, std::string &amp; ErrorMessage)
+      </p>
+      <div>
+        <div>
+          <p> Tries to detect a compilation database location and load it.</p>
+          <p> Looks for a compilation database in directory &apos;SourceDir&apos; and all its parent paths by calling loadFromDirectory.</p>
+        </div>
+      </div>
+      <h3 id="CA03A7E4B0F1AB0DBCF53C7524DDEB9408626AAC">getCompileCommands</h3>
+      <p>
+        public 
+        <a href="../../std/vector.html">vector</a>
+         getCompileCommands(
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         FilePath)
+      </p>
+      <div>
+        <div>
+          <p> Returns all compile commands in which the specified file was compiled.</p>
+          <p> This includes compile commands that span multiple source files. For example, consider a project with the following compilations: $ clang++ -o test a.cc b.cc t.cc $ clang++ -o production a.cc b.cc -DPRODUCTION A compilation database representing the project would return both command lines for a.cc and b.cc and only the first command line for t.cc.</p>
+        </div>
+      </div>
+      <h3 id="0E812C182D69384AB848F53246C35349D7BE2510">getAllFiles</h3>
+      <p>
+        public 
+        <a href="../../std/vector.html">vector</a>
+         getAllFiles()
+      </p>
+      <p>Defined at line 136 of file /usr/lib/llvm-16/include/clang/Tooling/CompilationDatabase.h</p>
+      <div>
+        <div>
+          <p> Returns the list of all files available in the compilation database.</p>
+          <p> By default, returns nothing. Implementations should override this if they can enumerate their source files.</p>
+        </div>
+      </div>
+      <h3 id="262F9C5AE0F8978A86E87576A06AF2512C727A83">getAllCompileCommands</h3>
+      <p>
+        public 
+        <a href="../../std/vector.html">vector</a>
+         getAllCompileCommands()
+      </p>
+      <div>
+        <div>
+          <p> Returns all compile commands for all the files in the compilation database.</p>
+          <p> FIXME: Add a layer in Tooling that provides an interface to run a tool over all files in a compilation database. Not all build systems have the ability to provide a feasible implementation for </p>
+          <p> By default, this is implemented in terms of getAllFiles() and getCompileCommands(). Subclasses may override this for efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#97BFDDE566DC7D24C92467B30CC85C20764E9AE6">~CompilationDatabase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E25A641E95F60D8EDCF2C8386ABB2675E3205B80">loadFromDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16DD19074E19A28DFA42D102055BE1214C468884">autoDetectFromSource</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E599CB98D96A1F0BF2EFEC1E209E239481D8918">autoDetectFromDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA03A7E4B0F1AB0DBCF53C7524DDEB9408626AAC">getCompileCommands</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E812C182D69384AB848F53246C35349D7BE2510">getAllFiles</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#262F9C5AE0F8978A86E87576A06AF2512C727A83">getAllCompileCommands</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FileInfo</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang/SrcMgr" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FileInfo</h1>
+    <p>Defined at line 289 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+    <div>
+      <div>
+        <p> Information about a FileID, basically just the logical file that it represents and include stack information.</p>
+        <p> Each FileInfo has include stack information, indicating where it came from. This information encodes the #include chain that a token was expanded from. The main include file has an invalid IncludeLoc.</p>
+        <p> FileInfo should not grow larger than ExpansionInfo. Doing so will cause memory to bloat in compilations with many unloaded macro expansions, since the two data structurs are stored in a union in SLocEntry. Extra fields should instead go in &quot;ContentCache *&quot;, which stores file contents and other bits on the side.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="966D5E93DDC9838F320B2D3FD2BEE9A4668EDE70">get</h3>
+      <p>
+        public 
+        <a href="FileInfo.html">FileInfo</a>
+         get(
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         IL, ContentCache &amp; Con, 
+        <a href="CharacteristicKind.html">CharacteristicKind</a>
+         FileCharacter, 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         Filename)
+      </p>
+      <p>Defined at line 314 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return a FileInfo object.</p>
+        </div>
+      </div>
+      <h3 id="DB7EB5212A44B5AC9C4F017127A1B47D85AE82DE">getIncludeLoc</h3>
+      <p>
+        public 
+        <a href="../../clang/SourceLocation.html">SourceLocation</a>
+         getIncludeLoc()
+      </p>
+      <p>Defined at line 326 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="28046D17B1BB8F37A25D7C2DF49117E1FDC0A021">getContentCache</h3>
+      <p>public const ContentCache &amp; getContentCache()</p>
+      <p>Defined at line 330 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <h3 id="29A03F55B746C8924FDA9B9A3971DECE0BDC1579">getFileCharacteristic</h3>
+      <p>
+        public 
+        <a href="CharacteristicKind.html">CharacteristicKind</a>
+         getFileCharacteristic()
+      </p>
+      <p>Defined at line 335 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return whether this is a system header or not.</p>
+        </div>
+      </div>
+      <h3 id="94A2A261909BCC11D8B62A404F9C5DA958AF4D97">hasLineDirectives</h3>
+      <p>public _Bool hasLineDirectives()</p>
+      <p>Defined at line 340 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Return true if this FileID has #line directives in it.</p>
+        </div>
+      </div>
+      <h3 id="9B22A2C440AA227ECFA0359045AC21A6414F9023">setHasLineDirectives</h3>
+      <p>public void setHasLineDirectives()</p>
+      <p>Defined at line 344 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Set the flag that indicates that this FileID has line table entries associated with it.</p>
+        </div>
+      </div>
+      <h3 id="566B7A730E80E4A4A76E4E10A5DEFECA2E6C2D0A">getName</h3>
+      <p>
+        public 
+        <a href="../../llvm/StringRef.html">StringRef</a>
+         getName()
+      </p>
+      <p>Defined at line 348 of file /usr/lib/llvm-16/include/clang/Basic/SourceManager.h</p>
+      <div>
+        <div>
+          <p> Returns the name of the file that was used when the file was loaded from the underlying file system.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#966D5E93DDC9838F320B2D3FD2BEE9A4668EDE70">get</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB7EB5212A44B5AC9C4F017127A1B47D85AE82DE">getIncludeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28046D17B1BB8F37A25D7C2DF49117E1FDC0A021">getContentCache</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#29A03F55B746C8924FDA9B9A3971DECE0BDC1579">getFileCharacteristic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#94A2A261909BCC11D8B62A404F9C5DA958AF4D97">hasLineDirectives</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B22A2C440AA227ECFA0359045AC21A6414F9023">setHasLineDirectives</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#566B7A730E80E4A4A76E4E10A5DEFECA2E6C2D0A">getName</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

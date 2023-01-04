@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DependentAddressSpaceType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DependentAddressSpaceType</h1>
+    <p>Defined at line 3276 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents an extended address space qualifier where the input address space value is dependent. Non-dependent address spaces are not represented with a special Type subclass; they are stored on an ExtQuals node as part of a QualType.</p>
+        <p> For example:</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="56075455F4AF876E6F77F96361BA873755F3C1B8">getAddrSpaceExpr</h3>
+      <p>public Expr * getAddrSpaceExpr()</p>
+      <p>Defined at line 3289 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="01E34E3A814468F0EF8CA96233991E972757ED33">getPointeeType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getPointeeType()
+      </p>
+      <p>Defined at line 3290 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="13C33D148A57FB03E698090EF96874F0326F1C7A">getAttributeLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAttributeLoc()
+      </p>
+      <p>Defined at line 3291 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="10F5AD302E242608F637E9B973D725FB4B3E7B87">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 3293 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="AC2FCDB8BAA2CC44CC201C195616DE3F0E0D7E38">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 3294 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="E8446F24DB067569F4BE1B490C5D349E2D7725FD">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 3296 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="8B5F34BCAD8648A296E308979A1058FF25F3EF21">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 3300 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="C0F4012C7202B6C2F3C776CDB9EDCD10A0646DE9">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, const ASTContext &amp; Context, 
+        <a href="QualType.html">QualType</a>
+         PointeeType, Expr * AddrSpaceExpr)
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#56075455F4AF876E6F77F96361BA873755F3C1B8">getAddrSpaceExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01E34E3A814468F0EF8CA96233991E972757ED33">getPointeeType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13C33D148A57FB03E698090EF96874F0326F1C7A">getAttributeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10F5AD302E242608F637E9B973D725FB4B3E7B87">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC2FCDB8BAA2CC44CC201C195616DE3F0E0D7E38">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8446F24DB067569F4BE1B490C5D349E2D7725FD">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8B5F34BCAD8648A296E308979A1058FF25F3EF21">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0F4012C7202B6C2F3C776CDB9EDCD10A0646DE9">Profile</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

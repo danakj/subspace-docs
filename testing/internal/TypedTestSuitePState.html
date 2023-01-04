@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TypedTestSuitePState</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TypedTestSuitePState</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#597">597</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+    </p>
+    <div>
+      <div>
+        <p> State of the definition of a type-parameterized test suite.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C04A30AD22121BD6BB3F592CB098DBC14431C3D2">TypedTestSuitePState</h3>
+      <p>public void TypedTestSuitePState()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#599">599</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <h3 id="E0185C29B663BFE79B645CCC12B3501484D89BE9">AddTestName</h3>
+      <p>public _Bool AddTestName(const char * file, int line, const char * case_name, const char * test_name)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#604">604</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Adds the given test name to defined_test_names_ and return true if the test suite hasn&apos;t been registered; otherwise aborts the program.</p>
+        </div>
+      </div>
+      <h3 id="73DAE75C55E8E5965822E7874F67754072260006">TestExists</h3>
+      <p>public _Bool TestExists(const std::string &amp; test_name)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#619">619</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <h3 id="9B21A7F4C3B578CEC9E36D1EADEA1336B1AA11CF">GetCodeLocation</h3>
+      <p>public const CodeLocation &amp; GetCodeLocation(const std::string &amp; test_name)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h#623">623</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-internal.h">gtest-internal.h</a>
+      </p>
+      <h3 id="E8A1ACD217724BBF8E23B7F14774D649FA4C3CE2">VerifyRegisteredTestNames</h3>
+      <p>public const char * VerifyRegisteredTestNames(const char * test_suite_name, const char * file, int line, const char * registered_tests)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-typed-test.cc#58">58</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-typed-test.cc">gtest-typed-test.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Verifies that registered_tests match the test names in defined_test_names_; returns registered_tests if successful, or aborts the program otherwise.</p>
+        </div>
+        <div>
+          <p> Verifies that registered_tests match the test names in registered_tests_; returns registered_tests if successful, or aborts the program otherwise.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C04A30AD22121BD6BB3F592CB098DBC14431C3D2">TypedTestSuitePState</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0185C29B663BFE79B645CCC12B3501484D89BE9">AddTestName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73DAE75C55E8E5965822E7874F67754072260006">TestExists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B21A7F4C3B578CEC9E36D1EADEA1336B1AA11CF">GetCodeLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8A1ACD217724BBF8E23B7F14774D649FA4C3CE2">VerifyRegisteredTestNames</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXInheritedCtorInitExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXInheritedCtorInitExpr</h1>
+    <p>Defined at line 1657 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a call to an inherited base class constructor from an inheriting constructor. This call implicitly forwards the arguments from the enclosing context (an inheriting constructor) to the specified inherited base class constructor.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CE9263EE362912FD2A314F19D5946F0CCA3D0FD0">CXXInheritedCtorInitExpr</h3>
+      <p>
+        public void CXXInheritedCtorInitExpr(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="QualType.html">QualType</a>
+         T, CXXConstructorDecl * Ctor, _Bool ConstructsVirtualBase, _Bool InheritedFromVirtualBase)
+      </p>
+      <p>Defined at line 1675 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Construct a C++ inheriting construction expression.</p>
+        </div>
+      </div>
+      <h3 id="4FC62DBCCD8A35E52D9D93B1B8675C0B56278B7B">CXXInheritedCtorInitExpr</h3>
+      <p>
+        public void CXXInheritedCtorInitExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 1687 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Construct an empty C++ inheriting construction expression.</p>
+        </div>
+      </div>
+      <h3 id="E04F6C9CCD67111F18832AEC3BC2D7CF8CE4E1BA">getConstructor</h3>
+      <p>public CXXConstructorDecl * getConstructor()</p>
+      <p>Defined at line 1692 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the constructor that this expression will call.</p>
+        </div>
+      </div>
+      <h3 id="7125CE0634C9FD04C288895813AA1301BD61AA16">constructsVBase</h3>
+      <p>public _Bool constructsVBase()</p>
+      <p>Defined at line 1696 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determine whether this constructor is actually constructing a base class (rather than a complete object).</p>
+        </div>
+      </div>
+      <h3 id="9417B897BD6B04C60038876CE8EA985AF287F0BD">getConstructionKind</h3>
+      <p>
+        public 
+        <a href="../clang/CXXConstructExpr/ConstructionKind.html">ConstructionKind</a>
+         getConstructionKind()
+      </p>
+      <p>Defined at line 1697 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="FD7FE2113BED1554021D17FD38042FD9102070DF">inheritedFromVBase</h3>
+      <p>public _Bool inheritedFromVBase()</p>
+      <p>Defined at line 1706 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determine whether the inherited constructor is inherited from a virtual base of the object we construct. If so, we are not responsible for calling the inherited constructor (the complete object constructor does that), and so we don&apos;t need to pass any arguments.</p>
+        </div>
+      </div>
+      <h3 id="23BF82564269FF19712C27CAD9081927AB4B85C2">getLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLocation()
+      </p>
+      <p>Defined at line 1708 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="1E34DD97A03819ADAB3790CA96475FE22315E8E5">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1709 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="9DA902D04CBCCDC1D2EF5B9FD708CDF3B2F5CBA0">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1710 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="97E8CB6D471605190161CE7D73C20EA953E82BD9">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 1712 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="37B9799377507EA2C825320F057A872C9CD43F7B">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1716 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="58A52C220F356C245BE70ABE5B9F5DEDEF25E82F">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1720 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CE9263EE362912FD2A314F19D5946F0CCA3D0FD0">CXXInheritedCtorInitExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FC62DBCCD8A35E52D9D93B1B8675C0B56278B7B">CXXInheritedCtorInitExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E04F6C9CCD67111F18832AEC3BC2D7CF8CE4E1BA">getConstructor</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7125CE0634C9FD04C288895813AA1301BD61AA16">constructsVBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9417B897BD6B04C60038876CE8EA985AF287F0BD">getConstructionKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD7FE2113BED1554021D17FD38042FD9102070DF">inheritedFromVBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23BF82564269FF19712C27CAD9081927AB4B85C2">getLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E34DD97A03819ADAB3790CA96475FE22315E8E5">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9DA902D04CBCCDC1D2EF5B9FD708CDF3B2F5CBA0">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97E8CB6D471605190161CE7D73C20EA953E82BD9">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37B9799377507EA2C825320F057A872C9CD43F7B">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58A52C220F356C245BE70ABE5B9F5DEDEF25E82F">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UntypedFunctionMockerBase</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UntypedFunctionMockerBase</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#138">138</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Abstract base class of FunctionMocker.  This is the type-agnostic part of the function mocker interface.  Its pure virtual methods are implemented by FunctionMocker.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected const void * mock_obj_</li>
+      <li>protected const char * name_</li>
+      <li>
+        protected 
+        <a href="../../std/vector.html">vector</a>
+         untyped_on_call_specs_
+      </li>
+      <li>
+        protected 
+        <a href="../../std/vector.html">vector</a>
+         untyped_expectations_
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8974969A9A7D38ABE0684ADDB5D015D4B3A4795D">UntypedFunctionMockerBase</h3>
+      <p>public void UntypedFunctionMockerBase()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#308">308</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <h3 id="30971D71990BA70ED2724C08373B64DE06D4983A">~UntypedFunctionMockerBase</h3>
+      <p>public void ~UntypedFunctionMockerBase()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#311">311</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <h3 id="59ACFF6822E26F6B95BD048ADB4292AB2AB554F6">VerifyAndClearExpectationsLocked</h3>
+      <p>public _Bool VerifyAndClearExpectationsLocked()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#525">525</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Verifies that all expectations on this mock function have been satisfied.  Reports one or more Google Test non-fatal failures and returns false if not.</p>
+        </div>
+      </div>
+      <h3 id="BA2BDF2D17DE9830FFB467604D1F4F276EAFE900">ClearDefaultActionsLocked</h3>
+      <p>public void ClearDefaultActionsLocked()</p>
+      <div>
+        <div>
+          <p> Clears the ON_CALL()s set on this mock function.</p>
+        </div>
+      </div>
+      <h3 id="6C49498317B2BEE97A0AC0F7DE54549A88526D95">UntypedPerformDefaultAction</h3>
+      <p>public UntypedActionResultHolderBase * UntypedPerformDefaultAction(void * untyped_args, const std::string &amp; call_description)</p>
+      <div>
+        <div>
+          <p> Performs the default action with the given arguments and returns the action&apos;s result.  The call description string will be used in the error message to describe the call in the case the default action fails. L = *</p>
+        </div>
+      </div>
+      <h3 id="E31476C991C823DB85CC84191EE086233198B7A3">UntypedPerformAction</h3>
+      <p>public UntypedActionResultHolderBase * UntypedPerformAction(const void * untyped_action, void * untyped_args)</p>
+      <div>
+        <div>
+          <p> Performs the given action with the given arguments and returns the action&apos;s result. L = *</p>
+        </div>
+      </div>
+      <h3 id="28F2B31A5E6F5AF08B5D012BB19C66780F5E4432">UntypedDescribeUninterestingCall</h3>
+      <p>public void UntypedDescribeUninterestingCall(const void * untyped_args, ::std::ostream * os)</p>
+      <div>
+        <div>
+          <p> Writes a message that the call is uninteresting (i.e. neither explicitly expected nor explicitly unexpected) to the given ostream.</p>
+        </div>
+      </div>
+      <h3 id="15FB3DC69F0451C711743AB72B626BBDD4D1F667">UntypedFindMatchingExpectation</h3>
+      <p>public const ExpectationBase * UntypedFindMatchingExpectation(const void * untyped_args, const void ** untyped_action, _Bool * is_excessive, ::std::ostream * what, ::std::ostream * why)</p>
+      <div>
+        <div>
+          <p> Returns the expectation that matches the given function arguments (or NULL is there&apos;s no match); when a match is found, untyped_action is set to point to the action that should be performed (or NULL if the action is &quot;do default&quot;), and is_excessive is modified to indicate whether the call exceeds the expected number.</p>
+        </div>
+      </div>
+      <h3 id="37B37BCF5F01D5098EC8071E95EC9BADE32D8104">UntypedPrintArgs</h3>
+      <p>public void UntypedPrintArgs(const void * untyped_args, ::std::ostream * os)</p>
+      <div>
+        <div>
+          <p> Prints the given function arguments to the ostream.</p>
+        </div>
+      </div>
+      <h3 id="412C68691A60E2275990AA002F43F1941DE903C3">RegisterOwner</h3>
+      <p>public void RegisterOwner(const void * mock_obj)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#317">317</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Sets the mock object this mock method belongs to, and registers this information in the global mock registry.  Will be called whenever an EXPECT_CALL() or ON_CALL() is executed on this mock method.</p>
+        </div>
+      </div>
+      <h3 id="0B22A461A2BF925ADC271A6914BA924160342629">SetOwnerAndName</h3>
+      <p>public void SetOwnerAndName(const void * mock_obj, const char * name)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#329">329</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Sets the mock object this mock method belongs to, and sets the name of the mock function.  Will be called upon each invocation of this mock function.</p>
+        </div>
+        <div>
+          <p> Sets the mock object this mock method belongs to, and sets the name of the mock function.  Will be called upon each invocation of this mock function.</p>
+        </div>
+      </div>
+      <h3 id="A933257B22CD4D4AE34F946008BF5411668C1187">MockObject</h3>
+      <p>public const void * MockObject()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#341">341</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the mock object this mock method belongs to.  Must be called after RegisterOwner() or SetOwnerAndName() has been called.</p>
+        </div>
+        <div>
+          <p> Returns the name of the function being mocked.  Must be called after RegisterOwner() or SetOwnerAndName() has been called.</p>
+        </div>
+      </div>
+      <h3 id="27ECFCDA3AC88DD4BEE52A1CF48085CFA38060A4">Name</h3>
+      <p>public const char * Name()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#358">358</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the name of this mock method.  Must be called after SetOwnerAndName() has been called.</p>
+        </div>
+      </div>
+      <h3 id="0B599708BDA02E5ED5CE63EDB2C60931D9030689">UntypedInvokeWith</h3>
+      <p>public UntypedActionResultHolderBase * UntypedInvokeWith(void * untyped_args)</p>
+      <div>
+        <div>
+          <p> Returns the result of invoking this mock function with the given arguments.  This function can be safely called from multiple threads concurrently.  The caller is responsible for deleting the result.</p>
+        </div>
+      </div>
+      <h3 id="85098ED7171886904E993BA626E4A8E7C34DD513">GetHandleOf</h3>
+      <p>
+        protected 
+        <a href="../../testing/Expectation.html">Expectation</a>
+         GetHandleOf(ExpectationBase * exp)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#505">505</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns an Expectation object that references and co-owns exp, which must be an expectation on this mock function.</p>
+        </div>
+      </div>
+      <h3 id="338EC43D52E9E9F9DE3A0D639B6532B35E74754D">UntypedInvokeWith</h3>
+      <p>public UntypedActionResultHolderBase * UntypedInvokeWith(void *const untyped_args)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc#376">376</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock-spec-builders.cc">gmock-spec-builders.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Calculates the result of invoking this mock function with the given arguments, prints it, and returns it.  The caller is responsible for deleting the result.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8974969A9A7D38ABE0684ADDB5D015D4B3A4795D">UntypedFunctionMockerBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30971D71990BA70ED2724C08373B64DE06D4983A">~UntypedFunctionMockerBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59ACFF6822E26F6B95BD048ADB4292AB2AB554F6">VerifyAndClearExpectationsLocked</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA2BDF2D17DE9830FFB467604D1F4F276EAFE900">ClearDefaultActionsLocked</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C49498317B2BEE97A0AC0F7DE54549A88526D95">UntypedPerformDefaultAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E31476C991C823DB85CC84191EE086233198B7A3">UntypedPerformAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28F2B31A5E6F5AF08B5D012BB19C66780F5E4432">UntypedDescribeUninterestingCall</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15FB3DC69F0451C711743AB72B626BBDD4D1F667">UntypedFindMatchingExpectation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37B37BCF5F01D5098EC8071E95EC9BADE32D8104">UntypedPrintArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#412C68691A60E2275990AA002F43F1941DE903C3">RegisterOwner</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B22A461A2BF925ADC271A6914BA924160342629">SetOwnerAndName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A933257B22CD4D4AE34F946008BF5411668C1187">MockObject</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27ECFCDA3AC88DD4BEE52A1CF48085CFA38060A4">Name</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B599708BDA02E5ED5CE63EDB2C60931D9030689">UntypedInvokeWith</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85098ED7171886904E993BA626E4A8E7C34DD513">GetHandleOf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#338EC43D52E9E9F9DE3A0D639B6532B35E74754D">UntypedInvokeWith</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

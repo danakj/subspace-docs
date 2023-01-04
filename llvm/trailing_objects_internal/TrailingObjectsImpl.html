@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TrailingObjectsImpl</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/trailing_objects_internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TrailingObjectsImpl</h1>
+    <p>Defined at line 113 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+    <p>Inherits from TrailingObjectsImpl&lt;Align, BaseTy, TopTrailingObj, NextTy, MoreTys...&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4B1690AC2B878D7B4D3395EF073E3A2AB734DD95">getTrailingObjectsImpl</h3>
+      <p>protected const NextTy * getTrailingObjectsImpl(const BaseTy * Obj, class TrailingObjectsBase::OverloadToken&lt;NextTy&gt; )</p>
+      <p>Defined at line 144 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <div>
+        <div>
+          <p> These two functions are helper functions for TrailingObjects::getTrailingObjects. They recurse to the left -- the result for each type in the list of trailing types depends on the result of calling the function on the type to the left. However, the function for the type to the left is implemented by a *subclass* of this class, so we invoke it via the TopTrailingObj, which is, via the curiously-recurring-template-pattern, the most-derived type in this recursion, and thus, contains all the overloads.</p>
+        </div>
+      </div>
+      <h3 id="B67D8C14ABFE47CC12B2860DD47C9ED7E67A7E73">getTrailingObjectsImpl</h3>
+      <p>protected NextTy * getTrailingObjectsImpl(BaseTy * Obj, class TrailingObjectsBase::OverloadToken&lt;NextTy&gt; )</p>
+      <p>Defined at line 159 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <h3 id="BE83E82039B797EE973B31A8AA624CB515A25E9C">additionalSizeToAllocImpl</h3>
+      <p>protected size_t additionalSizeToAllocImpl(size_t SizeSoFar, size_t Count1, typename ExtractSecondType&lt;MoreTys, size_t&gt;::type... MoreCounts)</p>
+      <p>Defined at line 176 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <div>
+        <div>
+          <p> Helper function for TrailingObjects::additionalSizeToAlloc: this function recurses to superclasses, each of which requires one fewer size_t argument, and adds its own size.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4B1690AC2B878D7B4D3395EF073E3A2AB734DD95">getTrailingObjectsImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B67D8C14ABFE47CC12B2860DD47C9ED7E67A7E73">getTrailingObjectsImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE83E82039B797EE973B31A8AA624CB515A25E9C">additionalSizeToAllocImpl</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TrailingObjectsImpl</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/trailing_objects_internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TrailingObjectsImpl</h1>
+    <p>Defined at line 189 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+    <div>
+      <div>
+        <p> The base case of the TrailingObjectsImpl inheritance recursion, when there&apos;s no more trailing types.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TrailingObjectsBase.html">TrailingObjectsBase</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="287D26631A356E82865CBDCB752601275ECD6663">getTrailingObjectsImpl</h3>
+      <p>protected void getTrailingObjectsImpl()</p>
+      <div>
+        <div>
+          <p> This is a dummy method, only here so the &quot;using&quot; doesn&apos;t fail -- it will never be called, because this function recurses backwards up the inheritance chain to subclasses.</p>
+        </div>
+      </div>
+      <h3 id="7AA411DE3F69E17568B8F221A834D773519E20F1">additionalSizeToAllocImpl</h3>
+      <p>protected size_t additionalSizeToAllocImpl(size_t SizeSoFar)</p>
+      <p>Defined at line 198 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+      <h3 id="DA58F6D6D48EB60C18EB96313943424CDA46E9B7">verifyTrailingObjectsAlignment</h3>
+      <p>protected void verifyTrailingObjectsAlignment()</p>
+      <p>Defined at line 202 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#287D26631A356E82865CBDCB752601275ECD6663">getTrailingObjectsImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7AA411DE3F69E17568B8F221A834D773519E20F1">additionalSizeToAllocImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA58F6D6D48EB60C18EB96313943424CDA46E9B7">verifyTrailingObjectsAlignment</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TrailingObjectsImpl</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/trailing_objects_internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TrailingObjectsImpl</h1>
+    <p>Defined at line 108 of file /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h</p>
+    <div>
+      <div>
+        <p> TrailingObjectsImpl is somewhat complicated, because it is a recursively inheriting template, in order to handle the template varargs. Each level of inheritance picks off a single trailing type then recurses on the rest. The &quot;Align&quot;, &quot;BaseTy&quot;, and &quot;TopTrailingObj&quot; arguments are passed through unchanged through the recursion. &quot;PrevTy&quot; is, at each level, the type handled by the level right above it.</p>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

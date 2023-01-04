@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCContainerDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCContainerDecl</h1>
+    <p>Defined at line 942 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    <div>
+      <div>
+        <p> ObjCContainerDecl - Represents a container for method declarations. Current sub-classes are ObjCInterfaceDecl, ObjCCategoryDecl, ObjCProtocolDecl, and ObjCImplDecl.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="NamedDecl.html">NamedDecl</a>
+      , 
+      <a href="DeclContext.html">DeclContext</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9E2BB4C61460F6EDBCB50A9195CD6A07D01EE35B">ObjCContainerDecl</h3>
+      <p>
+        public void ObjCContainerDecl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, DeclContext * DC, IdentifierInfo * Id, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         nameLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         atStartLoc)
+      </p>
+      <h3 id="ECE1015CC13588DA053D5E6D83F6B599EB278250">properties</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         properties()
+      </p>
+      <p>Defined at line 961 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="96A1435942870911F0156201CD4AC6A4F090C0E8">prop_begin</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         prop_begin()
+      </p>
+      <p>Defined at line 963 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="3EC0AF737FF8608198E3F1FF696893B0C19DAD14">prop_end</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         prop_end()
+      </p>
+      <p>Defined at line 967 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="EF5BFFC5ADBCF42DA88C71602E91A61E2F045A44">instance_properties</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         instance_properties()
+      </p>
+      <p>Defined at line 976 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="89F7F4EC300A10374199F2606DC6A6AD4907A59A">instprop_begin</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/filtered_decl_iterator.html">filtered_decl_iterator</a>
+         instprop_begin()
+      </p>
+      <p>Defined at line 980 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="21634A6957595BF2EECAA3937CF93F8071CA8345">instprop_end</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/filtered_decl_iterator.html">filtered_decl_iterator</a>
+         instprop_end()
+      </p>
+      <p>Defined at line 984 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="905E13096A74674A30EE93045504ACE5100B1762">class_properties</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         class_properties()
+      </p>
+      <p>Defined at line 993 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="6F476E8D3274A05926C08DFD20488F394B567D03">classprop_begin</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/filtered_decl_iterator.html">filtered_decl_iterator</a>
+         classprop_begin()
+      </p>
+      <p>Defined at line 997 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="DC02CB5F684C9744DB7C5BECB62ADBD1FE45784C">classprop_end</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/filtered_decl_iterator.html">filtered_decl_iterator</a>
+         classprop_end()
+      </p>
+      <p>Defined at line 1001 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="84F8CD7C2D8C8E156DDF2E3F5F47EC8A3BFD134D">methods</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         methods()
+      </p>
+      <p>Defined at line 1010 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="3DE95426E426D287E3E7525B2FA133C220D44F1B">meth_begin</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         meth_begin()
+      </p>
+      <p>Defined at line 1014 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="4B8C06510C698C2B3B8FF6F28710324D55F32CEB">meth_end</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/specific_decl_iterator.html">specific_decl_iterator</a>
+         meth_end()
+      </p>
+      <p>Defined at line 1018 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="CDDC0E61611C1F60B85888EE0DEADC9F765D418D">instance_methods</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         instance_methods()
+      </p>
+      <p>Defined at line 1027 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="5386C9BE0C1D908E2C563F961E2704B3CC66A100">instmeth_begin</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/filtered_decl_iterator.html">filtered_decl_iterator</a>
+         instmeth_begin()
+      </p>
+      <p>Defined at line 1031 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="C53C415CBD09F21C6E53368F33A7FFC2B2B1EC04">instmeth_end</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/filtered_decl_iterator.html">filtered_decl_iterator</a>
+         instmeth_end()
+      </p>
+      <p>Defined at line 1035 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="DE0CE8C49063082CEDB5D00CEBE41B21B1632CBD">class_methods</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         class_methods()
+      </p>
+      <p>Defined at line 1044 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="A15C27AC11D2C9B6B059B1A2D955E945BE5ED1F3">classmeth_begin</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/filtered_decl_iterator.html">filtered_decl_iterator</a>
+         classmeth_begin()
+      </p>
+      <p>Defined at line 1048 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="9B04730687F345B59B17B2AEE493C3A8AC57676B">classmeth_end</h3>
+      <p>
+        public 
+        <a href="../clang/DeclContext/filtered_decl_iterator.html">filtered_decl_iterator</a>
+         classmeth_end()
+      </p>
+      <p>Defined at line 1052 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="2627914B45C6958C86C596D893C6DFE1870FEC90">getMethod</h3>
+      <p>
+        public ObjCMethodDecl * getMethod(
+        <a href="Selector.html">Selector</a>
+         Sel, _Bool isInstance, _Bool AllowHidden)
+      </p>
+      <div>
+        <div>
+          <p> Get the local instance/class method declared in this interface.</p>
+        </div>
+      </div>
+      <h3 id="169EF8972B22ED4530B993FBB55D5EB91805DCA8">getInstanceMethod</h3>
+      <p>
+        public ObjCMethodDecl * getInstanceMethod(
+        <a href="Selector.html">Selector</a>
+         Sel, _Bool AllowHidden)
+      </p>
+      <p>Defined at line 1060 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="738D1AD60DC14AC1AF155299F1881B6EAEAACA19">getClassMethod</h3>
+      <p>
+        public ObjCMethodDecl * getClassMethod(
+        <a href="Selector.html">Selector</a>
+         Sel, _Bool AllowHidden)
+      </p>
+      <p>Defined at line 1065 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="552A45EC1E0527A5AE7C5F2D915ED596AFFEF61D">HasUserDeclaredSetterMethod</h3>
+      <p>public _Bool HasUserDeclaredSetterMethod(const ObjCPropertyDecl * P)</p>
+      <h3 id="7FC38B26A06ADFC80A09DE0D01636117BBB3EB26">getIvarDecl</h3>
+      <p>public ObjCIvarDecl * getIvarDecl(IdentifierInfo * Id)</p>
+      <h3 id="F750844460C2ECACFEAD61841F1EACDA7E6E9B6F">getProperty</h3>
+      <p>public ObjCPropertyDecl * getProperty(const IdentifierInfo * Id, _Bool IsInstance)</p>
+      <h3 id="1F92DB05E9CBDF3A71C2834839C278E34421BC8D">FindPropertyDeclaration</h3>
+      <p>
+        public ObjCPropertyDecl * FindPropertyDeclaration(const IdentifierInfo * PropertyId, 
+        <a href="ObjCPropertyQueryKind.html">ObjCPropertyQueryKind</a>
+         QueryKind)
+      </p>
+      <h3 id="38DDF3207BF59FC4105D277A180708974C35A978">collectPropertiesToImplement</h3>
+      <p>public void collectPropertiesToImplement(PropertyMap &amp; PM)</p>
+      <p>Defined at line 1088 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> This routine collects list of properties to be implemented in the class. This includes, class&apos;s and its conforming protocols&apos; properties. Note, the superclass&apos;s properties are not included in the list.</p>
+        </div>
+      </div>
+      <h3 id="8D97F7F5B9E49D4285D57317E311BB1B6C44A75C">getAtStartLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAtStartLoc()
+      </p>
+      <p>Defined at line 1090 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="C9396B34B6E355494C4C4C9C18E0B0FD06E01742">setAtStartLoc</h3>
+      <p>
+        public void setAtStartLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 1092 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="D7259FE81529148542CDDABDD7F2F62FD9F597AA">getAtEndRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getAtEndRange()
+      </p>
+      <p>Defined at line 1097 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Marks the end of the container.</p>
+        </div>
+      </div>
+      <h3 id="8A8DB3B76078443CD56754E30C28B10A39CA5188">setAtEndRange</h3>
+      <p>
+        public void setAtEndRange(
+        <a href="SourceRange.html">SourceRange</a>
+         atEnd)
+      </p>
+      <p>Defined at line 1099 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="14453C70D426F6F1B35188FDBE6D8E73937DF133">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 1101 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="7DCBB77171E929749A7CA67D8EA82B12BF4DC2A2">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 1106 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="DAE2D0940D72C91033948CB17592B79E05842422">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 1108 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="1D9C6E6C4E3873A446AE17A0B552F852C2F7AF83">castToDeclContext</h3>
+      <p>public DeclContext * castToDeclContext(const ObjCContainerDecl * D)</p>
+      <p>Defined at line 1113 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+      <h3 id="2B9A511B33EA6FB9C110D60426D759A0E62AF35E">castFromDeclContext</h3>
+      <p>public ObjCContainerDecl * castFromDeclContext(const DeclContext * DC)</p>
+      <p>Defined at line 1117 of file /usr/lib/llvm-16/include/clang/AST/DeclObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9E2BB4C61460F6EDBCB50A9195CD6A07D01EE35B">ObjCContainerDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ECE1015CC13588DA053D5E6D83F6B599EB278250">properties</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96A1435942870911F0156201CD4AC6A4F090C0E8">prop_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EC0AF737FF8608198E3F1FF696893B0C19DAD14">prop_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF5BFFC5ADBCF42DA88C71602E91A61E2F045A44">instance_properties</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89F7F4EC300A10374199F2606DC6A6AD4907A59A">instprop_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#21634A6957595BF2EECAA3937CF93F8071CA8345">instprop_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#905E13096A74674A30EE93045504ACE5100B1762">class_properties</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6F476E8D3274A05926C08DFD20488F394B567D03">classprop_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC02CB5F684C9744DB7C5BECB62ADBD1FE45784C">classprop_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84F8CD7C2D8C8E156DDF2E3F5F47EC8A3BFD134D">methods</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3DE95426E426D287E3E7525B2FA133C220D44F1B">meth_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4B8C06510C698C2B3B8FF6F28710324D55F32CEB">meth_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CDDC0E61611C1F60B85888EE0DEADC9F765D418D">instance_methods</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5386C9BE0C1D908E2C563F961E2704B3CC66A100">instmeth_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C53C415CBD09F21C6E53368F33A7FFC2B2B1EC04">instmeth_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE0CE8C49063082CEDB5D00CEBE41B21B1632CBD">class_methods</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A15C27AC11D2C9B6B059B1A2D955E945BE5ED1F3">classmeth_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B04730687F345B59B17B2AEE493C3A8AC57676B">classmeth_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2627914B45C6958C86C596D893C6DFE1870FEC90">getMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#169EF8972B22ED4530B993FBB55D5EB91805DCA8">getInstanceMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#738D1AD60DC14AC1AF155299F1881B6EAEAACA19">getClassMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#552A45EC1E0527A5AE7C5F2D915ED596AFFEF61D">HasUserDeclaredSetterMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FC38B26A06ADFC80A09DE0D01636117BBB3EB26">getIvarDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F750844460C2ECACFEAD61841F1EACDA7E6E9B6F">getProperty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1F92DB05E9CBDF3A71C2834839C278E34421BC8D">FindPropertyDeclaration</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38DDF3207BF59FC4105D277A180708974C35A978">collectPropertiesToImplement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D97F7F5B9E49D4285D57317E311BB1B6C44A75C">getAtStartLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C9396B34B6E355494C4C4C9C18E0B0FD06E01742">setAtStartLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7259FE81529148542CDDABDD7F2F62FD9F597AA">getAtEndRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A8DB3B76078443CD56754E30C28B10A39CA5188">setAtEndRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14453C70D426F6F1B35188FDBE6D8E73937DF133">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7DCBB77171E929749A7CA67D8EA82B12BF4DC2A2">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAE2D0940D72C91033948CB17592B79E05842422">classofKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D9C6E6C4E3873A446AE17A0B552F852C2F7AF83">castToDeclContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B9A511B33EA6FB9C110D60426D759A0E62AF35E">castFromDeclContext</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

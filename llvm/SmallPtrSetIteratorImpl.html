@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SmallPtrSetIteratorImpl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SmallPtrSetIteratorImpl</h1>
+    <p>Defined at line 222 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+    <div>
+      <div>
+        <p> SmallPtrSetIteratorImpl - This is the common base class shared between all instances of SmallPtrSetIterator.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected const void *const * Bucket</li>
+      <li>protected const void *const * End</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="DD256D0CD4F337E54BF25991CE185CA75C75D48B">SmallPtrSetIteratorImpl</h3>
+      <p>public void SmallPtrSetIteratorImpl(const void *const * BP, const void *const * E)</p>
+      <p>Defined at line 228 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <h3 id="59BDEE3BC8FE70AB5864589C72DEC5039E26D67D">operator==</h3>
+      <p>public _Bool operator==(const SmallPtrSetIteratorImpl &amp; RHS)</p>
+      <p>Defined at line 237 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <h3 id="EEC0ADCF4DD0463BD8E6952CC7821E065F37F454">operator!=</h3>
+      <p>public _Bool operator!=(const SmallPtrSetIteratorImpl &amp; RHS)</p>
+      <p>Defined at line 240 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <h3 id="DA522E6676A12EB2059FB66615A3975E233C661B">AdvanceIfNotValid</h3>
+      <p>protected void AdvanceIfNotValid()</p>
+      <p>Defined at line 248 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+      <div>
+        <div>
+          <p> AdvanceIfNotValid - If the current bucket isn&apos;t valid, advance to a bucket that is.   This is guaranteed to stop because the end() bucket is marked valid.</p>
+        </div>
+      </div>
+      <h3 id="B875D371BB478FE93AEA220CCB982FD09584345D">RetreatIfNotValid</h3>
+      <p>protected void RetreatIfNotValid()</p>
+      <p>Defined at line 255 of file /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#DD256D0CD4F337E54BF25991CE185CA75C75D48B">SmallPtrSetIteratorImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59BDEE3BC8FE70AB5864589C72DEC5039E26D67D">operator==</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EEC0ADCF4DD0463BD8E6952CC7821E065F37F454">operator!=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA522E6676A12EB2059FB66615A3975E233C661B">AdvanceIfNotValid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B875D371BB478FE93AEA220CCB982FD09584345D">RetreatIfNotValid</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

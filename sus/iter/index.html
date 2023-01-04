@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>namespace iter</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/iter" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>namespace iter</h1>
+    <div>
+      <div>
+        <p> Doesn&apos;t include iterator_defn.h because it&apos;s included from there.</p>
+      </div>
+    </div>
+    <h2 id="Namespaces">Namespaces</h2>
+    <ul>
+      <li>
+        <a href="__private/index.html">__private</a>
+      </li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="IteratorBase.html">IteratorBase</a>
+      </li>
+      <li>
+        <a href="Once.html">Once</a>
+      </li>
+      <li>
+        <a href="Iterator.html">Iterator</a>
+      </li>
+      <li>
+        <a href="BoxedIterator.html">BoxedIterator</a>
+      </li>
+      <li>
+        <a href="SizedIterator.html">SizedIterator</a>
+      </li>
+      <li>
+        <a href="Filter.html">Filter</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="DF76959D8C42D06316570E09820EE0EE2088F88B">make_boxed_iterator</h3>
+      <p>BoxedIteratorType make_boxed_iterator(IteratorSubclass &amp;&amp; subclass)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/boxed_iterator.h#63">63</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/boxed_iterator.h">boxed_iterator.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Make a BoxedIterator.</p>
+          <p> The BoxedIterator&apos;s internals will be on the heap, making the BoxedIterator itself be trivially relocatable, as it&apos;s just some pointers to the heap.</p>
+        </div>
+      </div>
+      <h3 id="BFC34B9050D61FB42DC48D412AC1B0D1FC77CD0B">make_sized_iterator</h3>
+      <p>SizedIteratorType make_sized_iterator(IteratorSubclass &amp;&amp; subclass)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/sized_iterator.h#66">66</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/sized_iterator.h">sized_iterator.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Make a SizedIterator.</p>
+          <p> This overload is used when the IteratorSubclass can be trivially relocated. It stores the SubclassIterator directly into the SizedIterator, avoiding a heap allocation, since the SizedIterator can then be trivially relocated.</p>
+        </div>
+      </div>
+      <h3 id="30A6C3227CCF700BB2DD7746BD0B2DE8AB6CEEF2">once</h3>
+      <p>Iterator&lt;Once&lt;U&gt; &gt; once(Option&lt;U&gt; &amp;&amp; single)</p>
+      <h3 id="E9519570F530C8C180B397EC43D27DBFAA98267B">once</h3>
+      <p>Iterator&lt;Once&lt;Item&gt; &gt; once(Option&lt;Item&gt; &amp;&amp; single)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/once.h#70">70</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/once.h">once.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Namespaces">Namespaces</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#DF76959D8C42D06316570E09820EE0EE2088F88B">make_boxed_iterator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BFC34B9050D61FB42DC48D412AC1B0D1FC77CD0B">make_sized_iterator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30A6C3227CCF700BB2DD7746BD0B2DE8AB6CEEF2">once</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9519570F530C8C180B397EC43D27DBFAA98267B">once</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExtQuals</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExtQuals</h1>
+    <p>Defined at line 1452 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> We can encode up to four bits in the low bits of a type pointer, but there are many more type qualifiers that we want to be able to apply to an arbitrary type.  Therefore we have this struct, intended to be heap-allocated and used by QualType to store qualifiers.</p>
+        <p> The current design tags the &apos;const&apos;, &apos;restrict&apos;, and &apos;volatile&apos; qualifiers in three low bits on the QualType pointer; a fourth bit records whether the pointer is an ExtQuals node. The extended qualifiers (address spaces, Objective-C GC attributes) are much more rare.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ExtQualsTypeCommonBase.html">ExtQualsTypeCommonBase</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="096D9E19EB94BE93EBD8B1627BBAB04F7C1A5935">ExtQuals</h3>
+      <p>
+        public void ExtQuals(const Type * baseType, 
+        <a href="QualType.html">QualType</a>
+         canon, 
+        <a href="Qualifiers.html">Qualifiers</a>
+         quals)
+      </p>
+      <p>Defined at line 1473 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="619E8E1BA6A273460662640D5581C98E2943954C">getQualifiers</h3>
+      <p>
+        public 
+        <a href="Qualifiers.html">Qualifiers</a>
+         getQualifiers()
+      </p>
+      <p>Defined at line 1483 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="B35BCD134C1FB2433874F72ABF6A3B11B42A9220">hasObjCGCAttr</h3>
+      <p>public _Bool hasObjCGCAttr()</p>
+      <p>Defined at line 1485 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="CE31B116C5B6420A4FFDD5806C2773DB3AC32949">getObjCGCAttr</h3>
+      <p>
+        public 
+        <a href="../clang/Qualifiers/GC.html">GC</a>
+         getObjCGCAttr()
+      </p>
+      <p>Defined at line 1486 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="9AA8DCF3480A0F91F49F393A69ED71B307DA436B">hasObjCLifetime</h3>
+      <p>public _Bool hasObjCLifetime()</p>
+      <p>Defined at line 1488 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="4339A27B83A9A67A1CA8ABF23CB026BEB0619655">getObjCLifetime</h3>
+      <p>
+        public 
+        <a href="../clang/Qualifiers/ObjCLifetime.html">ObjCLifetime</a>
+         getObjCLifetime()
+      </p>
+      <p>Defined at line 1489 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="66C273CCA3122062FF571A103F5FC1D5685D5F00">hasAddressSpace</h3>
+      <p>public _Bool hasAddressSpace()</p>
+      <p>Defined at line 1493 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="DE03A74E3BE04D98F2687E96E30E8CCC952A98BC">getAddressSpace</h3>
+      <p>
+        public 
+        <a href="LangAS.html">LangAS</a>
+         getAddressSpace()
+      </p>
+      <p>Defined at line 1494 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="9CA0987CEBD6856433DD14E9BC09FD48CD6EA9FD">getBaseType</h3>
+      <p>public const Type * getBaseType()</p>
+      <p>Defined at line 1496 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="998D4DD802EAB0AE129BAE556E079C30AEC76BB1">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 1499 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="1BAD3D0285996CECA80034139CD4E033047DB083">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, const Type * BaseType, 
+        <a href="Qualifiers.html">Qualifiers</a>
+         Quals)
+      </p>
+      <p>Defined at line 1503 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#096D9E19EB94BE93EBD8B1627BBAB04F7C1A5935">ExtQuals</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#619E8E1BA6A273460662640D5581C98E2943954C">getQualifiers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B35BCD134C1FB2433874F72ABF6A3B11B42A9220">hasObjCGCAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE31B116C5B6420A4FFDD5806C2773DB3AC32949">getObjCGCAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9AA8DCF3480A0F91F49F393A69ED71B307DA436B">hasObjCLifetime</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4339A27B83A9A67A1CA8ABF23CB026BEB0619655">getObjCLifetime</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66C273CCA3122062FF571A103F5FC1D5685D5F00">hasAddressSpace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE03A74E3BE04D98F2687E96E30E8CCC952A98BC">getAddressSpace</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9CA0987CEBD6856433DD14E9BC09FD48CD6EA9FD">getBaseType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#998D4DD802EAB0AE129BAE556E079C30AEC76BB1">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BAD3D0285996CECA80034139CD4E033047DB083">Profile</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

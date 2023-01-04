@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPIfClause</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPIfClause</h1>
+    <p>Defined at line 527 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;if&apos; clause in the &apos;#pragma omp ...&apos; directive.</p>
+        <p> In this example directive &apos;#pragma omp parallel&apos; has simple &apos;if&apos; clause with condition &apos;a &gt; 5&apos; and directive name modifier &apos;parallel&apos;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPClause.html">OMPClause</a>
+      , 
+      <a href="OMPClauseWithPreInit.html">OMPClauseWithPreInit</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="881DEC22BF48DEB7362A7FF2D5CD2FB541C12939">OMPIfClause</h3>
+      <p>
+        public void OMPIfClause(
+        <a href="../llvm/omp/Directive.html">Directive</a>
+         NameModifier, Expr * Cond, Stmt * HelperCond, 
+        <a href="../llvm/omp/Directive.html">Directive</a>
+         CaptureRegion, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         NameModifierLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ColonLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 570 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build &apos;if&apos; clause with condition </p>
+        </div>
+      </div>
+      <h3 id="31938E78BAFA8F558F4FDE2CCAD90757F1E909BF">OMPIfClause</h3>
+      <p>public void OMPIfClause()</p>
+      <p>Defined at line 582 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Build an empty clause.</p>
+        </div>
+      </div>
+      <h3 id="4901103418790EF82A3177D5EDA7F59E5FBB55FF">setLParenLoc</h3>
+      <p>
+        public void setLParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 587 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Sets the location of &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="DFA8EF14772305FFD12F81A42623B05C22CF66E3">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 590 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the location of &apos;(&apos;.</p>
+        </div>
+      </div>
+      <h3 id="EA429A650B22B590167A78C100157B7B160A5163">getColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getColonLoc()
+      </p>
+      <p>Defined at line 593 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Return the location of &apos;:&apos;.</p>
+        </div>
+      </div>
+      <h3 id="59DFC53ED792F960DC9FC60C379159BD11BFA235">getCondition</h3>
+      <p>public Expr * getCondition()</p>
+      <p>Defined at line 596 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns condition.</p>
+        </div>
+      </div>
+      <h3 id="643B095116C9297D183D65FE8F1A1C56EADCA651">getNameModifier</h3>
+      <p>
+        public 
+        <a href="../llvm/omp/Directive.html">Directive</a>
+         getNameModifier()
+      </p>
+      <p>Defined at line 599 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Return directive name modifier associated with the clause.</p>
+        </div>
+      </div>
+      <h3 id="CD0E0B6C5705F51474BED88F6B0248A74E8B13FB">getNameModifierLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getNameModifierLoc()
+      </p>
+      <p>Defined at line 602 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Return the location of directive name modifier.</p>
+        </div>
+      </div>
+      <h3 id="DE2B0FB686926C66D018D491A7FDA63BFFE5F4D5">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 604 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="3DE41052F6D347142C17F1DF5A2088DA90790103">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 606 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="7E37605A18C18F9D3D4538426C8B23263E84DAAA">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <h3 id="72E7A9C13C70B8E4F2078E57731363245AAB797C">used_children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         used_children()
+      </p>
+      <p>Defined at line 611 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="1A33C420048DB9A47A0F556CC4F008947FF9D966">classof</h3>
+      <p>public _Bool classof(const OMPClause * T)</p>
+      <p>Defined at line 616 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#881DEC22BF48DEB7362A7FF2D5CD2FB541C12939">OMPIfClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31938E78BAFA8F558F4FDE2CCAD90757F1E909BF">OMPIfClause</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4901103418790EF82A3177D5EDA7F59E5FBB55FF">setLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DFA8EF14772305FFD12F81A42623B05C22CF66E3">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA429A650B22B590167A78C100157B7B160A5163">getColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59DFC53ED792F960DC9FC60C379159BD11BFA235">getCondition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#643B095116C9297D183D65FE8F1A1C56EADCA651">getNameModifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD0E0B6C5705F51474BED88F6B0248A74E8B13FB">getNameModifierLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE2B0FB686926C66D018D491A7FDA63BFFE5F4D5">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3DE41052F6D347142C17F1DF5A2088DA90790103">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E37605A18C18F9D3D4538426C8B23263E84DAAA">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#72E7A9C13C70B8E4F2078E57731363245AAB797C">used_children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1A33C420048DB9A47A0F556CC4F008947FF9D966">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

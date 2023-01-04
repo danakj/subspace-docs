@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct pointee_iterator</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct pointee_iterator</h1>
+    <p>Defined at line 320 of file /usr/lib/llvm-16/include/llvm/ADT/iterator.h</p>
+    <div>
+      <div>
+        <p> An iterator type that allows iterating over the pointees via some other iterator.</p>
+        <p> The typical usage of this is to expose a type that iterates over Ts, but which is implemented with some iterator over T*s:</p>
+      </div>
+    </div>
+    <p>Inherits from iterator_adaptor_base&lt;pointee_iterator&lt;WrappedIteratorT, T&gt;, WrappedIteratorT, typename std::iterator_traits&lt;WrappedIteratorT&gt;::iterator_category, T&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="4DA242A73F542BD82E29717F11BECB7DC5172D55">pointee_iterator&lt;WrappedIteratorT, T&gt;</h3>
+      <p>public void pointee_iterator&lt;WrappedIteratorT, T&gt;()</p>
+      <p>Defined at line 325 of file /usr/lib/llvm-16/include/llvm/ADT/iterator.h</p>
+      <h3 id="FEE53D53D89F9468DB30954A09BA58A0068051D5">pointee_iterator&lt;WrappedIteratorT, T&gt;</h3>
+      <p>public void pointee_iterator&lt;WrappedIteratorT, T&gt;(U &amp;&amp; u)</p>
+      <p>Defined at line 327 of file /usr/lib/llvm-16/include/llvm/ADT/iterator.h</p>
+      <h3 id="6BE8BFB5904EF7356392ECD1F03CA5F00632C217">operator*</h3>
+      <p>public T &amp; operator*()</p>
+      <p>Defined at line 330 of file /usr/lib/llvm-16/include/llvm/ADT/iterator.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#4DA242A73F542BD82E29717F11BECB7DC5172D55">pointee_iterator&lt;WrappedIteratorT, T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FEE53D53D89F9468DB30954A09BA58A0068051D5">pointee_iterator&lt;WrappedIteratorT, T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BE8BFB5904EF7356392ECD1F03CA5F00632C217">operator*</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

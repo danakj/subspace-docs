@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXDefaultInitExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXDefaultInitExpr</h1>
+    <p>Defined at line 1324 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> A use of a default initializer in a constructor or in aggregate initialization.</p>
+        <p> This wraps a use of a C++ default initializer (technically, a brace-or-equal-initializer for a non-static data member) when it is implicitly used in a mem-initializer-list in a constructor (C++11 [class.base.init]p8) or in aggregate initialization (C++1y [dcl.init.aggr]p7).</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B8C8CE9BA65250E51588539BA2CC5832ED46BF87">Create</h3>
+      <p>
+        public CXXDefaultInitExpr * Create(const ASTContext &amp; Ctx, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, FieldDecl * Field, DeclContext * UsedContext)
+      </p>
+      <p>Defined at line 1342 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> is the non-static data member whose default initializer is used by this expression.</p>
+        </div>
+      </div>
+      <h3 id="C6DFFAE71A44FD8058BFD8209A427B1E387F6A36">getField</h3>
+      <p>public FieldDecl * getField()</p>
+      <p>Defined at line 1348 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the field whose initializer will be used.</p>
+        </div>
+      </div>
+      <h3 id="0013B706F78470AE77D691EA629C940CBC63C17C">getField</h3>
+      <p>public const FieldDecl * getField()</p>
+      <p>Defined at line 1349 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="763E4CE2D0A432160947118404143A82838D8B16">getExpr</h3>
+      <p>public const Expr * getExpr()</p>
+      <p>Defined at line 1352 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the initialization expression that will be used.</p>
+        </div>
+      </div>
+      <h3 id="0CE094A9EA0D0015D6AB1F3D39285011A6E4754A">getExpr</h3>
+      <p>public Expr * getExpr()</p>
+      <p>Defined at line 1356 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="AEA746727124EB1AFE5576A30FDFD7389C023D35">getUsedContext</h3>
+      <p>public const DeclContext * getUsedContext()</p>
+      <p>Defined at line 1361 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="78E394B28B7C544C33792E9A4F260EFC06A58E9D">getUsedContext</h3>
+      <p>public DeclContext * getUsedContext()</p>
+      <p>Defined at line 1362 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="C3CECDC5410495C986F65CC57779211124A2172B">getUsedLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getUsedLocation()
+      </p>
+      <p>Defined at line 1366 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the location where this default initializer expression was actually used.</p>
+        </div>
+      </div>
+      <h3 id="95AF6892456F1B8FDC2A6E0ED1F2D9171896F11F">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1368 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="AE2B3A5B35BCE53F83E4A09E34E46B9D02010F08">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1369 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="7261F99D59D53C7774ED6115481E1F348B9C7DE6">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 1371 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B039D27190FF139840ECB2E4E96130650B824867">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1376 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="97DEA714B845A9534C468A60E525727D580FED43">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1380 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B8C8CE9BA65250E51588539BA2CC5832ED46BF87">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C6DFFAE71A44FD8058BFD8209A427B1E387F6A36">getField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0013B706F78470AE77D691EA629C940CBC63C17C">getField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#763E4CE2D0A432160947118404143A82838D8B16">getExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0CE094A9EA0D0015D6AB1F3D39285011A6E4754A">getExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AEA746727124EB1AFE5576A30FDFD7389C023D35">getUsedContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#78E394B28B7C544C33792E9A4F260EFC06A58E9D">getUsedContext</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C3CECDC5410495C986F65CC57779211124A2172B">getUsedLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95AF6892456F1B8FDC2A6E0ED1F2D9171896F11F">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE2B3A5B35BCE53F83E4A09E34E46B9D02010F08">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7261F99D59D53C7774ED6115481E1F348B9C7DE6">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B039D27190FF139840ECB2E4E96130650B824867">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97DEA714B845A9534C468A60E525727D580FED43">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

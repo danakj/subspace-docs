@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StringMapEntry</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StringMapEntry</h1>
+    <p>Defined at line 102 of file /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h</p>
+    <div>
+      <div>
+        <p> StringMapEntry - This is used to represent one value that is inserted into a StringMap.  It contains the Value itself and the key: the string length and data.</p>
+      </div>
+    </div>
+    <p>Inherits from StringMapEntryStorage&lt;ValueTy&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="FAC3DA7726F5E25D1285A5544AB3FBB3303E6B23">getKey</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         getKey()
+      </p>
+      <p>Defined at line 108 of file /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h</p>
+      <h3 id="CBE73F0E2C4DEB3B51AB474D9EA588CB6F36B83F">getKeyData</h3>
+      <p>public const char * getKeyData()</p>
+      <p>Defined at line 115 of file /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h</p>
+      <div>
+        <div>
+          <p> getKeyData - Return the start of the string data that is the key for this value.  The string data is always stored immediately after the StringMapEntry object.</p>
+        </div>
+      </div>
+      <h3 id="CAD88FC3DA0F76D6B1EA027EDF95664EC1336374">first</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         first()
+      </p>
+      <p>Defined at line 119 of file /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h</p>
+      <h3 id="D59D7240F9599B6DD8CE3C5BF0F52D71C629CA58">create</h3>
+      <p>
+        public StringMapEntry&lt;ValueTy&gt; * create(
+        <a href="StringRef.html">StringRef</a>
+         key, AllocatorTy &amp; allocator, InitTy &amp;&amp;... initVals)
+      </p>
+      <p>Defined at line 126 of file /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h</p>
+      <div>
+        <div>
+          <p> Create a StringMapEntry for the specified key construct the value using</p>
+        </div>
+      </div>
+      <h3 id="B5F316D8FA975609E9CAE38FE33C3D27D6AE816E">GetStringMapEntryFromKeyData</h3>
+      <p>public StringMapEntry&lt;ValueTy&gt; &amp; GetStringMapEntryFromKeyData(const char * keyData)</p>
+      <p>Defined at line 135 of file /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h</p>
+      <div>
+        <div>
+          <p> GetStringMapEntryFromKeyData - Given key data that is known to be embedded into a StringMapEntry, return the StringMapEntry itself.</p>
+        </div>
+      </div>
+      <h3 id="112C6BCF89097D0BBD1EFDC766153B05FA8F19EB">Destroy</h3>
+      <p>public void Destroy(AllocatorTy &amp; allocator)</p>
+      <p>Defined at line 142 of file /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h</p>
+      <div>
+        <div>
+          <p> Destroy - Destroy this StringMapEntry, releasing memory back to the specified allocator.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#FAC3DA7726F5E25D1285A5544AB3FBB3303E6B23">getKey</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CBE73F0E2C4DEB3B51AB474D9EA588CB6F36B83F">getKeyData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CAD88FC3DA0F76D6B1EA027EDF95664EC1336374">first</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D59D7240F9599B6DD8CE3C5BF0F52D71C629CA58">create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5F316D8FA975609E9CAE38FE33C3D27D6AE816E">GetStringMapEntryFromKeyData</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#112C6BCF89097D0BBD1EFDC766153B05FA8F19EB">Destroy</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

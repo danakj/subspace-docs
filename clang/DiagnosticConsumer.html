@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DiagnosticConsumer</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DiagnosticConsumer</h1>
+    <p>Defined at line 1745 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+    <div>
+      <div>
+        <p> Abstract interface, implemented by clients of the front-end, which formats and prints fully processed diagnostics.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected unsigned int NumWarnings</li>
+      <li>protected unsigned int NumErrors</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A88BB5A0849C4D67CC75115D75B6AF036F7A4624">DiagnosticConsumer</h3>
+      <p>public void DiagnosticConsumer()</p>
+      <p>Defined at line 1751 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="990F15184F3E984AF568B1386478A1AEB1C7CEB9">~DiagnosticConsumer</h3>
+      <p>public void ~DiagnosticConsumer()</p>
+      <h3 id="7ED0A78BFEFE7E3295DF995859B99A62E9B1F92B">getNumErrors</h3>
+      <p>public unsigned int getNumErrors()</p>
+      <p>Defined at line 1754 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="6B2155D0F5697D53C5301AE23DCA6CF42C9489FA">getNumWarnings</h3>
+      <p>public unsigned int getNumWarnings()</p>
+      <p>Defined at line 1755 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="2E9C5A01D1E063DED5DCDEE6203B1C7D9AE419B3">clear</h3>
+      <p>public void clear()</p>
+      <p>Defined at line 1756 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <h3 id="C89218B97251BE0A623E56B98472B4A0C6D6069F">BeginSourceFile</h3>
+      <p>public void BeginSourceFile(const LangOptions &amp; LangOpts, const Preprocessor * PP)</p>
+      <p>Defined at line 1769 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Callback to inform the diagnostic client that processing of a source file is beginning.</p>
+          <p> Note that diagnostics may be emitted outside the processing of a source file, for example during the parsing of command line options. However, diagnostics with source range information are required to only be emitted in between BeginSourceFile() and EndSourceFile().</p>
+        </div>
+      </div>
+      <h3 id="61AF2B701ABE062798F23BD75E580F7FBD9A9A7C">EndSourceFile</h3>
+      <p>public void EndSourceFile()</p>
+      <p>Defined at line 1777 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Callback to inform the diagnostic client that processing of a source file has ended.</p>
+          <p> The diagnostic client should assume that any objects made available via BeginSourceFile() are inaccessible.</p>
+        </div>
+      </div>
+      <h3 id="B8B53AC4261C58A83162CB9D97E28FA47052EB42">finish</h3>
+      <p>public void finish()</p>
+      <p>Defined at line 1781 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Callback to inform the diagnostic client that processing of all source files has ended.</p>
+        </div>
+      </div>
+      <h3 id="02471A621D0C249DBD4B7D91BE7C8AD09365F6EA">IncludeInDiagnosticCounts</h3>
+      <p>public _Bool IncludeInDiagnosticCounts()</p>
+      <div>
+        <div>
+          <p> Indicates whether the diagnostics handled by this DiagnosticConsumer should be included in the number of diagnostics reported by DiagnosticsEngine.</p>
+          <p> The default implementation returns true.</p>
+        </div>
+      </div>
+      <h3 id="BADB4525756AC25D2E0F1D43876912720D4497EF">HandleDiagnostic</h3>
+      <p>
+        public void HandleDiagnostic(
+        <a href="../clang/DiagnosticsEngine/Level.html">Level</a>
+         DiagLevel, const Diagnostic &amp; Info)
+      </p>
+      <div>
+        <div>
+          <p> Handle this diagnostic, reporting it to the user or capturing it to a log as needed.</p>
+          <p> The default implementation just keeps track of the total number of warnings and errors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A88BB5A0849C4D67CC75115D75B6AF036F7A4624">DiagnosticConsumer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#990F15184F3E984AF568B1386478A1AEB1C7CEB9">~DiagnosticConsumer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7ED0A78BFEFE7E3295DF995859B99A62E9B1F92B">getNumErrors</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B2155D0F5697D53C5301AE23DCA6CF42C9489FA">getNumWarnings</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E9C5A01D1E063DED5DCDEE6203B1C7D9AE419B3">clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C89218B97251BE0A623E56B98472B4A0C6D6069F">BeginSourceFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61AF2B701ABE062798F23BD75E580F7FBD9A9A7C">EndSourceFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8B53AC4261C58A83162CB9D97E28FA47052EB42">finish</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02471A621D0C249DBD4B7D91BE7C8AD09365F6EA">IncludeInDiagnosticCounts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BADB4525756AC25D2E0F1D43876912720D4497EF">HandleDiagnostic</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ExecDeathTest</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ExecDeathTest</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-death-test.cc#1164">1164</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-death-test.cc">gtest-death-test.cc</a>
+    </p>
+    <div>
+      <div>
+        <p> A concrete death test class that forks and re-executes the main program from the beginning, with command-line flags set that cause only this specific death test to be run.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ForkingDeathTest.html">ForkingDeathTest</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="570E4C58B343E125203F6A7AEA9DE60C0699373B">ExecDeathTest</h3>
+      <p>
+        public void ExecDeathTest(const char * a_statement, 
+        <a href="../../testing/Matcher.html">Matcher</a>
+         matcher, const char * file, int line)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-death-test.cc#1166">1166</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-death-test.cc">gtest-death-test.cc</a>
+      </p>
+      <h3 id="0451777AE137A63BDF2B41F420DEA918D6D3861A">AssumeRole</h3>
+      <p>
+        public 
+        <a href="../../testing/internal/DeathTest/TestRole.html">TestRole</a>
+         AssumeRole()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-death-test.cc#1404">1404</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-death-test.cc">gtest-death-test.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> The AssumeRole process for a fork-and-exec death test.  It re-executes the main program from the beginning, setting the --gtest_filter and --gtest_internal_run_death_test flags to cause only the current death test to be re-run.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#570E4C58B343E125203F6A7AEA9DE60C0699373B">ExecDeathTest</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0451777AE137A63BDF2B41F420DEA918D6D3861A">AssumeRole</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FileSystem</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/vfs" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FileSystem</h1>
+    <p>Defined at line 267 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    <div>
+      <div>
+        <p> The virtual file system interface.</p>
+      </div>
+    </div>
+    <p>Inherits from llvm::ThreadSafeRefCountedBase&lt;FileSystem&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7058A5CAE4F85DEE1DEDBF7F19249C65901E7B14">~FileSystem</h3>
+      <p>public void ~FileSystem()</p>
+      <h3 id="91631C249D8C6DD88EBF20F424622A6E0F895D01">status</h3>
+      <p>
+        public 
+        <a href="../../llvm/ErrorOr.html">ErrorOr</a>
+         status(const Twine &amp; Path)
+      </p>
+      <div>
+        <div>
+          <p> Get the status of the entry at  if one exists.</p>
+        </div>
+      </div>
+      <h3 id="76164F2196CC8121FEC0F00D09778EF3A37A6BAC">openFileForRead</h3>
+      <p>
+        public 
+        <a href="../../llvm/ErrorOr.html">ErrorOr</a>
+         openFileForRead(const Twine &amp; Path)
+      </p>
+      <div>
+        <div>
+          <p> Get a  object for the file at  if one exists.</p>
+        </div>
+      </div>
+      <h3 id="FDD6676AEB173643FF98872D7080C84E27DAA88C">getBufferForFile</h3>
+      <p>
+        public 
+        <a href="../../llvm/ErrorOr.html">ErrorOr</a>
+         getBufferForFile(const Twine &amp; Name, int64_t FileSize, _Bool RequiresNullTerminator, _Bool IsVolatile)
+      </p>
+      <div>
+        <div>
+          <p> This is a convenience method that opens a file, gets its content and then closes the file.</p>
+        </div>
+      </div>
+      <h3 id="C7246D706BBA03500DB8D43A978829426ED34D5B">dir_begin</h3>
+      <p>
+        public 
+        <a href="directory_iterator.html">directory_iterator</a>
+         dir_begin(const Twine &amp; Dir, std::error_code &amp; EC)
+      </p>
+      <div>
+        <div>
+          <p> Get a directory_iterator for </p>
+        </div>
+      </div>
+      <h3 id="E70379D5780746E1109EE32FEC2C1FAA2D309629">setCurrentWorkingDirectory</h3>
+      <p>
+        public 
+        <a href="../../std/error_code.html">error_code</a>
+         setCurrentWorkingDirectory(const Twine &amp; Path)
+      </p>
+      <div>
+        <div>
+          <p> Set the working directory. This will affect all following operations on this file system and may propagate down for nested file systems.</p>
+        </div>
+      </div>
+      <h3 id="F9492D384682CDFA0FD8E3A47C6FFF45C02D8B06">getCurrentWorkingDirectory</h3>
+      <p>
+        public 
+        <a href="../../llvm/ErrorOr.html">ErrorOr</a>
+         getCurrentWorkingDirectory()
+      </p>
+      <div>
+        <div>
+          <p> Get the working directory of this file system.</p>
+        </div>
+      </div>
+      <h3 id="4AF73410DA9AAE1ECBE2D1FBDC75D47244900A2A">getRealPath</h3>
+      <p>
+        public 
+        <a href="../../std/error_code.html">error_code</a>
+         getRealPath(const Twine &amp; Path, SmallVectorImpl&lt;char&gt; &amp; Output)
+      </p>
+      <div>
+        <div>
+          <p> Gets real path of  e.g. collapse all . and .. patterns, resolve symlinks. For real file system, this uses `llvm::sys::fs::real_path`. This returns errc::operation_not_permitted if not implemented by subclass.</p>
+        </div>
+      </div>
+      <h3 id="08E0503A0EAE5FFFCB05EEC4E17E536451E067F3">exists</h3>
+      <p>public _Bool exists(const Twine &amp; Path)</p>
+      <div>
+        <div>
+          <p> Check whether a file exists. Provided for convenience.</p>
+        </div>
+      </div>
+      <h3 id="4E8DFE6602F8E0295B8596FB41A9E16307EB002B">isLocal</h3>
+      <p>
+        public 
+        <a href="../../std/error_code.html">error_code</a>
+         isLocal(const Twine &amp; Path, _Bool &amp; Result)
+      </p>
+      <div>
+        <div>
+          <p> Is the file mounted on a local filesystem?</p>
+        </div>
+      </div>
+      <h3 id="CE4A99F55CA68FE64E557FC8089132D125617A59">makeAbsolute</h3>
+      <p>
+        public 
+        <a href="../../std/error_code.html">error_code</a>
+         makeAbsolute(SmallVectorImpl&lt;char&gt; &amp; Path)
+      </p>
+      <div>
+        <div>
+          <p> Make  an absolute path.</p>
+          <p> Makes  absolute using the current directory if it is not already. An empty  will result in the current directory.</p>
+          <p> /absolute/path   =&gt; /absolute/path relative/../path =&gt; &lt;current-directory&gt;/relative/../path</p>
+        </div>
+      </div>
+      <h3 id="A783B98C0C2D8E4FF685D72AFE653497A7DA600A">print</h3>
+      <p>
+        public void print(raw_ostream &amp; OS, 
+        <a href="../../llvm/vfs/FileSystem/PrintType.html">PrintType</a>
+         Type, unsigned int IndentLevel)
+      </p>
+      <p>Defined at line 322 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="E2F572E0A7488FE46F57A51D9571C0D8C9C60B7E">dump</h3>
+      <p>public void dump()</p>
+      <h3 id="471D5C1893625ECF127D8437AB4D83F801670034">printImpl</h3>
+      <p>
+        protected void printImpl(raw_ostream &amp; OS, 
+        <a href="../../llvm/vfs/FileSystem/PrintType.html">PrintType</a>
+         Type, unsigned int IndentLevel)
+      </p>
+      <p>Defined at line 332 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+      <h3 id="95C8474686692F258D34246F483A3F683660AFED">printIndent</h3>
+      <p>protected void printIndent(raw_ostream &amp; OS, unsigned int IndentLevel)</p>
+      <p>Defined at line 338 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="082A921BA97AE5F19644D495DEC70878187F1A09">enum class PrintType</h3>
+      <ul>
+        <li>Summary</li>
+        <li>Contents</li>
+        <li>RecursiveContents</li>
+      </ul>
+      <p>Defined at line 321 of file /usr/lib/llvm-16/include/llvm/Support/VirtualFileSystem.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7058A5CAE4F85DEE1DEDBF7F19249C65901E7B14">~FileSystem</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#91631C249D8C6DD88EBF20F424622A6E0F895D01">status</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76164F2196CC8121FEC0F00D09778EF3A37A6BAC">openFileForRead</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FDD6676AEB173643FF98872D7080C84E27DAA88C">getBufferForFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7246D706BBA03500DB8D43A978829426ED34D5B">dir_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E70379D5780746E1109EE32FEC2C1FAA2D309629">setCurrentWorkingDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9492D384682CDFA0FD8E3A47C6FFF45C02D8B06">getCurrentWorkingDirectory</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4AF73410DA9AAE1ECBE2D1FBDC75D47244900A2A">getRealPath</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08E0503A0EAE5FFFCB05EEC4E17E536451E067F3">exists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4E8DFE6602F8E0295B8596FB41A9E16307EB002B">isLocal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE4A99F55CA68FE64E557FC8089132D125617A59">makeAbsolute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A783B98C0C2D8E4FF685D72AFE653497A7DA600A">print</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2F572E0A7488FE46F57A51D9571C0D8C9C60B7E">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#471D5C1893625ECF127D8437AB4D83F801670034">printImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95C8474686692F258D34246F483A3F683660AFED">printIndent</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#082A921BA97AE5F19644D495DEC70878187F1A09">PrintType</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

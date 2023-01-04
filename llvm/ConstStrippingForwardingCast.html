@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct ConstStrippingForwardingCast</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct ConstStrippingForwardingCast</h1>
+    <p>Defined at line 389 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    <div>
+      <div>
+        <p> Provides a cast trait that strips `const` from types to make it easier to implement a const-version of a non-const cast. It just removes boilerplate and reduces the amount of code you as the user need to implement. You can use it like this:</p>
+        <p> template&lt;&gt; struct CastInfo&lt;foo, bar&gt; {   ...verbose implementation... };</p>
+        <p> template&lt;&gt; struct CastInfo&lt;foo, const bar&gt; : public        ConstStrippingForwardingCast&lt;foo, const bar, CastInfo&lt;foo, bar&gt;&gt; {};</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2B599FDDEEFDC03011340A76BF5080C92F9FBB18">isPossible</h3>
+      <p>public _Bool isPossible(const From &amp; f)</p>
+      <p>Defined at line 396 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+      <h3 id="7F8FEF81445719F278670EFCD850141ED905DB24">castFailed</h3>
+      <p>public decltype(auto) castFailed()</p>
+      <p>Defined at line 400 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+      <h3 id="4756A5D6232FE15CECFA961EAA2F98C7C84FBE96">doCast</h3>
+      <p>public decltype(auto) doCast(const From &amp; f)</p>
+      <p>Defined at line 402 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+      <h3 id="DA4D01D371E8B59722CCE1255CB19DCB6A1DC518">doCastIfPossible</h3>
+      <p>public decltype(auto) doCastIfPossible(const From &amp; f)</p>
+      <p>Defined at line 406 of file /usr/lib/llvm-16/include/llvm/Support/Casting.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2B599FDDEEFDC03011340A76BF5080C92F9FBB18">isPossible</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7F8FEF81445719F278670EFCD850141ED905DB24">castFailed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4756A5D6232FE15CECFA961EAA2F98C7C84FBE96">doCast</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA4D01D371E8B59722CCE1255CB19DCB6A1DC518">doCastIfPossible</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

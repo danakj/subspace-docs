@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class opt_storage</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class opt_storage</h1>
+    <p>Defined at line 1359 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <div>
+      <div>
+        <p> Define how to hold a class type object, such as a string.  Since we can inherit from a class, we do so.  This makes us exactly compatible with the object in all cases that it is used.</p>
+      </div>
+    </div>
+    <p>Inherits from DataType</p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public OptionValue&lt;DataType&gt; Default</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B46B5E004F9B8FA53A6A7C9FFCE7FB9FC3E755A3">setValue</h3>
+      <p>public void setValue(const T &amp; V, _Bool initial)</p>
+      <p>Defined at line 1364 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="E4C590CA21B5958AECAA7C3E64B07C4E6FABD41E">getValue</h3>
+      <p>public DataType &amp; getValue()</p>
+      <p>Defined at line 1370 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="B15C87EBDAC5DF11F1D97164A15B2C2841E90555">getValue</h3>
+      <p>public const DataType &amp; getValue()</p>
+      <p>Defined at line 1371 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="E2E04B8CDCC29A25BC746294B8DD2E0ED91BA970">getDefault</h3>
+      <p>public const OptionValue&lt;DataType&gt; &amp; getDefault()</p>
+      <p>Defined at line 1373 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B46B5E004F9B8FA53A6A7C9FFCE7FB9FC3E755A3">setValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E4C590CA21B5958AECAA7C3E64B07C4E6FABD41E">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B15C87EBDAC5DF11F1D97164A15B2C2841E90555">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E2E04B8CDCC29A25BC746294B8DD2E0ED91BA970">getDefault</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class opt_storage</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class opt_storage</h1>
+    <p>Defined at line 1380 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <div>
+      <div>
+        <p> Define a partial specialization to handle things we cannot inherit from.  In this case, we store an instance through containment, and overload operators to get at the value.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>public DataType Value</li>
+      <li>public OptionValue&lt;DataType&gt; Default</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3992C8D16F6946EDAF83682D49931A408A3550A8">opt_storage&lt;type-parameter-0-0, false, false&gt;</h3>
+      <p>public void opt_storage&lt;type-parameter-0-0, false, false&gt;()</p>
+      <p>Defined at line 1387 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> Make sure we initialize the value with the default constructor for the type.</p>
+        </div>
+      </div>
+      <h3 id="324B0320C8AB576DFE319B109CECD4BEBA99A155">setValue</h3>
+      <p>public void setValue(const T &amp; V, _Bool initial)</p>
+      <p>Defined at line 1389 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="0C1234FA3ECF70E99E645CFEE510E5DC7647B8E0">getValue</h3>
+      <p>public DataType &amp; getValue()</p>
+      <p>Defined at line 1394 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="2B96C50AFE5B718AF2C226351D0F066F6AB68415">getValue</h3>
+      <p>public DataType getValue()</p>
+      <p>Defined at line 1395 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="1B576ADBFEB122E732B8BE9B643471749384E287">getDefault</h3>
+      <p>public const OptionValue&lt;DataType&gt; &amp; getDefault()</p>
+      <p>Defined at line 1397 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="F064B0F6EB38DA9CCC433F5515E8F817F524EF4D">operator type-parameter-0-0</h3>
+      <p>public DataType operator type-parameter-0-0()</p>
+      <p>Defined at line 1399 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="2205065F0E583DA9020939827F24F67CD522C2B4">operator-&gt;</h3>
+      <p>public DataType operator-&gt;()</p>
+      <p>Defined at line 1402 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <div>
+        <div>
+          <p> If the datatype is a pointer, support -&gt; on it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3992C8D16F6946EDAF83682D49931A408A3550A8">opt_storage&lt;type-parameter-0-0, false, false&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#324B0320C8AB576DFE319B109CECD4BEBA99A155">setValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C1234FA3ECF70E99E645CFEE510E5DC7647B8E0">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B96C50AFE5B718AF2C226351D0F066F6AB68415">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B576ADBFEB122E732B8BE9B643471749384E287">getDefault</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F064B0F6EB38DA9CCC433F5515E8F817F524EF4D">operator type-parameter-0-0</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2205065F0E583DA9020939827F24F67CD522C2B4">operator-&gt;</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class opt_storage</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm/cl" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class opt_storage</h1>
+    <p>Defined at line 1313 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    <div>
+      <div>
+        <p>===----------------------------------------------------------------------===// Default storage class definition: external storage.  This implementation assumes the user will specify a variable to store the data into with the cl::location(x) modifier.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E924353024F0E07E5A37AD0C7B3000D4ED69A98D">opt_storage&lt;DataType, ExternalStorage, isClass&gt;</h3>
+      <p>public void opt_storage&lt;DataType, ExternalStorage, isClass&gt;()</p>
+      <p>Defined at line 1324 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="9603932368479F14938E4BC3C4CF7F285E832D58">setLocation</h3>
+      <p>public _Bool setLocation(Option &amp; O, DataType &amp; L)</p>
+      <p>Defined at line 1326 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="0AA6E5B0DFBD36F6F7C9A34B318782D12DD03364">setValue</h3>
+      <p>public void setValue(const T &amp; V, _Bool initial)</p>
+      <p>Defined at line 1334 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="9A3E9523CAD5172D163D705DD26F5BC40B2BDA5E">getValue</h3>
+      <p>public DataType &amp; getValue()</p>
+      <p>Defined at line 1341 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="5871AE82F15FAFD6911E6E622103D4249A8C8B9E">getValue</h3>
+      <p>public const DataType &amp; getValue()</p>
+      <p>Defined at line 1345 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="0BF89145D295EB8210DF7AAE2B695210C6946CCD">operator type-parameter-0-0</h3>
+      <p>public DataType operator type-parameter-0-0()</p>
+      <p>Defined at line 1350 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+      <h3 id="AC08E4C3FE513B3F11B5E836F80B58BC75E0F3F0">getDefault</h3>
+      <p>public const OptionValue&lt;DataType&gt; &amp; getDefault()</p>
+      <p>Defined at line 1352 of file /usr/lib/llvm-16/include/llvm/Support/CommandLine.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E924353024F0E07E5A37AD0C7B3000D4ED69A98D">opt_storage&lt;DataType, ExternalStorage, isClass&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9603932368479F14938E4BC3C4CF7F285E832D58">setLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0AA6E5B0DFBD36F6F7C9A34B318782D12DD03364">setValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A3E9523CAD5172D163D705DD26F5BC40B2BDA5E">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5871AE82F15FAFD6911E6E622103D4249A8C8B9E">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0BF89145D295EB8210DF7AAE2B695210C6946CCD">operator type-parameter-0-0</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC08E4C3FE513B3F11B5E836F80B58BC75E0F3F0">getDefault</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

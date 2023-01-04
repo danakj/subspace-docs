@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AdjustedType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AdjustedType</h1>
+    <p>Defined at line 2798 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents a type which was implicitly adjusted by the semantic engine for arbitrary reasons.  For example, array and function types can decay, and function types can have their calling conventions adjusted.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="AE651989E14F3A3B24AEEE6D5FBB3D35768668B7">AdjustedType</h3>
+      <p>
+        protected void AdjustedType(
+        <a href="../clang/Type/TypeClass.html">TypeClass</a>
+         TC, 
+        <a href="QualType.html">QualType</a>
+         OriginalTy, 
+        <a href="QualType.html">QualType</a>
+         AdjustedTy, 
+        <a href="QualType.html">QualType</a>
+         CanonicalPtr)
+      </p>
+      <p>Defined at line 2805 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="E019EB1D23BD48A37191F2998FED1DF533241D51">getOriginalType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getOriginalType()
+      </p>
+      <p>Defined at line 2811 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="CE1E6A5DCE798DDAE58780859441772A4A50FC33">getAdjustedType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getAdjustedType()
+      </p>
+      <p>Defined at line 2812 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="18BC4E7B6F656D7666CD8DFE5CFA4CF7DF64755C">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 2814 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="3A11A007BCC1CF37D270B3EA35E22618BDBCF465">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 2815 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="73888C3CF547CDEC176D398CB9577635C61BAD49">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 2817 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="C871FDEE3065035D4D475B0FD0349A82808BE1E9">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="QualType.html">QualType</a>
+         Orig, 
+        <a href="QualType.html">QualType</a>
+         New)
+      </p>
+      <p>Defined at line 2821 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="94B195752B36132C7170A96756602B47442500B2">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 2826 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#AE651989E14F3A3B24AEEE6D5FBB3D35768668B7">AdjustedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E019EB1D23BD48A37191F2998FED1DF533241D51">getOriginalType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE1E6A5DCE798DDAE58780859441772A4A50FC33">getAdjustedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#18BC4E7B6F656D7666CD8DFE5CFA4CF7DF64755C">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A11A007BCC1CF37D270B3EA35E22618BDBCF465">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73888C3CF547CDEC176D398CB9577635C61BAD49">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C871FDEE3065035D4D475B0FD0349A82808BE1E9">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#94B195752B36132C7170A96756602B47442500B2">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

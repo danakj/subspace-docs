@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Test</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Test</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#414">414</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+    </p>
+    <div>
+      <div>
+        <p> The abstract class that all tests inherit from.</p>
+        <p> In Google Test, a unit test program contains one or many TestSuites, and each TestSuite contains one or many Tests.</p>
+        <p> When you define a test using the TEST macro, you don&apos;t need to explicitly derive from Test - the TEST macro automatically does this for you.</p>
+        <p> The only time you derive from Test is when defining a test fixture to be used in a TEST_F.  For example:</p>
+        <p>   class FooTest : public testing::Test {    protected:     void SetUp() override { ... }     void TearDown() override { ... }     ...   };</p>
+        <p>   TEST_F(FooTest, Bar) { ... }   TEST_F(FooTest, Baz) { ... }</p>
+        <p> Test is not copyable.</p>
+      </div>
+      <div>
+        <p> The friend relationship of some of these classes is cyclic. If we don&apos;t forward declare them the compiler might confuse the classes in friendship clauses with same named classes on the scope.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0984A483BE870B4456610C304B75B8104563CD7F">~Test</h3>
+      <p>public void ~Test()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2426">2426</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> The d&apos;tor is virtual as we intend to inherit from Test.</p>
+        </div>
+        <div>
+          <p> The d&apos;tor restores the states of all flags.  The actual work is done by the d&apos;tor of the gtest_flag_saver_ field, and thus not visible here.</p>
+        </div>
+      </div>
+      <h3 id="0760E4E019C38156099DE9568A8BB3A37A37F602">SetUpTestSuite</h3>
+      <p>public void SetUpTestSuite()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#427">427</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Sets up the stuff shared by all tests in this test suite.</p>
+          <p> Google Test will call Foo::SetUpTestSuite() before running the first test in test suite Foo.  Hence a sub-class can define its own SetUpTestSuite() method to shadow the one defined in the super class.</p>
+        </div>
+      </div>
+      <h3 id="20E00069F306B0B4A59291EF50048DB375183EA9">TearDownTestSuite</h3>
+      <p>public void TearDownTestSuite()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#435">435</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Tears down the stuff shared by all tests in this test suite.</p>
+          <p> Google Test will call Foo::TearDownTestSuite() after running the last test in test suite Foo.  Hence a sub-class can define its own TearDownTestSuite() method to shadow the one defined in the super class.</p>
+        </div>
+      </div>
+      <h3 id="1579F72CE6960C450AD1830EE3B240809D0B05DB">TearDownTestCase</h3>
+      <p>public void TearDownTestCase()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#440">440</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <h3 id="4419FEE5783AEFE626A4F1F2FCB4CCBD9ECCAD49">SetUpTestCase</h3>
+      <p>public void SetUpTestCase()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#441">441</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <h3 id="FD0D5ED73A5E10161664608446F79AF99CAEEB53">HasFatalFailure</h3>
+      <p>public _Bool HasFatalFailure()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2695">2695</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the current test has a fatal failure.</p>
+        </div>
+      </div>
+      <h3 id="90D450E3080E1CCCE2B8AC98A0BE9E2C1E7A6244">HasNonfatalFailure</h3>
+      <p>public _Bool HasNonfatalFailure()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2700">2700</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the current test has a non-fatal failure.</p>
+        </div>
+      </div>
+      <h3 id="8F9EE2A69C4B49076692C5F1E7082B09B4E8303C">IsSkipped</h3>
+      <p>public _Bool IsSkipped()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2706">2706</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the current test was skipped.</p>
+        </div>
+      </div>
+      <h3 id="4639F9E88792C71BA06E30D9F85D7B736E9947E5">HasFailure</h3>
+      <p>public _Bool HasFailure()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h#455">455</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/../third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if the current test has a (either fatal or non-fatal) failure.</p>
+        </div>
+      </div>
+      <h3 id="D7506E169B40356C212F9499DBA0F86454AE6C78">RecordProperty</h3>
+      <p>public void RecordProperty(const std::string &amp; key, const std::string &amp; value)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2442">2442</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Allows user supplied key value pairs to be recorded for later output.</p>
+        </div>
+        <div>
+          <p> Logs a property for the current test, test suite, or for the entire invocation of the test program when used outside of the context of a test suite.  Only the last value for a given key is remembered.  These are public static so they can be called from utility functions that are not members of the test fixture.  Calls to RecordProperty made during lifespan of the test (from the moment its constructor starts to the moment its destructor finishes) will be output in XML as attributes of the &lt;testcase&gt; element.  Properties recorded from fixture&apos;s SetUpTestSuite or TearDownTestSuite are logged as attributes of the corresponding &lt;testsuite&gt; element.  Calls to RecordProperty made in the global context (before or after invocation of RUN_ALL_TESTS and from SetUp/TearDown method of Environment objects registered with Google Test) will be output as attributes of the &lt;testsuites&gt; element.</p>
+        </div>
+      </div>
+      <h3 id="86A6CE9EE1D9F1CCC6AEBD34C05B9683E612B32E">RecordProperty</h3>
+      <p>public void RecordProperty(const std::string &amp; key, int value)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2447">2447</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Allows user supplied key value pairs to be recorded for later output.</p>
+        </div>
+      </div>
+      <h3 id="85EC1913D33D6B4B612296D2D2417FAE7D7C2C62">Test</h3>
+      <p>protected void Test()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2419">2419</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Creates a Test object.</p>
+        </div>
+        <div>
+          <p> The c&apos;tor saves the states of all flags.</p>
+        </div>
+      </div>
+      <h3 id="4943EC52D72D29291665B3F43083B70384888E4A">SetUp</h3>
+      <p>protected void SetUp()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2432">2432</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Sets up the test fixture.</p>
+        </div>
+        <div>
+          <p> Sets up the test fixture.</p>
+          <p> A sub-class may override this.</p>
+        </div>
+      </div>
+      <h3 id="86272A1F5B3AD473C2F9FAE0154BDD7150A56119">TearDown</h3>
+      <p>protected void TearDown()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2438">2438</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Tears down the test fixture.</p>
+        </div>
+        <div>
+          <p> Tears down the test fixture.</p>
+          <p> A sub-class may override this.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0984A483BE870B4456610C304B75B8104563CD7F">~Test</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0760E4E019C38156099DE9568A8BB3A37A37F602">SetUpTestSuite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#20E00069F306B0B4A59291EF50048DB375183EA9">TearDownTestSuite</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1579F72CE6960C450AD1830EE3B240809D0B05DB">TearDownTestCase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4419FEE5783AEFE626A4F1F2FCB4CCBD9ECCAD49">SetUpTestCase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD0D5ED73A5E10161664608446F79AF99CAEEB53">HasFatalFailure</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90D450E3080E1CCCE2B8AC98A0BE9E2C1E7A6244">HasNonfatalFailure</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F9EE2A69C4B49076692C5F1E7082B09B4E8303C">IsSkipped</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4639F9E88792C71BA06E30D9F85D7B736E9947E5">HasFailure</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7506E169B40356C212F9499DBA0F86454AE6C78">RecordProperty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86A6CE9EE1D9F1CCC6AEBD34C05B9683E612B32E">RecordProperty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#85EC1913D33D6B4B612296D2D2417FAE7D7C2C62">Test</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4943EC52D72D29291665B3F43083B70384888E4A">SetUp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86272A1F5B3AD473C2F9FAE0154BDD7150A56119">TearDown</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StringSaver</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StringSaver</h1>
+    <p>Defined at line 21 of file /usr/lib/llvm-16/include/llvm/Support/StringSaver.h</p>
+    <div>
+      <div>
+        <p> Saves strings in the provided stable storage and returns a StringRef with a stable character pointer.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8691BB6FEC6B8F1DC02A9027CE610E5919B0944A">StringSaver</h3>
+      <p>public void StringSaver(BumpPtrAllocator &amp; Alloc)</p>
+      <p>Defined at line 25 of file /usr/lib/llvm-16/include/llvm/Support/StringSaver.h</p>
+      <h3 id="16B964A4402B7FBB3C619B4BAFF1BB7234B97CEB">getAllocator</h3>
+      <p>public BumpPtrAllocator &amp; getAllocator()</p>
+      <p>Defined at line 27 of file /usr/lib/llvm-16/include/llvm/Support/StringSaver.h</p>
+      <h3 id="D4B996095BD760406B010F51A429A838311EB0DF">save</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         save(const char * S)
+      </p>
+      <p>Defined at line 30 of file /usr/lib/llvm-16/include/llvm/Support/StringSaver.h</p>
+      <div>
+        <div>
+          <p> All returned strings are null-terminated: *save(S).end() == 0.</p>
+        </div>
+      </div>
+      <h3 id="BF722CF448455AAD91FF96707A1A6108D09097EA">save</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         save(
+        <a href="StringRef.html">StringRef</a>
+         S)
+      </p>
+      <h3 id="3FC4C9C1F1BDCEF688865DD2488F033944A34AF6">save</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         save(const Twine &amp; S)
+      </p>
+      <p>Defined at line 32 of file /usr/lib/llvm-16/include/llvm/Support/StringSaver.h</p>
+      <h3 id="7BE053DF50DF78648C9308D1A3ABE39A12B02B14">save</h3>
+      <p>
+        public 
+        <a href="StringRef.html">StringRef</a>
+         save(const std::string &amp; S)
+      </p>
+      <p>Defined at line 33 of file /usr/lib/llvm-16/include/llvm/Support/StringSaver.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8691BB6FEC6B8F1DC02A9027CE610E5919B0944A">StringSaver</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16B964A4402B7FBB3C619B4BAFF1BB7234B97CEB">getAllocator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4B996095BD760406B010F51A429A838311EB0DF">save</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF722CF448455AAD91FF96707A1A6108D09097EA">save</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3FC4C9C1F1BDCEF688865DD2488F033944A34AF6">save</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7BE053DF50DF78648C9308D1A3ABE39A12B02B14">save</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

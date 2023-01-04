@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPAtomicDirective</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPAtomicDirective</h1>
+    <p>Defined at line 2894 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;#pragma omp atomic&apos; directive.</p>
+        <p> In this example directive &apos;#pragma omp atomic&apos; has clause &apos;capture&apos;.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPExecutableDirective.html">OMPExecutableDirective</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/OMPAtomicDirective/Expressions.html">Expressions</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="635DBE26573ED724AA3A66B511B21CE4E76EE581">Create</h3>
+      <p>
+        public OMPAtomicDirective * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Clauses, Stmt * AssociatedStmt, 
+        <a href="../clang/OMPAtomicDirective/Expressions.html">Expressions</a>
+         Exprs)
+      </p>
+      <div>
+        <div>
+          <p> Creates directive with a list of  and &apos;x&apos;, &apos;v&apos; and &apos;expr&apos; parts of the atomic construct (see Section 2.12.6, atomic Construct, for detailed description of &apos;x&apos;, &apos;v&apos; and &apos;expr&apos;).</p>
+        </div>
+      </div>
+      <h3 id="87E28C3202A4623A1E2E5141E0E881DF09DF476A">CreateEmpty</h3>
+      <p>
+        public OMPAtomicDirective * CreateEmpty(const ASTContext &amp; C, unsigned int NumClauses, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         )
+      </p>
+      <div>
+        <div>
+          <p> Creates an empty directive with the place for  clauses.</p>
+        </div>
+      </div>
+      <h3 id="E6484AB949970C22A14AB9DC4F826A4A9639613B">getX</h3>
+      <p>public Expr * getX()</p>
+      <p>Defined at line 3020 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get &apos;x&apos; part of the associated expression/statement.</p>
+        </div>
+      </div>
+      <h3 id="D150717A50503312392DA6B33C5E1F9827A9337F">getX</h3>
+      <p>public const Expr * getX()</p>
+      <p>Defined at line 3023 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <h3 id="69BBB53D62A293E21E66EF31A2EA20F8B7769BC8">getUpdateExpr</h3>
+      <p>public Expr * getUpdateExpr()</p>
+      <p>Defined at line 3029 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get helper expression of the form &apos;OpaqueValueExpr(x) binop OpaqueValueExpr(expr)&apos; or &apos;OpaqueValueExpr(expr) binop OpaqueValueExpr(x)&apos;.</p>
+        </div>
+      </div>
+      <h3 id="A8EC810E8D49E95E0237DBAA27CC1928AC159927">getUpdateExpr</h3>
+      <p>public const Expr * getUpdateExpr()</p>
+      <p>Defined at line 3033 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <h3 id="A6C08EB0F2606A62DEE1C82299F4E989B3AC4F03">isXLHSInRHSPart</h3>
+      <p>public _Bool isXLHSInRHSPart()</p>
+      <p>Defined at line 3040 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Return true if helper update expression has form &apos;OpaqueValueExpr(x) binop OpaqueValueExpr(expr)&apos; and false if it has form &apos;OpaqueValueExpr(expr) binop OpaqueValueExpr(x)&apos;.</p>
+        </div>
+      </div>
+      <h3 id="E5221C0DFECE560D89C7735D94F1DE7083BC4C62">isPostfixUpdate</h3>
+      <p>public _Bool isPostfixUpdate()</p>
+      <p>Defined at line 3043 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Return true if &apos;v&apos; expression must be updated to original value of &apos;x&apos;, false if &apos;v&apos; must be updated to the new value of &apos;x&apos;.</p>
+        </div>
+      </div>
+      <h3 id="58CA8C0C25336CD25C25B72BAD1BF77022F7BB89">isFailOnly</h3>
+      <p>public _Bool isFailOnly()</p>
+      <p>Defined at line 3046 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Return true if &apos;v&apos; is updated only when the condition is evaluated false (compare capture only).</p>
+        </div>
+      </div>
+      <h3 id="D3BF141B2636AF10D1A9CE505F9D9DA01572A336">getV</h3>
+      <p>public Expr * getV()</p>
+      <p>Defined at line 3048 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get &apos;v&apos; part of the associated expression/statement.</p>
+        </div>
+      </div>
+      <h3 id="338FF211B258894DC661D9DCA7BC941FBDC354CD">getV</h3>
+      <p>public const Expr * getV()</p>
+      <p>Defined at line 3051 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <h3 id="0268A691B3CF169F830B66633842F06B575C5F42">getR</h3>
+      <p>public Expr * getR()</p>
+      <p>Defined at line 3055 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get &apos;r&apos; part of the associated expression/statement.</p>
+        </div>
+      </div>
+      <h3 id="83349AF3B9D180405989621AB7013B62F588ED2C">getR</h3>
+      <p>public const Expr * getR()</p>
+      <p>Defined at line 3058 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <h3 id="53CC2E50C03C6939A875F4AA73957456CD59118D">getExpr</h3>
+      <p>public Expr * getExpr()</p>
+      <p>Defined at line 3062 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get &apos;expr&apos; part of the associated expression/statement.</p>
+        </div>
+      </div>
+      <h3 id="3C69E25670BA7D20BD0272F861A6CA4D83797FB0">getExpr</h3>
+      <p>public const Expr * getExpr()</p>
+      <p>Defined at line 3065 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <h3 id="C35D4D1B2254D56D6877C60FEF8CB6F63005D0B3">getD</h3>
+      <p>public Expr * getD()</p>
+      <p>Defined at line 3069 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get &apos;d&apos; part of the associated expression/statement.</p>
+        </div>
+      </div>
+      <h3 id="2CB1A25DC3E652869A8D815CEE4E6D8E1D337EAA">getD</h3>
+      <p>public Expr * getD()</p>
+      <p>Defined at line 3072 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <h3 id="1580A03723181F5888B4CE9FABE8912CA46E299B">getCondExpr</h3>
+      <p>public Expr * getCondExpr()</p>
+      <p>Defined at line 3076 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Get the &apos;cond&apos; part of the source atomic expression.</p>
+        </div>
+      </div>
+      <h3 id="431EF3931ADE48F4ECAD420535E39D1020979EFA">getCondExpr</h3>
+      <p>public Expr * getCondExpr()</p>
+      <p>Defined at line 3079 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <h3 id="FFF93DDFE85FA7334A424BE5BB132E914E0F7C98">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 3083 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#635DBE26573ED724AA3A66B511B21CE4E76EE581">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87E28C3202A4623A1E2E5141E0E881DF09DF476A">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6484AB949970C22A14AB9DC4F826A4A9639613B">getX</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D150717A50503312392DA6B33C5E1F9827A9337F">getX</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69BBB53D62A293E21E66EF31A2EA20F8B7769BC8">getUpdateExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A8EC810E8D49E95E0237DBAA27CC1928AC159927">getUpdateExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6C08EB0F2606A62DEE1C82299F4E989B3AC4F03">isXLHSInRHSPart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E5221C0DFECE560D89C7735D94F1DE7083BC4C62">isPostfixUpdate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#58CA8C0C25336CD25C25B72BAD1BF77022F7BB89">isFailOnly</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3BF141B2636AF10D1A9CE505F9D9DA01572A336">getV</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#338FF211B258894DC661D9DCA7BC941FBDC354CD">getV</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0268A691B3CF169F830B66633842F06B575C5F42">getR</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#83349AF3B9D180405989621AB7013B62F588ED2C">getR</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53CC2E50C03C6939A875F4AA73957456CD59118D">getExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C69E25670BA7D20BD0272F861A6CA4D83797FB0">getExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C35D4D1B2254D56D6877C60FEF8CB6F63005D0B3">getD</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2CB1A25DC3E652869A8D815CEE4E6D8E1D337EAA">getD</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1580A03723181F5888B4CE9FABE8912CA46E299B">getCondExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#431EF3931ADE48F4ECAD420535E39D1020979EFA">getCondExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FFF93DDFE85FA7334A424BE5BB132E914E0F7C98">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

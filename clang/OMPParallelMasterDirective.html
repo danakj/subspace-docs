@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPParallelMasterDirective</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPParallelMasterDirective</h1>
+    <p>Defined at line 2256 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;#pragma omp parallel master&apos; directive.</p>
+        <p> In this example directive &apos;#pragma omp parallel master&apos; has clauses &apos;private&apos; with the variables &apos;a&apos; and &apos;b&apos;</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="OMPExecutableDirective.html">OMPExecutableDirective</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F43883AAB8538F3D065E6FFB2FCB7E0BC6A87D14">Create</h3>
+      <p>
+        public OMPParallelMasterDirective * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Clauses, Stmt * AssociatedStmt, Expr * TaskRedRef)
+      </p>
+      <div>
+        <div>
+          <p> Creates directive with a list of </p>
+        </div>
+      </div>
+      <h3 id="5347D6D849D9FEB8A9A6E809238F45D95B9BBD6C">CreateEmpty</h3>
+      <p>
+        public OMPParallelMasterDirective * CreateEmpty(const ASTContext &amp; C, unsigned int NumClauses, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         )
+      </p>
+      <div>
+        <div>
+          <p> Creates an empty directive with the place for  clauses.</p>
+        </div>
+      </div>
+      <h3 id="15BFEF89E7CE10475683D02D7E6495670FF13D92">getTaskReductionRefExpr</h3>
+      <p>public Expr * getTaskReductionRefExpr()</p>
+      <p>Defined at line 2298 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <div>
+        <div>
+          <p> Returns special task reduction reference expression.</p>
+        </div>
+      </div>
+      <h3 id="E18A73ED07B991EA208432809AF3107F49954ED1">getTaskReductionRefExpr</h3>
+      <p>public const Expr * getTaskReductionRefExpr()</p>
+      <p>Defined at line 2301 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+      <h3 id="E28AD0E4B5DE3690C45E55732C713010911D770D">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2306 of file /usr/lib/llvm-16/include/clang/AST/StmtOpenMP.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F43883AAB8538F3D065E6FFB2FCB7E0BC6A87D14">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5347D6D849D9FEB8A9A6E809238F45D95B9BBD6C">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15BFEF89E7CE10475683D02D7E6495670FF13D92">getTaskReductionRefExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E18A73ED07B991EA208432809AF3107F49954ED1">getTaskReductionRefExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E28AD0E4B5DE3690C45E55732C713010911D770D">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MatrixType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MatrixType</h1>
+    <p>Defined at line 3548 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents a matrix type, as defined in the Matrix Types clang extensions. __attribute__((matrix_type(rows, columns))), where &quot;rows&quot; specifies number of rows and &quot;columns&quot; specifies the number of columns.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        protected 
+        <a href="QualType.html">QualType</a>
+         ElementType
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E16FFEE86FE5CA3A4905C634BA7914E825D12282">MatrixType</h3>
+      <p>
+        protected void MatrixType(
+        <a href="QualType.html">QualType</a>
+         ElementTy, 
+        <a href="QualType.html">QualType</a>
+         CanonElementTy)
+      </p>
+      <h3 id="FDED6185D3B539B20B1084A94F3AE93D5758CA2A">MatrixType</h3>
+      <p>
+        protected void MatrixType(
+        <a href="../clang/Type/TypeClass.html">TypeClass</a>
+         TypeClass, 
+        <a href="QualType.html">QualType</a>
+         ElementTy, 
+        <a href="QualType.html">QualType</a>
+         CanonElementTy, const Expr * RowExpr, const Expr * ColumnExpr)
+      </p>
+      <h3 id="3902A46D24B247D21BDFE130DEA6ECC1E7D26CF5">getElementType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getElementType()
+      </p>
+      <p>Defined at line 3562 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Returns type of the elements being stored in the matrix</p>
+        </div>
+      </div>
+      <h3 id="7EC79FD047C51461738FE5D4ABD0DB7829CA63E1">isValidElementType</h3>
+      <p>
+        public _Bool isValidElementType(
+        <a href="QualType.html">QualType</a>
+         T)
+      </p>
+      <p>Defined at line 3569 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Valid elements types are the following: * an integer type (as in C2x 6.2.5p19), but excluding enumerated types   and _Bool * the standard floating types float or double * a half-precision floating point type, if one is supported on the target</p>
+        </div>
+      </div>
+      <h3 id="B5A0EA84D15BAD6F598DCC1167918A2E0FAAD191">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 3574 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="DB22C865F58E70004DE1F506AF6AB872F14EF7EA">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 3575 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="2B6CE8EC4A1B6539834613572BE90B52F23A96C0">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 3577 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E16FFEE86FE5CA3A4905C634BA7914E825D12282">MatrixType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FDED6185D3B539B20B1084A94F3AE93D5758CA2A">MatrixType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3902A46D24B247D21BDFE130DEA6ECC1E7D26CF5">getElementType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7EC79FD047C51461738FE5D4ABD0DB7829CA63E1">isValidElementType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B5A0EA84D15BAD6F598DCC1167918A2E0FAAD191">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB22C865F58E70004DE1F506AF6AB872F14EF7EA">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B6CE8EC4A1B6539834613572BE90B52F23A96C0">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

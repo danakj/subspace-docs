@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPChildren</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPChildren</h1>
+    <p>Defined at line 8857 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    <div>
+      <div>
+        <p> Contains data for OpenMP directives: clauses, children expressions/statements (helpers for codegen) and associated statement, if any.</p>
+      </div>
+    </div>
+    <p>Inherits from llvm::TrailingObjects&lt;OMPChildren, OMPClause *, Stmt *&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="30CF67F588300B2C8C8E39ABDFB498B6656A1C8E">getNumClauses</h3>
+      <p>public unsigned int getNumClauses()</p>
+      <p>Defined at line 8894 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="CE2873A15B3F814EBE8BF56040382C6250903804">getNumChildren</h3>
+      <p>public unsigned int getNumChildren()</p>
+      <p>Defined at line 8895 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="A95DC1E7EA245AE44B59FD5B4576F06275F212F1">hasAssociatedStmt</h3>
+      <p>public _Bool hasAssociatedStmt()</p>
+      <p>Defined at line 8896 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="EB4011B4C5C9C82525E3062221E8EE51E4BC05C9">setAssociatedStmt</h3>
+      <p>public void setAssociatedStmt(Stmt * S)</p>
+      <p>Defined at line 8899 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Set associated statement.</p>
+        </div>
+      </div>
+      <h3 id="6571C67B9F4DEA6F1149FA99DA9AF894A25B2622">setChildren</h3>
+      <p>
+        public void setChildren(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Children)
+      </p>
+      <h3 id="E910A06634634F41B1321E1C567B908F8FA34832">setClauses</h3>
+      <p>
+        public void setClauses(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Clauses)
+      </p>
+      <div>
+        <div>
+          <p> Sets the list of variables for this clause.</p>
+        </div>
+      </div>
+      <h3 id="8ED434B8A6DA46851A0B6002736BF4B4A7D53B68">getAssociatedStmt</h3>
+      <p>public const Stmt * getAssociatedStmt()</p>
+      <p>Defined at line 8912 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns statement associated with the directive.</p>
+        </div>
+      </div>
+      <h3 id="206F2F3E49252FAF218655E86827E7421A2FF8B0">getAssociatedStmt</h3>
+      <p>public Stmt * getAssociatedStmt()</p>
+      <p>Defined at line 8915 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="6C73FFA458503FEF8921A67C19DEED51910AEF78">getClauses</h3>
+      <p>
+        public 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         getClauses()
+      </p>
+      <p>Defined at line 8922 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get the clauses storage.</p>
+        </div>
+      </div>
+      <h3 id="8367917803FD283A6C88D77AEBB6B03ED8724704">getClauses</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getClauses()
+      </p>
+      <p>Defined at line 8926 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="9223C24AF27187B5F5C6B928E104815B3942CCCE">getCapturedStmt</h3>
+      <p>
+        public const CapturedStmt * getCapturedStmt(
+        <a href="../llvm/omp/Directive.html">Directive</a>
+         RegionKind, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         CaptureRegions)
+      </p>
+      <p>Defined at line 8934 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Returns the captured statement associated with the component region within the (combined) directive.</p>
+        </div>
+      </div>
+      <h3 id="9BB4C1DAA3E693E532340820FD45B4084A730E91">getInnermostCapturedStmt</h3>
+      <p>
+        public CapturedStmt * getInnermostCapturedStmt(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         CaptureRegions)
+      </p>
+      <p>Defined at line 8949 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <div>
+        <div>
+          <p> Get innermost captured statement for the construct.</p>
+        </div>
+      </div>
+      <h3 id="4F7709EBC2145EF9C0B06129BA9EE5EA0558BD62">getInnermostCapturedStmt</h3>
+      <p>
+        public const CapturedStmt * getInnermostCapturedStmt(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         CaptureRegions)
+      </p>
+      <p>Defined at line 8960 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="7E4F22D5B649CBA8847671C418426AC6D1EDBA1B">getChildren</h3>
+      <p>
+        public 
+        <a href="../llvm/MutableArrayRef.html">MutableArrayRef</a>
+         getChildren()
+      </p>
+      <h3 id="45EA06F55C11FF2455EE7E0701EEFC18224830B4">getChildren</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getChildren()
+      </p>
+      <p>Defined at line 8967 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="8C88CB5B124A01B98FF67C257029BA1D0859DD63">getRawStmt</h3>
+      <p>public Stmt * getRawStmt()</p>
+      <p>Defined at line 8971 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="D83B85A747AAE386286C90892B6528A1BBA02535">getRawStmt</h3>
+      <p>public const Stmt * getRawStmt()</p>
+      <p>Defined at line 8984 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+      <h3 id="F916C98189D559C62591423E28652674FE5BE5B2">getAssociatedStmtAsRange</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         getAssociatedStmtAsRange()
+      </p>
+      <p>Defined at line 8988 of file /usr/lib/llvm-16/include/clang/AST/OpenMPClause.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#30CF67F588300B2C8C8E39ABDFB498B6656A1C8E">getNumClauses</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE2873A15B3F814EBE8BF56040382C6250903804">getNumChildren</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A95DC1E7EA245AE44B59FD5B4576F06275F212F1">hasAssociatedStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB4011B4C5C9C82525E3062221E8EE51E4BC05C9">setAssociatedStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6571C67B9F4DEA6F1149FA99DA9AF894A25B2622">setChildren</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E910A06634634F41B1321E1C567B908F8FA34832">setClauses</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8ED434B8A6DA46851A0B6002736BF4B4A7D53B68">getAssociatedStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#206F2F3E49252FAF218655E86827E7421A2FF8B0">getAssociatedStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C73FFA458503FEF8921A67C19DEED51910AEF78">getClauses</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8367917803FD283A6C88D77AEBB6B03ED8724704">getClauses</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9223C24AF27187B5F5C6B928E104815B3942CCCE">getCapturedStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BB4C1DAA3E693E532340820FD45B4084A730E91">getInnermostCapturedStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F7709EBC2145EF9C0B06129BA9EE5EA0558BD62">getInnermostCapturedStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E4F22D5B649CBA8847671C418426AC6D1EDBA1B">getChildren</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#45EA06F55C11FF2455EE7E0701EEFC18224830B4">getChildren</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8C88CB5B124A01B98FF67C257029BA1D0859DD63">getRawStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D83B85A747AAE386286C90892B6528A1BBA02535">getRawStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F916C98189D559C62591423E28652674FE5BE5B2">getAssociatedStmtAsRange</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class DeclSpec</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class DeclSpec</h1>
+    <p>Defined at line 230 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+    <div>
+      <div>
+        <p> Captures information about &quot;declaration specifiers&quot;.</p>
+        <p> &quot;Declaration specifiers&quot; encompasses storage-class-specifiers, type-specifiers, type-qualifiers, and function-specifiers.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="19B5828666ED991FFC35B262BD806DAC08FAF6BD">isDeclRep</h3>
+      <p>
+        public _Bool isDeclRep(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T)
+      </p>
+      <p>Defined at line 427 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="C58315BD758D677548DF8CC2D90BADFB1CD3A776">isTransformTypeTrait</h3>
+      <p>
+        public _Bool isTransformTypeTrait(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T)
+      </p>
+      <p>Defined at line 432 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="157CFE9617A953FC191BFB65EE3334974F9FBF02">DeclSpec</h3>
+      <p>public void DeclSpec(AttributeFactory &amp; attrFactory)</p>
+      <p>Defined at line 441 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="D82480BEF4C67B101620BD940297077D3F36E610">getStorageClassSpec</h3>
+      <p>
+        public 
+        <a href="../clang/DeclSpec/SCS.html">SCS</a>
+         getStorageClassSpec()
+      </p>
+      <p>Defined at line 459 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> storage-class-specifier</p>
+        </div>
+      </div>
+      <h3 id="E6CA6CBE3AF26FB9A426A521384A139A39683CC8">getThreadStorageClassSpec</h3>
+      <p>
+        public 
+        <a href="ThreadStorageClassSpecifier.html">ThreadStorageClassSpecifier</a>
+         getThreadStorageClassSpec()
+      </p>
+      <p>Defined at line 460 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="97BFF060C579BA092C58428EC3182F353C4DC6D5">isExternInLinkageSpec</h3>
+      <p>public _Bool isExternInLinkageSpec()</p>
+      <p>Defined at line 463 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="B08EB886AA063A2CE9856E27A24EEEE51603F42E">setExternInLinkageSpec</h3>
+      <p>public void setExternInLinkageSpec(_Bool Value)</p>
+      <p>Defined at line 464 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="28D8EBF07A414DEDCD27B4B9C8C8BB2ABB3E7914">getStorageClassSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getStorageClassSpecLoc()
+      </p>
+      <p>Defined at line 468 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="E034FEBCA4D34423EB754F983D7C45F5E132CE98">getThreadStorageClassSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getThreadStorageClassSpecLoc()
+      </p>
+      <p>Defined at line 469 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="B8168F227B1D7FB826EDB283C3F9A45DE14F7523">ClearStorageClassSpecs</h3>
+      <p>public void ClearStorageClassSpecs()</p>
+      <p>Defined at line 473 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="FC8E4103A614BD247B1C5847095B75E5C9E5A28C">ClearTypeSpecType</h3>
+      <p>public void ClearTypeSpecType()</p>
+      <p>Defined at line 481 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="F002E99BB6DB540FA85C29ED688787A2642E92D4">getTypeSpecWidth</h3>
+      <p>
+        public 
+        <a href="TypeSpecifierWidth.html">TypeSpecifierWidth</a>
+         getTypeSpecWidth()
+      </p>
+      <p>Defined at line 488 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> type-specifier</p>
+        </div>
+      </div>
+      <h3 id="225148D9054C0F5A881CDC7B839964E3CF2F0A6A">getTypeSpecComplex</h3>
+      <p>
+        public 
+        <a href="../clang/DeclSpec/TSC.html">TSC</a>
+         getTypeSpecComplex()
+      </p>
+      <p>Defined at line 491 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="E1156A477EEB09CACB0C14F956A63127311F13CB">getTypeSpecSign</h3>
+      <p>
+        public 
+        <a href="TypeSpecifierSign.html">TypeSpecifierSign</a>
+         getTypeSpecSign()
+      </p>
+      <p>Defined at line 492 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="EF38BAC1DE7194029A52BF1F4DA62A372B35CD7F">getTypeSpecType</h3>
+      <p>
+        public 
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         getTypeSpecType()
+      </p>
+      <p>Defined at line 495 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="86549EFCE812AA3010BD6E5F83EF654382D2EDDC">isTypeAltiVecVector</h3>
+      <p>public _Bool isTypeAltiVecVector()</p>
+      <p>Defined at line 496 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="913ECFF29C2D3474F514ACF0B43775DBF9A80A87">isTypeAltiVecPixel</h3>
+      <p>public _Bool isTypeAltiVecPixel()</p>
+      <p>Defined at line 497 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="319D95B7B82D783B7441D44D87D544427DF161C5">isTypeAltiVecBool</h3>
+      <p>public _Bool isTypeAltiVecBool()</p>
+      <p>Defined at line 498 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="717E13854A2101A21B2C89DAF774E72C40E85EC5">isTypeSpecOwned</h3>
+      <p>public _Bool isTypeSpecOwned()</p>
+      <p>Defined at line 499 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="0A1776E40EE9230007BDFE1B05D5331AE990C4A7">isTypeRep</h3>
+      <p>public _Bool isTypeRep()</p>
+      <p>Defined at line 500 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="5ADDE544EA05AE8133050A62D29A6E4C189E5786">isTypeSpecPipe</h3>
+      <p>public _Bool isTypeSpecPipe()</p>
+      <p>Defined at line 501 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="5E560AD14832E18E21C7FB48B8E7FC0CEE36E0BD">isTypeSpecSat</h3>
+      <p>public _Bool isTypeSpecSat()</p>
+      <p>Defined at line 502 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="550FE10FEFE0CFA639A966B9882B1C4A2287BE25">isConstrainedAuto</h3>
+      <p>public _Bool isConstrainedAuto()</p>
+      <p>Defined at line 503 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="8317788FB7365D67A2937C50B87AC06B2533F887">getRepAsType</h3>
+      <p>
+        public 
+        <a href="OpaquePtr.html">OpaquePtr</a>
+         getRepAsType()
+      </p>
+      <p>Defined at line 505 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="A57CF8B81B27C44DCB5755EF525E76AE504F2196">getRepAsDecl</h3>
+      <p>public Decl * getRepAsDecl()</p>
+      <p>Defined at line 509 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="674063A4D6E54FD65EC694D200B54CE03D51311F">getRepAsExpr</h3>
+      <p>public Expr * getRepAsExpr()</p>
+      <p>Defined at line 513 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="FBC41B2F863C6C6C169C1CE7C1E1531BA598845F">getRepAsTemplateId</h3>
+      <p>public TemplateIdAnnotation * getRepAsTemplateId()</p>
+      <p>Defined at line 517 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="278EA32A1987AF30E9ECD3956F6B6629724D8DFF">getTypeSpecScope</h3>
+      <p>public CXXScopeSpec &amp; getTypeSpecScope()</p>
+      <p>Defined at line 522 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="498D415672C927DFD517585CCA80E23B224692E2">getTypeSpecScope</h3>
+      <p>public const CXXScopeSpec &amp; getTypeSpecScope()</p>
+      <p>Defined at line 523 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="869705CF3387D22D036C500B54E8AFDEC8F48178">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 525 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="29841097AB7122FCFF6CC278E4A28FBE094B0588">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 526 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="434F0FB1BA8097B52EC8B6009C73A4B1B8030089">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 527 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="4F7B874BED4218A868B6C6646CE97A6CD213610B">getTypeSpecWidthLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTypeSpecWidthLoc()
+      </p>
+      <p>Defined at line 529 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="9F7C92B72E14FC2A31A8534295E3993C95E19658">getTypeSpecWidthRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getTypeSpecWidthRange()
+      </p>
+      <p>Defined at line 530 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="272798796A4CECC486C0F041D2C17125E86FC572">getTypeSpecComplexLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTypeSpecComplexLoc()
+      </p>
+      <p>Defined at line 531 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="EA05A5FAA6908135411931F50B1836837250CE35">getTypeSpecSignLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTypeSpecSignLoc()
+      </p>
+      <p>Defined at line 532 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="286D68FDA679DC4F80402C24F2A3030C67682582">getTypeSpecTypeLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTypeSpecTypeLoc()
+      </p>
+      <p>Defined at line 533 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="4ABF2B909688BF8AD9F8135881A0BCE7A6FAB602">getAltiVecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAltiVecLoc()
+      </p>
+      <p>Defined at line 534 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="EE84BDA037A7012BCB33518F01C840F7C77FE5AB">getTypeSpecSatLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTypeSpecSatLoc()
+      </p>
+      <p>Defined at line 535 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="0F00E3E3C3F20CFE1260954738815A48ABC39AC1">getTypeSpecTypeNameLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getTypeSpecTypeNameLoc()
+      </p>
+      <p>Defined at line 537 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="F1CD1BDC2063B57577D2B8679D71FCFA4412D4DF">getTypeofParensRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getTypeofParensRange()
+      </p>
+      <p>Defined at line 543 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="F23A18431BE8048DE39AACB4020497CF4C3C3D95">setTypeArgumentRange</h3>
+      <p>
+        public void setTypeArgumentRange(
+        <a href="SourceRange.html">SourceRange</a>
+         range)
+      </p>
+      <p>Defined at line 544 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="63B96B0F3000B8EE629446DCBDAD301EE8357DF7">hasAutoTypeSpec</h3>
+      <p>public _Bool hasAutoTypeSpec()</p>
+      <p>Defined at line 546 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="26FC4D43EF36B7810A1886A33FF75A75985E951B">hasTagDefinition</h3>
+      <p>public _Bool hasTagDefinition()</p>
+      <h3 id="307685A1A2F03FB38EFD63AA1928B5B2D35177BB">getSpecifierName</h3>
+      <p>
+        public const char * getSpecifierName(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T, const PrintingPolicy &amp; Policy)
+      </p>
+      <div>
+        <div>
+          <p> Turn a type-specifier-type into a string like &quot;_Bool&quot; or &quot;union&quot;.</p>
+        </div>
+      </div>
+      <h3 id="A571EC4BD38AA1972BB4B8AE97D1A2663777D4FC">getSpecifierName</h3>
+      <p>
+        public const char * getSpecifierName(
+        <a href="../clang/DeclSpec/TQ.html">TQ</a>
+         Q)
+      </p>
+      <h3 id="CAAC4A49FD6A058BD25FC71B5614D9C7FB7417B7">getSpecifierName</h3>
+      <p>
+        public const char * getSpecifierName(
+        <a href="TypeSpecifierSign.html">TypeSpecifierSign</a>
+         S)
+      </p>
+      <h3 id="76C63CDF16C1D09C7AE465B6F66F3C9D8D791A2F">getSpecifierName</h3>
+      <p>
+        public const char * getSpecifierName(
+        <a href="../clang/DeclSpec/TSC.html">TSC</a>
+         C)
+      </p>
+      <h3 id="241C44B45B2C65C460D988607FC6F6B559DAEE0B">getSpecifierName</h3>
+      <p>
+        public const char * getSpecifierName(
+        <a href="TypeSpecifierWidth.html">TypeSpecifierWidth</a>
+         W)
+      </p>
+      <h3 id="8AA17CDD90C59EA860CD7F3061A5511680755908">getSpecifierName</h3>
+      <p>
+        public const char * getSpecifierName(
+        <a href="../clang/DeclSpec/SCS.html">SCS</a>
+         S)
+      </p>
+      <h3 id="B9D45C28346F65D06440DD766A8959AE99F4CC5B">getSpecifierName</h3>
+      <p>
+        public const char * getSpecifierName(
+        <a href="ThreadStorageClassSpecifier.html">ThreadStorageClassSpecifier</a>
+         S)
+      </p>
+      <h3 id="B201AAC00A2DF3C5D0C66FA261F50E5B3854D7B1">getSpecifierName</h3>
+      <p>
+        public const char * getSpecifierName(
+        <a href="ConstexprSpecKind.html">ConstexprSpecKind</a>
+         C)
+      </p>
+      <h3 id="B28A0A1EA55C8034686B8F7B9227B5D0BB435917">getTypeQualifiers</h3>
+      <p>public unsigned int getTypeQualifiers()</p>
+      <p>Defined at line 567 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> getTypeQualifiers - Return a set of TQs.</p>
+        </div>
+      </div>
+      <h3 id="827564F114C24162D7C1514C413F2B76BBF3C93C">getConstSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getConstSpecLoc()
+      </p>
+      <p>Defined at line 568 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="DD7085C774611E588E5F39D0468191509F0A8E0F">getRestrictSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRestrictSpecLoc()
+      </p>
+      <p>Defined at line 569 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="F0E6D45F2683C613E23BA7CC7C745E1ED6E95E7B">getVolatileSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getVolatileSpecLoc()
+      </p>
+      <p>Defined at line 570 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="8C2428EE31CD4525533B6FD275160E7EC9137A27">getAtomicSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAtomicSpecLoc()
+      </p>
+      <p>Defined at line 571 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="9B2703B83B3F87DB66C6E900B5467A468FA9D763">getUnalignedSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getUnalignedSpecLoc()
+      </p>
+      <p>Defined at line 572 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="B4ACBF8170ED7E44861FE8C575B72B6636A46D88">getPipeLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getPipeLoc()
+      </p>
+      <p>Defined at line 573 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="F997BB2ED66D9C44D2722B19B1E5A0C25A6ADBB9">ClearTypeQualifiers</h3>
+      <p>public void ClearTypeQualifiers()</p>
+      <p>Defined at line 576 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Clear out all of the type qualifiers.</p>
+        </div>
+      </div>
+      <h3 id="A0580EA2E89F5CDFD523F4A14BD9FC5A853DBA54">isInlineSpecified</h3>
+      <p>public _Bool isInlineSpecified()</p>
+      <p>Defined at line 587 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> function-specifier</p>
+        </div>
+      </div>
+      <h3 id="D392153BA4A50EC1974DBD588D064EBCCFB70592">getInlineSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getInlineSpecLoc()
+      </p>
+      <p>Defined at line 590 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="DA71184E2931DFE79CEBA2B7E9CDE47093845247">getExplicitSpecifier</h3>
+      <p>
+        public 
+        <a href="ExplicitSpecifier.html">ExplicitSpecifier</a>
+         getExplicitSpecifier()
+      </p>
+      <p>Defined at line 594 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="2BA90AB26E74E233136DBCFF6CF0E1BF89029178">isVirtualSpecified</h3>
+      <p>public _Bool isVirtualSpecified()</p>
+      <p>Defined at line 598 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="D532CAD02143C4016BCDC4BEE39FF0E79CCD7FFD">getVirtualSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getVirtualSpecLoc()
+      </p>
+      <p>Defined at line 599 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="583B8F60F31C973732E75A2F6B17262ACCB0B468">hasExplicitSpecifier</h3>
+      <p>public _Bool hasExplicitSpecifier()</p>
+      <p>Defined at line 601 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="E8D2B3C44F1A144852C51638AD92F2DFF1337ECC">getExplicitSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExplicitSpecLoc()
+      </p>
+      <p>Defined at line 604 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="513904B2179E14609FB2F8BB74F74D34D20F51BF">getExplicitSpecRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getExplicitSpecRange()
+      </p>
+      <p>Defined at line 605 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="03F7C85BB652BC12E94EE7CE410FCCEFD92A4FB2">isNoreturnSpecified</h3>
+      <p>public _Bool isNoreturnSpecified()</p>
+      <p>Defined at line 611 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="F1136ADA6DB8104AB9B1812D8BAABE96226073CE">getNoreturnSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getNoreturnSpecLoc()
+      </p>
+      <p>Defined at line 612 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="4079D70FD3480AF046EF39B5413D71AC3CFF494C">ClearFunctionSpecs</h3>
+      <p>public void ClearFunctionSpecs()</p>
+      <p>Defined at line 614 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="15887F426D428BB29A7682D4A47D55E0C91C0037">forEachCVRUQualifier</h3>
+      <p>public void forEachCVRUQualifier(llvm::function_ref&lt;void (TQ, StringRef, SourceLocation)&gt; Handle)</p>
+      <div>
+        <div>
+          <p> This method calls the passed in handler on each CVRU qual being set. Handle - a handler to be invoked.</p>
+        </div>
+      </div>
+      <h3 id="883C57614461050528FE0A7F3378868E1CB1669D">forEachQualifier</h3>
+      <p>public void forEachQualifier(llvm::function_ref&lt;void (TQ, StringRef, SourceLocation)&gt; Handle)</p>
+      <div>
+        <div>
+          <p> This method calls the passed in handler on each qual being set. Handle - a handler to be invoked.</p>
+        </div>
+      </div>
+      <h3 id="9B4061C72567C1E4EC5EDB4E5132FE2BA719A06B">hasTypeSpecifier</h3>
+      <p>public _Bool hasTypeSpecifier()</p>
+      <p>Defined at line 641 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Return true if any type-specifier has been found.</p>
+        </div>
+      </div>
+      <h3 id="7C7C9CBD0B0324784B241FDB3CB84E2DE6C7169E">getParsedSpecifiers</h3>
+      <p>public unsigned int getParsedSpecifiers()</p>
+      <div>
+        <div>
+          <p> Return a bitmask of which flavors of specifiers this DeclSpec includes.</p>
+        </div>
+      </div>
+      <h3 id="A5123EF6824A0AEEE90B07584CF9A07EB3461BAE">isEmpty</h3>
+      <p>public _Bool isEmpty()</p>
+      <p>Defined at line 654 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> isEmpty - Return true if this declaration specifier is completely empty: no tokens were parsed in the production of it.</p>
+        </div>
+      </div>
+      <h3 id="14BCC2C901F9072D9C153267A10F92384FC4E365">SetRangeStart</h3>
+      <p>
+        public void SetRangeStart(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 658 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="B02D9E65C8F08BAC0A4BFDC926FC7F97C5862D00">SetRangeEnd</h3>
+      <p>
+        public void SetRangeEnd(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <p>Defined at line 659 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="E3829E0585F41D94EB144428C7CA02B00527926D">SetStorageClassSpec</h3>
+      <p>
+        public _Bool SetStorageClassSpec(Sema &amp; S, 
+        <a href="../clang/DeclSpec/SCS.html">SCS</a>
+         SC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, const PrintingPolicy &amp; Policy)
+      </p>
+      <div>
+        <div>
+          <p> These methods set the specified attribute of the DeclSpec and return false if there was no error.  If an error occurs (for example, if we tried to set &quot;auto&quot; on a spec with &quot;extern&quot; already set), they return true and set PrevSpec and DiagID such that   Diag(Loc, DiagID) &lt;&lt; PrevSpec; will yield a useful result.</p>
+          <p> TODO: use a more general approach that still allows these diagnostics to be ignored when desired.</p>
+        </div>
+      </div>
+      <h3 id="3C694AD19E71773081763E4BC9CF9CDB395E4715">SetStorageClassSpecThread</h3>
+      <p>
+        public _Bool SetStorageClassSpecThread(
+        <a href="ThreadStorageClassSpecifier.html">ThreadStorageClassSpecifier</a>
+         TSC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="6154A112EAB787AA867FDA1F1DF65C850FB7355B">SetTypeSpecWidth</h3>
+      <p>
+        public _Bool SetTypeSpecWidth(
+        <a href="TypeSpecifierWidth.html">TypeSpecifierWidth</a>
+         W, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="3F679FD17C6387FE4DBA654F35FB8D3E194D1C56">SetTypeSpecComplex</h3>
+      <p>
+        public _Bool SetTypeSpecComplex(
+        <a href="../clang/DeclSpec/TSC.html">TSC</a>
+         C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="E77368A2E6EA20B31F9B04BB83027CC520B061EC">SetTypeSpecSign</h3>
+      <p>
+        public _Bool SetTypeSpecSign(
+        <a href="TypeSpecifierSign.html">TypeSpecifierSign</a>
+         S, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="26EAE721C5546513376FEA76192937FF4923276E">SetTypeSpecType</h3>
+      <p>
+        public _Bool SetTypeSpecType(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="5E65E270170FF73747BA3B956AA4FDC78EBD13A0">SetTypeSpecType</h3>
+      <p>
+        public _Bool SetTypeSpecType(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, 
+        <a href="OpaquePtr.html">OpaquePtr</a>
+         Rep, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="7816EB6718E3F5200B840BD69CB4E1DE4C1107D0">SetTypeSpecType</h3>
+      <p>
+        public _Bool SetTypeSpecType(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, 
+        <a href="ActionResult.html">ActionResult</a>
+         Rep, const PrintingPolicy &amp; Policy)
+      </p>
+      <p>Defined at line 688 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="4CDE802F85042CEE8CBACECE976458DD55122AB0">SetTypeSpecType</h3>
+      <p>
+        public _Bool SetTypeSpecType(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, Decl * Rep, _Bool Owned, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="F588F7620398B1323AE5EEC4514CDBB9C46CF228">SetTypeSpecType</h3>
+      <p>
+        public _Bool SetTypeSpecType(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TagKwLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TagNameLoc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, 
+        <a href="OpaquePtr.html">OpaquePtr</a>
+         Rep, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="3934D85D6369915761A8D18F853B3EC9275B31B1">SetTypeSpecType</h3>
+      <p>
+        public _Bool SetTypeSpecType(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TagKwLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TagNameLoc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, Decl * Rep, _Bool Owned, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="15300EAC6FDC273FAD1767A1D995BC32D05DAC55">SetTypeSpecType</h3>
+      <p>
+        public _Bool SetTypeSpecType(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, TemplateIdAnnotation * Rep, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="30B5AA29A8EF205D0963BF18644D8EDB4913077F">SetTypeSpecType</h3>
+      <p>
+        public _Bool SetTypeSpecType(
+        <a href="TypeSpecifierType.html">TypeSpecifierType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, Expr * Rep, const PrintingPolicy &amp; policy)
+      </p>
+      <h3 id="13419D9BAF1EC9C21ECACCF02562A17F36F85CAE">SetTypeAltiVecVector</h3>
+      <p>
+        public _Bool SetTypeAltiVecVector(_Bool isAltiVecVector, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="AEE7EA3ED4EF194B269A95BADC1F384B25D5893D">SetTypeAltiVecPixel</h3>
+      <p>
+        public _Bool SetTypeAltiVecPixel(_Bool isAltiVecPixel, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="936179B2AEAACF88C702424D79EC22416A585356">SetTypeAltiVecBool</h3>
+      <p>
+        public _Bool SetTypeAltiVecBool(_Bool isAltiVecBool, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="80A3E4EB5ACE45C8BA33DD0686633C19E5E1CE37">SetTypePipe</h3>
+      <p>
+        public _Bool SetTypePipe(_Bool isPipe, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="0D421BBEF899B251557EAD857CB357A5E5FBF82F">SetBitIntType</h3>
+      <p>
+        public _Bool SetBitIntType(
+        <a href="SourceLocation.html">SourceLocation</a>
+         KWLoc, Expr * BitWidth, const char *&amp; PrevSpec, unsigned int &amp; DiagID, const PrintingPolicy &amp; Policy)
+      </p>
+      <h3 id="39E5944FE280AF67CCD2F1A78FDC68F53533FE6A">SetTypeSpecSat</h3>
+      <p>
+        public _Bool SetTypeSpecSat(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="B2159815B51E2866EB491C5869B650C97C5F7F13">SetTypeSpecError</h3>
+      <p>public _Bool SetTypeSpecError()</p>
+      <h3 id="A7CF214D69AAD94A6DC6DC5D53AFB979C8E1C0D4">UpdateDeclRep</h3>
+      <p>public void UpdateDeclRep(Decl * Rep)</p>
+      <p>Defined at line 731 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="1CC327B72FB6E7BA277FD446A81A443B3D261351">UpdateTypeRep</h3>
+      <p>
+        public void UpdateTypeRep(
+        <a href="OpaquePtr.html">OpaquePtr</a>
+         Rep)
+      </p>
+      <p>Defined at line 735 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="C2040E093BA45A167843B6E2EF070690E1AF5547">UpdateExprRep</h3>
+      <p>public void UpdateExprRep(Expr * Rep)</p>
+      <p>Defined at line 739 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="4FA4D85BA6DCC8B018C18BF997C2EC64A04AB2F3">SetTypeQual</h3>
+      <p>
+        public _Bool SetTypeQual(
+        <a href="../clang/DeclSpec/TQ.html">TQ</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <h3 id="70592F4EC598956DB65AC3901F94EE94B3587DC3">SetTypeQual</h3>
+      <p>
+        public _Bool SetTypeQual(
+        <a href="../clang/DeclSpec/TQ.html">TQ</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, const LangOptions &amp; Lang)
+      </p>
+      <h3 id="01D61EC35EA946D9AB891ADB8D6995F0C9B1C737">setFunctionSpecInline</h3>
+      <p>
+        public _Bool setFunctionSpecInline(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="B44E23ED8FE7ED4C0507ECC5C64966F5C21C8B42">setFunctionSpecForceInline</h3>
+      <p>
+        public _Bool setFunctionSpecForceInline(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="DEBDDCF3F3258DA54B6A139484AD0A4D61DB95CE">setFunctionSpecVirtual</h3>
+      <p>
+        public _Bool setFunctionSpecVirtual(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="16473F6E06B03B1F9FFB7057F5557B96705F0DC7">setFunctionSpecExplicit</h3>
+      <p>
+        public _Bool setFunctionSpecExplicit(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID, 
+        <a href="ExplicitSpecifier.html">ExplicitSpecifier</a>
+         ExplicitSpec, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         CloseParenLoc)
+      </p>
+      <h3 id="42CC7AA641CB2AFF31C8E7517ED5EABCA8C120A9">setFunctionSpecNoreturn</h3>
+      <p>
+        public _Bool setFunctionSpecNoreturn(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="17296622FBE25EF7A6AB3F5CCD44461E4C9DA5FF">SetFriendSpec</h3>
+      <p>
+        public _Bool SetFriendSpec(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="B00964D5FB446549D9B67E85E1BB24F45248B257">setModulePrivateSpec</h3>
+      <p>
+        public _Bool setModulePrivateSpec(
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="6C69A63384EC39E7E6D1B50B9950B2B4A07D1ADF">SetConstexprSpec</h3>
+      <p>
+        public _Bool SetConstexprSpec(
+        <a href="ConstexprSpecKind.html">ConstexprSpecKind</a>
+         ConstexprKind, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, const char *&amp; PrevSpec, unsigned int &amp; DiagID)
+      </p>
+      <h3 id="2F1B2CA2AF110A0CF4CCA2C1CF762F8CBF9D9B1D">isFriendSpecified</h3>
+      <p>
+        public 
+        <a href="../clang/DeclSpec/FriendSpecified.html">FriendSpecified</a>
+         isFriendSpecified()
+      </p>
+      <p>Defined at line 768 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="DD82BBF510B7AAA7D074F7F54847BE91E928C1D6">getFriendSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getFriendSpecLoc()
+      </p>
+      <p>Defined at line 772 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="FA797A02238E52F54D25E7B94107BE994565B1AE">isModulePrivateSpecified</h3>
+      <p>public _Bool isModulePrivateSpecified()</p>
+      <p>Defined at line 774 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="789B23AF9469D579E7665C556B1A0BEB39925488">getModulePrivateSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getModulePrivateSpecLoc()
+      </p>
+      <p>Defined at line 775 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="3EB1E2778DFD2417580AE0BDC9E137738D49BF57">getConstexprSpecifier</h3>
+      <p>
+        public 
+        <a href="ConstexprSpecKind.html">ConstexprSpecKind</a>
+         getConstexprSpecifier()
+      </p>
+      <p>Defined at line 777 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="52269EA3FC139FB3A2E0C2C0935EA124B1423D14">getConstexprSpecLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getConstexprSpecLoc()
+      </p>
+      <p>Defined at line 781 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="9463666270A30BB4186CA7C66F4EF00AF670BE77">hasConstexprSpecifier</h3>
+      <p>public _Bool hasConstexprSpecifier()</p>
+      <p>Defined at line 782 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="65124A362C8BF5753900E076C55D117B2628A4E5">ClearConstexprSpec</h3>
+      <p>public void ClearConstexprSpec()</p>
+      <p>Defined at line 786 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="15A25FE94D1CD7E87CBB1D5F21BAFAA5ECAC99C3">getAttributePool</h3>
+      <p>public AttributePool &amp; getAttributePool()</p>
+      <p>Defined at line 791 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="1DA6C96455559B67435A50D9B4D3BE876C59C072">addAttributes</h3>
+      <p>public void addAttributes(const ParsedAttributesView &amp; AL)</p>
+      <p>Defined at line 812 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Concatenates two attribute lists.</p>
+          <p> The GCC attribute syntax allows for the following:</p>
+          <p> This declares 4 attributes using 2 lists. The following syntax is also allowed and equivalent to the previous declaration.</p>
+        </div>
+      </div>
+      <h3 id="D2A550C0442497E6D8616DE1A6154069EA27156F">hasAttributes</h3>
+      <p>public _Bool hasAttributes()</p>
+      <p>Defined at line 816 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="7AA037F050FAFED0A100CCDC715366561412A335">getAttributes</h3>
+      <p>public ParsedAttributes &amp; getAttributes()</p>
+      <p>Defined at line 818 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="C85F28C3CC14058F2082DC10362852A58F6E18B4">getAttributes</h3>
+      <p>public const ParsedAttributes &amp; getAttributes()</p>
+      <p>Defined at line 819 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="B79523B7E3135A42E958A02666247D9F6BECE4F3">takeAttributesFrom</h3>
+      <p>public void takeAttributesFrom(ParsedAttributes &amp; attrs)</p>
+      <p>Defined at line 821 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="5490251C453CBA18ABF53001B0A4FF33C808FCFD">Finish</h3>
+      <p>public void Finish(Sema &amp; S, const PrintingPolicy &amp; Policy)</p>
+      <div>
+        <div>
+          <p> Finish - This does final analysis of the declspec, issuing diagnostics for things like &quot;_Imaginary&quot; (lacking an FP type).  After calling this method, DeclSpec is guaranteed self-consistent, even if an error occurred.</p>
+        </div>
+      </div>
+      <h3 id="31514B287F3538B5B6F8E24878AD5D24D07210CB">getWrittenBuiltinSpecs</h3>
+      <p>public const WrittenBuiltinSpecs &amp; getWrittenBuiltinSpecs()</p>
+      <p>Defined at line 830 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="38F5B00D15AC81E416C9F6DB9B3080C631C1E520">getObjCQualifiers</h3>
+      <p>public ObjCDeclSpec * getObjCQualifiers()</p>
+      <p>Defined at line 834 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="82B9571991AFF9107FBDBB8F0ACC35D50FCDE00A">setObjCQualifiers</h3>
+      <p>public void setObjCQualifiers(ObjCDeclSpec * quals)</p>
+      <p>Defined at line 835 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="A70C6168A769ED218F885E015C30402DF9371921">isMissingDeclaratorOk</h3>
+      <p>public _Bool isMissingDeclaratorOk()</p>
+      <div>
+        <div>
+          <p> Checks if this DeclSpec can stand alone, without a Declarator.</p>
+          <p> Only tag declspecs can stand alone.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="3DFF4539927CC4741A52CF210B3632F027337AE8">enum SCS</h3>
+      <ul>
+        <li>SCS_unspecified</li>
+        <li>SCS_typedef</li>
+        <li>SCS_extern</li>
+        <li>SCS_static</li>
+        <li>SCS_auto</li>
+        <li>SCS_register</li>
+        <li>SCS_private_extern</li>
+        <li>SCS_mutable</li>
+      </ul>
+      <p>Defined at line 234 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> storage-class-specifier</p>
+        </div>
+      </div>
+      <h3 id="74E453A57B6DE53F7B849B075B9384874D0FCF03">enum TSC</h3>
+      <ul>
+        <li>TSC_unspecified</li>
+        <li>TSC_imaginary</li>
+        <li>TSC_complex</li>
+      </ul>
+      <p>Defined at line 253 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="BD39ED8C75E0B91B7433B40BB239327E60CCE600">enum TQ</h3>
+      <ul>
+        <li>TQ_unspecified</li>
+        <li>TQ_const</li>
+        <li>TQ_restrict</li>
+        <li>TQ_volatile</li>
+        <li>TQ_unaligned</li>
+        <li>TQ_atomic</li>
+      </ul>
+      <p>Defined at line 309 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> type-qualifiers</p>
+        </div>
+      </div>
+      <h3 id="48E89EE327342AC5B136E43844AD2243AE01859C">enum ParsedSpecifiers</h3>
+      <ul>
+        <li>PQ_None</li>
+        <li>PQ_StorageClassSpecifier</li>
+        <li>PQ_TypeSpecifier</li>
+        <li>PQ_TypeQualifier</li>
+        <li>PQ_FunctionSpecifier</li>
+      </ul>
+      <p>Defined at line 322 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> ParsedSpecifiers - Flags to query which specifiers were applied.  This is returned by getParsedSpecifiers.</p>
+        </div>
+      </div>
+      <h3 id="ADF57B025724ADFF73B7FC30F25B393D9B40F36E">enum FriendSpecified</h3>
+      <ul>
+        <li>No</li>
+        <li>Yes</li>
+      </ul>
+      <p>Defined at line 331 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#19B5828666ED991FFC35B262BD806DAC08FAF6BD">isDeclRep</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C58315BD758D677548DF8CC2D90BADFB1CD3A776">isTransformTypeTrait</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#157CFE9617A953FC191BFB65EE3334974F9FBF02">DeclSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D82480BEF4C67B101620BD940297077D3F36E610">getStorageClassSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6CA6CBE3AF26FB9A426A521384A139A39683CC8">getThreadStorageClassSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#97BFF060C579BA092C58428EC3182F353C4DC6D5">isExternInLinkageSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B08EB886AA063A2CE9856E27A24EEEE51603F42E">setExternInLinkageSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28D8EBF07A414DEDCD27B4B9C8C8BB2ABB3E7914">getStorageClassSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E034FEBCA4D34423EB754F983D7C45F5E132CE98">getThreadStorageClassSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B8168F227B1D7FB826EDB283C3F9A45DE14F7523">ClearStorageClassSpecs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC8E4103A614BD247B1C5847095B75E5C9E5A28C">ClearTypeSpecType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F002E99BB6DB540FA85C29ED688787A2642E92D4">getTypeSpecWidth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#225148D9054C0F5A881CDC7B839964E3CF2F0A6A">getTypeSpecComplex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1156A477EEB09CACB0C14F956A63127311F13CB">getTypeSpecSign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EF38BAC1DE7194029A52BF1F4DA62A372B35CD7F">getTypeSpecType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86549EFCE812AA3010BD6E5F83EF654382D2EDDC">isTypeAltiVecVector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#913ECFF29C2D3474F514ACF0B43775DBF9A80A87">isTypeAltiVecPixel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#319D95B7B82D783B7441D44D87D544427DF161C5">isTypeAltiVecBool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#717E13854A2101A21B2C89DAF774E72C40E85EC5">isTypeSpecOwned</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A1776E40EE9230007BDFE1B05D5331AE990C4A7">isTypeRep</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5ADDE544EA05AE8133050A62D29A6E4C189E5786">isTypeSpecPipe</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E560AD14832E18E21C7FB48B8E7FC0CEE36E0BD">isTypeSpecSat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#550FE10FEFE0CFA639A966B9882B1C4A2287BE25">isConstrainedAuto</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8317788FB7365D67A2937C50B87AC06B2533F887">getRepAsType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A57CF8B81B27C44DCB5755EF525E76AE504F2196">getRepAsDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#674063A4D6E54FD65EC694D200B54CE03D51311F">getRepAsExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBC41B2F863C6C6C169C1CE7C1E1531BA598845F">getRepAsTemplateId</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#278EA32A1987AF30E9ECD3956F6B6629724D8DFF">getTypeSpecScope</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#498D415672C927DFD517585CCA80E23B224692E2">getTypeSpecScope</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#869705CF3387D22D036C500B54E8AFDEC8F48178">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#29841097AB7122FCFF6CC278E4A28FBE094B0588">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#434F0FB1BA8097B52EC8B6009C73A4B1B8030089">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F7B874BED4218A868B6C6646CE97A6CD213610B">getTypeSpecWidthLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9F7C92B72E14FC2A31A8534295E3993C95E19658">getTypeSpecWidthRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#272798796A4CECC486C0F041D2C17125E86FC572">getTypeSpecComplexLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA05A5FAA6908135411931F50B1836837250CE35">getTypeSpecSignLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#286D68FDA679DC4F80402C24F2A3030C67682582">getTypeSpecTypeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4ABF2B909688BF8AD9F8135881A0BCE7A6FAB602">getAltiVecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE84BDA037A7012BCB33518F01C840F7C77FE5AB">getTypeSpecSatLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0F00E3E3C3F20CFE1260954738815A48ABC39AC1">getTypeSpecTypeNameLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1CD1BDC2063B57577D2B8679D71FCFA4412D4DF">getTypeofParensRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F23A18431BE8048DE39AACB4020497CF4C3C3D95">setTypeArgumentRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63B96B0F3000B8EE629446DCBDAD301EE8357DF7">hasAutoTypeSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#26FC4D43EF36B7810A1886A33FF75A75985E951B">hasTagDefinition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#307685A1A2F03FB38EFD63AA1928B5B2D35177BB">getSpecifierName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A571EC4BD38AA1972BB4B8AE97D1A2663777D4FC">getSpecifierName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CAAC4A49FD6A058BD25FC71B5614D9C7FB7417B7">getSpecifierName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76C63CDF16C1D09C7AE465B6F66F3C9D8D791A2F">getSpecifierName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#241C44B45B2C65C460D988607FC6F6B559DAEE0B">getSpecifierName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AA17CDD90C59EA860CD7F3061A5511680755908">getSpecifierName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9D45C28346F65D06440DD766A8959AE99F4CC5B">getSpecifierName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B201AAC00A2DF3C5D0C66FA261F50E5B3854D7B1">getSpecifierName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B28A0A1EA55C8034686B8F7B9227B5D0BB435917">getTypeQualifiers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#827564F114C24162D7C1514C413F2B76BBF3C93C">getConstSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD7085C774611E588E5F39D0468191509F0A8E0F">getRestrictSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F0E6D45F2683C613E23BA7CC7C745E1ED6E95E7B">getVolatileSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8C2428EE31CD4525533B6FD275160E7EC9137A27">getAtomicSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B2703B83B3F87DB66C6E900B5467A468FA9D763">getUnalignedSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B4ACBF8170ED7E44861FE8C575B72B6636A46D88">getPipeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F997BB2ED66D9C44D2722B19B1E5A0C25A6ADBB9">ClearTypeQualifiers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0580EA2E89F5CDFD523F4A14BD9FC5A853DBA54">isInlineSpecified</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D392153BA4A50EC1974DBD588D064EBCCFB70592">getInlineSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA71184E2931DFE79CEBA2B7E9CDE47093845247">getExplicitSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BA90AB26E74E233136DBCFF6CF0E1BF89029178">isVirtualSpecified</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D532CAD02143C4016BCDC4BEE39FF0E79CCD7FFD">getVirtualSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#583B8F60F31C973732E75A2F6B17262ACCB0B468">hasExplicitSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8D2B3C44F1A144852C51638AD92F2DFF1337ECC">getExplicitSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#513904B2179E14609FB2F8BB74F74D34D20F51BF">getExplicitSpecRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#03F7C85BB652BC12E94EE7CE410FCCEFD92A4FB2">isNoreturnSpecified</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1136ADA6DB8104AB9B1812D8BAABE96226073CE">getNoreturnSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4079D70FD3480AF046EF39B5413D71AC3CFF494C">ClearFunctionSpecs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15887F426D428BB29A7682D4A47D55E0C91C0037">forEachCVRUQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#883C57614461050528FE0A7F3378868E1CB1669D">forEachQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B4061C72567C1E4EC5EDB4E5132FE2BA719A06B">hasTypeSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C7C9CBD0B0324784B241FDB3CB84E2DE6C7169E">getParsedSpecifiers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A5123EF6824A0AEEE90B07584CF9A07EB3461BAE">isEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#14BCC2C901F9072D9C153267A10F92384FC4E365">SetRangeStart</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B02D9E65C8F08BAC0A4BFDC926FC7F97C5862D00">SetRangeEnd</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E3829E0585F41D94EB144428C7CA02B00527926D">SetStorageClassSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C694AD19E71773081763E4BC9CF9CDB395E4715">SetStorageClassSpecThread</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6154A112EAB787AA867FDA1F1DF65C850FB7355B">SetTypeSpecWidth</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F679FD17C6387FE4DBA654F35FB8D3E194D1C56">SetTypeSpecComplex</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E77368A2E6EA20B31F9B04BB83027CC520B061EC">SetTypeSpecSign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#26EAE721C5546513376FEA76192937FF4923276E">SetTypeSpecType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E65E270170FF73747BA3B956AA4FDC78EBD13A0">SetTypeSpecType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7816EB6718E3F5200B840BD69CB4E1DE4C1107D0">SetTypeSpecType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CDE802F85042CEE8CBACECE976458DD55122AB0">SetTypeSpecType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F588F7620398B1323AE5EEC4514CDBB9C46CF228">SetTypeSpecType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3934D85D6369915761A8D18F853B3EC9275B31B1">SetTypeSpecType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15300EAC6FDC273FAD1767A1D995BC32D05DAC55">SetTypeSpecType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30B5AA29A8EF205D0963BF18644D8EDB4913077F">SetTypeSpecType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13419D9BAF1EC9C21ECACCF02562A17F36F85CAE">SetTypeAltiVecVector</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AEE7EA3ED4EF194B269A95BADC1F384B25D5893D">SetTypeAltiVecPixel</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#936179B2AEAACF88C702424D79EC22416A585356">SetTypeAltiVecBool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#80A3E4EB5ACE45C8BA33DD0686633C19E5E1CE37">SetTypePipe</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D421BBEF899B251557EAD857CB357A5E5FBF82F">SetBitIntType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39E5944FE280AF67CCD2F1A78FDC68F53533FE6A">SetTypeSpecSat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2159815B51E2866EB491C5869B650C97C5F7F13">SetTypeSpecError</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7CF214D69AAD94A6DC6DC5D53AFB979C8E1C0D4">UpdateDeclRep</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1CC327B72FB6E7BA277FD446A81A443B3D261351">UpdateTypeRep</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2040E093BA45A167843B6E2EF070690E1AF5547">UpdateExprRep</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FA4D85BA6DCC8B018C18BF997C2EC64A04AB2F3">SetTypeQual</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#70592F4EC598956DB65AC3901F94EE94B3587DC3">SetTypeQual</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01D61EC35EA946D9AB891ADB8D6995F0C9B1C737">setFunctionSpecInline</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B44E23ED8FE7ED4C0507ECC5C64966F5C21C8B42">setFunctionSpecForceInline</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DEBDDCF3F3258DA54B6A139484AD0A4D61DB95CE">setFunctionSpecVirtual</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16473F6E06B03B1F9FFB7057F5557B96705F0DC7">setFunctionSpecExplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42CC7AA641CB2AFF31C8E7517ED5EABCA8C120A9">setFunctionSpecNoreturn</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17296622FBE25EF7A6AB3F5CCD44461E4C9DA5FF">SetFriendSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B00964D5FB446549D9B67E85E1BB24F45248B257">setModulePrivateSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C69A63384EC39E7E6D1B50B9950B2B4A07D1ADF">SetConstexprSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F1B2CA2AF110A0CF4CCA2C1CF762F8CBF9D9B1D">isFriendSpecified</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DD82BBF510B7AAA7D074F7F54847BE91E928C1D6">getFriendSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA797A02238E52F54D25E7B94107BE994565B1AE">isModulePrivateSpecified</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#789B23AF9469D579E7665C556B1A0BEB39925488">getModulePrivateSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EB1E2778DFD2417580AE0BDC9E137738D49BF57">getConstexprSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52269EA3FC139FB3A2E0C2C0935EA124B1423D14">getConstexprSpecLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9463666270A30BB4186CA7C66F4EF00AF670BE77">hasConstexprSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#65124A362C8BF5753900E076C55D117B2628A4E5">ClearConstexprSpec</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#15A25FE94D1CD7E87CBB1D5F21BAFAA5ECAC99C3">getAttributePool</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1DA6C96455559B67435A50D9B4D3BE876C59C072">addAttributes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2A550C0442497E6D8616DE1A6154069EA27156F">hasAttributes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7AA037F050FAFED0A100CCDC715366561412A335">getAttributes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C85F28C3CC14058F2082DC10362852A58F6E18B4">getAttributes</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B79523B7E3135A42E958A02666247D9F6BECE4F3">takeAttributesFrom</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5490251C453CBA18ABF53001B0A4FF33C808FCFD">Finish</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#31514B287F3538B5B6F8E24878AD5D24D07210CB">getWrittenBuiltinSpecs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38F5B00D15AC81E416C9F6DB9B3080C631C1E520">getObjCQualifiers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82B9571991AFF9107FBDBB8F0ACC35D50FCDE00A">setObjCQualifiers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A70C6168A769ED218F885E015C30402DF9371921">isMissingDeclaratorOk</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3DFF4539927CC4741A52CF210B3632F027337AE8">SCS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#74E453A57B6DE53F7B849B075B9384874D0FCF03">TSC</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD39ED8C75E0B91B7433B40BB239327E60CCE600">TQ</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#48E89EE327342AC5B136E43844AD2243AE01859C">ParsedSpecifiers</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ADF57B025724ADFF73B7FC30F25B393D9B40F36E">FriendSpecified</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

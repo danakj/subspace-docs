@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AnnotateTypeAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AnnotateTypeAttr</h1>
+    <p>Defined at line 1045 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="TypeAttr.html">TypeAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="307757B5A9C90F88E82B352C1568C72343D4F8EF">CreateImplicit</h3>
+      <p>
+        public AnnotateTypeAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Annotation, Expr ** Args, unsigned int ArgsSize, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="867EA30A825D2E80DB4E249064722E22A23359BB">Create</h3>
+      <p>
+        public AnnotateTypeAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Annotation, Expr ** Args, unsigned int ArgsSize, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="08F0F8994198C8AD6FF35082EC0AB73143FAF0A0">CreateImplicit</h3>
+      <p>
+        public AnnotateTypeAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Annotation, Expr ** Args, unsigned int ArgsSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="75DED08A67CE8D40D33C14CB3DC0D242ACD0E56D">Create</h3>
+      <p>
+        public AnnotateTypeAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Annotation, Expr ** Args, unsigned int ArgsSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="E19A8A404B6FDF878CB84CE207CCED457186DFF5">CreateImplicitWithDelayedArgs</h3>
+      <p>public AnnotateTypeAttr * CreateImplicitWithDelayedArgs(ASTContext &amp; Ctx, Expr ** DelayedArgs, unsigned int DelayedArgsSize, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="094140D3D226668DDD58FD05E60F3F1C044E4E73">CreateWithDelayedArgs</h3>
+      <p>public AnnotateTypeAttr * CreateWithDelayedArgs(ASTContext &amp; Ctx, Expr ** DelayedArgs, unsigned int DelayedArgsSize, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="3388E1DA9B79DF76D750533AE0E3FB56BC1CD1DC">CreateImplicitWithDelayedArgs</h3>
+      <p>
+        public AnnotateTypeAttr * CreateImplicitWithDelayedArgs(ASTContext &amp; Ctx, Expr ** DelayedArgs, unsigned int DelayedArgsSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="92102CACC721D26181BD7A8AE722879BF11FB01C">CreateWithDelayedArgs</h3>
+      <p>
+        public AnnotateTypeAttr * CreateWithDelayedArgs(ASTContext &amp; Ctx, Expr ** DelayedArgs, unsigned int DelayedArgsSize, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="A46C96A089FB35D62621590AB647842C6B7747E9">AnnotateTypeAttr</h3>
+      <p>
+        public void AnnotateTypeAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Annotation, Expr ** Args, unsigned int ArgsSize)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="E1CCB197B7C6EFE7F954E21B1101D6628732CA43">AnnotateTypeAttr</h3>
+      <p>
+        public void AnnotateTypeAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Annotation)
+      </p>
+      <h3 id="A75C6E419A26C3B5B484C61BBD2BD1E455896271">AnnotateTypeAttr</h3>
+      <p>public void AnnotateTypeAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="66E73014A67FC31CAAB08C7A6F89A3F93A4E1E81">clone</h3>
+      <p>public AnnotateTypeAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="DC00E0E224E6353E9F59E0B9D393DF93CFD3D5D9">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="24C6EE7784F023EF39760A652B88E623B7BFC06A">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="12D92933A876565F0B2F129D4C74D90282544F26">getAnnotation</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getAnnotation()
+      </p>
+      <p>Defined at line 1088 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="206E911EBFBECF048CA4B0501049C7DF6F8F5679">getAnnotationLength</h3>
+      <p>public unsigned int getAnnotationLength()</p>
+      <p>Defined at line 1091 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="BD3418F0DF24F32D5F3003EA932D9D7A79A382B5">setAnnotation</h3>
+      <p>
+        public void setAnnotation(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 1094 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="D7FE98A7F677D700F8D595B77DB09F1CF3D975A1">args_begin</h3>
+      <p>public args_iterator args_begin()</p>
+      <p>Defined at line 1102 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="056D71C25D98EDCB800ED65EB9C43E2EFFD259F7">args_end</h3>
+      <p>public args_iterator args_end()</p>
+      <p>Defined at line 1103 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="696459E1D4E036D394DEA02F7C9BEF8D5A9768E3">args_size</h3>
+      <p>public unsigned int args_size()</p>
+      <p>Defined at line 1104 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C0B819EFB0D98F1CBBE75819E23D0180D4533FB1">args</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         args()
+      </p>
+      <p>Defined at line 1105 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="0D272DD809376657D7245846BA48117D818FF0A2">delayedArgs_begin</h3>
+      <p>public delayedArgs_iterator delayedArgs_begin()</p>
+      <p>Defined at line 1109 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="C85B5FA63D8639CABD0606609587645FF0C92E5D">delayedArgs_end</h3>
+      <p>public delayedArgs_iterator delayedArgs_end()</p>
+      <p>Defined at line 1110 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="F7D1E4A4F96144D95C23BC1A0FF894F5008CC275">delayedArgs_size</h3>
+      <p>public unsigned int delayedArgs_size()</p>
+      <p>Defined at line 1111 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="E547818AEDF108E19F3E014829E68AB04A3CE640">delayedArgs</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         delayedArgs()
+      </p>
+      <p>Defined at line 1112 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="2C66BEB5328255F3C61FF5CF4DA5A720B88BC4C7">setDelayedArgs</h3>
+      <p>public void setDelayedArgs(ASTContext &amp; Ctx, Expr ** DelayedArgs, unsigned int DelayedArgsSize)</p>
+      <p>Defined at line 1113 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="5B7A8DA34F419651377FCB80203C4286EFFF3EC3">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 1120 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="E8E1FC18DDF27DA1D78CAF636D463B5983CD9952">enum Spelling</h3>
+      <ul>
+        <li>CXX11_clang_annotate_type</li>
+        <li>C2x_clang_annotate_type</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 1056 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#307757B5A9C90F88E82B352C1568C72343D4F8EF">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#867EA30A825D2E80DB4E249064722E22A23359BB">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#08F0F8994198C8AD6FF35082EC0AB73143FAF0A0">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#75DED08A67CE8D40D33C14CB3DC0D242ACD0E56D">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E19A8A404B6FDF878CB84CE207CCED457186DFF5">CreateImplicitWithDelayedArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#094140D3D226668DDD58FD05E60F3F1C044E4E73">CreateWithDelayedArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3388E1DA9B79DF76D750533AE0E3FB56BC1CD1DC">CreateImplicitWithDelayedArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92102CACC721D26181BD7A8AE722879BF11FB01C">CreateWithDelayedArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A46C96A089FB35D62621590AB647842C6B7747E9">AnnotateTypeAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1CCB197B7C6EFE7F954E21B1101D6628732CA43">AnnotateTypeAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A75C6E419A26C3B5B484C61BBD2BD1E455896271">AnnotateTypeAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66E73014A67FC31CAAB08C7A6F89A3F93A4E1E81">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC00E0E224E6353E9F59E0B9D393DF93CFD3D5D9">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24C6EE7784F023EF39760A652B88E623B7BFC06A">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12D92933A876565F0B2F129D4C74D90282544F26">getAnnotation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#206E911EBFBECF048CA4B0501049C7DF6F8F5679">getAnnotationLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD3418F0DF24F32D5F3003EA932D9D7A79A382B5">setAnnotation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D7FE98A7F677D700F8D595B77DB09F1CF3D975A1">args_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#056D71C25D98EDCB800ED65EB9C43E2EFFD259F7">args_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#696459E1D4E036D394DEA02F7C9BEF8D5A9768E3">args_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C0B819EFB0D98F1CBBE75819E23D0180D4533FB1">args</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D272DD809376657D7245846BA48117D818FF0A2">delayedArgs_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C85B5FA63D8639CABD0606609587645FF0C92E5D">delayedArgs_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7D1E4A4F96144D95C23BC1A0FF894F5008CC275">delayedArgs_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E547818AEDF108E19F3E014829E68AB04A3CE640">delayedArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2C66BEB5328255F3C61FF5CF4DA5A720B88BC4C7">setDelayedArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B7A8DA34F419651377FCB80203C4286EFFF3EC3">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E8E1FC18DDF27DA1D78CAF636D463B5983CD9952">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

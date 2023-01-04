@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ArraySubscriptExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ArraySubscriptExpr</h1>
+    <p>Defined at line 2655 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> ArraySubscriptExpr - [C99 6.5.2.1] Array Subscripting.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9D9FF8054C15860E4B5C963BA680CF08411ED234">ArraySubscriptExpr</h3>
+      <p>
+        public void ArraySubscriptExpr(Expr * lhs, Expr * rhs, 
+        <a href="QualType.html">QualType</a>
+         t, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         rbracketloc)
+      </p>
+      <p>Defined at line 2662 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C4057F6C4B75D026A7ABD04B49E31F524738B72A">ArraySubscriptExpr</h3>
+      <p>
+        public void ArraySubscriptExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Shell)
+      </p>
+      <p>Defined at line 2672 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Create an empty array subscript expression.</p>
+        </div>
+      </div>
+      <h3 id="0115C6C93E2CD312D4B78FC634F48DB70840C494">getLHS</h3>
+      <p>public Expr * getLHS()</p>
+      <p>Defined at line 2684 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> An array access can be written A[4] or 4[A] (both are equivalent). - getBase() and getIdx() always present the normalized view: A[4].    In this case getBase() returns &quot;A&quot; and getIdx() returns &quot;4&quot;. - getLHS() and getRHS() present the syntactic view. e.g. for    4[A] getLHS() returns &quot;4&quot;. Note: Because vector element access is also written A[4] we must predicate the format conversion in getBase and getIdx only on the the type of the RHS, as it is possible for the LHS to be a vector of integer type</p>
+        </div>
+      </div>
+      <h3 id="ABC3D35DCA79523B1949D46A1AB85D8143FA55B8">getLHS</h3>
+      <p>public const Expr * getLHS()</p>
+      <p>Defined at line 2685 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="ACEBF305ED02E0DCC7B0611B2CB3D1E44F10D829">setLHS</h3>
+      <p>public void setLHS(Expr * E)</p>
+      <p>Defined at line 2686 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="88F8CDFFA93D1151A2C80BE5472B988D8E7B77AC">getRHS</h3>
+      <p>public Expr * getRHS()</p>
+      <p>Defined at line 2688 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="BF7C0DF1AD6B9A348519BDF3C3F6B71B84F112E0">getRHS</h3>
+      <p>public const Expr * getRHS()</p>
+      <p>Defined at line 2689 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="426B2CDD8F8682A5D4887CA6D08891E96999B911">setRHS</h3>
+      <p>public void setRHS(Expr * E)</p>
+      <p>Defined at line 2690 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="460A31429115E288916FF611ADA1A12D616D1B5F">getBase</h3>
+      <p>public Expr * getBase()</p>
+      <p>Defined at line 2692 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E623CC2EE2FD99C9D822E744CCD27F5473E42AED">getBase</h3>
+      <p>public const Expr * getBase()</p>
+      <p>Defined at line 2693 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E7A0443D4C742DC1F7D7845D6D39A5A811813897">getIdx</h3>
+      <p>public Expr * getIdx()</p>
+      <p>Defined at line 2695 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8D073AC0BE5AE1923514CEEA3E44AAADD3D47C4E">getIdx</h3>
+      <p>public const Expr * getIdx()</p>
+      <p>Defined at line 2696 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A1732ADEBDC1D5340D3282F2B7958F2D13359577">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2698 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="3F20A67E816B57D0835E6B54A39569757BFBEE80">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2701 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9A078F24489E929120E8E6DAB83B0BA0F5540A15">getRBracketLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRBracketLoc()
+      </p>
+      <p>Defined at line 2703 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0E95727C43847FAE7C9D06EB7246F019210147C5">setRBracketLoc</h3>
+      <p>
+        public void setRBracketLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2706 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="3B3C2E98241BBAC0771C44206945EED3D41E5624">getExprLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExprLoc()
+      </p>
+      <p>Defined at line 2710 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2D9027EE9F2100E0419D63690DF17A60136430AD">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2714 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="F15CBA41D95094CFA3E15D853A968E303C72F173">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2719 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="FFA8673C268B093E3777303B37951AC4336B0513">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2722 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9D9FF8054C15860E4B5C963BA680CF08411ED234">ArraySubscriptExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4057F6C4B75D026A7ABD04B49E31F524738B72A">ArraySubscriptExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0115C6C93E2CD312D4B78FC634F48DB70840C494">getLHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ABC3D35DCA79523B1949D46A1AB85D8143FA55B8">getLHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#ACEBF305ED02E0DCC7B0611B2CB3D1E44F10D829">setLHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88F8CDFFA93D1151A2C80BE5472B988D8E7B77AC">getRHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF7C0DF1AD6B9A348519BDF3C3F6B71B84F112E0">getRHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#426B2CDD8F8682A5D4887CA6D08891E96999B911">setRHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#460A31429115E288916FF611ADA1A12D616D1B5F">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E623CC2EE2FD99C9D822E744CCD27F5473E42AED">getBase</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E7A0443D4C742DC1F7D7845D6D39A5A811813897">getIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D073AC0BE5AE1923514CEEA3E44AAADD3D47C4E">getIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1732ADEBDC1D5340D3282F2B7958F2D13359577">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F20A67E816B57D0835E6B54A39569757BFBEE80">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9A078F24489E929120E8E6DAB83B0BA0F5540A15">getRBracketLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E95727C43847FAE7C9D06EB7246F019210147C5">setRBracketLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B3C2E98241BBAC0771C44206945EED3D41E5624">getExprLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D9027EE9F2100E0419D63690DF17A60136430AD">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F15CBA41D95094CFA3E15D853A968E303C72F173">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FFA8673C268B093E3777303B37951AC4336B0513">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

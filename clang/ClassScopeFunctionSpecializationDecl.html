@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ClassScopeFunctionSpecializationDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ClassScopeFunctionSpecializationDecl</h1>
+    <p>Defined at line 2627 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> Declaration of a function specialization at template class scope.</p>
+        <p> For example:</p>
+        <p> &quot;template&lt;&gt; foo(int a)&quot; will be saved in Specialization as a normal CXXMethodDecl. Then during an instantiation of class A, it will be transformed into an actual function specialization.</p>
+        <p> FIXME: This is redundant; we could store the same information directly on the CXXMethodDecl as a DependentFunctionTemplateSpecializationInfo.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Decl.html">Decl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="23C1B2C8FEC280614D9B88B6697F4AD98C1164D1">getSpecialization</h3>
+      <p>public CXXMethodDecl * getSpecialization()</p>
+      <p>Defined at line 2646 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="77BD3697A17E4D9AC69AFBBD835CBFD14D63AF3C">hasExplicitTemplateArgs</h3>
+      <p>public _Bool hasExplicitTemplateArgs()</p>
+      <p>Defined at line 2647 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="2096E99DF38FD3B948F558FC1A4C7FBC62A1227B">getTemplateArgsAsWritten</h3>
+      <p>public const ASTTemplateArgumentListInfo * getTemplateArgsAsWritten()</p>
+      <p>Defined at line 2648 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="399DE3147520F39C03AF1806FD0619BC670E8FEB">Create</h3>
+      <p>
+        public ClassScopeFunctionSpecializationDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, CXXMethodDecl * FD, _Bool HasExplicitTemplateArgs, const TemplateArgumentListInfo &amp; TemplateArgs)
+      </p>
+      <p>Defined at line 2652 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="316F2CB645D5D8DAE57DE164C5DD706470B18EE9">CreateDeserialized</h3>
+      <p>public ClassScopeFunctionSpecializationDecl * CreateDeserialized(ASTContext &amp; Context, unsigned int ID)</p>
+      <h3 id="8D1D17BE5E1DF6B2A0C9BAD5BF4671066EE69122">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 2667 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="B0CC13C0B9A5DADC846D0B2980AF0AFA8B1F038C">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 2669 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#23C1B2C8FEC280614D9B88B6697F4AD98C1164D1">getSpecialization</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77BD3697A17E4D9AC69AFBBD835CBFD14D63AF3C">hasExplicitTemplateArgs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2096E99DF38FD3B948F558FC1A4C7FBC62A1227B">getTemplateArgsAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#399DE3147520F39C03AF1806FD0619BC670E8FEB">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#316F2CB645D5D8DAE57DE164C5DD706470B18EE9">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D1D17BE5E1DF6B2A0C9BAD5BF4671066EE69122">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B0CC13C0B9A5DADC846D0B2980AF0AFA8B1F038C">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

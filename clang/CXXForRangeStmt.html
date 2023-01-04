@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXForRangeStmt</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXForRangeStmt</h1>
+    <p>Defined at line 134 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+    <div>
+      <div>
+        <p> CXXForRangeStmt - This represents C++0x [stmt.ranged]&apos;s ranged for statement, represented as &apos;for (range-declarator : range-expression)&apos; or &apos;for (init-statement range-declarator : range-expression)&apos;.</p>
+        <p> This is stored in a partially-desugared form to allow full semantic analysis of the constituent components. The original syntactic components can be extracted using getLoopVariable and getRangeInit.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Stmt.html">Stmt</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="85FF22378CB3EE0EDE31E51CDC9C04E3F5060D91">CXXForRangeStmt</h3>
+      <p>
+        public void CXXForRangeStmt(Stmt * InitStmt, DeclStmt * Range, DeclStmt * Begin, DeclStmt * End, Expr * Cond, Expr * Inc, DeclStmt * LoopVar, Stmt * Body, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         FL, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         CAL, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         CL, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RPL)
+      </p>
+      <h3 id="7C093F83133E190E37BE87FA9458023253C2BE11">CXXForRangeStmt</h3>
+      <p>
+        public void CXXForRangeStmt(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 150 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="E0D94F031F05BF4240753532C6292D2EE3C73B07">getInit</h3>
+      <p>public Stmt * getInit()</p>
+      <p>Defined at line 152 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="F5433AF053B887925EDCD2A1006B66314209207C">getLoopVariable</h3>
+      <p>public VarDecl * getLoopVariable()</p>
+      <h3 id="948D155BEDD796F5414D41A1321C87B6CB5B3426">getRangeInit</h3>
+      <p>public Expr * getRangeInit()</p>
+      <h3 id="9EDF6402E05CD0186F7379DBBCF0FD64A76AD3E3">getInit</h3>
+      <p>public const Stmt * getInit()</p>
+      <p>Defined at line 156 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="30EB54EB6181C684585F6F10F2C6631EB12A32DD">getLoopVariable</h3>
+      <p>public const VarDecl * getLoopVariable()</p>
+      <h3 id="CD7E2360A1E3B0BCFB795FD43D4B8F9FA5FB1D03">getRangeInit</h3>
+      <p>public const Expr * getRangeInit()</p>
+      <h3 id="AF71205B9308741360D76119BA702E782E1B5AAC">getRangeStmt</h3>
+      <p>public DeclStmt * getRangeStmt()</p>
+      <p>Defined at line 161 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="B95681180EAAF6CA9616CC08A63DBC4A38E8EDA5">getBeginStmt</h3>
+      <p>public DeclStmt * getBeginStmt()</p>
+      <p>Defined at line 162 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="AA65DBF9081F3697C3A61E0AB0138A367299FDC2">getEndStmt</h3>
+      <p>public DeclStmt * getEndStmt()</p>
+      <p>Defined at line 165 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="382D774F1CDEC3A98F3467C689647A64EF7AC1AE">getCond</h3>
+      <p>public Expr * getCond()</p>
+      <p>Defined at line 166 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="49BF25B3E3CCD8BB55DA331D84805F18B74A695F">getInc</h3>
+      <p>public Expr * getInc()</p>
+      <p>Defined at line 167 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="32E01994A54E356DF120E106C4CA08092A94671C">getLoopVarStmt</h3>
+      <p>public DeclStmt * getLoopVarStmt()</p>
+      <p>Defined at line 168 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="CB20368AEB371DE379AD17952A573B8EB8B4346C">getBody</h3>
+      <p>public Stmt * getBody()</p>
+      <p>Defined at line 169 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="2756C6080225D94DFD22BE8A60D3C0F67478DFC6">getRangeStmt</h3>
+      <p>public const DeclStmt * getRangeStmt()</p>
+      <p>Defined at line 171 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="86FBD638CE62B7FE6F55D41EC400B08FB123B958">getBeginStmt</h3>
+      <p>public const DeclStmt * getBeginStmt()</p>
+      <p>Defined at line 174 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="30D9AA7A5651BAD4040882A9FC12A02C7ADFA581">getEndStmt</h3>
+      <p>public const DeclStmt * getEndStmt()</p>
+      <p>Defined at line 177 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="557DB68F7EF78723EDBCEBE07C9DCAC0778E5FC1">getCond</h3>
+      <p>public const Expr * getCond()</p>
+      <p>Defined at line 180 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="7E6AA127FFF5A9EDCB6102466AA1EA86377D4A40">getInc</h3>
+      <p>public const Expr * getInc()</p>
+      <p>Defined at line 183 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="E34FEFC6BDAC8B7D5ACF5F47B1B1A9028AB99A6C">getLoopVarStmt</h3>
+      <p>public const DeclStmt * getLoopVarStmt()</p>
+      <p>Defined at line 186 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="A0924615F3B01CDDC238531F5581C6A943B3D755">getBody</h3>
+      <p>public const Stmt * getBody()</p>
+      <p>Defined at line 189 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="87076FFD21060EA6BC01C3C210E1AC1C10DEFE7C">setInit</h3>
+      <p>public void setInit(Stmt * S)</p>
+      <p>Defined at line 191 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="76687EC1D38221217F143B4F11775749FBDAA9C8">setRangeInit</h3>
+      <p>public void setRangeInit(Expr * E)</p>
+      <p>Defined at line 192 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="7E952D21447A0A773D116E2148123AA8B9A46110">setRangeStmt</h3>
+      <p>public void setRangeStmt(Stmt * S)</p>
+      <p>Defined at line 193 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="76FD40BB9BD67B6A2D73256307FD6AB55AAE42BA">setBeginStmt</h3>
+      <p>public void setBeginStmt(Stmt * S)</p>
+      <p>Defined at line 194 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="00ED7D1E36BBA477130CB211CE82C856CF57940B">setEndStmt</h3>
+      <p>public void setEndStmt(Stmt * S)</p>
+      <p>Defined at line 195 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="2733F8EB46C2E6131FD1BF60984A2844491E0B1B">setCond</h3>
+      <p>public void setCond(Expr * E)</p>
+      <p>Defined at line 196 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="491B38E60BEF3B1810CC6110660BC65C1B5385F7">setInc</h3>
+      <p>public void setInc(Expr * E)</p>
+      <p>Defined at line 197 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="F6D9752294861DF8C2C02254D621D7FE5643C16D">setLoopVarStmt</h3>
+      <p>public void setLoopVarStmt(Stmt * S)</p>
+      <p>Defined at line 198 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="8CB34B9F0400B505F76E2600F4B8DD36ABF64A40">setBody</h3>
+      <p>public void setBody(Stmt * S)</p>
+      <p>Defined at line 199 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="0DFFA13CA416ADD7C7BB4DCE3156F4C6FE5C325B">getForLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getForLoc()
+      </p>
+      <p>Defined at line 201 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="A9C7AC3FDC9B39C4571F0C4349CD2B3EA1498C88">getCoawaitLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getCoawaitLoc()
+      </p>
+      <p>Defined at line 202 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="41358454020E71E2179D5A4C492AF5086D9CF6D1">getColonLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getColonLoc()
+      </p>
+      <p>Defined at line 203 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="8000B6E68997FDFA74F4E48A3BB44C5C4E8D111C">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 204 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="849E1512B7FA07AC05CB8E97C6C1D50E81E21794">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 206 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="6A6A7E2617FF43296BEAC3447B15C97985588AEB">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 207 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="CBD17B7D2728995D27C0C883E45314CB92D3B3E1">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 211 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <h3 id="5FC9FDBB98C5FEF25BA13ED4333F80841A82F27E">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 216 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="767B58AB51C72D2779C5ADF484CFE98964F4793A">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 220 of file /usr/lib/llvm-16/include/clang/AST/StmtCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#85FF22378CB3EE0EDE31E51CDC9C04E3F5060D91">CXXForRangeStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C093F83133E190E37BE87FA9458023253C2BE11">CXXForRangeStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0D94F031F05BF4240753532C6292D2EE3C73B07">getInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F5433AF053B887925EDCD2A1006B66314209207C">getLoopVariable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#948D155BEDD796F5414D41A1321C87B6CB5B3426">getRangeInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9EDF6402E05CD0186F7379DBBCF0FD64A76AD3E3">getInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30EB54EB6181C684585F6F10F2C6631EB12A32DD">getLoopVariable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CD7E2360A1E3B0BCFB795FD43D4B8F9FA5FB1D03">getRangeInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF71205B9308741360D76119BA702E782E1B5AAC">getRangeStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B95681180EAAF6CA9616CC08A63DBC4A38E8EDA5">getBeginStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA65DBF9081F3697C3A61E0AB0138A367299FDC2">getEndStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#382D774F1CDEC3A98F3467C689647A64EF7AC1AE">getCond</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49BF25B3E3CCD8BB55DA331D84805F18B74A695F">getInc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32E01994A54E356DF120E106C4CA08092A94671C">getLoopVarStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CB20368AEB371DE379AD17952A573B8EB8B4346C">getBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2756C6080225D94DFD22BE8A60D3C0F67478DFC6">getRangeStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#86FBD638CE62B7FE6F55D41EC400B08FB123B958">getBeginStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30D9AA7A5651BAD4040882A9FC12A02C7ADFA581">getEndStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#557DB68F7EF78723EDBCEBE07C9DCAC0778E5FC1">getCond</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E6AA127FFF5A9EDCB6102466AA1EA86377D4A40">getInc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E34FEFC6BDAC8B7D5ACF5F47B1B1A9028AB99A6C">getLoopVarStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0924615F3B01CDDC238531F5581C6A943B3D755">getBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#87076FFD21060EA6BC01C3C210E1AC1C10DEFE7C">setInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76687EC1D38221217F143B4F11775749FBDAA9C8">setRangeInit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E952D21447A0A773D116E2148123AA8B9A46110">setRangeStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76FD40BB9BD67B6A2D73256307FD6AB55AAE42BA">setBeginStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#00ED7D1E36BBA477130CB211CE82C856CF57940B">setEndStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2733F8EB46C2E6131FD1BF60984A2844491E0B1B">setCond</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#491B38E60BEF3B1810CC6110660BC65C1B5385F7">setInc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6D9752294861DF8C2C02254D621D7FE5643C16D">setLoopVarStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CB34B9F0400B505F76E2600F4B8DD36ABF64A40">setBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0DFFA13CA416ADD7C7BB4DCE3156F4C6FE5C325B">getForLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9C7AC3FDC9B39C4571F0C4349CD2B3EA1498C88">getCoawaitLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#41358454020E71E2179D5A4C492AF5086D9CF6D1">getColonLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8000B6E68997FDFA74F4E48A3BB44C5C4E8D111C">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#849E1512B7FA07AC05CB8E97C6C1D50E81E21794">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A6A7E2617FF43296BEAC3447B15C97985588AEB">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CBD17B7D2728995D27C0C883E45314CB92D3B3E1">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FC9FDBB98C5FEF25BA13ED4333F80841A82F27E">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#767B58AB51C72D2779C5ADF484CFE98964F4793A">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ElaboratedType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ElaboratedType</h1>
+    <p>Defined at line 5635 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Represents a type that was referred to using an elaborated type keyword, e.g., struct S, or via a qualified name, e.g., N::M::type, or both.</p>
+        <p> This type is used to keep track of a type name as written in the source code, including tag keywords and any nested-name-specifiers. The type itself is always &quot;sugar&quot;, used to express what was written in the source code but containing no additional semantic information.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="TypeWithKeyword.html">TypeWithKeyword</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+      , llvm::TrailingObjects&lt;ElaboratedType, TagDecl *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="27D1A1DC1250C51B82EDCEAA911A1504DA064EA5">getQualifier</h3>
+      <p>public NestedNameSpecifier * getQualifier()</p>
+      <p>Defined at line 5673 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Retrieve the qualification on this type.</p>
+        </div>
+      </div>
+      <h3 id="51522000158E9EC242CC5AA56806BE504FF951DD">getNamedType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getNamedType()
+      </p>
+      <p>Defined at line 5676 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Retrieve the type named by the qualified-id.</p>
+        </div>
+      </div>
+      <h3 id="63C8520594CDAAA4B79D35E05CD154CEF4F4286A">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 5679 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Remove a single level of sugar.</p>
+        </div>
+      </div>
+      <h3 id="E6FAB5CA4ECBEA757CBD97A72B7F92C4F6FB19FB">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 5682 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Returns whether this type directly provides sugar.</p>
+        </div>
+      </div>
+      <h3 id="90F18B914051E23BE49CCC2766FD41D9F088ACC3">getOwnedTagDecl</h3>
+      <p>public TagDecl * getOwnedTagDecl()</p>
+      <p>Defined at line 5686 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Return the (re)declaration of this type owned by this occurrence of this type, or nullptr if there is none.</p>
+        </div>
+      </div>
+      <h3 id="F41CEA2A7260CF5DC5D13070F805972133470A56">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 5691 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="A4762FB97F6B9082ADE2BA0ECDAB6F16CE82B850">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="ElaboratedTypeKeyword.html">ElaboratedTypeKeyword</a>
+         Keyword, NestedNameSpecifier * NNS, 
+        <a href="QualType.html">QualType</a>
+         NamedType, TagDecl * OwnedTagDecl)
+      </p>
+      <p>Defined at line 5695 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="0D4608B5C689D23F86993F8BFC54B1032F6CFDA9">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 5704 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#27D1A1DC1250C51B82EDCEAA911A1504DA064EA5">getQualifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#51522000158E9EC242CC5AA56806BE504FF951DD">getNamedType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#63C8520594CDAAA4B79D35E05CD154CEF4F4286A">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E6FAB5CA4ECBEA757CBD97A72B7F92C4F6FB19FB">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90F18B914051E23BE49CCC2766FD41D9F088ACC3">getOwnedTagDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F41CEA2A7260CF5DC5D13070F805972133470A56">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4762FB97F6B9082ADE2BA0ECDAB6F16CE82B850">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D4608B5C689D23F86993F8BFC54B1032F6CFDA9">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SmallVector</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SmallVector</h1>
+    <p>Defined at line 1199 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+    <div>
+      <div>
+        <p> Forward declaration of SmallVector so that calculateSmallVectorDefaultInlinedElements can reference `sizeof(SmallVector&lt;T, 0&gt;)`.</p>
+      </div>
+      <div>
+        <p> This is a &apos;vector&apos; (really, a variable-sized array), optimized for the case when the array is small.  It contains some number of elements in-place, which allows it to avoid heap allocation when the actual number of elements is below that threshold.  This allows normal &quot;small&quot; cases to be fast without losing generality for large inputs.</p>
+      </div>
+    </div>
+    <p>Inherits from SmallVectorImpl&lt;T&gt;, SmallVectorStorage&lt;T, N&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="6EA6A6864E7427D09552138E142A271BB60738ED">SmallVector&lt;T, N&gt;</h3>
+      <p>public void SmallVector&lt;T, N&gt;()</p>
+      <p>Defined at line 1202 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="2567E66D62B5145EB801241CDDBF6066BADF95D5">~SmallVector&lt;T, N&gt;</h3>
+      <p>public void ~SmallVector&lt;T, N&gt;()</p>
+      <p>Defined at line 1204 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="C1AF6C177B5D4243A8CD554B74E5B81775900BAA">SmallVector&lt;T, N&gt;</h3>
+      <p>public void SmallVector&lt;T, N&gt;(size_t Size, const T &amp; Value)</p>
+      <p>Defined at line 1209 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="4C2BE9F901461C5F6B623B5BC9FB2756B6659167">SmallVector&lt;T, N&gt;</h3>
+      <p>public void SmallVector&lt;T, N&gt;(ItTy S, ItTy E)</p>
+      <p>Defined at line 1215 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="61F7C2D4CEE088BF2300C7593E2B5D9A925A3AD6">SmallVector&lt;T, N&gt;</h3>
+      <p>public void SmallVector&lt;T, N&gt;(const iterator_range&lt;RangeTy&gt; &amp; R)</p>
+      <p>Defined at line 1220 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="37124C35E67114E0364637F3EF54E7DE6C3A5CCA">SmallVector&lt;T, N&gt;</h3>
+      <p>public void SmallVector&lt;T, N&gt;(std::initializer_list&lt;T&gt; IL)</p>
+      <p>Defined at line 1225 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="A2D08440B4AA30C9E2B546B89BA184A4F1928E84">SmallVector&lt;T, N&gt;</h3>
+      <p>public void SmallVector&lt;T, N&gt;(ArrayRef&lt;U&gt; A)</p>
+      <p>Defined at line 1231 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="D992288C0F3B300EC630684A87585FA39846E0F0">SmallVector&lt;T, N&gt;</h3>
+      <p>public void SmallVector&lt;T, N&gt;(const SmallVector&lt;T, N&gt; &amp; RHS)</p>
+      <p>Defined at line 1235 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="1DA8A3B8536C23267A9A546CB89FF20BD0220E5E">operator=</h3>
+      <p>public SmallVector&lt;T, N&gt; &amp; operator=(const SmallVector&lt;T, N&gt; &amp; RHS)</p>
+      <p>Defined at line 1240 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="01767A9B4976F420009B1CAFB93726E47510ACA2">SmallVector&lt;T, N&gt;</h3>
+      <p>public void SmallVector&lt;T, N&gt;(SmallVector&lt;T, N&gt; &amp;&amp; RHS)</p>
+      <p>Defined at line 1245 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="EA95453FBAC8CAB39A59BCBFFCB8B17E7B01638E">SmallVector&lt;T, N&gt;</h3>
+      <p>public void SmallVector&lt;T, N&gt;(SmallVectorImpl&lt;T&gt; &amp;&amp; RHS)</p>
+      <p>Defined at line 1250 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="BEE7D76183422E61C4F32D1A57C254C13DEA4B5E">operator=</h3>
+      <p>public SmallVector&lt;T, N&gt; &amp; operator=(SmallVector&lt;T, N&gt; &amp;&amp; RHS)</p>
+      <p>Defined at line 1255 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="42F466F9A2AA11F5B8566637692B367B2860761E">operator=</h3>
+      <p>public SmallVector&lt;T, N&gt; &amp; operator=(SmallVectorImpl&lt;T&gt; &amp;&amp; RHS)</p>
+      <p>Defined at line 1273 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="26A64EA5B751A558C54C6F94BE4102D967724346">operator=</h3>
+      <p>public SmallVector&lt;T, N&gt; &amp; operator=(std::initializer_list&lt;T&gt; IL)</p>
+      <p>Defined at line 1278 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6EA6A6864E7427D09552138E142A271BB60738ED">SmallVector&lt;T, N&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2567E66D62B5145EB801241CDDBF6066BADF95D5">~SmallVector&lt;T, N&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1AF6C177B5D4243A8CD554B74E5B81775900BAA">SmallVector&lt;T, N&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C2BE9F901461C5F6B623B5BC9FB2756B6659167">SmallVector&lt;T, N&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#61F7C2D4CEE088BF2300C7593E2B5D9A925A3AD6">SmallVector&lt;T, N&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37124C35E67114E0364637F3EF54E7DE6C3A5CCA">SmallVector&lt;T, N&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A2D08440B4AA30C9E2B546B89BA184A4F1928E84">SmallVector&lt;T, N&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D992288C0F3B300EC630684A87585FA39846E0F0">SmallVector&lt;T, N&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1DA8A3B8536C23267A9A546CB89FF20BD0220E5E">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01767A9B4976F420009B1CAFB93726E47510ACA2">SmallVector&lt;T, N&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA95453FBAC8CAB39A59BCBFFCB8B17E7B01638E">SmallVector&lt;T, N&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BEE7D76183422E61C4F32D1A57C254C13DEA4B5E">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#42F466F9A2AA11F5B8566637692B367B2860761E">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#26A64EA5B751A558C54C6F94BE4102D967724346">operator=</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

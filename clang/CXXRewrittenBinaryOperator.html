@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class CXXRewrittenBinaryOperator</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class CXXRewrittenBinaryOperator</h1>
+    <p>Defined at line 283 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> A rewritten comparison expression that was originally written using operator syntax.</p>
+        <p> In C++20, the following rewrites are performed: - a == b -&gt; b == a - a != b -&gt; !(a == b) - a != b -&gt; !(b == a) - For  in    - a @ b -&gt; (a &lt;=&gt; b) @ 0   - a @ b -&gt; 0 @ (b &lt;=&gt; a)</p>
+        <p> This expression provides access to both the original syntax and the rewritten expression.</p>
+        <p> Note that the rewritten calls to  and  are typically but could theoretically be </p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/CXXRewrittenBinaryOperator/DecomposedForm.html">DecomposedForm</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0EC8464A59C9BE339B8EAB32E05BCCA3A9170AA3">CXXRewrittenBinaryOperator</h3>
+      <p>public void CXXRewrittenBinaryOperator(Expr * SemanticForm, _Bool IsReversed)</p>
+      <p>Defined at line 290 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="8407C18F7C52F3BFF12F6C9CE32B09A934751C9F">CXXRewrittenBinaryOperator</h3>
+      <p>
+        public void CXXRewrittenBinaryOperator(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 297 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="BE92489D0FADF857878529391A557DC532D52DA3">getSemanticForm</h3>
+      <p>public Expr * getSemanticForm()</p>
+      <p>Defined at line 301 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get an equivalent semantic form for this expression.</p>
+        </div>
+      </div>
+      <h3 id="57169AFB1DE2AC00229BAE6D90201083773DB4AA">getSemanticForm</h3>
+      <p>public const Expr * getSemanticForm()</p>
+      <p>Defined at line 302 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="212D95473C6BD3D41CE3ED172A3F8DF81272D644">getDecomposedForm</h3>
+      <p>
+        public 
+        <a href="../clang/CXXRewrittenBinaryOperator/DecomposedForm.html">DecomposedForm</a>
+         getDecomposedForm()
+      </p>
+      <div>
+        <div>
+          <p> Decompose this operator into its syntactic form.</p>
+        </div>
+      </div>
+      <h3 id="A0965C1C4F91D9A8DAC7963E7531EFD59A9DF1B0">isReversed</h3>
+      <p>public _Bool isReversed()</p>
+      <p>Defined at line 319 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determine whether this expression was rewritten in reverse form.</p>
+        </div>
+      </div>
+      <h3 id="1618DCBF0BE5DB61A88A4E6BBFD335772A626F6F">getOperator</h3>
+      <p>
+        public 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         getOperator()
+      </p>
+      <p>Defined at line 321 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="5D0C89EE37EAD62EA0AAAE38842D28E82A8493EC">getOpcode</h3>
+      <p>
+        public 
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         getOpcode()
+      </p>
+      <p>Defined at line 322 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="8E7BA690E4AA6AF4B0532160470AACE2F9D2F865">getOpcodeStr</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getOpcodeStr(
+        <a href="BinaryOperatorKind.html">BinaryOperatorKind</a>
+         Op)
+      </p>
+      <p>Defined at line 323 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="43350E721B3DD12393EAA30F4720F3400FDBCCB9">getOpcodeStr</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getOpcodeStr()
+      </p>
+      <p>Defined at line 326 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="2159D7C651D08A8CB97FB62B99BA4B0B59A02BA2">isComparisonOp</h3>
+      <p>public _Bool isComparisonOp()</p>
+      <p>Defined at line 329 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="98E043C550AE2F855081CF28E47833BF3441DE59">isAssignmentOp</h3>
+      <p>public _Bool isAssignmentOp()</p>
+      <p>Defined at line 330 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="1AC1C1C7E3E3B204547A9DC85F06A8BBBD2AD706">getLHS</h3>
+      <p>public const Expr * getLHS()</p>
+      <p>Defined at line 332 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="DA8767F30A72A28A81F8EDE24355FA1420A90FCB">getRHS</h3>
+      <p>public const Expr * getRHS()</p>
+      <p>Defined at line 333 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="DE41D9A147EE5FD0AE23A48C815CEE8989BF048D">getOperatorLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getOperatorLoc()
+      </p>
+      <p>Defined at line 335 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="3AEB59923DD7A369CB6570F08E17275593B73300">getExprLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExprLoc()
+      </p>
+      <p>Defined at line 338 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="EB714A885425D98C5028EF012DC67395E9D5C791">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 344 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Compute the begin and end locations from the decomposed form. The locations of the semantic form are not reliable if this is a reversed expression.@{</p>
+        </div>
+      </div>
+      <h3 id="16280EF1BA5CA7F8CB15983051788478C1705F05">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 347 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="FA022F6DD1ACED1517C8D710F4F63BE24618E126">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 350 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="EA57C0005B750FEF4889156F6A681D567758C204">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 356 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p>@}</p>
+        </div>
+      </div>
+      <h3 id="1AE4CDBD9EFF8D7C6415F6307F39AAB0742C9239">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 360 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0EC8464A59C9BE339B8EAB32E05BCCA3A9170AA3">CXXRewrittenBinaryOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8407C18F7C52F3BFF12F6C9CE32B09A934751C9F">CXXRewrittenBinaryOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE92489D0FADF857878529391A557DC532D52DA3">getSemanticForm</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57169AFB1DE2AC00229BAE6D90201083773DB4AA">getSemanticForm</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#212D95473C6BD3D41CE3ED172A3F8DF81272D644">getDecomposedForm</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0965C1C4F91D9A8DAC7963E7531EFD59A9DF1B0">isReversed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1618DCBF0BE5DB61A88A4E6BBFD335772A626F6F">getOperator</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5D0C89EE37EAD62EA0AAAE38842D28E82A8493EC">getOpcode</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E7BA690E4AA6AF4B0532160470AACE2F9D2F865">getOpcodeStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#43350E721B3DD12393EAA30F4720F3400FDBCCB9">getOpcodeStr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2159D7C651D08A8CB97FB62B99BA4B0B59A02BA2">isComparisonOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#98E043C550AE2F855081CF28E47833BF3441DE59">isAssignmentOp</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1AC1C1C7E3E3B204547A9DC85F06A8BBBD2AD706">getLHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA8767F30A72A28A81F8EDE24355FA1420A90FCB">getRHS</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE41D9A147EE5FD0AE23A48C815CEE8989BF048D">getOperatorLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3AEB59923DD7A369CB6570F08E17275593B73300">getExprLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB714A885425D98C5028EF012DC67395E9D5C791">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#16280EF1BA5CA7F8CB15983051788478C1705F05">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FA022F6DD1ACED1517C8D710F4F63BE24618E126">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA57C0005B750FEF4889156F6A681D567758C204">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1AE4CDBD9EFF8D7C6415F6307F39AAB0742C9239">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

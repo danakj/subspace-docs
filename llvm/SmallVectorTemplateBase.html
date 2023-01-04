@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SmallVectorTemplateBase</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SmallVectorTemplateBase</h1>
+    <p>Defined at line 332 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+    <div>
+      <div>
+        <p> SmallVectorTemplateBase&lt;TriviallyCopyable = false&gt; - This is where we put method implementations that are designed to work with non-trivial T&apos;s.</p>
+        <p> We approximate is_trivially_copyable with trivial move/copy construction and trivial destruction. While the standard doesn&apos;t specify that you&apos;re allowed copy these types with memcpy, there is no way for the type to observe this. This catches the important case of std::pair&lt;POD, POD&gt;, which is not trivially assignable.</p>
+      </div>
+    </div>
+    <p>Inherits from SmallVectorTemplateCommon&lt;T&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2CCCE4A8FBFF09DE2E1F6FA9B470B440E297B809">SmallVectorTemplateBase&lt;T, &gt;</h3>
+      <p>protected void SmallVectorTemplateBase&lt;T, &gt;(size_t Size)</p>
+      <p>Defined at line 339 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="491D969A67C4D7EE975191EDE5368AC73106A3B2">destroy_range</h3>
+      <p>protected void destroy_range(T * S, T * E)</p>
+      <p>Defined at line 341 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="76668F2B9E4449BBF7BDEC0490E2BB522A6071CB">uninitialized_move</h3>
+      <p>protected void uninitialized_move(It1 I, It1 E, It2 Dest)</p>
+      <p>Defined at line 351 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Move the range [I, E) into the uninitialized memory starting with &quot;Dest&quot;, constructing elements as needed.</p>
+        </div>
+      </div>
+      <h3 id="7B7BD3DFEA7C610D740C643909726B4FF1E0B7AC">uninitialized_copy</h3>
+      <p>protected void uninitialized_copy(It1 I, It1 E, It2 Dest)</p>
+      <p>Defined at line 358 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Copy the range [I, E) onto the uninitialized memory starting with &quot;Dest&quot;, constructing elements as needed.</p>
+        </div>
+      </div>
+      <h3 id="4828DDF5AC44A1D1A8CCE473BBD81BB8AF2FF16E">grow</h3>
+      <p>protected void grow(size_t MinSize)</p>
+      <p>Defined at line 435 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Define this out-of-line to dissuade the C++ compiler from inlining it.</p>
+        </div>
+        <div>
+          <p> Grow the allocated memory (without initializing new elements), doubling the size of the allocated memory. Guarantees space for at least one more element, or MinSize more elements if specified.</p>
+        </div>
+      </div>
+      <h3 id="E0519AD5E4F1E988ED82BD05E066523BF5D17301">mallocForGrow</h3>
+      <p>protected T * mallocForGrow(size_t MinSize, size_t &amp; NewCapacity)</p>
+      <p>Defined at line 443 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Create a new allocation big enough for  and pass back its size in  This is the first section of </p>
+        </div>
+      </div>
+      <h3 id="9CED449C1489CF94CA529C3FD8A4EAAA35CBD70B">moveElementsForGrow</h3>
+      <p>protected void moveElementsForGrow(T * NewElts)</p>
+      <p>Defined at line 452 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Define this out-of-line to dissuade the C++ compiler from inlining it.</p>
+        </div>
+        <div>
+          <p> Move existing elements over to the new allocation  the middle section of </p>
+        </div>
+      </div>
+      <h3 id="E40BEC0E1A8E6438A30109CE41F3319ADA24D57A">takeAllocationForGrow</h3>
+      <p>protected void takeAllocationForGrow(T * NewElts, size_t NewCapacity)</p>
+      <p>Defined at line 463 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Define this out-of-line to dissuade the C++ compiler from inlining it.</p>
+        </div>
+        <div>
+          <p> Transfer ownership of the allocation, finishing up </p>
+        </div>
+      </div>
+      <h3 id="F05E5DCE9C4693B2D1097FEC4FB405873AA2E6B9">reserveForParamAndGetAddress</h3>
+      <p>protected const T * reserveForParamAndGetAddress(const T &amp; Elt, size_t N)</p>
+      <p>Defined at line 380 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Reserve enough space to add one element, and return the updated element pointer in case it was a reference to the storage.</p>
+        </div>
+      </div>
+      <h3 id="44A643A9E460D90D932BFC781D5B4377E71972AA">reserveForParamAndGetAddress</h3>
+      <p>protected T * reserveForParamAndGetAddress(T &amp; Elt, size_t N)</p>
+      <p>Defined at line 386 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Reserve enough space to add one element, and return the updated element pointer in case it was a reference to the storage.</p>
+        </div>
+      </div>
+      <h3 id="0CE663F140764A7C58A0574108E36A2FE65D8245">forward_value_param</h3>
+      <p>protected T &amp;&amp; forward_value_param(T &amp;&amp; V)</p>
+      <p>Defined at line 391 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="E4F077813A67B7D975E5EF6933F8B427974F7F69">forward_value_param</h3>
+      <p>protected const T &amp; forward_value_param(const T &amp; V)</p>
+      <p>Defined at line 392 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="2FD8BBEED3A56092AF1326695C32B1F057DC6338">growAndAssign</h3>
+      <p>protected void growAndAssign(size_t NumElts, const T &amp; Elt)</p>
+      <p>Defined at line 394 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="2725D143481FECE64E2CCDBA8B4A2E1CBBDEFA35">growAndEmplaceBack</h3>
+      <p>protected T &amp; growAndEmplaceBack(ArgTypes &amp;&amp;... Args)</p>
+      <p>Defined at line 404 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="C4A822739FA18F9F0CAA8581F826F74CC83E7B24">push_back</h3>
+      <p>public void push_back(const T &amp; Elt)</p>
+      <p>Defined at line 416 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="9C1642EDE89F2C998BD832D873D7E4268F1B177A">push_back</h3>
+      <p>public void push_back(T &amp;&amp; Elt)</p>
+      <p>Defined at line 422 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="A32AFBAF94C57268CF06EC8B567E9F0B41D1E0A0">pop_back</h3>
+      <p>public void pop_back()</p>
+      <p>Defined at line 428 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2CCCE4A8FBFF09DE2E1F6FA9B470B440E297B809">SmallVectorTemplateBase&lt;T, &gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#491D969A67C4D7EE975191EDE5368AC73106A3B2">destroy_range</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#76668F2B9E4449BBF7BDEC0490E2BB522A6071CB">uninitialized_move</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B7BD3DFEA7C610D740C643909726B4FF1E0B7AC">uninitialized_copy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4828DDF5AC44A1D1A8CCE473BBD81BB8AF2FF16E">grow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0519AD5E4F1E988ED82BD05E066523BF5D17301">mallocForGrow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9CED449C1489CF94CA529C3FD8A4EAAA35CBD70B">moveElementsForGrow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E40BEC0E1A8E6438A30109CE41F3319ADA24D57A">takeAllocationForGrow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F05E5DCE9C4693B2D1097FEC4FB405873AA2E6B9">reserveForParamAndGetAddress</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#44A643A9E460D90D932BFC781D5B4377E71972AA">reserveForParamAndGetAddress</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0CE663F140764A7C58A0574108E36A2FE65D8245">forward_value_param</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E4F077813A67B7D975E5EF6933F8B427974F7F69">forward_value_param</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FD8BBEED3A56092AF1326695C32B1F057DC6338">growAndAssign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2725D143481FECE64E2CCDBA8B4A2E1CBBDEFA35">growAndEmplaceBack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4A822739FA18F9F0CAA8581F826F74CC83E7B24">push_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9C1642EDE89F2C998BD832D873D7E4268F1B177A">push_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A32AFBAF94C57268CF06EC8B567E9F0B41D1E0A0">pop_back</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class SmallVectorTemplateBase</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class SmallVectorTemplateBase</h1>
+    <p>Defined at line 478 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+    <div>
+      <div>
+        <p> SmallVectorTemplateBase&lt;TriviallyCopyable = true&gt; - This is where we put method implementations that are designed to work with trivially copyable T&apos;s. This allows using memcpy in place of copy/move construction and skipping destruction.</p>
+      </div>
+    </div>
+    <p>Inherits from SmallVectorTemplateCommon&lt;T&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="6B7A2F07E69699151A9A9009AFF01003C61057E9">SmallVectorTemplateBase&lt;type-parameter-0-0, true&gt;</h3>
+      <p>protected void SmallVectorTemplateBase&lt;type-parameter-0-0, true&gt;(size_t Size)</p>
+      <p>Defined at line 491 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="38CA88E7129B0DEA01B1556E17804A7FADF45B3A">destroy_range</h3>
+      <p>protected void destroy_range(T * , T * )</p>
+      <p>Defined at line 494 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> No need to do a destroy loop for POD&apos;s.</p>
+        </div>
+      </div>
+      <h3 id="F7988AD8D3D4852F636857731BC8615DDD8F0FE9">uninitialized_move</h3>
+      <p>protected void uninitialized_move(It1 I, It1 E, It2 Dest)</p>
+      <p>Defined at line 499 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Move the range [I, E) onto the uninitialized memory starting with &quot;Dest&quot;, constructing elements into it as needed.</p>
+        </div>
+      </div>
+      <h3 id="C09183268F755C03CCFE22BAA526E6A14DE8438A">uninitialized_copy</h3>
+      <p>protected void uninitialized_copy(It1 I, It1 E, It2 Dest)</p>
+      <p>Defined at line 507 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Copy the range [I, E) onto the uninitialized memory starting with &quot;Dest&quot;, constructing elements into it as needed.</p>
+        </div>
+      </div>
+      <h3 id="3038C8C0998161D0CBA3CD03FE544033A648202F">uninitialized_copy</h3>
+      <p>protected void uninitialized_copy(T1 * I, T1 * E, T2 * Dest, std::enable_if_t&lt;std::is_same&lt;std::remove_const_t&lt;T1&gt;, T2&gt;::value&gt; * )</p>
+      <p>Defined at line 515 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Copy the range [I, E) onto the uninitialized memory starting with &quot;Dest&quot;, constructing elements into it as needed.</p>
+        </div>
+      </div>
+      <h3 id="9668869EE0A48DD4B01898BC91FBF001A6372338">grow</h3>
+      <p>protected void grow(size_t MinSize)</p>
+      <p>Defined at line 529 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Double the size of the allocated memory, guaranteeing space for at least one more element or MinSize if specified.</p>
+        </div>
+      </div>
+      <h3 id="0D364B36C870D8EACA0CC3EF87597A1F457AF5CE">reserveForParamAndGetAddress</h3>
+      <p>protected const T * reserveForParamAndGetAddress(const T &amp; Elt, size_t N)</p>
+      <p>Defined at line 533 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Reserve enough space to add one element, and return the updated element pointer in case it was a reference to the storage.</p>
+        </div>
+      </div>
+      <h3 id="FF0BE06F46F83D6D3E1542F6557B789DB19846F4">reserveForParamAndGetAddress</h3>
+      <p>protected T * reserveForParamAndGetAddress(T &amp; Elt, size_t N)</p>
+      <p>Defined at line 539 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Reserve enough space to add one element, and return the updated element pointer in case it was a reference to the storage.</p>
+        </div>
+      </div>
+      <h3 id="4312B1943BAF7044BA0E62234A539EA5903465ED">forward_value_param</h3>
+      <p>protected ValueParamT forward_value_param(ValueParamT V)</p>
+      <p>Defined at line 545 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <div>
+        <div>
+          <p> Copy  or return a reference, depending on </p>
+        </div>
+      </div>
+      <h3 id="1E3216AFAB7743FBDF6825B0FAD14C4AD1C11E7A">growAndAssign</h3>
+      <p>protected void growAndAssign(size_t NumElts, T Elt)</p>
+      <p>Defined at line 547 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="7950DB7224233B52C3A04EC141B25A053BF6EBDC">growAndEmplaceBack</h3>
+      <p>protected T &amp; growAndEmplaceBack(ArgTypes &amp;&amp;... Args)</p>
+      <p>Defined at line 556 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="6765770E82B449A7C5A9F20E08B5E3F31A1B6092">push_back</h3>
+      <p>public void push_back(ValueParamT Elt)</p>
+      <p>Defined at line 565 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+      <h3 id="89AC4B62BCF6F61AC15067FD7412C7D23C5B76C3">pop_back</h3>
+      <p>public void pop_back()</p>
+      <p>Defined at line 571 of file /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6B7A2F07E69699151A9A9009AFF01003C61057E9">SmallVectorTemplateBase&lt;type-parameter-0-0, true&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#38CA88E7129B0DEA01B1556E17804A7FADF45B3A">destroy_range</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7988AD8D3D4852F636857731BC8615DDD8F0FE9">uninitialized_move</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C09183268F755C03CCFE22BAA526E6A14DE8438A">uninitialized_copy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3038C8C0998161D0CBA3CD03FE544033A648202F">uninitialized_copy</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9668869EE0A48DD4B01898BC91FBF001A6372338">grow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D364B36C870D8EACA0CC3EF87597A1F457AF5CE">reserveForParamAndGetAddress</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF0BE06F46F83D6D3E1542F6557B789DB19846F4">reserveForParamAndGetAddress</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4312B1943BAF7044BA0E62234A539EA5903465ED">forward_value_param</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1E3216AFAB7743FBDF6825B0FAD14C4AD1C11E7A">growAndAssign</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7950DB7224233B52C3A04EC141B25A053BF6EBDC">growAndEmplaceBack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6765770E82B449A7C5A9F20E08B5E3F31A1B6092">push_back</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#89AC4B62BCF6F61AC15067FD7412C7D23C5B76C3">pop_back</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

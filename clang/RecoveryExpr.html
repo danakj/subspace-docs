@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class RecoveryExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class RecoveryExpr</h1>
+    <p>Defined at line 6427 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> Frontend produces RecoveryExprs on semantic errors that prevent creating other well-formed expressions. E.g. when type-checking of a binary operator fails, we cannot produce a BinaryOperator expression. Instead, we can choose to produce a recovery expression storing left and right operands.</p>
+        <p> RecoveryExpr does not have any semantic meaning in C++, it is only useful to preserve expressions in AST that would otherwise be dropped. It captures subexpressions of some expression that we could not construct and source range covered by the expression.</p>
+        <p> By default, RecoveryExpr uses dependence-bits to take advantage of existing machinery to deal with dependent code in C++, e.g. RecoveryExpr is preserved in `decltype(&lt;broken-expr&gt;)` as part of the `DependentDecltypeType`. In addition to that, clang does not report most errors on dependent expressions, so we get rid of bogus errors for free. However, note that unlike other dependent expressions, RecoveryExpr can be produced in non-template contexts.</p>
+        <p> We will preserve the type in RecoveryExpr when the type is known, e.g. preserving the return type for a broken non-overloaded function call, a overloaded call where all candidates have the same return type. In this case, the expression is not type-dependent (unless the known type is itself dependent)</p>
+        <p> One can also reliably suppress all bogus errors on expressions containing recovery expressions by examining results of Expr::containsErrors().</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;RecoveryExpr, Expr *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C70FAC5EB771405E3E68D1A70BD6459716E21F01">Create</h3>
+      <p>
+        public RecoveryExpr * Create(ASTContext &amp; Ctx, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         BeginLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         SubExprs)
+      </p>
+      <h3 id="80429EC408FC12E4B9333052AF53C5A291D3F206">CreateEmpty</h3>
+      <p>public RecoveryExpr * CreateEmpty(ASTContext &amp; Ctx, unsigned int NumSubExprs)</p>
+      <h3 id="0BB918B23F5466A026A0A5870CA9DC122051E333">subExpressions</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         subExpressions()
+      </p>
+      <p>Defined at line 6435 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="6BAE7C1C11BD7BF132E16FB8C5B7A06F6FA8B452">subExpressions</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         subExpressions()
+      </p>
+      <p>Defined at line 6440 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="51C6CB68B53C6BC201D356E6E05FD9B49CE71808">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 6444 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="5723B69E057E3DF160313332A555E94CDFBD796D">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 6449 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="6252916A06C411EF8D181FCEA1868E85007786CC">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 6450 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="43CD121E56E55D46E8F9CF1D8656E4930B05223C">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 6452 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C70FAC5EB771405E3E68D1A70BD6459716E21F01">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#80429EC408FC12E4B9333052AF53C5A291D3F206">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0BB918B23F5466A026A0A5870CA9DC122051E333">subExpressions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BAE7C1C11BD7BF132E16FB8C5B7A06F6FA8B452">subExpressions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#51C6CB68B53C6BC201D356E6E05FD9B49CE71808">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5723B69E057E3DF160313332A555E94CDFBD796D">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6252916A06C411EF8D181FCEA1868E85007786CC">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#43CD121E56E55D46E8F9CF1D8656E4930B05223C">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

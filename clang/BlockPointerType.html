@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class BlockPointerType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class BlockPointerType</h1>
+    <p>Defined at line 2849 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <div>
+      <div>
+        <p> Pointer to a block type. This type is to represent types syntactically represented as &quot;void (^)(int)&quot;, etc. Pointee is required to always be a function type.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="293DB663B7F635CE1CB06DF2FF66F95C5D2C6189">getPointeeType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getPointeeType()
+      </p>
+      <p>Defined at line 2861 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Get the pointee type. Pointee is required to always be a function type.</p>
+        </div>
+      </div>
+      <h3 id="30B569B20357BF6BE3E7173DFA33FCA4FB77E454">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 2863 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="37CA1040AF08F585E8A67B7F02A39BBD10AB269A">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 2864 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="2AB97F952E9F1B854B9B6BF6FC4355D8F8328008">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 2866 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="3F922E38E0211C96DDC8F8465C01DC7F7F377E46">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="QualType.html">QualType</a>
+         Pointee)
+      </p>
+      <p>Defined at line 2870 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="A1D8E40EDEF35BFC248DCD41DB44DEB462B744F5">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 2874 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#293DB663B7F635CE1CB06DF2FF66F95C5D2C6189">getPointeeType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#30B569B20357BF6BE3E7173DFA33FCA4FB77E454">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37CA1040AF08F585E8A67B7F02A39BBD10AB269A">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2AB97F952E9F1B854B9B6BF6FC4355D8F8328008">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F922E38E0211C96DDC8F8465C01DC7F7F377E46">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A1D8E40EDEF35BFC248DCD41DB44DEB462B744F5">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

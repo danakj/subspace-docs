@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TemplateDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TemplateDecl</h1>
+    <p>Defined at line 408 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> The TemplateDecl class stores the list of template parameters and a reference to the templated scoped declaration: the underlying AST node.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="NamedDecl.html">NamedDecl</a>
+    </p>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>protected NamedDecl * TemplatedDecl</li>
+      <li>protected TemplateParameterList * TemplateParams</li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="08B5BED8B11DDC8B73E326523A4DA79EB5FE9443">TemplateDecl</h3>
+      <p>
+        protected void TemplateDecl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params, NamedDecl * Decl)
+      </p>
+      <div>
+        <div>
+          <p> Construct a template decl with name, parameters, and templated element.</p>
+        </div>
+      </div>
+      <h3 id="0913FE5F091012074B3BA3F23A98313B8CF55668">TemplateDecl</h3>
+      <p>
+        protected void TemplateDecl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params)
+      </p>
+      <p>Defined at line 418 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Construct a template decl with the given name and parameters. Used when there is no templated element (e.g., for tt-params).</p>
+        </div>
+      </div>
+      <h3 id="CA2CDE60643F04A6E1425655CD8D408EEC92CEAE">getTemplateParameters</h3>
+      <p>public TemplateParameterList * getTemplateParameters()</p>
+      <p>Defined at line 427 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Get the list of template parameters</p>
+        </div>
+      </div>
+      <h3 id="02C6D00BC2C224B0B2964782BEDBE86A515857C4">getAssociatedConstraints</h3>
+      <p>public void getAssociatedConstraints(llvm::SmallVectorImpl&lt;const Expr *&gt; &amp; AC)</p>
+      <div>
+        <div></div>
+      </div>
+      <h3 id="4F140E56D53AA021E7FDB24BA8A94C82FBC128F5">hasAssociatedConstraints</h3>
+      <p>public _Bool hasAssociatedConstraints()</p>
+      <h3 id="DC06E4421013CA5C20D337421896B39C8E9B0E5F">getTemplatedDecl</h3>
+      <p>public NamedDecl * getTemplatedDecl()</p>
+      <p>Defined at line 440 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Get the underlying, templated declaration.</p>
+        </div>
+      </div>
+      <h3 id="3C8D08B6145E8E463579760C41ADB1FE9251662C">isTypeAlias</h3>
+      <p>public _Bool isTypeAlias()</p>
+      <div>
+        <div>
+          <p> Should a specialization behave like an alias for another type.</p>
+        </div>
+      </div>
+      <h3 id="09F5E13E94FE2E4927A258D8F85D93B10FB61C14">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 446 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast/etc.</p>
+        </div>
+      </div>
+      <h3 id="5911E0BD80CE943F3DCEFFE2A57349DDD32B0A1F">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 448 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="7A0B7C7EEF33937C30899D1EEEFCD6B09A8FB4D8">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 452 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="0E45EFF6ECE82F89EA69920F0F82E3F8E4738F29">setTemplateParameters</h3>
+      <p>public void setTemplateParameters(TemplateParameterList * TParams)</p>
+      <p>Defined at line 462 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="FBC2B16D7963D39DBE1D822B46F61F81469435F1">init</h3>
+      <p>public void init(NamedDecl * NewTemplatedDecl)</p>
+      <p>Defined at line 467 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Initialize the underlying templated declaration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#08B5BED8B11DDC8B73E326523A4DA79EB5FE9443">TemplateDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0913FE5F091012074B3BA3F23A98313B8CF55668">TemplateDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CA2CDE60643F04A6E1425655CD8D408EEC92CEAE">getTemplateParameters</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#02C6D00BC2C224B0B2964782BEDBE86A515857C4">getAssociatedConstraints</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F140E56D53AA021E7FDB24BA8A94C82FBC128F5">hasAssociatedConstraints</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DC06E4421013CA5C20D337421896B39C8E9B0E5F">getTemplatedDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C8D08B6145E8E463579760C41ADB1FE9251662C">isTypeAlias</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#09F5E13E94FE2E4927A258D8F85D93B10FB61C14">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5911E0BD80CE943F3DCEFFE2A57349DDD32B0A1F">classofKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7A0B7C7EEF33937C30899D1EEEFCD6B09A8FB4D8">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E45EFF6ECE82F89EA69920F0F82E3F8E4738F29">setTemplateParameters</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBC2B16D7963D39DBE1D822B46F61F81469435F1">init</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

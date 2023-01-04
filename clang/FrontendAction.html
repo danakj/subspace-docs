@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FrontendAction</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FrontendAction</h1>
+    <p>Defined at line 36 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+    <div>
+      <div>
+        <p> Abstract base class for actions which can be performed by the frontend.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5AED3A8CE96F21AC904F5D0B14CAB26B69187678">PrepareToExecuteAction</h3>
+      <p>protected _Bool PrepareToExecuteAction(CompilerInstance &amp; CI)</p>
+      <p>Defined at line 55 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Prepare to execute the action on the given CompilerInstance.</p>
+          <p> This is called before executing the action on any inputs, and can modify the configuration as needed (including adjusting the input list).</p>
+        </div>
+      </div>
+      <h3 id="D51A7EABDC973550C013BB642F342454FC0F899F">CreateASTConsumer</h3>
+      <p>
+        protected 
+        <a href="../std/unique_ptr.html">unique_ptr</a>
+         CreateASTConsumer(CompilerInstance &amp; CI, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         InFile)
+      </p>
+      <div>
+        <div>
+          <p> Create the AST consumer object for this action, if supported.</p>
+          <p> This routine is called as part of BeginSourceFile(), which will fail if the AST consumer cannot be created. This will not be called if the action has indicated that it only uses the preprocessor.</p>
+        </div>
+      </div>
+      <h3 id="B90E169F95751E69A34ADB4F6F130AC44385CA43">BeginInvocation</h3>
+      <p>protected _Bool BeginInvocation(CompilerInstance &amp; CI)</p>
+      <p>Defined at line 79 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Callback before starting processing a single input, giving the opportunity to modify the CompilerInvocation or do some other action before BeginSourceFileAction is called.</p>
+        </div>
+      </div>
+      <h3 id="A6D9F7E7CEAF2A86EBC65AD1A13CEB04101CFE3B">BeginSourceFileAction</h3>
+      <p>protected _Bool BeginSourceFileAction(CompilerInstance &amp; CI)</p>
+      <p>Defined at line 85 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Callback at the start of processing a single input.</p>
+        </div>
+      </div>
+      <h3 id="A227D3E77B1735FA77F3749F3600C13A25416787">ExecuteAction</h3>
+      <p>protected void ExecuteAction()</p>
+      <div>
+        <div>
+          <p> Callback to run the program action, using the initialized compiler instance.</p>
+          <p> This is guaranteed to only be called between BeginSourceFileAction() and EndSourceFileAction().</p>
+        </div>
+      </div>
+      <h3 id="648F93B3CF6FC02ABA493A9AA0208B8ACC873809">EndSourceFileAction</h3>
+      <p>protected void EndSourceFileAction()</p>
+      <p>Defined at line 100 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Callback at the end of processing a single input.</p>
+          <p> This is guaranteed to only be called following a successful call to BeginSourceFileAction (and BeginSourceFile).</p>
+        </div>
+      </div>
+      <h3 id="8E0D9E52DCD5599013BC3EEA2EF3DD0935B8E259">shouldEraseOutputFiles</h3>
+      <p>protected _Bool shouldEraseOutputFiles()</p>
+      <div>
+        <div>
+          <p> Callback at the end of processing a single input, to determine if the output files should be erased or not.</p>
+          <p> By default it returns true if a compiler error occurred. This is guaranteed to only be called following a successful call to BeginSourceFileAction (and BeginSourceFile).</p>
+        </div>
+      </div>
+      <h3 id="3B02FA52A1C7C2C0750892587F475574C3304867">FrontendAction</h3>
+      <p>public void FrontendAction()</p>
+      <div>
+        <div>
+          <p>@}</p>
+        </div>
+      </div>
+      <h3 id="6C60176C7D5368D73E25F32BFF2E53A0580E5B8A">~FrontendAction</h3>
+      <p>public void ~FrontendAction()</p>
+      <h3 id="9683F248CC638EFD2212F045E11664597A19BCBC">getCompilerInstance</h3>
+      <p>public CompilerInstance &amp; getCompilerInstance()</p>
+      <p>Defined at line 119 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="3AA3A2442DCB20DF5527C6087111FCBC4E90B31F">setCompilerInstance</h3>
+      <p>public void setCompilerInstance(CompilerInstance * Value)</p>
+      <p>Defined at line 124 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <h3 id="0FEF88E459C521E800DA4747ACB3B85F44473F99">isCurrentFileAST</h3>
+      <p>public _Bool isCurrentFileAST()</p>
+      <p>Defined at line 130 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p>@}</p>
+          <p>@{</p>
+        </div>
+      </div>
+      <h3 id="CEAC2D6AEB72DC6953DC08B93C23C7B90FBBE5CD">getCurrentInput</h3>
+      <p>public const FrontendInputFile &amp; getCurrentInput()</p>
+      <p>Defined at line 135 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <h3 id="AC11DC71107CBCFE48950AA09ECDECC74110A339">getCurrentFile</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getCurrentFile()
+      </p>
+      <p>Defined at line 139 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <h3 id="D9FA541B15EE36CE9A578D10AE5EC3E74BC191D0">getCurrentFileOrBufferName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getCurrentFileOrBufferName()
+      </p>
+      <p>Defined at line 144 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <h3 id="73C790B26DD77C5FE1C3DDF54F30F314F3E073D2">getCurrentFileKind</h3>
+      <p>
+        public 
+        <a href="InputKind.html">InputKind</a>
+         getCurrentFileKind()
+      </p>
+      <p>Defined at line 151 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <h3 id="CCCDBAB8F96C3709E2B3A8D3F7834DCBD9DFC483">getCurrentASTUnit</h3>
+      <p>public ASTUnit &amp; getCurrentASTUnit()</p>
+      <p>Defined at line 156 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <h3 id="1BFE0CC05D66FAE3E6ED1A431F6423365C549FA9">getCurrentModule</h3>
+      <p>public Module * getCurrentModule()</p>
+      <h3 id="6AFD3D195277F273641F9C1EE724A40C7D54055E">takeCurrentASTUnit</h3>
+      <p>
+        public 
+        <a href="../std/unique_ptr.html">unique_ptr</a>
+         takeCurrentASTUnit()
+      </p>
+      <p>Defined at line 163 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <h3 id="BE0ACD8C6BD8417D0A9AB5D98EB5C982F5D8B0A2">setCurrentInput</h3>
+      <p>
+        public void setCurrentInput(const FrontendInputFile &amp; CurrentInput, 
+        <a href="../std/unique_ptr.html">unique_ptr</a>
+         AST)
+      </p>
+      <h3 id="EE0A1EA1AFB11555E7F1F970780719B842B0CE7F">isModelParsingAction</h3>
+      <p>public _Bool isModelParsingAction()</p>
+      <p>Defined at line 179 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Is this action invoked on a model file?</p>
+          <p> Model files are incomplete translation units that relies on type information from another translation unit. Check ParseModelFileAction for details.</p>
+        </div>
+      </div>
+      <h3 id="AEA34E73531DE8DBBA364CF8CFA66F129516E39B">usesPreprocessorOnly</h3>
+      <p>public _Bool usesPreprocessorOnly()</p>
+      <div>
+        <div>
+          <p> Does this action only use the preprocessor?</p>
+          <p> If so no AST context will be created and this action will be invalid with AST file inputs.</p>
+        </div>
+      </div>
+      <h3 id="8EA5BB98F6B7741063796C1B96BA34EBF3BFD936">getTranslationUnitKind</h3>
+      <p>
+        public 
+        <a href="TranslationUnitKind.html">TranslationUnitKind</a>
+         getTranslationUnitKind()
+      </p>
+      <p>Defined at line 188 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> For AST-based actions, the kind of translation unit we&apos;re handling.</p>
+        </div>
+      </div>
+      <h3 id="56D9DE04DE97BA926D2EC31E9EC243F9B5299D9B">hasPCHSupport</h3>
+      <p>public _Bool hasPCHSupport()</p>
+      <p>Defined at line 191 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Does this action support use with PCH?</p>
+        </div>
+      </div>
+      <h3 id="8DAD1C1E906EC24D1CB9FF3B5C9D4B2011076404">hasASTFileSupport</h3>
+      <p>public _Bool hasASTFileSupport()</p>
+      <p>Defined at line 194 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Does this action support use with AST files?</p>
+        </div>
+      </div>
+      <h3 id="EA748915DC1BC2044E1A423478653827AA1FBC4A">hasIRSupport</h3>
+      <p>public _Bool hasIRSupport()</p>
+      <p>Defined at line 197 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Does this action support use with IR files?</p>
+        </div>
+      </div>
+      <h3 id="CF170D6726C23239E487258A3EF6F2A05E18B0D7">hasCodeCompletionSupport</h3>
+      <p>public _Bool hasCodeCompletionSupport()</p>
+      <p>Defined at line 200 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Does this action support use with code completion?</p>
+        </div>
+      </div>
+      <h3 id="E9AD22D90193B82687AFF6299B440C14C7280980">PrepareToExecute</h3>
+      <p>public _Bool PrepareToExecute(CompilerInstance &amp; CI)</p>
+      <p>Defined at line 207 of file /usr/lib/llvm-16/include/clang/Frontend/FrontendAction.h</p>
+      <div>
+        <div>
+          <p> Prepare the action to execute on the given compiler instance.</p>
+        </div>
+      </div>
+      <h3 id="D824D357F9FDC01EA193C9DEE0AEF9645F8FC8BF">BeginSourceFile</h3>
+      <p>public _Bool BeginSourceFile(CompilerInstance &amp; CI, const FrontendInputFile &amp; Input)</p>
+      <div>
+        <div>
+          <p> Prepare the action for processing the input file </p>
+          <p> This is run after the options and frontend have been initialized, but prior to executing any per-file processing.</p>
+        </div>
+      </div>
+      <h3 id="739AF3C9ED4B327840062A82AD68D6FDAAC0D9AC">Execute</h3>
+      <p>
+        public 
+        <a href="../llvm/Error.html">Error</a>
+         Execute()
+      </p>
+      <div>
+        <div>
+          <p> Set the source manager&apos;s main input file, and run the action.</p>
+        </div>
+      </div>
+      <h3 id="A6102C30DC8CD2570006C784228A9E301698A898">EndSourceFile</h3>
+      <p>public void EndSourceFile()</p>
+      <div>
+        <div>
+          <p> Perform any per-file post processing, deallocate per-file objects, and run statistics and output file cleanup code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5AED3A8CE96F21AC904F5D0B14CAB26B69187678">PrepareToExecuteAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D51A7EABDC973550C013BB642F342454FC0F899F">CreateASTConsumer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B90E169F95751E69A34ADB4F6F130AC44385CA43">BeginInvocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6D9F7E7CEAF2A86EBC65AD1A13CEB04101CFE3B">BeginSourceFileAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A227D3E77B1735FA77F3749F3600C13A25416787">ExecuteAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#648F93B3CF6FC02ABA493A9AA0208B8ACC873809">EndSourceFileAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8E0D9E52DCD5599013BC3EEA2EF3DD0935B8E259">shouldEraseOutputFiles</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B02FA52A1C7C2C0750892587F475574C3304867">FrontendAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C60176C7D5368D73E25F32BFF2E53A0580E5B8A">~FrontendAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9683F248CC638EFD2212F045E11664597A19BCBC">getCompilerInstance</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3AA3A2442DCB20DF5527C6087111FCBC4E90B31F">setCompilerInstance</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0FEF88E459C521E800DA4747ACB3B85F44473F99">isCurrentFileAST</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CEAC2D6AEB72DC6953DC08B93C23C7B90FBBE5CD">getCurrentInput</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AC11DC71107CBCFE48950AA09ECDECC74110A339">getCurrentFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9FA541B15EE36CE9A578D10AE5EC3E74BC191D0">getCurrentFileOrBufferName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#73C790B26DD77C5FE1C3DDF54F30F314F3E073D2">getCurrentFileKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CCCDBAB8F96C3709E2B3A8D3F7834DCBD9DFC483">getCurrentASTUnit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1BFE0CC05D66FAE3E6ED1A431F6423365C549FA9">getCurrentModule</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AFD3D195277F273641F9C1EE724A40C7D54055E">takeCurrentASTUnit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE0ACD8C6BD8417D0A9AB5D98EB5C982F5D8B0A2">setCurrentInput</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE0A1EA1AFB11555E7F1F970780719B842B0CE7F">isModelParsingAction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AEA34E73531DE8DBBA364CF8CFA66F129516E39B">usesPreprocessorOnly</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8EA5BB98F6B7741063796C1B96BA34EBF3BFD936">getTranslationUnitKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#56D9DE04DE97BA926D2EC31E9EC243F9B5299D9B">hasPCHSupport</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8DAD1C1E906EC24D1CB9FF3B5C9D4B2011076404">hasASTFileSupport</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EA748915DC1BC2044E1A423478653827AA1FBC4A">hasIRSupport</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CF170D6726C23239E487258A3EF6F2A05E18B0D7">hasCodeCompletionSupport</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E9AD22D90193B82687AFF6299B440C14C7280980">PrepareToExecute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D824D357F9FDC01EA193C9DEE0AEF9645F8FC8BF">BeginSourceFile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#739AF3C9ED4B327840062A82AD68D6FDAAC0D9AC">Execute</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A6102C30DC8CD2570006C784228A9E301698A898">EndSourceFile</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

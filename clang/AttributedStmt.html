@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class AttributedStmt</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class AttributedStmt</h1>
+    <p>Defined at line 1882 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    <div>
+      <div>
+        <p> Represents an attribute applied to a statement.</p>
+        <p> Represents an attribute applied to a statement. For example:   [[omp::for(...)]] for (...) { ... }</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ValueStmt.html">ValueStmt</a>
+      , llvm::TrailingObjects&lt;AttributedStmt, const Attr *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="771EF56DBDA359DB4E133A1940B31576E86EF642">Create</h3>
+      <p>
+        public AttributedStmt * Create(const ASTContext &amp; C, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         Loc, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Attrs, Stmt * SubStmt)
+      </p>
+      <h3 id="A21C54797680646CFEF1A29ACD087FDF46066F0D">CreateEmpty</h3>
+      <p>public AttributedStmt * CreateEmpty(const ASTContext &amp; C, unsigned int NumAttrs)</p>
+      <div>
+        <div>
+          <p> Build an empty attributed statement.</p>
+        </div>
+      </div>
+      <h3 id="7151420C82CB46EDE2BBA57CEA0B86B7AB332B5D">getAttrLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAttrLoc()
+      </p>
+      <p>Defined at line 1917 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="5F4AD62101305570ADB4F9D315C9C43E87CC4995">getAttrs</h3>
+      <p>
+        public 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         getAttrs()
+      </p>
+      <p>Defined at line 1918 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="A9D6D367E947000067FBA886FB5C3D5B226CBA52">getSubStmt</h3>
+      <p>public Stmt * getSubStmt()</p>
+      <p>Defined at line 1922 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="17804392EFABB8D1538E9877943EB68B31219B3B">getSubStmt</h3>
+      <p>public const Stmt * getSubStmt()</p>
+      <p>Defined at line 1923 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="7FAB22B3AA1EAA6DB57466F8C8B02BA284F6E6BD">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1925 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="B3636E6264F3484ABBCD5D5535CD3FDB0936BFD8">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1926 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="015406F689735883CA865FC4BF4718DD1510C50D">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1928 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="3C9561B692E599207FB387389529B573B2315B10">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 1930 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="19676C6A0E8B2419257DED0D3513A9E83930F80A">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 1934 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#771EF56DBDA359DB4E133A1940B31576E86EF642">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A21C54797680646CFEF1A29ACD087FDF46066F0D">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7151420C82CB46EDE2BBA57CEA0B86B7AB332B5D">getAttrLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F4AD62101305570ADB4F9D315C9C43E87CC4995">getAttrs</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A9D6D367E947000067FBA886FB5C3D5B226CBA52">getSubStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17804392EFABB8D1538E9877943EB68B31219B3B">getSubStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FAB22B3AA1EAA6DB57466F8C8B02BA284F6E6BD">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3636E6264F3484ABBCD5D5535CD3FDB0936BFD8">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#015406F689735883CA865FC4BF4718DD1510C50D">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3C9561B692E599207FB387389529B573B2315B10">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#19676C6A0E8B2419257DED0D3513A9E83930F80A">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

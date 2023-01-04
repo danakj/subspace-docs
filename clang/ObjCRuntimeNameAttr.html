@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCRuntimeNameAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCRuntimeNameAttr</h1>
+    <p>Defined at line 8553 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="Attr.html">Attr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9C7ECB9D8FFEE7C1B424272AFE8FE8F93F22C700">CreateImplicit</h3>
+      <p>
+        public ObjCRuntimeNameAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         MetadataName, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="400090688515669F864C90E26B5BA92F45CF716A">Create</h3>
+      <p>
+        public ObjCRuntimeNameAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         MetadataName, const AttributeCommonInfo &amp; CommonInfo)
+      </p>
+      <h3 id="D81DD38ED079CABE11E488B9BAC27BA504C61FEE">CreateImplicit</h3>
+      <p>
+        public ObjCRuntimeNameAttr * CreateImplicit(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         MetadataName, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="3EF7F6750FA03AD345BD10440371BC06E3AEBE46">Create</h3>
+      <p>
+        public ObjCRuntimeNameAttr * Create(ASTContext &amp; Ctx, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         MetadataName, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="E568A1DAEE66A9CE04E1B705CFC7DD44D617FA2A">ObjCRuntimeNameAttr</h3>
+      <p>
+        public void ObjCRuntimeNameAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         MetadataName)
+      </p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="13825EF4F1CC03CB639F69DDEDF31557C2BD0534">clone</h3>
+      <p>public ObjCRuntimeNameAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="9D8ADBFDD7541BCBB4B88D65AF6200BA5C20C521">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="90CCCCB7E84230A85216198FF275B0D228EF2983">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="A198C7AB3A0A4B6EEAA860014E848FFC11E21CAA">getMetadataName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getMetadataName()
+      </p>
+      <p>Defined at line 8581 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="95743A63EBE7B0B172B5DC21F9C434793FDF7478">getMetadataNameLength</h3>
+      <p>public unsigned int getMetadataNameLength()</p>
+      <p>Defined at line 8584 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="045BEAAA05741CC2E856AF93403DF7BF89DB9AFA">setMetadataName</h3>
+      <p>
+        public void setMetadataName(ASTContext &amp; C, 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         S)
+      </p>
+      <p>Defined at line 8587 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="F19D08980FA1EAF61698443959C713AF2B7C067C">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 8596 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="8A767392ECFD80B9257290D257A1DDF59A63E8C2">enum Spelling</h3>
+      <ul>
+        <li>GNU_objc_runtime_name</li>
+        <li>CXX11_clang_objc_runtime_name</li>
+        <li>C2x_clang_objc_runtime_name</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 8558 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9C7ECB9D8FFEE7C1B424272AFE8FE8F93F22C700">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#400090688515669F864C90E26B5BA92F45CF716A">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D81DD38ED079CABE11E488B9BAC27BA504C61FEE">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EF7F6750FA03AD345BD10440371BC06E3AEBE46">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E568A1DAEE66A9CE04E1B705CFC7DD44D617FA2A">ObjCRuntimeNameAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#13825EF4F1CC03CB639F69DDEDF31557C2BD0534">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D8ADBFDD7541BCBB4B88D65AF6200BA5C20C521">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#90CCCCB7E84230A85216198FF275B0D228EF2983">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A198C7AB3A0A4B6EEAA860014E848FFC11E21CAA">getMetadataName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#95743A63EBE7B0B172B5DC21F9C434793FDF7478">getMetadataNameLength</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#045BEAAA05741CC2E856AF93403DF7BF89DB9AFA">setMetadataName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F19D08980FA1EAF61698443959C713AF2B7C067C">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8A767392ECFD80B9257290D257A1DDF59A63E8C2">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

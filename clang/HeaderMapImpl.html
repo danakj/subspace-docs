@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class HeaderMapImpl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class HeaderMapImpl</h1>
+    <p>Defined at line 31 of file /usr/lib/llvm-16/include/clang/Lex/HeaderMap.h</p>
+    <div>
+      <div>
+        <p> Implementation for  that doesn&apos;t depend on </p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="974EFA88D6838044844462EDC8A4849D1E5C896A">HeaderMapImpl</h3>
+      <p>
+        public void HeaderMapImpl(
+        <a href="../std/unique_ptr.html">unique_ptr</a>
+         File, _Bool NeedsBSwap)
+      </p>
+      <p>Defined at line 37 of file /usr/lib/llvm-16/include/clang/Lex/HeaderMap.h</p>
+      <h3 id="B595FE38EEE7B49BCFB246FD02CB36686DAE8A8A">checkHeader</h3>
+      <p>public _Bool checkHeader(const llvm::MemoryBuffer &amp; File, _Bool &amp; NeedsByteSwap)</p>
+      <div>
+        <div>
+          <p> Check for a valid header and extract the byte swap.</p>
+        </div>
+      </div>
+      <h3 id="F7EAEDB8E0AD7B532768BF8CF692265CA38474C9">forEachKey</h3>
+      <p>public void forEachKey(Func Callback)</p>
+      <p>Defined at line 44 of file /usr/lib/llvm-16/include/clang/Lex/HeaderMap.h</p>
+      <div>
+        <div>
+          <p> Make a call for every Key in the map.</p>
+        </div>
+      </div>
+      <h3 id="857A4474E99B0DB5FE5E6099A87A819E32B97361">lookupFilename</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         lookupFilename(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         Filename, SmallVectorImpl&lt;char&gt; &amp; DestPath)
+      </p>
+      <div>
+        <div>
+          <p> If the specified relative filename is located in this HeaderMap return the filename it is mapped to, otherwise return an empty StringRef.</p>
+        </div>
+      </div>
+      <h3 id="EE01A2F163B1A806FB932EAFCB7E8459E69B2B32">getFileName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getFileName()
+      </p>
+      <div>
+        <div>
+          <p> Return the filename of the headermap.</p>
+        </div>
+      </div>
+      <h3 id="F2476C7FB3D3A1B3F3201352B4D8C88196EE3A51">dump</h3>
+      <p>public void dump()</p>
+      <div>
+        <div>
+          <p> Print the contents of this headermap to stderr.</p>
+        </div>
+      </div>
+      <h3 id="FB64CA64473EC3369C7FCEDA8EE751B75DEAB0F6">reverseLookupFilename</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         reverseLookupFilename(
+        <a href="../llvm/StringRef.html">StringRef</a>
+         DestPath)
+      </p>
+      <div>
+        <div>
+          <p> Return key for specifed path.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#974EFA88D6838044844462EDC8A4849D1E5C896A">HeaderMapImpl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B595FE38EEE7B49BCFB246FD02CB36686DAE8A8A">checkHeader</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7EAEDB8E0AD7B532768BF8CF692265CA38474C9">forEachKey</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#857A4474E99B0DB5FE5E6099A87A819E32B97361">lookupFilename</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE01A2F163B1A806FB932EAFCB7E8459E69B2B32">getFileName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2476C7FB3D3A1B3F3201352B4D8C88196EE3A51">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FB64CA64473EC3369C7FCEDA8EE751B75DEAB0F6">reverseLookupFilename</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

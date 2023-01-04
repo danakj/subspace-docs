@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TypeTagForDatatypeAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TypeTagForDatatypeAttr</h1>
+    <p>Defined at line 12043 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E955A1D9760DE2C796B768994DB8A3AE8C92914C">CreateImplicit</h3>
+      <p>public TypeTagForDatatypeAttr * CreateImplicit(ASTContext &amp; Ctx, IdentifierInfo * ArgumentKind, TypeSourceInfo * MatchingCType, _Bool LayoutCompatible, _Bool MustBeNull, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="194082F59F5A773EA7D67BF64F181DB08A803ACE">Create</h3>
+      <p>public TypeTagForDatatypeAttr * Create(ASTContext &amp; Ctx, IdentifierInfo * ArgumentKind, TypeSourceInfo * MatchingCType, _Bool LayoutCompatible, _Bool MustBeNull, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="006F39D30F8AAE4765BB2D95F72DE13EFD64288E">CreateImplicit</h3>
+      <p>
+        public TypeTagForDatatypeAttr * CreateImplicit(ASTContext &amp; Ctx, IdentifierInfo * ArgumentKind, TypeSourceInfo * MatchingCType, _Bool LayoutCompatible, _Bool MustBeNull, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="955BE635D5EF1ED9940672D755125C62F524E500">Create</h3>
+      <p>
+        public TypeTagForDatatypeAttr * Create(ASTContext &amp; Ctx, IdentifierInfo * ArgumentKind, TypeSourceInfo * MatchingCType, _Bool LayoutCompatible, _Bool MustBeNull, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="378F6968ABCA40D09BC8C4B7DA5535DF823EBE2C">TypeTagForDatatypeAttr</h3>
+      <p>public void TypeTagForDatatypeAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, IdentifierInfo * ArgumentKind, TypeSourceInfo * MatchingCType, _Bool LayoutCompatible, _Bool MustBeNull)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="23F4EB431850258EBB121E684D6FF7FB895D86B1">clone</h3>
+      <p>public TypeTagForDatatypeAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="699B252D0CA99CD9E19C55F16D9A8AB93712765A">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="88C12D51625C5E0321FE18466BF912570A5A328E">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="330015F9C9290C606EC69D6544F8F19715BC5A5A">getArgumentKind</h3>
+      <p>public IdentifierInfo * getArgumentKind()</p>
+      <p>Defined at line 12079 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="8D7A76AC31860046DB7E138475D1F121BD71B239">getMatchingCType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getMatchingCType()
+      </p>
+      <p>Defined at line 12083 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="93CCED81272FCF8CD71CDB84AC329A24776B37C3">getMatchingCTypeLoc</h3>
+      <p>public TypeSourceInfo * getMatchingCTypeLoc()</p>
+      <p>Defined at line 12085 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="DA5D835F50611C35038F1A018CB7E1E14413A355">getLayoutCompatible</h3>
+      <p>public _Bool getLayoutCompatible()</p>
+      <p>Defined at line 12089 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="3272FACDBE6F4088396676841DB56BA44A8AFC0B">getMustBeNull</h3>
+      <p>public _Bool getMustBeNull()</p>
+      <p>Defined at line 12093 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="FD2BF35B8773F3726F5154A69F2C37D06DF679F5">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 12099 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="9DF69CF5E51A44928594F1724369E80BE2615268">enum Spelling</h3>
+      <ul>
+        <li>GNU_type_tag_for_datatype</li>
+        <li>CXX11_clang_type_tag_for_datatype</li>
+        <li>C2x_clang_type_tag_for_datatype</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 12053 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E955A1D9760DE2C796B768994DB8A3AE8C92914C">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#194082F59F5A773EA7D67BF64F181DB08A803ACE">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#006F39D30F8AAE4765BB2D95F72DE13EFD64288E">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#955BE635D5EF1ED9940672D755125C62F524E500">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#378F6968ABCA40D09BC8C4B7DA5535DF823EBE2C">TypeTagForDatatypeAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23F4EB431850258EBB121E684D6FF7FB895D86B1">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#699B252D0CA99CD9E19C55F16D9A8AB93712765A">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88C12D51625C5E0321FE18466BF912570A5A328E">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#330015F9C9290C606EC69D6544F8F19715BC5A5A">getArgumentKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8D7A76AC31860046DB7E138475D1F121BD71B239">getMatchingCType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#93CCED81272FCF8CD71CDB84AC329A24776B37C3">getMatchingCTypeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DA5D835F50611C35038F1A018CB7E1E14413A355">getLayoutCompatible</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3272FACDBE6F4088396676841DB56BA44A8AFC0B">getMustBeNull</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FD2BF35B8773F3726F5154A69F2C37D06DF679F5">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9DF69CF5E51A44928594F1724369E80BE2615268">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

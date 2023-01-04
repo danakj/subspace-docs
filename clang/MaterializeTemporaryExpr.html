@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class MaterializeTemporaryExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class MaterializeTemporaryExpr</h1>
+    <p>Defined at line 4512 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a prvalue temporary that is written into memory so that a reference can bind to it.</p>
+        <p> Prvalue expressions are materialized when they need to have an address in memory for a reference to bind to. This happens when binding a reference to the result of a conversion, e.g.,</p>
+        <p> Here, 1.0 is implicitly converted to an  That resulting  is then materialized via a  and the reference binds to the temporary.  are always glvalues (either an lvalue or an xvalue, depending on the kind of reference binding to it), maintaining the invariant that references always bind to glvalues.</p>
+        <p> Reference binding and copy-elision can both extend the lifetime of a temporary. When either happens, the expression will also track the declaration which is responsible for the lifetime extension.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="31200A7A509130ECA2356D451F383E0499565017">MaterializeTemporaryExpr</h3>
+      <p>
+        public void MaterializeTemporaryExpr(
+        <a href="QualType.html">QualType</a>
+         T, Expr * Temporary, _Bool BoundToLvalueReference, LifetimeExtendedTemporaryDecl * MTD)
+      </p>
+      <h3 id="E012B85A15110C18EB1246F4EC18E2AB7968942E">MaterializeTemporaryExpr</h3>
+      <p>
+        public void MaterializeTemporaryExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 4524 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="C1C79FE7E66BAD1CDEB34F7AC0245066BB424928">getSubExpr</h3>
+      <p>public Expr * getSubExpr()</p>
+      <p>Defined at line 4529 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the temporary-generating subexpression whose value will be materialized into a glvalue.</p>
+        </div>
+      </div>
+      <h3 id="79E6DF926536DC9CFDC8F363D8403AF6C4A1E232">getStorageDuration</h3>
+      <p>
+        public 
+        <a href="StorageDuration.html">StorageDuration</a>
+         getStorageDuration()
+      </p>
+      <p>Defined at line 4537 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Retrieve the storage duration for the materialized temporary.</p>
+        </div>
+      </div>
+      <h3 id="C595524FAE9FB5162FC5FC9DDBBCFF10E2C39E8D">getOrCreateValue</h3>
+      <p>public APValue * getOrCreateValue(_Bool MayCreate)</p>
+      <p>Defined at line 4545 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the storage for the constant value of a materialized temporary of static storage duration.</p>
+        </div>
+      </div>
+      <h3 id="C4D843A9C6BE655BB5D46962443BEC9EA188AA49">getLifetimeExtendedTemporaryDecl</h3>
+      <p>public LifetimeExtendedTemporaryDecl * getLifetimeExtendedTemporaryDecl()</p>
+      <p>Defined at line 4552 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="33DB162D96355A04B7DB28266C23C351788C0EFF">getLifetimeExtendedTemporaryDecl</h3>
+      <p>public const LifetimeExtendedTemporaryDecl * getLifetimeExtendedTemporaryDecl()</p>
+      <p>Defined at line 4555 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="DFA8011946CB6B85A222B018F778D2B89BDFC9D4">getExtendingDecl</h3>
+      <p>public ValueDecl * getExtendingDecl()</p>
+      <p>Defined at line 4562 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the declaration which triggered the lifetime-extension of this temporary, if any.</p>
+        </div>
+      </div>
+      <h3 id="2C2CA643EA1D9AB10A871A1C233C547E3BB26373">getExtendingDecl</h3>
+      <p>public const ValueDecl * getExtendingDecl()</p>
+      <p>Defined at line 4567 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="E8FE284BF4DB5C6600D5E379C2FD9AD4BC87CE23">setExtendingDecl</h3>
+      <p>public void setExtendingDecl(ValueDecl * ExtendedBy, unsigned int ManglingNumber)</p>
+      <h3 id="1CF8B6B4DA8077B743480E64A0B7FF150A087293">getManglingNumber</h3>
+      <p>public unsigned int getManglingNumber()</p>
+      <p>Defined at line 4573 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B97BA08A668FF46A453DE42D6ACE6541F272AB85">isBoundToLvalueReference</h3>
+      <p>public _Bool isBoundToLvalueReference()</p>
+      <p>Defined at line 4581 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Determine whether this materialized temporary is bound to an lvalue reference; otherwise, it&apos;s bound to an rvalue reference.</p>
+        </div>
+      </div>
+      <h3 id="32C10BC98F36B0B294DD10B47F168ED37078B46A">isUsableInConstantExpressions</h3>
+      <p>public _Bool isUsableInConstantExpressions(const ASTContext &amp; Context)</p>
+      <div>
+        <div>
+          <p> Determine whether this temporary object is usable in constant expressions, as specified in C++20 [expr.const]p4.</p>
+        </div>
+      </div>
+      <h3 id="AF6D42E04BF869E74330BD3E486FFD1F7D205C40">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 4587 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="5B20E399E8A80632C661173999A629C8EB372E44">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 4591 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="D5E449AAA8C526A3931DA04AFC289A6148770678">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 4595 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="B2A851EF5EA97685A673BC19F484C525177BD243">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4600 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="9AEFA756E877638E33F0CD7CEE6BB81C89454AC1">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4606 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#31200A7A509130ECA2356D451F383E0499565017">MaterializeTemporaryExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E012B85A15110C18EB1246F4EC18E2AB7968942E">MaterializeTemporaryExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C1C79FE7E66BAD1CDEB34F7AC0245066BB424928">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#79E6DF926536DC9CFDC8F363D8403AF6C4A1E232">getStorageDuration</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C595524FAE9FB5162FC5FC9DDBBCFF10E2C39E8D">getOrCreateValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C4D843A9C6BE655BB5D46962443BEC9EA188AA49">getLifetimeExtendedTemporaryDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33DB162D96355A04B7DB28266C23C351788C0EFF">getLifetimeExtendedTemporaryDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DFA8011946CB6B85A222B018F778D2B89BDFC9D4">getExtendingDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2C2CA643EA1D9AB10A871A1C233C547E3BB26373">getExtendingDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8FE284BF4DB5C6600D5E379C2FD9AD4BC87CE23">setExtendingDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1CF8B6B4DA8077B743480E64A0B7FF150A087293">getManglingNumber</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B97BA08A668FF46A453DE42D6ACE6541F272AB85">isBoundToLvalueReference</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32C10BC98F36B0B294DD10B47F168ED37078B46A">isUsableInConstantExpressions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AF6D42E04BF869E74330BD3E486FFD1F7D205C40">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B20E399E8A80632C661173999A629C8EB372E44">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5E449AAA8C526A3931DA04AFC289A6148770678">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2A851EF5EA97685A673BC19F484C525177BD243">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9AEFA756E877638E33F0CD7CEE6BB81C89454AC1">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

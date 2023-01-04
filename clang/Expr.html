@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Expr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Expr</h1>
+    <p>Defined at line 109 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    <div>
+      <div>
+        <p> Contains &apos;interop&apos; data for &apos;append_args&apos; and &apos;init&apos; clauses.</p>
+      </div>
+      <div>
+        <p> This represents one expression.  Note that Expr&apos;s are subclasses of Stmt. This allows an expression to be transparently used any place a Stmt is required.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ValueStmt.html">ValueStmt</a>
+    </p>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/Expr/Classification.html">Classification</a>
+      </li>
+      <li>
+        <a href="../clang/Expr/EvalStatus.html">EvalStatus</a>
+      </li>
+      <li>
+        <a href="../clang/Expr/EvalResult.html">EvalResult</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="CF87067874A4FA054DBE7C63CCE3F0AFD106E779">Expr</h3>
+      <p>public void Expr()</p>
+      <p>Defined at line 113 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="52504BB03037608D0B1CAC10099669EDAD95CD9C">Expr</h3>
+      <p>public void Expr(const Expr &amp; )</p>
+      <p>Defined at line 114 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="5E916CD724D6061F9D4224730E470C90D492C46D">Expr</h3>
+      <p>public void Expr(Expr &amp;&amp; )</p>
+      <p>Defined at line 115 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="51F5F508EB03422744E9C1AA7EC78EDB90CD5791">operator=</h3>
+      <p>public Expr &amp; operator=(const Expr &amp; )</p>
+      <p>Defined at line 116 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="AAC26CCD4BE564F0BB0DD25D62EC9DF200228035">operator=</h3>
+      <p>public Expr &amp; operator=(Expr &amp;&amp; )</p>
+      <p>Defined at line 117 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="77198F01AD1B9CF03CFB41CF36DAE7BB71AFF950">Expr</h3>
+      <p>
+        protected void Expr(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="QualType.html">QualType</a>
+         T, 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         VK, 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         OK)
+      </p>
+      <p>Defined at line 120 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="0D6E8A644BFAFD555DE0A93CBF369604E396D88E">Expr</h3>
+      <p>
+        protected void Expr(
+        <a href="../clang/Stmt/StmtClass.html">StmtClass</a>
+         SC, 
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         )
+      </p>
+      <p>Defined at line 130 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Construct an empty expression.</p>
+        </div>
+      </div>
+      <h3 id="D46E77C18DCCF71CF28D3C54AED851934993C1D6">setDependence</h3>
+      <p>
+        protected void setDependence(
+        <a href="../clang/ExprDependenceScope/ExprDependence.html">ExprDependence</a>
+         Deps)
+      </p>
+      <p>Defined at line 134 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Each concrete expr subclass is expected to compute its dependence and call this in the constructor.</p>
+        </div>
+      </div>
+      <h3 id="27B2572E3D1E4160D7230825EB9D9DCEAAE3F05A">getType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getType()
+      </p>
+      <p>Defined at line 141 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="77B9DBD506AA9C8D21033A170B7E2947D4631AC4">setType</h3>
+      <p>
+        public void setType(
+        <a href="QualType.html">QualType</a>
+         t)
+      </p>
+      <p>Defined at line 142 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2F72D3C7447D75CE1275F2CA336C7E38A93FD44C">getDependence</h3>
+      <p>
+        public 
+        <a href="../clang/ExprDependenceScope/ExprDependence.html">ExprDependence</a>
+         getDependence()
+      </p>
+      <p>Defined at line 155 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="284296D16A685C7425C6D9AC829DD6B57A04ACF1">isValueDependent</h3>
+      <p>public _Bool isValueDependent()</p>
+      <p>Defined at line 168 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Determines whether the value of this expression depends on   - a template parameter (C++ [temp.dep.constexpr])   - or an error, whose resolution is unknown</p>
+          <p> For example, the array bound of &quot;Chars&quot; in the following example is value-dependent.</p>
+        </div>
+      </div>
+      <h3 id="3ABD3EC0B169EFB2E04764D1D58436ACE07C0D81">isTypeDependent</h3>
+      <p>public _Bool isTypeDependent()</p>
+      <p>Defined at line 185 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Determines whether the type of this expression depends on   - a template paramter (C++ [temp.dep.expr], which means that its type     could change from one template instantiation to the next)   - or an error</p>
+          <p> For example, the expressions &quot;x&quot; and &quot;x + y&quot; are type-dependent in the following code, but &quot;y&quot; is not type-dependent:</p>
+        </div>
+      </div>
+      <h3 id="9B21078371C9981035D9C61B9207AE9A49C6C6ED">isInstantiationDependent</h3>
+      <p>public _Bool isInstantiationDependent()</p>
+      <p>Defined at line 214 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Whether this expression is instantiation-dependent, meaning that it depends in some way on    - a template parameter (even if neither its type nor (constant) value      can change due to the template instantiation)    - or an error</p>
+          <p> In the following example, the expression  + T())) is instantiation-dependent (since it involves a template parameter  but is neither type- nor value-dependent, since the type of the inner is known ( and therefore the size of the outer is known.</p>
+        </div>
+      </div>
+      <h3 id="8F6CA02E9385EEADB10A64D3946A8A4CBA8CC2BE">containsUnexpandedParameterPack</h3>
+      <p>public _Bool containsUnexpandedParameterPack()</p>
+      <p>Defined at line 232 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Whether this expression contains an unexpanded parameter pack (for C++11 variadic templates).</p>
+          <p> Given the following function template:</p>
+          <p> The expressions  and  both contain parameter packs.</p>
+        </div>
+      </div>
+      <h3 id="5144724AA2EBF20F2B0482B2DE060AA700B9BD07">containsErrors</h3>
+      <p>public _Bool containsErrors()</p>
+      <p>Defined at line 238 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Whether this expression contains subexpressions which had errors, e.g. a TypoExpr.</p>
+        </div>
+      </div>
+      <h3 id="4F6B3F21E379880C2192E258521B04CADC87B4C6">getExprLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getExprLoc()
+      </p>
+      <div>
+        <div>
+          <p> getExprLoc - Return the preferred location for the arrow when diagnosing a problem with a generic expression.</p>
+        </div>
+      </div>
+      <h3 id="C9FE24D31DD6EEB0EB1CF3444F30BA7104BA1326">isReadIfDiscardedInCPlusPlus11</h3>
+      <p>public _Bool isReadIfDiscardedInCPlusPlus11()</p>
+      <div>
+        <div>
+          <p> Determine whether an lvalue-to-rvalue conversion should implicitly be applied to this expression if it appears as a discarded-value expression in C++11 onwards. This applies to certain forms of volatile glvalues.</p>
+        </div>
+      </div>
+      <h3 id="D0220FFE479F93E113ED05B68D235ECAC8723A68">isUnusedResultAWarning</h3>
+      <p>public _Bool isUnusedResultAWarning(const Expr *&amp; WarnExpr, SourceLocation &amp; Loc, SourceRange &amp; R1, SourceRange &amp; R2, ASTContext &amp; Ctx)</p>
+      <div>
+        <div>
+          <p> isUnusedResultAWarning - Return true if this immediate expression should be warned about if the result is unused.  If so, fill in expr, location, and ranges with expr to warn on and source locations/ranges appropriate for a warning.</p>
+        </div>
+      </div>
+      <h3 id="64C612AA7FB5D04A24FCD2B7C1CF53271B5BFDDB">isLValue</h3>
+      <p>public _Bool isLValue()</p>
+      <p>Defined at line 270 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> isLValue - True if this expression is an &quot;l-value&quot; according to the rules of the current language.  C and C++ give somewhat different rules for this concept, but in general, the result of an l-value expression identifies a specific object whereas the result of an r-value expression is a value detached from any specific storage.</p>
+          <p> C++11 divides the concept of &quot;r-value&quot; into pure r-values (&quot;pr-values&quot;) and so-called expiring values (&quot;x-values&quot;), which identify specific objects that can be safely cannibalized for their resources.</p>
+        </div>
+      </div>
+      <h3 id="39F19C3C1A1A5B4977A098387C62820783B9FA17">isPRValue</h3>
+      <p>public _Bool isPRValue()</p>
+      <p>Defined at line 271 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2B05061984AB08AF93E2E933D320EDC6C698A33B">isXValue</h3>
+      <p>public _Bool isXValue()</p>
+      <p>Defined at line 272 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E937EF82FE50D4818607D5D55732F4C13F79A2B1">isGLValue</h3>
+      <p>public _Bool isGLValue()</p>
+      <p>Defined at line 273 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="53EA701789C94D2C8ED89F76D8BE670A49BC9BB5">ClassifyLValue</h3>
+      <p>
+        public 
+        <a href="../clang/Expr/LValueClassification.html">LValueClassification</a>
+         ClassifyLValue(ASTContext &amp; Ctx)
+      </p>
+      <div>
+        <div>
+          <p> Reasons why an expression might not be an l-value.</p>
+        </div>
+      </div>
+      <h3 id="F6F8EB3568038679EE04B359E3A60514E7062ABC">isModifiableLvalue</h3>
+      <p>
+        public 
+        <a href="../clang/Expr/isModifiableLvalueResult.html">isModifiableLvalueResult</a>
+         isModifiableLvalue(ASTContext &amp; Ctx, SourceLocation * Loc)
+      </p>
+      <div>
+        <div>
+          <p> isModifiableLvalue - C99 6.3.2.1: an lvalue that does not have array type, does not have an incomplete type, does not have a const-qualified type, and if it is a structure or union, does not have any member (including, recursively, any member or element of all contained aggregates or unions) with a const-qualified type.</p>
+        </div>
+      </div>
+      <h3 id="421CB8BC14F513EC9A008EF0068E3F3C78D5F446">Classify</h3>
+      <p>
+        public 
+        <a href="../clang/Expr/Classification.html">Classification</a>
+         Classify(ASTContext &amp; Ctx)
+      </p>
+      <p>Defined at line 398 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Classify - Classify this expression according to the C++11        expression taxonomy.</p>
+          <p> C++11 defines ([basic.lval]) a new taxonomy of expressions to replace the old lvalue vs rvalue. This function determines the type of expression this is. There are three expression types: - lvalues are classical lvalues as in C++03. - prvalues are equivalent to rvalues in C++03. - xvalues are expressions yielding unnamed rvalue references, e.g. a   function returning an rvalue reference. lvalues and xvalues are collectively referred to as glvalues, while prvalues and xvalues together form rvalues.</p>
+        </div>
+      </div>
+      <h3 id="3F636CB6C6F00F02EF8481D932B246D6572D515C">ClassifyModifiable</h3>
+      <p>
+        public 
+        <a href="../clang/Expr/Classification.html">Classification</a>
+         ClassifyModifiable(ASTContext &amp; Ctx, SourceLocation &amp; Loc)
+      </p>
+      <p>Defined at line 410 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> ClassifyModifiable - Classify this expression according to the        C++11 expression taxonomy, and see if it is valid on the left side        of an assignment.</p>
+          <p> This function extends classify in that it also tests whether the expression is modifiable (C99 6.3.2.1p1).</p>
+        </div>
+      </div>
+      <h3 id="AE79F05C92F597AF9B3CA048B4489E20CDA3C1B9">getFPFeaturesInEffect</h3>
+      <p>
+        public 
+        <a href="FPOptions.html">FPOptions</a>
+         getFPFeaturesInEffect(const LangOptions &amp; LO)
+      </p>
+      <div>
+        <div>
+          <p> Returns the set of floating point options that apply to this expression. Only meaningful for operations on floating point values.</p>
+        </div>
+      </div>
+      <h3 id="549BE41052CEAD1C533D152130F62CC3181C9344">getValueKindForType</h3>
+      <p>
+        public 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         getValueKindForType(
+        <a href="QualType.html">QualType</a>
+         T)
+      </p>
+      <p>Defined at line 420 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getValueKindForType - Given a formal return or parameter type, give its value kind.</p>
+        </div>
+      </div>
+      <h3 id="5F60272142B5D2661A3F863A8B476DD542D4CE3B">getValueKind</h3>
+      <p>
+        public 
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         getValueKind()
+      </p>
+      <p>Defined at line 430 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getValueKind - The value kind that this expression produces.</p>
+        </div>
+      </div>
+      <h3 id="33B213FB9EC0E057FDEC2EFD62E865327B8E5223">getObjectKind</h3>
+      <p>
+        public 
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         getObjectKind()
+      </p>
+      <p>Defined at line 437 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> getObjectKind - The object kind that this expression produces. Object kinds are meaningful only for expressions that yield an l-value or x-value.</p>
+        </div>
+      </div>
+      <h3 id="7C96D01628EBF32B6694A46520F04FC1DC0BF071">isOrdinaryOrBitFieldObject</h3>
+      <p>public _Bool isOrdinaryOrBitFieldObject()</p>
+      <p>Defined at line 441 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="8AD10955013754579076D905E26C34515AB6412C">setValueKind</h3>
+      <p>
+        public void setValueKind(
+        <a href="ExprValueKind.html">ExprValueKind</a>
+         Cat)
+      </p>
+      <p>Defined at line 447 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> setValueKind - Set the value kind produced by this expression.</p>
+        </div>
+      </div>
+      <h3 id="EB85617F663C6F63ABA73E8502F2EC16F308E455">setObjectKind</h3>
+      <p>
+        public void setObjectKind(
+        <a href="ExprObjectKind.html">ExprObjectKind</a>
+         Cat)
+      </p>
+      <p>Defined at line 450 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> setObjectKind - Set the object kind produced by this expression.</p>
+        </div>
+      </div>
+      <h3 id="80262D4E7A3EEA88D5100296F6D82773521E4AA9">refersToBitField</h3>
+      <p>public _Bool refersToBitField()</p>
+      <p>Defined at line 462 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Returns true if this expression is a gl-value that potentially refers to a bit-field.</p>
+          <p> In C++, whether a gl-value refers to a bitfield is essentially an aspect of the value-kind type system.</p>
+        </div>
+      </div>
+      <h3 id="AFE5EC7EF619579C309C16CDC8DAD0283B70A98A">getSourceBitField</h3>
+      <p>public FieldDecl * getSourceBitField()</p>
+      <div>
+        <div>
+          <p> If this expression refers to a bit-field, retrieve the declaration of that bit-field.</p>
+          <p> Note that this returns a non-null pointer in subtly different places than refersToBitField returns true.  In particular, this can return a non-null pointer even for r-values loaded from bit-fields, but it will return null for a conditional bit-field.</p>
+        </div>
+      </div>
+      <h3 id="88A865CC98D5443B30BD003DF9CB8A8D613771B1">getSourceBitField</h3>
+      <p>public const FieldDecl * getSourceBitField()</p>
+      <p>Defined at line 473 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="6AE45A9364E6AB22047E02250965ECA429CB3383">getReferencedDeclOfCallee</h3>
+      <p>public Decl * getReferencedDeclOfCallee()</p>
+      <h3 id="17089489056298B6159292A6D243E4C98E6DBB3F">getReferencedDeclOfCallee</h3>
+      <p>public const Decl * getReferencedDeclOfCallee()</p>
+      <p>Defined at line 478 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="2812857A816174A52C4B9B47D89011E4282B8BB7">getObjCProperty</h3>
+      <p>public const ObjCPropertyRefExpr * getObjCProperty()</p>
+      <div>
+        <div>
+          <p> If this expression is an l-value for an Objective C property, find the underlying property reference expression.</p>
+        </div>
+      </div>
+      <h3 id="43802779A99301EDC8C23F026DC4FEAE49B871BC">isObjCSelfExpr</h3>
+      <p>public _Bool isObjCSelfExpr()</p>
+      <div>
+        <div>
+          <p> Check if this expression is the ObjC &apos;self&apos; implicit parameter.</p>
+        </div>
+      </div>
+      <h3 id="7FBC6AC690EB9359301D9336FEFD9FB16959C7F6">refersToVectorElement</h3>
+      <p>public _Bool refersToVectorElement()</p>
+      <div>
+        <div>
+          <p> Returns whether this expression refers to a vector element.</p>
+        </div>
+      </div>
+      <h3 id="82C4B9EC677555070DA9DE999788211EC3ABCBB5">refersToMatrixElement</h3>
+      <p>public _Bool refersToMatrixElement()</p>
+      <p>Defined at line 493 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Returns whether this expression refers to a matrix element.</p>
+        </div>
+      </div>
+      <h3 id="DF8F4BE671B644136745C144CD7D7EF0B93BA099">refersToGlobalRegisterVar</h3>
+      <p>public _Bool refersToGlobalRegisterVar()</p>
+      <div>
+        <div>
+          <p> Returns whether this expression refers to a global register variable.</p>
+        </div>
+      </div>
+      <h3 id="067A6E62FACF5001776B49CAECE2B61F63404516">hasPlaceholderType</h3>
+      <p>public _Bool hasPlaceholderType()</p>
+      <p>Defined at line 502 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Returns whether this expression has a placeholder type.</p>
+        </div>
+      </div>
+      <h3 id="3351CE409C1A2D290E0CE2A745C19E40E3847E99">hasPlaceholderType</h3>
+      <p>
+        public _Bool hasPlaceholderType(
+        <a href="../clang/BuiltinType/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 507 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Returns whether this expression has a specific placeholder type.</p>
+        </div>
+      </div>
+      <h3 id="D9D85B24B7DF085091F700E35027F6F81A676BD1">isKnownToHaveBooleanValue</h3>
+      <p>public _Bool isKnownToHaveBooleanValue(_Bool Semantic)</p>
+      <div>
+        <div>
+          <p> isKnownToHaveBooleanValue - Return true if this is an integer expression that is known to return 0 or 1.  This happens for _Bool/bool expressions but also int expressions which are produced by things like comparisons in C.</p>
+        </div>
+      </div>
+      <h3 id="E96BCD016FD5984D2F06F35632B918EF94E62257">isFlexibleArrayMemberLike</h3>
+      <p>
+        public _Bool isFlexibleArrayMemberLike(ASTContext &amp; Context, 
+        <a href="../clang/LangOptions/StrictFlexArraysLevelKind.html">StrictFlexArraysLevelKind</a>
+         StrictFlexArraysLevel, _Bool IgnoreTemplateOrMacroSubstitution)
+      </p>
+      <div>
+        <div>
+          <p> Check whether this array fits the idiom of a flexible array member, depending on the value of -fstrict-flex-array. When IgnoreTemplateOrMacroSubstitution is set, it doesn&apos;t consider sizes resulting from the substitution of a macro or a template as special sizes.</p>
+        </div>
+      </div>
+      <h3 id="6A416F3C63CBF9688FCB70FE6AB82B342C2A2721">getIntegerConstantExpr</h3>
+      <p>public Optional&lt;llvm::APSInt&gt; getIntegerConstantExpr(const ASTContext &amp; Ctx, SourceLocation * Loc, _Bool isEvaluated)</p>
+      <div>
+        <div>
+          <p> isIntegerConstantExpr - Return the value if this expression is a valid integer constant expression.  If not a valid i-c-e, return std::nullopt and fill in Loc (if specified) with the location of the invalid expression.</p>
+          <p> Note: This does not perform the implicit conversions required by C++11 [expr.const]p5.</p>
+        </div>
+      </div>
+      <h3 id="2888F06D875801DF791433D89B4B64D20C4804ED">isIntegerConstantExpr</h3>
+      <p>public _Bool isIntegerConstantExpr(const ASTContext &amp; Ctx, SourceLocation * Loc)</p>
+      <h3 id="D3169028342FF69C61FB5566725FF52108196260">isCXX98IntegralConstantExpr</h3>
+      <p>public _Bool isCXX98IntegralConstantExpr(const ASTContext &amp; Ctx)</p>
+      <div>
+        <div>
+          <p> isCXX98IntegralConstantExpr - Return true if this expression is an integral constant expression in C++98. Can only be used in C++.</p>
+        </div>
+      </div>
+      <h3 id="10E5790A4DADA98BFB4CE7578240D9759D3AD3E8">isCXX11ConstantExpr</h3>
+      <p>public _Bool isCXX11ConstantExpr(const ASTContext &amp; Ctx, APValue * Result, SourceLocation * Loc)</p>
+      <div>
+        <div>
+          <p> isCXX11ConstantExpr - Return true if this expression is a constant expression in C++11. Can only be used in C++.</p>
+          <p> Note: This does not perform the implicit conversions required by C++11 [expr.const]p5.</p>
+        </div>
+      </div>
+      <h3 id="6861F67300DC1F41DB30DDDAE75E8D1CFDD6EF50">isPotentialConstantExpr</h3>
+      <p>public _Bool isPotentialConstantExpr(const FunctionDecl * FD, SmallVectorImpl&lt;PartialDiagnosticAt&gt; &amp; Diags)</p>
+      <div>
+        <div>
+          <p> isPotentialConstantExpr - Return true if this function&apos;s definition might be usable in a constant expression in C++11, if it were marked constexpr. Return false if the function can never produce a constant expression, along with diagnostics describing why not.</p>
+        </div>
+      </div>
+      <h3 id="AA5479321095AA5CCE1FB1C2072D7EE931A08ACB">isPotentialConstantExprUnevaluated</h3>
+      <p>public _Bool isPotentialConstantExprUnevaluated(Expr * E, const FunctionDecl * FD, SmallVectorImpl&lt;PartialDiagnosticAt&gt; &amp; Diags)</p>
+      <div>
+        <div>
+          <p> isPotentialConstantExprUnevaluted - Return true if this expression might be usable in a constant expression in C++11 in an unevaluated context, if it were in function FD marked constexpr. Return false if the function can never produce a constant expression, along with diagnostics describing why not.</p>
+        </div>
+      </div>
+      <h3 id="0E508628DD5879AB909347C22CB73D27716052FE">isConstantInitializer</h3>
+      <p>public _Bool isConstantInitializer(ASTContext &amp; Ctx, _Bool ForRef, const Expr ** Culprit)</p>
+      <div>
+        <div>
+          <p> isConstantInitializer - Returns true if this expression can be emitted to IR as a constant, and thus can be used as a constant initializer in C. If this expression is not constant and Culprit is non-null, it is used to store the address of first non constant expr.</p>
+        </div>
+      </div>
+      <h3 id="FAE81DD28AA7E4AC2016044D8D2D0223E7BBA765">getAsBuiltinConstantDeclRef</h3>
+      <p>public const ValueDecl * getAsBuiltinConstantDeclRef(const ASTContext &amp; Context)</p>
+      <div>
+        <div>
+          <p> If this expression is an unambiguous reference to a single declaration, in the style of __builtin_function_start, return that declaration.  Note that this may return a non-static member function or field in C++ if this expression is a member pointer constant.</p>
+        </div>
+      </div>
+      <h3 id="7DD8B8EA37935B347025AE9372251E8C9BC0EA4D">EvaluateAsRValue</h3>
+      <p>public _Bool EvaluateAsRValue(EvalResult &amp; Result, const ASTContext &amp; Ctx, _Bool InConstantContext)</p>
+      <div>
+        <div>
+          <p> EvaluateAsRValue - Return true if this is a constant which we can fold to an rvalue using any crazy technique (that has nothing to do with language standards) that we want to, even if the expression has side-effects. If this function returns true, it returns the folded constant in Result. If the expression is a glvalue, an lvalue-to-rvalue conversion will be applied.</p>
+        </div>
+      </div>
+      <h3 id="2D12DCB6FB710665C8FAB855D9F19E3912EF34BD">EvaluateAsBooleanCondition</h3>
+      <p>public _Bool EvaluateAsBooleanCondition(_Bool &amp; Result, const ASTContext &amp; Ctx, _Bool InConstantContext)</p>
+      <div>
+        <div>
+          <p> EvaluateAsBooleanCondition - Return true if this is a constant which we can fold and convert to a boolean condition using any crazy technique that we want to, even if the expression has side-effects.</p>
+        </div>
+      </div>
+      <h3 id="0879A7C56D8113525BE3678B85160B33A03A504F">EvaluateAsInt</h3>
+      <p>
+        public _Bool EvaluateAsInt(EvalResult &amp; Result, const ASTContext &amp; Ctx, 
+        <a href="../clang/Expr/SideEffectsKind.html">SideEffectsKind</a>
+         AllowSideEffects, _Bool InConstantContext)
+      </p>
+      <div>
+        <div>
+          <p> EvaluateAsInt - Return true if this is a constant which we can fold and convert to an integer, using any crazy technique that we want to.</p>
+        </div>
+      </div>
+      <h3 id="3793E187593381E9D745886E7F2F8F2F36D959AE">EvaluateAsFloat</h3>
+      <p>
+        public _Bool EvaluateAsFloat(llvm::APFloat &amp; Result, const ASTContext &amp; Ctx, 
+        <a href="../clang/Expr/SideEffectsKind.html">SideEffectsKind</a>
+         AllowSideEffects, _Bool InConstantContext)
+      </p>
+      <div>
+        <div>
+          <p> EvaluateAsFloat - Return true if this is a constant which we can fold and convert to a floating point value, using any crazy technique that we want to.</p>
+        </div>
+      </div>
+      <h3 id="D24B5D455FB5DD22EC7F843C187E0DF3C05403FF">EvaluateAsFixedPoint</h3>
+      <p>
+        public _Bool EvaluateAsFixedPoint(EvalResult &amp; Result, const ASTContext &amp; Ctx, 
+        <a href="../clang/Expr/SideEffectsKind.html">SideEffectsKind</a>
+         AllowSideEffects, _Bool InConstantContext)
+      </p>
+      <div>
+        <div>
+          <p> EvaluateAsFloat - Return true if this is a constant which we can fold and convert to a fixed point value.</p>
+        </div>
+      </div>
+      <h3 id="59A8896A9D970690EECF761F11D6E35BF9479577">isEvaluatable</h3>
+      <p>
+        public _Bool isEvaluatable(const ASTContext &amp; Ctx, 
+        <a href="../clang/Expr/SideEffectsKind.html">SideEffectsKind</a>
+         AllowSideEffects)
+      </p>
+      <div>
+        <div>
+          <p> isEvaluatable - Call EvaluateAsRValue to see if this expression can be constant folded without side-effects, but discard the result.</p>
+        </div>
+      </div>
+      <h3 id="DAB973882D5A6843CECD487E04687306F9222D2D">HasSideEffects</h3>
+      <p>public _Bool HasSideEffects(const ASTContext &amp; Ctx, _Bool IncludePossibleEffects)</p>
+      <div>
+        <div>
+          <p> HasSideEffects - This routine returns true for all those expressions which have any effect other than producing a value. Example is a function call, volatile variable read, or throwing an exception. If IncludePossibleEffects is false, this call treats certain expressions with potential side effects (such as function call-like expressions, instantiation-dependent expressions, or invocations from a macro) as not having side effects.</p>
+        </div>
+      </div>
+      <h3 id="B15D3562AAA29560871D2752130AFB385453AC76">hasNonTrivialCall</h3>
+      <p>public _Bool hasNonTrivialCall(const ASTContext &amp; Ctx)</p>
+      <div>
+        <div>
+          <p> Determine whether this expression involves a call to any function that is not trivial.</p>
+        </div>
+      </div>
+      <h3 id="96DDA67F8284A2AACB9480469490B3FD2813911F">EvaluateKnownConstInt</h3>
+      <p>
+        public 
+        <a href="../llvm/APSInt.html">APSInt</a>
+         EvaluateKnownConstInt(const ASTContext &amp; Ctx, SmallVectorImpl&lt;PartialDiagnosticAt&gt; * Diag)
+      </p>
+      <div>
+        <div>
+          <p> EvaluateKnownConstInt - Call EvaluateAsRValue and return the folded integer. This must be called on an expression that constant folds to an integer.</p>
+        </div>
+      </div>
+      <h3 id="B148A658CFC4DF6A37BD3CBBFDE49B945F2F2912">EvaluateKnownConstIntCheckOverflow</h3>
+      <p>
+        public 
+        <a href="../llvm/APSInt.html">APSInt</a>
+         EvaluateKnownConstIntCheckOverflow(const ASTContext &amp; Ctx, SmallVectorImpl&lt;PartialDiagnosticAt&gt; * Diag)
+      </p>
+      <h3 id="66D527D37C2D842682C94078BCD874EB272380C7">EvaluateForOverflow</h3>
+      <p>public void EvaluateForOverflow(const ASTContext &amp; Ctx)</p>
+      <h3 id="22578963685159C6F392FD534A21735B4FCEC141">EvaluateAsLValue</h3>
+      <p>public _Bool EvaluateAsLValue(EvalResult &amp; Result, const ASTContext &amp; Ctx, _Bool InConstantContext)</p>
+      <div>
+        <div>
+          <p> EvaluateAsLValue - Evaluate an expression to see if we can fold it to an lvalue with link time known address, with no side-effects.</p>
+        </div>
+      </div>
+      <h3 id="2CD29D5801C4A5CE05245CF78B5137D21409C528">EvaluateAsInitializer</h3>
+      <p>public _Bool EvaluateAsInitializer(APValue &amp; Result, const ASTContext &amp; Ctx, const VarDecl * VD, SmallVectorImpl&lt;PartialDiagnosticAt&gt; &amp; Notes, _Bool IsConstantInitializer)</p>
+      <div>
+        <div>
+          <p> EvaluateAsInitializer - Evaluate an expression as if it were the initializer of the given declaration. Returns true if the initializer can be folded to a constant, and produces any relevant notes. In C++11, notes will be produced if the expression is not a constant expression.</p>
+        </div>
+      </div>
+      <h3 id="E21AB91C59AF7328FB57ABB26044D11F31B21505">EvaluateWithSubstitution</h3>
+      <p>
+        public _Bool EvaluateWithSubstitution(APValue &amp; Value, ASTContext &amp; Ctx, const FunctionDecl * Callee, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Args, const Expr * This)
+      </p>
+      <div>
+        <div>
+          <p> EvaluateWithSubstitution - Evaluate an expression as if from the context of a call to the given function with the given arguments, inside an unevaluated context. Returns true if the expression could be folded to a constant.</p>
+        </div>
+      </div>
+      <h3 id="04A34DECFF792AC774E7773DBF2BD10D4875FFDD">EvaluateAsConstantExpr</h3>
+      <p>
+        public _Bool EvaluateAsConstantExpr(EvalResult &amp; Result, const ASTContext &amp; Ctx, 
+        <a href="../clang/Expr/ConstantExprKind.html">ConstantExprKind</a>
+         Kind)
+      </p>
+      <div>
+        <div>
+          <p> Evaluate an expression that is required to be a constant expression. Does not check the syntactic constraints for C and C++98 constant expressions.</p>
+        </div>
+      </div>
+      <h3 id="8CE5C282FB6C3E40D93058CE37D54EDFFA0F681F">tryEvaluateObjectSize</h3>
+      <p>public _Bool tryEvaluateObjectSize(uint64_t &amp; Result, ASTContext &amp; Ctx, unsigned int Type)</p>
+      <div>
+        <div>
+          <p> If the current Expr is a pointer, this will try to statically determine the number of bytes available where the pointer is pointing. Returns true if all of the above holds and we were able to figure out the size, false otherwise.</p>
+        </div>
+      </div>
+      <h3 id="7B60C1767A0216E430840EE29FC8A960AC984361">tryEvaluateStrLen</h3>
+      <p>public _Bool tryEvaluateStrLen(uint64_t &amp; Result, ASTContext &amp; Ctx)</p>
+      <div>
+        <div>
+          <p> If the current Expr is a pointer, this will try to statically determine the strlen of the string pointed to. Returns true if all of the above holds and we were able to figure out the strlen, false otherwise.</p>
+        </div>
+      </div>
+      <h3 id="2E52AA9A412394B9EE683007B71F2EAADD026A44">isNullPointerConstant</h3>
+      <p>
+        public 
+        <a href="../clang/Expr/NullPointerConstantKind.html">NullPointerConstantKind</a>
+         isNullPointerConstant(ASTContext &amp; Ctx, 
+        <a href="../clang/Expr/NullPointerConstantValueDependence.html">NullPointerConstantValueDependence</a>
+         NPC)
+      </p>
+      <div>
+        <div>
+          <p> isNullPointerConstant - C99 6.3.2.3p3 - Test if this reduces down to a Null pointer constant. The return value can further distinguish the kind of NULL pointer constant that was detected.</p>
+        </div>
+      </div>
+      <h3 id="AA24C7ECBB2CAA424223934FBE0B707DB317786A">isOBJCGCCandidate</h3>
+      <p>public _Bool isOBJCGCCandidate(ASTContext &amp; Ctx)</p>
+      <div>
+        <div>
+          <p> isOBJCGCCandidate - Return true if this expression may be used in a read/ write barrier.</p>
+        </div>
+      </div>
+      <h3 id="62A61A2D76ADCEB4BC807E894E67252C82DA41BC">isBoundMemberFunction</h3>
+      <p>public _Bool isBoundMemberFunction(ASTContext &amp; Ctx)</p>
+      <div>
+        <div>
+          <p> Returns true if this expression is a bound member function.</p>
+        </div>
+      </div>
+      <h3 id="BF40F4866C14DEB2041AF144F363EE8AF8121016">findBoundMemberType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         findBoundMemberType(const Expr * expr)
+      </p>
+      <div>
+        <div>
+          <p> Given an expression of bound-member type, find the type of the member.  Returns null if this is an *overloaded* bound member expression.</p>
+        </div>
+      </div>
+      <h3 id="F537502138D009162800DDF4905ACA753297C1A7">IgnoreUnlessSpelledInSource</h3>
+      <p>public Expr * IgnoreUnlessSpelledInSource()</p>
+      <div>
+        <div>
+          <p> Skip past any invisble AST nodes which might surround this statement, such as ExprWithCleanups or ImplicitCastExpr nodes, but also injected CXXMemberExpr and CXXConstructExpr which represent implicit conversions.</p>
+        </div>
+      </div>
+      <h3 id="4C47B22ED43DB77296C3A9EB198B037A19FB2542">IgnoreUnlessSpelledInSource</h3>
+      <p>public const Expr * IgnoreUnlessSpelledInSource()</p>
+      <p>Defined at line 827 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="3ACFB728D5B5E9A169C8B304D50DF9659D03FB9E">IgnoreImpCasts</h3>
+      <p>public Expr * IgnoreImpCasts()</p>
+      <div>
+        <div>
+          <p> Skip past any implicit casts which might surround this expression until reaching a fixed point. Skips: * ImplicitCastExpr * FullExpr</p>
+        </div>
+      </div>
+      <h3 id="E0110BDDF5E445D370CBC2FAFE2FCC8D590405B6">IgnoreImpCasts</h3>
+      <p>public const Expr * IgnoreImpCasts()</p>
+      <p>Defined at line 836 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="C88213AE376F8F7C84DF589566EB180B53660A4A">IgnoreCasts</h3>
+      <p>public Expr * IgnoreCasts()</p>
+      <div>
+        <div>
+          <p> Skip past any casts which might surround this expression until reaching a fixed point. Skips: * CastExpr * FullExpr * MaterializeTemporaryExpr * SubstNonTypeTemplateParmExpr</p>
+        </div>
+      </div>
+      <h3 id="F2FE3C9F6599F4B0BDD19956C440DA724BBBF4BC">IgnoreCasts</h3>
+      <p>public const Expr * IgnoreCasts()</p>
+      <p>Defined at line 847 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="9FD8AB03D690F67EAE73E51093AC235936E1FBB7">IgnoreImplicit</h3>
+      <p>public Expr * IgnoreImplicit()</p>
+      <div>
+        <div>
+          <p> Skip past any implicit AST nodes which might surround this expression until reaching a fixed point. Skips: * What IgnoreImpCasts() skips * MaterializeTemporaryExpr * CXXBindTemporaryExpr</p>
+        </div>
+      </div>
+      <h3 id="5E65AF89DA706D49151D9C11A36D8E88B0B1F0DC">IgnoreImplicit</h3>
+      <p>public const Expr * IgnoreImplicit()</p>
+      <p>Defined at line 857 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A34E8E7D2CC85487CAFC7E08F98E67819A5FF03C">IgnoreImplicitAsWritten</h3>
+      <p>public Expr * IgnoreImplicitAsWritten()</p>
+      <div>
+        <div>
+          <p> Skip past any implicit AST nodes which might surround this expression until reaching a fixed point. Same as IgnoreImplicit, except that it also skips over implicit calls to constructors and conversion functions.</p>
+          <p> FIXME: Should IgnoreImplicit do this?</p>
+        </div>
+      </div>
+      <h3 id="1B6F3C8641C28C1D964B46DEF96AFC8B581068C1">IgnoreImplicitAsWritten</h3>
+      <p>public const Expr * IgnoreImplicitAsWritten()</p>
+      <p>Defined at line 867 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="BB7050280C4649733AB438115F52BD648248C7B3">IgnoreParens</h3>
+      <p>public Expr * IgnoreParens()</p>
+      <div>
+        <div>
+          <p> Skip past any parentheses which might surround this expression until reaching a fixed point. Skips: * ParenExpr * UnaryOperator if `UO_Extension` * GenericSelectionExpr if `!isResultDependent()` * ChooseExpr if `!isConditionDependent()` * ConstantExpr</p>
+        </div>
+      </div>
+      <h3 id="9FF087BE1404D240406898DD3757F1F3DD3A8FA4">IgnoreParens</h3>
+      <p>public const Expr * IgnoreParens()</p>
+      <p>Defined at line 879 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="A7386F8773AD9DE6A7185155D57A826DCE6DDA50">IgnoreParenImpCasts</h3>
+      <p>public Expr * IgnoreParenImpCasts()</p>
+      <div>
+        <div>
+          <p> Skip past any parentheses and implicit casts which might surround this expression until reaching a fixed point. FIXME: IgnoreParenImpCasts really ought to be equivalent to IgnoreParens() + IgnoreImpCasts() until reaching a fixed point. However this is currently not the case. Instead IgnoreParenImpCasts() skips: * What IgnoreParens() skips * What IgnoreImpCasts() skips * MaterializeTemporaryExpr * SubstNonTypeTemplateParmExpr</p>
+        </div>
+      </div>
+      <h3 id="B2A3824A71A8763790270A17AC1633F48561814E">IgnoreParenImpCasts</h3>
+      <p>public const Expr * IgnoreParenImpCasts()</p>
+      <p>Defined at line 893 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="AAC27FF8AEF12AB03B91FF5C9CFDBC5BC4641874">IgnoreParenCasts</h3>
+      <p>public Expr * IgnoreParenCasts()</p>
+      <div>
+        <div>
+          <p> Skip past any parentheses and casts which might surround this expression until reaching a fixed point. Skips: * What IgnoreParens() skips * What IgnoreCasts() skips</p>
+        </div>
+      </div>
+      <h3 id="81F7DFD40A1F9D5DD280527B241E9A8461A8EF04">IgnoreParenCasts</h3>
+      <p>public const Expr * IgnoreParenCasts()</p>
+      <p>Defined at line 902 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="67B6768E89C72330B27EDB1AA06CC5622E12CF11">IgnoreConversionOperatorSingleStep</h3>
+      <p>public Expr * IgnoreConversionOperatorSingleStep()</p>
+      <div>
+        <div>
+          <p> Skip conversion operators. If this Expr is a call to a conversion operator, return the argument.</p>
+        </div>
+      </div>
+      <h3 id="84E6FE4D2C8DEC008DB1926624020A039F26DFAF">IgnoreConversionOperatorSingleStep</h3>
+      <p>public const Expr * IgnoreConversionOperatorSingleStep()</p>
+      <p>Defined at line 909 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="E8C11A357580E51510082621AD6CD161D8B74384">IgnoreParenLValueCasts</h3>
+      <p>public Expr * IgnoreParenLValueCasts()</p>
+      <div>
+        <div>
+          <p> Skip past any parentheses and lvalue casts which might surround this expression until reaching a fixed point. Skips: * What IgnoreParens() skips * What IgnoreCasts() skips, except that only lvalue-to-rvalue   casts are skipped FIXME: This is intended purely as a temporary workaround for code that hasn&apos;t yet been rewritten to do the right thing about those casts, and may disappear along with the last internal use.</p>
+        </div>
+      </div>
+      <h3 id="D172581E7C23646049ED7130D806F9AB6F47AF42">IgnoreParenLValueCasts</h3>
+      <p>public const Expr * IgnoreParenLValueCasts()</p>
+      <p>Defined at line 922 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="5FC7D4C68ACF6EABEBBAD666062D77FFFACFA2D7">IgnoreParenNoopCasts</h3>
+      <p>public Expr * IgnoreParenNoopCasts(const ASTContext &amp; Ctx)</p>
+      <div>
+        <div>
+          <p> Skip past any parenthese and casts which do not change the value (including ptr-&gt;int casts of the same size) until reaching a fixed point. Skips: * What IgnoreParens() skips * CastExpr which do not change the value * SubstNonTypeTemplateParmExpr</p>
+        </div>
+      </div>
+      <h3 id="D940A5915BF5A4DED18A186B2C553952C0F8B4A1">IgnoreParenNoopCasts</h3>
+      <p>public const Expr * IgnoreParenNoopCasts(const ASTContext &amp; Ctx)</p>
+      <p>Defined at line 933 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="303F0F19B7BBC4CDEB83FB60107205B907DE7F33">IgnoreParenBaseCasts</h3>
+      <p>public Expr * IgnoreParenBaseCasts()</p>
+      <div>
+        <div>
+          <p> Skip past any parentheses and derived-to-base casts until reaching a fixed point. Skips: * What IgnoreParens() skips * CastExpr which represent a derived-to-base cast (CK_DerivedToBase,   CK_UncheckedDerivedToBase and CK_NoOp)</p>
+        </div>
+      </div>
+      <h3 id="4FD010416234478FEB85A57E28BB2243019FE0AD">IgnoreParenBaseCasts</h3>
+      <p>public const Expr * IgnoreParenBaseCasts()</p>
+      <p>Defined at line 943 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="749EB9C0E25BB6BE2234B5E4D8C51AC2BA6E46AD">isDefaultArgument</h3>
+      <p>public _Bool isDefaultArgument()</p>
+      <div>
+        <div>
+          <p> Determine whether this expression is a default function argument.</p>
+          <p> Default arguments are implicitly generated in the abstract syntax tree by semantic analysis for function calls, object constructions, etc. in C++. Default arguments are represented by  nodes; this routine also looks through any implicit casts to determine whether the expression is a default argument.</p>
+        </div>
+      </div>
+      <h3 id="533282D796C7B9E97961F4AF7403110C10FABA9A">isTemporaryObject</h3>
+      <p>public _Bool isTemporaryObject(ASTContext &amp; Ctx, const CXXRecordDecl * TempTy)</p>
+      <div>
+        <div>
+          <p> Determine whether the result of this expression is a temporary object of the given class type.</p>
+        </div>
+      </div>
+      <h3 id="37112810CDF601B265E3A85C0D3E8436F1B91C72">isImplicitCXXThis</h3>
+      <p>public _Bool isImplicitCXXThis()</p>
+      <div>
+        <div>
+          <p> Whether this expression is an implicit reference to &apos;this&apos; in C++.</p>
+        </div>
+      </div>
+      <h3 id="BE0F15374DB89BCAD631ABB92AFDD8FC4920C26B">hasAnyTypeDependentArguments</h3>
+      <p>
+        public _Bool hasAnyTypeDependentArguments(
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         Exprs)
+      </p>
+      <h3 id="E0147C9689FCF9D373A7B8D8D3DE2C8323D09073">getBestDynamicClassType</h3>
+      <p>public const CXXRecordDecl * getBestDynamicClassType()</p>
+      <div>
+        <div>
+          <p> For an expression of class type or pointer to class type, return the most derived class decl the expression is known to refer to.</p>
+          <p> If this expression is a cast, this method looks through it to find the most derived decl that can be inferred from the expression. This is valid because derived-to-base conversions have undefined behavior if the object isn&apos;t dynamically of the derived type.</p>
+        </div>
+      </div>
+      <h3 id="20BF26EBC7EE165D74320A9DE3C164988B1C658C">getBestDynamicClassTypeExpr</h3>
+      <p>public const Expr * getBestDynamicClassTypeExpr()</p>
+      <div>
+        <div>
+          <p> Get the inner expression that determines the best dynamic class. If this is a prvalue, we guarantee that it is of the most-derived type for the object itself.</p>
+        </div>
+      </div>
+      <h3 id="6C4E6DD92FCB2AB57EC1D31E27423BBBD2047194">skipRValueSubobjectAdjustments</h3>
+      <p>public const Expr * skipRValueSubobjectAdjustments(SmallVectorImpl&lt;const Expr *&gt; &amp; CommaLHS, SmallVectorImpl&lt;SubobjectAdjustment&gt; &amp; Adjustments)</p>
+      <div>
+        <div>
+          <p> Walk outwards from an expression we want to bind a reference to and find the expression whose lifetime needs to be extended. Record the LHSs of comma expressions and adjustments needed along the path.</p>
+        </div>
+      </div>
+      <h3 id="E66D65431AB76135F8316BD82D17BAAA5ED867DE">skipRValueSubobjectAdjustments</h3>
+      <p>public const Expr * skipRValueSubobjectAdjustments()</p>
+      <p>Defined at line 985 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="279A4622E70E4423BD94091E28F057608DEF5CF9">isSameComparisonOperand</h3>
+      <p>public _Bool isSameComparisonOperand(const Expr * E1, const Expr * E2)</p>
+      <div>
+        <div>
+          <p> Checks that the two Expr&apos;s will refer to the same value as a comparison operand.  The caller must ensure that the values referenced by the Expr&apos;s are not modified between E1 and E2 or the result my be invalid.</p>
+        </div>
+      </div>
+      <h3 id="3BD5F4FEFA780FEFD8A47AAE2387A11A082C0D3A">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 996 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="8052991C5BD5C954459280839DADB9CCD7A9B480">enum LValueClassification</h3>
+      <ul>
+        <li>LV_Valid</li>
+        <li>LV_NotObjectType</li>
+        <li>LV_IncompleteVoidType</li>
+        <li>LV_DuplicateVectorComponents</li>
+        <li>LV_InvalidExpression</li>
+        <li>LV_InvalidMessageExpression</li>
+        <li>LV_MemberFunction</li>
+        <li>LV_SubObjCPropertySetting</li>
+        <li>LV_ClassTemporary</li>
+        <li>LV_ArrayTemporary</li>
+      </ul>
+      <p>Defined at line 275 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="857BE86D14C30CCDEE58238B6E1D235BC374D66A">enum isModifiableLvalueResult</h3>
+      <ul>
+        <li>MLV_Valid</li>
+        <li>MLV_NotObjectType</li>
+        <li>MLV_IncompleteVoidType</li>
+        <li>MLV_DuplicateVectorComponents</li>
+        <li>MLV_InvalidExpression</li>
+        <li>MLV_LValueCast</li>
+        <li>MLV_IncompleteType</li>
+        <li>MLV_ConstQualified</li>
+        <li>MLV_ConstQualifiedField</li>
+        <li>MLV_ConstAddrSpace</li>
+        <li>MLV_ArrayType</li>
+        <li>MLV_NoSetterProperty</li>
+        <li>MLV_MemberFunction</li>
+        <li>MLV_SubObjCPropertySetting</li>
+        <li>MLV_InvalidMessageExpression</li>
+        <li>MLV_ClassTemporary</li>
+        <li>MLV_ArrayTemporary</li>
+      </ul>
+      <p>Defined at line 290 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="434D29631222AD72C192A92AA9093971F4B8AD11">enum SideEffectsKind</h3>
+      <ul>
+        <li>SE_NoSideEffects</li>
+        <li>SE_AllowUndefinedBehavior</li>
+        <li>SE_AllowSideEffects</li>
+      </ul>
+      <p>Defined at line 647 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="3B97AFD9038EA68834C159CF884EFB219C51D9F9">enum class ConstantExprKind</h3>
+      <ul>
+        <li>Normal</li>
+        <li>NonClassTemplateArgument</li>
+        <li>ClassTemplateArgument</li>
+        <li>ImmediateInvocation</li>
+      </ul>
+      <p>Defined at line 728 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <h3 id="856F29966B23E67DEAED1EBD37B28F25CFC5CEE1">enum NullPointerConstantKind</h3>
+      <ul>
+        <li>NPCK_NotNull</li>
+        <li>NPCK_ZeroExpression</li>
+        <li>NPCK_ZeroLiteral</li>
+        <li>NPCK_CXX11_nullptr</li>
+        <li>NPCK_GNUNull</li>
+      </ul>
+      <p>Defined at line 767 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Enumeration used to describe the kind of Null pointer constant returned from </p>
+        </div>
+      </div>
+      <h3 id="5700BDA8812DD2173E1241A73E25175B8A8E9303">enum NullPointerConstantValueDependence</h3>
+      <ul>
+        <li>NPC_NeverValueDependent</li>
+        <li>NPC_ValueDependentIsNull</li>
+        <li>NPC_ValueDependentIsNotNull</li>
+      </ul>
+      <p>Defined at line 790 of file /usr/lib/llvm-16/include/clang/AST/Expr.h</p>
+      <div>
+        <div>
+          <p> Enumeration used to describe how  should cope with value-dependent expressions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#CF87067874A4FA054DBE7C63CCE3F0AFD106E779">Expr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52504BB03037608D0B1CAC10099669EDAD95CD9C">Expr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E916CD724D6061F9D4224730E470C90D492C46D">Expr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#51F5F508EB03422744E9C1AA7EC78EDB90CD5791">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AAC26CCD4BE564F0BB0DD25D62EC9DF200228035">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77198F01AD1B9CF03CFB41CF36DAE7BB71AFF950">Expr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0D6E8A644BFAFD555DE0A93CBF369604E396D88E">Expr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D46E77C18DCCF71CF28D3C54AED851934993C1D6">setDependence</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#27B2572E3D1E4160D7230825EB9D9DCEAAE3F05A">getType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#77B9DBD506AA9C8D21033A170B7E2947D4631AC4">setType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2F72D3C7447D75CE1275F2CA336C7E38A93FD44C">getDependence</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#284296D16A685C7425C6D9AC829DD6B57A04ACF1">isValueDependent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3ABD3EC0B169EFB2E04764D1D58436ACE07C0D81">isTypeDependent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9B21078371C9981035D9C61B9207AE9A49C6C6ED">isInstantiationDependent</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8F6CA02E9385EEADB10A64D3946A8A4CBA8CC2BE">containsUnexpandedParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5144724AA2EBF20F2B0482B2DE060AA700B9BD07">containsErrors</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F6B3F21E379880C2192E258521B04CADC87B4C6">getExprLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C9FE24D31DD6EEB0EB1CF3444F30BA7104BA1326">isReadIfDiscardedInCPlusPlus11</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0220FFE479F93E113ED05B68D235ECAC8723A68">isUnusedResultAWarning</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#64C612AA7FB5D04A24FCD2B7C1CF53271B5BFDDB">isLValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#39F19C3C1A1A5B4977A098387C62820783B9FA17">isPRValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2B05061984AB08AF93E2E933D320EDC6C698A33B">isXValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E937EF82FE50D4818607D5D55732F4C13F79A2B1">isGLValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#53EA701789C94D2C8ED89F76D8BE670A49BC9BB5">ClassifyLValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F6F8EB3568038679EE04B359E3A60514E7062ABC">isModifiableLvalue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#421CB8BC14F513EC9A008EF0068E3F3C78D5F446">Classify</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F636CB6C6F00F02EF8481D932B246D6572D515C">ClassifyModifiable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE79F05C92F597AF9B3CA048B4489E20CDA3C1B9">getFPFeaturesInEffect</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#549BE41052CEAD1C533D152130F62CC3181C9344">getValueKindForType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5F60272142B5D2661A3F863A8B476DD542D4CE3B">getValueKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#33B213FB9EC0E057FDEC2EFD62E865327B8E5223">getObjectKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C96D01628EBF32B6694A46520F04FC1DC0BF071">isOrdinaryOrBitFieldObject</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AD10955013754579076D905E26C34515AB6412C">setValueKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EB85617F663C6F63ABA73E8502F2EC16F308E455">setObjectKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#80262D4E7A3EEA88D5100296F6D82773521E4AA9">refersToBitField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AFE5EC7EF619579C309C16CDC8DAD0283B70A98A">getSourceBitField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#88A865CC98D5443B30BD003DF9CB8A8D613771B1">getSourceBitField</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6AE45A9364E6AB22047E02250965ECA429CB3383">getReferencedDeclOfCallee</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#17089489056298B6159292A6D243E4C98E6DBB3F">getReferencedDeclOfCallee</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2812857A816174A52C4B9B47D89011E4282B8BB7">getObjCProperty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#43802779A99301EDC8C23F026DC4FEAE49B871BC">isObjCSelfExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FBC6AC690EB9359301D9336FEFD9FB16959C7F6">refersToVectorElement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#82C4B9EC677555070DA9DE999788211EC3ABCBB5">refersToMatrixElement</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF8F4BE671B644136745C144CD7D7EF0B93BA099">refersToGlobalRegisterVar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#067A6E62FACF5001776B49CAECE2B61F63404516">hasPlaceholderType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3351CE409C1A2D290E0CE2A745C19E40E3847E99">hasPlaceholderType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9D85B24B7DF085091F700E35027F6F81A676BD1">isKnownToHaveBooleanValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E96BCD016FD5984D2F06F35632B918EF94E62257">isFlexibleArrayMemberLike</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6A416F3C63CBF9688FCB70FE6AB82B342C2A2721">getIntegerConstantExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2888F06D875801DF791433D89B4B64D20C4804ED">isIntegerConstantExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D3169028342FF69C61FB5566725FF52108196260">isCXX98IntegralConstantExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#10E5790A4DADA98BFB4CE7578240D9759D3AD3E8">isCXX11ConstantExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6861F67300DC1F41DB30DDDAE75E8D1CFDD6EF50">isPotentialConstantExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA5479321095AA5CCE1FB1C2072D7EE931A08ACB">isPotentialConstantExprUnevaluated</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E508628DD5879AB909347C22CB73D27716052FE">isConstantInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FAE81DD28AA7E4AC2016044D8D2D0223E7BBA765">getAsBuiltinConstantDeclRef</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7DD8B8EA37935B347025AE9372251E8C9BC0EA4D">EvaluateAsRValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2D12DCB6FB710665C8FAB855D9F19E3912EF34BD">EvaluateAsBooleanCondition</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0879A7C56D8113525BE3678B85160B33A03A504F">EvaluateAsInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3793E187593381E9D745886E7F2F8F2F36D959AE">EvaluateAsFloat</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D24B5D455FB5DD22EC7F843C187E0DF3C05403FF">EvaluateAsFixedPoint</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#59A8896A9D970690EECF761F11D6E35BF9479577">isEvaluatable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DAB973882D5A6843CECD487E04687306F9222D2D">HasSideEffects</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B15D3562AAA29560871D2752130AFB385453AC76">hasNonTrivialCall</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96DDA67F8284A2AACB9480469490B3FD2813911F">EvaluateKnownConstInt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B148A658CFC4DF6A37BD3CBBFDE49B945F2F2912">EvaluateKnownConstIntCheckOverflow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#66D527D37C2D842682C94078BCD874EB272380C7">EvaluateForOverflow</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#22578963685159C6F392FD534A21735B4FCEC141">EvaluateAsLValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2CD29D5801C4A5CE05245CF78B5137D21409C528">EvaluateAsInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E21AB91C59AF7328FB57ABB26044D11F31B21505">EvaluateWithSubstitution</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#04A34DECFF792AC774E7773DBF2BD10D4875FFDD">EvaluateAsConstantExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CE5C282FB6C3E40D93058CE37D54EDFFA0F681F">tryEvaluateObjectSize</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B60C1767A0216E430840EE29FC8A960AC984361">tryEvaluateStrLen</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E52AA9A412394B9EE683007B71F2EAADD026A44">isNullPointerConstant</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AA24C7ECBB2CAA424223934FBE0B707DB317786A">isOBJCGCCandidate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#62A61A2D76ADCEB4BC807E894E67252C82DA41BC">isBoundMemberFunction</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BF40F4866C14DEB2041AF144F363EE8AF8121016">findBoundMemberType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F537502138D009162800DDF4905ACA753297C1A7">IgnoreUnlessSpelledInSource</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4C47B22ED43DB77296C3A9EB198B037A19FB2542">IgnoreUnlessSpelledInSource</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3ACFB728D5B5E9A169C8B304D50DF9659D03FB9E">IgnoreImpCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0110BDDF5E445D370CBC2FAFE2FCC8D590405B6">IgnoreImpCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C88213AE376F8F7C84DF589566EB180B53660A4A">IgnoreCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2FE3C9F6599F4B0BDD19956C440DA724BBBF4BC">IgnoreCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FD8AB03D690F67EAE73E51093AC235936E1FBB7">IgnoreImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5E65AF89DA706D49151D9C11A36D8E88B0B1F0DC">IgnoreImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A34E8E7D2CC85487CAFC7E08F98E67819A5FF03C">IgnoreImplicitAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1B6F3C8641C28C1D964B46DEF96AFC8B581068C1">IgnoreImplicitAsWritten</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BB7050280C4649733AB438115F52BD648248C7B3">IgnoreParens</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FF087BE1404D240406898DD3757F1F3DD3A8FA4">IgnoreParens</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A7386F8773AD9DE6A7185155D57A826DCE6DDA50">IgnoreParenImpCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B2A3824A71A8763790270A17AC1633F48561814E">IgnoreParenImpCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AAC27FF8AEF12AB03B91FF5C9CFDBC5BC4641874">IgnoreParenCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#81F7DFD40A1F9D5DD280527B241E9A8461A8EF04">IgnoreParenCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#67B6768E89C72330B27EDB1AA06CC5622E12CF11">IgnoreConversionOperatorSingleStep</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#84E6FE4D2C8DEC008DB1926624020A039F26DFAF">IgnoreConversionOperatorSingleStep</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E8C11A357580E51510082621AD6CD161D8B74384">IgnoreParenLValueCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D172581E7C23646049ED7130D806F9AB6F47AF42">IgnoreParenLValueCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FC7D4C68ACF6EABEBBAD666062D77FFFACFA2D7">IgnoreParenNoopCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D940A5915BF5A4DED18A186B2C553952C0F8B4A1">IgnoreParenNoopCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#303F0F19B7BBC4CDEB83FB60107205B907DE7F33">IgnoreParenBaseCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4FD010416234478FEB85A57E28BB2243019FE0AD">IgnoreParenBaseCasts</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#749EB9C0E25BB6BE2234B5E4D8C51AC2BA6E46AD">isDefaultArgument</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#533282D796C7B9E97961F4AF7403110C10FABA9A">isTemporaryObject</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#37112810CDF601B265E3A85C0D3E8436F1B91C72">isImplicitCXXThis</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE0F15374DB89BCAD631ABB92AFDD8FC4920C26B">hasAnyTypeDependentArguments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0147C9689FCF9D373A7B8D8D3DE2C8323D09073">getBestDynamicClassType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#20BF26EBC7EE165D74320A9DE3C164988B1C658C">getBestDynamicClassTypeExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6C4E6DD92FCB2AB57EC1D31E27423BBBD2047194">skipRValueSubobjectAdjustments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E66D65431AB76135F8316BD82D17BAAA5ED867DE">skipRValueSubobjectAdjustments</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#279A4622E70E4423BD94091E28F057608DEF5CF9">isSameComparisonOperand</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3BD5F4FEFA780FEFD8A47AAE2387A11A082C0D3A">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8052991C5BD5C954459280839DADB9CCD7A9B480">LValueClassification</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#857BE86D14C30CCDEE58238B6E1D235BC374D66A">isModifiableLvalueResult</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#434D29631222AD72C192A92AA9093971F4B8AD11">SideEffectsKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3B97AFD9038EA68834C159CF884EFB219C51D9F9">ConstantExprKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#856F29966B23E67DEAED1EBD37B28F25CFC5CEE1">NullPointerConstantKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5700BDA8812DD2173E1241A73E25175B8A8E9303">NullPointerConstantValueDependence</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

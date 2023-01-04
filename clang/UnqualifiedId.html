@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UnqualifiedId</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UnqualifiedId</h1>
+    <p>Defined at line 973 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+    <div>
+      <div>
+        <p> Represents a C++ unqualified-id that has been parsed.</p>
+      </div>
+    </div>
+    <h2 id="Members">Members</h2>
+    <ul>
+      <li>
+        public 
+        <a href="../clang/UnqualifiedId/.html"></a>
+         
+      </li>
+      <li>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         StartLocation
+      </li>
+      <li>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLocation
+      </li>
+    </ul>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../clang/UnqualifiedId/OFI.html">OFI</a>
+      </li>
+      <li>
+        <a href="../clang/UnqualifiedId/.html"></a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F97ADD79CFF1DE4B2C67EB4E072E2035337BD731">UnqualifiedId</h3>
+      <p>public void UnqualifiedId()</p>
+      <p>Defined at line 1036 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="B01B7F7459FD5FA2DC1B4BADF1E91ED7694A8270">clear</h3>
+      <p>public void clear()</p>
+      <p>Defined at line 1041 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Clear out this unqualified-id, setting it to default (invalid) state.</p>
+        </div>
+      </div>
+      <h3 id="01DA5FB54E261AE06A6FBC21B05A7EE82B4106DA">isValid</h3>
+      <p>public _Bool isValid()</p>
+      <p>Defined at line 1049 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Determine whether this unqualified-id refers to a valid name.</p>
+        </div>
+      </div>
+      <h3 id="C7141DEFDC331B6D18599EFB411FDD91132FBF5C">isInvalid</h3>
+      <p>public _Bool isInvalid()</p>
+      <p>Defined at line 1052 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Determine whether this unqualified-id refers to an invalid name.</p>
+        </div>
+      </div>
+      <h3 id="D0A8E59E92FEF3CBF0AB156DBE2F1F5FD9CF4B0B">getKind</h3>
+      <p>
+        public 
+        <a href="UnqualifiedIdKind.html">UnqualifiedIdKind</a>
+         getKind()
+      </p>
+      <p>Defined at line 1055 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Determine what kind of name we have.</p>
+        </div>
+      </div>
+      <h3 id="8B6261B36D4265AD260CC051F2350D87233AEDBE">setIdentifier</h3>
+      <p>
+        public void setIdentifier(const IdentifierInfo * Id, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc)
+      </p>
+      <p>Defined at line 1061 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Specify that this unqualified-id was parsed as an identifier.</p>
+        </div>
+      </div>
+      <h3 id="6BB5F485B4AFEA5B284DB708D50FAA0818AF291D">setOperatorFunctionId</h3>
+      <p>
+        public void setOperatorFunctionId(
+        <a href="SourceLocation.html">SourceLocation</a>
+         OperatorLoc, 
+        <a href="OverloadedOperatorKind.html">OverloadedOperatorKind</a>
+         Op, SourceLocation[3] SymbolLocations)
+      </p>
+      <div>
+        <div>
+          <p> Specify that this unqualified-id was parsed as an operator-function-id.</p>
+        </div>
+      </div>
+      <h3 id="8216AE04B9069F020636CDEC8DFF7E189B82A9C5">setConversionFunctionId</h3>
+      <p>
+        public void setConversionFunctionId(
+        <a href="SourceLocation.html">SourceLocation</a>
+         OperatorLoc, 
+        <a href="OpaquePtr.html">OpaquePtr</a>
+         Ty, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 1088 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Specify that this unqualified-id was parsed as a conversion-function-id.</p>
+        </div>
+      </div>
+      <h3 id="CE7C1D881480BF26F1C5BA5E8C4BD2B80E04D6E8">setLiteralOperatorId</h3>
+      <p>
+        public void setLiteralOperatorId(const IdentifierInfo * Id, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         OpLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         IdLoc)
+      </p>
+      <p>Defined at line 1105 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Specific that this unqualified-id was parsed as a literal-operator-id.</p>
+        </div>
+      </div>
+      <h3 id="2392A64DAA2B318B13AFEA310EA7A927266FF2A8">setConstructorName</h3>
+      <p>
+        public void setConstructorName(
+        <a href="OpaquePtr.html">OpaquePtr</a>
+         ClassType, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         ClassNameLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 1120 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Specify that this unqualified-id was parsed as a constructor name.</p>
+        </div>
+      </div>
+      <h3 id="537AAB85073231210AF02C080796F97223FBD9BD">setConstructorTemplateId</h3>
+      <p>public void setConstructorTemplateId(TemplateIdAnnotation * TemplateId)</p>
+      <div>
+        <div>
+          <p> Specify that this unqualified-id was parsed as a template-id that names a constructor.</p>
+        </div>
+      </div>
+      <h3 id="693DBF6C54082BF63E3A8CC5F7A2DB169EB59779">setDestructorName</h3>
+      <p>
+        public void setDestructorName(
+        <a href="SourceLocation.html">SourceLocation</a>
+         TildeLoc, 
+        <a href="OpaquePtr.html">OpaquePtr</a>
+         ClassType, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         EndLoc)
+      </p>
+      <p>Defined at line 1143 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Specify that this unqualified-id was parsed as a destructor name.</p>
+        </div>
+      </div>
+      <h3 id="CFFE954ABA9DC65264A777028669BD69A5E688F3">setTemplateId</h3>
+      <p>public void setTemplateId(TemplateIdAnnotation * TemplateId)</p>
+      <div>
+        <div>
+          <p> Specify that this unqualified-id was parsed as a template-id.</p>
+        </div>
+      </div>
+      <h3 id="09EB80E5997667850D80D689506678B16B9B6C80">setDeductionGuideName</h3>
+      <p>
+        public void setDeductionGuideName(
+        <a href="OpaquePtr.html">OpaquePtr</a>
+         Template, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         TemplateLoc)
+      </p>
+      <p>Defined at line 1164 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Specify that this unqualified-id was parsed as a template-name for a deduction-guide.</p>
+        </div>
+      </div>
+      <h3 id="1603F14C83DB40B0318D29AEC0FA97B76CDB120C">setImplicitSelfParam</h3>
+      <p>public void setImplicitSelfParam(const IdentifierInfo * Id)</p>
+      <p>Defined at line 1175 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Specify that this unqualified-id is an implicit &apos;self&apos; parameter.</p>
+        </div>
+      </div>
+      <h3 id="063AD8DA1C534F7EEF0911A56925AD11683C50C7">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 1182 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <div>
+        <div>
+          <p> Return the source range that covers this unqualified-id.</p>
+        </div>
+      </div>
+      <h3 id="EE3F0A2F2D983464861C13BD6865E5F140B86399">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 1185 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+      <h3 id="F445FBEFE931E2988AB0C15D9038B1E9CB4A19BA">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 1186 of file /usr/lib/llvm-16/include/clang/Sema/DeclSpec.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Members">Members</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F97ADD79CFF1DE4B2C67EB4E072E2035337BD731">UnqualifiedId</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B01B7F7459FD5FA2DC1B4BADF1E91ED7694A8270">clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01DA5FB54E261AE06A6FBC21B05A7EE82B4106DA">isValid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7141DEFDC331B6D18599EFB411FDD91132FBF5C">isInvalid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D0A8E59E92FEF3CBF0AB156DBE2F1F5FD9CF4B0B">getKind</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8B6261B36D4265AD260CC051F2350D87233AEDBE">setIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6BB5F485B4AFEA5B284DB708D50FAA0818AF291D">setOperatorFunctionId</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8216AE04B9069F020636CDEC8DFF7E189B82A9C5">setConversionFunctionId</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE7C1D881480BF26F1C5BA5E8C4BD2B80E04D6E8">setLiteralOperatorId</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2392A64DAA2B318B13AFEA310EA7A927266FF2A8">setConstructorName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#537AAB85073231210AF02C080796F97223FBD9BD">setConstructorTemplateId</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#693DBF6C54082BF63E3A8CC5F7A2DB169EB59779">setDestructorName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CFFE954ABA9DC65264A777028669BD69A5E688F3">setTemplateId</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#09EB80E5997667850D80D689506678B16B9B6C80">setDeductionGuideName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1603F14C83DB40B0318D29AEC0FA97B76CDB120C">setImplicitSelfParam</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#063AD8DA1C534F7EEF0911A56925AD11683C50C7">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EE3F0A2F2D983464861C13BD6865E5F140B86399">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F445FBEFE931E2988AB0C15D9038B1E9CB4A19BA">getEndLoc</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

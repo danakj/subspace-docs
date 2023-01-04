@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class WhileStmt</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class WhileStmt</h1>
+    <p>Defined at line 2377 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    <div>
+      <div>
+        <p> WhileStmt - This represents a &apos;while&apos; stmt.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Stmt.html">Stmt</a>
+      , llvm::TrailingObjects&lt;WhileStmt, Stmt *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="01E00B153E678598A8634D0A73657930FF9B4515">Create</h3>
+      <p>
+        public WhileStmt * Create(const ASTContext &amp; Ctx, VarDecl * Var, Expr * Cond, Stmt * Body, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         WL, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         LParenLoc, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         RParenLoc)
+      </p>
+      <div>
+        <div>
+          <p> Create a while statement.</p>
+        </div>
+      </div>
+      <h3 id="231C15CB34D7288308DF98FA23BD14C246F3B4FC">CreateEmpty</h3>
+      <p>public WhileStmt * CreateEmpty(const ASTContext &amp; Ctx, _Bool HasVar)</p>
+      <div>
+        <div>
+          <p> Create an empty while statement optionally with storage for a condition variable.</p>
+        </div>
+      </div>
+      <h3 id="5BBB022286CADF52E258E3B0340310DEFB14DDDA">hasVarStorage</h3>
+      <p>public _Bool hasVarStorage()</p>
+      <p>Defined at line 2428 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> True if this WhileStmt has storage for a condition variable.</p>
+        </div>
+      </div>
+      <h3 id="6E35DE3BEDE225E6E71527CB7EBAB12575777D43">getCond</h3>
+      <p>public Expr * getCond()</p>
+      <p>Defined at line 2430 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="A0C09145AA301ACACFD22AFF60A5CFC0838FE289">getCond</h3>
+      <p>public const Expr * getCond()</p>
+      <p>Defined at line 2434 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="384D4F455D8132EBCF2D80BCA6889F4E46C6A2E9">setCond</h3>
+      <p>public void setCond(Expr * Cond)</p>
+      <p>Defined at line 2438 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="B7AA15DD944DB54AE0B27CB982372F83D552982E">getBody</h3>
+      <p>public Stmt * getBody()</p>
+      <p>Defined at line 2442 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="2CFD9A420EA94F3072D42B9C5B950211CDDA105C">getBody</h3>
+      <p>public const Stmt * getBody()</p>
+      <p>Defined at line 2443 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="AE9F9AB46110B897C19FF4E5220C1BB29FB30F0B">setBody</h3>
+      <p>public void setBody(Stmt * Body)</p>
+      <p>Defined at line 2447 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="CFD42A583374D7137B8E61798C5BDB64699444C7">getConditionVariable</h3>
+      <p>public VarDecl * getConditionVariable()</p>
+      <div>
+        <div>
+          <p> Retrieve the variable declared in this &quot;while&quot; statement, if any.</p>
+          <p> In the following example, &quot;x&quot; is the condition variable.</p>
+        </div>
+      </div>
+      <h3 id="4297C9A0C0DC2C5EDE281064D9D9CCBE355C1073">getConditionVariable</h3>
+      <p>public const VarDecl * getConditionVariable()</p>
+      <p>Defined at line 2460 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="F70238ABB1DCF0A8115B8AC96DCAA98D11703F0B">setConditionVariable</h3>
+      <p>public void setConditionVariable(const ASTContext &amp; Ctx, VarDecl * V)</p>
+      <div>
+        <div>
+          <p> Set the condition variable of this while statement. The while statement must have storage for it.</p>
+        </div>
+      </div>
+      <h3 id="1937233311011DD51557BA46AEC406B6C96A471C">getConditionVariableDeclStmt</h3>
+      <p>public DeclStmt * getConditionVariableDeclStmt()</p>
+      <p>Defined at line 2470 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> If this WhileStmt has a condition variable, return the faux DeclStmt associated with the creation of that condition variable.</p>
+        </div>
+      </div>
+      <h3 id="5738904F417B9BDBBFF99ADC66312EBE3DBF6C7F">getConditionVariableDeclStmt</h3>
+      <p>public const DeclStmt * getConditionVariableDeclStmt()</p>
+      <p>Defined at line 2476 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="01576AA0EA033903479F565CD3E6F20958BC9F8F">getWhileLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getWhileLoc()
+      </p>
+      <p>Defined at line 2482 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="7FF2031716EB4E7E457F68F5D7C8BD6FA02D549F">setWhileLoc</h3>
+      <p>
+        public void setWhileLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2483 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="B46AA687BF3545FCAB9A5D815F3830366E794FC3">getLParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getLParenLoc()
+      </p>
+      <p>Defined at line 2485 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="80EE60D2D3D2E2E05733D7C04AD1B7DF03A17599">setLParenLoc</h3>
+      <p>
+        public void setLParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2486 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="E64FDE63F979F7B36DF778729CE95B3C09490A28">getRParenLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getRParenLoc()
+      </p>
+      <p>Defined at line 2487 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="9BC1C1476B64B3C0F8C1D9F00D8E0591458D70E3">setRParenLoc</h3>
+      <p>
+        public void setRParenLoc(
+        <a href="SourceLocation.html">SourceLocation</a>
+         L)
+      </p>
+      <p>Defined at line 2488 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="621D8C886CAED4752F32CF6FF610C3F8BA8DFC1F">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 2490 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="3F4970A64C6BF75331822177B040DF5657A9647A">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 2491 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="D5C300F8B84E572B3A56BB704418B4E14119166F">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 2495 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <h3 id="0616CF6397280535178F24F914364D998679DE99">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2500 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="CE20C1A886706C9E8905B39D265641B5A4F6FA2E">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 2506 of file /usr/lib/llvm-16/include/clang/AST/Stmt.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#01E00B153E678598A8634D0A73657930FF9B4515">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#231C15CB34D7288308DF98FA23BD14C246F3B4FC">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5BBB022286CADF52E258E3B0340310DEFB14DDDA">hasVarStorage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E35DE3BEDE225E6E71527CB7EBAB12575777D43">getCond</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A0C09145AA301ACACFD22AFF60A5CFC0838FE289">getCond</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#384D4F455D8132EBCF2D80BCA6889F4E46C6A2E9">setCond</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7AA15DD944DB54AE0B27CB982372F83D552982E">getBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2CFD9A420EA94F3072D42B9C5B950211CDDA105C">getBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AE9F9AB46110B897C19FF4E5220C1BB29FB30F0B">setBody</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CFD42A583374D7137B8E61798C5BDB64699444C7">getConditionVariable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4297C9A0C0DC2C5EDE281064D9D9CCBE355C1073">getConditionVariable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F70238ABB1DCF0A8115B8AC96DCAA98D11703F0B">setConditionVariable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1937233311011DD51557BA46AEC406B6C96A471C">getConditionVariableDeclStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5738904F417B9BDBBFF99ADC66312EBE3DBF6C7F">getConditionVariableDeclStmt</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#01576AA0EA033903479F565CD3E6F20958BC9F8F">getWhileLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FF2031716EB4E7E457F68F5D7C8BD6FA02D549F">setWhileLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B46AA687BF3545FCAB9A5D815F3830366E794FC3">getLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#80EE60D2D3D2E2E05733D7C04AD1B7DF03A17599">setLParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E64FDE63F979F7B36DF778729CE95B3C09490A28">getRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9BC1C1476B64B3C0F8C1D9F00D8E0591458D70E3">setRParenLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#621D8C886CAED4752F32CF6FF610C3F8BA8DFC1F">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3F4970A64C6BF75331822177B040DF5657A9647A">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5C300F8B84E572B3A56BB704418B4E14119166F">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0616CF6397280535178F24F914364D998679DE99">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CE20C1A886706C9E8905B39D265641B5A4F6FA2E">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

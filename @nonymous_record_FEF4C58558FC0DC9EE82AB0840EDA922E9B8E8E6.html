@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct </title>
+<link rel="stylesheet" href="clang-doc-default-stylesheet.css"/>
+<script src="index.js"></script>
+<script src="index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct </h1>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3C4DCF457C41E4ECEBCA7F210FD9A7D33182D7C7">appendFirst</h3>
+      <p>public void appendFirst(DiagState * State)</p>
+      <div>
+        <div>
+          <p> Add an initial diagnostic state.</p>
+        </div>
+      </div>
+      <h3 id="B9985A6D88F8AE78531A96B2BE48B3AF11732E27">append</h3>
+      <p>
+        public void append(SourceManager &amp; SrcMgr, 
+        <a href="clang/SourceLocation.html">SourceLocation</a>
+         Loc, DiagState * State)
+      </p>
+      <div>
+        <div>
+          <p> Add a new latest state point.</p>
+        </div>
+      </div>
+      <h3 id="A4A3F50A63F407BEE7E75726BD9CDC256227D4B5">lookup</h3>
+      <p>
+        public DiagState * lookup(SourceManager &amp; SrcMgr, 
+        <a href="clang/SourceLocation.html">SourceLocation</a>
+         Loc)
+      </p>
+      <div>
+        <div>
+          <p> Look up the diagnostic state at a given source location.</p>
+        </div>
+      </div>
+      <h3 id="5B4B6579C95C24D35B795FEAFD5EFF23D1AE50AA">empty</h3>
+      <p>public _Bool empty()</p>
+      <p>Defined at line 374 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Determine whether this map is empty.</p>
+        </div>
+      </div>
+      <h3 id="800F26CC5D79630DBA6E1155B55803901FB12288">clear</h3>
+      <p>public void clear()</p>
+      <p>Defined at line 377 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Clear out this map.</p>
+        </div>
+      </div>
+      <h3 id="3088795D7B82BC89DE085A5306E84ABF2B5DB63B">dump</h3>
+      <p>
+        public void dump(SourceManager &amp; SrcMgr, 
+        <a href="llvm/StringRef.html">StringRef</a>
+         DiagName)
+      </p>
+      <div>
+        <div>
+          <p> Produce a debugging dump of the diagnostic state.</p>
+        </div>
+      </div>
+      <h3 id="3AF19954F3FD41A223AB093BFD20660576AB3178">getCurDiagState</h3>
+      <p>public DiagState * getCurDiagState()</p>
+      <p>Defined at line 388 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Grab the most-recently-added state point.</p>
+        </div>
+      </div>
+      <h3 id="6D2EAAF0C33075004E5EBF2474B65EB598B2F498">getCurDiagStateLoc</h3>
+      <p>
+        public 
+        <a href="clang/SourceLocation.html">SourceLocation</a>
+         getCurDiagStateLoc()
+      </p>
+      <p>Defined at line 391 of file /usr/lib/llvm-16/include/clang/Basic/Diagnostic.h</p>
+      <div>
+        <div>
+          <p> Get the location at which a diagnostic state was last added.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3C4DCF457C41E4ECEBCA7F210FD9A7D33182D7C7">appendFirst</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9985A6D88F8AE78531A96B2BE48B3AF11732E27">append</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A4A3F50A63F407BEE7E75726BD9CDC256227D4B5">lookup</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5B4B6579C95C24D35B795FEAFD5EFF23D1AE50AA">empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#800F26CC5D79630DBA6E1155B55803901FB12288">clear</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3088795D7B82BC89DE085A5306E84ABF2B5DB63B">dump</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3AF19954F3FD41A223AB093BFD20660576AB3178">getCurDiagState</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D2EAAF0C33075004E5EBF2474B65EB598B2F498">getCurDiagStateLoc</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

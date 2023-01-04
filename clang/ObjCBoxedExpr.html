@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ObjCBoxedExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ObjCBoxedExpr</h1>
+    <p>Defined at line 127 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+    <div>
+      <div>
+        <p> ObjCBoxedExpr - used for generalized expression boxing. as in: @(strdup(&quot;hello world&quot;)), @(random()) or @(view.frame) Also used for boxing non-parenthesized numeric literals; as in: @42 or @true (c++/objc++) or @__objc_yes (c/objc).</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="EF1ACD939411F0BB66E1E6B9D9C04CA349757432">ObjCBoxedExpr</h3>
+      <p>
+        public void ObjCBoxedExpr(Expr * E, 
+        <a href="QualType.html">QualType</a>
+         T, ObjCMethodDecl * method, 
+        <a href="SourceRange.html">SourceRange</a>
+         R)
+      </p>
+      <p>Defined at line 135 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="C24409E642E384B868526FE54EF2D2354EC12F81">ObjCBoxedExpr</h3>
+      <p>
+        public void ObjCBoxedExpr(
+        <a href="../clang/Stmt/EmptyShell.html">EmptyShell</a>
+         Empty)
+      </p>
+      <p>Defined at line 140 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="8CFC1D4676E535B66B037C90C2F840B707A2A007">getSubExpr</h3>
+      <p>public Expr * getSubExpr()</p>
+      <p>Defined at line 143 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="116BC900F3023B684F623A8F0DE705ACAEC36E31">getSubExpr</h3>
+      <p>public const Expr * getSubExpr()</p>
+      <p>Defined at line 144 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="1C439650F1CC4081CD4A019065508B0E0E658F46">getBoxingMethod</h3>
+      <p>public ObjCMethodDecl * getBoxingMethod()</p>
+      <p>Defined at line 146 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="E97D5AFD3D36182EF426B5911EB3749620198C53">isExpressibleAsConstantInitializer</h3>
+      <p>public _Bool isExpressibleAsConstantInitializer()</p>
+      <p>Defined at line 152 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <div>
+        <div>
+          <p> Indicates whether this boxed expression can be emitted as a compile-time constant.</p>
+        </div>
+      </div>
+      <h3 id="D5449C13D5BB1DD03CB2539A45216133B6106314">getAtLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getAtLoc()
+      </p>
+      <p>Defined at line 156 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="6B736C2963F89CB31EE58CA9FDEC8609A7A28DD0">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 158 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="D066628987D111CDE36F3098340149A8D08FC435">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 159 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="DE11C74CAF9A8E666A3530B53CA0B62400D52763">getSourceRange</h3>
+      <p>
+        public 
+        <a href="SourceRange.html">SourceRange</a>
+         getSourceRange()
+      </p>
+      <p>Defined at line 161 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="B9CC1A19837E99DA23E802FEC48573C67171A816">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 166 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <div>
+        <div>
+          <p> Iterators</p>
+        </div>
+      </div>
+      <h3 id="05761204B8662D501C674A576D7B11C7214881D8">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 168 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="7E78F73E076CCCB4A251E03FEE301DFECB893EFD">arg_begin</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         arg_begin()
+      </p>
+      <p>Defined at line 174 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="177D7E570E1066CBDF4C424BD64F8D3301A9DAC8">arg_end</h3>
+      <p>
+        public 
+        <a href="../clang/Stmt/CastIterator.html">CastIterator</a>
+         arg_end()
+      </p>
+      <p>Defined at line 178 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+      <h3 id="F2AEC5A992791AF7540495BBCA419444EF8A323E">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 182 of file /usr/lib/llvm-16/include/clang/AST/ExprObjC.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#EF1ACD939411F0BB66E1E6B9D9C04CA349757432">ObjCBoxedExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C24409E642E384B868526FE54EF2D2354EC12F81">ObjCBoxedExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8CFC1D4676E535B66B037C90C2F840B707A2A007">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#116BC900F3023B684F623A8F0DE705ACAEC36E31">getSubExpr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C439650F1CC4081CD4A019065508B0E0E658F46">getBoxingMethod</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E97D5AFD3D36182EF426B5911EB3749620198C53">isExpressibleAsConstantInitializer</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D5449C13D5BB1DD03CB2539A45216133B6106314">getAtLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6B736C2963F89CB31EE58CA9FDEC8609A7A28DD0">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D066628987D111CDE36F3098340149A8D08FC435">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DE11C74CAF9A8E666A3530B53CA0B62400D52763">getSourceRange</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9CC1A19837E99DA23E802FEC48573C67171A816">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#05761204B8662D501C674A576D7B11C7214881D8">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7E78F73E076CCCB4A251E03FEE301DFECB893EFD">arg_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#177D7E570E1066CBDF4C424BD64F8D3301A9DAC8">arg_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F2AEC5A992791AF7540495BBCA419444EF8A323E">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

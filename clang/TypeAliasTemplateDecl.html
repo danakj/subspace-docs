@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class TypeAliasTemplateDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class TypeAliasTemplateDecl</h1>
+    <p>Defined at line 2543 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    <div>
+      <div>
+        <p> Declaration of an alias template.</p>
+        <p> For example:</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="RedeclarableTemplateDecl.html">RedeclarableTemplateDecl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E4AB240871020BCA3DBD387503D75556DB902A89">TypeAliasTemplateDecl</h3>
+      <p>
+        protected void TypeAliasTemplateDecl(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params, NamedDecl * Decl)
+      </p>
+      <p>Defined at line 2547 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="FC07AD6517C0093CCF50D89EF4DEC269B94302D8">newCommon</h3>
+      <p>protected CommonBase * newCommon(ASTContext &amp; C)</p>
+      <h3 id="2BA4BB9C7A416A66B8B13F1799D4A8F0184830BF">getCommonPtr</h3>
+      <p>protected Common * getCommonPtr()</p>
+      <p>Defined at line 2555 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="EFC02741F4256E6259253BFE2F987C2D6B48F594">getTemplatedDecl</h3>
+      <p>public TypeAliasDecl * getTemplatedDecl()</p>
+      <p>Defined at line 2564 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Get the underlying function declaration of the template.</p>
+        </div>
+      </div>
+      <h3 id="203E2A08339998ED016413362494BA17F795017C">getCanonicalDecl</h3>
+      <p>public TypeAliasTemplateDecl * getCanonicalDecl()</p>
+      <p>Defined at line 2569 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="F79501191DB6B46E7E68D71A91509B8D5955D6FD">getCanonicalDecl</h3>
+      <p>public const TypeAliasTemplateDecl * getCanonicalDecl()</p>
+      <p>Defined at line 2573 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="FCAD15AE4865EB64994432961CA59353696A979D">getPreviousDecl</h3>
+      <p>public TypeAliasTemplateDecl * getPreviousDecl()</p>
+      <p>Defined at line 2580 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Retrieve the previous declaration of this function template, or nullptr if no such declaration exists.</p>
+        </div>
+      </div>
+      <h3 id="115E6F90535B3CEB8CD0E4EFE1531A9B45C463DB">getPreviousDecl</h3>
+      <p>public const TypeAliasTemplateDecl * getPreviousDecl()</p>
+      <p>Defined at line 2584 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="6D86328EB10B98DDC7514E0AC1EAB390E405FCBE">getInstantiatedFromMemberTemplate</h3>
+      <p>public TypeAliasTemplateDecl * getInstantiatedFromMemberTemplate()</p>
+      <p>Defined at line 2590 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <h3 id="46E754AD8E88A0AB5072CC2E13167F5CCF4CB132">Create</h3>
+      <p>
+        public TypeAliasTemplateDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         Name, TemplateParameterList * Params, NamedDecl * Decl)
+      </p>
+      <div>
+        <div>
+          <p> Create a function template node.</p>
+        </div>
+      </div>
+      <h3 id="4CC1AFBBB23DC78AC018063DD247F5435D7D8D83">CreateDeserialized</h3>
+      <p>public TypeAliasTemplateDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID)</p>
+      <div>
+        <div>
+          <p> Create an empty alias template node.</p>
+        </div>
+      </div>
+      <h3 id="62C6E6FF20ACBF6106F5DFED3677D74A5C3465AD">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 2606 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+      <div>
+        <div>
+          <p> Implement isa/cast/dyncast support</p>
+        </div>
+      </div>
+      <h3 id="C7EAE1EBB77B8CD18FD09A111EDA878710009E78">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 2607 of file /usr/lib/llvm-16/include/clang/AST/DeclTemplate.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E4AB240871020BCA3DBD387503D75556DB902A89">TypeAliasTemplateDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FC07AD6517C0093CCF50D89EF4DEC269B94302D8">newCommon</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2BA4BB9C7A416A66B8B13F1799D4A8F0184830BF">getCommonPtr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFC02741F4256E6259253BFE2F987C2D6B48F594">getTemplatedDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#203E2A08339998ED016413362494BA17F795017C">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F79501191DB6B46E7E68D71A91509B8D5955D6FD">getCanonicalDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCAD15AE4865EB64994432961CA59353696A979D">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#115E6F90535B3CEB8CD0E4EFE1531A9B45C463DB">getPreviousDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6D86328EB10B98DDC7514E0AC1EAB390E405FCBE">getInstantiatedFromMemberTemplate</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#46E754AD8E88A0AB5072CC2E13167F5CCF4CB132">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4CC1AFBBB23DC78AC018063DD247F5435D7D8D83">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#62C6E6FF20ACBF6106F5DFED3677D74A5C3465AD">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7EAE1EBB77B8CD18FD09A111EDA878710009E78">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

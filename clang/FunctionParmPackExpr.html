@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FunctionParmPackExpr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FunctionParmPackExpr</h1>
+    <p>Defined at line 4430 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    <div>
+      <div>
+        <p> Represents a reference to a function parameter pack or init-capture pack that has been substituted but not yet expanded.</p>
+        <p> When a pack expansion contains multiple parameter packs at different levels, this node is used to represent a function parameter pack at an outer level which we have already substituted to refer to expanded parameters, but where the containing pack expansion cannot yet be expanded.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Expr.html">Expr</a>
+      , llvm::TrailingObjects&lt;FunctionParmPackExpr, VarDecl *&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3B6B78E4FAF0652925A66A144D0F4AE9B63BDDBC">Create</h3>
+      <p>
+        public FunctionParmPackExpr * Create(const ASTContext &amp; Context, 
+        <a href="QualType.html">QualType</a>
+         T, VarDecl * ParamPack, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         NameLoc, ArrayRef&lt;VarDecl *&gt; Params)
+      </p>
+      <h3 id="E3662A1C23B8E06392C66A67CBDD3F7A24382808">CreateEmpty</h3>
+      <p>public FunctionParmPackExpr * CreateEmpty(const ASTContext &amp; Context, unsigned int NumParams)</p>
+      <h3 id="0367C4AAD3900ACBFE0AB195C2EA5DE5AD548873">getParameterPack</h3>
+      <p>public VarDecl * getParameterPack()</p>
+      <p>Defined at line 4459 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the parameter pack which this expression refers to.</p>
+        </div>
+      </div>
+      <h3 id="697C837A47205036A6D2EA6A94A6E94B33AF9043">getParameterPackLocation</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getParameterPackLocation()
+      </p>
+      <p>Defined at line 4462 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the location of the parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="F1FFECC3D96F2D9723C31630D2E875B348B549C7">begin</h3>
+      <p>public iterator begin()</p>
+      <p>Defined at line 4467 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="92A2F3E9CBA2A638E2F4C50792C18CAF34AE716D">end</h3>
+      <p>public iterator end()</p>
+      <p>Defined at line 4468 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="24BA5ACA51CEA6E238E7AACA6307493AA0C57289">getNumExpansions</h3>
+      <p>public unsigned int getNumExpansions()</p>
+      <p>Defined at line 4471 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get the number of parameters in this parameter pack.</p>
+        </div>
+      </div>
+      <h3 id="F3162008608B217E3B99C1277AAD59C4586AFE1D">getExpansion</h3>
+      <p>public VarDecl * getExpansion(unsigned int I)</p>
+      <p>Defined at line 4474 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <div>
+        <div>
+          <p> Get an expansion of the parameter pack by index.</p>
+        </div>
+      </div>
+      <h3 id="956A3906D85872AEF6BAD3CC97E56D25AAA56F4D">getBeginLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getBeginLoc()
+      </p>
+      <p>Defined at line 4476 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="0FB6FB4B519531BEF2377BC5DECDA471EE675226">getEndLoc</h3>
+      <p>
+        public 
+        <a href="SourceLocation.html">SourceLocation</a>
+         getEndLoc()
+      </p>
+      <p>Defined at line 4477 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="2EDDCB229D630B2E0208B249758A80A56E68ED2F">classof</h3>
+      <p>public _Bool classof(const Stmt * T)</p>
+      <p>Defined at line 4479 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="AB88F57611C95F87769315898B56E3C6E4AD7A15">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4483 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+      <h3 id="2E2E772862E2CCF995542E3DA86121283BEF4B3E">children</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         children()
+      </p>
+      <p>Defined at line 4487 of file /usr/lib/llvm-16/include/clang/AST/ExprCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3B6B78E4FAF0652925A66A144D0F4AE9B63BDDBC">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E3662A1C23B8E06392C66A67CBDD3F7A24382808">CreateEmpty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0367C4AAD3900ACBFE0AB195C2EA5DE5AD548873">getParameterPack</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#697C837A47205036A6D2EA6A94A6E94B33AF9043">getParameterPackLocation</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F1FFECC3D96F2D9723C31630D2E875B348B549C7">begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#92A2F3E9CBA2A638E2F4C50792C18CAF34AE716D">end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24BA5ACA51CEA6E238E7AACA6307493AA0C57289">getNumExpansions</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F3162008608B217E3B99C1277AAD59C4586AFE1D">getExpansion</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#956A3906D85872AEF6BAD3CC97E56D25AAA56F4D">getBeginLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0FB6FB4B519531BEF2377BC5DECDA471EE675226">getEndLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2EDDCB229D630B2E0208B249758A80A56E68ED2F">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AB88F57611C95F87769315898B56E3C6E4AD7A15">children</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2E2E772862E2CCF995542E3DA86121283BEF4B3E">children</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

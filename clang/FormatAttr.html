@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class FormatAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class FormatAttr</h1>
+    <p>Defined at line 4309 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0ACC1BCC54FDF6E37A438D7A47326F030F99F5A3">CreateImplicit</h3>
+      <p>public FormatAttr * CreateImplicit(ASTContext &amp; Ctx, IdentifierInfo * Type, int FormatIdx, int FirstArg, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="D8F3B31905EE6CBA28AC38D70AC5A00FDF99A9D3">Create</h3>
+      <p>public FormatAttr * Create(ASTContext &amp; Ctx, IdentifierInfo * Type, int FormatIdx, int FirstArg, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="3591E5AEC3F0FD11C3EAE1219D73EC5A64B965CA">CreateImplicit</h3>
+      <p>
+        public FormatAttr * CreateImplicit(ASTContext &amp; Ctx, IdentifierInfo * Type, int FormatIdx, int FirstArg, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="8AFA28D72EB75931B04A1DA9DD89356FD91E6EF8">Create</h3>
+      <p>
+        public FormatAttr * Create(ASTContext &amp; Ctx, IdentifierInfo * Type, int FormatIdx, int FirstArg, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="0EFC63DCE7070FEC487082049382175A9AB66970">FormatAttr</h3>
+      <p>public void FormatAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, IdentifierInfo * Type, int FormatIdx, int FirstArg)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="002CCD12A577A4CFDF075F9E0ED60EB527E3CF6C">clone</h3>
+      <p>public FormatAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="C2B36ABCCB470784907E9090DE83B9F7BEAB98BC">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="12B9371DA5FE4BFBECCFB290F1E64EFE2FA6FB9F">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="BD90FA2C4158BCFF584891031A5A886FAD4920A9">getType</h3>
+      <p>public IdentifierInfo * getType()</p>
+      <p>Defined at line 4342 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="CC767077FFF6574E7C9934A99DD492C13B1A6AC4">getFormatIdx</h3>
+      <p>public int getFormatIdx()</p>
+      <p>Defined at line 4346 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="8036AB73830D9B3AEED4A95C7FAF706787764EF0">getFirstArg</h3>
+      <p>public int getFirstArg()</p>
+      <p>Defined at line 4350 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="121C85ED7409B31D6E28390B8AC093329433C9E9">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 4356 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="99117F5EABFDB086CB4FBEFAF62230B6A25EC21B">enum Spelling</h3>
+      <ul>
+        <li>GNU_format</li>
+        <li>CXX11_gnu_format</li>
+        <li>C2x_gnu_format</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 4317 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0ACC1BCC54FDF6E37A438D7A47326F030F99F5A3">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D8F3B31905EE6CBA28AC38D70AC5A00FDF99A9D3">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3591E5AEC3F0FD11C3EAE1219D73EC5A64B965CA">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8AFA28D72EB75931B04A1DA9DD89356FD91E6EF8">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0EFC63DCE7070FEC487082049382175A9AB66970">FormatAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#002CCD12A577A4CFDF075F9E0ED60EB527E3CF6C">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2B36ABCCB470784907E9090DE83B9F7BEAB98BC">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#12B9371DA5FE4BFBECCFB290F1E64EFE2FA6FB9F">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD90FA2C4158BCFF584891031A5A886FAD4920A9">getType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#CC767077FFF6574E7C9934A99DD492C13B1A6AC4">getFormatIdx</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8036AB73830D9B3AEED4A95C7FAF706787764EF0">getFirstArg</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#121C85ED7409B31D6E28390B8AC093329433C9E9">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#99117F5EABFDB086CB4FBEFAF62230B6A25EC21B">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class PreferredNameAttr</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class PreferredNameAttr</h1>
+    <p>Defined at line 9635 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    <p>
+      Inherits from 
+      <a href="InheritableAttr.html">InheritableAttr</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="02793EE33191FE18111D9F73F0D69FC05820528D">CreateImplicit</h3>
+      <p>public PreferredNameAttr * CreateImplicit(ASTContext &amp; Ctx, TypeSourceInfo * TypedefType, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <div>
+        <div>
+          <p> Factory methods</p>
+        </div>
+      </div>
+      <h3 id="694AAC262EC3AE5301CC8C605288EF339FAFBD77">Create</h3>
+      <p>public PreferredNameAttr * Create(ASTContext &amp; Ctx, TypeSourceInfo * TypedefType, const AttributeCommonInfo &amp; CommonInfo)</p>
+      <h3 id="BE2E91256B3066B19289CEFA748D4EFD0DDCE144">CreateImplicit</h3>
+      <p>
+        public PreferredNameAttr * CreateImplicit(ASTContext &amp; Ctx, TypeSourceInfo * TypedefType, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="FCE189D4314E9DD6153B827317B2B2A67ECBB6A2">Create</h3>
+      <p>
+        public PreferredNameAttr * Create(ASTContext &amp; Ctx, TypeSourceInfo * TypedefType, 
+        <a href="SourceRange.html">SourceRange</a>
+         Range, 
+        <a href="../clang/AttributeCommonInfo/Syntax.html">Syntax</a>
+         Syntax)
+      </p>
+      <h3 id="4D21A37228BE0B8ACA6FBF4B3F71C60F390FC526">PreferredNameAttr</h3>
+      <p>public void PreferredNameAttr(ASTContext &amp; Ctx, const AttributeCommonInfo &amp; CommonInfo, TypeSourceInfo * TypedefType)</p>
+      <div>
+        <div>
+          <p> Constructors</p>
+        </div>
+      </div>
+      <h3 id="FE436D68FC349135FF8C7FAA9E3397A943B367D9">clone</h3>
+      <p>public PreferredNameAttr * clone(ASTContext &amp; C)</p>
+      <h3 id="4A89B2219A5BFD38798D1921C09A3E5EF65DE9D2">printPretty</h3>
+      <p>public void printPretty(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="1D9D675E2D07E5963CFD60BF70F538DA5D8AA687">getSpelling</h3>
+      <p>public const char * getSpelling()</p>
+      <h3 id="254EE5A3856DA2C1AE9D8F4E322FCA957C928257">getTypedefType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getTypedefType()
+      </p>
+      <p>Defined at line 9661 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="0C536BBF0C18AD43E66EB74A33D329B7E8C78A88">getTypedefTypeLoc</h3>
+      <p>public TypeSourceInfo * getTypedefTypeLoc()</p>
+      <p>Defined at line 9663 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+      <h3 id="F92373508A98A49BD37DBA6B72A3048244F67370">classof</h3>
+      <p>public _Bool classof(const Attr * A)</p>
+      <p>Defined at line 9669 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="BFA1722F6CAA2BCA80AB30C25BFA0D263CE7E06C">enum Spelling</h3>
+      <ul>
+        <li>GNU_preferred_name</li>
+        <li>CXX11_clang_preferred_name</li>
+        <li>SpellingNotCalculated</li>
+      </ul>
+      <p>Defined at line 9639 of file /usr/lib/llvm-16/include/clang/AST/Attrs.inc</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#02793EE33191FE18111D9F73F0D69FC05820528D">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#694AAC262EC3AE5301CC8C605288EF339FAFBD77">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BE2E91256B3066B19289CEFA748D4EFD0DDCE144">CreateImplicit</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FCE189D4314E9DD6153B827317B2B2A67ECBB6A2">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D21A37228BE0B8ACA6FBF4B3F71C60F390FC526">PreferredNameAttr</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FE436D68FC349135FF8C7FAA9E3397A943B367D9">clone</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4A89B2219A5BFD38798D1921C09A3E5EF65DE9D2">printPretty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1D9D675E2D07E5963CFD60BF70F538DA5D8AA687">getSpelling</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#254EE5A3856DA2C1AE9D8F4E322FCA957C928257">getTypedefType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C536BBF0C18AD43E66EB74A33D329B7E8C78A88">getTypedefTypeLoc</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F92373508A98A49BD37DBA6B72A3048244F67370">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#BFA1722F6CAA2BCA80AB30C25BFA0D263CE7E06C">Spelling</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

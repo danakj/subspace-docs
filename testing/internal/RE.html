@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class RE</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class RE</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#893">893</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+    </p>
+    <div>
+      <div>
+        <p> A simple C++ wrapper for &lt;regex.h&gt;.  It uses the POSIX Extended Regular Expression syntax.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C18F8FD0D436D58CFB24BC092B6A60907211F9C0">RE</h3>
+      <p>public void RE(const RE &amp; other)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#897">897</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <div>
+        <div>
+          <p> A copy constructor is required by the Standard to initialize object references from r-values.</p>
+        </div>
+      </div>
+      <h3 id="847C738414F16C74A26B470BB72361FF43D706E7">RE</h3>
+      <p>public void RE(const ::std::string &amp; regex)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#900">900</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Constructs an RE from a string.</p>
+        </div>
+      </div>
+      <h3 id="7FEFC55DF3169FBCB5271EB3AD09340822B72E15">RE</h3>
+      <p>public void RE(const char * regex)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#902">902</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="DF78B852AA26B80D35B2E5FAC64B972D7D3AB6BF">~RE</h3>
+      <p>public void ~RE()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-port.cc#711">711</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-port.cc">gtest-port.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Implements RE.  Currently only needed for death tests.</p>
+        </div>
+      </div>
+      <h3 id="9ED0A56341FCBD2D2C739D35A041943D8853AD27">pattern</h3>
+      <p>public const char * pattern()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#906">906</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns the string representation of the regex.</p>
+        </div>
+      </div>
+      <h3 id="9FF895DDE8B0AE33378A3343E46BBBAF7046D5BB">FullMatch</h3>
+      <p>public _Bool FullMatch(const ::std::string &amp; str, const RE &amp; re)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#912">912</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <div>
+        <div>
+          <p> FullMatch(str, re) returns true if and only if regular expression re matches the entire str. PartialMatch(str, re) returns true if and only if regular expression re matches a substring of str (including str itself).</p>
+        </div>
+      </div>
+      <h3 id="0AA795821BE09F9BA57FDA7EE3389DCB3F4C829B">PartialMatch</h3>
+      <p>public _Bool PartialMatch(const ::std::string &amp; str, const RE &amp; re)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#915">915</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="DB3C44ACDE28D7E8BDA8AD63382541B9BC63BD9D">FullMatch</h3>
+      <p>public _Bool FullMatch(const char * str, const RE &amp; re)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-port.cc#724">724</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-port.cc">gtest-port.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if regular expression re matches the entire str.</p>
+        </div>
+      </div>
+      <h3 id="7C57128C872CE49A9C20B267F772C1592CA9DD79">PartialMatch</h3>
+      <p>public _Bool PartialMatch(const char * str, const RE &amp; re)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-port.cc#733">733</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-port.cc">gtest-port.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns true if and only if regular expression re matches a substring of str (including str itself).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C18F8FD0D436D58CFB24BC092B6A60907211F9C0">RE</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#847C738414F16C74A26B470BB72361FF43D706E7">RE</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7FEFC55DF3169FBCB5271EB3AD09340822B72E15">RE</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF78B852AA26B80D35B2E5FAC64B972D7D3AB6BF">~RE</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9ED0A56341FCBD2D2C739D35A041943D8853AD27">pattern</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9FF895DDE8B0AE33378A3343E46BBBAF7046D5BB">FullMatch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0AA795821BE09F9BA57FDA7EE3389DCB3F4C829B">PartialMatch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DB3C44ACDE28D7E8BDA8AD63382541B9BC63BD9D">FullMatch</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7C57128C872CE49A9C20B267F772C1592CA9DD79">PartialMatch</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

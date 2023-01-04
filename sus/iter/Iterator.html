@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class Iterator</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/iter" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class Iterator</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#84">84</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+    </p>
+    <p>Inherits from I</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="AB2AE81E85A9740F7689887D1670DB8734DAF9AD">box</h3>
+      <p>public Iterator&lt;BoxedIterator&lt;typename I::Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt; box()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#245">245</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Wraps the iterator in a new iterator that is trivially relocatable.</p>
+          <p> Being trivially relocatable is required to chain the iterator, though methods such as `filter()`. This method converts the iterator to be trivially relocatable by moving the iterator into heap storage, which implies this does a heap allocation, which is slow compared to working on the stack.</p>
+          <p> When possible, favour making the iterator be trivially relocatable by having it iterate over types which are themselves trivially relocatable, instead of using `box()`. This will give much better performance.</p>
+          <p> It&apos;s only possible to call this in cases where it would do something useful, that is when the Iterator type is not trivially relocatable.</p>
+        </div>
+      </div>
+      <h3 id="D4F8B6742BC5E690AA67BBB0C81CD359FC8BC0A1">all</h3>
+      <p>public _Bool all(::sus::fn::FnMut&lt;_Bool (Item)&gt; f)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#214">214</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Tests whether all elements of the iterator match a predicate.</p>
+          <p> If the predicate returns `true` for all elements in the iterator, this functions returns `true`, otherwise `false`. The function is short-circuiting; it stops iterating on the first `false` returned from the predicate.</p>
+          <p> Returns `true` if the iterator is empty.</p>
+        </div>
+      </div>
+      <h3 id="A30055CB83A72B6517DB287E235BF4D7DA43F614">any</h3>
+      <p>public _Bool any(::sus::fn::FnMut&lt;_Bool (Item)&gt; f)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#226">226</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Tests whether any elements of the iterator match a predicate.</p>
+          <p> If the predicate returns `true` for any elements in the iterator, this functions returns `true`, otherwise `false`. The function is short-circuiting; it stops iterating on the first `true` returned from the predicate.</p>
+          <p> Returns `false` if the iterator is empty.</p>
+        </div>
+      </div>
+      <h3 id="B3BF7E64DD2F422D06BDF7E7B6E832EA964C4033">count</h3>
+      <p>
+        public 
+        <a href="../../sus/num/usize.html">usize</a>
+         count()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#237">237</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Consumes the iterator, and returns the number of elements that were in it.</p>
+          <p> The function walks the iterator until it sees an Option holding #None.</p>
+          <p> # Safety</p>
+          <p> If the `usize` type does not have trapping arithmetic enabled, and the iterator has more than `usize::MAX` elements in it, the value will wrap and be incorrect. Otherwise, `usize` will catch overflow and panic.</p>
+        </div>
+      </div>
+      <h3 id="D9DCE4FF543BA52EFF072890BB7B167715D252D7">filter</h3>
+      <p>public Iterator&lt;Filter&lt;Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt; filter(::sus::fn::FnMut&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &amp;)&gt; pred)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#253">253</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Creates an iterator which uses a closure to determine if an element should be yielded.</p>
+          <p> Given an element the closure must return true or false. The returned iterator will yield only the elements for which the closure returns true.</p>
+        </div>
+      </div>
+      <h3 id="228C09F852AEC0F7FDDECD0AC026B77F5590B9D9">collect</h3>
+      <p>public C collect()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#277">277</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Transforms an iterator into a collection.</p>
+          <p> collect() can turn anything iterable into a relevant collection. If this is used anything like in Rust, it would be one of the more powerful methods in the subspace library, used in a variety of contexts.</p>
+          <p> The most basic pattern in which collect() is used is to turn one collection into another. You take a collection, call iter on it, do a bunch of transformations, and then collect() at the end.</p>
+          <p> collect() can also create instances of types that are not typical collections. For example, (TODO: a String can be built from chars, and) an iterator of Result&lt;T, E&gt; items can be collected into Result&lt;Collection&lt;T&gt;, E&gt;. Or an iterator of Option&lt;T&gt; can be collected into Option&lt;Collection&lt;T&gt;&gt;.</p>
+          <p> Because collect() is so general, and C++ lacks strong type inference, collect() doesn&apos;t know the type of collection that you want to produce, so you will always need to pass it a type argument, such as: ```cpp sus::move(iter).collect&lt;MyContainer&lt;i32&gt;&gt;() ```</p>
+        </div>
+      </div>
+      <h3 id="513FF96F849DEABB922DF14E74E9923412DCE9B0">collect_vec</h3>
+      <p>public Vec collect_vec()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h#283">283</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/./iter/iterator_defn.h">iterator_defn.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Vec requires Move for its items.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#AB2AE81E85A9740F7689887D1670DB8734DAF9AD">box</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D4F8B6742BC5E690AA67BBB0C81CD359FC8BC0A1">all</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A30055CB83A72B6517DB287E235BF4D7DA43F614">any</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B3BF7E64DD2F422D06BDF7E7B6E832EA964C4033">count</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D9DCE4FF543BA52EFF072890BB7B167715D252D7">filter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#228C09F852AEC0F7FDDECD0AC026B77F5590B9D9">collect</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#513FF96F849DEABB922DF14E74E9923412DCE9B0">collect_vec</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

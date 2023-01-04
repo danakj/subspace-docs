@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UsingType</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UsingType</h1>
+    <p>Defined at line 4502 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    <p>
+      Inherits from 
+      <a href="Type.html">Type</a>
+      , 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+      , llvm::TrailingObjects&lt;UsingType, QualType&gt;
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8B750291A8E2C8B3DD57F48505585FD616F9D2E4">getFoundDecl</h3>
+      <p>public UsingShadowDecl * getFoundDecl()</p>
+      <p>Defined at line 4512 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="DF2B51202ED131C3DA54AC6F53FE26514B2B8C4A">getUnderlyingType</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         getUnderlyingType()
+      </p>
+      <h3 id="0DEF4498FADD6E2B399F8F87D1D84FD3E29BCC5E">isSugared</h3>
+      <p>public _Bool isSugared()</p>
+      <p>Defined at line 4515 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="96AE7186EB4641241545A5075276AD4221461D7F">desugar</h3>
+      <p>
+        public 
+        <a href="QualType.html">QualType</a>
+         desugar()
+      </p>
+      <p>Defined at line 4518 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> This always has the &apos;same&apos; type as declared, but not necessarily identical.</p>
+        </div>
+      </div>
+      <h3 id="C24D42E20F7824309D7B197BEDAD6AAFA36269B5">typeMatchesDecl</h3>
+      <p>public _Bool typeMatchesDecl()</p>
+      <p>Defined at line 4521 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <div>
+        <div>
+          <p> Internal helper, for debugging purposes.</p>
+        </div>
+      </div>
+      <h3 id="4DD6747B0A523AE86A530A0C8E6FBE57295CFAC3">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 4523 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="8A363D23BF3B74172DCCEDC059E7B194F4CE7CED">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, const UsingShadowDecl * Found, 
+        <a href="QualType.html">QualType</a>
+         Underlying)
+      </p>
+      <p>Defined at line 4526 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+      <h3 id="427F3B48BA4CB97A4E33E629162B172502401E3E">classof</h3>
+      <p>public _Bool classof(const Type * T)</p>
+      <p>Defined at line 4532 of file /usr/lib/llvm-16/include/clang/AST/Type.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8B750291A8E2C8B3DD57F48505585FD616F9D2E4">getFoundDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#DF2B51202ED131C3DA54AC6F53FE26514B2B8C4A">getUnderlyingType</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0DEF4498FADD6E2B399F8F87D1D84FD3E29BCC5E">isSugared</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#96AE7186EB4641241545A5075276AD4221461D7F">desugar</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C24D42E20F7824309D7B197BEDAD6AAFA36269B5">typeMatchesDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4DD6747B0A523AE86A530A0C8E6FBE57295CFAC3">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A363D23BF3B74172DCCEDC059E7B194F4CE7CED">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#427F3B48BA4CB97A4E33E629162B172502401E3E">classof</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

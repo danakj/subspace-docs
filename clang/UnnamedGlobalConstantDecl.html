@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UnnamedGlobalConstantDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UnnamedGlobalConstantDecl</h1>
+    <p>Defined at line 4257 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    <div>
+      <div>
+        <p> An artificial decl, representing a global anonymous constant value which is uniquified by value within a translation unit.</p>
+        <p> These is currently only used to back the LValue returned by __builtin_source_location, but could potentially be used for other similar situations in the future.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="ValueDecl.html">ValueDecl</a>
+      , Mergeable&lt;UnnamedGlobalConstantDecl&gt;, 
+      <a href="../llvm/FoldingSetBase/Node.html">Node</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A0D769F3EE811529F01B4418D35BC1BAA6575D85">printName</h3>
+      <p>public void printName(llvm::raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <div>
+        <div>
+          <p> Print this in a human-readable format.</p>
+        </div>
+      </div>
+      <h3 id="6E3B3118A744B71E3351913C0DFCB612C4E4995D">getValue</h3>
+      <p>public const APValue &amp; getValue()</p>
+      <p>Defined at line 4285 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="7B76AE73119C4FFE46B621215A0B1930302D720D">Profile</h3>
+      <p>
+        public void Profile(llvm::FoldingSetNodeID &amp; ID, 
+        <a href="QualType.html">QualType</a>
+         Ty, const APValue &amp; APVal)
+      </p>
+      <p>Defined at line 4287 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="077313FD8AB52A0BC1C4797A18BB1FC4137D7914">Profile</h3>
+      <p>public void Profile(llvm::FoldingSetNodeID &amp; ID)</p>
+      <p>Defined at line 4292 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="B86EE1C17E2D1E2614ADAC30762DB9DCCA7CCB42">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 4296 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+      <h3 id="0E6530BF180BA648E11A9D524BDB381E04DE8401">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 4297 of file /usr/lib/llvm-16/include/clang/AST/DeclCXX.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A0D769F3EE811529F01B4418D35BC1BAA6575D85">printName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E3B3118A744B71E3351913C0DFCB612C4E4995D">getValue</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#7B76AE73119C4FFE46B621215A0B1930302D720D">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#077313FD8AB52A0BC1C4797A18BB1FC4137D7914">Profile</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B86EE1C17E2D1E2614ADAC30762DB9DCCA7CCB42">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E6530BF180BA648E11A9D524BDB381E04DE8401">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

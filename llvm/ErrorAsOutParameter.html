@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ErrorAsOutParameter</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ErrorAsOutParameter</h1>
+    <p>Defined at line 1104 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+    <div>
+      <div>
+        <p> Helper for Errors used as out-parameters.</p>
+        <p> This helper is for use with the Error-as-out-parameter idiom, where an error is passed to a function or method by reference, rather than being returned. In such cases it is helpful to set the checked bit on entry to the function so that the error can be written to (unchecked Errors abort on assignment) and clear the checked bit on exit so that clients cannot accidentally forget to check the result. This helper performs these actions automatically using RAII:</p>
+        <p> ErrorAsOutParameter takes an Error* rather than Error&amp; so that it can be used with optional Errors (Error pointers that are allowed to be null). If ErrorAsOutParameter took an Error reference, an instance would have to be created inside every condition that verified that Error was non-null. By taking an Error pointer we can just create one instance at the top of the function.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D67234F774FA29C349700C9F587BAA6F72EE0B94">ErrorAsOutParameter</h3>
+      <p>public void ErrorAsOutParameter(Error * Err)</p>
+      <p>Defined at line 1106 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+      <h3 id="5AB25666D942BF31D97F87D2B41CB7A82C70AAB8">~ErrorAsOutParameter</h3>
+      <p>public void ~ErrorAsOutParameter()</p>
+      <p>Defined at line 1112 of file /usr/lib/llvm-16/include/llvm/Support/Error.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D67234F774FA29C349700C9F587BAA6F72EE0B94">ErrorAsOutParameter</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5AB25666D942BF31D97F87D2B41CB7A82C70AAB8">~ErrorAsOutParameter</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OMPThreadPrivateDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OMPThreadPrivateDecl</h1>
+    <p>Defined at line 110 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+    <div>
+      <div>
+        <p> This represents &apos;#pragma omp threadprivate ...&apos; directive. For example, in the following, both &apos;a&apos; and &apos;A::b&apos; are threadprivate:</p>
+      </div>
+    </div>
+    <p>Inherits from OMPDeclarativeDirective&lt;Decl&gt;</p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="2333C687F06A65A0C31A77B1AFB9A3004BF60AE8">Create</h3>
+      <p>
+        public OMPThreadPrivateDecl * Create(ASTContext &amp; C, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="../llvm/ArrayRef.html">ArrayRef</a>
+         VL)
+      </p>
+      <h3 id="0C5406D52FDD29657584B6EC35AAD85EEB314D8D">CreateDeserialized</h3>
+      <p>public OMPThreadPrivateDecl * CreateDeserialized(ASTContext &amp; C, unsigned int ID, unsigned int N)</p>
+      <h3 id="A09BE007242994D610BB33A084A586871AE33D73">varlist_size</h3>
+      <p>public unsigned int varlist_size()</p>
+      <p>Defined at line 143 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="0B964F354DCAC659E1BD6733A099AF2D2785E71E">varlist_empty</h3>
+      <p>public _Bool varlist_empty()</p>
+      <p>Defined at line 144 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="137E467EF4900036B74E418D904DD76A81F905A2">varlists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         varlists()
+      </p>
+      <p>Defined at line 146 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="C33E1B95FE2626901F130C9C0BF6DE2E69B6ED64">varlists</h3>
+      <p>
+        public 
+        <a href="../llvm/iterator_range.html">iterator_range</a>
+         varlists()
+      </p>
+      <p>Defined at line 149 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="E36D01423D329DE9E27F79BCF8C3A2AB4D32E721">varlist_begin</h3>
+      <p>public varlist_iterator varlist_begin()</p>
+      <p>Defined at line 152 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="3596FB364035789EAC0E2E57750BE7C6D74AA7F4">varlist_end</h3>
+      <p>public varlist_iterator varlist_end()</p>
+      <p>Defined at line 153 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="C8FC4A4945E0B012D3417C969BBC8BCA1F32FB32">varlist_begin</h3>
+      <p>public varlist_const_iterator varlist_begin()</p>
+      <p>Defined at line 154 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="8262C4F591DEFB853744AD3E27471728C43A6B8C">varlist_end</h3>
+      <p>public varlist_const_iterator varlist_end()</p>
+      <p>Defined at line 155 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="6201FBABB1BA261CBAA8A22B429BDB48E08EB0FE">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 157 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+      <h3 id="49BABB9B08DF31FACBE525AAD49BFE905F6A98BC">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 158 of file /usr/lib/llvm-16/include/clang/AST/DeclOpenMP.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#2333C687F06A65A0C31A77B1AFB9A3004BF60AE8">Create</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0C5406D52FDD29657584B6EC35AAD85EEB314D8D">CreateDeserialized</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#A09BE007242994D610BB33A084A586871AE33D73">varlist_size</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0B964F354DCAC659E1BD6733A099AF2D2785E71E">varlist_empty</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#137E467EF4900036B74E418D904DD76A81F905A2">varlists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C33E1B95FE2626901F130C9C0BF6DE2E69B6ED64">varlists</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E36D01423D329DE9E27F79BCF8C3A2AB4D32E721">varlist_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3596FB364035789EAC0E2E57750BE7C6D74AA7F4">varlist_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C8FC4A4945E0B012D3417C969BBC8BCA1F32FB32">varlist_begin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8262C4F591DEFB853744AD3E27471728C43A6B8C">varlist_end</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6201FBABB1BA261CBAA8A22B429BDB48E08EB0FE">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#49BABB9B08DF31FACBE525AAD49BFE905F6A98BC">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

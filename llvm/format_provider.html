@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct format_provider</h1>
+    <p>Defined at line 232 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    <div>
+      <div>
+        <p> Implementation of format_provider&lt;T&gt; for characters.</p>
+        <p> The options string of a character type has the grammar:</p>
+        <p>   char_options :: (empty) | [integer_options]</p>
+        <p> If `char_options` is empty, the character is displayed as an ASCII character.  Otherwise, it is treated as an integer options string.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="A8D6CDB7FEBEB91DA80AA95AFDA0E35151DE8387">format</h3>
+      <p>
+        public void format(const char &amp; V, llvm::raw_ostream &amp; Stream, 
+        <a href="StringRef.html">StringRef</a>
+         Style)
+      </p>
+      <p>Defined at line 235 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#A8D6CDB7FEBEB91DA80AA95AFDA0E35151DE8387">format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct format_provider</h1>
+    <p>Defined at line 174 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    <div>
+      <div>
+        <p> Implementation of format_provider&lt;T&gt; for integral pointer types.</p>
+        <p> The options string of a pointer type has the grammar:</p>
+        <p>   pointer_options   :: [style][precision]   style             :: &lt;see table below&gt;   digits            :: &lt;non-negative integer&gt; 0-sizeof(void*)</p>
+        <p>   ==========================================================================   |   S     |     Meaning          |                Example                |   --------------------------------------------------------------------------   |         |                      |       Input       |      Output       |   ==========================================================================   |   x-    | Hex no prefix, lower |    0xDEADBEEF     |     deadbeef      |   |   X-    | Hex no prefix, upper |    0xDEADBEEF     |     DEADBEEF      |   | x+ / x  | Hex + prefix, lower  |    0xDEADBEEF     |    0xdeadbeef     |   | X+ / X  | Hex + prefix, upper  |    0xDEADBEEF     |    0xDEADBEEF     |   | (empty) | Same as X+ / X       |                   |                   |   ==========================================================================</p>
+        <p> The default precision is the number of nibbles in a machine word, and in all cases indicates the minimum number of nibbles to print.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="../llvm/detail/HelperFunctions.html">HelperFunctions</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="F0D0515CCA9F2FF4073DC328E68CA42782357D8C">format</h3>
+      <p>
+        public void format(const T &amp; V, llvm::raw_ostream &amp; Stream, 
+        <a href="StringRef.html">StringRef</a>
+         Style)
+      </p>
+      <p>Defined at line 180 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#F0D0515CCA9F2FF4073DC328E68CA42782357D8C">format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct format_provider</h1>
+    <p>Defined at line 216 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    <div>
+      <div>
+        <p> Implementation of format_provider&lt;T&gt; for llvm::Twine.</p>
+        <p> This follows the same rules as the string formatter.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D7021E7E4F1ABE8E6808808FBCCE3B21A068BF73">format</h3>
+      <p>
+        public void format(const Twine &amp; V, llvm::raw_ostream &amp; Stream, 
+        <a href="StringRef.html">StringRef</a>
+         Style)
+      </p>
+      <p>Defined at line 217 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D7021E7E4F1ABE8E6808808FBCCE3B21A068BF73">format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct format_provider</h1>
+    <p>Defined at line 298 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    <div>
+      <div>
+        <p> Implementation of format_provider&lt;T&gt; for floating point types.</p>
+        <p> The options string of a floating point type has the format:</p>
+        <p>   float_options   :: [style][precision]   style           :: &lt;see table below&gt;   precision       :: &lt;non-negative integer&gt; 0-99</p>
+        <p>   =====================================================   |  style  |     Meaning          |      Example     |   -----------------------------------------------------   |         |                      |  Input |  Output |   =====================================================   | P / p   | Percentage           |  0.05  |  5.00%  |   | F / f   | Fixed point          |   1.0  |  1.00   |   |   E     | Exponential with E   | 100000 | 1.0E+05 |   |   e     | Exponential with e   | 100000 | 1.0e+05 |   | (empty) | Same as F / f        |        |         |   =====================================================</p>
+        <p> The default precision is 6 for exponential (E / e) and 2 for everything else.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="../llvm/detail/HelperFunctions.html">HelperFunctions</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="B2BB29D6FD99B395D7F461F517F64A2B4B7FABA4">format</h3>
+      <p>
+        public void format(const T &amp; V, llvm::raw_ostream &amp; Stream, 
+        <a href="StringRef.html">StringRef</a>
+         Style)
+      </p>
+      <p>Defined at line 302 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B2BB29D6FD99B395D7F461F517F64A2B4B7FABA4">format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct format_provider</h1>
+    <p>Defined at line 125 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    <div>
+      <div>
+        <p> Implementation of format_provider&lt;T&gt; for integral arithmetic types.</p>
+        <p> The options string of an integral type has the grammar:</p>
+        <p>   integer_options   :: [style][digits]   style             :: &lt;see table below&gt;   digits            :: &lt;non-negative integer&gt; 0-99</p>
+        <p>   ==========================================================================   |  style  |     Meaning          |      Example     | Digits Meaning     |   --------------------------------------------------------------------------   |         |                      |  Input |  Output |                    |   ==========================================================================   |   x-    | Hex no prefix, lower |   42   |    2a   | Minimum # digits   |   |   X-    | Hex no prefix, upper |   42   |    2A   | Minimum # digits   |   | x+ / x  | Hex + prefix, lower  |   42   |   0x2a  | Minimum # digits   |   | X+ / X  | Hex + prefix, upper  |   42   |   0x2A  | Minimum # digits   |   | N / n   | Digit grouped number | 123456 | 123,456 | Ignored            |   | D / d   | Integer              | 100000 | 100000  | Ignored            |   | (empty) | Same as D / d        |        |         |                    |   ==========================================================================</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="../llvm/detail/HelperFunctions.html">HelperFunctions</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="33EA0F7B95AAE97D990C483F800844B8950D52AD">format</h3>
+      <p>
+        public void format(const T &amp; V, llvm::raw_ostream &amp; Stream, 
+        <a href="StringRef.html">StringRef</a>
+         Style)
+      </p>
+      <p>Defined at line 131 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#33EA0F7B95AAE97D990C483F800844B8950D52AD">format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct format_provider</h1>
+    <p>Defined at line 112 of file /usr/lib/llvm-16/include/llvm/Support/Chrono.h</p>
+    <div>
+      <div>
+        <p> Implementation of format_provider&lt;T&gt; for duration types.</p>
+        <p> The options string of a duration type has the grammar:</p>
+        <p>   duration_options  ::= [unit][show_unit [number_options]]   unit              ::= `h`|`m`|`s`|`ms|`us`|`ns`   show_unit         ::= `+` | `-`   number_options    ::= options string for a integral or floating point type</p>
+        <p>   Examples   =================================   |  options  | Input | Output    |   =================================   | &quot;&quot;        | 1s    | 1 s       |   | &quot;ms&quot;      | 1s    | 1000 ms   |   | &quot;ms-&quot;     | 1s    | 1000      |   | &quot;ms-n&quot;    | 1s    | 1,000     |   | &quot;&quot;        | 1.0s  | 1.00 s    |   =================================</p>
+        <p>  If the unit of the duration type is not one of the units specified above,  it is still possible to format it, provided you explicitly request a  display unit or you request that the unit is not displayed.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="0380DA6765C3578864FBFABEDA429C4ADCA4D4DB">format</h3>
+      <p>
+        public void format(const Dur &amp; D, llvm::raw_ostream &amp; Stream, 
+        <a href="StringRef.html">StringRef</a>
+         Style)
+      </p>
+      <p>Defined at line 155 of file /usr/lib/llvm-16/include/llvm/Support/Chrono.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#0380DA6765C3578864FBFABEDA429C4ADCA4D4DB">format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct format_provider</h1>
+    <p>Defined at line 262 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    <div>
+      <div>
+        <p> Implementation of format_provider&lt;T&gt; for type `bool`</p>
+        <p> The options string of a boolean type has the grammar:</p>
+        <p>   bool_options :: &quot;&quot; | &quot;Y&quot; | &quot;y&quot; | &quot;D&quot; | &quot;d&quot; | &quot;T&quot; | &quot;t&quot;</p>
+        <p>   ==================================   |    C    |     Meaning          |   ==================================   |    Y    |       YES / NO       |   |    y    |       yes / no       |   |  D / d  |    Integer 0 or 1    |   |    T    |     TRUE / FALSE     |   |    t    |     true / false     |   | (empty) |   Equivalent to &apos;t&apos;  |   ==================================</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="E172D0EB2B62A76F1F0799EDC734D082A8CAEB63">format</h3>
+      <p>
+        public void format(const _Bool &amp; B, llvm::raw_ostream &amp; Stream, 
+        <a href="StringRef.html">StringRef</a>
+         Style)
+      </p>
+      <p>Defined at line 263 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#E172D0EB2B62A76F1F0799EDC734D082A8CAEB63">format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct format_provider</h1>
+    <p>Defined at line 70 of file /usr/lib/llvm-16/include/llvm/Support/Chrono.h</p>
+    <div>
+      <div>
+        <p> Format provider for TimePoint&lt;&gt;</p>
+        <p> The options string is a strftime format string, with extensions:   - %L is millis: 000-999   - %f is micros: 000000-999999   - %N is nanos: 000000000 - 999999999</p>
+        <p> If no options are given, the default format is &quot;%Y-%m-%d %H:%M:%S.%N&quot;.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="9EFAAF4401359B6BD7353DC33A6E760FCB7B1113">format</h3>
+      <p>
+        public void format(const sys::TimePoint&lt;&gt; &amp; TP, llvm::raw_ostream &amp; OS, 
+        <a href="StringRef.html">StringRef</a>
+         Style)
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#9EFAAF4401359B6BD7353DC33A6E760FCB7B1113">format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct format_provider</h1>
+    <p>Defined at line 199 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    <div>
+      <div>
+        <p> Implementation of format_provider&lt;T&gt; for c-style strings and string objects such as std::string and llvm::StringRef.</p>
+        <p> The options string of a string type has the grammar:</p>
+        <p>   string_options :: [length]</p>
+        <p> where `length` is an optional integer specifying the maximum number of characters in the string to print.  If `length` is omitted, the string is printed up to the null terminator.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="5E0ED22CA7F67167C0721D165FD28BEECAD096C1">format</h3>
+      <p>
+        public void format(const T &amp; V, llvm::raw_ostream &amp; Stream, 
+        <a href="StringRef.html">StringRef</a>
+         Style)
+      </p>
+      <p>Defined at line 202 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#5E0ED22CA7F67167C0721D165FD28BEECAD096C1">format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct format_provider</h1>
+    <p>Defined at line 19 of file /usr/lib/llvm-16/include/llvm/Support/FormatVariadicDetails.h</p>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class format_provider</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="llvm" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class format_provider</h1>
+    <p>Defined at line 356 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    <div>
+      <div>
+        <p> Implementation of format_provider&lt;T&gt; for ranges.</p>
+        <p> This will print an arbitrary range as a delimited sequence of items.</p>
+        <p> The options string of a range type has the grammar:</p>
+        <p>   range_style       ::= [separator] [element_style]   separator         ::= &quot;$&quot; delimeted_expr   element_style     ::= &quot;@&quot; delimeted_expr   delimeted_expr    ::= &quot;[&quot; expr &quot;]&quot; | &quot;(&quot; expr &quot;)&quot; | &quot;&lt;&quot; expr &quot;&gt;&quot;   expr              ::= &lt;any string not containing delimeter&gt;</p>
+        <p> where the separator expression is the string to insert between consecutive items in the range and the argument expression is the Style specification to be used when formatting the underlying type.  The default separator if unspecified is &apos; &apos; (space).  The syntax of the argument expression follows whatever grammar is dictated by the format provider or format adapter used to format the value type.</p>
+        <p> Note that attempting to format an `iterator_range&lt;T&gt;` where no format provider can be found for T will result in a compile error.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="8B74B66646CC6880A45683E404CEA810997227B4">format</h3>
+      <p>
+        public void format(const llvm::iterator_range&lt;IterT&gt; &amp; V, llvm::raw_ostream &amp; Stream, 
+        <a href="StringRef.html">StringRef</a>
+         Style)
+      </p>
+      <p>Defined at line 397 of file /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h</p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#8B74B66646CC6880A45683E404CEA810997227B4">format</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>

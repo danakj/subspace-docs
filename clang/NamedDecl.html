@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class NamedDecl</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="clang" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class NamedDecl</h1>
+    <p>Defined at line 247 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    <div>
+      <div>
+        <p> This represents a decl that may have a name.  Many decls have names such as ObjCMethodDecl, but not @class, etc.</p>
+        <p> Note that not every NamedDecl is actually named (e.g., a struct might be anonymous), and not every name is an identifier.</p>
+      </div>
+    </div>
+    <p>
+      Inherits from 
+      <a href="Decl.html">Decl</a>
+    </p>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="6D5486C458937B68A995D1354886917102FD1B13">NamedDecl</h3>
+      <p>
+        protected void NamedDecl(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         DK, DeclContext * DC, 
+        <a href="SourceLocation.html">SourceLocation</a>
+         L, 
+        <a href="DeclarationName.html">DeclarationName</a>
+         N)
+      </p>
+      <p>Defined at line 259 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="99A399A22D3CC3962533FF2C566B2120D23467CD">getIdentifier</h3>
+      <p>public IdentifierInfo * getIdentifier()</p>
+      <p>Defined at line 268 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Get the identifier that names this declaration, if there is one.</p>
+          <p> This will return NULL if this declaration has no name (e.g., for an unnamed class) or if the name is a special name (C++ constructor, Objective-C selector, etc.).</p>
+        </div>
+      </div>
+      <h3 id="884B2943BC682C23CBF21D2C1006225E73F734DF">getName</h3>
+      <p>
+        public 
+        <a href="../llvm/StringRef.html">StringRef</a>
+         getName()
+      </p>
+      <p>Defined at line 274 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Get the name of identifier for this declaration as a StringRef.</p>
+          <p> This requires that the declaration have a name and that it be a simple identifier.</p>
+        </div>
+      </div>
+      <h3 id="2A3C95742EAF2AFF74F24DB722944E9D4B175736">getNameAsString</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getNameAsString()
+      </p>
+      <p>Defined at line 290 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Get a human-readable name for the declaration, even if it is one of the special kinds of names (C++ constructor, Objective-C selector, etc).</p>
+          <p> Creating this name requires expensive string manipulation, so it should be called only when performance doesn&apos;t matter. For simple declarations, getNameAsCString() should suffice.</p>
+          <p> FIXME: This function should be renamed to indicate that it is not just an alternate form of getName(), and clients should move as appropriate.</p>
+          <p> FIXME: Deprecated, move clients to getName().</p>
+        </div>
+      </div>
+      <h3 id="F7F59EE5782CD122F55889691B00E62943DF563A">printName</h3>
+      <p>public void printName(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <div>
+        <div>
+          <p> Pretty-print the unqualified name of this declaration. Can be overloaded by derived classes to provide a more user-friendly name when appropriate.</p>
+        </div>
+      </div>
+      <h3 id="4D95942411043251BFEF8BA43438EF0AD6B72AE1">printName</h3>
+      <p>public void printName(raw_ostream &amp; OS)</p>
+      <div>
+        <div>
+          <p> Calls printName() with the ASTContext printing policy from the decl.</p>
+        </div>
+      </div>
+      <h3 id="57BFD93DB58D1517A8E3342C7549B49542F3D944">getDeclName</h3>
+      <p>
+        public 
+        <a href="DeclarationName.html">DeclarationName</a>
+         getDeclName()
+      </p>
+      <p>Defined at line 313 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Get the actual, stored name of the declaration, which may be a special name.</p>
+          <p> Note that generally in diagnostics, the non-null  itself should be sent into the diagnostic instead of using the result of</p>
+          <p> A  in a diagnostic will just be streamed to the output, which will directly result in a call to </p>
+          <p> A  in a diagnostic will also ultimately result in a call to but with two customisation points along the way ( and  These are used to print the template arguments if any, and to provide a user-friendly name for some entities (such as unnamed variables and anonymous records).</p>
+        </div>
+      </div>
+      <h3 id="6CB69C3BEAC77D27108CB1E7B6F41128666535FA">setDeclName</h3>
+      <p>
+        public void setDeclName(
+        <a href="DeclarationName.html">DeclarationName</a>
+         N)
+      </p>
+      <p>Defined at line 316 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Set the name of this declaration.</p>
+        </div>
+      </div>
+      <h3 id="6E4B421EA9ACDBD7C2F6B9517C0949DBAC4568E1">printQualifiedName</h3>
+      <p>public void printQualifiedName(raw_ostream &amp; OS)</p>
+      <div>
+        <div>
+          <p> Returns a human-readable qualified name for this declaration, like A::B::i, for i being member of namespace A::B.</p>
+          <p> If the declaration is not a member of context which can be named (record, namespace), it will return the same result as printName().</p>
+          <p> Creating this name is expensive, so it should be called only when performance doesn&apos;t matter.</p>
+        </div>
+      </div>
+      <h3 id="FF1A5D2B2B27F5F4B1AFCC5FDABF43AE1ACA357E">printQualifiedName</h3>
+      <p>public void printQualifiedName(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="0E604F91EA0F82B79649D32D9977AA9BF322C243">printNestedNameSpecifier</h3>
+      <p>public void printNestedNameSpecifier(raw_ostream &amp; OS)</p>
+      <div>
+        <div>
+          <p> Print only the nested name specifier part of a fully-qualified name, including the &apos;::&apos; at the end. E.g.    when `printQualifiedName(D)` prints &quot;A::B::i&quot;,    this function prints &quot;A::B::&quot;.</p>
+        </div>
+      </div>
+      <h3 id="5FFB8004F7494D1AB636BE73E7F106B54C6C27AD">printNestedNameSpecifier</h3>
+      <p>public void printNestedNameSpecifier(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy)</p>
+      <h3 id="3EF59449029951D057A82210AF27FB995802189D">getQualifiedNameAsString</h3>
+      <p>
+        public 
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         getQualifiedNameAsString()
+      </p>
+      <div>
+        <div>
+          <p> FIXME: Remove string version.</p>
+        </div>
+      </div>
+      <h3 id="3D213E9FC013D0F800AD07A88CDABDDED5B85BAD">getNameForDiagnostic</h3>
+      <p>public void getNameForDiagnostic(raw_ostream &amp; OS, const PrintingPolicy &amp; Policy, _Bool Qualified)</p>
+      <div>
+        <div>
+          <p> Appends a human-readable name for this declaration into the given stream.</p>
+          <p> This is the method invoked by Sema when displaying a NamedDecl in a diagnostic.  It does not necessarily produce the same result as printName(); for example, class template specializations are printed with their template arguments.</p>
+        </div>
+      </div>
+      <h3 id="4F20E531034088FA36D7DF0530B036E65159398F">declarationReplaces</h3>
+      <p>public _Bool declarationReplaces(NamedDecl * OldD, _Bool IsKnownNewer)</p>
+      <div>
+        <div>
+          <p> Determine whether this declaration, if known to be well-formed within its context, will replace the declaration OldD if introduced into scope.</p>
+          <p> A declaration will replace another declaration if, for example, it is a redeclaration of the same variable or function, but not if it is a declaration of a different kind (function vs. class) or an overloaded function.</p>
+        </div>
+      </div>
+      <h3 id="B9DC1101F6D99F313999D87E5869885F36207D57">hasLinkage</h3>
+      <p>public _Bool hasLinkage()</p>
+      <div>
+        <div>
+          <p> Determine whether this declaration has linkage.</p>
+        </div>
+      </div>
+      <h3 id="C7F9AE9A00D2E624BB4CF30D316E73F2D021AED9">isCXXClassMember</h3>
+      <p>public _Bool isCXXClassMember()</p>
+      <p>Defined at line 369 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Determine whether this declaration is a C++ class member.</p>
+        </div>
+      </div>
+      <h3 id="9659437797A6EE1E70A3C45ABEE191D11ACD23ED">isCXXInstanceMember</h3>
+      <p>public _Bool isCXXInstanceMember()</p>
+      <div>
+        <div>
+          <p> Determine whether the given declaration is an instance member of a C++ class.</p>
+        </div>
+      </div>
+      <h3 id="AEF6448390D95AB085A111CE7A847B9D863DC9A9">isReserved</h3>
+      <p>
+        public 
+        <a href="ReservedIdentifierStatus.html">ReservedIdentifierStatus</a>
+         isReserved(const LangOptions &amp; LangOpts)
+      </p>
+      <div>
+        <div>
+          <p> Determine if the declaration obeys the reserved identifier rules of the given language.</p>
+        </div>
+      </div>
+      <h3 id="68279F27D2E44BC51D3762223A7453C29F6B55B1">getLinkageInternal</h3>
+      <p>
+        public 
+        <a href="Linkage.html">Linkage</a>
+         getLinkageInternal()
+      </p>
+      <div>
+        <div>
+          <p> Determine what kind of linkage this entity has.</p>
+          <p> This is not the linkage as defined by the standard or the codegen notion of linkage. It is just an implementation detail that is used to compute those.</p>
+        </div>
+      </div>
+      <h3 id="9CE4DFC43B8439B36EEA140973812918BDF7AC97">getFormalLinkage</h3>
+      <p>
+        public 
+        <a href="Linkage.html">Linkage</a>
+         getFormalLinkage()
+      </p>
+      <p>Defined at line 398 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Get the linkage from a semantic point of view. Entities in anonymous namespaces are external (in c++98).</p>
+        </div>
+      </div>
+      <h3 id="26B8D45850C0E13CD49A809AB22302C181FE84E8">hasExternalFormalLinkage</h3>
+      <p>public _Bool hasExternalFormalLinkage()</p>
+      <p>Defined at line 403 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if this decl has external linkage.</p>
+        </div>
+      </div>
+      <h3 id="8EE36FD581953D48611C5A1C4326FBEB608588A6">isExternallyVisible</h3>
+      <p>public _Bool isExternallyVisible()</p>
+      <p>Defined at line 407 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="24E7C9A6113247982848A81B73D02BCF265F513F">isExternallyDeclarable</h3>
+      <p>public _Bool isExternallyDeclarable()</p>
+      <p>Defined at line 413 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Determine whether this declaration can be redeclared in a different translation unit.</p>
+        </div>
+      </div>
+      <h3 id="E09FA7E03D4F283F4769989A994028CBBFC251BA">getVisibility</h3>
+      <p>
+        public 
+        <a href="Visibility.html">Visibility</a>
+         getVisibility()
+      </p>
+      <p>Defined at line 418 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Determines the visibility of this entity.</p>
+        </div>
+      </div>
+      <h3 id="1C2A7AFB7A8DE3EC46CFA6CD16C45B7548179127">getLinkageAndVisibility</h3>
+      <p>
+        public 
+        <a href="LinkageInfo.html">LinkageInfo</a>
+         getLinkageAndVisibility()
+      </p>
+      <div>
+        <div>
+          <p> Determines the linkage and visibility of this entity.</p>
+        </div>
+      </div>
+      <h3 id="AD0E7FBCAC43DD4354D51870BB91C6BA370BF389">getExplicitVisibility</h3>
+      <p>
+        public Optional&lt;Visibility&gt; getExplicitVisibility(
+        <a href="../clang/NamedDecl/ExplicitVisibilityKind.html">ExplicitVisibilityKind</a>
+         kind)
+      </p>
+      <div>
+        <div>
+          <p> If visibility was explicitly specified for this declaration, return that visibility.</p>
+        </div>
+      </div>
+      <h3 id="1FC13D72A54423AFC891685EDBB04EFBDCC7571A">isLinkageValid</h3>
+      <p>public _Bool isLinkageValid()</p>
+      <div>
+        <div>
+          <p> True if the computed linkage is valid. Used for consistency checking. Should always return true.</p>
+        </div>
+      </div>
+      <h3 id="1609E581E7DE45F00BEECF264CF5A98DD0F11712">hasLinkageBeenComputed</h3>
+      <p>public _Bool hasLinkageBeenComputed()</p>
+      <p>Defined at line 453 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> True if something has required us to compute the linkage of this declaration.</p>
+          <p> Language features which can retroactively change linkage (like a typedef name for linkage purposes) may need to consider this, but hopefully only in transitory ways during parsing.</p>
+        </div>
+      </div>
+      <h3 id="B7C84A5EE6B5DDB082AE31C2935F6018CA67B522">getUnderlyingDecl</h3>
+      <p>public NamedDecl * getUnderlyingDecl()</p>
+      <p>Defined at line 459 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Looks through UsingDecls and ObjCCompatibleAliasDecls for the underlying named decl.</p>
+        </div>
+      </div>
+      <h3 id="653B9682FC6FC1384FB73B6CCB8CF24EF0480CA5">getUnderlyingDecl</h3>
+      <p>public const NamedDecl * getUnderlyingDecl()</p>
+      <p>Defined at line 469 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="1FF1CD22995031BB254B79B14554F8C63BB90FE3">getMostRecentDecl</h3>
+      <p>public NamedDecl * getMostRecentDecl()</p>
+      <p>Defined at line 473 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="52FC2348B30501546E73DDD46158F3C2621C3F28">getMostRecentDecl</h3>
+      <p>public const NamedDecl * getMostRecentDecl()</p>
+      <p>Defined at line 476 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="9D8B71B0AF1C78EF206A878779DA584A9498941B">getObjCFStringFormattingFamily</h3>
+      <p>
+        public 
+        <a href="ObjCStringFormatFamily.html">ObjCStringFormatFamily</a>
+         getObjCFStringFormattingFamily()
+      </p>
+      <h3 id="9667C6BFDF4C47A1B6175669AB6A2601880DF15D">classof</h3>
+      <p>public _Bool classof(const Decl * D)</p>
+      <p>Defined at line 482 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <h3 id="2C4D5F11C68D36CCA78665E3A27DE0B5B7232F7E">classofKind</h3>
+      <p>
+        public _Bool classofKind(
+        <a href="../clang/Decl/Kind.html">Kind</a>
+         K)
+      </p>
+      <p>Defined at line 483 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+    </div>
+    <h2 id="Enums">Enums</h2>
+    <div>
+      <h3 id="B8E9278F3ED073ECF910DDC6EF39B045CE385A3F">enum ExplicitVisibilityKind</h3>
+      <ul>
+        <li>VisibilityForType</li>
+        <li>VisibilityForValue</li>
+      </ul>
+      <p>Defined at line 426 of file /usr/lib/llvm-16/include/clang/AST/Decl.h</p>
+      <div>
+        <div>
+          <p> Kinds of explicit visibility.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#6D5486C458937B68A995D1354886917102FD1B13">NamedDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#99A399A22D3CC3962533FF2C566B2120D23467CD">getIdentifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#884B2943BC682C23CBF21D2C1006225E73F734DF">getName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2A3C95742EAF2AFF74F24DB722944E9D4B175736">getNameAsString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F7F59EE5782CD122F55889691B00E62943DF563A">printName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4D95942411043251BFEF8BA43438EF0AD6B72AE1">printName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#57BFD93DB58D1517A8E3342C7549B49542F3D944">getDeclName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6CB69C3BEAC77D27108CB1E7B6F41128666535FA">setDeclName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#6E4B421EA9ACDBD7C2F6B9517C0949DBAC4568E1">printQualifiedName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FF1A5D2B2B27F5F4B1AFCC5FDABF43AE1ACA357E">printQualifiedName</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0E604F91EA0F82B79649D32D9977AA9BF322C243">printNestedNameSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5FFB8004F7494D1AB636BE73E7F106B54C6C27AD">printNestedNameSpecifier</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3EF59449029951D057A82210AF27FB995802189D">getQualifiedNameAsString</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3D213E9FC013D0F800AD07A88CDABDDED5B85BAD">getNameForDiagnostic</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4F20E531034088FA36D7DF0530B036E65159398F">declarationReplaces</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B9DC1101F6D99F313999D87E5869885F36207D57">hasLinkage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C7F9AE9A00D2E624BB4CF30D316E73F2D021AED9">isCXXClassMember</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9659437797A6EE1E70A3C45ABEE191D11ACD23ED">isCXXInstanceMember</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AEF6448390D95AB085A111CE7A847B9D863DC9A9">isReserved</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#68279F27D2E44BC51D3762223A7453C29F6B55B1">getLinkageInternal</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9CE4DFC43B8439B36EEA140973812918BDF7AC97">getFormalLinkage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#26B8D45850C0E13CD49A809AB22302C181FE84E8">hasExternalFormalLinkage</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8EE36FD581953D48611C5A1C4326FBEB608588A6">isExternallyVisible</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#24E7C9A6113247982848A81B73D02BCF265F513F">isExternallyDeclarable</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E09FA7E03D4F283F4769989A994028CBBFC251BA">getVisibility</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1C2A7AFB7A8DE3EC46CFA6CD16C45B7548179127">getLinkageAndVisibility</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#AD0E7FBCAC43DD4354D51870BB91C6BA370BF389">getExplicitVisibility</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FC13D72A54423AFC891685EDBB04EFBDCC7571A">isLinkageValid</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1609E581E7DE45F00BEECF264CF5A98DD0F11712">hasLinkageBeenComputed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#B7C84A5EE6B5DDB082AE31C2935F6018CA67B522">getUnderlyingDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#653B9682FC6FC1384FB73B6CCB8CF24EF0480CA5">getUnderlyingDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#1FF1CD22995031BB254B79B14554F8C63BB90FE3">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#52FC2348B30501546E73DDD46158F3C2621C3F28">getMostRecentDecl</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9D8B71B0AF1C78EF206A878779DA584A9498941B">getObjCFStringFormattingFamily</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#9667C6BFDF4C47A1B6175669AB6A2601880DF15D">classof</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2C4D5F11C68D36CCA78665E3A27DE0B5B7232F7E">classofKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#Enums">Enums</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#B8E9278F3ED073ECF910DDC6EF39B045CE385A3F">ExplicitVisibilityKind</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
