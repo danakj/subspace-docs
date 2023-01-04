@@ -1432,14 +1432,14 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "6CE0FE350CC97FB115C68A37728ADE25B13E5309",
+          "USR": "543C2BBC8DA8D0163CB52D3466E398D970A844FC",
           "Name": "BeforeThanCompare",
           "RefType": "record",
           "Path": "clang",
           "Children": []
         },
         {
-          "USR": "543C2BBC8DA8D0163CB52D3466E398D970A844FC",
+          "USR": "6CE0FE350CC97FB115C68A37728ADE25B13E5309",
           "Name": "BeforeThanCompare",
           "RefType": "record",
           "Path": "clang",
@@ -1707,14 +1707,14 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "9CD9B3D55E86FC54FD3D693594898DA3C4C88055",
+          "USR": "2C2F1C7C7649770BD0F11777231F66E72E8B12C3",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
           "Children": []
         },
         {
-          "USR": "ABBA32055538DADB9C946ED9E536646828725DB7",
+          "USR": "C774BEE8D00EA8843B0ED7A7286DF0D4CD8E6CCE",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -1728,69 +1728,6 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "CFF03AA6956DC8E4FB14BD3CD948ECC42C9CBAAD",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "2C2F1C7C7649770BD0F11777231F66E72E8B12C3",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "E6E194C6C352F51B3609B122FCC9C73D4A9355AC",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "FBDA6392E14B16E7B1AC48952BF46A521025F23F",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "B72F60D4ACDC5C10ECD3942FDB81C19334AD5B32",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "15F45AA3E9B1AE57C74385A54AA45AAC686255B9",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "8EECDC6754B6CE37DB04C6F200782ED3FAECDB43",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "BB2592633CE33BBA823909B35FD27D5E80AE74DA",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "62D55542DB394327F03114654EE9FC472CB80FFD",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
           "USR": "406DB67FF3AB8A72EC77F24F4A5838B33AF93716",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
@@ -1798,14 +1735,7 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "7BC3BC84639FDCE153DE95FAF02B29535690AEC5",
-          "Name": "CanProxyAdaptor",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "C774BEE8D00EA8843B0ED7A7286DF0D4CD8E6CCE",
+          "USR": "62D55542DB394327F03114654EE9FC472CB80FFD",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -1826,7 +1756,21 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "A369874C3A4E7F8C72D7B2EEF5D5A608B4B48EE9",
+          "USR": "8EECDC6754B6CE37DB04C6F200782ED3FAECDB43",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "B72F60D4ACDC5C10ECD3942FDB81C19334AD5B32",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "15F45AA3E9B1AE57C74385A54AA45AAC686255B9",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -1840,7 +1784,7 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "933D44954D4E182A1764D02D5D955873089D5E7B",
+          "USR": "FBDA6392E14B16E7B1AC48952BF46A521025F23F",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -1854,14 +1798,28 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "BB4FFEA28F5DE5AE5D2902FA5CCD7DE270F1BC20",
+          "USR": "E6E194C6C352F51B3609B122FCC9C73D4A9355AC",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
           "Children": []
         },
         {
-          "USR": "260FAB9DBBC06312C2060ED024CF0227C40BD46A",
+          "USR": "9CD9B3D55E86FC54FD3D693594898DA3C4C88055",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "ABBA32055538DADB9C946ED9E536646828725DB7",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "BB2592633CE33BBA823909B35FD27D5E80AE74DA",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -1869,6 +1827,27 @@ var JsonIndex = `
         },
         {
           "USR": "E6B71FFEC492A219A22D10E418C6A28793A4385A",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "CFF03AA6956DC8E4FB14BD3CD948ECC42C9CBAAD",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "A369874C3A4E7F8C72D7B2EEF5D5A608B4B48EE9",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "7BC3BC84639FDCE153DE95FAF02B29535690AEC5",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -1897,6 +1876,27 @@ var JsonIndex = `
         },
         {
           "USR": "2E86DD47FEA1A24F50A750C7089E1EBB8C0D34A0",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "260FAB9DBBC06312C2060ED024CF0227C40BD46A",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "BB4FFEA28F5DE5AE5D2902FA5CCD7DE270F1BC20",
+          "Name": "CanProxyAdaptor",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "933D44954D4E182A1764D02D5D955873089D5E7B",
           "Name": "CanProxyAdaptor",
           "RefType": "record",
           "Path": "clang",
@@ -1974,14 +1974,14 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "524B8A9A340EFB01E7C59C4BAEABF06819311276",
+          "USR": "D4800FEE56E4E06E25E3DB8E5E346529DF8D813F",
           "Name": "cast_convert_decl_context",
           "RefType": "record",
           "Path": "clang",
           "Children": []
         },
         {
-          "USR": "D4800FEE56E4E06E25E3DB8E5E346529DF8D813F",
+          "USR": "524B8A9A340EFB01E7C59C4BAEABF06819311276",
           "Name": "cast_convert_decl_context",
           "RefType": "record",
           "Path": "clang",
@@ -5338,7 +5338,7 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "C695B4B610EFC4BBE46E409133415D264597BD8C",
+          "USR": "2DF00CBD042948B2E4818F831D23B5D8335579F6",
           "Name": "IsResultPtrLowBitFree",
           "RefType": "record",
           "Path": "clang",
@@ -5352,21 +5352,21 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "220BBABE473F548BFB63304BBE0B60C06EB949D4",
-          "Name": "IsResultPtrLowBitFree",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
-          "USR": "2DF00CBD042948B2E4818F831D23B5D8335579F6",
-          "Name": "IsResultPtrLowBitFree",
-          "RefType": "record",
-          "Path": "clang",
-          "Children": []
-        },
-        {
           "USR": "A66508DB000731BDD3F61C5B2A916A2F408F6289",
+          "Name": "IsResultPtrLowBitFree",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "C695B4B610EFC4BBE46E409133415D264597BD8C",
+          "Name": "IsResultPtrLowBitFree",
+          "RefType": "record",
+          "Path": "clang",
+          "Children": []
+        },
+        {
+          "USR": "220BBABE473F548BFB63304BBE0B60C06EB949D4",
           "Name": "IsResultPtrLowBitFree",
           "RefType": "record",
           "Path": "clang",
@@ -15148,6 +15148,20 @@ var JsonIndex = `
           "Children": []
         },
         {
+          "USR": "50C0BAAB4F0D46B07C83E7FEBF6ABD71C0CE28F3",
+          "Name": "ErrorHandlerTraits",
+          "RefType": "record",
+          "Path": "llvm",
+          "Children": []
+        },
+        {
+          "USR": "A62F5E2530C578A534FBB23A9A77F0E21A52A760",
+          "Name": "ErrorHandlerTraits",
+          "RefType": "record",
+          "Path": "llvm",
+          "Children": []
+        },
+        {
           "USR": "087F4B14870635D8D34936DF059448996FE47192",
           "Name": "ErrorHandlerTraits",
           "RefType": "record",
@@ -15163,20 +15177,6 @@ var JsonIndex = `
         },
         {
           "USR": "7BF583596236709867A58968003222288E20BAAA",
-          "Name": "ErrorHandlerTraits",
-          "RefType": "record",
-          "Path": "llvm",
-          "Children": []
-        },
-        {
-          "USR": "A62F5E2530C578A534FBB23A9A77F0E21A52A760",
-          "Name": "ErrorHandlerTraits",
-          "RefType": "record",
-          "Path": "llvm",
-          "Children": []
-        },
-        {
-          "USR": "50C0BAAB4F0D46B07C83E7FEBF6ABD71C0CE28F3",
           "Name": "ErrorHandlerTraits",
           "RefType": "record",
           "Path": "llvm",
@@ -15267,13 +15267,6 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "C7682EBC2C9DA7A15703B474F015C1C416B1DA90",
-          "Name": "filter_iterator_impl",
-          "RefType": "record",
-          "Path": "llvm",
-          "Children": []
-        },
-        {
           "USR": "0A48082127DE751E11E462C17883C851201F1BBD",
           "Name": "filter_iterator_impl",
           "RefType": "record",
@@ -15281,7 +15274,14 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "9E9995AC055721B231151762C86FEEE1A7F614F5",
+          "USR": "C7682EBC2C9DA7A15703B474F015C1C416B1DA90",
+          "Name": "filter_iterator_impl",
+          "RefType": "record",
+          "Path": "llvm",
+          "Children": []
+        },
+        {
+          "USR": "B635FE27E2531C5D5B249045549AD95132F0B456",
           "Name": "FirstIndexOfType",
           "RefType": "record",
           "Path": "llvm",
@@ -15295,7 +15295,7 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "B635FE27E2531C5D5B249045549AD95132F0B456",
+          "USR": "9E9995AC055721B231151762C86FEEE1A7F614F5",
           "Name": "FirstIndexOfType",
           "RefType": "record",
           "Path": "llvm",
@@ -15423,14 +15423,14 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "9FD06C81432CFDB49EFDC545A199B1363145B2FF",
+          "USR": "FC13C8A6C56162BD7A9AD4DA3DDD94F1C3B2ED5E",
           "Name": "FoldingSetTrait",
           "RefType": "record",
           "Path": "llvm",
           "Children": []
         },
         {
-          "USR": "65721F12B2F0E941409D4E7AA8DBD29EB652D715",
+          "USR": "9FD06C81432CFDB49EFDC545A199B1363145B2FF",
           "Name": "FoldingSetTrait",
           "RefType": "record",
           "Path": "llvm",
@@ -15444,7 +15444,7 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "FC13C8A6C56162BD7A9AD4DA3DDD94F1C3B2ED5E",
+          "USR": "65721F12B2F0E941409D4E7AA8DBD29EB652D715",
           "Name": "FoldingSetTrait",
           "RefType": "record",
           "Path": "llvm",
@@ -15472,35 +15472,14 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "9947D606FD3968705105104D36A9A5AC5677B10F",
-          "Name": "format_provider",
-          "RefType": "record",
-          "Path": "llvm",
-          "Children": []
-        },
-        {
-          "USR": "2837B3F8D6B8C843EDE11E3A0BA819DCD62BB9BF",
-          "Name": "format_provider",
-          "RefType": "record",
-          "Path": "llvm",
-          "Children": []
-        },
-        {
-          "USR": "CF934084827FECAFA42FAA4F20F77AE9056BFE7B",
-          "Name": "format_provider",
-          "RefType": "record",
-          "Path": "llvm",
-          "Children": []
-        },
-        {
-          "USR": "7C479DCE2A03C6DD263DA0B62F05348A0DA24604",
-          "Name": "format_provider",
-          "RefType": "record",
-          "Path": "llvm",
-          "Children": []
-        },
-        {
           "USR": "ABDC461DFE9FBFFBF802574E67A002CB58DB7B1B",
+          "Name": "format_provider",
+          "RefType": "record",
+          "Path": "llvm",
+          "Children": []
+        },
+        {
+          "USR": "9947D606FD3968705105104D36A9A5AC5677B10F",
           "Name": "format_provider",
           "RefType": "record",
           "Path": "llvm",
@@ -15514,14 +15493,35 @@ var JsonIndex = `
           "Children": []
         },
         {
-          "USR": "56F86C5BA1A08D6E1E526FEB69D28D9F7493CE5E",
+          "USR": "0D8291BE108196F34E43FE4A68531C5EAD3F1911",
           "Name": "format_provider",
           "RefType": "record",
           "Path": "llvm",
           "Children": []
         },
         {
-          "USR": "0D8291BE108196F34E43FE4A68531C5EAD3F1911",
+          "USR": "CF934084827FECAFA42FAA4F20F77AE9056BFE7B",
+          "Name": "format_provider",
+          "RefType": "record",
+          "Path": "llvm",
+          "Children": []
+        },
+        {
+          "USR": "2837B3F8D6B8C843EDE11E3A0BA819DCD62BB9BF",
+          "Name": "format_provider",
+          "RefType": "record",
+          "Path": "llvm",
+          "Children": []
+        },
+        {
+          "USR": "7C479DCE2A03C6DD263DA0B62F05348A0DA24604",
+          "Name": "format_provider",
+          "RefType": "record",
+          "Path": "llvm",
+          "Children": []
+        },
+        {
+          "USR": "56F86C5BA1A08D6E1E526FEB69D28D9F7493CE5E",
           "Name": "format_provider",
           "RefType": "record",
           "Path": "llvm",
