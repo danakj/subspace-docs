@@ -11,89 +11,6 @@
     <h1>class UniversalPrinter</h1>
     <p>
       Defined at line 
-      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#698">698</a>
-       of file 
-      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
-    </p>
-    <div>
-      <div>
-        <p> Remove any const-qualifiers before passing a type to UniversalPrinter.</p>
-      </div>
-    </div>
-    <p>Inherits from UniversalPrinter&lt;T&gt;</p>
-  </div>
-  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
-</main>
-<footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
-</footer>
-<!DOCTYPE html>
-<meta charset="utf-8"/>
-<title>class UniversalPrinter</title>
-<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
-<script src="../../index.js"></script>
-<script src="../../index_json.js"></script>
-<header id="project-title">Subspace</header>
-<main>
-  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
-  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
-    <h1>class UniversalPrinter</h1>
-    <p>
-      Defined at line 
-      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#753">753</a>
-       of file 
-      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
-    </p>
-    <div>
-      <div>
-        <p> Printer for std::variant / absl::variant</p>
-      </div>
-    </div>
-    <h2 id="Functions">Functions</h2>
-    <div>
-      <h3 id="C5262DF5378439C532529A87A794717D423677AB">Print</h3>
-      <p>public void Print(const Variant&lt;T...&gt; &amp; value, ::std::ostream * os)</p>
-      <p>
-        Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#756">756</a>
-         of file 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
-      </p>
-    </div>
-  </div>
-  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
-    <ol>
-      <li>
-        <span>
-          <a href="#Functions">Functions</a>
-        </span>
-        <ul>
-          <li>
-            <span>
-              <a href="#C5262DF5378439C532529A87A794717D423677AB">Print</a>
-            </span>
-          </li>
-        </ul>
-      </li>
-    </ol>
-  </div>
-</main>
-<footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
-</footer>
-<!DOCTYPE html>
-<meta charset="utf-8"/>
-<title>class UniversalPrinter</title>
-<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
-<script src="../../index.js"></script>
-<script src="../../index_json.js"></script>
-<header id="project-title">Subspace</header>
-<main>
-  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
-  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
-    <h1>class UniversalPrinter</h1>
-    <p>
-      Defined at line 
       <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#827">827</a>
        of file 
       <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
@@ -207,6 +124,65 @@
     <h1>class UniversalPrinter</h1>
     <p>
       Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#838">838</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Implements printing a reference type T&amp;.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="7EBEB3CA889AB68E3A6E36F6663F9555DEEC894D">Print</h3>
+      <p>public void Print(const T &amp; value, ::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#845">845</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> MSVC warns about adding const to a function type, so we want to disable the warning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#7EBEB3CA889AB68E3A6E36F6663F9555DEEC894D">Print</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UniversalPrinter</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UniversalPrinter</h1>
+    <p>
+      Defined at line 
       <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#673">673</a>
        of file 
       <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
@@ -270,48 +246,18 @@
     <h1>class UniversalPrinter</h1>
     <p>
       Defined at line 
-      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#838">838</a>
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#698">698</a>
        of file 
       <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
     </p>
     <div>
       <div>
-        <p> Implements printing a reference type T&amp;.</p>
+        <p> Remove any const-qualifiers before passing a type to UniversalPrinter.</p>
       </div>
     </div>
-    <h2 id="Functions">Functions</h2>
-    <div>
-      <h3 id="7EBEB3CA889AB68E3A6E36F6663F9555DEEC894D">Print</h3>
-      <p>public void Print(const T &amp; value, ::std::ostream * os)</p>
-      <p>
-        Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#845">845</a>
-         of file 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
-      </p>
-      <div>
-        <div>
-          <p> MSVC warns about adding const to a function type, so we want to disable the warning.</p>
-        </div>
-      </div>
-    </div>
+    <p>Inherits from UniversalPrinter&lt;T&gt;</p>
   </div>
-  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
-    <ol>
-      <li>
-        <span>
-          <a href="#Functions">Functions</a>
-        </span>
-        <ul>
-          <li>
-            <span>
-              <a href="#7EBEB3CA889AB68E3A6E36F6663F9555DEEC894D">Print</a>
-            </span>
-          </li>
-        </ul>
-      </li>
-    </ol>
-  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
 </main>
 <footer>
   <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
@@ -360,6 +306,60 @@
           <li>
             <span>
               <a href="#F96AF85AD89F6E05DA64EAC3132C1C094411D323">Print</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230103042323+3bbdd9f506c1-1~exp1~20230103042429.660)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class UniversalPrinter</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class UniversalPrinter</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#753">753</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Printer for std::variant / absl::variant</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="C5262DF5378439C532529A87A794717D423677AB">Print</h3>
+      <p>public void Print(const Variant&lt;T...&gt; &amp; value, ::std::ostream * os)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#756">756</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#C5262DF5378439C532529A87A794717D423677AB">Print</a>
             </span>
           </li>
         </ul>
