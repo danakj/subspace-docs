@@ -13,7 +13,7 @@
   <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
 </main>
 <footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230104031257+f841ad30d77e-1~exp1~20230104151358.663)</span>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230105031530+e0ad2af6916a-1~exp1~20230105151621.665)</span>
 </footer>
 <!DOCTYPE html>
 <meta charset="utf-8"/>
@@ -41,7 +41,7 @@
         <p> - `sus_bind0(lambda)` to bind a const lambda which has bound variables that don&apos;t capture state from outside the lambda, such as `[i = 2]() { return i; }`.</p>
         <p> - sus_bind_mut(sus_store(...captures...), lambda)` to bind a mutable lambda which captures variables from local state.</p>
         <p> - `sus_bind0_mut(lambda)` to bind a mutable lambda which has bound variables that don&apos;t capture state from outside the lambda, such as `[i = 2]() { return ++i; }`.</p>
-        <p> Within sus_store(), a varaible name can be wrapped with a helper to capture in different ways:</p>
+        <p> Within sus_store(), a variable name can be wrapped with a helper to capture in different ways:</p>
         <p> - `sus_take(x)` will move `x` into the closure instead of copying it.</p>
         <p> - `sus_unsafe_pointer(x)` will allow capturing a pointer. Otherwise it be disallowed, and it is strongly discouraged as it requires careful present and future understanding of the pointee&apos;s lifetime.</p>
         <p> # Example</p>
@@ -134,7 +134,7 @@
       <div>
         <div>
           <p> Runs the closure.</p>
-          <p> Arguments passed by value to the underlying callable object are always moved. Thus, a const reference, or a mutable lvalue reference will not be accepted here, to prevent an implicit copy from occuring.</p>
+          <p> Arguments passed by value to the underlying callable object are always moved. Thus, a const reference, or a mutable lvalue reference will not be accepted here, to prevent an implicit copy from occurring.</p>
         </div>
       </div>
       <h3 id="F54581E0A687421743ED1ABF37C1C2F571E1E976">operator()</h3>
@@ -148,7 +148,7 @@
       <div>
         <div>
           <p> Runs and consumes the closure.</p>
-          <p> Arguments passed by value to the underlying callable object are always moved. Thus, a const reference, or a mutable lvalue reference will not be accepted here, to prevent an implicit copy from occuring.</p>
+          <p> Arguments passed by value to the underlying callable object are always moved. Thus, a const reference, or a mutable lvalue reference will not be accepted here, to prevent an implicit copy from occurring.</p>
         </div>
       </div>
       <h3 id="3EFDBE4495EC4C93D8CD0B33C8FB3D0D0B00D1A2">from</h3>
@@ -263,5 +263,5 @@
   </div>
 </main>
 <footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230104031257+f841ad30d77e-1~exp1~20230104151358.663)</span>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230105031530+e0ad2af6916a-1~exp1~20230105151621.665)</span>
 </footer>

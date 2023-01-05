@@ -29,7 +29,7 @@
         <div>
           <p> Terminate the program.</p>
           <p> The default behaviour of this function is to abort(). The behaviour of this function can be overridden by defining a `SUS_PROVIDE_PANIC_HANDLER()` macro when compiling the library.</p>
-          <p> # Safety If `SUS_PROVIDE_PANIC_HANDLER()` is defined, the macro _must_ not return of Undefined Behaviour will result.</p>
+          <p> # Safety If `SUS_PROVIDE_PANIC_HANDLER()` is defined, the macro _must_ not return or Undefined Behaviour will result.</p>
         </div>
       </div>
       <h3 id="DAB4944D20228611A774CF51652BDFB3D9293F4C">panic_with_message</h3>
@@ -43,7 +43,7 @@
       <div>
         <div>
           <p> Terminate the program, after printing a message.</p>
-          <p> The default behaviour of this function is to print the message to stderr. The behaviour of this function can be overridden by defining a SUS_PROVIDE_PRINT_PANIC_MESSAGE_HANDLER() macro when compiling the library.</p>
+          <p> The default behaviour of this function is to print the message to stderr. The behaviour of this function can be overridden by defining a `SUS_PROVIDE_PRINT_PANIC_MESSAGE_HANDLER()` macro when compiling the library.</p>
           <p> After printing the message, the function will `panic()`.</p>
         </div>
       </div>
@@ -159,5 +159,5 @@
   </div>
 </main>
 <footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230104031257+f841ad30d77e-1~exp1~20230104151358.663)</span>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230105031530+e0ad2af6916a-1~exp1~20230105151621.665)</span>
 </footer>

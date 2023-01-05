@@ -2533,6 +2533,13 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "187FE12A843BD4F0E7EEA33D5A91F831C368DAAE",
+              "Name": "DoubleSequence",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "6ACBA70B24E33457806E44885FD276B8DFF5D40C",
               "Name": "DoubleSequence",
               "RefType": "record",
@@ -2541,13 +2548,6 @@ var JsonIndex = `
             },
             {
               "USR": "EE97B1D656915D09DDBD29CF050E050DD9883CFE",
-              "Name": "DoubleSequence",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "187FE12A843BD4F0E7EEA33D5A91F831C368DAAE",
               "Name": "DoubleSequence",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2878,14 +2878,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "0589EDC3E1FEAC9580FBF2916727B76598B648FC",
+              "USR": "C034427763D8F13F5C61B383AD2CE9A833C2F89B",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "C034427763D8F13F5C61B383AD2CE9A833C2F89B",
+              "USR": "0589EDC3E1FEAC9580FBF2916727B76598B648FC",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4590,14 +4590,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "5399F96B116B7ACA2187B0515FFF02331476F12E",
+              "USR": "4119006BFAFF0C87B6A92C2D8C06EF3A28B97744",
               "Name": "TuplePrefix",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "4119006BFAFF0C87B6A92C2D8C06EF3A28B97744",
+              "USR": "5399F96B116B7ACA2187B0515FFF02331476F12E",
               "Name": "TuplePrefix",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4625,14 +4625,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "F95B54CBB834ADED12A043F58B85A57FF88BBD26",
+              "USR": "99D8F1467E14F6459EAB36E7BBCC2D18D913B0AE",
               "Name": "TypeParameterizedTest",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "99D8F1467E14F6459EAB36E7BBCC2D18D913B0AE",
+              "USR": "F95B54CBB834ADED12A043F58B85A57FF88BBD26",
               "Name": "TypeParameterizedTest",
               "RefType": "record",
               "Path": "testing/internal",

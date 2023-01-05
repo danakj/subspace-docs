@@ -17,7 +17,7 @@
     </p>
     <div>
       <div>
-        <p> A Tuple is a finate sequence of one or more heterogeneous values.</p>
+        <p> A Tuple is a finite sequence of one or more heterogeneous values.</p>
         <p> # Tail padding The Tuple&apos;s tail padding may be reused when the Tuple is marked as `[[no_unique_address]]`. The Tuple will have tail padding if the first type has a size that is not a multiple of the Tuple&apos;s alignment. For example if it&apos;s smaller than the alignment, such as `Tuple&lt;u8, u64&gt;` which has `(alignof(u64) == sizeof(u64)) - sizeof(u8)` or 7 bytes of tail padding.</p>
         <p> ``` struct S {   [[no_unique_address]] Tuple&lt;u32, u64&gt; tuple;  // 16 bytes.   u32 val;  // 4 bytes. };  // 16 bytes, since `val` is stored inside `tuple`. ```</p>
         <p> However note that this behaviour is compiler-dependent, and MSVC does not use the `[[no_unique_address]]` hint.</p>
@@ -221,5 +221,5 @@
   </div>
 </main>
 <footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230104031257+f841ad30d77e-1~exp1~20230104151358.663)</span>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230105031530+e0ad2af6916a-1~exp1~20230105151621.665)</span>
 </footer>
