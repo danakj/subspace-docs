@@ -2533,13 +2533,6 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "187FE12A843BD4F0E7EEA33D5A91F831C368DAAE",
-              "Name": "DoubleSequence",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
               "USR": "6ACBA70B24E33457806E44885FD276B8DFF5D40C",
               "Name": "DoubleSequence",
               "RefType": "record",
@@ -2548,6 +2541,13 @@ var JsonIndex = `
             },
             {
               "USR": "EE97B1D656915D09DDBD29CF050E050DD9883CFE",
+              "Name": "DoubleSequence",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "187FE12A843BD4F0E7EEA33D5A91F831C368DAAE",
               "Name": "DoubleSequence",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2878,14 +2878,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "C034427763D8F13F5C61B383AD2CE9A833C2F89B",
+              "USR": "BEEF38BEBCF27134D7EB2F985475D5F895E23390",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "0589EDC3E1FEAC9580FBF2916727B76598B648FC",
+              "USR": "C034427763D8F13F5C61B383AD2CE9A833C2F89B",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2927,7 +2927,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "BEEF38BEBCF27134D7EB2F985475D5F895E23390",
+              "USR": "0589EDC3E1FEAC9580FBF2916727B76598B648FC",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
