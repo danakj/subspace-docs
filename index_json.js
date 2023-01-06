@@ -2878,7 +2878,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "0589EDC3E1FEAC9580FBF2916727B76598B648FC",
+              "USR": "BEEF38BEBCF27134D7EB2F985475D5F895E23390",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2927,7 +2927,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "BEEF38BEBCF27134D7EB2F985475D5F895E23390",
+              "USR": "0589EDC3E1FEAC9580FBF2916727B76598B648FC",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4257,14 +4257,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "62D239440E6A75A32B12B5608A15F7D760DD7F45",
+              "USR": "8A5C1B652B3C37C73A4C2359B7F9D15052D28722",
               "Name": "SignatureOf",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "8A5C1B652B3C37C73A4C2359B7F9D15052D28722",
+              "USR": "62D239440E6A75A32B12B5608A15F7D760DD7F45",
               "Name": "SignatureOf",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4314,13 +4314,6 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "F44E0877D9657F5F5D41E2E26F415889B421FBB7",
-              "Name": "StlContainerView",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
               "USR": "93A4F0575EAE5AD69F0A21BD716A75C5333DA2E7",
               "Name": "StlContainerView",
               "RefType": "record",
@@ -4329,6 +4322,13 @@ var JsonIndex = `
             },
             {
               "USR": "6BF3763DF8D824529AB39AECBF192DCF1EA76197",
+              "Name": "StlContainerView",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "F44E0877D9657F5F5D41E2E26F415889B421FBB7",
               "Name": "StlContainerView",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4399,14 +4399,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "5C7E632F246357E74AF376BF374692D976171B02",
+              "USR": "3DC0315F9F0D658C138A9CBAE74211829710742F",
               "Name": "Templates",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "3DC0315F9F0D658C138A9CBAE74211829710742F",
+              "USR": "5C7E632F246357E74AF376BF374692D976171B02",
               "Name": "Templates",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4590,14 +4590,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "4119006BFAFF0C87B6A92C2D8C06EF3A28B97744",
+              "USR": "5399F96B116B7ACA2187B0515FFF02331476F12E",
               "Name": "TuplePrefix",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "5399F96B116B7ACA2187B0515FFF02331476F12E",
+              "USR": "4119006BFAFF0C87B6A92C2D8C06EF3A28B97744",
               "Name": "TuplePrefix",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4625,14 +4625,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "99D8F1467E14F6459EAB36E7BBCC2D18D913B0AE",
+              "USR": "F95B54CBB834ADED12A043F58B85A57FF88BBD26",
               "Name": "TypeParameterizedTest",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "F95B54CBB834ADED12A043F58B85A57FF88BBD26",
+              "USR": "99D8F1467E14F6459EAB36E7BBCC2D18D913B0AE",
               "Name": "TypeParameterizedTest",
               "RefType": "record",
               "Path": "testing/internal",
