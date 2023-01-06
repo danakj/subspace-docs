@@ -4257,14 +4257,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "8A5C1B652B3C37C73A4C2359B7F9D15052D28722",
+              "USR": "62D239440E6A75A32B12B5608A15F7D760DD7F45",
               "Name": "SignatureOf",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "62D239440E6A75A32B12B5608A15F7D760DD7F45",
+              "USR": "8A5C1B652B3C37C73A4C2359B7F9D15052D28722",
               "Name": "SignatureOf",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4314,6 +4314,13 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "F44E0877D9657F5F5D41E2E26F415889B421FBB7",
+              "Name": "StlContainerView",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "93A4F0575EAE5AD69F0A21BD716A75C5333DA2E7",
               "Name": "StlContainerView",
               "RefType": "record",
@@ -4322,13 +4329,6 @@ var JsonIndex = `
             },
             {
               "USR": "6BF3763DF8D824529AB39AECBF192DCF1EA76197",
-              "Name": "StlContainerView",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "F44E0877D9657F5F5D41E2E26F415889B421FBB7",
               "Name": "StlContainerView",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4399,14 +4399,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "3DC0315F9F0D658C138A9CBAE74211829710742F",
+              "USR": "5C7E632F246357E74AF376BF374692D976171B02",
               "Name": "Templates",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "5C7E632F246357E74AF376BF374692D976171B02",
+              "USR": "3DC0315F9F0D658C138A9CBAE74211829710742F",
               "Name": "Templates",
               "RefType": "record",
               "Path": "testing/internal",
