@@ -164,7 +164,22 @@ var JsonIndex = `
       "Name": "GlobalNamespace",
       "RefType": "namespace",
       "Path": "GlobalNamespace",
-      "Children": []
+      "Children": [
+        {
+          "USR": "2A99F1AC425144637D09A33131F44806D37AC793",
+          "Name": "CMathMacros_Inf_Test",
+          "RefType": "record",
+          "Path": "GlobalNamespace",
+          "Children": []
+        },
+        {
+          "USR": "78EBAC6659D6302E476B4ADF93BF7D8DE225653C",
+          "Name": "CMathMacros_Nan_Test",
+          "RefType": "record",
+          "Path": "GlobalNamespace",
+          "Children": []
+        }
+      ]
     },
     {
       "USR": "BBC234F7D5D8F8AF9099775F69144680FAC8D932",
