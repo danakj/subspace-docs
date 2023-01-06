@@ -2878,7 +2878,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "BEEF38BEBCF27134D7EB2F985475D5F895E23390",
+              "USR": "0589EDC3E1FEAC9580FBF2916727B76598B648FC",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2927,7 +2927,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "0589EDC3E1FEAC9580FBF2916727B76598B648FC",
+              "USR": "BEEF38BEBCF27134D7EB2F985475D5F895E23390",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
