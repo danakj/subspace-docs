@@ -77,7 +77,7 @@
       <p>size_t data_size_of()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/size_of.h#106">106</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/size_of.h#110">110</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/size_of.h">size_of.h</a>
       </p>
@@ -85,6 +85,7 @@
         <div>
           <p> Returns the data size of the type T.</p>
           <p> This is the number of bytes for the type excluding any tail padding, which is the number of bytes that can be memcpy&apos;d into the type without potentially overwriting other objects. This is due to the fact that other objects can be placed inside tail padding of an object in some scenarios.</p>
+          <p> Returns 0 for types where the tail padding can not be determined. In particular this is the case for union types unless and until compilers provide additional support to determine the maximum data size of all union members.</p>
           <p> From :</p>
           <p> If type `T` has padding at its end, such as: ``` class T { i64 a; i32 b; }; ```</p>
           <p> Then there are two ways for another type to place a field inside the padding adjacent to `b` and inside area allocated for `sizeof(T)`:</p>
@@ -93,14 +94,13 @@
           <p> 2. A class with a `[[no_unique_address]]` field may insert other fields below it into the padding of the `[[no_unique_address]]` field.</p>
           <p> So a class that contains `T` as a field can insert another field into `T`: ``` class S { [[no_unique_address]] T t; i32 c; }; ``` In this example, `sizeof(S) == sizeof(T)` because `c` sits inside the trailing padding of `T`.</p>
           <p> So the dsizeof(T) algorithm [to determine how much to memcpy safely] is something like:</p>
-          <p> * A: find out how many bytes fit into the padding via inheritance (`struct S : T { bytes }` for all `bytes` until `sizeof(T) != sizeof(S)`). * B: find out how many bytes fit into the padding via no_unique_address (`struct S { [[no_unique_address]] T x; bytes }` for all `bytes` until `sizeof(T) != sizeof(S)`).</p>
+          <p> * A: find out how many bytes fit into the padding via inheritance   (`struct S : T { bytes }` for all `bytes` until   `sizeof(T) != sizeof(S)`). * B: find out how many bytes fit into the padding via no_unique_address   (`struct S { [[no_unique_address]] T x; bytes }` for all `bytes` until   `sizeof(T) != sizeof(S)`).</p>
           <p> ``` return sizeof(T) - max(A, B) ```</p>
           <p> And I think on every known platform, A == B. It might even be guaranteed by the standard, but I wouldn&apos;t know how to check.</p>
           <p> From :</p>
-          <p> On MSVC 19, an empty class has size 1, but with the above formula: * A = 1, as the 1 byte gets reused by a subclass. * B = 0, as [[no_unique_address]] does not reuse the one byte of the empty class.</p>
+          <p> On MSVC 19, an empty class has size 1, but with the above formula: * A = 1, as the 1 byte gets reused by a subclass. * B = 0, as [[no_unique_address]] does not reuse the one byte of the empty   class.</p>
           <p> The result is that the data_size_of&lt;T&gt; should be 0, since the 1 byte _can_ be reused.</p>
-          <p> In general, [[no_unique_address]] doesn&apos;t appear to do anything on MSVC, and subclasses also do not use padding bytes of the base class, with the exception of the base class being empty.</p>
-          <p> Disallows calls with a reference type, since C++ does a surprising thing, where `sizeof(T&amp;) == sizeof(T)`.</p>
+          <p> In general, [[no_unique_address]] and [[msvc::no_unique_address]] doesn&apos;t appear do anything on MSVC 19, and subclasses also do not use padding bytes of the base class, with the exception of the base class being empty.</p>
         </div>
       </div>
       <h3 id="FF0D5A3C0564987736257DA16300BD6F609482FA">clone</h3>
