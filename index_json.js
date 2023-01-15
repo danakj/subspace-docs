@@ -3400,14 +3400,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "C4F082B4F22C89B1797BE7E21854CBA5D909A397",
+              "USR": "5C489108EA99A19FB0DAB88960C95B2CC1D166A5",
               "Name": "KindOf",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "5C489108EA99A19FB0DAB88960C95B2CC1D166A5",
+              "USR": "C4F082B4F22C89B1797BE7E21854CBA5D909A397",
               "Name": "KindOf",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4272,14 +4272,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "62D239440E6A75A32B12B5608A15F7D760DD7F45",
+              "USR": "3F8F98E62BDD2DDF3FB08434D929B7E0149F21AF",
               "Name": "SignatureOf",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "3F8F98E62BDD2DDF3FB08434D929B7E0149F21AF",
+              "USR": "62D239440E6A75A32B12B5608A15F7D760DD7F45",
               "Name": "SignatureOf",
               "RefType": "record",
               "Path": "testing/internal",
