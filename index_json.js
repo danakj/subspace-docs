@@ -4272,14 +4272,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "3F8F98E62BDD2DDF3FB08434D929B7E0149F21AF",
+              "USR": "62D239440E6A75A32B12B5608A15F7D760DD7F45",
               "Name": "SignatureOf",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "62D239440E6A75A32B12B5608A15F7D760DD7F45",
+              "USR": "3F8F98E62BDD2DDF3FB08434D929B7E0149F21AF",
               "Name": "SignatureOf",
               "RefType": "record",
               "Path": "testing/internal",
