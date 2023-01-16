@@ -292,49 +292,11 @@
           <p> The function will panic with the given message if the Option&apos;s state is currently `None`.</p>
         </div>
       </div>
-      <h3 id="1382D3763169307F430E392D1287B62E2C29832A">expect_ref</h3>
-      <p>public const std::remove_reference_t&lt;T&gt; &amp; expect_ref(const char * msg)</p>
-      <p>
-        Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#344">344</a>
-         of file 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
-      </p>
-      <div>
-        <div>
-          <p> Returns a const reference to the contained value inside the Option.</p>
-          <p> This is a shortcut for `option.as_ref().expect()`.</p>
-          <p> The function will panic with the given message if the Option&apos;s state is currently `None`.</p>
-        </div>
-      </div>
-      <h3 id="0842FD5951DD6F6500E9AAFE6F0592EE336E511A">expect_ref</h3>
-      <p>public const T &amp; expect_ref()</p>
-      <p>
-        Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#351">351</a>
-         of file 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
-      </p>
-      <h3 id="B0D123FF2849C545ADE6B017AAC0BC81860A52F9">expect_mut</h3>
-      <p>public T &amp; expect_mut(const char * msg)</p>
-      <p>
-        Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#359">359</a>
-         of file 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
-      </p>
-      <div>
-        <div>
-          <p> Returns a mutable reference to the contained value inside the Option.</p>
-          <p> This is a shortcut for `option.as_mut().expect()`.</p>
-          <p> The function will panic with the given message if the Option&apos;s state is currently `None`.</p>
-        </div>
-      </div>
       <h3 id="D61AC3DA2F04723B931CB4359D17C63F1AF8BF81">unwrap</h3>
       <p>public T unwrap()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#370">370</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#342">342</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -352,7 +314,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#383">383</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#355">355</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -363,49 +325,73 @@
           <p> It is Undefined Behaviour to call this function when the Option&apos;s state is `None`. The caller is responsible for ensuring the Option contains a value beforehand, and the safer &lt;unwrap&gt;() or &lt;expect&gt;() should almost always be preferred.</p>
         </div>
       </div>
-      <h3 id="6E539AA2E7C74DCE45504AFC208073A99618FA16">unwrap_ref</h3>
-      <p>public const std::remove_reference_t&lt;T&gt; &amp; unwrap_ref()</p>
+      <h3 id="BF315E8D8F39D13868DC09957C26D0C283EA7B2C">operator*</h3>
+      <p>public const std::remove_reference_t&lt;T&gt; &amp; operator*()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#394">394</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#386">386</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
       <div>
         <div>
-          <p> Returns a const reference to the contained value inside the Option.</p>
-          <p> This is a shortcut for `option.as_ref().unwrap()`.</p>
+          <p> Returns a reference to the contained value inside the Option.</p>
+          <p> The reference is const if the Option is const, and is mutable otherwise. This method allows calling methods directly on the type inside the Option without unwrapping.</p>
+          <p> # Panic</p>
           <p> The function will panic without a message if the Option&apos;s state is currently `None`.</p>
+          <p> # Implementation Notes</p>
+          <p> Implementation note: We don&apos;t allow calling this method on rvalue types, it would allow a reference to the inner object to escape from an rvalue in an unbounded way. When passing an rvalue as a function argument, `Option::unwrap()` does the right thing already and will convert to a reference implicitly.</p>
+          <p> Implementation note: This method is added in addition to the Rust Option API because: * C++ moving is verbose, making unwrap() on lvalues loud. * Unwrapping requires a new lvalue name since C++ doesn&apos;t allow name   reuse, making variable names bad. * It&apos;s expected due to std::optional and general container-of-one things   to provide access through operator* and operator-&gt;.</p>
         </div>
       </div>
-      <h3 id="E879E690B54C13553B90A136BABB3864CECC97CF">unwrap_ref</h3>
-      <p>public const std::remove_reference_t&lt;T&gt; &amp; unwrap_ref()</p>
+      <h3 id="6F1C0FC00E34E6A1525D6E61632E69FC02A5F5FF">operator*</h3>
+      <p>public const std::remove_reference_t&lt;T&gt; * operator*()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#398">398</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#390">390</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
-      <h3 id="F9EFCFF2A17BAB5CC18A69E30503A57B931C2D75">unwrap_mut</h3>
-      <p>public T &amp; unwrap_mut()</p>
+      <h3 id="7BE966844B676B4AD59BBB4CC044CF0952F8A18E">operator*</h3>
+      <p>public std::remove_reference_t&lt;T&gt; &amp; operator*()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#406">406</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#391">391</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
+      </p>
+      <h3 id="F86D39A3A728CA3F578E16F18B523F3FB3EFC247">operator-&gt;</h3>
+      <p>public const std::remove_reference_t&lt;T&gt; * operator-&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#421">421</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
       <div>
         <div>
-          <p> Returns a mutable reference to the contained value inside the Option.</p>
-          <p> This is a shortcut for `option.as_mut().unwrap()`.</p>
+          <p> Returns a pointer to the contained value inside the Option.</p>
+          <p> The pointer is const if the Option is const, and is mutable otherwise. This method allows calling methods directly on the type inside the Option without unwrapping.</p>
+          <p> # Panic</p>
           <p> The function will panic without a message if the Option&apos;s state is currently `None`.</p>
+          <p> # Implementation Notes</p>
+          <p> Implementation note: We don&apos;t allow calling this method on rvalue types, it would allow a pointer to the inner object to escape from an rvalue. When using an rvalue, `Option::unwrap()` does the right thing already and will give access to the fields and methods of the inner type.</p>
+          <p> Implementation note: This method is added in addition to the Rust Option API because: * C++ moving is verbose, making unwrap() on lvalues loud. * Unwrapping requires a new lvalue name since C++ doesn&apos;t allow name   reuse, making variable names bad. * It&apos;s expected due to std::optional and general container-of-one things   to provide access through operator* and operator-&gt;.</p>
         </div>
       </div>
+      <h3 id="173D86145AFC5DADA192BA41B96FBB8B4C0F9CAF">operator-&gt;</h3>
+      <p>public std::remove_reference_t&lt;T&gt; * operator-&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#424">424</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
+      </p>
       <h3 id="3F7EEBC36D7006EC1AE57362F4140A0FE60199F9">unwrap_or</h3>
       <p>public T unwrap_or(T default_result)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#417">417</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#436">436</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -419,7 +405,7 @@
       <p>public T unwrap_or_else(Functor f)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#429">429</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#448">448</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -432,7 +418,7 @@
       <p>public T unwrap_or_default()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#442">442</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#461">461</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -446,7 +432,7 @@
       <p>public T &amp; insert(T t)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#454">454</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#473">473</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -459,7 +445,7 @@
       <p>public T &amp; get_or_insert(T t)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#467">467</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#486">486</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -473,7 +459,7 @@
       <p>public T &amp; get_or_insert_default()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#488">488</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#507">507</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -489,7 +475,7 @@
       <p>public T &amp; get_or_insert_with(WithFn f)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#503">503</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#522">522</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -507,7 +493,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#514">514</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#533">533</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -521,7 +507,7 @@
       <p>public Option&lt;R&gt; map(MapFn m)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#530">530</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#549">549</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -536,7 +522,7 @@
       <p>public R map_or(D default_result, MapFn m)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#548">548</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#567">567</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -551,7 +537,7 @@
       <p>public R map_or_else(DefaultFn default_fn, MapFn m)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#568">568</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#587">587</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -570,7 +556,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#584">584</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#603">603</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -584,7 +570,7 @@
       <p>public Option&lt;U&gt; and_opt(Option&lt;U&gt; opt)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#601">601</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#620">620</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -597,7 +583,7 @@
       <p>public Option&lt;InnerR&gt; and_then(AndFn f)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#619">619</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#638">638</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -617,7 +603,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#628">628</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#647">647</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -634,7 +620,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#639">639</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#658">658</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -653,7 +639,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#649">649</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#668">668</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -666,7 +652,7 @@
       <p>public Result ok_or(E e)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#675">675</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#694">694</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -681,7 +667,7 @@
       <p>public Result ok_or_else(ElseFn f)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#690">690</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#709">709</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -695,7 +681,7 @@
       <p>public Result transpose()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#710">710</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#729">729</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -709,7 +695,7 @@
       <p>public Option&lt;Tuple&gt; zip(Option&lt;U&gt; o)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#729">729</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#748">748</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -723,7 +709,7 @@
       <p>public auto unzip()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#750">750</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#769">769</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -742,7 +728,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#768">768</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#787">787</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -755,7 +741,7 @@
       <p>public Option&lt;std::remove_reference_t&lt;T&gt; &gt; copied()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#780">780</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#799">799</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -768,7 +754,7 @@
       <p>public Option&lt;std::remove_reference_t&lt;T&gt; &gt; cloned()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#790">790</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#809">809</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -781,7 +767,7 @@
       <p>public T flatten()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#804">804</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#823">823</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -794,41 +780,49 @@
       <p>public Option&lt;const std::remove_reference_t&lt;T&gt; &amp;&gt; as_ref()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#815">815</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#840">840</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
       <div>
         <div>
           <p> Returns an Option&lt;const T&amp;&gt; from this Option&lt;T&gt;, that either holds #None or a reference to the value in this Option.</p>
+          <p> When not holding a `sus::mem::NeverValueField` type, the method can be evaluated in a constant expression.</p>
+          <p> Not constexpr as it needs to read the state of the value which can&apos;t be done if `T` is `NeverValueField`.</p>
         </div>
       </div>
       <h3 id="F16D841AE219A09AFDD9810112FFABBA0D4EA019">as_ref</h3>
       <p>public Option&lt;const std::remove_reference_t&lt;T&gt; &amp;&gt; as_ref()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#821">821</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#849">849</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
+      <div>
+        <div>
+          <p> Calling as_ref() on an rvalue is not returning a reference to the inner value if the inner value is already a reference, so we allow calling it on an rvalue Option in that case.</p>
+        </div>
+      </div>
       <h3 id="5C04AC550ADAFDE3A526F7A15683E61A23B91EC5">as_mut</h3>
       <p>public Option&lt;T &amp;&gt; as_mut()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#825">825</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#860">860</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
       <div>
         <div>
           <p> Returns an Option&lt;T&amp;&gt; from this Option&lt;T&gt;, that either holds #None or a reference to the value in this Option.</p>
+          <p> Not constexpr as it needs to read the state of the value which can&apos;t be done if `T` is `NeverValueField`.</p>
         </div>
       </div>
       <h3 id="B1C60E17D0CBF71C920477593DDD02FB9B82E0C5">iter</h3>
       <p>public Iterator&lt;Once&lt;const std::remove_reference_t&lt;T&gt; &amp;&gt; &gt; iter()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#832">832</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#867">867</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -836,7 +830,7 @@
       <p>public Iterator&lt;Once&lt;const T &amp;&gt; &gt; iter()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#836">836</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#871">871</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -844,7 +838,7 @@
       <p>public Iterator&lt;Once&lt;T &amp;&gt; &gt; iter_mut()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#838">838</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#873">873</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -852,7 +846,7 @@
       <p>public Iterator&lt;Once&lt;T&gt; &gt; into_iter()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#842">842</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h#877">877</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/option/option.h">option.h</a>
       </p>
@@ -952,21 +946,6 @@
           </li>
           <li>
             <span>
-              <a href="#1382D3763169307F430E392D1287B62E2C29832A">expect_ref</a>
-            </span>
-          </li>
-          <li>
-            <span>
-              <a href="#0842FD5951DD6F6500E9AAFE6F0592EE336E511A">expect_ref</a>
-            </span>
-          </li>
-          <li>
-            <span>
-              <a href="#B0D123FF2849C545ADE6B017AAC0BC81860A52F9">expect_mut</a>
-            </span>
-          </li>
-          <li>
-            <span>
               <a href="#D61AC3DA2F04723B931CB4359D17C63F1AF8BF81">unwrap</a>
             </span>
           </li>
@@ -977,17 +956,27 @@
           </li>
           <li>
             <span>
-              <a href="#6E539AA2E7C74DCE45504AFC208073A99618FA16">unwrap_ref</a>
+              <a href="#BF315E8D8F39D13868DC09957C26D0C283EA7B2C">operator*</a>
             </span>
           </li>
           <li>
             <span>
-              <a href="#E879E690B54C13553B90A136BABB3864CECC97CF">unwrap_ref</a>
+              <a href="#6F1C0FC00E34E6A1525D6E61632E69FC02A5F5FF">operator*</a>
             </span>
           </li>
           <li>
             <span>
-              <a href="#F9EFCFF2A17BAB5CC18A69E30503A57B931C2D75">unwrap_mut</a>
+              <a href="#7BE966844B676B4AD59BBB4CC044CF0952F8A18E">operator*</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F86D39A3A728CA3F578E16F18B523F3FB3EFC247">operator-&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#173D86145AFC5DADA192BA41B96FBB8B4C0F9CAF">operator-&gt;</a>
             </span>
           </li>
           <li>
