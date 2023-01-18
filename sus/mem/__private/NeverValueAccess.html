@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct NeverValueAccess</title>
+<link rel="stylesheet" href="../../../clang-doc-default-stylesheet.css"/>
+<script src="../../../index.js"></script>
+<script src="../../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="sus/mem/__private" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct NeverValueAccess</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h#54">54</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h">never_value.h</a>
+    </p>
+    <div>
+      <div>
+        <p> A helper class that constructs and holds a NeverValueField type T.</p>
+        <p> Default-constructing NeverValueAccess will trivially default construct T. The caller should then set the never-value with `set_never_value()`.</p>
+        <p> The other constructors allow constructing the T from a parameter (typically a const T&amp; or T&amp;&amp;).</p>
+        <p> Provides methods to see if the T is in the never-value state or not, and to set the never-value field to: * the never-value, after trivial default construction. * the destroy-value before destroying it from the never-value state.</p>
+        <p> # Why trivial default construction?</p>
+        <p> NeverValueAccess requires that `T` is trivially default constructible because the spec requires this for initializing a union member through assignment (some discussion here: https://github.com/llvm/llvm-project/issues/50604).</p>
+        <p> We use assignment to initialize a union member with a NeverValueAccess to implement changing to a never-value state without placement new, which is not possible in a constant expression.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D974DBB38DF0893DFE1EE8E146DA28B7C93608C1">NeverValueAccess&lt;T&gt;</h3>
+      <p>public void NeverValueAccess&lt;T&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h#59">59</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h">never_value.h</a>
+      </p>
+      <h3 id="E0D09C4242E54C217403A665D19546DACC0EFFF6">NeverValueAccess&lt;T&gt;</h3>
+      <p>public void NeverValueAccess&lt;T&gt;(U &amp;&amp;... v)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h#62">62</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h">never_value.h</a>
+      </p>
+      <h3 id="E05400A432FF42BD5F9680982F0FD7273C22A1E2">is_constructed</h3>
+      <p>public _Bool is_constructed()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h#66">66</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h">never_value.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Checks if the never-value field is set to the never-value, returning false if it is.</p>
+        </div>
+      </div>
+      <h3 id="BD1EF2CB9C0922CE42FF0E724A95177AE5293E19">set_never_value</h3>
+      <p>
+        public void set_never_value(
+        <a href="../../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         )
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h#73">73</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h">never_value.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Sets the never-value field to the never-value.</p>
+        </div>
+      </div>
+      <h3 id="28002497717223220AC9121D4710323280520423">set_destroy_value</h3>
+      <p>
+        public void set_destroy_value(
+        <a href="../../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         )
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h#81">81</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h">never_value.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Sets the never-value field to the destroy-value.</p>
+        </div>
+      </div>
+      <h3 id="8290BBB721465B097AC32875E7D1E20FC933CC59">as_inner</h3>
+      <p>public const T &amp; as_inner()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h#88">88</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h">never_value.h</a>
+      </p>
+      <h3 id="8A668A5C36EED4577F399E845EE358804E5503C8">as_inner_mut</h3>
+      <p>public T &amp; as_inner_mut()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h#89">89</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/never_value.h">never_value.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D974DBB38DF0893DFE1EE8E146DA28B7C93608C1">NeverValueAccess&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E0D09C4242E54C217403A665D19546DACC0EFFF6">NeverValueAccess&lt;T&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E05400A432FF42BD5F9680982F0FD7273C22A1E2">is_constructed</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BD1EF2CB9C0922CE42FF0E724A95177AE5293E19">set_never_value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#28002497717223220AC9121D4710323280520423">set_destroy_value</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8290BBB721465B097AC32875E7D1E20FC933CC59">as_inner</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#8A668A5C36EED4577F399E845EE358804E5503C8">as_inner_mut</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230116031321+5ab0894fd570-1~exp1~20230116151419.689)</span>
+</footer>
