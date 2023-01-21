@@ -230,7 +230,7 @@
       <p>T take(T &amp; t)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/take.h#38">38</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/take.h#39">39</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/take.h">take.h</a>
       </p>
@@ -248,13 +248,31 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/take.h#51">51</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/take.h#52">52</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/take.h">take.h</a>
       </p>
       <div>
         <div>
           <p> Moves from `t` and destroys the object at `t`. Returns the old value of `t`.</p>
+          <p> SAFETY: This does *not* re-construct the object pointed to by `t`. It must not be used (or destructed again) afterward.</p>
+        </div>
+      </div>
+      <h3 id="FBF98C7F740CDEA9F576C1E2204EA69FAE3F6B5F">take_copy_and_destruct</h3>
+      <p>
+        T take_copy_and_destruct(
+        <a href="../../sus/marker/UnsafeFnMarker.html">UnsafeFnMarker</a>
+         , const T &amp; t)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/take.h#70">70</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/mem/take.h">take.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Copies from `t` and destroys the object at `t`. Returns the old value of `t`.</p>
           <p> SAFETY: This does *not* re-construct the object pointed to by `t`. It must not be used (or destructed again) afterward.</p>
         </div>
       </div>
@@ -404,6 +422,11 @@
           <li>
             <span>
               <a href="#C9DA92812C3B45B7155EE8F6D26FA63EEA4C0E6B">take_and_destruct</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FBF98C7F740CDEA9F576C1E2204EA69FAE3F6B5F">take_copy_and_destruct</a>
             </span>
           </li>
           <li>

@@ -11,7 +11,7 @@
     <h1>class Result</h1>
     <p>
       Defined at line 
-      <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#66">66</a>
+      <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#67">67</a>
        of file 
       <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
     </p>
@@ -30,7 +30,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#77">77</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#78">78</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -47,7 +47,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#83">83</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#84">84</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -64,7 +64,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#90">90</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#91">91</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -81,7 +81,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#96">96</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#97">97</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -98,7 +98,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#108">108</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#109">109</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -112,7 +112,7 @@
       <p>public void ~Result&lt;T, E&gt;()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#127">127</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#128">128</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -126,11 +126,37 @@
           <p> If T and E can be trivially destroyed, we don&apos;t need to explicitly destroy them, so we can use the default destructor, which allows Result&lt;T, E&gt; to also be trivially destroyed.</p>
         </div>
       </div>
+      <h3 id="4840C50FB28C8539E085E4C71D0FD424F54C63CD">Result&lt;T, E&gt;</h3>
+      <p>public void Result&lt;T, E&gt;(const Result&lt;T, E&gt; &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#149">149</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> If T and E can be trivially copy-constructed, Result&lt;T, E&gt; can also be trivially copy-constructed.</p>
+        </div>
+      </div>
+      <h3 id="2FA1EB09A41B43465FBF8F20FB295F9A1A8A07F9">operator=</h3>
+      <p>public Result&lt;T, E&gt; &amp; operator=(const Result&lt;T, E&gt; &amp; o)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#181">181</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
+      </p>
+      <div>
+        <div>
+          <p> If T and E can be trivially move-assigned, Result&lt;T, E&gt; can also be trivially move-assigned.</p>
+        </div>
+      </div>
       <h3 id="A24A152BB88126824932EA66658F9869D2531599">Result&lt;T, E&gt;</h3>
       <p>public void Result&lt;T, E&gt;(Result&lt;T, E&gt; &amp;&amp; )</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#148">148</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#241">241</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -143,7 +169,7 @@
       <p>public Result&lt;T, E&gt; &amp; operator=(Result&lt;T, E&gt; &amp;&amp; o)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#176">176</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#274">274</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -160,7 +186,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#231">231</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#341">341</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -168,7 +194,7 @@
       <p>public void clone_from(const Result&lt;T, E&gt; &amp; source)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#245">245</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#358">358</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -176,7 +202,7 @@
       <p>public _Bool is_ok()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#265">265</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#380">380</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -189,7 +215,7 @@
       <p>public _Bool is_err()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#271">271</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#386">386</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -206,7 +232,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#292">292</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#407">407</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -222,7 +248,7 @@
       <p>public Option&lt;T&gt; ok()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#301">301</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#416">416</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -236,7 +262,7 @@
       <p>public Option&lt;E&gt; err()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#319">319</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#437">437</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -250,7 +276,7 @@
       <p>public T unwrap()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#342">342</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#463">463</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -269,7 +295,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#354">354</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#477">477</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -283,7 +309,7 @@
       <p>public E unwrap_err()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#364">364</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#487">487</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -301,7 +327,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#376">376</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#501">501</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -315,7 +341,7 @@
       <p>public Iterator&lt;Once&lt;const T &amp;&gt; &gt; iter()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#382">382</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#507">507</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -323,7 +349,7 @@
       <p>public Iterator&lt;Once&lt;const T &amp;&gt; &gt; iter()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#389">389</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#514">514</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -331,7 +357,7 @@
       <p>public Iterator&lt;Once&lt;T &amp;&gt; &gt; iter_mut()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#391">391</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#516">516</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -339,7 +365,7 @@
       <p>public Iterator&lt;Once&lt;T&gt; &gt; into_iter()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#399">399</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h#524">524</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/result/result.h">result.h</a>
       </p>
@@ -380,6 +406,16 @@
           <li>
             <span>
               <a href="#52B8B792CC9188C881DC31C346CA86B7646F1951">~Result&lt;T, E&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#4840C50FB28C8539E085E4C71D0FD424F54C63CD">Result&lt;T, E&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#2FA1EB09A41B43465FBF8F20FB295F9A1A8A07F9">operator=</a>
             </span>
           </li>
           <li>
