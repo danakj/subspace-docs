@@ -17,11 +17,15 @@
     </ul>
     <h2 id="Functions">Functions</h2>
     <div>
-      <h3 id="5CAE7A8DB1A59E83495F1F530D6D0D8579E25FCC">panic</h3>
-      <p>void panic()</p>
+      <h3 id="A4B78C52A4B3A4EE3B31777E15B35627CA609AC9">panic</h3>
+      <p>
+        void panic(
+        <a href="../../std/source_location.html">source_location</a>
+         location)
+      </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/panic.h#52">52</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/panic.h#60">60</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/panic.h">panic.h</a>
       </p>
@@ -29,45 +33,63 @@
         <div>
           <p> Terminate the program.</p>
           <p> The default behaviour of this function is to abort(). The behaviour of this function can be overridden by defining a `SUS_PROVIDE_PANIC_HANDLER()` macro when compiling the library.</p>
-          <p> # Safety If `SUS_PROVIDE_PANIC_HANDLER()` is defined, the macro _must_ not return or Undefined Behaviour will result.</p>
+          <p> The panic message will be printed to stderr before aborting. This behaviour can be overridden by defining a `SUS_PROVIDE_PRINT_PANIC_LOCATION_HANDLER()` macro when compiling the library.</p>
+          <p> # Safety</p>
+          <p> If `SUS_PROVIDE_PANIC_HANDLER()` is defined, the macro _must_ not return or Undefined Behaviour will result.</p>
         </div>
       </div>
-      <h3 id="DAB4944D20228611A774CF51652BDFB3D9293F4C">panic_with_message</h3>
-      <p>void panic_with_message(const char &amp; msg)</p>
+      <h3 id="19DF51DA23EA4BB0EB3351FC40BB4F0749066127">panic_with_message</h3>
+      <p>
+        void panic_with_message(const char &amp; msg, 
+        <a href="../../std/source_location.html">source_location</a>
+         location)
+      </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/panic.h#72">72</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/panic.h#84">84</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/panic.h">panic.h</a>
       </p>
       <div>
         <div>
           <p> Terminate the program, after printing a message.</p>
-          <p> The default behaviour of this function is to print the message to stderr. The behaviour of this function can be overridden by defining a `SUS_PROVIDE_PRINT_PANIC_MESSAGE_HANDLER()` macro when compiling the library.</p>
-          <p> After printing the message, the function will `panic()`.</p>
+          <p> The default behaviour of this function is to abort(). The behaviour of this function can be overridden by defining a `SUS_PROVIDE_PANIC_HANDLER()` macro when compiling the library.</p>
+          <p> The panic message will be printed to stderr before aborting. This behaviour can be overridden by defining a `SUS_PROVIDE_PRINT_PANIC_MESSAGE_HANDLER()` macro when compiling the library.</p>
         </div>
       </div>
-      <h3 id="555C686157D1717052A487EA562BB7D116FF84C6">check</h3>
-      <p>void check(_Bool cond)</p>
+      <h3 id="C833BB849659F0B8EEE1C3E1E83A21FF27481EB4">check</h3>
+      <p>
+        void check(_Bool cond, 
+        <a href="../../std/source_location.html">source_location</a>
+         location)
+      </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/check.h#24">24</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/check.h#25">25</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/check.h">check.h</a>
       </p>
-      <h3 id="06E5C6588E1129D8E0EF86E50519FFD18E698690">check_with_message</h3>
-      <p>void check_with_message(_Bool cond, const char &amp; msg)</p>
+      <h3 id="149272213D79E18865BB62A6C42BC451AF89C034">check_with_message</h3>
+      <p>
+        void check_with_message(_Bool cond, const char &amp; msg, 
+        <a href="../../std/source_location.html">source_location</a>
+         location)
+      </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/check.h#29">29</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/check.h#32">32</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/check.h">check.h</a>
       </p>
-      <h3 id="C79F0AED34E72B919FAFD4E2AF297053CEB51DF7">unreachable</h3>
-      <p>void unreachable()</p>
+      <h3 id="F3464ACFFACDBBFAE635BB0A45AEA37BADE8882F">unreachable</h3>
+      <p>
+        void unreachable(
+        <a href="../../std/source_location.html">source_location</a>
+         location)
+      </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/unreachable.h#24">24</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/unreachable.h#26">26</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/unreachable.h">unreachable.h</a>
       </p>
@@ -79,7 +101,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/unreachable.h#26">26</a>
+        <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/unreachable.h#31">31</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/subspace/assertions/unreachable.h">unreachable.h</a>
       </p>
@@ -115,27 +137,27 @@
         <ul>
           <li>
             <span>
-              <a href="#5CAE7A8DB1A59E83495F1F530D6D0D8579E25FCC">panic</a>
+              <a href="#A4B78C52A4B3A4EE3B31777E15B35627CA609AC9">panic</a>
             </span>
           </li>
           <li>
             <span>
-              <a href="#DAB4944D20228611A774CF51652BDFB3D9293F4C">panic_with_message</a>
+              <a href="#19DF51DA23EA4BB0EB3351FC40BB4F0749066127">panic_with_message</a>
             </span>
           </li>
           <li>
             <span>
-              <a href="#555C686157D1717052A487EA562BB7D116FF84C6">check</a>
+              <a href="#C833BB849659F0B8EEE1C3E1E83A21FF27481EB4">check</a>
             </span>
           </li>
           <li>
             <span>
-              <a href="#06E5C6588E1129D8E0EF86E50519FFD18E698690">check_with_message</a>
+              <a href="#149272213D79E18865BB62A6C42BC451AF89C034">check_with_message</a>
             </span>
           </li>
           <li>
             <span>
-              <a href="#C79F0AED34E72B919FAFD4E2AF297053CEB51DF7">unreachable</a>
+              <a href="#F3464ACFFACDBBFAE635BB0A45AEA37BADE8882F">unreachable</a>
             </span>
           </li>
           <li>
