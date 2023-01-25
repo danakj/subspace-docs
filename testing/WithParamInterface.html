@@ -11,7 +11,7 @@
     <h1>class WithParamInterface</h1>
     <p>
       Defined at line 
-      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#1846">1846</a>
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#1669">1669</a>
        of file 
       <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
     </p>
@@ -19,7 +19,7 @@
       <div>
         <p> The pure interface class that all value-parameterized tests inherit from. A value-parameterized class must inherit from both ::testing::Test and ::testing::WithParamInterface. In most cases that just means inheriting from ::testing::TestWithParam, but more complicated test hierarchies may need to inherit from Test and WithParamInterface at different levels.</p>
         <p> This interface has support for accessing the test parameter value via the GetParam() method.</p>
-        <p> Use it with one of the parameter generator defining functions, like Range(), Values(), ValuesIn(), Bool(), and Combine().</p>
+        <p> Use it with one of the parameter generator defining functions, like Range(), Values(), ValuesIn(), Bool(), Combine(), and ConvertGenerator&lt;T&gt;().</p>
         <p> class FooTest : public ::testing::TestWithParam&lt;int&gt; {  protected:   FooTest() {     // Can use GetParam() here.   }   ~FooTest() override {     // Can use GetParam() here.   }   void SetUp() override {     // Can use GetParam() here.   }   void TearDown override {     // Can use GetParam() here.   } }; TEST_P(FooTest, DoesBar) {   // Can use GetParam() method here.   Foo foo;   ASSERT_TRUE(foo.DoesBar(GetParam())); } INSTANTIATE_TEST_SUITE_P(OneToTenRange, FooTest, ::testing::Range(1, 10));</p>
       </div>
     </div>
@@ -29,7 +29,7 @@
       <p>public void ~WithParamInterface&lt;T&gt;()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#1849">1849</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#1672">1672</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
       </p>
@@ -37,7 +37,7 @@
       <p>public const ParamType &amp; GetParam()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#1853">1853</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#1676">1676</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
       </p>
@@ -71,5 +71,5 @@
   </div>
 </main>
 <footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230116031321+5ab0894fd570-1~exp1~20230116151419.689)</span>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
 </footer>

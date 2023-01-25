@@ -11,27 +11,40 @@
     <h1>struct WithArgsAction</h1>
     <p>
       Defined at line 
-      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1015">1015</a>
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1408">1408</a>
        of file 
       <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
     </p>
     <h2 id="Members">Members</h2>
     <ul>
-      <li>public InnerAction action</li>
+      <li>public InnerAction inner_action</li>
     </ul>
     <h2 id="Functions">Functions</h2>
     <div>
-      <h3 id="0FF4D4937F359641878139D5613B48D236F5B522">operator Action&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;</h3>
-      <p>public Action&lt;R (Args...)&gt; operator Action&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;()</p>
+      <h3 id="1F15C859B310273BF1985B31E9643996A7D9B709">operator OnceAction&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;</h3>
+      <p>public OnceAction&lt;R (Args...)&gt; operator OnceAction&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1021">1021</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1436">1436</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
       <div>
         <div>
-          <p> The inner action could be anything convertible to Action&lt;X&gt;. We use the conversion operator to detect the signature of the inner Action.</p>
+          <p> Unfortunately we can&apos;t use the InnerSignature alias here; MSVC complains about the I parameter pack not being expanded (error C3520) despite it being expanded in the type alias. TupleElement is also an MSVC workaround. See its definition for details.</p>
+        </div>
+      </div>
+      <h3 id="EFBBE635F1EA7B2DCEC7336E695126525D89F70F">operator Action&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;</h3>
+      <p>public Action&lt;R (Args...)&gt; operator Action&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1463">1463</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Unfortunately we can&apos;t use the InnerSignature alias here; MSVC complains about the I parameter pack not being expanded (error C3520) despite it being expanded in the type alias. TupleElement is also an MSVC workaround. See its definition for details.</p>
         </div>
       </div>
     </div>
@@ -50,7 +63,12 @@
         <ul>
           <li>
             <span>
-              <a href="#0FF4D4937F359641878139D5613B48D236F5B522">operator Action&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;</a>
+              <a href="#1F15C859B310273BF1985B31E9643996A7D9B709">operator OnceAction&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#EFBBE635F1EA7B2DCEC7336E695126525D89F70F">operator Action&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;</a>
             </span>
           </li>
         </ul>
@@ -59,5 +77,5 @@
   </div>
 </main>
 <footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230116031321+5ab0894fd570-1~exp1~20230116151419.689)</span>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
 </footer>

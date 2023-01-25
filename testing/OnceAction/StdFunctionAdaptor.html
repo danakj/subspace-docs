@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class StdFunctionAdaptor</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/OnceAction" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class StdFunctionAdaptor</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#504">504</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+    </p>
+    <div>
+      <div>
+        <p> An adaptor that wraps a callable that is compatible with our signature and being invoked as an rvalue reference so that it can be used as an StdFunctionAdaptor. This throws away type safety, but that&apos;s fine because this is only used by WillOnce, which we know calls at most once.</p>
+        <p> Once we have something like std::move_only_function from C++23, we can do away with this.</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../../testing/OnceAction/StdFunctionAdaptor/CallableTag.html">CallableTag</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="11F4F79A54439A0E829A0A6C2B3F9C48AF362B5F">StdFunctionAdaptor&lt;Callable&gt;</h3>
+      <p>
+        public void StdFunctionAdaptor&lt;Callable&gt;(
+        <a href="../../testing/OnceAction/StdFunctionAdaptor/CallableTag.html">CallableTag</a>
+         , F &amp;&amp; callable)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#512">512</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <h3 id="0A2364B2061E1E0C668ED1E77D12DAF96481ECC8">operator()</h3>
+      <p>public internal::call_result_t&lt;Callable, ArgRefs...&gt; operator()(ArgRefs &amp;&amp;... args)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#534">534</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Rather than explicitly returning Result, we return whatever the wrapped callable returns. This allows for compatibility with existing uses like the following, when the mocked function returns void:</p>
+          <p>     EXPECT_CALL(mock_fn_, Call)         .WillOnce([&amp;] {            [...]            return 0;         });</p>
+          <p> Such a callable can be turned into std::function&lt;void()&gt;. If we use an explicit return type of Result here then it *doesn&apos;t* work with std::function, because we&apos;ll get a &quot;void function should not return a value&quot; error.</p>
+          <p> We need not worry about incompatible result types because the SFINAE on OnceAction already checks this for us. std::is_invocable_r_v itself makes the same allowance for void result types.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#11F4F79A54439A0E829A0A6C2B3F9C48AF362B5F">StdFunctionAdaptor&lt;Callable&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#0A2364B2061E1E0C668ED1E77D12DAF96481ECC8">operator()</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
+</footer>

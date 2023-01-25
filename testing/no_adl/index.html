@@ -11,11 +11,25 @@
     <h1>namespace no_adl</h1>
     <h2 id="Functions">Functions</h2>
     <div>
+      <h3 id="7310F1E82CB6165D99F7463C1FBD5DB756478663">Conditional</h3>
+      <p>internal::ConditionalMatcher&lt;MatcherTrue, MatcherFalse&gt; Conditional(_Bool condition, MatcherTrue matcher_true, MatcherFalse matcher_false)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5006">5006</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Conditional() creates a matcher that conditionally uses either the first or second matcher provided. For example, we could create an `equal if, and only if&apos; matcher using the Conditional wrapper as follows:</p>
+          <p>   EXPECT_THAT(result, Conditional(condition, Eq(expected), Ne(expected)));</p>
+        </div>
+      </div>
       <h3 id="793E1EE85654EC6ECC73D6BABFF9DC288709308B">FieldsAre</h3>
       <p>internal::FieldsAreMatcher&lt;typename std::decay&lt;M&gt;::type...&gt; FieldsAre(M &amp;&amp;... matchers)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4818">4818</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5017">5017</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -28,7 +42,7 @@
       <p>internal::PointerMatcher&lt;InnerMatcher&gt; Pointer(const InnerMatcher &amp; inner_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4827">4827</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5026">5026</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -41,13 +55,29 @@
       <p>internal::AddressMatcher&lt;InnerMatcher&gt; Address(const InnerMatcher &amp; inner_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4835">4835</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5034">5034</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
       <div>
         <div>
           <p> Creates a matcher that matches an object that has an address that matches inner_matcher.</p>
+        </div>
+      </div>
+      <h3 id="42AC088BA8EF1E56AB143D03785B0210245E18CE">WhenBase64Unescaped</h3>
+      <p>
+        <a href="../../testing/internal/WhenBase64UnescapedMatcher.html">WhenBase64UnescapedMatcher</a>
+         WhenBase64Unescaped(const MatcherType &amp; internal_matcher)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5042">5042</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Matches a base64 escaped string, when the unescaped string matches the internal matcher.</p>
         </div>
       </div>
     </div>
@@ -59,6 +89,11 @@
           <a href="#Functions">Functions</a>
         </span>
         <ul>
+          <li>
+            <span>
+              <a href="#7310F1E82CB6165D99F7463C1FBD5DB756478663">Conditional</a>
+            </span>
+          </li>
           <li>
             <span>
               <a href="#793E1EE85654EC6ECC73D6BABFF9DC288709308B">FieldsAre</a>
@@ -74,11 +109,16 @@
               <a href="#71FE64F8C79D6CE4C209FB30DCD8BBBF3BEA7F37">Address</a>
             </span>
           </li>
+          <li>
+            <span>
+              <a href="#42AC088BA8EF1E56AB143D03785B0210245E18CE">WhenBase64Unescaped</a>
+            </span>
+          </li>
         </ul>
       </li>
     </ol>
   </div>
 </main>
 <footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230116031321+5ab0894fd570-1~exp1~20230116151419.689)</span>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
 </footer>

@@ -11,14 +11,14 @@
     <h1>class Notification</h1>
     <p>
       Defined at line 
-      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1189">1189</a>
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1235">1235</a>
        of file 
       <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
     </p>
     <div>
       <div>
         <p> Allows a controller thread to pause execution of newly created threads until notified.  Instances of this class must be created and destroyed in the controller thread.</p>
-        <p> This class is only for testing Google Test&apos;s own constructs. Do not use it in user tests, either directly or indirectly.</p>
+        <p> This class is only for testing Google Test&apos;s own constructs. Do not use it in user tests, either directly or indirectly. TODO(b/203539622): Replace unconditionally with absl::Notification.</p>
       </div>
     </div>
     <h2 id="Functions">Functions</h2>
@@ -27,15 +27,23 @@
       <p>public void Notification()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1191">1191</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1237">1237</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
       </p>
-      <h3 id="51DD453B377E0F42C0B7A450FA5C958BE09FFE86">~Notification</h3>
-      <p>public void ~Notification()</p>
+      <h3 id="5BA703180927C9D38C5BDE9093C8E77029017D96">Notification</h3>
+      <p>public void Notification(const Notification &amp; )</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1194">1194</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1238">1238</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
+      </p>
+      <h3 id="69D12F2F7362365F400BC652E202341250B711E3">operator=</h3>
+      <p>public Notification &amp; operator=(const Notification &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1239">1239</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
       </p>
@@ -43,7 +51,7 @@
       <p>public void Notify()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1200">1200</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1243">1243</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
       </p>
@@ -56,7 +64,7 @@
       <p>public void WaitForNotification()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1208">1208</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h#1251">1251</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/internal/gtest-port.h">gtest-port.h</a>
       </p>
@@ -81,7 +89,12 @@
           </li>
           <li>
             <span>
-              <a href="#51DD453B377E0F42C0B7A450FA5C958BE09FFE86">~Notification</a>
+              <a href="#5BA703180927C9D38C5BDE9093C8E77029017D96">Notification</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#69D12F2F7362365F400BC652E202341250B711E3">operator=</a>
             </span>
           </li>
           <li>
@@ -100,5 +113,5 @@
   </div>
 </main>
 <footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230116031321+5ab0894fd570-1~exp1~20230116151419.689)</span>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
 </footer>

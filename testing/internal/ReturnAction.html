@@ -11,24 +11,85 @@
     <h1>class ReturnAction</h1>
     <p>
       Defined at line 
-      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#637">637</a>
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1089">1089</a>
        of file 
       <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
     </p>
     <div>
       <div>
-        <p> Implements the polymorphic Return(x) action, which can be used in any function that returns the type of x, regardless of the argument types.</p>
-        <p> Note: The value passed into Return must be converted into Function&lt;F&gt;::Result when this action is cast to Action&lt;F&gt; rather than when that action is performed. This is important in scenarios like</p>
-        <p> MOCK_METHOD1(Method, T(U)); ... {   Foo foo;   X x(&amp;foo);   EXPECT_CALL(mock, Method(_)).WillOnce(Return(x)); }</p>
-        <p> In the example above the variable x holds reference to foo which leaves scope and gets destroyed.  If copying X just copies a reference to foo, that copy will be left with a hanging reference.  If conversion to T makes a copy of foo, the above code is safe. To support that scenario, we need to make sure that the type conversion happens inside the EXPECT_CALL statement, and conversion of the result of Return to Action&lt;T(U)&gt; is a good place for that.</p>
-        <p> The real life example of the above scenario happens when an invocation of gtl::Container() is passed into Return.</p>
+        <p> A specialization of ReturnAction&lt;R&gt; when R is ByMoveWrapper&lt;T&gt; for some T.</p>
+        <p> This version applies the type system-defeating hack of moving from T even in the const call operator, checking at runtime that it isn&apos;t called more than once, since the user has declared their intent to do so by using ByMove.</p>
+      </div>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="3D2F2D436C2B0FC3C334753562A74C9EA23A45E2">ReturnAction&lt;ByMoveWrapper&lt;type-parameter-0-0&gt; &gt;</h3>
+      <p>public void ReturnAction&lt;ByMoveWrapper&lt;type-parameter-0-0&gt; &gt;(ByMoveWrapper&lt;T&gt; wrapper)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1092">1092</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <h3 id="5DBB74EDD76CC344509224D25B593A2DD479242E">operator()</h3>
+      <p>public T operator()()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1095">1095</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#3D2F2D436C2B0FC3C334753562A74C9EA23A45E2">ReturnAction&lt;ByMoveWrapper&lt;type-parameter-0-0&gt; &gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#5DBB74EDD76CC344509224D25B593A2DD479242E">operator()</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class ReturnAction</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class ReturnAction</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#924">924</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+    </p>
+    <div>
+      <div>
+        <p> The general implementation of Return(R). Specializations follow below.</p>
       </div>
     </div>
     <h2 id="Records">Records</h2>
     <ul>
-      <li>
-        <a href="../../testing/internal/ReturnAction/Impl.html">Impl</a>
-      </li>
       <li>
         <a href="../../testing/internal/ReturnAction/Impl.html">Impl</a>
       </li>
@@ -39,28 +100,26 @@
       <p>public void ReturnAction&lt;R&gt;(R value)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#642">642</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#926">926</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
-      <div>
-        <div>
-          <p> Constructs a ReturnAction object from the value to be returned. &apos;value&apos; is passed by value instead of by const reference in order to allow Return(&quot;string literal&quot;) to compile.</p>
-        </div>
-      </div>
-      <h3 id="EB9F4C8A396194365A593F6200D72D539768EDB8">operator Action&lt;type-parameter-1-0&gt;</h3>
-      <p>public Action&lt;F&gt; operator Action&lt;type-parameter-1-0&gt;()</p>
+      <h3 id="24F7F915E5DB8C240AD849E1FEAC0010A3A492EE">operator OnceAction&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;</h3>
+      <p>public OnceAction&lt;U (Args...)&gt; operator OnceAction&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#647">647</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#935">935</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
-      <div>
-        <div>
-          <p> This template type conversion operator allows Return(x) to be used in ANY function that returns x&apos;s type.</p>
-        </div>
-      </div>
+      <h3 id="D2C02A2506D97CFD97DB0C2BEBA61B49B184E078">operator Action&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;</h3>
+      <p>public Action&lt;U (Args...)&gt; operator Action&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;()</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#946">946</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
     </div>
   </div>
   <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
@@ -82,7 +141,12 @@
           </li>
           <li>
             <span>
-              <a href="#EB9F4C8A396194365A593F6200D72D539768EDB8">operator Action&lt;type-parameter-1-0&gt;</a>
+              <a href="#24F7F915E5DB8C240AD849E1FEAC0010A3A492EE">operator OnceAction&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D2C02A2506D97CFD97DB0C2BEBA61B49B184E078">operator Action&lt;type-parameter-1-0 (type-parameter-1-1...)&gt;</a>
             </span>
           </li>
         </ul>
@@ -91,5 +155,5 @@
   </div>
 </main>
 <footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230116031321+5ab0894fd570-1~exp1~20230116151419.689)</span>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
 </footer>

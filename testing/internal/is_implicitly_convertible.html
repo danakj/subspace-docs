@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>struct is_implicitly_convertible</title>
+<link rel="stylesheet" href="../../clang-doc-default-stylesheet.css"/>
+<script src="../../index.js"></script>
+<script src="../../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing/internal" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>struct is_implicitly_convertible</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#324">324</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+    </p>
+    <div>
+      <div>
+        <p> Detects whether an expression of type `From` can be implicitly converted to `To` according to [conv]. In C++17, [conv]/3 defines this as follows:</p>
+        <p>     An expression e can be implicitly converted to a type T if and only if     the declaration T t=e; is well-formed, for some invented temporary     variable t ([dcl.init]).</p>
+        <p> [conv]/2 implies we can use function argument passing to detect whether this initialization is valid.</p>
+        <p> Note that this is distinct from is_convertible, which requires this be valid:</p>
+        <p>     To test() {       return declval&lt;From&gt;();     }</p>
+        <p> In particular, is_convertible doesn&apos;t give the correct answer when `To` and `From` are the same non-moveable type since `declval&lt;From&gt;` will be an rvalue reference, defeating the guaranteed copy elision that would otherwise make this function work.</p>
+        <p> REQUIRES: `From` is not cv void.</p>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
+</footer>

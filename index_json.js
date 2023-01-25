@@ -34,13 +34,6 @@ var JsonIndex = `
       "Children": []
     },
     {
-      "USR": "4BF3FA661B158AE156AC165CBFCCB1A79920CA88",
-      "Name": "@nonymous_record_4BF3FA661B158AE156AC165CBFCCB1A79920CA88",
-      "RefType": "record",
-      "Path": "",
-      "Children": []
-    },
-    {
       "USR": "50518F9CEEE74FF52BDDDD12A78A6D268D95FC2F",
       "Name": "@nonymous_record_50518F9CEEE74FF52BDDDD12A78A6D268D95FC2F",
       "RefType": "record",
@@ -69,6 +62,13 @@ var JsonIndex = `
       "Children": []
     },
     {
+      "USR": "7DCC9E35B3156D41EBC82E7A265AC2EAE3075546",
+      "Name": "@nonymous_record_7DCC9E35B3156D41EBC82E7A265AC2EAE3075546",
+      "RefType": "record",
+      "Path": "",
+      "Children": []
+    },
+    {
       "USR": "7DF6F0445BF88999288C073ABC36F452CDB83565",
       "Name": "@nonymous_record_7DF6F0445BF88999288C073ABC36F452CDB83565",
       "RefType": "record",
@@ -90,6 +90,13 @@ var JsonIndex = `
       "Children": []
     },
     {
+      "USR": "874A387DA48EFA8C69B17DFAA784D98EC5BF6440",
+      "Name": "@nonymous_record_874A387DA48EFA8C69B17DFAA784D98EC5BF6440",
+      "RefType": "record",
+      "Path": "",
+      "Children": []
+    },
+    {
       "USR": "93567A0C28B8A770441985E889BC62B1B746185A",
       "Name": "@nonymous_record_93567A0C28B8A770441985E889BC62B1B746185A",
       "RefType": "record",
@@ -99,6 +106,13 @@ var JsonIndex = `
     {
       "USR": "9D05654C6283FA879D16B62DFB2181E786F3A458",
       "Name": "@nonymous_record_9D05654C6283FA879D16B62DFB2181E786F3A458",
+      "RefType": "record",
+      "Path": "",
+      "Children": []
+    },
+    {
+      "USR": "B5260566AD57D6AB89E0264507DE2ABE675AB357",
+      "Name": "@nonymous_record_B5260566AD57D6AB89E0264507DE2ABE675AB357",
       "RefType": "record",
       "Path": "",
       "Children": []
@@ -148,6 +162,20 @@ var JsonIndex = `
     {
       "USR": "F4C98A2979D2D837FFC0DDA4167735899586F2B9",
       "Name": "@nonymous_record_F4C98A2979D2D837FFC0DDA4167735899586F2B9",
+      "RefType": "record",
+      "Path": "",
+      "Children": []
+    },
+    {
+      "USR": "F69EA4BA0C2232404879AF910FF94A191EBE6D45",
+      "Name": "@nonymous_record_F69EA4BA0C2232404879AF910FF94A191EBE6D45",
+      "RefType": "record",
+      "Path": "",
+      "Children": []
+    },
+    {
+      "USR": "F9B83426A3C90E783BD6AD74083A3A716967048B",
+      "Name": "@nonymous_record_F9B83426A3C90E783BD6AD74083A3A716967048B",
       "RefType": "record",
       "Path": "",
       "Children": []
@@ -1674,19 +1702,26 @@ var JsonIndex = `
       "Path": "testing",
       "Children": [
         {
-          "USR": "0993E4E832AFD11930D2D56367543B804D04378D",
+          "USR": "80B9EDC82CA7CF1F0C9A686A973F0E8E1BE3DAF3",
           "Name": "Action",
           "RefType": "record",
           "Path": "testing",
           "Children": [
             {
-              "USR": "B58C2FADEA42059A4771EF6C358EB0AFDD6FAA45",
+              "USR": "23BCDA08283E289DB858B0BDDAC8BAD458A49851",
               "Name": "IgnoreArgs",
               "RefType": "record",
               "Path": "testing/Action",
               "Children": []
             }
           ]
+        },
+        {
+          "USR": "0993E4E832AFD11930D2D56367543B804D04378D",
+          "Name": "Action",
+          "RefType": "record",
+          "Path": "testing",
+          "Children": []
         },
         {
           "USR": "2D3B639E90529D3DFC5ECB4FABEB93747DB82109",
@@ -1793,13 +1828,6 @@ var JsonIndex = `
           "Path": "testing/internal",
           "Children": [
             {
-              "USR": "866344275C4C941AD2C01A48ED8EAC1049FBD0D8",
-              "Name": "ActionImpl",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
               "USR": "5A722512E956B0FC7F390F39585AD9E740B97F80",
               "Name": "ActionImpl",
               "RefType": "record",
@@ -1807,15 +1835,8 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "53C1BE904B94109807BC57284CAB0B56FBE2203D",
-              "Name": "ActionResultHolder",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "7F28BAD225DD8B5817BAE485BC8753B727493AFC",
-              "Name": "ActionResultHolder",
+              "USR": "866344275C4C941AD2C01A48ED8EAC1049FBD0D8",
+              "Name": "ActionImpl",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
@@ -1986,14 +2007,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "C94668C01C2DE300E24A90D96A9DAD73EAA9C2B6",
-              "Name": "BuiltInDefaultValue",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "99000A9C1784DE28FA8E52FEBFA2C27C9B7630FE",
+              "USR": "A37A93DB62D225147984C345EC09968D59CAC684",
               "Name": "BuiltInDefaultValue",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2007,49 +2021,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "414D24003910A91383237DE278D237155B50EE22",
-              "Name": "BuiltInDefaultValue",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "7434372833DA0F1189359C13BA305B2DB45229C2",
-              "Name": "BuiltInDefaultValue",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "81BA6909D2879B3A4B34922F17F77CC9D67A5806",
-              "Name": "BuiltInDefaultValue",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
               "USR": "7450851B102E348E0B5066CBCF6152D22B1AD80A",
-              "Name": "BuiltInDefaultValue",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "415D3F60DC69415E4239C23D12707424A6A10286",
-              "Name": "BuiltInDefaultValue",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "A37A93DB62D225147984C345EC09968D59CAC684",
-              "Name": "BuiltInDefaultValue",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "37E92F8B9CA3942F9C88C5CB92F82A5F1773D941",
               "Name": "BuiltInDefaultValue",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2063,21 +2035,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "D9AC71544FF23D4862FBAC46347B493B658E9E10",
-              "Name": "BuiltInDefaultValue",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "2360538B440CD50E9674F4488CCCF530017CD9F8",
-              "Name": "BuiltInDefaultValue",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "0315A10252C7A20234712FDDC1E02A28F21F7CE3",
+              "USR": "414D24003910A91383237DE278D237155B50EE22",
               "Name": "BuiltInDefaultValue",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2091,7 +2049,21 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "36C28B819168D13321A4D4624D92C1C0ED66B934",
+              "USR": "81BA6909D2879B3A4B34922F17F77CC9D67A5806",
+              "Name": "BuiltInDefaultValue",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "2360538B440CD50E9674F4488CCCF530017CD9F8",
+              "Name": "BuiltInDefaultValue",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "C94668C01C2DE300E24A90D96A9DAD73EAA9C2B6",
               "Name": "BuiltInDefaultValue",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2099,13 +2071,6 @@ var JsonIndex = `
             },
             {
               "USR": "A3673E24D44711B3BCF63C8B84163CAEF73F5116",
-              "Name": "BuiltInDefaultValue",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "ACCD8C574CFEF3CEAA0CAFE25F767E40562602C9",
               "Name": "BuiltInDefaultValue",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2120,6 +2085,62 @@ var JsonIndex = `
             },
             {
               "USR": "641F359F63FA7EBD02023F681A2E9C2F328EF2B0",
+              "Name": "BuiltInDefaultValue",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "D9AC71544FF23D4862FBAC46347B493B658E9E10",
+              "Name": "BuiltInDefaultValue",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "415D3F60DC69415E4239C23D12707424A6A10286",
+              "Name": "BuiltInDefaultValue",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "99000A9C1784DE28FA8E52FEBFA2C27C9B7630FE",
+              "Name": "BuiltInDefaultValue",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "7434372833DA0F1189359C13BA305B2DB45229C2",
+              "Name": "BuiltInDefaultValue",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "37E92F8B9CA3942F9C88C5CB92F82A5F1773D941",
+              "Name": "BuiltInDefaultValue",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "36C28B819168D13321A4D4624D92C1C0ED66B934",
+              "Name": "BuiltInDefaultValue",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "ACCD8C574CFEF3CEAA0CAFE25F767E40562602C9",
+              "Name": "BuiltInDefaultValue",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "0315A10252C7A20234712FDDC1E02A28F21F7CE3",
               "Name": "BuiltInDefaultValue",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2204,6 +2225,13 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "EC3C2E362430A5D8B1172F7ECF4C9EDEFB45D5AD",
+              "Name": "Cleanup",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "FCD49CFD06CE06E2227B709CE13BE14BE1FACCCE",
               "Name": "CodeLocation",
               "RefType": "record",
@@ -2218,6 +2246,34 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "E39D9D91A54ECA10DD09396D1F925E2B92D21101",
+              "Name": "ConditionalMatcher",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "99827FC82F4D9099EEA02073D6E28D32D7DA7690",
+              "Name": "conjunction",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "CE57EE0A9350DE45B3518386EF9B0C43F1C5DF85",
+              "Name": "conjunction",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "251BE2437C990C3A385A07CFC85A5DE840115DF4",
+              "Name": "conjunction",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "41A6E665518AC8838B85BB82874D78A4F0DD771F",
               "Name": "ConstCharPtr",
               "RefType": "record",
@@ -2225,14 +2281,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "89E1DBA8AA911F35ECF5F698F51063810C7C84A6",
+              "USR": "FC51821035BBDAD4C0A80778C6BF5BE6AAEFB2CC",
               "Name": "ConstRef",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "FC51821035BBDAD4C0A80778C6BF5BE6AAEFB2CC",
+              "USR": "89E1DBA8AA911F35ECF5F698F51063810C7C84A6",
               "Name": "ConstRef",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2262,6 +2318,20 @@ var JsonIndex = `
             {
               "USR": "A0179C92CC1E95D9459CB5BCAB03F8EE5A24CB19",
               "Name": "ContainsMatcherImpl",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "6C275CEA427FEA503A7B7FD45A5F72CEBA3290F3",
+              "Name": "ContainsTimesMatcher",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "499D8CF7413431F08F10DE3393AA0784C2CBAD8F",
+              "Name": "ContainsTimesMatcherImpl",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
@@ -2345,11 +2415,62 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "0906F7015F889D73B2DC6FC4E51309C1943B3101",
+              "Name": "disjunction",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "6666266047C25B7045EA0A4CE6E190FFCFE533D6",
+              "Name": "disjunction",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "003C8081218C07C95D8AD342DCB3D5F8A9423625",
+              "Name": "disjunction",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "BF452CC40B89A895410DD12C8C46DD931DDCE7A0",
               "Name": "DoAllAction",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
+            },
+            {
+              "USR": "E80AFFADDE5C223FBC5A6A6EAE37DB1F903CE203",
+              "Name": "DoAllAction",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": [
+                {
+                  "USR": "311E2FB31C6DDA195DB1C4ACAE5EDFEAF17D7566",
+                  "Name": "UserConstructorTag",
+                  "RefType": "record",
+                  "Path": "testing/internal/DoAllAction",
+                  "Children": []
+                }
+              ]
+            },
+            {
+              "USR": "DB9AB796B0E907FB4648A70119CC5CEAE4731440",
+              "Name": "DoAllAction",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": [
+                {
+                  "USR": "B33BF5D2B567A68F05DECDD03F50F5C58FFA757B",
+                  "Name": "UserConstructorTag",
+                  "RefType": "record",
+                  "Path": "testing/internal/DoAllAction",
+                  "Children": []
+                }
+              ]
             },
             {
               "USR": "A7EA362830EF15F5D62A0C7C1088774D650237FD",
@@ -2359,14 +2480,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "EE97B1D656915D09DDBD29CF050E050DD9883CFE",
+              "USR": "187FE12A843BD4F0E7EEA33D5A91F831C368DAAE",
               "Name": "DoubleSequence",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "187FE12A843BD4F0E7EEA33D5A91F831C368DAAE",
+              "USR": "EE97B1D656915D09DDBD29CF050E050DD9883CFE",
               "Name": "DoubleSequence",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2555,14 +2676,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "D3CB337CD04D5F48448691052848C0C18028AF80",
+              "USR": "D56E17847D87068A3258C8826709FA43A90C4C36",
               "Name": "FieldsAreMatcherImpl",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "D56E17847D87068A3258C8826709FA43A90C4C36",
+              "USR": "D3CB337CD04D5F48448691052848C0C18028AF80",
               "Name": "FieldsAreMatcherImpl",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2583,14 +2704,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "44EDD91B88949A8D0CD464608D386C012BCF14EF",
+              "USR": "74662ACDFD68CBEF215358D75F06B88894E0A36F",
               "Name": "FindFirstPrinter",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "74662ACDFD68CBEF215358D75F06B88894E0A36F",
+              "USR": "44EDD91B88949A8D0CD464608D386C012BCF14EF",
               "Name": "FindFirstPrinter",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2625,14 +2746,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "94B1BB21629DCF0497B7DB0703EF5D034049CA86",
+              "USR": "683F1C0852BD43F33E056B2FF4E835C4037BD04D",
               "Name": "FlatTupleElemBase",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "683F1C0852BD43F33E056B2FF4E835C4037BD04D",
+              "USR": "94B1BB21629DCF0497B7DB0703EF5D034049CA86",
               "Name": "FlatTupleElemBase",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2683,112 +2804,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "C55A4049EC8429AFE95595C9C566D02152DA1B58",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "BAC9C605EF89A1AB67E77D26C8A82315E2647E11",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "2588B0CC168125D524F4A67881FB235899B16BBF",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "DAE511E48F80D45B41489659D66D05AB26A06FDD",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
               "USR": "60247EAAF06D8D143DDE24439B66D03E399AD23F",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "FE9EA5ABED75282D2C4387F2B0C054E1BD0B6B29",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "2C09DE4602519940F7BE58327CA5D8A62343E327",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "7A304C84DBA55088D620E2B4111716BA2B53C652",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "52050046B56F25B50A09DC316EDCC2DDE69F4090",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "749181E7005EDEFCB0916AE565DF72FFB54F692B",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "C034427763D8F13F5C61B383AD2CE9A833C2F89B",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "BEEF38BEBCF27134D7EB2F985475D5F895E23390",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "87A6C913E949DFBD49254082467D8E9DFE635D9E",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "0589EDC3E1FEAC9580FBF2916727B76598B648FC",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "EA05FAA8BE29127C38BB6F5FB3667A0492FC3C3D",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "5234513A7DF494428460FFFE904F70C0A5A862CA",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2802,14 +2818,77 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "15680381E4605ACEEDD923ABF173F0F1EFA04D29",
+              "USR": "0589EDC3E1FEAC9580FBF2916727B76598B648FC",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "E93BB505B2CD91DAA1DBC5FB4A10202BA2E71FCE",
+              "USR": "C034427763D8F13F5C61B383AD2CE9A833C2F89B",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "749181E7005EDEFCB0916AE565DF72FFB54F692B",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "7A304C84DBA55088D620E2B4111716BA2B53C652",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "673D6E7682CC98E90B133818DE5F4D6C16EA2A86",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "2C09DE4602519940F7BE58327CA5D8A62343E327",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "DAE511E48F80D45B41489659D66D05AB26A06FDD",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "BAC9C605EF89A1AB67E77D26C8A82315E2647E11",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "BEEF38BEBCF27134D7EB2F985475D5F895E23390",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "EA05FAA8BE29127C38BB6F5FB3667A0492FC3C3D",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "15680381E4605ACEEDD923ABF173F0F1EFA04D29",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2823,7 +2902,49 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "673D6E7682CC98E90B133818DE5F4D6C16EA2A86",
+              "USR": "2588B0CC168125D524F4A67881FB235899B16BBF",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "C55A4049EC8429AFE95595C9C566D02152DA1B58",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "87A6C913E949DFBD49254082467D8E9DFE635D9E",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "5234513A7DF494428460FFFE904F70C0A5A862CA",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "52050046B56F25B50A09DC316EDCC2DDE69F4090",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "FE9EA5ABED75282D2C4387F2B0C054E1BD0B6B29",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "E93BB505B2CD91DAA1DBC5FB4A10202BA2E71FCE",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2844,13 +2965,6 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "BD4ECFF725EAD43C90E9872C26627CC7E22C94D4",
-              "Name": "Function",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
               "USR": "A8A0CBD5EBC2F03E87454FC5B1B89B0587A174D0",
               "Name": "Function",
               "RefType": "record",
@@ -2858,14 +2972,21 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "6AC75063503A8C4E71DFB1E22AB32E290D754E35",
-              "Name": "FunctionMocker",
+              "USR": "BD4ECFF725EAD43C90E9872C26627CC7E22C94D4",
+              "Name": "Function",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
               "USR": "8E99A7F4C23AA588AF2F92B45C05789FF2092897",
+              "Name": "FunctionMocker",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "6AC75063503A8C4E71DFB1E22AB32E290D754E35",
               "Name": "FunctionMocker",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2937,6 +3058,13 @@ var JsonIndex = `
             {
               "USR": "4D09303F2B7CB5C1A72835E151B1CC87C0DF1F07",
               "Name": "GTestMutexLock",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "59E5DBD3E1F305580CD9632C754700C8EFEEE414",
+              "Name": "GTestNonCopyable",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
@@ -3078,8 +3206,22 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "1FC971ECAD7424B33DFE8147A6AC819C2CBE9F75",
-              "Name": "is_proxy_type_list",
+              "USR": "C499BA245D993D0CB3B3D4B5B2468AD3E44E8FBC",
+              "Name": "is_callable_r_impl",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "E5EFDAA3E5791A09F25E94B587AEEE13A9DE48E5",
+              "Name": "is_callable_r_impl",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "F98FBE94EF3265DC48EB5FB7A526863CF1E4C701",
+              "Name": "is_implicitly_convertible",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
@@ -3087,6 +3229,20 @@ var JsonIndex = `
             {
               "USR": "5AA69A1FD72992B4A903E6E480C20F2744BD7548",
               "Name": "is_proxy_type_list",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "1FC971ECAD7424B33DFE8147A6AC819C2CBE9F75",
+              "Name": "is_proxy_type_list",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "543F0BBAEDD1BB0455B1BC866F051D082E718F91",
+              "Name": "IsEmptyMatcher",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
@@ -3120,6 +3276,13 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "9F61C13137AEFA8847735009E39879B6F421809B",
+              "Name": "IsRecursiveContainerImpl",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "F3FCFD5221BD2325390D83E68595BA12BA99A7A1",
               "Name": "IsRecursiveContainerImpl",
               "RefType": "record",
@@ -3128,13 +3291,6 @@ var JsonIndex = `
             },
             {
               "USR": "349D249857FC3F0386F28F734AFE8449F3ACB3BA",
-              "Name": "IsRecursiveContainerImpl",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "9F61C13137AEFA8847735009E39879B6F421809B",
               "Name": "IsRecursiveContainerImpl",
               "RefType": "record",
               "Path": "testing/internal",
@@ -3162,6 +3318,34 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "0DEFF30F4B55E0DB3100666ECE59F12B5F7424A5",
+              "Name": "KindOf",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "5C489108EA99A19FB0DAB88960C95B2CC1D166A5",
+              "Name": "KindOf",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "A73FB556A904B8A619650CB55868DF83DBBD1A41",
+              "Name": "KindOf",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "ED0112F322F4CD423DAD2708EF4551B1390B8FD7",
+              "Name": "KindOf",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "D8B74BECE821BC6F3075E3CBCE4EB713832319CB",
               "Name": "KindOf",
               "RefType": "record",
@@ -3176,14 +3360,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "0DEFF30F4B55E0DB3100666ECE59F12B5F7424A5",
-              "Name": "KindOf",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "443CE3F193502D69CB5C3FC243E9C1C1DDF6DAFC",
+              "USR": "FA742F973754DB6FDFC8144752DE0BC73812B9B7",
               "Name": "KindOf",
               "RefType": "record",
               "Path": "testing/internal",
@@ -3197,21 +3374,28 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "63C379D973F50D2E3899A4319570572FE11AB840",
+              "USR": "8DE180F6B16B1BB474BBC671ECF55E9C2E83B7A4",
               "Name": "KindOf",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "33AF482FB81396878AF19A163513C45E7376CDBE",
+              "USR": "2E56365757838019E881D2BE115E2FCE247DB2BB",
               "Name": "KindOf",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "5C489108EA99A19FB0DAB88960C95B2CC1D166A5",
+              "USR": "443CE3F193502D69CB5C3FC243E9C1C1DDF6DAFC",
+              "Name": "KindOf",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "4C0F8EF675D50AB4983D396B632124FB3FD05D87",
               "Name": "KindOf",
               "RefType": "record",
               "Path": "testing/internal",
@@ -3232,14 +3416,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "A73FB556A904B8A619650CB55868DF83DBBD1A41",
-              "Name": "KindOf",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "4C0F8EF675D50AB4983D396B632124FB3FD05D87",
+              "USR": "63C379D973F50D2E3899A4319570572FE11AB840",
               "Name": "KindOf",
               "RefType": "record",
               "Path": "testing/internal",
@@ -3253,28 +3430,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "2E56365757838019E881D2BE115E2FCE247DB2BB",
-              "Name": "KindOf",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "8DE180F6B16B1BB474BBC671ECF55E9C2E83B7A4",
-              "Name": "KindOf",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "ED0112F322F4CD423DAD2708EF4551B1390B8FD7",
-              "Name": "KindOf",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "FA742F973754DB6FDFC8144752DE0BC73812B9B7",
+              "USR": "33AF482FB81396878AF19A163513C45E7376CDBE",
               "Name": "KindOf",
               "RefType": "record",
               "Path": "testing/internal",
@@ -3387,14 +3543,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "11396A359D7CC621663C84E1BC957FA708E8C564",
+              "USR": "C2C309A9B7AAA4EA45716350ABE8BE79D0B23AAE",
               "Name": "MatcherCastImpl",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "C2C309A9B7AAA4EA45716350ABE8BE79D0B23AAE",
+              "USR": "11396A359D7CC621663C84E1BC957FA708E8C564",
               "Name": "MatcherCastImpl",
               "RefType": "record",
               "Path": "testing/internal",
@@ -3487,6 +3643,13 @@ var JsonIndex = `
             {
               "USR": "578308D9BC6668C9520164B58F050BEFC1D0824E",
               "Name": "Ne2Matcher",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "8B52CED1A07E5C880A8D66B4C02219C528B7C60A",
+              "Name": "negation",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
@@ -3627,6 +3790,13 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "5BFD871A6DA381D68376A397F1E6E86F4DD0AD0B",
+              "Name": "ParamConverterGenerator",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "F1BD8CB12DF6087495BBD903F90DAC7CB2500F8B",
               "Name": "ParameterizedTestFactory",
               "RefType": "record",
@@ -3657,6 +3827,13 @@ var JsonIndex = `
             {
               "USR": "9857FBB4B55CD7C9D26113AD544082D8E0E765E0",
               "Name": "ParamGenerator",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "85407E60AECFD295007133FB291BB3601D518977",
+              "Name": "ParamGeneratorConverter",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
@@ -3826,14 +4003,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "5DD776EE646C0B10B3A2FC205C59AF5BED905C1D",
+              "USR": "9597C31A85E4957166F1D3F6C5E701EBE31DD7E5",
               "Name": "ReferenceOrValueWrapper",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "9597C31A85E4957166F1D3F6C5E701EBE31DD7E5",
+              "USR": "5DD776EE646C0B10B3A2FC205C59AF5BED905C1D",
               "Name": "ReferenceOrValueWrapper",
               "RefType": "record",
               "Path": "testing/internal",
@@ -3876,14 +4053,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "08CEE646152C6C864DD1D489FEB848B810E82F7A",
+              "USR": "7F96FF7B9704C8E737B0F235FB755A7FF8D40FB2",
               "Name": "RemoveConstFromKey",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "7F96FF7B9704C8E737B0F235FB755A7FF8D40FB2",
+              "USR": "08CEE646152C6C864DD1D489FEB848B810E82F7A",
               "Name": "RemoveConstFromKey",
               "RefType": "record",
               "Path": "testing/internal",
@@ -3918,20 +4095,20 @@ var JsonIndex = `
               "Path": "testing/internal",
               "Children": [
                 {
-                  "USR": "25292A7D86D83F986CBF1F555391049538D84AB1",
-                  "Name": "Impl",
-                  "RefType": "record",
-                  "Path": "testing/internal/ReturnAction",
-                  "Children": []
-                },
-                {
-                  "USR": "C7D7683973CBCB146F8968D2540E9036C6490E38",
+                  "USR": "D461205EC5BC40D3254C247F162D7919BF7C98E1",
                   "Name": "Impl",
                   "RefType": "record",
                   "Path": "testing/internal/ReturnAction",
                   "Children": []
                 }
               ]
+            },
+            {
+              "USR": "AAAF28C9C79DB7D585FA96924CDB8201A1EB1A9F",
+              "Name": "ReturnAction",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
             },
             {
               "USR": "D2CEECB4792596C1A1A4655294C38F5B9DEC5D62",
@@ -4140,14 +4317,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "F44E0877D9657F5F5D41E2E26F415889B421FBB7",
+              "USR": "93A4F0575EAE5AD69F0A21BD716A75C5333DA2E7",
               "Name": "StlContainerView",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "93A4F0575EAE5AD69F0A21BD716A75C5333DA2E7",
+              "USR": "F44E0877D9657F5F5D41E2E26F415889B421FBB7",
               "Name": "StlContainerView",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4225,14 +4402,14 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "5C7E632F246357E74AF376BF374692D976171B02",
+              "USR": "3DC0315F9F0D658C138A9CBAE74211829710742F",
               "Name": "Templates",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
             },
             {
-              "USR": "3DC0315F9F0D658C138A9CBAE74211829710742F",
+              "USR": "5C7E632F246357E74AF376BF374692D976171B02",
               "Name": "Templates",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4437,6 +4614,13 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "AB675E953FE195F7B03F8A52A6DCCBFA331C19C9",
+              "Name": "TypedExpectation",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "2F126DFD57B39D89DBF8AF0DBDCC5E3562F1E101",
               "Name": "TypedTestSuitePState",
               "RefType": "record",
@@ -4500,6 +4684,13 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "DD3E48CBA9015069FA64C6F257E1BE814C44261E",
+              "Name": "TypeWithSize",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "985275F6C5A8D0D1F396A3A807F2A0DAD0B0F491",
               "Name": "TypeWithSize",
               "RefType": "record",
@@ -4508,13 +4699,6 @@ var JsonIndex = `
             },
             {
               "USR": "62214A2289F83C8CA75B19C52000C92DF6B329D3",
-              "Name": "TypeWithSize",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "DD3E48CBA9015069FA64C6F257E1BE814C44261E",
               "Name": "TypeWithSize",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4542,28 +4726,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "6219E5C762064BD0CB7D5FB73196604AC24A309B",
-              "Name": "UniversalPrinter",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "22D0807495181C84ED324F8C58C10C92E9CC7CC2",
-              "Name": "UniversalPrinter",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
               "USR": "230F7F7550561212EB000B2FBEC0128264CFF99D",
-              "Name": "UniversalPrinter",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "EAA06EDF829F11873E9B8BDDCB272E59F1264823",
               "Name": "UniversalPrinter",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4577,7 +4740,35 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "22D0807495181C84ED324F8C58C10C92E9CC7CC2",
+              "Name": "UniversalPrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "B728A39030C906BF9676F732435291BA1E10167B",
+              "Name": "UniversalPrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "EAA06EDF829F11873E9B8BDDCB272E59F1264823",
+              "Name": "UniversalPrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "8C6F8779A0E9A26826D57A431D0DAB0260C1BBC4",
+              "Name": "UniversalPrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "6219E5C762064BD0CB7D5FB73196604AC24A309B",
               "Name": "UniversalPrinter",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4591,28 +4782,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "79C2002E627BEE3B32B22C7C2A16ECF309053466",
-              "Name": "UniversalTersePrinter",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "83CFE06C4A3ABD87293959180449EFC2CC354288",
-              "Name": "UniversalTersePrinter",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
               "USR": "669EE7C8D4BC1376931F615507D70F117698CD0A",
-              "Name": "UniversalTersePrinter",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "3D5DA81F908C34E539EF42821FB16838974388CE",
               "Name": "UniversalTersePrinter",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4626,35 +4796,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "CACC65AB59A88315750BFD2184EE590C9F716869",
-              "Name": "UniversalTersePrinter",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "499497729129AF8CCF9AA7A974741C435C5393E5",
-              "Name": "UniversalTersePrinter",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
               "USR": "21F019266C61044908A43483FE9DB65C8C49957B",
-              "Name": "UniversalTersePrinter",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "FA5FFE097DD21C5552A0F4A60CD403F9E5FE1B82",
-              "Name": "UniversalTersePrinter",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "14CB1B723809880493F5BA7F7EA83F15F35BA294",
               "Name": "UniversalTersePrinter",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4675,7 +4817,63 @@ var JsonIndex = `
               "Children": []
             },
             {
+              "USR": "46FF45E31E5288121653F4AD0E605AE5BFDBEA72",
+              "Name": "UniversalTersePrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "14CB1B723809880493F5BA7F7EA83F15F35BA294",
+              "Name": "UniversalTersePrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
               "USR": "DB253A398CCDBF420484A4B1AD1EEAFCA083ABA7",
+              "Name": "UniversalTersePrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "79C2002E627BEE3B32B22C7C2A16ECF309053466",
+              "Name": "UniversalTersePrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "FA5FFE097DD21C5552A0F4A60CD403F9E5FE1B82",
+              "Name": "UniversalTersePrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "499497729129AF8CCF9AA7A974741C435C5393E5",
+              "Name": "UniversalTersePrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "3D5DA81F908C34E539EF42821FB16838974388CE",
+              "Name": "UniversalTersePrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "83CFE06C4A3ABD87293959180449EFC2CC354288",
+              "Name": "UniversalTersePrinter",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "CACC65AB59A88315750BFD2184EE590C9F716869",
               "Name": "UniversalTersePrinter",
               "RefType": "record",
               "Path": "testing/internal",
@@ -4712,13 +4910,6 @@ var JsonIndex = `
             {
               "USR": "279726109BC96256827FCCF711C74EFD28456F55",
               "Name": "UnorderedMatcherRequire",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
-              "USR": "9B737D01399F316F6D1B695298CB67DAE329E3B2",
-              "Name": "UntypedActionResultHolderBase",
               "RefType": "record",
               "Path": "testing/internal",
               "Children": []
@@ -4772,6 +4963,13 @@ var JsonIndex = `
                   "Children": []
                 }
               ]
+            },
+            {
+              "USR": "F8A6D3DF7F5C255A05DB29A9895066C57E6F2A0E",
+              "Name": "WhenBase64UnescapedMatcher",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
             },
             {
               "USR": "3F5B2CA7420157D01D850929633B360FEEB17951",
@@ -4842,21 +5040,6 @@ var JsonIndex = `
               "Name": "XmlUnitTestResultPrinter",
               "RefType": "record",
               "Path": "testing/internal",
-              "Children": []
-            }
-          ]
-        },
-        {
-          "USR": "C521D9EFC8AAB4BAD6DB646192A29B9AE544E3C9",
-          "Name": "IsEmptyMatcher",
-          "RefType": "record",
-          "Path": "testing",
-          "Children": [
-            {
-              "USR": "7E213ABBB1B00144BCBD727C18DAA0FE2C572215",
-              "Name": "gmock_Impl",
-              "RefType": "record",
-              "Path": "testing/IsEmptyMatcher",
               "Children": []
             }
           ]
@@ -4995,6 +5178,43 @@ var JsonIndex = `
           "RefType": "namespace",
           "Path": "testing/no_adl",
           "Children": []
+        },
+        {
+          "USR": "052DBED2ABBED1642C8D8852B29C8B0D9C1C319E",
+          "Name": "OnceAction",
+          "RefType": "record",
+          "Path": "testing",
+          "Children": []
+        },
+        {
+          "USR": "19C080DD7F7D4158E86A55AB7B378F3936F278FE",
+          "Name": "OnceAction",
+          "RefType": "record",
+          "Path": "testing",
+          "Children": [
+            {
+              "USR": "34F5B2BE7DDDF246C67405E79EEC6D67FCC13CCE",
+              "Name": "IgnoreIncomingArguments",
+              "RefType": "record",
+              "Path": "testing/OnceAction",
+              "Children": []
+            },
+            {
+              "USR": "58AC8834488E0FA1A43EA3DAE045529F8F870FC2",
+              "Name": "StdFunctionAdaptor",
+              "RefType": "record",
+              "Path": "testing/OnceAction",
+              "Children": [
+                {
+                  "USR": "B222E3B35325FD661AEDBA6237B825FB005D30EC",
+                  "Name": "CallableTag",
+                  "RefType": "record",
+                  "Path": "testing/OnceAction/StdFunctionAdaptor",
+                  "Children": []
+                }
+              ]
+            }
+          ]
         },
         {
           "USR": "DD9C469E480B5062EE384805CA61AA49DA36A2C7",

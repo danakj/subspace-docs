@@ -38,9 +38,6 @@
         <a href="UnitTest.html">UnitTest</a>
       </li>
       <li>
-        <a href="AssertionResult.html">AssertionResult</a>
-      </li>
-      <li>
         <a href="TestProperty.html">TestProperty</a>
       </li>
       <li>
@@ -74,6 +71,12 @@
         <a href="Matcher.html">Matcher</a>
       </li>
       <li>
+        <a href="OnceAction.html">OnceAction</a>
+      </li>
+      <li>
+        <a href="OnceAction.html">OnceAction</a>
+      </li>
+      <li>
         <a href="DefaultValue.html">DefaultValue</a>
       </li>
       <li>
@@ -84,6 +87,9 @@
       </li>
       <li>
         <a href="ActionInterface.html">ActionInterface</a>
+      </li>
+      <li>
+        <a href="Action.html">Action</a>
       </li>
       <li>
         <a href="Action.html">Action</a>
@@ -119,9 +125,6 @@
         <a href="MockFunction.html">MockFunction</a>
       </li>
       <li>
-        <a href="IsEmptyMatcher.html">IsEmptyMatcher</a>
-      </li>
-      <li>
         <a href="IsTrueMatcher.html">IsTrueMatcher</a>
       </li>
       <li>
@@ -138,6 +141,9 @@
       </li>
       <li>
         <a href="Message.html">Message</a>
+      </li>
+      <li>
+        <a href="AssertionResult.html">AssertionResult</a>
       </li>
       <li>
         <a href="TestPartResult.html">TestPartResult</a>
@@ -190,62 +196,11 @@
     </ul>
     <h2 id="Functions">Functions</h2>
     <div>
-      <h3 id="06E2D24ED9B437E0C251CA315A7B273C2552EF21">AssertionSuccess</h3>
-      <p>
-        <a href="AssertionResult.html">AssertionResult</a>
-         AssertionSuccess()
-      </p>
-      <p>
-        Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1209">1209</a>
-         of file 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
-      </p>
-      <div>
-        <div>
-          <p> Makes a successful assertion result.</p>
-        </div>
-      </div>
-      <h3 id="BA14AF19CF1C29E6F91F60D384DD6B979CF1783B">AssertionFailure</h3>
-      <p>
-        <a href="AssertionResult.html">AssertionResult</a>
-         AssertionFailure()
-      </p>
-      <p>
-        Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1214">1214</a>
-         of file 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
-      </p>
-      <div>
-        <div>
-          <p> Makes a failed assertion result.</p>
-        </div>
-      </div>
-      <h3 id="F9F274610B2314D1EE929F7F6B51D860CB0FDCFE">AssertionFailure</h3>
-      <p>
-        <a href="AssertionResult.html">AssertionResult</a>
-         AssertionFailure(const Message &amp; msg)
-      </p>
-      <p>
-        Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1220">1220</a>
-         of file 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
-      </p>
-      <div>
-        <div>
-          <p> Makes a failed assertion result with the given failure message. Deprecated; use AssertionFailure() &lt;&lt; message.</p>
-        </div>
-        <div>
-          <p> Makes a failed assertion result with the given failure message. Deprecated; use AssertionFailure() &lt;&lt; msg.</p>
-        </div>
-      </div>
       <h3 id="56997592AA351E938E78B14C3BAAE401065C4E12">AddGlobalTestEnvironment</h3>
       <p>Environment * AddGlobalTestEnvironment(Environment * env)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#1493">1493</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#1325">1325</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
       </p>
@@ -261,7 +216,7 @@
       <p>void InitGoogleTest(int * argc, char ** argv)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#6661">6661</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#6734">6734</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -276,7 +231,7 @@
       <p>void InitGoogleTest(int * argc, wchar_t ** argv)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#6671">6671</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#6744">6744</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -289,7 +244,7 @@
       <p>void InitGoogleTest()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#6681">6681</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#6754">6754</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -305,7 +260,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1777">1777</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1817">1817</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -325,7 +280,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1783">1783</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1822">1822</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -336,7 +291,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1789">1789</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1827">1827</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -347,7 +302,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1795">1795</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1833">1833</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -358,7 +313,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1801">1801</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1839">1839</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -369,7 +324,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1807">1807</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1845">1845</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -380,7 +335,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1814">1814</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1853">1853</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -391,7 +346,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1820">1820</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1859">1859</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -402,7 +357,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1645">1645</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1696">1696</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -418,7 +373,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1652">1652</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#1703">1703</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -431,7 +386,7 @@
       <p>_Bool StaticAssertTypeEq()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#2316">2316</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#2134">2134</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
       </p>
@@ -456,20 +411,36 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#6695">6695</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#6790">6790</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
       <div>
         <div>
-          <p> Returns a path to temporary directory. Tries to determine an appropriate directory for the platform.</p>
+          <p> Returns a path to a temporary directory, which should be writable. It is implementation-dependent whether or not the path is terminated by the directory-separator character.</p>
+        </div>
+      </div>
+      <h3 id="E1824D964BA89910BA769571C841CEF55896257B">SrcDir</h3>
+      <p>
+        <a href="../std/__cxx11/basic_string.html">basic_string</a>
+         SrcDir()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#6811">6811</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Returns a path to a directory that contains ancillary data files that might be used by tests. It is implementation dependent whether or not the path is terminated by the directory-separator character. The directory and the files in it should be considered read-only.</p>
         </div>
       </div>
       <h3 id="78BE0BB86E1BA00C8084A00C295C72F6B36CFB24">RegisterTest</h3>
       <p>TestInfo * RegisterTest(const char * test_suite_name, const char * test_name, const char * type_param, const char * value_param, const char * file, int line, Factory factory)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#2455">2455</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h#2280">2280</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest.h">gtest.h</a>
       </p>
@@ -484,14 +455,14 @@
           <p> class MyFixture : public ::testing::Test {  public:   // All of these optional, just like in regular macro usage.   static void SetUpTestSuite() { ... }   static void TearDownTestSuite() { ... }   void SetUp() override { ... }   void TearDown() override { ... } };</p>
           <p> class MyTest : public MyFixture {  public:   explicit MyTest(int data) : data_(data) {}   void TestBody() override { ... }</p>
           <p>  private:   int data_; };</p>
-          <p> void RegisterMyTests(const std::vector&lt;int&gt;&amp; values) {   for (int v : values) {     ::testing::RegisterTest(         &quot;MyFixture&quot;, (&quot;Test&quot; + std::to_string(v)).c_str(), nullptr,         std::to_string(v).c_str(),         __FILE__, __LINE__,         // Important to use the fixture type as the return type here.         [=]() -&gt; MyFixture* { return new MyTest(v); });   } } ... int main(int argc, char** argv) {   std::vector&lt;int&gt; values_to_test = LoadValuesFromConfig();   RegisterMyTests(values_to_test);   ...   return RUN_ALL_TESTS(); }</p>
+          <p> void RegisterMyTests(const std::vector&lt;int&gt;&amp; values) {   for (int v : values) {     ::testing::RegisterTest(         &quot;MyFixture&quot;, (&quot;Test&quot; + std::to_string(v)).c_str(), nullptr,         std::to_string(v).c_str(),         __FILE__, __LINE__,         // Important to use the fixture type as the return type here.         [=]() -&gt; MyFixture* { return new MyTest(v); });   } } ... int main(int argc, char** argv) {   ::testing::InitGoogleTest(&amp;argc, argv);   std::vector&lt;int&gt; values_to_test = LoadValuesFromConfig();   RegisterMyTests(values_to_test);   ...   return RUN_ALL_TESTS(); }</p>
         </div>
       </div>
       <h3 id="F682A7770BC73CCC269F28278CCF2F18B3F094BA">MakeAction</h3>
       <p>Action&lt;F&gt; MakeAction(ActionInterface&lt;F&gt; * impl)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#583">583</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#896">896</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -504,7 +475,7 @@
       <p>PolymorphicAction&lt;Impl&gt; MakePolymorphicAction(const Impl &amp; impl)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#595">595</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#908">908</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -518,7 +489,7 @@
       <p>internal::DoAllAction&lt;typename std::decay&lt;Action&gt;::type...&gt; DoAll(Action &amp;&amp;... action)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1204">1204</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1786">1786</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -531,7 +502,7 @@
       <p>internal::WithArgsAction&lt;typename std::decay&lt;InnerAction&gt;::type, k&gt; WithArg(InnerAction &amp;&amp; action)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1215">1215</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1798">1798</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -544,7 +515,7 @@
       <p>internal::WithArgsAction&lt;typename std::decay&lt;InnerAction&gt;::type, k, ks...&gt; WithArgs(InnerAction &amp;&amp; action)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1225">1225</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1808">1808</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -557,7 +528,7 @@
       <p>internal::WithArgsAction&lt;typename std::decay&lt;InnerAction&gt;::type&gt; WithoutArgs(InnerAction &amp;&amp; action)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1235">1235</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1818">1818</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -570,13 +541,18 @@
       <p>internal::ReturnAction&lt;R&gt; Return(R value)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1244">1244</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1848">1848</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
       <div>
         <div>
-          <p> Creates an action that returns &apos;value&apos;.  &apos;value&apos; is passed by value instead of const reference - otherwise Return(&quot;string literal&quot;) will trigger a compiler error about using array as initializer.</p>
+          <p> Creates an action that returns a value.</p>
+          <p> The returned type can be used with a mock function returning a non-void, non-reference type U as follows:</p>
+          <p>  *  If R is convertible to U and U is move-constructible, then the action can     be used with WillOnce.</p>
+          <p>  *  If const R&amp; is convertible to U and U is copy-constructible, then the     action can be used with both WillOnce and WillRepeatedly.</p>
+          <p> The mock expectation contains the R value from which the U return value is constructed (a move/copy of the argument to Return). This means that the R value will survive at least until the mock object&apos;s expectations are cleared or the mock object is destroyed, meaning that U can safely be a reference-like type such as std::string_view:</p>
+          <p>     // The mock function returns a view of a copy of the string fed to     // Return. The view is valid even after the action is performed.     MockFunction&lt;std::string_view()&gt; mock;     EXPECT_CALL(mock, Call).WillOnce(Return(std::string(&quot;taco&quot;)));     const std::string_view result = mock.AsStdFunction()();     EXPECT_EQ(&quot;taco&quot;, result);</p>
         </div>
       </div>
       <h3 id="08F53601C0ADA3D46FECA37492E9139E1FE00409">ReturnNull</h3>
@@ -586,7 +562,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1249">1249</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1853">1853</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -602,7 +578,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1254">1254</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1858">1858</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -615,7 +591,7 @@
       <p>internal::ReturnRefAction&lt;R&gt; ReturnRef(R &amp; x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1260">1260</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1864">1864</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -628,7 +604,7 @@
       <p>internal::ReturnRefAction&lt;R&gt; ReturnRef(R &amp;&amp; )</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1266">1266</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1870">1870</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -641,7 +617,7 @@
       <p>internal::ReturnRefOfCopyAction&lt;R&gt; ReturnRefOfCopy(const R &amp; x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1272">1272</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1876">1876</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -654,12 +630,13 @@
       <p>internal::ByMoveWrapper&lt;R&gt; ByMove(R x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1281">1281</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1887">1887</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
       <div>
         <div>
+          <p> DEPRECATED: use Return(x) directly with WillOnce.</p>
           <p> Modifies the parent action (a Return() action) to perform a move of the argument instead of a copy. Return(ByMove()) actions can only be executed once and will assert this invariant.</p>
         </div>
       </div>
@@ -667,7 +644,7 @@
       <p>internal::ReturnRoundRobinAction&lt;T&gt; ReturnRoundRobin(std::vector&lt;T&gt; vals)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1289">1289</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1895">1895</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -680,7 +657,7 @@
       <p>internal::ReturnRoundRobinAction&lt;T&gt; ReturnRoundRobin(std::initializer_list&lt;T&gt; vals)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1297">1297</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1903">1903</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -696,7 +673,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1303">1303</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1909">1909</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -709,7 +686,7 @@
       <p>internal::SetArgumentPointeeAction&lt;N, T&gt; SetArgPointee(T value)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1310">1310</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1916">1916</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -722,7 +699,7 @@
       <p>internal::SetArgumentPointeeAction&lt;N, T&gt; SetArgumentPointee(T value)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1316">1316</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1922">1922</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -735,7 +712,7 @@
       <p>PolymorphicAction&lt;internal::AssignAction&lt;T1, T2&gt; &gt; Assign(T1 * ptr, T2 val)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1322">1322</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1928">1928</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -748,7 +725,7 @@
       <p>PolymorphicAction&lt;internal::SetErrnoAndReturnAction&lt;T&gt; &gt; SetErrnoAndReturn(int errval, T result)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1330">1330</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1936">1936</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -761,7 +738,7 @@
       <p>typename std::decay&lt;FunctionImpl&gt;::type Invoke(FunctionImpl &amp;&amp; function_impl)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1345">1345</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1951">1951</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -774,7 +751,7 @@
       <p>internal::InvokeMethodAction&lt;Class, MethodPtr&gt; Invoke(Class * obj_ptr, MethodPtr method_ptr)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1352">1352</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1958">1958</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -787,7 +764,7 @@
       <p>internal::InvokeWithoutArgsAction&lt;typename std::decay&lt;FunctionImpl&gt;::type&gt; InvokeWithoutArgs(FunctionImpl function_impl)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1359">1359</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1965">1965</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -800,7 +777,7 @@
       <p>internal::InvokeMethodWithoutArgsAction&lt;Class, MethodPtr&gt; InvokeWithoutArgs(Class * obj_ptr, MethodPtr method_ptr)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1367">1367</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1973">1973</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -813,7 +790,7 @@
       <p>internal::IgnoreResultAction&lt;A&gt; IgnoreResult(const A &amp; an_action)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1376">1376</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1982">1982</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -826,7 +803,7 @@
       <p>::std::reference_wrapper&lt;T&gt; ByRef(T &amp; l_value)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1391">1391</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1997">1997</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -841,7 +818,7 @@
       <p>internal::ReturnNewAction&lt;T, typename std::decay&lt;Params&gt;::type...&gt; ReturnNew(Params &amp;&amp;... params)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1399">1399</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#2005">2005</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -854,7 +831,7 @@
       <p>internal::ReturnArgAction&lt;k&gt; ReturnArg()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1406">1406</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#2012">2012</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -867,7 +844,7 @@
       <p>internal::SaveArgAction&lt;k, Ptr&gt; SaveArg(Ptr pointer)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1413">1413</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#2019">2019</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -880,7 +857,7 @@
       <p>internal::SaveArgPointeeAction&lt;k, Ptr&gt; SaveArgPointee(Ptr pointer)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1420">1420</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#2026">2026</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -893,7 +870,7 @@
       <p>internal::SetArgRefereeAction&lt;k, typename std::decay&lt;T&gt;::type&gt; SetArgReferee(T &amp;&amp; value)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1427">1427</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#2033">2033</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -906,7 +883,7 @@
       <p>internal::SetArrayArgumentAction&lt;k, I1, I2&gt; SetArrayArgument(I1 first, I2 last)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1438">1438</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#2044">2044</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -919,7 +896,7 @@
       <p>internal::DeleteArgAction&lt;k&gt; DeleteArg()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1446">1446</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#2052">2052</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -932,7 +909,7 @@
       <p>internal::ReturnPointeeAction&lt;Ptr&gt; ReturnPointee(Ptr pointer)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1452">1452</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#2058">2058</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -945,7 +922,7 @@
       <p>internal::ThrowAction&lt;typename std::decay&lt;T&gt;::type&gt; Throw(T &amp;&amp; exception)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#1460">1460</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#2066">2066</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
       </p>
@@ -1036,7 +1013,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-cardinalities.h#149">149</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-cardinalities.h#151">151</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-cardinalities.h">gmock-cardinalities.h</a>
       </p>
@@ -1049,7 +1026,7 @@
       <p>Matcher&lt;T&gt; MatcherCast(const M &amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#509">509</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#512">512</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1062,7 +1039,7 @@
       <p>Matcher&lt;T&gt; SafeMatcherCast(const M &amp; polymorphic_matcher_or_value)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#516">516</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#519">519</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1075,7 +1052,7 @@
       <p>Matcher&lt;T&gt; SafeMatcherCast(const Matcher&lt;U&gt; &amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#530">530</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#533">533</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1089,7 +1066,7 @@
       <p>Matcher&lt;T&gt; A()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4066">4066</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4238">4238</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1105,7 +1082,7 @@
       <p>internal::ElementsAreArrayMatcher&lt;typename ::std::iterator_traits&lt;Iter&gt;::value_type&gt; ElementsAreArray(Iter first, Iter last)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3976">3976</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4148">4148</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1116,35 +1093,35 @@
           <p> All forms of ElementsAreArray() make a copy of the input matcher sequence.</p>
         </div>
       </div>
-      <h3 id="C0E0A057C76BEB78D9A15F6B42FF897D35CC29B3">ElementsAreArray</h3>
-      <p>internal::ElementsAreArrayMatcher&lt;T&gt; ElementsAreArray(const T * pointer, size_t count)</p>
+      <h3 id="32759E8888A646F6131DDD403B08D190CB4372C2">ElementsAreArray</h3>
+      <p>decltype(ElementsAreArray(pointer, pointer + count)) ElementsAreArray(const T * pointer, size_t count)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3984">3984</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4156">4156</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
-      <h3 id="31A242F265CA3CCF20EAFDD935677704634F1671">ElementsAreArray</h3>
-      <p>internal::ElementsAreArrayMatcher&lt;T&gt; ElementsAreArray(const T (&amp;)[N] array)</p>
+      <h3 id="D2EEB27215154E13DDDC3EAC27125ADA3216FF59">ElementsAreArray</h3>
+      <p>decltype(ElementsAreArray(array, N)) ElementsAreArray(const T (&amp;)[N] array)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3990">3990</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4162">4162</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
-      <h3 id="8660ABD204417E24C60681C59AA8375E747DC33A">ElementsAreArray</h3>
-      <p>internal::ElementsAreArrayMatcher&lt;typename Container::value_type&gt; ElementsAreArray(const Container &amp; container)</p>
+      <h3 id="A0FB8FE81A8AD2FCB00059ECC5F1102F52956026">ElementsAreArray</h3>
+      <p>decltype(ElementsAreArray(container.begin(), container.end())) ElementsAreArray(const Container &amp; container)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#3996">3996</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4168">4168</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
-      <h3 id="1E87DF280CACCEB6AF4035D0F4D8DB8B46690AC6">ElementsAreArray</h3>
-      <p>internal::ElementsAreArrayMatcher&lt;T&gt; ElementsAreArray(::std::initializer_list&lt;T&gt; xs)</p>
+      <h3 id="C29248229C66EF975E586BF4BBF16380BE8629C5">ElementsAreArray</h3>
+      <p>decltype(ElementsAreArray(xs.begin(), xs.end())) ElementsAreArray(::std::initializer_list&lt;T&gt; xs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4002">4002</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4174">4174</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1152,7 +1129,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;typename ::std::iterator_traits&lt;Iter&gt;::value_type&gt; UnorderedElementsAreArray(Iter first, Iter last)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4021">4021</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4193">4193</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1167,7 +1144,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;T&gt; UnorderedElementsAreArray(const T * pointer, size_t count)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4030">4030</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4202">4202</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1175,7 +1152,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;T&gt; UnorderedElementsAreArray(const T (&amp;)[N] array)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4036">4036</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4208">4208</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1183,7 +1160,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;typename Container::value_type&gt; UnorderedElementsAreArray(const Container &amp; container)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4042">4042</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4214">4214</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1191,7 +1168,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;T&gt; UnorderedElementsAreArray(::std::initializer_list&lt;T&gt; xs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4049">4049</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4221">4221</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1199,7 +1176,7 @@
       <p>Matcher&lt;T&gt; An()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4072">4072</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4244">4244</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1215,7 +1192,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4084">4084</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4256">4256</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1231,7 +1208,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4091">4091</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4263">4263</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1244,7 +1221,7 @@
       <p>internal::RefMatcher&lt;T &amp;&gt; Ref(T &amp; x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4098">4098</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4270">4270</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1260,7 +1237,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4103">4103</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4275">4275</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1276,7 +1253,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4109">4109</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4281">4281</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1292,7 +1269,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4115">4115</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4287">4287</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1308,7 +1285,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4122">4122</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4294">4294</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1324,7 +1301,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4130">4130</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4302">4302</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1340,7 +1317,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4137">4137</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4309">4309</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1356,7 +1333,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4143">4143</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4315">4315</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1372,7 +1349,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4150">4150</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4322">4322</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1388,7 +1365,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4158">4158</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4330">4330</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1401,7 +1378,7 @@
       <p>internal::PointeeMatcher&lt;InnerMatcher&gt; Pointee(const InnerMatcher &amp; inner_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4166">4166</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4338">4338</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1414,7 +1391,7 @@
       <p>PolymorphicMatcher&lt;internal::WhenDynamicCastToMatcher&lt;To&gt; &gt; WhenDynamicCastTo(const Matcher&lt;To&gt; &amp; inner_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4179">4179</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4351">4351</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1427,7 +1404,7 @@
       <p>PolymorphicMatcher&lt;internal::FieldMatcher&lt;Class, FieldType&gt; &gt; Field(FieldType Class::* field, const FieldMatcher &amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4191">4191</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4363">4363</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1440,7 +1417,7 @@
       <p>PolymorphicMatcher&lt;internal::FieldMatcher&lt;Class, FieldType&gt; &gt; Field(const std::string &amp; field_name, FieldType Class::* field, const FieldMatcher &amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4206">4206</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4376">4376</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1453,7 +1430,7 @@
       <p>PolymorphicMatcher&lt;internal::PropertyMatcher&lt;Class, PropertyType, PropertyType (Class::*)(void) const&gt; &gt; Property(PropertyType (Class::*)(void) const property, const PropertyMatcher &amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4218">4218</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4388">4388</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1469,7 +1446,7 @@
       <p>PolymorphicMatcher&lt;internal::PropertyMatcher&lt;Class, PropertyType, PropertyType (Class::*)(void) const&gt; &gt; Property(const std::string &amp; property_name, PropertyType (Class::*)(void) const property, const PropertyMatcher &amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4235">4235</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4405">4405</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1485,13 +1462,26 @@
       <p>internal::ResultOfMatcher&lt;Callable, InnerMatcher&gt; ResultOf(Callable callable, InnerMatcher matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4280">4280</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4450">4450</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
       <div>
         <div>
           <p> Creates a matcher that matches an object if and only if the result of applying a callable to x matches &apos;matcher&apos;. For example,   ResultOf(f, StartsWith(&quot;hi&quot;)) matches a Foo object x if and only if f(x) starts with &quot;hi&quot;. `callable` parameter can be a function, function pointer, or a functor. It is required to keep no state affecting the results of the calls on it and make no assumptions about how many calls will be made. Any state it keeps must be protected from the concurrent access.</p>
+        </div>
+      </div>
+      <h3 id="32BFCAF2B0AD058E3D874BBED50C697D474C45E8">ResultOf</h3>
+      <p>internal::ResultOfMatcher&lt;Callable, InnerMatcher&gt; ResultOf(const std::string &amp; result_description, Callable callable, InnerMatcher matcher)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4459">4459</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Same as ResultOf() above, but also takes a description of the `callable` result to provide better error messages.</p>
         </div>
       </div>
       <h3 id="43020A0D6F62D04C01F1EEB882D2E0E92567728E">StrEq</h3>
@@ -1501,7 +1491,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4290">4290</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4470">4470</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1517,7 +1507,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4298">4298</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4478">4478</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1533,7 +1523,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4306">4306</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4486">4486</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1549,7 +1539,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4314">4314</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4494">4494</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1565,7 +1555,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4323">4323</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4503">4503</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1581,7 +1571,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4331">4331</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4511">4511</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1597,7 +1587,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4339">4339</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4519">4519</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1613,7 +1603,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4349">4349</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4529">4529</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1629,7 +1619,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4356">4356</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4536">4536</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1645,7 +1635,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4363">4363</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4543">4543</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1661,7 +1651,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4370">4370</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4550">4550</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1677,7 +1667,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4378">4378</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4558">4558</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1693,7 +1683,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4385">4385</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4565">4565</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1709,7 +1699,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4392">4392</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4572">4572</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1725,7 +1715,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4402">4402</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4582">4582</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1741,7 +1731,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4406">4406</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4586">4586</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1757,7 +1747,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4410">4410</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4590">4590</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1773,7 +1763,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4414">4414</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4594">4594</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1789,7 +1779,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4418">4418</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4598">4598</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1805,7 +1795,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4422">4422</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4602">4602</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1821,7 +1811,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4426">4426</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4606">4606</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1837,7 +1827,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4432">4432</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4612">4612</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1853,7 +1843,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4438">4438</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4618">4618</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1869,7 +1859,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4444">4444</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4624">4624</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1885,7 +1875,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4450">4450</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4630">4630</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1901,7 +1891,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4456">4456</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4636">4636</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1917,7 +1907,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4463">4463</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4643">4643</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1933,7 +1923,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4471">4471</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4651">4651</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1946,7 +1936,7 @@
       <p>internal::NotMatcher&lt;InnerMatcher&gt; Not(InnerMatcher m)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4479">4479</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4659">4659</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1959,7 +1949,7 @@
       <p>PolymorphicMatcher&lt;internal::TrulyMatcher&lt;Predicate&gt; &gt; Truly(Predicate pred)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4487">4487</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4667">4667</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1972,7 +1962,7 @@
       <p>internal::SizeIsMatcher&lt;SizeMatcher&gt; SizeIs(const SizeMatcher &amp; size_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4499">4499</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4679">4679</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1985,7 +1975,7 @@
       <p>internal::BeginEndDistanceIsMatcher&lt;DistanceMatcher&gt; BeginEndDistanceIs(const DistanceMatcher &amp; distance_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4510">4510</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4690">4690</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -1998,7 +1988,7 @@
       <p>PolymorphicMatcher&lt;internal::ContainerEqMatcher&lt;typename std::remove_const&lt;Container&gt;::type&gt; &gt; ContainerEq(const Container &amp; rhs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4520">4520</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4700">4700</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2011,7 +2001,7 @@
       <p>internal::WhenSortedByMatcher&lt;Comparator, ContainerMatcher&gt; WhenSortedBy(const Comparator &amp; comparator, const ContainerMatcher &amp; container_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4529">4529</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4709">4709</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2024,7 +2014,7 @@
       <p>internal::WhenSortedByMatcher&lt;internal::LessComparator, ContainerMatcher&gt; WhenSorted(const ContainerMatcher &amp; container_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4539">4539</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4718">4718</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2037,7 +2027,7 @@
       <p>internal::PointwiseMatcher&lt;TupleMatcher, typename std::remove_const&lt;Container&gt;::type&gt; Pointwise(const TupleMatcher &amp; tuple_matcher, const Container &amp; rhs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4553">4553</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4732">4732</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2050,7 +2040,7 @@
       <p>internal::PointwiseMatcher&lt;TupleMatcher, std::vector&lt;T&gt; &gt; Pointwise(const TupleMatcher &amp; tuple_matcher, std::initializer_list&lt;T&gt; rhs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4563">4563</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4741">4741</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2063,7 +2053,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;typename internal::BoundSecondMatcher&lt;Tuple2Matcher, typename internal::StlContainerView&lt;typename std::remove_const&lt;RhsContainer&gt;::type&gt;::type::value_type&gt; &gt; UnorderedPointwise(const Tuple2Matcher &amp; tuple2_matcher, const RhsContainer &amp; rhs_container)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4581">4581</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4758">4758</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2077,7 +2067,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;typename internal::BoundSecondMatcher&lt;Tuple2Matcher, T&gt; &gt; UnorderedPointwise(const Tuple2Matcher &amp; tuple2_matcher, std::initializer_list&lt;T&gt; rhs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4611">4611</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4786">4786</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2090,23 +2080,25 @@
       <p>internal::ContainsMatcher&lt;M&gt; Contains(M matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4638">4638</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4825">4825</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
       <div>
         <div>
           <p> Matches an STL-style container or a native array that contains at least one element matching the given value or matcher.</p>
-          <p> Examples:   ::std::set&lt;int&gt; page_ids;   page_ids.insert(3);   page_ids.insert(1);   EXPECT_THAT(page_ids, Contains(1));   EXPECT_THAT(page_ids, Contains(Gt(2)));   EXPECT_THAT(page_ids, Not(Contains(4)));</p>
+          <p> Examples:   ::std::set&lt;int&gt; page_ids;   page_ids.insert(3);   page_ids.insert(1);   EXPECT_THAT(page_ids, Contains(1));   EXPECT_THAT(page_ids, Contains(Gt(2)));   EXPECT_THAT(page_ids, Not(Contains(4)));  // See below for Times(0)</p>
           <p>   ::std::map&lt;int, size_t&gt; page_lengths;   page_lengths[1] = 100;   EXPECT_THAT(page_lengths,               Contains(::std::pair&lt;const int, size_t&gt;(1, 100)));</p>
           <p>   const char* user_ids[] = { &quot;joe&quot;, &quot;mike&quot;, &quot;tom&quot; };   EXPECT_THAT(user_ids, Contains(Eq(::std::string(&quot;tom&quot;))));</p>
+          <p> The matcher supports a modifier `Times` that allows to check for arbitrary occurrences including testing for absence with Times(0).</p>
+          <p> Examples:   ::std::vector&lt;int&gt; ids;   ids.insert(1);   ids.insert(1);   ids.insert(3);   EXPECT_THAT(ids, Contains(1).Times(2));      // 1 occurs 2 times   EXPECT_THAT(ids, Contains(2).Times(0));      // 2 is not present   EXPECT_THAT(ids, Contains(3).Times(Ge(1)));  // 3 occurs at least once</p>
         </div>
       </div>
       <h3 id="C785D27EF8AC0ED7C50460D60DD9104E0D2B299C">IsSupersetOf</h3>
       <p>internal::UnorderedElementsAreArrayMatcher&lt;typename ::std::iterator_traits&lt;Iter&gt;::value_type&gt; IsSupersetOf(Iter first, Iter last)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4670">4670</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4857">4857</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2122,7 +2114,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;T&gt; IsSupersetOf(const T * pointer, size_t count)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4679">4679</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4866">4866</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2130,7 +2122,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;T&gt; IsSupersetOf(const T (&amp;)[N] array)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4685">4685</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4872">4872</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2138,7 +2130,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;typename Container::value_type&gt; IsSupersetOf(const Container &amp; container)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4691">4691</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4878">4878</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2146,7 +2138,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;T&gt; IsSupersetOf(::std::initializer_list&lt;T&gt; xs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4698">4698</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4885">4885</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2154,7 +2146,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;typename ::std::iterator_traits&lt;Iter&gt;::value_type&gt; IsSubsetOf(Iter first, Iter last)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4727">4727</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4914">4914</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2170,7 +2162,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;T&gt; IsSubsetOf(const T * pointer, size_t count)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4736">4736</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4923">4923</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2178,7 +2170,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;T&gt; IsSubsetOf(const T (&amp;)[N] array)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4742">4742</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4929">4929</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2186,7 +2178,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;typename Container::value_type&gt; IsSubsetOf(const Container &amp; container)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4748">4748</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4935">4935</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2194,7 +2186,7 @@
       <p>internal::UnorderedElementsAreArrayMatcher&lt;T&gt; IsSubsetOf(::std::initializer_list&lt;T&gt; xs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4755">4755</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4942">4942</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2202,14 +2194,14 @@
       <p>internal::EachMatcher&lt;M&gt; Each(M matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4788">4788</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4975">4975</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
       <div>
         <div>
           <p> Matches an STL-style container or a native array that contains only elements matching the given value or matcher.</p>
-          <p> Each(m) is semantically equivalent to Not(Contains(Not(m))). Only the messages are different.</p>
+          <p> Each(m) is semantically equivalent to `Not(Contains(Not(m)))`. Only the messages are different.</p>
           <p> Examples:   ::std::set&lt;int&gt; page_ids;   // Each(m) matches an empty container, regardless of what m is.   EXPECT_THAT(page_ids, Each(Eq(1)));   EXPECT_THAT(page_ids, Each(Eq(77)));</p>
           <p>   page_ids.insert(3);   EXPECT_THAT(page_ids, Each(Gt(0)));   EXPECT_THAT(page_ids, Not(Each(Gt(4))));   page_ids.insert(1);   EXPECT_THAT(page_ids, Not(Each(Lt(2))));</p>
           <p>   ::std::map&lt;int, size_t&gt; page_lengths;   page_lengths[1] = 100;   page_lengths[2] = 200;   page_lengths[3] = 300;   EXPECT_THAT(page_lengths, Not(Each(Pair(1, 100))));   EXPECT_THAT(page_lengths, Each(Key(Le(3))));</p>
@@ -2220,7 +2212,7 @@
       <p>internal::KeyMatcher&lt;M&gt; Key(M inner_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4796">4796</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4983">4983</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2233,7 +2225,7 @@
       <p>internal::PairMatcher&lt;FirstMatcher, SecondMatcher&gt; Pair(FirstMatcher first_matcher, SecondMatcher second_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4806">4806</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4993">4993</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2246,7 +2238,7 @@
       <p>internal::MatcherAsPredicate&lt;M&gt; Matches(M matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4844">4844</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5051">5051</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2259,7 +2251,7 @@
       <p>_Bool Value(const T &amp; value, M matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4850">4850</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5057">5057</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2272,7 +2264,7 @@
       <p>_Bool ExplainMatchResult(M matcher, const T &amp; value, MatchResultListener * listener)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4857">4857</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5064">5064</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2288,21 +2280,21 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4873">4873</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5081">5081</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
       <div>
         <div>
           <p> Returns a string representation of the given matcher.  Useful for description strings of matchers defined using MATCHER_P* macros that accept matchers as their arguments.  For example:</p>
-          <p> MATCHER_P(XAndYThat, matcher,           &quot;X that &quot; + DescribeMatcher&lt;int&gt;(matcher, negation) +               &quot; and Y that &quot; + DescribeMatcher&lt;double&gt;(matcher, negation)) {   return ExplainMatchResult(matcher, arg.x(), result_listener) &amp;&amp;          ExplainMatchResult(matcher, arg.y(), result_listener); }</p>
+          <p> MATCHER_P(XAndYThat, matcher,           &quot;X that &quot; + DescribeMatcher&lt;int&gt;(matcher, negation) +               (negation ? &quot; or&quot; : &quot; and&quot;) + &quot; Y that &quot; +               DescribeMatcher&lt;double&gt;(matcher, negation)) {   return ExplainMatchResult(matcher, arg.x(), result_listener) &amp;&amp;          ExplainMatchResult(matcher, arg.y(), result_listener); }</p>
         </div>
       </div>
       <h3 id="C2CA90A84FDC8ADD2E51B94D5EC551BD117FAB15">ElementsAre</h3>
       <p>internal::ElementsAreMatcher&lt;std::tuple&lt;typename std::decay&lt;const Args &amp;&gt;::type...&gt; &gt; ElementsAre(const Args &amp;... matchers)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4885">4885</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5093">5093</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2310,7 +2302,7 @@
       <p>internal::UnorderedElementsAreMatcher&lt;std::tuple&lt;typename std::decay&lt;const Args &amp;&gt;::type...&gt; &gt; UnorderedElementsAre(const Args &amp;... matchers)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4894">4894</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5102">5102</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2318,7 +2310,7 @@
       <p>internal::AllOfMatcher&lt;typename std::decay&lt;const Args &amp;&gt;::type...&gt; AllOf(const Args &amp;... matchers)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4904">4904</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5112">5112</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2331,7 +2323,7 @@
       <p>internal::AnyOfMatcher&lt;typename std::decay&lt;const Args &amp;&gt;::type...&gt; AnyOf(const Args &amp;... matchers)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4911">4911</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5119">5119</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2339,7 +2331,7 @@
       <p>internal::AnyOfArrayMatcher&lt;typename ::std::iterator_traits&lt;Iter&gt;::value_type&gt; AnyOfArray(Iter first, Iter last)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4940">4940</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5148">5148</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2356,7 +2348,7 @@
       <p>internal::AllOfArrayMatcher&lt;typename ::std::iterator_traits&lt;Iter&gt;::value_type&gt; AllOfArray(Iter first, Iter last)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4948">4948</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5156">5156</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2364,7 +2356,7 @@
       <p>internal::AnyOfArrayMatcher&lt;T&gt; AnyOfArray(const T * ptr, size_t count)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4956">4956</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5164">5164</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2372,7 +2364,7 @@
       <p>internal::AllOfArrayMatcher&lt;T&gt; AllOfArray(const T * ptr, size_t count)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4961">4961</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5169">5169</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2380,7 +2372,7 @@
       <p>internal::AnyOfArrayMatcher&lt;T&gt; AnyOfArray(const T (&amp;)[N] array)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4966">4966</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5174">5174</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2388,7 +2380,7 @@
       <p>internal::AllOfArrayMatcher&lt;T&gt; AllOfArray(const T (&amp;)[N] array)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4971">4971</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5179">5179</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2396,7 +2388,7 @@
       <p>internal::AnyOfArrayMatcher&lt;typename Container::value_type&gt; AnyOfArray(const Container &amp; container)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4976">4976</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5184">5184</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2404,7 +2396,7 @@
       <p>internal::AllOfArrayMatcher&lt;typename Container::value_type&gt; AllOfArray(const Container &amp; container)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4982">4982</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5190">5190</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2412,7 +2404,7 @@
       <p>internal::AnyOfArrayMatcher&lt;T&gt; AnyOfArray(::std::initializer_list&lt;T&gt; xs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4988">4988</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5196">5196</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2420,7 +2412,7 @@
       <p>internal::AllOfArrayMatcher&lt;T&gt; AllOfArray(::std::initializer_list&lt;T&gt; xs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#4994">4994</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5202">5202</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2428,7 +2420,7 @@
       <p>internal::ArgsMatcher&lt;typename std::decay&lt;InnerMatcher&gt;::type, k...&gt; Args(InnerMatcher &amp;&amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5003">5003</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5211">5211</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2441,7 +2433,7 @@
       <p>InnerMatcher AllArgs(const InnerMatcher &amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5017">5017</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5225">5225</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2457,7 +2449,7 @@
       <p>internal::OptionalMatcher&lt;ValueMatcher&gt; Optional(const ValueMatcher &amp; value_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5028">5028</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5238">5238</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2470,7 +2462,7 @@
       <p>PolymorphicMatcher&lt;internal::any_cast_matcher::AnyCastMatcher&lt;T&gt; &gt; AnyWith(const Matcher&lt;const T &amp;&gt; &amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5035">5035</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5245">5245</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2483,7 +2475,7 @@
       <p>PolymorphicMatcher&lt;internal::variant_matcher::VariantMatcher&lt;T&gt; &gt; VariantWith(const Matcher&lt;const T &amp;&gt; &amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5046">5046</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5256">5256</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2496,7 +2488,7 @@
       <p>PolymorphicMatcher&lt;internal::ExceptionMatcherImpl&lt;Err&gt; &gt; Throws()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5195">5195</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5406">5406</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2514,7 +2506,7 @@
       <p>PolymorphicMatcher&lt;internal::ExceptionMatcherImpl&lt;Err&gt; &gt; Throws(const ExceptionMatcher &amp; exception_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5201">5201</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5412">5412</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2522,7 +2514,7 @@
       <p>PolymorphicMatcher&lt;internal::ExceptionMatcherImpl&lt;Err&gt; &gt; ThrowsMessage(MessageMatcher &amp;&amp; message_matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5211">5211</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h#5422">5422</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-matchers.h">gmock-matchers.h</a>
       </p>
@@ -2530,7 +2522,7 @@
       <p>const T &amp; Const(const T &amp; x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#1955">1955</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h#2026">2026</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-spec-builders.h">gmock-spec-builders.h</a>
       </p>
@@ -2545,7 +2537,7 @@
       <p>internal::InvokeArgumentAction&lt;index, typename std::decay&lt;Params&gt;::type...&gt; InvokeArgument(Params &amp;&amp;... params)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-actions.h#561">561</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-actions.h#650">650</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-actions.h">gmock-more-actions.h</a>
       </p>
@@ -2563,15 +2555,20 @@
       </div>
       <h3 id="8641C2FB535F47794A48C96DCDA1C98ABF035C96">IsEmpty</h3>
       <p>
-        <a href="IsEmptyMatcher.html">IsEmptyMatcher</a>
+        <a href="PolymorphicMatcher.html">PolymorphicMatcher</a>
          IsEmpty()
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-matchers.h#61">61</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-matchers.h#96">96</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-matchers.h">gmock-more-matchers.h</a>
       </p>
+      <div>
+        <div>
+          <p> Creates a polymorphic matcher that matches an empty container or C-style string. The container must support both size() and empty(), which all STL-like containers provide.</p>
+        </div>
+      </div>
       <h3 id="51606C99D2E8B9769F74F6CA28AFE571275E9FC7">IsTrue</h3>
       <p>
         <a href="IsTrueMatcher.html">IsTrueMatcher</a>
@@ -2579,7 +2576,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-matchers.h#73">73</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-matchers.h#104">104</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-matchers.h">gmock-more-matchers.h</a>
       </p>
@@ -2590,7 +2587,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-matchers.h#81">81</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-matchers.h#112">112</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-more-matchers.h">gmock-more-matchers.h</a>
       </p>
@@ -2598,7 +2595,7 @@
       <p>void InitGoogleMock(int * argc, char ** argv)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock.cc#191">191</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock.cc#201">201</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock.cc">gmock.cc</a>
       </p>
@@ -2618,7 +2615,7 @@
       <p>void InitGoogleMock(int * argc, wchar_t ** argv)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock.cc#197">197</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock.cc#207">207</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock.cc">gmock.cc</a>
       </p>
@@ -2631,7 +2628,7 @@
       <p>void InitGoogleMock()</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock.cc#203">203</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock.cc#213">213</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/src/gmock.cc">gmock.cc</a>
       </p>
@@ -2644,13 +2641,64 @@
       <p>std::ostream &amp; operator&lt;&lt;(std::ostream &amp; os, const Message &amp; sb)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-message.h#199">199</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-message.h#200">200</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-message.h">gtest-message.h</a>
       </p>
       <div>
         <div>
           <p> Streams a Message to an ostream.</p>
+        </div>
+      </div>
+      <h3 id="06E2D24ED9B437E0C251CA315A7B273C2552EF21">AssertionSuccess</h3>
+      <p>
+        <a href="AssertionResult.html">AssertionResult</a>
+         AssertionSuccess()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-assertion-result.cc#66">66</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-assertion-result.cc">gtest-assertion-result.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Makes a successful assertion result.</p>
+        </div>
+      </div>
+      <h3 id="BA14AF19CF1C29E6F91F60D384DD6B979CF1783B">AssertionFailure</h3>
+      <p>
+        <a href="AssertionResult.html">AssertionResult</a>
+         AssertionFailure()
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-assertion-result.cc#69">69</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-assertion-result.cc">gtest-assertion-result.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Makes a failed assertion result.</p>
+        </div>
+      </div>
+      <h3 id="F9F274610B2314D1EE929F7F6B51D860CB0FDCFE">AssertionFailure</h3>
+      <p>
+        <a href="AssertionResult.html">AssertionResult</a>
+         AssertionFailure(const Message &amp; msg)
+      </p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-assertion-result.cc#73">73</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest-assertion-result.cc">gtest-assertion-result.cc</a>
+      </p>
+      <div>
+        <div>
+          <p> Makes a failed assertion result with the given failure message. Deprecated; use AssertionFailure() &lt;&lt; message.</p>
+        </div>
+        <div>
+          <p> Makes a failed assertion result with the given failure message. Deprecated; use AssertionFailure() &lt;&lt; msg.</p>
         </div>
       </div>
       <h3 id="144F3E672D40F66F251C8EEBAE43950071F7CD1A">PrintToString</h3>
@@ -2660,7 +2708,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#1016">1016</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h#1124">1124</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-printers.h">gtest-printers.h</a>
       </p>
@@ -2668,7 +2716,7 @@
       <p>std::ostream &amp; operator&lt;&lt;(std::ostream &amp; os, const Matcher&lt;T&gt; &amp; matcher)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#615">615</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#635">635</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2681,7 +2729,7 @@
       <p>Matcher&lt;T&gt; MakeMatcher(const MatcherInterface&lt;T&gt; * impl)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#680">680</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#700">700</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2695,7 +2743,7 @@
       <p>PolymorphicMatcher&lt;Impl&gt; MakePolymorphicMatcher(const Impl &amp; impl)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#692">692</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#712">712</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2712,7 +2760,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#849">849</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#869">869</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2728,7 +2776,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#854">854</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#874">874</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2739,7 +2787,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#861">861</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#881">881</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2755,7 +2803,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#866">866</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#886">886</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2763,7 +2811,7 @@
       <p>internal::EqMatcher&lt;T&gt; Eq(T x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#875">875</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#895">895</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2776,7 +2824,7 @@
       <p>Matcher&lt;Lhs&gt; TypedEq(const Rhs &amp; rhs)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#895">895</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#919">919</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2791,7 +2839,7 @@
       <p>internal::GeMatcher&lt;Rhs&gt; Ge(Rhs x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#899">899</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#925">925</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2804,7 +2852,7 @@
       <p>internal::GtMatcher&lt;Rhs&gt; Gt(Rhs x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#905">905</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#931">931</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2817,7 +2865,7 @@
       <p>internal::LeMatcher&lt;Rhs&gt; Le(Rhs x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#911">911</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#937">937</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2830,7 +2878,7 @@
       <p>internal::LtMatcher&lt;Rhs&gt; Lt(Rhs x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#917">917</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#943">943</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2843,7 +2891,7 @@
       <p>internal::NeMatcher&lt;Rhs&gt; Ne(Rhs x)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#923">923</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h#949">949</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-matchers.h">gtest-matchers.h</a>
       </p>
@@ -2869,7 +2917,7 @@
       <p>internal::ParamGenerator&lt;typename Container::value_type&gt; ValuesIn(const Container &amp; container)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#306">306</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#309">309</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h">gtest-param-test.h</a>
       </p>
@@ -2882,7 +2930,7 @@
       <p>internal::ParamGenerator&lt;T&gt; Range(T start, T end, IncrementT step)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#226">226</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#229">229</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h">gtest-param-test.h</a>
       </p>
@@ -2896,7 +2944,7 @@
       <p>internal::ParamGenerator&lt;T&gt; Range(T start, T end)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#232">232</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#235">235</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h">gtest-param-test.h</a>
       </p>
@@ -2904,7 +2952,7 @@
       <p>internal::ParamGenerator&lt;typename std::iterator_traits&lt;ForwardIterator&gt;::value_type&gt; ValuesIn(ForwardIterator begin, ForwardIterator end)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#292">292</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#295">295</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h">gtest-param-test.h</a>
       </p>
@@ -2927,7 +2975,7 @@
       <p>internal::ParamGenerator&lt;T&gt; ValuesIn(const T (&amp;)[N] array)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#301">301</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#304">304</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h">gtest-param-test.h</a>
       </p>
@@ -2935,7 +2983,7 @@
       <p>internal::ValueArray&lt;T...&gt; Values(T... v)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#332">332</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#335">335</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h">gtest-param-test.h</a>
       </p>
@@ -2956,7 +3004,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#356">356</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#359">359</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h">gtest-param-test.h</a>
       </p>
@@ -2973,7 +3021,7 @@
       <p>internal::CartesianProductHolder&lt;Generator...&gt; Combine(const Generator &amp;... g)</p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#405">405</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#406">406</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h">gtest-param-test.h</a>
       </p>
@@ -2989,6 +3037,26 @@
           <p> This will instantiate tests in FlagDependentTest with all variations of two Boolean flags:</p>
           <p> class FlagDependentTest     : public testing::TestWithParam&lt;std::tuple&lt;bool, bool&gt; &gt; {   virtual void SetUp() {     // Assigns external_flag_1 and external_flag_2 values from the tuple.     std::tie(external_flag_1, external_flag_2) = GetParam();   } };</p>
           <p> TEST_P(FlagDependentTest, TestFeature1) {   // Test your code using external_flag_1 and external_flag_2 here. } INSTANTIATE_TEST_SUITE_P(TwoBoolSequence, FlagDependentTest,                          Combine(Bool(), Bool()));</p>
+        </div>
+      </div>
+      <h3 id="D0A4AD2650BC933ABB7FCEA720A9D189229A8B79">ConvertGenerator</h3>
+      <p>internal::ParamConverterGenerator&lt;T&gt; ConvertGenerator(internal::ParamGenerator&lt;T&gt; gen)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h#445">445</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest-param-test.h">gtest-param-test.h</a>
+      </p>
+      <div>
+        <div>
+          <p> ConvertGenerator() wraps a parameter generator in order to cast each produced value through a known type before supplying it to the test suite</p>
+          <p> Synopsis: ConvertGenerator&lt;T&gt;(gen)   - returns a generator producing the same elements as generated by gen, but     each element is static_cast to type T before being returned</p>
+          <p> It is useful when using the Combine() function to get the generated parameters in a custom type instead of std::tuple</p>
+          <p> Example:</p>
+          <p> This will instantiate tests in test suite AnimalTest each one with the parameter values tuple(&quot;cat&quot;, BLACK), tuple(&quot;cat&quot;, WHITE), tuple(&quot;dog&quot;, BLACK), and tuple(&quot;dog&quot;, WHITE):</p>
+          <p> enum Color { BLACK, GRAY, WHITE }; struct ParamType {   using TupleT = std::tuple&lt;const char*, Color&gt;;   std::string animal;   Color color;   ParamType(TupleT t) : animal(std::get&lt;0&gt;(t)), color(std::get&lt;1&gt;(t)) {} }; class AnimalTest     : public testing::TestWithParam&lt;ParamType&gt; {...};</p>
+          <p> TEST_P(AnimalTest, AnimalLooksNice) {...}</p>
+          <p> INSTANTIATE_TEST_SUITE_P(AnimalVariations, AnimalTest,                          ConvertGenerator&lt;ParamType::TupleT&gt;(                              Combine(Values(&quot;cat&quot;, &quot;dog&quot;),                                      Values(BLACK, WHITE))));</p>
         </div>
       </div>
       <h3 id="6BB12E5A49BB18CF1EAA8CB4FE68567117F71DB4">AssertPred1Helper</h3>
@@ -3014,7 +3082,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h#130">130</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h#118">118</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h">gtest_pred_impl.h</a>
       </p>
@@ -3030,7 +3098,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h#180">180</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h#155">155</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h">gtest_pred_impl.h</a>
       </p>
@@ -3046,7 +3114,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h#236">236</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h#194">194</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h">gtest_pred_impl.h</a>
       </p>
@@ -3062,7 +3130,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h#298">298</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h#236">236</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/include/gtest/gtest_pred_impl.h">gtest_pred_impl.h</a>
       </p>
@@ -3078,7 +3146,7 @@
       </p>
       <p>
         Defined at line 
-        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2286">2286</a>
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc#2308">2308</a>
          of file 
         <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googletest/src/gtest.cc">gtest.cc</a>
       </p>
@@ -3101,21 +3169,6 @@
           <a href="#Functions">Functions</a>
         </span>
         <ul>
-          <li>
-            <span>
-              <a href="#06E2D24ED9B437E0C251CA315A7B273C2552EF21">AssertionSuccess</a>
-            </span>
-          </li>
-          <li>
-            <span>
-              <a href="#BA14AF19CF1C29E6F91F60D384DD6B979CF1783B">AssertionFailure</a>
-            </span>
-          </li>
-          <li>
-            <span>
-              <a href="#F9F274610B2314D1EE929F7F6B51D860CB0FDCFE">AssertionFailure</a>
-            </span>
-          </li>
           <li>
             <span>
               <a href="#56997592AA351E938E78B14C3BAAE401065C4E12">AddGlobalTestEnvironment</a>
@@ -3194,6 +3247,11 @@
           <li>
             <span>
               <a href="#5F81F0B07E390C2449E1455AFA0E5CDB085A0336">TempDir</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#E1824D964BA89910BA769571C841CEF55896257B">SrcDir</a>
             </span>
           </li>
           <li>
@@ -3433,22 +3491,22 @@
           </li>
           <li>
             <span>
-              <a href="#C0E0A057C76BEB78D9A15F6B42FF897D35CC29B3">ElementsAreArray</a>
+              <a href="#32759E8888A646F6131DDD403B08D190CB4372C2">ElementsAreArray</a>
             </span>
           </li>
           <li>
             <span>
-              <a href="#31A242F265CA3CCF20EAFDD935677704634F1671">ElementsAreArray</a>
+              <a href="#D2EEB27215154E13DDDC3EAC27125ADA3216FF59">ElementsAreArray</a>
             </span>
           </li>
           <li>
             <span>
-              <a href="#8660ABD204417E24C60681C59AA8375E747DC33A">ElementsAreArray</a>
+              <a href="#A0FB8FE81A8AD2FCB00059ECC5F1102F52956026">ElementsAreArray</a>
             </span>
           </li>
           <li>
             <span>
-              <a href="#1E87DF280CACCEB6AF4035D0F4D8DB8B46690AC6">ElementsAreArray</a>
+              <a href="#C29248229C66EF975E586BF4BBF16380BE8629C5">ElementsAreArray</a>
             </span>
           </li>
           <li>
@@ -3574,6 +3632,11 @@
           <li>
             <span>
               <a href="#D7968EC051ABE7A972B2BE8F58D31F0CF7C72042">ResultOf</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#32BFCAF2B0AD058E3D874BBED50C697D474C45E8">ResultOf</a>
             </span>
           </li>
           <li>
@@ -4018,6 +4081,21 @@
           </li>
           <li>
             <span>
+              <a href="#06E2D24ED9B437E0C251CA315A7B273C2552EF21">AssertionSuccess</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#BA14AF19CF1C29E6F91F60D384DD6B979CF1783B">AssertionFailure</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#F9F274610B2314D1EE929F7F6B51D860CB0FDCFE">AssertionFailure</a>
+            </span>
+          </li>
+          <li>
+            <span>
               <a href="#144F3E672D40F66F251C8EEBAE43950071F7CD1A">PrintToString</a>
             </span>
           </li>
@@ -4138,6 +4216,11 @@
           </li>
           <li>
             <span>
+              <a href="#D0A4AD2650BC933ABB7FCEA720A9D189229A8B79">ConvertGenerator</a>
+            </span>
+          </li>
+          <li>
+            <span>
               <a href="#6BB12E5A49BB18CF1EAA8CB4FE68567117F71DB4">AssertPred1Helper</a>
             </span>
           </li>
@@ -4172,5 +4255,5 @@
   </div>
 </main>
 <footer>
-  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230116031321+5ab0894fd570-1~exp1~20230116151419.689)</span>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
 </footer>

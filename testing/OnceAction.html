@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OnceAction</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OnceAction</h1>
+    <div>
+      <div>
+        <p> Specialized for function types below.</p>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right"></div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
+</footer>
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>class OnceAction</title>
+<link rel="stylesheet" href="../clang-doc-default-stylesheet.css"/>
+<script src="../index.js"></script>
+<script src="../index_json.js"></script>
+<header id="project-title">Subspace</header>
+<main>
+  <div id="sidebar-left" path="testing" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left"></div>
+  <div id="main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>class OnceAction</h1>
+    <p>
+      Defined at line 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#419">419</a>
+       of file 
+      <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+    </p>
+    <div>
+      <div>
+        <p> An action that can only be used once.</p>
+        <p> This is accepted by WillOnce, which doesn&apos;t require the underlying action to be copy-constructible (only move-constructible), and promises to invoke it as an rvalue reference. This allows the action to work with move-only types like std::move_only_function in a type-safe manner.</p>
+        <p> For example:</p>
+        <p>     // Assume we have some API that needs to accept a unique pointer to some     // non-copyable object Foo.     void AcceptUniquePointer(std::unique_ptr&lt;Foo&gt; foo);</p>
+        <p>     // We can define an action that provides a Foo to that API. Because It     // has to give away its unique pointer, it must not be called more than     // once, so its call operator is &amp;&amp;-qualified.     struct ProvideFoo {       std::unique_ptr&lt;Foo&gt; foo;</p>
+        <p>       void operator()() &amp;&amp; {         AcceptUniquePointer(std::move(Foo));       }     };</p>
+        <p>     // This action can be used with WillOnce.     EXPECT_CALL(mock, Call)         .WillOnce(ProvideFoo{std::make_unique&lt;Foo&gt;(...)});</p>
+        <p>     // But a call to WillRepeatedly will fail to compile. This is correct,     // since the action cannot correctly be used repeatedly.     EXPECT_CALL(mock, Call)         .WillRepeatedly(ProvideFoo{std::make_unique&lt;Foo&gt;(...)});</p>
+        <p> A less-contrived example would be an action that returns an arbitrary type, whose &amp;&amp;-qualified call operator is capable of dealing with move-only types.</p>
+      </div>
+    </div>
+    <h2 id="Records">Records</h2>
+    <ul>
+      <li>
+        <a href="../testing/OnceAction/StdFunctionAdaptor.html">StdFunctionAdaptor</a>
+      </li>
+      <li>
+        <a href="../testing/OnceAction/IgnoreIncomingArguments.html">IgnoreIncomingArguments</a>
+      </li>
+    </ul>
+    <h2 id="Functions">Functions</h2>
+    <div>
+      <h3 id="D3CAECA4D8DB385ED41C59BF33CF62E56B42FD57">OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(Callable &amp;&amp; callable)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#458">458</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <h3 id="23E524AA402FEA985BAC2B687FAF66EE9897247E">OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(Callable &amp;&amp; callable)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#477">477</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Exclude callables for which the overload above works. We&apos;d rather provide the arguments if possible.</p>
+        </div>
+      </div>
+      <h3 id="FEF4B2DAA96EA0BAF482290324DAD70E2FE6BCAA">OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(const OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#485">485</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> We are naturally copyable because we store only an std::function, but semantically we should not be copyable.</p>
+        </div>
+      </div>
+      <h3 id="C2633320452F17452A4FC5ED0BA1790E91405F3D">operator=</h3>
+      <p>public OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp; operator=(const OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#486">486</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <h3 id="3A06F84FD044726689C64158604EBBA20A52FF6E">OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</h3>
+      <p>public void OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &amp;&amp; )</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#487">487</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <h3 id="D716D431057CD13D9EB6AEE1A4F6302F29FF1291">Call</h3>
+      <p>public Result Call(Args... args)</p>
+      <p>
+        Defined at line 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h#491">491</a>
+         of file 
+        <a href="https://github.com/chromium/subspace/blob/main/third_party/googletest/googlemock/include/gmock/gmock-actions.h">gmock-actions.h</a>
+      </p>
+      <div>
+        <div>
+          <p> Invoke the underlying action callable with which we were constructed, handing it the supplied arguments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+      <li>
+        <span>
+          <a href="#Records">Records</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <a href="#Functions">Functions</a>
+        </span>
+        <ul>
+          <li>
+            <span>
+              <a href="#D3CAECA4D8DB385ED41C59BF33CF62E56B42FD57">OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#23E524AA402FEA985BAC2B687FAF66EE9897247E">OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#FEF4B2DAA96EA0BAF482290324DAD70E2FE6BCAA">OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#C2633320452F17452A4FC5ED0BA1790E91405F3D">operator=</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#3A06F84FD044726689C64158604EBBA20A52FF6E">OnceAction&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="#D716D431057CD13D9EB6AEE1A4F6302F29FF1291">Call</a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</main>
+<footer>
+  <span class="no-break">Ubuntu clang-doc version 16.0.0 (++20230125042347+9b70a28e0d76-1~exp1~20230125042505.706)</span>
+</footer>
