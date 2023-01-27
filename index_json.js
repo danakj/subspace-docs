@@ -1440,14 +1440,14 @@ var JsonIndex = `
                   "Children": []
                 },
                 {
-                  "USR": "43A0ADB548B0A3B61060E76148312F6D07A6953F",
+                  "USR": "0120ED026F0DDC6FF90788BCFDEBC60C26814BC7",
                   "Name": "Storage",
                   "RefType": "record",
                   "Path": "sus/option/__private",
                   "Children": []
                 },
                 {
-                  "USR": "0120ED026F0DDC6FF90788BCFDEBC60C26814BC7",
+                  "USR": "43A0ADB548B0A3B61060E76148312F6D07A6953F",
                   "Name": "Storage",
                   "RefType": "record",
                   "Path": "sus/option/__private",
@@ -2839,13 +2839,6 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "7A304C84DBA55088D620E2B4111716BA2B53C652",
-              "Name": "FormatForComparison",
-              "RefType": "record",
-              "Path": "testing/internal",
-              "Children": []
-            },
-            {
               "USR": "673D6E7682CC98E90B133818DE5F4D6C16EA2A86",
               "Name": "FormatForComparison",
               "RefType": "record",
@@ -2860,7 +2853,7 @@ var JsonIndex = `
               "Children": []
             },
             {
-              "USR": "DAE511E48F80D45B41489659D66D05AB26A06FDD",
+              "USR": "7A304C84DBA55088D620E2B4111716BA2B53C652",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
@@ -2868,6 +2861,13 @@ var JsonIndex = `
             },
             {
               "USR": "BAC9C605EF89A1AB67E77D26C8A82315E2647E11",
+              "Name": "FormatForComparison",
+              "RefType": "record",
+              "Path": "testing/internal",
+              "Children": []
+            },
+            {
+              "USR": "DAE511E48F80D45B41489659D66D05AB26A06FDD",
               "Name": "FormatForComparison",
               "RefType": "record",
               "Path": "testing/internal",
