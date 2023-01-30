@@ -1,0 +1,217 @@
+<head>
+  <title>
+    Tuple
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="type record class">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Class
+        </span>
+        <a class="type-name" href="#">Tuple</a>
+      </div>
+      <div class="type-signature">
+        <span class="class">
+          class
+        </span>
+        <span class="type-name">
+          Tuple
+        </span>
+        <div class="record-body">
+          { ... };
+        </div>
+      </div>
+      <div class="description">
+        <p>A Tuple is a finite sequence of one or more heterogeneous values.</p><p></p><h1>Tail padding</h1><p>The Tuple's tail padding may be reused when the Tuple is marked as <code>[[no_unique_address]]</code>. The Tuple will have tail padding if the first type has a size that is not a multiple of the Tuple's alignment. For example if it's smaller than the alignment, such as <code>Tuple&lt;u8, u64&gt;</code> which has <code>(alignof(u64) == sizeof(u64)) - sizeof(u8)</code> or 7 bytes of tail padding.</p><p></p><pre><code>struct S {
+  [[no_unique_address]] Tuple&lt;u32, u64&gt; tuple;  // 16 bytes.
+  u32 val;  // 4 bytes.
+};  // 16 bytes, since `val` is stored inside `tuple`.
+</code></pre><p></p><p>However note that this behaviour is compiler-dependent, and MSVC does not use the <code>[[no_unique_address]]</code> hint.</p><p>Use <code>sus::data_size_of&lt;T&gt;()</code> to determine the size of T excluding its tail padding (so <code>sus::size_of&lt;T&gt;() - sus::data_size_of&lt;T&gt;()</code> is the tail padding), which can be useful to ensure you have the expected behaviour from your types.</p><p>Additionally types within the tuple may be placed inside the tail padding of other types in the tuple, should such padding exist.</p><p>Generally, but not always, use of tail padding in Tuple is optimized by ordering types (left-to-right in the template variables) from smallest-to- largest for simple types such as integers (which have no tail padding themselves), or in least-to-most tail-padding for more complex types. Elements in a Tuple are stored internally in reverse of the order they are specified, which is why the size of the *first* element matters for the Tuple's externally usable tail padding.</p><p></p><h1>Use after move</h1><p>Tuples optionally compile in checks against use-after-move to protect against using their internal values after they are moved. It is on by default and behind the <code>SUS_CONFIG_TUPLE_USE_AFTER_MOVE</code> define which can be true or false. When on, all Tuples are an extra 8 bytes larger.</p>
+      </div>
+    </div>
+    <div class="section fields static">
+      <div class="section-header">
+        Static Data Members
+      </div>
+      <div class="section-item">
+        <span class="static">
+          static
+        </span>
+        <span class="const">
+          const
+        </span>
+        <a class="type-name" title="bool">bool</a>
+        <a class="field-name" name="field.static.protects_uam" href="#field.static.protects_uam">protects_uam</a>
+      </div>
+    </div>
+    <div class="section methods static">
+      <div class="section-header">
+        Static Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Ts...&gt;" href="sus-tuple_type-Tuple.html">Tuple&lt;T, Ts...&gt;</a>
+          <a class="function-name" name="method.static.with" href="#method.static.with">with</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Construct a Tuple with the given values.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section methods nonstatic">
+      <div class="section-header">
+        Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Ts...&gt;" href="sus-tuple_type-Tuple.html">Tuple&lt;T, Ts...&gt;</a>
+          <a class="function-name" name="method.clone" href="#method.clone">clone</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>sus::mem::Clone trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="&">auto &</a>
+          <a class="function-name" name="method.get_mut" href="#method.get_mut">get_mut</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Gets a mutable reference to the <code>I</code>th element in the tuple.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto &">const auto &</a>
+          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto &">const auto &</a>
+          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Gets a const reference to the <code>I</code>th element in the tuple.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="decltype(auto)">decltype(auto)</a>
+          <a class="function-name" name="method.into_inner" href="#method.into_inner">into_inner</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Removes the <code>I</code>th element from the tuple, leaving the Tuple in a moved-from state where it should no longer be used.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.operator&lt;=&gt;" href="#method.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.operator&lt;=&gt;" href="#method.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.operator&lt;=&gt;" href="#method.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.operator&lt;=&gt;" href="#method.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.operator&lt;=&gt;" href="#method.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>Compares two Tuples.</p><p>Satisfies sus::ops::Ord&lt;Tuple&lt;...&gt;&gt; if sus::ops::Ord&lt;...&gt;. Satisfies sus::ops::WeakOrd&lt;Option&lt;...&gt;&gt; if sus::ops::WeakOrd&lt;...&gt;. Satisfies sus::ops::PartialOrd&lt;Option&lt;...&gt;&gt; if sus::ops::PartialOrd&lt;...&gt;.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="method.operator==" href="#method.operator==">operator==</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>sus::ops::Eq&lt;Tuple&lt;U...&gt;&gt; trait.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

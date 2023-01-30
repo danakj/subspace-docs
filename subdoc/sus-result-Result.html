@@ -1,0 +1,362 @@
+<head>
+  <title>
+    Result
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="type record class">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Class
+        </span>
+        <a class="type-name" href="#">Result</a>
+      </div>
+      <div class="type-signature">
+        <span class="class">
+          class
+        </span>
+        <span class="type-name">
+          Result
+        </span>
+        <div class="record-body">
+          { ... };
+        </div>
+      </div>
+    </div>
+    <div class="section methods static">
+      <div class="section-header">
+        Static Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="E&gt;" href="sus-result-Result.html">Result&lt;T, E&gt;</a>
+          <a class="function-name" name="method.static.from_iter" href="#method.static.from_iter">from_iter</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Takes each element in the Iterator: if it is an Err, no further elements are taken, and the Err is returned. Should no Err occur, a container with the values of each Result is returned.</p><p>sus::iter::FromIterator trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="E&gt;" href="sus-result-Result.html">Result&lt;T, E&gt;</a>
+          <a class="function-name" name="method.static.with" href="#method.static.with">with</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="E&gt;" href="sus-result-Result.html">Result&lt;T, E&gt;</a>
+          <a class="function-name" name="method.static.with" href="#method.static.with">with</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="E&gt;" href="sus-result-Result.html">Result&lt;T, E&gt;</a>
+          <a class="function-name" name="method.static.with" href="#method.static.with">with</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Construct an Result that is holding the given success value.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="E&gt;" href="sus-result-Result.html">Result&lt;T, E&gt;</a>
+          <a class="function-name" name="method.static.with_err" href="#method.static.with_err">with_err</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="E&gt;" href="sus-result-Result.html">Result&lt;T, E&gt;</a>
+          <a class="function-name" name="method.static.with_err" href="#method.static.with_err">with_err</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="E&gt;" href="sus-result-Result.html">Result&lt;T, E&gt;</a>
+          <a class="function-name" name="method.static.with_err" href="#method.static.with_err">with_err</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Construct an Result that is holding the given error value.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section methods nonstatic">
+      <div class="section-header">
+        Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="E&gt;" href="sus-result-Result.html">Result&lt;T, E&gt;</a>
+          <a class="function-name" name="method.clone" href="#method.clone">clone</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="method.clone_from" href="#method.clone_from">clone_from</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;E&gt;">Option&lt;E&gt;</a>
+          <a class="function-name" name="method.err" href="#method.err">err</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Converts from <code>Result&lt;T, E&gt;</code> to <code>Option&lt;E&gt;</code>.</p><p>Converts self into an <code>Option&lt;E&gt;</code>, consuming self, and discarding the success value, if any.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="&gt;">Iterator&lt;Once&lt;T&gt; &gt;</a>
+          <a class="function-name" name="method.into_iter" href="#method.into_iter">into_iter</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="method.is_err" href="#method.is_err">is_err</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns true if the result is <code>Err</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="method.is_ok" href="#method.is_ok">is_ok</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns true if the result is <code>Ok</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &&gt; &gt;">Iterator&lt;Once&lt;const T &&gt; &gt;</a>
+          <a class="function-name" name="method.iter" href="#method.iter">iter</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &&gt; &gt;">Iterator&lt;Once&lt;const T &&gt; &gt;</a>
+          <a class="function-name" name="method.iter" href="#method.iter">iter</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const rref">
+            const&&
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="&&gt; &gt;">Iterator&lt;Once&lt;T &&gt; &gt;</a>
+          <a class="function-name" name="method.iter_mut" href="#method.iter_mut">iter_mut</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt;">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.ok" href="#method.ok">ok</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Converts from <code>Result&lt;T, E&gt;</code> to <code>Option&lt;T&gt;</code>.</p><p>Converts self into an <code>Option&lt;T&gt;</code>, consuming self, and discarding the error, if any.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="E&gt; &" href="sus-result-Result.html">Result&lt;T, E&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>If T and E can be trivially copy-assigned, Result&lt;T, E&gt; can also be trivially copy-assigned.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="E&gt; &" href="sus-result-Result.html">Result&lt;T, E&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="E&gt; &" href="sus-result-Result.html">Result&lt;T, E&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="E&gt; &" href="sus-result-Result.html">Result&lt;T, E&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="E&gt; &" href="sus-result-Result.html">Result&lt;T, E&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>If T and E can be trivially move-assigned, Result&lt;T, E&gt; can also be trivially move-assigned.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.unwrap" href="#method.unwrap">unwrap</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the contained <code>Ok</code> value, consuming the self value.</p><p>Because this function may panic, its use is generally discouraged. Instead, prefer to use pattern matching and handle the <code>Err</code> case explicitly, or call <code>unwrap_or()</code>, <code>unwrap_or_else()</code>, or <code>unwrap_or_default()</code>.</p><p></p><h1>Panics</h1><p>Panics if the value is an <code>Err</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="E">E</a>
+          <a class="function-name" name="method.unwrap_err" href="#method.unwrap_err">unwrap_err</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the contained <code>Err</code> value, consuming the self value.</p><p></p><h1>Panics</h1><p>Panics if the value is an <code>Ok</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="E">E</a>
+          <a class="function-name" name="method.unwrap_err_unchecked" href="#method.unwrap_err_unchecked">unwrap_err_unchecked</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the contained <code>Err</code> value, consuming the self value, without checking that the value is not an <code>Ok</code>.</p><p></p><h1>Safety</h1><p>Calling this method on an <code>Ok</code> is Undefined Behavior.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.unwrap_unchecked" href="#method.unwrap_unchecked">unwrap_unchecked</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the contained <code>Ok</code> value, consuming the self value, without checking that the value is not an <code>Err</code>.</p><p></p><h1>Safety</h1><p>Calling this method on an <code>Err</code> is Undefined Behavior.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

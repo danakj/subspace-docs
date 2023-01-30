@@ -1,0 +1,130 @@
+<head>
+  <title>
+    sus::option
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="namespace">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Namespace
+        </span>
+        <a class="namespace-name" href="#">sus::option</a>
+      </div>
+    </div>
+    <div class="section records classes">
+      <div class="section-header">
+        Classes
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-option-Option.html">Option</a>
+        </div>
+        <div class="description">
+          <p>A type which either holds #Some value of type <code>T</code>, or #None.</p><p><code>Option&lt;const T&gt;</code> for non-reference-type <code>T</code> is disallowed, as the Option owns the <code>T</code> in that case and it ensures the <code>Option</code> and the <code>T</code> are both accessed with the same const-ness.</p><p>If a type provides a never-value field (see mem/never_value.h), and is a [standard-layout type](https://en.cppreference.com/w/cpp/named_req/StandardLayoutType), then Option&lt;T&gt; will have the same size as T.</p><p>However the never-value field places some limitations on what can be constexpr in the Option type. Because it is not possible to query the state of the Option in a constant evaluation context, state-querying methods can not be constexpr, nor any method that branches based on the current state, such as <code>unwrap_or()</code>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section functions">
+      <div class="section-header">
+        Functions
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="struct __private::NoneMarker">NoneMarker</a>
+          <a class="function-name" name="function.none" href="#function.none">none</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Used to construct an Option&lt;T&gt; with a None value.</p><p>Calling none() produces a hint to make an Option&lt;T&gt; but does not actually construct Option&lt;T&gt;. This is because the type <code>T</code> is not known until the construction is explicitly requested.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Compares two Options.</p><p>Satisfies sus::ops::Ord&lt;Option&lt;U&gt;&gt; if sus::ops::Ord&lt;U&gt;.</p><p>Satisfies sus::ops::WeakOrd&lt;Option&lt;U&gt;&gt; if sus::ops::WeakOrd&lt;U&gt;.</p><p>Satisfies sus::ops::PartialOrd&lt;Option&lt;U&gt;&gt; if sus::ops::PartialOrd&lt;U&gt;.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="function.operator==" href="#function.operator==">operator==</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="function.operator==" href="#function.operator==">operator==</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>sus::ops::Eq&lt;Option&lt;U&gt;&gt; trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="__private::&&&gt;">SomeMarker&lt;T &&&gt;</a>
+          <a class="function-name" name="function.some" href="#function.some">some</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Used to construct an Option&lt;T&gt; with a Some(t) value.</p><p>Calling some() produces a hint to make an Option&lt;T&gt; but does not actually construct Option&lt;T&gt;. This is to allow constructing an Option&lt;T&gt; or Option&lt;T&&gt; correctly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

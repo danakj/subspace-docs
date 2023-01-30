@@ -1,0 +1,434 @@
+<head>
+  <title>
+    Array
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="type record class">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Class
+        </span>
+        <a class="type-name" href="#">Array</a>
+      </div>
+      <div class="type-signature">
+        <span class="class">
+          class
+        </span>
+        <span class="type-name">
+          Array
+        </span>
+        <div class="record-body">
+          { ... };
+        </div>
+      </div>
+      <div class="description">
+        <p>A container of objects of type T, with a fixed size N.</p><p>An Array can not be larger than PTRDIFF_MAX, as subtracting a pointer at a greater distance results in Undefined Behaviour.</p>
+      </div>
+    </div>
+    <div class="section methods static">
+      <div class="section-header">
+        Static Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="N&gt;" href="sus-containers-Array.html">Array&lt;T, N&gt;</a>
+          <a class="function-name" name="method.static.with_initializer" href="#method.static.with_initializer">with_initializer</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="N&gt;" href="sus-containers-Array.html">Array&lt;T, N&gt;</a>
+          <a class="function-name" name="method.static.with_uninitialized" href="#method.static.with_uninitialized">with_uninitialized</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="N&gt;" href="sus-containers-Array.html">Array&lt;T, N&gt;</a>
+          <a class="function-name" name="method.static.with_value" href="#method.static.with_value">with_value</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="N&gt;" href="sus-containers-Array.html">Array&lt;T, N&gt;</a>
+          <a class="function-name" name="method.static.with_values" href="#method.static.with_values">with_values</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="section methods nonstatic">
+      <div class="section-header">
+        Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Slice&lt;T&gt;">Slice&lt;T&gt;</a>
+          <a class="function-name" name="method.as_mut" href="#method.as_mut">as_mut</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="*">T *</a>
+          <a class="function-name" name="method.as_mut_ptr" href="#method.as_mut_ptr">as_mut_ptr</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a mutable pointer to the first element in the array.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T *">const T *</a>
+          <a class="function-name" name="method.as_ptr" href="#method.as_ptr">as_ptr</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T *">const T *</a>
+          <a class="function-name" name="method.as_ptr" href="#method.as_ptr">as_ptr</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a const pointer to the first element in the array.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T&gt;">Slice&lt;const T&gt;</a>
+          <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T&gt;">Slice&lt;const T&gt;</a>
+          <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="N&gt;" href="sus-containers-Array.html">Array&lt;T, N&gt;</a>
+          <a class="function-name" name="method.clone" href="#method.clone">clone</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="method.clone_from" href="#method.clone_from">clone_from</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="&&gt;">Option&lt;T &&gt;</a>
+          <a class="function-name" name="method.get_mut" href="#method.get_mut">get_mut</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a mutable reference to the element at index <code>i</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &&gt;">Option&lt;const T &&gt;</a>
+          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &&gt;">Option&lt;const T &&gt;</a>
+          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &&gt;">Option&lt;const T &&gt;</a>
+          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a const reference to the element at index <code>i</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.get_unchecked" href="#method.get_unchecked">get_unchecked</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.get_unchecked" href="#method.get_unchecked">get_unchecked</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a const reference to the element at index <code>i</code>.</p><p></p><h1>Safety</h1><p>The index <code>i</code> must be inside the bounds of the array or Undefined Behaviour results.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="&">T &</a>
+          <a class="function-name" name="method.get_unchecked_mut" href="#method.get_unchecked_mut">get_unchecked_mut</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a mutable reference to the element at index <code>i</code>.</p><p></p><h1>Safety</h1><p>The index <code>i</code> must be inside the bounds of the array or Undefined Behaviour results.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="::sus::iter::N&gt; &gt;">Iterator&lt;ArrayIntoIter&lt;U, N&gt; &gt;</a>
+          <a class="function-name" name="method.into_iter" href="#method.into_iter">into_iter</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Converts the array into an iterator that consumes the array and returns each element in the same order they appear in the array.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="::sus::iter::T &&gt; &gt;">Iterator&lt;SliceIter&lt;const T &&gt; &gt;</a>
+          <a class="function-name" name="method.iter" href="#method.iter">iter</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="::sus::iter::T &&gt; &gt;">Iterator&lt;SliceIter&lt;const T &&gt; &gt;</a>
+          <a class="function-name" name="method.iter" href="#method.iter">iter</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns an iterator over all the elements in the array, visited in the same order they appear in the array. The iterator gives const access to each element.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="::sus::iter::&&gt; &gt;">Iterator&lt;SliceIterMut&lt;T &&gt; &gt;</a>
+          <a class="function-name" name="method.iter_mut" href="#method.iter_mut">iter_mut</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns an iterator over all the elements in the array, visited in the same order they appear in the array. The iterator gives mutable access to each element.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>
+          <a class="function-name" name="method.len" href="#method.len">len</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the number of elements in the array.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="N&gt;">Array&lt;R, N&gt;</a>
+          <a class="function-name" name="method.map" href="#method.map">map</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Consumes the array, and returns a new array, mapping each element of the array to a new type with the given function.</p><p>To just walk each element and map them, consider using <code>iter()</code> and <code>Iterator::map</code>. This does not require consuming the array.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="N&gt; &" href="sus-containers-Array.html">Array&lt;T, N&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="N&gt; &" href="sus-containers-Array.html">Array&lt;T, N&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="N&gt; &" href="sus-containers-Array.html">Array&lt;T, N&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="method.operator==" href="#method.operator==">operator==</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>sus::ops::Eq&lt;Array&lt;T, N&gt;, Array&lt;U, N&gt;&gt; trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

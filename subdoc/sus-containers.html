@@ -1,0 +1,181 @@
+<head>
+  <title>
+    sus::containers
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="namespace">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Namespace
+        </span>
+        <a class="namespace-name" href="#">sus::containers</a>
+      </div>
+    </div>
+    <div class="section records classes">
+      <div class="section-header">
+        Classes
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-containers-Array.html">Array</a>
+        </div>
+        <div class="description">
+          <p>A container of objects of type T, with a fixed size N.</p><p>An Array can not be larger than PTRDIFF_MAX, as subtracting a pointer at a greater distance results in Undefined Behaviour.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="struct">
+            struct
+          </span>
+          <a class="type-name" href="sus-containers-ArrayIntoIter.html">ArrayIntoIter</a>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-containers-Slice.html">Slice</a>
+        </div>
+        <div class="description">
+          <p>A dynamically-sized view into a contiguous sequence, <code>[T]</code>.</p><p>Contiguous here means that elements are laid out so that every element is the same distance from its neighbors.</p><p>Slices are a view into a block of memory represented as a pointer and a length.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="struct">
+            struct
+          </span>
+          <a class="type-name" href="sus-containers-SliceIter.html">SliceIter</a>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="struct">
+            struct
+          </span>
+          <a class="type-name" href="sus-containers-SliceIterMut.html">SliceIterMut</a>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-containers-Vec.html">Vec</a>
+        </div>
+        <div class="description">
+          <p>A resizeable contiguous buffer of type <code>T</code>.</p><p>Vec requires Move for its items: - They can't be references as a pointer to reference is not valid. - On realloc, items need to be moved between allocations.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="struct">
+            struct
+          </span>
+          <a class="type-name" href="sus-containers-VecIntoIter.html">VecIntoIter</a>
+        </div>
+      </div>
+    </div>
+    <div class="section functions">
+      <div class="section-header">
+        Functions
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.array" href="#function.array">array</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Used to construct an Array&lt;T, N&gt; with the parameters as its values.</p><p>Calling array() produces a hint to make an Array&lt;T, N&gt; but does not actually construct Array&lt;T, N&gt;, as the type <code>T</code> is not known here.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto &">const auto &</a>
+          <a class="function-name" name="function.get" href="#function.get">get</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto &">const auto &</a>
+          <a class="function-name" name="function.get" href="#function.get">get</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto &">const auto &</a>
+          <a class="function-name" name="function.get" href="#function.get">get</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Compares two Arrays.</p><p>Satisfies sus::ops::Ord&lt;Array&lt;T, N&gt;&gt; if sus::ops::Ord&lt;T&gt;.</p><p>Satisfies sus::ops::WeakOrd&lt;Array&lt;T, N&gt;&gt; if sus::ops::WeakOrd&lt;T&gt;.</p><p>Satisfies sus::ops::PartialOrd&lt;Array&lt;T, N&gt;&gt; if sus::ops::PartialOrd&lt;T&gt;.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.vec" href="#function.vec">vec</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Used to construct a Vec&lt;T&gt; with the parameters as its values.</p><p>Calling vec() produces a hint to make a Vec&lt;T&gt; but does not actually construct Vec&lt;T&gt;, as the type <code>T</code> is not known here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

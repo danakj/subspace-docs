@@ -1,0 +1,374 @@
+<head>
+  <title>
+    Slice
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="type record class">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Class
+        </span>
+        <a class="type-name" href="#">Slice</a>
+      </div>
+      <div class="type-signature">
+        <span class="class">
+          class
+        </span>
+        <span class="type-name">
+          Slice
+        </span>
+        <div class="record-body">
+          { ... };
+        </div>
+      </div>
+      <div class="description">
+        <p>A dynamically-sized view into a contiguous sequence, <code>[T]</code>.</p><p>Contiguous here means that elements are laid out so that every element is the same distance from its neighbors.</p><p>Slices are a view into a block of memory represented as a pointer and a length.</p>
+      </div>
+    </div>
+    <div class="section methods static">
+      <div class="section-header">
+        Static Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Slice&lt;T&gt;" href="sus-containers-Slice.html">Slice&lt;T&gt;</a>
+          <a class="function-name" name="method.static.from" href="#method.static.from">from</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Slice&lt;T&gt;" href="sus-containers-Slice.html">Slice&lt;T&gt;</a>
+          <a class="function-name" name="method.static.from_raw_parts" href="#method.static.from_raw_parts">from_raw_parts</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="section methods nonstatic">
+      <div class="section-header">
+        Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="*">T *</a>
+          <a class="function-name" name="method.as_mut_ptr" href="#method.as_mut_ptr">as_mut_ptr</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a mutable pointer to the first element in the slice.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T *">const T *</a>
+          <a class="function-name" name="method.as_ptr" href="#method.as_ptr">as_ptr</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T *">const T *</a>
+          <a class="function-name" name="method.as_ptr" href="#method.as_ptr">as_ptr</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a const pointer to the first element in the slice.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="&&gt;">Option&lt;T &&gt;</a>
+          <a class="function-name" name="method.get_mut" href="#method.get_mut">get_mut</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a mutable reference to the element at index <code>i</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="&gt;">Option&lt;Slice&lt;T&gt; &gt;</a>
+          <a class="function-name" name="method.get_range" href="#method.get_range">get_range</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const">
+            const
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a subslice which contains <code>len</code> many elements starting at <code>start</code>.</p><p>The <code>start</code> is the index of the first element to be returned in the subslice, and <code>len</code> is the number of elements in the output Slice. As such, <code>r.get_range(0u, r.len())</code> simply returns a copy of <code>r</code>.</p><p>Returns None if the <code>start</code> or <code>end</code> are out of bounds.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &&gt;">Option&lt;const T &&gt;</a>
+          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &&gt;">Option&lt;const T &&gt;</a>
+          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a const reference to the element at index <code>i</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.get_unchecked" href="#method.get_unchecked">get_unchecked</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.get_unchecked" href="#method.get_unchecked">get_unchecked</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a const reference to the element at index <code>i</code>.</p><p></p><h1>Safety</h1><p>The index <code>i</code> must be inside the bounds of the slice or Undefined Behaviour results. The size of the slice must therefore also be larger than 0.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="&">T &</a>
+          <a class="function-name" name="method.get_unchecked_mut" href="#method.get_unchecked_mut">get_unchecked_mut</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a mutable reference to the element at index <code>i</code>.</p><p></p><h1>Safety</h1><p>The index <code>i</code> must be inside the bounds of the slice or Undefined Behaviour results. The size of the slice must therefore also be larger than 0.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="::sus::iter::T &&gt; &gt;">Iterator&lt;SliceIter&lt;const T &&gt; &gt;</a>
+          <a class="function-name" name="method.into_iter" href="#method.into_iter">into_iter</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="::sus::iter::T &&gt; &gt;">Iterator&lt;SliceIter&lt;const T &&gt; &gt;</a>
+          <a class="function-name" name="method.into_iter" href="#method.into_iter">into_iter</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Converts the slice into an iterator that consumes the slice and returns each element in the same order they appear in the array.</p><p>For a Slice&lt;const T&gt; the iterator will return <code>const T&</code>. For a Slice&lt;T&gt; the iterator will return <code>T&</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="method.is_empty" href="#method.is_empty">is_empty</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns true if the slice has a length of 0.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="::sus::iter::T &&gt; &gt;">Iterator&lt;SliceIter&lt;const T &&gt; &gt;</a>
+          <a class="function-name" name="method.iter" href="#method.iter">iter</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns an iterator over all the elements in the slice, visited in the same order they appear in the slice. The iterator gives const access to each element.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="::sus::iter::&&gt; &gt;">Iterator&lt;SliceIterMut&lt;T &&gt; &gt;</a>
+          <a class="function-name" name="method.iter_mut" href="#method.iter_mut">iter_mut</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns an iterator over all the elements in the slice, visited in the same order they appear in the slice. The iterator gives mutable access to each element.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>
+          <a class="function-name" name="method.len" href="#method.len">len</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the number of elements in the slice.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &">const T &</a>
+          <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
+          <span class="function-params">
+            ()
+          </span>
+          <span class="const">
+            const
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="method.sort" href="#method.sort">sort</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Sorts the slice.</p><p>This sort is stable (i.e., does not reorder equal elements) and O(n * log(n)^2) worst-case.</p><p>When applicable, unstable sorting is preferred because it is generally faster than stable sorting and it doesn’t allocate auxiliary memory. See <code>sort_unstable()</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="method.sort_by" href="#method.sort_by">sort_by</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Sorts the slice with a comparator function.</p><p>This sort is stable (i.e., does not reorder equal elements) and O(n * log(n)^2) worst-case.</p><p>The comparator function must define a total ordering for the elements in the slice. If the ordering is not total, the order of the elements is unspecified.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="method.sort_unstable" href="#method.sort_unstable">sort_unstable</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Sorts the slice, but might not preserve the order of equal elements.</p><p>This sort is unstable (i.e., may reorder equal elements), in-place (i.e., does not allocate), and O(n * log(n)) worst-case.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="method.sort_unstable_by" href="#method.sort_unstable_by">sort_unstable_by</a>
+          <span class="function-params">
+            ()
+          </span>
+        </div>
+        <div class="description">
+          <p>Sorts the slice with a comparator function, but might not preserve the order of equal elements.</p><p>This sort is unstable (i.e., may reorder equal elements), in-place (i.e., does not allocate), and O(n * log(n)) worst-case.</p><p>The comparator function must define a total ordering for the elements in the slice. If the ordering is not total, the order of the elements is unspecified.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
