@@ -40,6 +40,9 @@
             ()
           </span>
         </div>
+        <div class="description">
+          <p>Used to construct a Result&lt;T, E&gt; with an Err(e) value.</p><p>Calling err() produces a hint to make a Result&lt;T, E&gt; but does not actually construct Result&lt;T, E&gt;. This is to deduce the actual types <code>T</code> and <code>E</code> when it is constructed, avoid specifying them both here, and support conversions.</p>
+        </div>
       </div>
       <div class="section-item">
         <div class="overload">
@@ -48,6 +51,9 @@
           <span class="function-params">
             ()
           </span>
+        </div>
+        <div class="description">
+          <p>Used to construct a Result&lt;T, E&gt; with an Ok(t) value.</p><p>Calling ok() produces a hint to make a Result&lt;T, E&gt; but does not actually construct Result&lt;T, E&gt;. This is to deduce the actual types <code>T</code> and <code>E</code> when it is constructed, avoid specifying them both here, and support conversions.</p>
         </div>
       </div>
       <div class="section-item">
