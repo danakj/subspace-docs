@@ -87,9 +87,7 @@
         <div class="overload">
           <a class="type-name" title="BoxedIteratorType">BoxedIteratorType</a>
           <a class="function-name" name="function.make_boxed_iterator" href="#function.make_boxed_iterator">make_boxed_iterator</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="IteratorSubclass &&">IteratorSubclass &&</a>)</span>
         </div>
         <div class="description">
           <p>Make a BoxedIterator.</p><p>The BoxedIterator's internals will be on the heap, making the BoxedIterator itself be trivially relocatable, as it's just some pointers to the heap.</p>
@@ -99,9 +97,7 @@
         <div class="overload">
           <a class="type-name" title="SizedIteratorType">SizedIteratorType</a>
           <a class="function-name" name="function.make_sized_iterator" href="#function.make_sized_iterator">make_sized_iterator</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="IteratorSubclass &&">IteratorSubclass &&</a>)</span>
         </div>
         <div class="description">
           <p>Make a SizedIterator.</p><p>This overload is used when the IteratorSubclass can be trivially relocated. It stores the SubclassIterator directly into the SizedIterator, avoiding a heap allocation, since the SizedIterator can then be trivially relocated.</p>
@@ -111,16 +107,12 @@
         <div class="overload">
           <a class="type-name" title="Iterator&lt;Once&lt;U&gt; &gt;">Iterator&lt;Once&lt;U&gt; &gt;</a>
           <a class="function-name" name="function.once" href="#function.once">once</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="Option&lt;U&gt; &&">Option&lt;U&gt; &&</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="Iterator&lt;Once&lt;U&gt; &gt;">Iterator&lt;Once&lt;U&gt; &gt;</a>
           <a class="function-name" name="function.once" href="#function.once">once</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="Option&lt;Item&gt; &&">Option&lt;Item&gt; &&</a>)</span>
         </div>
       </div>
     </div>

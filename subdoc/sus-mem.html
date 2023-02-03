@@ -39,39 +39,29 @@
         <div class="overload">
           <a class="type-name" title="T *">T *</a>
           <a class="function-name" name="function.addressof" href="#function.addressof">addressof</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="T *">T *</a>
           <a class="function-name" name="function.addressof" href="#function.addressof">addressof</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="T *">T *</a>
           <a class="function-name" name="function.addressof" href="#function.addressof">addressof</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &&">T &&</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="T *">T *</a>
           <a class="function-name" name="function.addressof" href="#function.addressof">addressof</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="sus::result::__private::ResultState &">ResultState &</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="typedef std::decay_t&lt;T&gt;">decay_t&lt;T&gt;</a>
           <a class="function-name" name="function.clone" href="#function.clone">clone</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const T &">const T &</a>)</span>
         </div>
         <div class="description">
           <p>Clones the input either by copying or cloning. Returns a new object of type <code>T</code>.</p><p>If <code>T</code> is a reference type, it will clone the underlying object.</p>
@@ -81,9 +71,7 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="function.clone_into" href="#function.clone_into">clone_into</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="const T &">const T &</a>)</span>
         </div>
         <div class="description">
           <p>Performs copy-assignment from <code>source</code>.</p><p>Will perform a copy assignment if T is <code>Copy</code>. Otherwise will perform the equivalent of <code>dest = source.clone()</code>.</p><p>The <code>Clone</code> type may provide an implementation of <code>clone_from(const T& source)</code> to reuse its resources and avoid unnecessary allocations, which will be preferred over calling <code>source.clone()</code>.</p>
@@ -93,9 +81,7 @@
         <div class="overload">
           <a class="type-name" title="T">T</a>
           <a class="function-name" name="function.clone_or_forward" href="#function.clone_or_forward">clone_or_forward</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const std::remove_reference_t&lt;T&gt; &">remove_reference_t&lt;T&gt; &</a>)</span>
         </div>
         <div class="description">
           <p>Clones the input either by copying or cloning, producing an object of type T.</p><p>If <code>T</code> is a reference type, it copies and returns the reference instead of the underlying object.</p>
@@ -105,16 +91,12 @@
         <div class="overload">
           <a class="type-name" title="typedef size_t">size_t</a>
           <a class="function-name" name="function.data_size_of" href="#function.data_size_of">data_size_of</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="overload">
           <a class="type-name" title="typedef size_t">size_t</a>
           <a class="function-name" name="function.data_size_of" href="#function.data_size_of">data_size_of</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="description">
           <p>Returns the data size of the type T.</p><p>This is the number of bytes for the type excluding any tail padding, which is the number of bytes that can be memcpy'd into the type without potentially overwriting other objects. This is due to the fact that other objects can be placed inside tail padding of an object in some scenarios.</p><p>Returns 0 for types where the tail padding can not be determined. In particular this is the case for union types unless and until compilers provide additional support to determine the maximum data size of all union members.</p><p>From @ssbr:</p><p>If type <code>T</code> has padding at its end, such as:</p><pre><code>class T { i64 a; i32 b; };
@@ -128,39 +110,29 @@
         <div class="overload">
           <a class="type-name" title="T &&">T &&</a>
           <a class="function-name" name="function.forward" href="#function.forward">forward</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="std::remove_reference_t&lt;T&gt; &">remove_reference_t&lt;T&gt; &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="T &&">T &&</a>
           <a class="function-name" name="function.forward" href="#function.forward">forward</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="std::remove_reference_t&lt;T&gt; &&">remove_reference_t&lt;T&gt; &&</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="T &&">T &&</a>
           <a class="function-name" name="function.forward" href="#function.forward">forward</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="std::remove_reference_t&lt;StoragePointer&lt;const int &&gt; &gt; &">remove_reference_t&lt;StoragePointer&lt;const int &&gt; &gt; &</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="auto &&">auto &&</a>
           <a class="function-name" name="function.move" href="#function.move">move</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &&">T &&</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="auto &&">auto &&</a>
           <a class="function-name" name="function.move" href="#function.move">move</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="sus::result::__private::ResultState &">ResultState &</a>)</span>
         </div>
         <div class="description">
           <p>Cast <code>t</code> to an r-value reference so that it can be used to construct or be assigned to a (non-reference) object of type <code>T</code>.</p><p><code>move()</code> requires that <code>t</code> can be moved from, so it requires that <code>t</code> is non-const. This differs from <code>std::move()</code>.</p><p>The <code>move()</code> call itself does nothing to <code>t</code>, as it is just a cast, similar to <code>std::move()</code>. It enables an lvalue (a named object) to be used as an rvalue. The function does not require <code>T</code> to be <code>Move</code>, in order to call rvalue-qualified methods on <code>T</code> even if it is not <code>Move</code>.</p>
@@ -170,16 +142,12 @@
         <div class="overload">
           <a class="type-name" title="T &">T &</a>
           <a class="function-name" name="function.mref" href="#function.mref">mref</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="T &">T &</a>
           <a class="function-name" name="function.mref" href="#function.mref">mref</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="_Bool &">_Bool &</a>)</span>
         </div>
         <div class="description">
           <p>Annotate an lvalue usage, for static analysis.</p>
@@ -189,9 +157,7 @@
         <div class="overload">
           <a class="type-name" title="__private::NonNullMarker&lt;T&gt;">NonNullMarker&lt;T&gt;</a>
           <a class="function-name" name="function.nonnull" href="#function.nonnull">nonnull</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
         </div>
         <div class="description">
           <p>Used to construct a NonNull&lt;T&gt;, while providing type deduction.</p><p>Calling nonnull() produces a hint to make an NonNull&lt;T&gt; but does not actually construct NonNull&lt;T&gt;. This is because the type <code>T</code> is not known until the construction is explicitly requested.</p>
@@ -201,9 +167,7 @@
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const NonNull&lt;T&gt; &">const NonNull&lt;T&gt; &</a>, <a class="type-name" title="const NonNull&lt;U&gt; &">const NonNull&lt;U&gt; &</a>)</span>
         </div>
         <div class="description">
           <p>sus::ops::Ord&lt;NonNull&lt;T&gt;&gt; trait.</p>
@@ -213,9 +177,7 @@
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="function.operator==" href="#function.operator==">operator==</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const NonNull&lt;T&gt; &">const NonNull&lt;T&gt; &</a>, <a class="type-name" title="const NonNull&lt;U&gt; &">const NonNull&lt;U&gt; &</a>)</span>
         </div>
         <div class="description">
           <p>sus::ops::Eq&lt;NonNull&lt;T&gt;&gt; trait.</p>
@@ -225,71 +187,53 @@
         <div class="overload">
           <a class="type-name" title="T">T</a>
           <a class="function-name" name="function.replace" href="#function.replace">replace</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="const T &">const T &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="T">T</a>
           <a class="function-name" name="function.replace" href="#function.replace">replace</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="T &&">T &&</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="T">T</a>
           <a class="function-name" name="function.replace" href="#function.replace">replace</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="sus::result::__private::ResultState &">ResultState &</a>, <a class="type-name" title="sus::result::__private::ResultState &&">ResultState &&</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="function.replace_and_discard" href="#function.replace_and_discard">replace_and_discard</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="const T &">const T &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="function.replace_and_discard" href="#function.replace_and_discard">replace_and_discard</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="T &&">T &&</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="T *">T *</a>
           <a class="function-name" name="function.replace_ptr" href="#function.replace_ptr">replace_ptr</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T *&">T *&</a>, <a class="type-name" title="T *">T *</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="T *">T *</a>
           <a class="function-name" name="function.replace_ptr" href="#function.replace_ptr">replace_ptr</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T *&">T *&</a>, <a class="type-name" title="typedef std::nullptr_t">nullptr_t</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="typedef size_t">size_t</a>
           <a class="function-name" name="function.size_of" href="#function.size_of">size_of</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="overload">
           <a class="type-name" title="typedef size_t">size_t</a>
           <a class="function-name" name="function.size_of" href="#function.size_of">size_of</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="description">
           <p>Returns the size of the type T.</p><p>This is the number of bytes that will be allocated for a type T, and includes any tail padding.</p><p>Disallows calls with a reference type, since C++ does a surprising thing, where <code>sizeof(T&) == sizeof(T)</code>.</p>
@@ -299,18 +243,14 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="function.swap" href="#function.swap">swap</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="T &">T &</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="T">T</a>
           <a class="function-name" name="function.take" href="#function.take">take</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
         </div>
         <div class="description">
           <p>Moves from <code>t</code> and constructs a new <code>T</code> in its place. Returns the old value of <code>t</code>.</p><p>Requires that the type is <code>final</code> because calling take() on a base class could lead to Undefined Behaviour if the now-reconstructed object is accessed without std::launder thereafter, as replacing a subclass with the base class would change the underlying storage.</p>
@@ -320,16 +260,12 @@
         <div class="overload">
           <a class="type-name" title="T">T</a>
           <a class="function-name" name="function.take_and_destruct" href="#function.take_and_destruct">take_and_destruct</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="T &">T &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="T">T</a>
           <a class="function-name" name="function.take_and_destruct" href="#function.take_and_destruct">take_and_destruct</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="sus::num::u32 &" href="sus-num-u32.html">u32 &</a>)</span>
         </div>
         <div class="description">
           <p>Moves from <code>t</code> and destroys the object at <code>t</code>. Returns the old value of <code>t</code>.</p><p>SAFETY: This does *not* re-construct the object pointed to by <code>t</code>. It must not be used (or destructed again) afterward.</p>
@@ -339,9 +275,7 @@
         <div class="overload">
           <a class="type-name" title="T">T</a>
           <a class="function-name" name="function.take_copy_and_destruct" href="#function.take_copy_and_destruct">take_copy_and_destruct</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="const T &">const T &</a>)</span>
         </div>
         <div class="description">
           <p>Copies from <code>t</code> and destroys the object at <code>t</code>. Returns the old value of <code>t</code>.</p><p>SAFETY: This does *not* re-construct the object pointed to by <code>t</code>. It must not be used (or destructed again) afterward.</p>

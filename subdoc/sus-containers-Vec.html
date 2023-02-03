@@ -40,9 +40,7 @@
           </span>
           <a class="type-name" title="Vec&lt;T&gt;" href="sus-containers-Vec.html">Vec&lt;T&gt;</a>
           <a class="function-name" name="method.static.from_iter" href="#method.static.from_iter">from_iter</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="::sus::iter::IteratorBase&lt;T&gt; &&">IteratorBase&lt;T&gt; &&</a>)</span>
         </div>
         <div class="description">
           <p>Constructs a vector by taking all the elements from the iterator.</p><p>sus::iter::FromIterator trait.</p>
@@ -55,9 +53,7 @@
           </span>
           <a class="type-name" title="Vec&lt;T&gt;" href="sus-containers-Vec.html">Vec&lt;T&gt;</a>
           <a class="function-name" name="method.static.with_capacity" href="#method.static.with_capacity">with_capacity</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
         </div>
       </div>
     </div>
@@ -69,9 +65,7 @@
         <div class="overload">
           <a class="type-name" title="Slice&lt;T&gt;">Slice&lt;T&gt;</a>
           <a class="function-name" name="method.as_mut" href="#method.as_mut">as_mut</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="mutable ref">
             &
           </span>
@@ -81,9 +75,7 @@
         <div class="overload">
           <a class="type-name" title="T *">T *</a>
           <a class="function-name" name="method.as_mut_ptr" href="#method.as_mut_ptr">as_mut_ptr</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="mutable ref">
             &
           </span>
@@ -96,9 +88,7 @@
         <div class="overload">
           <a class="type-name" title="const T *">const T *</a>
           <a class="function-name" name="method.as_ptr" href="#method.as_ptr">as_ptr</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const ref">
             const&
           </span>
@@ -106,9 +96,7 @@
         <div class="overload">
           <a class="type-name" title="const T *">const T *</a>
           <a class="function-name" name="method.as_ptr" href="#method.as_ptr">as_ptr</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="mutable rref">
             &&
           </span>
@@ -121,9 +109,7 @@
         <div class="overload">
           <a class="type-name" title="Slice&lt;const T&gt;">Slice&lt;const T&gt;</a>
           <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const ref">
             const&
           </span>
@@ -131,9 +117,7 @@
         <div class="overload">
           <a class="type-name" title="Slice&lt;const T&gt;">Slice&lt;const T&gt;</a>
           <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="mutable rref">
             &&
           </span>
@@ -143,9 +127,7 @@
         <div class="overload">
           <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>
           <a class="function-name" name="method.capacity" href="#method.capacity">capacity</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const ref">
             const&
           </span>
@@ -158,9 +140,7 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="method.clear" href="#method.clear">clear</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="description">
           <p>Clears the vector, removing all values.</p><p>Note that this method has no effect on the allocated capacity of the vector.</p>
@@ -170,9 +150,7 @@
         <div class="overload">
           <a class="type-name" title="Vec&lt;T&gt;" href="sus-containers-Vec.html">Vec&lt;T&gt;</a>
           <a class="function-name" name="method.clone" href="#method.clone">clone</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const ref">
             const&
           </span>
@@ -182,9 +160,7 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="method.clone_from" href="#method.clone_from">clone_from</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const Vec&lt;T&gt; &" href="sus-containers-Vec.html">const Vec&lt;T&gt; &</a>)</span>
           <span class="mutable ref">
             &
           </span>
@@ -192,11 +168,19 @@
       </div>
       <div class="section-item">
         <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="method.emplace" href="#method.emplace">emplace</a>
+          <span class="function-params">(<a class="type-name" title="Us &&...">Us &&...</a>)</span>
+        </div>
+        <div class="description">
+          <p>Constructs and appends an element to the back of the vector.</p><p>The parameters to <code>emplace()</code> are used to construct the element. This typically works best for aggregate types, rather than types with a named static method constructor (such as <code>T::with_foo(foo)</code>).</p><p>Disallows construction from a reference to <code>T</code>, as <code>push()</code> should be used in that case to avoid invalidating the input reference while constructing from it.</p><p></p><h1>Panics</h1><p></p><p>Panics if the new capacity exceeds isize::MAX bytes.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
           <a class="type-name" title="Option&lt;const T &&gt;">Option&lt;const T &&gt;</a>
           <a class="function-name" name="method.get" href="#method.get">get</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -206,9 +190,7 @@
         <div class="overload">
           <a class="type-name" title="Option&lt;T &&gt;">Option&lt;T &&gt;</a>
           <a class="function-name" name="method.get_mut" href="#method.get_mut">get_mut</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="mutable ref">
             &
           </span>
@@ -221,9 +203,7 @@
         <div class="overload">
           <a class="type-name" title="Option&lt;const T &&gt;">Option&lt;const T &&gt;</a>
           <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="const ref">
             const&
           </span>
@@ -236,9 +216,7 @@
         <div class="overload">
           <a class="type-name" title="const T &">const T &</a>
           <a class="function-name" name="method.get_unchecked" href="#method.get_unchecked">get_unchecked</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="const ref">
             const&
           </span>
@@ -246,9 +224,7 @@
         <div class="overload">
           <a class="type-name" title="const T &">const T &</a>
           <a class="function-name" name="method.get_unchecked" href="#method.get_unchecked">get_unchecked</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -261,9 +237,7 @@
         <div class="overload">
           <a class="type-name" title="T &">T &</a>
           <a class="function-name" name="method.get_unchecked_mut" href="#method.get_unchecked_mut">get_unchecked_mut</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="mutable ref">
             &
           </span>
@@ -276,9 +250,7 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="method.grow_to_exact" href="#method.grow_to_exact">grow_to_exact</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
         </div>
         <div class="description">
           <p>Increase the capacity of the vector (the total number of elements that the vector can hold without requiring reallocation) to <code>cap</code>, if there is not already room. Does nothing if capacity is already sufficient.</p><p>This is similar to std::vector::reserve().</p><p></p><h1>Panics</h1><p>Panics if the new capacity exceeds isize::MAX() bytes.</p>
@@ -288,9 +260,7 @@
         <div class="overload">
           <a class="type-name" title="::sus::iter::Iterator&lt;VecIntoIter&lt;T&gt; &gt;">Iterator&lt;VecIntoIter&lt;T&gt; &gt;</a>
           <a class="function-name" name="method.into_iter" href="#method.into_iter">into_iter</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="mutable rref">
             &&
           </span>
@@ -303,9 +273,7 @@
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.is_empty" href="#method.is_empty">is_empty</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const ref">
             const&
           </span>
@@ -318,9 +286,7 @@
         <div class="overload">
           <a class="type-name" title="::sus::iter::Iterator&lt;SliceIter&lt;const T &&gt; &gt;">Iterator&lt;SliceIter&lt;const T &&gt; &gt;</a>
           <a class="function-name" name="method.iter" href="#method.iter">iter</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const ref">
             const&
           </span>
@@ -328,9 +294,7 @@
         <div class="overload">
           <a class="type-name" title="::sus::iter::Iterator&lt;SliceIter&lt;const T &&gt; &gt;">Iterator&lt;SliceIter&lt;const T &&gt; &gt;</a>
           <a class="function-name" name="method.iter" href="#method.iter">iter</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="mutable rref">
             &&
           </span>
@@ -343,9 +307,7 @@
         <div class="overload">
           <a class="type-name" title="::sus::iter::Iterator&lt;SliceIterMut&lt;T &&gt; &gt;">Iterator&lt;SliceIterMut&lt;T &&gt; &gt;</a>
           <a class="function-name" name="method.iter_mut" href="#method.iter_mut">iter_mut</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="mutable ref">
             &
           </span>
@@ -358,9 +320,7 @@
         <div class="overload">
           <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>
           <a class="function-name" name="method.len" href="#method.len">len</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const ref">
             const&
           </span>
@@ -373,18 +333,14 @@
         <div class="overload">
           <a class="type-name" title="Vec&lt;T&gt; &" href="sus-containers-Vec.html">Vec&lt;T&gt; &</a>
           <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="Vec&lt;T&gt; &&" href="sus-containers-Vec.html">Vec&lt;T&gt; &&</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="const T &">const T &</a>
           <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="I">I</a>)</span>
           <span class="const">
             const
           </span>
@@ -392,9 +348,7 @@
         <div class="overload">
           <a class="type-name" title="const T &">const T &</a>
           <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="const ref">
             const&
           </span>
@@ -402,9 +356,7 @@
         <div class="overload">
           <a class="type-name" title="const T &">const T &</a>
           <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -412,9 +364,7 @@
         <div class="overload">
           <a class="type-name" title="const T &">const T &</a>
           <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="mutable ref">
             &
           </span>
@@ -427,9 +377,7 @@
         <div class="overload">
           <a class="type-name" title="Option&lt;T&gt;">Option&lt;T&gt;</a>
           <a class="function-name" name="method.pop" href="#method.pop">pop</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="description">
           <p>Removes the last element from a vector and returns it, or None if it is empty.</p>
@@ -439,21 +387,17 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="method.push" href="#method.push">push</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
         </div>
         <div class="description">
-          <p>Appends an element to the back of the vector.</p><p></p><h1>Panics</h1><p>Panics if the new capacity exceeds isize::MAX bytes.</p>
+          <p>Appends an element to the back of the vector.</p><p></p><h1>Panics</h1><p></p><p>Panics if the new capacity exceeds isize::MAX bytes.</p>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="method.reserve" href="#method.reserve">reserve</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
         </div>
         <div class="description">
           <p>Reserves capacity for at least <code>additional</code> more elements to be inserted in the given Vec&lt;T&gt;. The collection may reserve more space to speculatively avoid frequent reallocations. After calling reserve, capacity will be greater than or equal to self.len() + additional. Does nothing if capacity is already sufficient.</p><p>The <code>grow_to_exact()</code> function is similar to std::vector::reserve(), taking a capacity instead of the number of elements to ensure space for.</p><p></p><h1>Panics</h1><p>Panics if the new capacity exceeds isize::MAX() bytes.</p>
@@ -463,9 +407,7 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="method.reserve_exact" href="#method.reserve_exact">reserve_exact</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
         </div>
         <div class="description">
           <p>Reserves the minimum capacity for at least <code>additional</code> more elements to be inserted in the given Vec&lt;T&gt;. Unlike reserve, this will not deliberately over-allocate to speculatively avoid frequent allocations. After calling reserve_exact, capacity will be greater than or equal to self.len() + additional. Does nothing if the capacity is already sufficient.</p><p>Note that the allocator may give the collection more space than it requests. Therefore, capacity can not be relied upon to be precisely minimal. Prefer reserve if future insertions are expected.</p><p></p><h1>Panics</h1><p>Panics if the new capacity exceeds isize::MAX bytes.</p>
@@ -475,9 +417,7 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="method.sort" href="#method.sort">sort</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="description">
           <p>Sorts the slice.</p><p>This sort is stable (i.e., does not reorder equal elements) and O(n * log(n)^2) worst-case.</p><p>When applicable, unstable sorting is preferred because it is generally faster than stable sorting and it doesn’t allocate auxiliary memory. See <code>sort_unstable()</code>.</p>
@@ -487,9 +427,7 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="method.sort_by" href="#method.sort_by">sort_by</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="F">F</a>)</span>
         </div>
         <div class="description">
           <p>Sorts the slice with a comparator function.</p><p>This sort is stable (i.e., does not reorder equal elements) and O(n * log(n)^2) worst-case.</p><p>The comparator function must define a total ordering for the elements in the slice. If the ordering is not total, the order of the elements is unspecified.</p>
@@ -499,9 +437,7 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="method.sort_unstable" href="#method.sort_unstable">sort_unstable</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="description">
           <p>Sorts the slice, but might not preserve the order of equal elements.</p><p>This sort is unstable (i.e., may reorder equal elements), in-place (i.e., does not allocate), and O(n * log(n)) worst-case.</p>
@@ -511,9 +447,7 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="method.sort_unstable_by" href="#method.sort_unstable_by">sort_unstable_by</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="F">F</a>)</span>
         </div>
         <div class="description">
           <p>Sorts the slice with a comparator function, but might not preserve the order of equal elements.</p><p>This sort is unstable (i.e., may reorder equal elements), in-place (i.e., does not allocate), and O(n * log(n)) worst-case.</p><p>The comparator function must define a total ordering for the elements in the slice. If the ordering is not total, the order of the elements is unspecified.</p>

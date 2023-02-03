@@ -36,9 +36,7 @@
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="function.err" href="#function.err">err</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="E &&">E &&</a>)</span>
         </div>
         <div class="description">
           <p>Used to construct a Result&lt;T, E&gt; with an Err(e) value.</p><p>Calling err() produces a hint to make a Result&lt;T, E&gt; but does not actually construct Result&lt;T, E&gt;. This is to deduce the actual types <code>T</code> and <code>E</code> when it is constructed, avoid specifying them both here, and support conversions.</p>
@@ -48,9 +46,7 @@
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="function.ok" href="#function.ok">ok</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &&">T &&</a>)</span>
         </div>
         <div class="description">
           <p>Used to construct a Result&lt;T, E&gt; with an Ok(t) value.</p><p>Calling ok() produces a hint to make a Result&lt;T, E&gt; but does not actually construct Result&lt;T, E&gt;. This is to deduce the actual types <code>T</code> and <code>E</code> when it is constructed, avoid specifying them both here, and support conversions.</p>
@@ -60,30 +56,22 @@
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const Result&lt;T, E&gt; &" href="sus-result-Result.html">const Result&lt;T, E&gt; &</a>, <a class="type-name" title="const Result&lt;U, F&gt; &">const Result&lt;U, F&gt; &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const Result&lt;T, E&gt; &" href="sus-result-Result.html">const Result&lt;T, E&gt; &</a>, <a class="type-name" title="const Result&lt;U, F&gt; &">const Result&lt;U, F&gt; &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const Result&lt;T, E&gt; &" href="sus-result-Result.html">const Result&lt;T, E&gt; &</a>, <a class="type-name" title="const Result&lt;U, F&gt; &">const Result&lt;U, F&gt; &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const Result&lt;T, E&gt; &" href="sus-result-Result.html">const Result&lt;T, E&gt; &</a>, <a class="type-name" title="const Result&lt;U, F&gt; &">const Result&lt;U, F&gt; &</a>)</span>
         </div>
         <div class="description">
           <p>Compares two Result.</p><p>Satisfies sus::ops::Ord&lt;Result&lt;T, E&gt;&gt; if sus::ops::Ord&lt;T&gt; and sus::ops::Ord&lt;E&gt;.</p><p>Satisfies sus::ops::WeakOrd&lt;Result&lt;T, E&gt;&gt; if sus::ops::WeakOrd&lt;T&gt; and sus::ops::WeakOrd&lt;E&gt;.</p><p>Satisfies sus::ops::PartialOrd&lt;Result&lt;T, E&gt;&gt; if sus::ops::PartialOrd&lt;T&gt; and sus::ops::PartialOrd&lt;E&gt;.</p>
@@ -93,16 +81,12 @@
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="function.operator==" href="#function.operator==">operator==</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const Result&lt;T, E&gt; &" href="sus-result-Result.html">const Result&lt;T, E&gt; &</a>, <a class="type-name" title="const Result&lt;U, F&gt; &">const Result&lt;U, F&gt; &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="function.operator==" href="#function.operator==">operator==</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const Result&lt;T, E&gt; &" href="sus-result-Result.html">const Result&lt;T, E&gt; &</a>, <a class="type-name" title="const Result&lt;U, F&gt; &">const Result&lt;U, F&gt; &</a>)</span>
         </div>
         <div class="description">
           <p>sus::ops::Eq&lt;Result&lt;T, E&gt;&gt; trait.</p>

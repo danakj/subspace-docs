@@ -40,9 +40,7 @@
           </span>
           <a class="type-name" title="NonNull&lt;T&gt;" href="sus-mem-NonNull.html">NonNull&lt;T&gt;</a>
           <a class="function-name" name="method.static.from" href="#method.static.from">from</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
         </div>
         <div class="overload">
           <span class="static">
@@ -50,9 +48,7 @@
           </span>
           <a class="type-name" title="NonNull&lt;T&gt;" href="sus-mem-NonNull.html">NonNull&lt;T&gt;</a>
           <a class="function-name" name="method.static.from" href="#method.static.from">from</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="U (&)[N]">U (&)[N]</a>)</span>
         </div>
         <div class="description">
           <p>sus::construct::From&lt;NonNull&lt;T&gt;, T&&gt; and sus::construct::From&lt;NonNull&lt;const T&gt;, T&&gt; traits.</p>
@@ -65,9 +61,7 @@
           </span>
           <a class="type-name" title="NonNull&lt;T&gt;" href="sus-mem-NonNull.html">NonNull&lt;T&gt;</a>
           <a class="function-name" name="method.static.from" href="#method.static.from">from</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="U">U</a>)</span>
         </div>
         <div class="description">
           <p>sus::construct::From&lt;NonNull&lt;T&gt;, T*&gt; and sus::construct::From&lt;NonNull&lt;const T&gt;, T*&gt; traits.</p><p>Does not implicitly convert from an array. Explicitly convert it to a pointer to throw away the length of the array.</p><p></p><h1>Panics</h1><p></p><p>The method will panic if the pointer <code>t</code> is null.</p>
@@ -80,9 +74,7 @@
           </span>
           <a class="type-name" title="NonNull&lt;T&gt;" href="sus-mem-NonNull.html">NonNull&lt;T&gt;</a>
           <a class="function-name" name="method.static.with" href="#method.static.with">with</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
         </div>
         <div class="description">
           <p>Constructs a <code>NonNull&lt;T&gt;</code> from a reference to <code>T</code>.</p>
@@ -95,9 +87,7 @@
           </span>
           <a class="type-name" title="::sus::option::Option&lt;NonNull&lt;T&gt; &gt;">Option&lt;NonNull&lt;T&gt; &gt;</a>
           <a class="function-name" name="method.static.with_ptr" href="#method.static.with_ptr">with_ptr</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="U">U</a>)</span>
         </div>
         <div class="overload">
           <span class="static">
@@ -105,9 +95,7 @@
           </span>
           <a class="type-name" title="::sus::option::Option&lt;NonNull&lt;T&gt; &gt;">Option&lt;NonNull&lt;T&gt; &gt;</a>
           <a class="function-name" name="method.static.with_ptr" href="#method.static.with_ptr">with_ptr</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="U (&)[N]">U (&)[N]</a>)</span>
         </div>
         <div class="description">
           <p>Constructs a <code>NonNull&lt;T&gt;</code> from a pointer to <code>T</code>.</p><p>Does not implicitly convert from an array. The caller must explicitly convert it to a pointer to throw away the length of the array.</p><p></p><h1>Panics</h1><p>The method will panic if the pointer <code>t</code> is null.</p>
@@ -120,9 +108,7 @@
           </span>
           <a class="type-name" title="NonNull&lt;T&gt;" href="sus-mem-NonNull.html">NonNull&lt;T&gt;</a>
           <a class="function-name" name="method.static.with_ptr_unchecked" href="#method.static.with_ptr_unchecked">with_ptr_unchecked</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="U">U</a>)</span>
         </div>
         <div class="overload">
           <span class="static">
@@ -130,9 +116,7 @@
           </span>
           <a class="type-name" title="NonNull&lt;T&gt;" href="sus-mem-NonNull.html">NonNull&lt;T&gt;</a>
           <a class="function-name" name="method.static.with_ptr_unchecked" href="#method.static.with_ptr_unchecked">with_ptr_unchecked</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="U (&)[N]">U (&)[N]</a>)</span>
         </div>
         <div class="description">
           <p>Constructs a <code>NonNull&lt;T&gt;</code> from a pointer to <code>T</code>.</p><p>Does not implicitly convert from an array. The caller must explicitly convert it to a pointer to throw away the length of the array.</p><p></p><h1>Safety</h1><p>This method must not be called with a null pointer, or Undefined Behaviour results.</p>
@@ -147,9 +131,7 @@
         <div class="overload">
           <a class="type-name" title="T &">T &</a>
           <a class="function-name" name="method.as_mut" href="#method.as_mut">as_mut</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="description">
           <p>Returns a mutable reference to the pointee.</p><p>This method is only callable when the pointer is not const.</p>
@@ -159,9 +141,7 @@
         <div class="overload">
           <a class="type-name" title="T *">T *</a>
           <a class="function-name" name="method.as_mut_ptr" href="#method.as_mut_ptr">as_mut_ptr</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="description">
           <p>Returns a mutable pointer to the pointee.</p><p>This method is only callable when the pointer is not const.</p>
@@ -171,9 +151,7 @@
         <div class="overload">
           <a class="type-name" title="const T *">const T *</a>
           <a class="function-name" name="method.as_ptr" href="#method.as_ptr">as_ptr</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const">
             const
           </span>
@@ -186,9 +164,7 @@
         <div class="overload">
           <a class="type-name" title="const T &">const T &</a>
           <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const">
             const
           </span>
@@ -201,9 +177,7 @@
         <div class="overload">
           <a class="type-name" title="NonNull&lt;U&gt;">NonNull&lt;U&gt;</a>
           <a class="function-name" name="method.cast" href="#method.cast">cast</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const">
             const
           </span>
@@ -216,9 +190,7 @@
         <div class="overload">
           <a class="type-name" title="NonNull&lt;U&gt;">NonNull&lt;U&gt;</a>
           <a class="function-name" name="method.downcast" href="#method.downcast">downcast</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>)</span>
           <span class="const">
             const
           </span>
@@ -231,9 +203,7 @@
         <div class="overload">
           <a class="type-name" title="const T *">const T *</a>
           <a class="function-name" name="method.operator-&gt;" href="#method.operator-&gt;">operator-&gt;</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
           <span class="const">
             const
           </span>
@@ -241,9 +211,7 @@
         <div class="overload">
           <a class="type-name" title="const T *">const T *</a>
           <a class="function-name" name="method.operator-&gt;" href="#method.operator-&gt;">operator-&gt;</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">()</span>
         </div>
         <div class="description">
           <p>Gives access to the object pointed to by NonNull.</p><p>Mutable access is only given is NonNull is not const and the pointer within is not const.</p>
@@ -253,9 +221,7 @@
         <div class="overload">
           <a class="type-name" title="NonNull&lt;T&gt; &" href="sus-mem-NonNull.html">NonNull&lt;T&gt; &</a>
           <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
-          <span class="function-params">
-            ()
-          </span>
+          <span class="function-params">(<a class="type-name" title="const NonNull&lt;T&gt; &" href="sus-mem-NonNull.html">const NonNull&lt;T&gt; &</a>)</span>
         </div>
         <div class="description">
           <p>NonNull&lt;T&gt; is copyable, so this is the copy assignment operator.</p>
