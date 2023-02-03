@@ -39,7 +39,7 @@
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.all" href="#method.all">all</a>
-          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (typename I::Item)&gt;">Item)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (typename I::Item)&gt;">FnMut&lt;_Bool (typename I::Item)&gt;</a>)</span>
         </div>
         <div class="description">
           <p>Tests whether all elements of the iterator match a predicate.</p><p>If the predicate returns <code>true</code> for all elements in the iterator, this functions returns <code>true</code>, otherwise <code>false</code>. The function is short-circuiting; it stops iterating on the first <code>false</code> returned from the predicate.</p><p>Returns <code>true</code> if the iterator is empty.</p>
@@ -54,7 +54,7 @@
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.any" href="#method.any">any</a>
-          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (typename I::Item)&gt;">Item)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (typename I::Item)&gt;">FnMut&lt;_Bool (typename I::Item)&gt;</a>)</span>
         </div>
         <div class="description">
           <p>Tests whether any elements of the iterator match a predicate.</p><p>If the predicate returns <code>true</code> for any elements in the iterator, this functions returns <code>true</code>, otherwise <code>false</code>. The function is short-circuiting; it stops iterating on the first <code>true</code> returned from the predicate.</p><p>Returns <code>false</code> if the iterator is empty.</p>
@@ -62,7 +62,7 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="Iterator&lt;BoxedIterator&lt;typename I::Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;">size_of&lt;I&gt;(), __alignof(I)&gt; &gt;</a>
+          <a class="type-name" title="Iterator&lt;BoxedIterator&lt;typename I::Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;">Iterator&lt;BoxedIterator&lt;typename I::Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;</a>
           <a class="function-name" name="method.box" href="#method.box">box</a>
           <span class="function-params">()</span>
           <span class="mutable rref">
@@ -70,7 +70,7 @@
           </span>
         </div>
         <div class="overload">
-          <a class="type-name" title="Iterator&lt;BoxedIterator&lt;typename I::Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;">size_of&lt;I&gt;(), __alignof(I)&gt; &gt;</a>
+          <a class="type-name" title="Iterator&lt;BoxedIterator&lt;typename I::Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;">Iterator&lt;BoxedIterator&lt;typename I::Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;</a>
           <a class="function-name" name="method.box" href="#method.box">box</a>
           <span class="function-params">()</span>
           <span class="mutable rref">
@@ -141,17 +141,17 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="Iterator&lt;Filter&lt;Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;">size_of&lt;I&gt;(), __alignof(I)&gt; &gt;</a>
+          <a class="type-name" title="Iterator&lt;Filter&lt;Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;">Iterator&lt;Filter&lt;Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;</a>
           <a class="function-name" name="method.filter" href="#method.filter">filter</a>
-          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;">remove_reference_t&lt;Item&gt; &)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;">FnMut&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;</a>)</span>
           <span class="mutable rref">
             &&
           </span>
         </div>
         <div class="overload">
-          <a class="type-name" title="Iterator&lt;Filter&lt;Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;">size_of&lt;I&gt;(), __alignof(I)&gt; &gt;</a>
+          <a class="type-name" title="Iterator&lt;Filter&lt;Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;">Iterator&lt;Filter&lt;Item, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;</a>
           <a class="function-name" name="method.filter" href="#method.filter">filter</a>
-          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (const std::remove_reference_t&lt;typename I::Item&gt; &)&gt;">Item&gt; &)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (const std::remove_reference_t&lt;typename I::Item&gt; &)&gt;">FnMut&lt;_Bool (const std::remove_reference_t&lt;typename I::Item&gt; &)&gt;</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -162,7 +162,7 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="Iterator&lt;Map&lt;Item, R, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;">size_of&lt;I&gt;(), __alignof(I)&gt; &gt;</a>
+          <a class="type-name" title="Iterator&lt;Map&lt;Item, R, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;">Iterator&lt;Map&lt;Item, R, ::sus::mem::size_of&lt;I&gt;(), __alignof(I)&gt; &gt;</a>
           <a class="function-name" name="method.map" href="#method.map">map</a>
           <span class="function-params">(<a class="type-name" title="MapFn">MapFn</a>)</span>
           <span class="mutable rref">

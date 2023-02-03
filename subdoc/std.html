@@ -5935,14 +5935,14 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="decltype(_Invoker_ret&lt;_Ret&gt;::_Call(_Obj, _Fix_arg(::std::get&lt;_Ix&gt;(_Tpl), ::std::move(_Ut))...))">move(_Ut))...))</a>
+          <a class="type-name" title="decltype(_Invoker_ret&lt;_Ret&gt;::_Call(_Obj, _Fix_arg(::std::get&lt;_Ix&gt;(_Tpl), ::std::move(_Ut))...))">decltype(_Invoker_ret&lt;_Ret&gt;::_Call(_Obj, _Fix_arg(::std::get&lt;_Ix&gt;(_Tpl), ::std::move(_Ut))...))</a>
           <a class="function-name" name="function._Call_binder" href="#function._Call_binder">_Call_binder</a>
           <span class="function-params">(<a class="type-name" title="_Invoker_ret&lt;_Ret&gt;">_Invoker_ret&lt;_Ret&gt;</a>, <a class="type-name" title="typedef index_sequence&lt;_Ix...&gt;">index_sequence&lt;_Ix...&gt;</a>, <a class="type-name" title="_Cv_FD &">_Cv_FD &</a>, <a class="type-name" title="_Cv_tuple_TiD &">_Cv_tuple_TiD &</a>, <a class="type-name" title="_Untuple &&">_Untuple &&</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="decltype(::std::invoke(::std::forward&lt;_Cv_FD&gt;(_Obj), ::std::get&lt;_Ix&gt;(::std::forward&lt;_Cv_tuple_TiD&gt;(_Tpl))..., ::std::forward&lt;_Unbound&gt;(_Unbargs)...))">forward&lt;_Unbound&gt;(_Unbargs)...))</a>
+          <a class="type-name" title="decltype(::std::invoke(::std::forward&lt;_Cv_FD&gt;(_Obj), ::std::get&lt;_Ix&gt;(::std::forward&lt;_Cv_tuple_TiD&gt;(_Tpl))..., ::std::forward&lt;_Unbound&gt;(_Unbargs)...))">forward&lt;_Cv_FD&gt;(_Obj), ::std::get&lt;_Ix&gt;(::std::forward&lt;_Cv_tuple_TiD&gt;(_Tpl))..., ::std::forward&lt;_Unbound&gt;(_Unbargs)...))</a>
           <a class="function-name" name="function._Call_front_binder" href="#function._Call_front_binder">_Call_front_binder</a>
           <span class="function-params">(<a class="type-name" title="typedef index_sequence&lt;_Ix...&gt;">index_sequence&lt;_Ix...&gt;</a>, <a class="type-name" title="_Cv_FD &&">_Cv_FD &&</a>, <a class="type-name" title="_Cv_tuple_TiD &&">_Cv_tuple_TiD &&</a>, <a class="type-name" title="_Unbound &&...">_Unbound &&...</a>)</span>
         </div>
@@ -6372,7 +6372,7 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="decltype(_Select_fixer&lt;_Cv_TiD&gt;::_Fix(_Tid, ::std::move(_Ut)))">move(_Ut)))</a>
+          <a class="type-name" title="decltype(_Select_fixer&lt;_Cv_TiD&gt;::_Fix(_Tid, ::std::move(_Ut)))">decltype(_Select_fixer&lt;_Cv_TiD&gt;::_Fix(_Tid, ::std::move(_Ut)))</a>
           <a class="function-name" name="function._Fix_arg" href="#function._Fix_arg">_Fix_arg</a>
           <span class="function-params">(<a class="type-name" title="_Cv_TiD &">_Cv_TiD &</a>, <a class="type-name" title="_Untuple &&">_Untuple &&</a>)</span>
         </div>
@@ -7085,7 +7085,7 @@
         <div class="overload">
           <a class="type-name" title="_Pointer">_Pointer</a>
           <a class="function-name" name="function._Refancy" href="#function._Refancy">_Refancy</a>
-          <span class="function-params">(<a class="type-name" title="typename pointer_traits&lt;_Pointer&gt;::element_type *">element_type *</a>)</span>
+          <span class="function-params">(<a class="type-name" title="typename pointer_traits&lt;_Pointer&gt;::element_type *">typename pointer_traits&lt;_Pointer&gt;::element_type *</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Pointer">_Pointer</a>
@@ -8314,120 +8314,120 @@
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_add" href="#function.atomic_fetch_add">atomic_fetch_add</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">difference_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">typename atomic&lt;_Ty&gt;::difference_type</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_add" href="#function.atomic_fetch_add">atomic_fetch_add</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">difference_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">typename atomic&lt;_Ty&gt;::difference_type</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_add_explicit" href="#function.atomic_fetch_add_explicit">atomic_fetch_add_explicit</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">difference_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">typename atomic&lt;_Ty&gt;::difference_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_add_explicit" href="#function.atomic_fetch_add_explicit">atomic_fetch_add_explicit</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">difference_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">typename atomic&lt;_Ty&gt;::difference_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_and" href="#function.atomic_fetch_and">atomic_fetch_and</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_and" href="#function.atomic_fetch_and">atomic_fetch_and</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_and_explicit" href="#function.atomic_fetch_and_explicit">atomic_fetch_and_explicit</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_and_explicit" href="#function.atomic_fetch_and_explicit">atomic_fetch_and_explicit</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_or" href="#function.atomic_fetch_or">atomic_fetch_or</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_or" href="#function.atomic_fetch_or">atomic_fetch_or</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_or_explicit" href="#function.atomic_fetch_or_explicit">atomic_fetch_or_explicit</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_or_explicit" href="#function.atomic_fetch_or_explicit">atomic_fetch_or_explicit</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_sub" href="#function.atomic_fetch_sub">atomic_fetch_sub</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">difference_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">typename atomic&lt;_Ty&gt;::difference_type</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_sub" href="#function.atomic_fetch_sub">atomic_fetch_sub</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">difference_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">typename atomic&lt;_Ty&gt;::difference_type</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_sub_explicit" href="#function.atomic_fetch_sub_explicit">atomic_fetch_sub_explicit</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">difference_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">typename atomic&lt;_Ty&gt;::difference_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_sub_explicit" href="#function.atomic_fetch_sub_explicit">atomic_fetch_sub_explicit</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">difference_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::difference_type">typename atomic&lt;_Ty&gt;::difference_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_xor" href="#function.atomic_fetch_xor">atomic_fetch_xor</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_xor" href="#function.atomic_fetch_xor">atomic_fetch_xor</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_xor_explicit" href="#function.atomic_fetch_xor_explicit">atomic_fetch_xor_explicit</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="_Ty">_Ty</a>
           <a class="function-name" name="function.atomic_fetch_xor_explicit" href="#function.atomic_fetch_xor_explicit">atomic_fetch_xor_explicit</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
       </div>
       <div class="section-item">
@@ -8554,12 +8554,12 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="function.atomic_init" href="#function.atomic_init">atomic_init</a>
-          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="volatile atomic&lt;_Ty&gt; *">volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="function.atomic_init" href="#function.atomic_init">atomic_init</a>
-          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="atomic&lt;_Ty&gt; *">atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>)</span>
         </div>
       </div>
       <div class="section-item">
@@ -8689,24 +8689,24 @@
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="function.atomic_wait" href="#function.atomic_wait">atomic_wait</a>
-          <span class="function-params">(<a class="type-name" title="const volatile atomic&lt;_Ty&gt; *">const volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="const volatile atomic&lt;_Ty&gt; *">const volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="function.atomic_wait" href="#function.atomic_wait">atomic_wait</a>
-          <span class="function-params">(<a class="type-name" title="const atomic&lt;_Ty&gt; *">const atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>)</span>
+          <span class="function-params">(<a class="type-name" title="const atomic&lt;_Ty&gt; *">const atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="function.atomic_wait_explicit" href="#function.atomic_wait_explicit">atomic_wait_explicit</a>
-          <span class="function-params">(<a class="type-name" title="const volatile atomic&lt;_Ty&gt; *">const volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="const volatile atomic&lt;_Ty&gt; *">const volatile atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="void">void</a>
           <a class="function-name" name="function.atomic_wait_explicit" href="#function.atomic_wait_explicit">atomic_wait_explicit</a>
-          <span class="function-params">(<a class="type-name" title="const atomic&lt;_Ty&gt; *">const atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
+          <span class="function-params">(<a class="type-name" title="const atomic&lt;_Ty&gt; *">const atomic&lt;_Ty&gt; *</a>, <a class="type-name" title="typename atomic&lt;_Ty&gt;::value_type">typename atomic&lt;_Ty&gt;::value_type</a>, <a class="type-name" title="enum memory_order">memory_order</a>)</span>
         </div>
       </div>
       <div class="section-item">
@@ -9535,64 +9535,64 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase" href="#function.erase">erase</a>
           <span class="function-params">(<a class="type-name" title="basic_string&lt;_Elem, _Traits, _Alloc&gt; &">basic_string&lt;_Elem, _Traits, _Alloc&gt; &</a>, <a class="type-name" title="const _Uty &">const _Uty &</a>)</span>
         </div>
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase" href="#function.erase">erase</a>
           <span class="function-params">(<a class="type-name" title="vector&lt;_Ty, _Alloc&gt; &">vector&lt;_Ty, _Alloc&gt; &</a>, <a class="type-name" title="const _Uty &">const _Uty &</a>)</span>
         </div>
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase" href="#function.erase">erase</a>
           <span class="function-params">(<a class="type-name" title="list&lt;_Ty, _Alloc&gt; &">list&lt;_Ty, _Alloc&gt; &</a>, <a class="type-name" title="const _Uty &">const _Uty &</a>)</span>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase_if" href="#function.erase_if">erase_if</a>
           <span class="function-params">(<a class="type-name" title="basic_string&lt;_Elem, _Traits, _Alloc&gt; &">basic_string&lt;_Elem, _Traits, _Alloc&gt; &</a>, <a class="type-name" title="_Pr">_Pr</a>)</span>
         </div>
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase_if" href="#function.erase_if">erase_if</a>
           <span class="function-params">(<a class="type-name" title="set&lt;_Kty, _Keylt, _Alloc&gt; &">set&lt;_Kty, _Keylt, _Alloc&gt; &</a>, <a class="type-name" title="_Pr">_Pr</a>)</span>
         </div>
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase_if" href="#function.erase_if">erase_if</a>
           <span class="function-params">(<a class="type-name" title="multiset&lt;_Kty, _Keylt, _Alloc&gt; &">multiset&lt;_Kty, _Keylt, _Alloc&gt; &</a>, <a class="type-name" title="_Pr">_Pr</a>)</span>
         </div>
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase_if" href="#function.erase_if">erase_if</a>
           <span class="function-params">(<a class="type-name" title="vector&lt;_Ty, _Alloc&gt; &">vector&lt;_Ty, _Alloc&gt; &</a>, <a class="type-name" title="_Pr">_Pr</a>)</span>
         </div>
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase_if" href="#function.erase_if">erase_if</a>
           <span class="function-params">(<a class="type-name" title="list&lt;_Ty, _Alloc&gt; &">list&lt;_Ty, _Alloc&gt; &</a>, <a class="type-name" title="_Pr">_Pr</a>)</span>
         </div>
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase_if" href="#function.erase_if">erase_if</a>
           <span class="function-params">(<a class="type-name" title="unordered_map&lt;_Kty, _Ty, _Hasher, _Keyeq, _Alloc&gt; &">unordered_map&lt;_Kty, _Ty, _Hasher, _Keyeq, _Alloc&gt; &</a>, <a class="type-name" title="_Pr">_Pr</a>)</span>
         </div>
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase_if" href="#function.erase_if">erase_if</a>
           <span class="function-params">(<a class="type-name" title="unordered_multimap&lt;_Kty, _Ty, _Hasher, _Keyeq, _Alloc&gt; &">unordered_multimap&lt;_Kty, _Ty, _Hasher, _Keyeq, _Alloc&gt; &</a>, <a class="type-name" title="_Pr">_Pr</a>)</span>
         </div>
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase_if" href="#function.erase_if">erase_if</a>
           <span class="function-params">(<a class="type-name" title="map&lt;_Kty, _Ty, _Keylt, _Alloc&gt; &">map&lt;_Kty, _Ty, _Keylt, _Alloc&gt; &</a>, <a class="type-name" title="_Pr">_Pr</a>)</span>
         </div>
         <div class="overload">
-          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">size_type</a>
+          <a class="type-name" title="typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type">typename basic_string&lt;_Elem, _Traits, _Alloc&gt;::size_type</a>
           <a class="function-name" name="function.erase_if" href="#function.erase_if">erase_if</a>
           <span class="function-params">(<a class="type-name" title="multimap&lt;_Kty, _Ty, _Keylt, _Alloc&gt; &">multimap&lt;_Kty, _Ty, _Keylt, _Alloc&gt; &</a>, <a class="type-name" title="_Pr">_Pr</a>)</span>
         </div>
@@ -11061,7 +11061,7 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="_Mem_fn&lt;_Rx _Ty::*&gt;">*&gt;</a>
+          <a class="type-name" title="_Mem_fn&lt;_Rx _Ty::*&gt;">_Mem_fn&lt;_Rx _Ty::*&gt;</a>
           <a class="function-name" name="function.mem_fn" href="#function.mem_fn">mem_fn</a>
           <span class="function-params">(<a class="type-name" title="_Rx _Ty::*">*</a>)</span>
         </div>
@@ -11444,12 +11444,12 @@
         <div class="overload">
           <a class="type-name" title="reverse_iterator&lt;_BidIt&gt;">reverse_iterator&lt;_BidIt&gt;</a>
           <a class="function-name" name="function.operator+" href="#function.operator+">operator+</a>
-          <span class="function-params">(<a class="type-name" title="typename reverse_iterator&lt;_BidIt&gt;::difference_type">difference_type</a>, <a class="type-name" title="const reverse_iterator&lt;_BidIt&gt; &">const reverse_iterator&lt;_BidIt&gt; &</a>)</span>
+          <span class="function-params">(<a class="type-name" title="typename reverse_iterator&lt;_BidIt&gt;::difference_type">typename reverse_iterator&lt;_BidIt&gt;::difference_type</a>, <a class="type-name" title="const reverse_iterator&lt;_BidIt&gt; &">const reverse_iterator&lt;_BidIt&gt; &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="reverse_iterator&lt;_BidIt&gt;">reverse_iterator&lt;_BidIt&gt;</a>
           <a class="function-name" name="function.operator+" href="#function.operator+">operator+</a>
-          <span class="function-params">(<a class="type-name" title="typename move_iterator&lt;_Iter&gt;::difference_type">difference_type</a>, <a class="type-name" title="const move_iterator&lt;_Iter&gt; &">const move_iterator&lt;_Iter&gt; &</a>)</span>
+          <span class="function-params">(<a class="type-name" title="typename move_iterator&lt;_Iter&gt;::difference_type">typename move_iterator&lt;_Iter&gt;::difference_type</a>, <a class="type-name" title="const move_iterator&lt;_Iter&gt; &">const move_iterator&lt;_Iter&gt; &</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="reverse_iterator&lt;_BidIt&gt;">reverse_iterator&lt;_BidIt&gt;</a>
@@ -13001,7 +13001,7 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="struct _Smanip&lt;ios_base::fmtflags&gt;" href="std-_Smanip.html">fmtflags&gt;</a>
+          <a class="type-name" title="struct _Smanip&lt;ios_base::fmtflags&gt;" href="std-_Smanip.html">_Smanip&lt;ios_base::fmtflags&gt;</a>
           <a class="function-name" name="function.resetiosflags" href="#function.resetiosflags">resetiosflags</a>
           <span class="function-params">(<a class="type-name" title="typedef ios_base::fmtflags">fmtflags</a>)</span>
         </div>
@@ -13294,7 +13294,7 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="struct _Smanip&lt;ios_base::fmtflags&gt;" href="std-_Smanip.html">fmtflags&gt;</a>
+          <a class="type-name" title="struct _Smanip&lt;ios_base::fmtflags&gt;" href="std-_Smanip.html">_Smanip&lt;ios_base::fmtflags&gt;</a>
           <a class="function-name" name="function.setiosflags" href="#function.setiosflags">setiosflags</a>
           <span class="function-params">(<a class="type-name" title="typedef ios_base::fmtflags">fmtflags</a>)</span>
         </div>
@@ -14023,7 +14023,7 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="typename _Tuple_cat1&lt;_Tuples...&gt;::_Ret">_Ret</a>
+          <a class="type-name" title="typename _Tuple_cat1&lt;_Tuples...&gt;::_Ret">typename _Tuple_cat1&lt;_Tuples...&gt;::_Ret</a>
           <a class="function-name" name="function.tuple_cat" href="#function.tuple_cat">tuple_cat</a>
           <span class="function-params">(<a class="type-name" title="_Tuples &&...">_Tuples &&...</a>)</span>
         </div>
