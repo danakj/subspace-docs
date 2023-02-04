@@ -1,0 +1,120 @@
+<head>
+  <title>
+    sus::iter
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="namespace">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Namespace
+        </span>
+        <a class="namespace-name" href="#">sus::iter</a>
+      </div>
+    </div>
+    <div class="section records classes">
+      <div class="section-header">
+        Classes
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="struct">
+            struct
+          </span>
+          <a class="type-name" href="sus-iter-BoxedIterator.html">BoxedIterator</a>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-iter-Filter.html">Filter</a>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-iter-Iterator.html">Iterator</a>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-iter-IteratorBase.html">IteratorBase</a>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-iter-Map.html">Map</a>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-iter-Once.html">Once</a>
+        </div>
+        <div class="description">
+          <p>An IteratorBase implementation that walks over at most a single Item.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="struct">
+            struct
+          </span>
+          <a class="type-name" href="sus-iter-SizedIterator.html">SizedIterator</a>
+        </div>
+      </div>
+    </div>
+    <div class="section functions">
+      <div class="section-header">
+        Functions
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="BoxedIteratorType">BoxedIteratorType</a>
+          <a class="function-name" name="function.make_boxed_iterator" href="#function.make_boxed_iterator">make_boxed_iterator</a>
+          <span class="function-params">(<a class="type-name" title="IteratorSubclass &&">IteratorSubclass &&</a>)</span>
+        </div>
+        <div class="description">
+          <p>Make a BoxedIterator.</p><p>The BoxedIterator's internals will be on the heap, making the BoxedIterator itself be trivially relocatable, as it's just some pointers to the heap.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="SizedIteratorType">SizedIteratorType</a>
+          <a class="function-name" name="function.make_sized_iterator" href="#function.make_sized_iterator">make_sized_iterator</a>
+          <span class="function-params">(<a class="type-name" title="IteratorSubclass &&">IteratorSubclass &&</a>)</span>
+        </div>
+        <div class="description">
+          <p>Make a SizedIterator.</p><p>This overload is used when the IteratorSubclass can be trivially relocated. It stores the SubclassIterator directly into the SizedIterator, avoiding a heap allocation, since the SizedIterator can then be trivially relocated.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Iterator&lt;Once&lt;U&gt; &gt;">Iterator&lt;Once&lt;U&gt; &gt;</a>
+          <a class="function-name" name="function.once" href="#function.once">once</a>
+          <span class="function-params">(<a class="type-name" title="Option&lt;U&gt; &&">Option&lt;U&gt; &&</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Iterator&lt;Once&lt;U&gt; &gt;">Iterator&lt;Once&lt;U&gt; &gt;</a>
+          <a class="function-name" name="function.once" href="#function.once">once</a>
+          <span class="function-params">(<a class="type-name" title="Option&lt;Item&gt; &&">Option&lt;Item&gt; &&</a>)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

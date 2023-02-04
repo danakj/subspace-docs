@@ -1,0 +1,753 @@
+<head>
+  <title>
+    sus::option::Option
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="type record class">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Class
+        </span>
+        <span><a>sus</a>::<a>option</a>::<a class="type-name" href="#">Option</a></span>
+      </div>
+      <div class="type-signature">
+        <span class="class">
+          class
+        </span>
+        <span class="type-name">
+          Option
+        </span>
+        <div class="record-body">
+          { ... };
+        </div>
+      </div>
+      <div class="description">
+        <p>A type which either holds #Some value of type <code>T</code>, or #None.</p><p><code>Option&lt;const T&gt;</code> for non-reference-type <code>T</code> is disallowed, as the Option owns the <code>T</code> in that case and it ensures the <code>Option</code> and the <code>T</code> are both accessed with the same const-ness.</p><p>If a type provides a never-value field (see mem/never_value.h), and is a [standard-layout type](https://en.cppreference.com/w/cpp/named_req/StandardLayoutType), then Option&lt;T&gt; will have the same size as T.</p><p>However the never-value field places some limitations on what can be constexpr in the Option type. Because it is not possible to query the state of the Option in a constant evaluation context, state-querying methods can not be constexpr, nor any method that branches based on the current state, such as <code>unwrap_or()</code>.</p>
+      </div>
+    </div>
+    <div class="section methods static">
+      <div class="section-header">
+        Static Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.static.from_iter" href="#method.static.from_iter">from_iter</a>
+          <span class="function-params">(<a class="type-name" title="::sus::iter::IteratorBase&lt;Option&lt;U&gt; &gt; &&">IteratorBase&lt;Option&lt;U&gt; &gt; &&</a>)</span>
+        </div>
+        <div class="description">
+          <p>Takes each item in the Iterator: if it is None, no further elements are taken, and the None is returned. Should no None occur, a container of type T containing the values of type U from each Option&lt;U&gt; is returned.</p><p>sus::iter::FromIterator trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.static.none" href="#method.static.none">none</a>
+          <span class="function-params">()</span>
+        </div>
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.static.none" href="#method.static.none">none</a>
+          <span class="function-params">()</span>
+        </div>
+        <div class="description">
+          <p>Construct an Option that is holding no value.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.static.some" href="#method.static.some">some</a>
+          <span class="function-params">(<a class="type-name" title="const T &">const T &</a>)</span>
+        </div>
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.static.some" href="#method.static.some">some</a>
+          <span class="function-params">(<a class="type-name" title="T &&">T &&</a>)</span>
+        </div>
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.static.some" href="#method.static.some">some</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
+        </div>
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.static.some" href="#method.static.some">some</a>
+          <span class="function-params">(<a class="type-name" title="sus::num::u32 &&" href="sus-num-u32.html">u32 &&</a>)</span>
+        </div>
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.static.some" href="#method.static.some">some</a>
+          <span class="function-params">(<a class="type-name" title="const int &">const int &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Construct an Option that is holding the given value.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section methods nonstatic">
+      <div class="section-header">
+        Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;U&gt;">Option&lt;U&gt;</a>
+          <a class="function-name" name="method.and_opt" href="#method.and_opt">and_opt</a>
+          <span class="function-params">(<a class="type-name" title="Option&lt;U&gt;">Option&lt;U&gt;</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Consumes this Option and returns an Option with #None if this Option holds</p><h6>#None, otherwise returns the given `opt`.</h6><p></p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;InnerR&gt;">Option&lt;InnerR&gt;</a>
+          <a class="function-name" name="method.and_then" href="#method.and_then">and_then</a>
+          <span class="function-params">(<a class="type-name" title="AndFn">AndFn</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Consumes this Option and returns an Option with #None if this Option holds</p><h6>#None, otherwise calls `f` with the contained value and returns an Option</h6><p>with the result.</p><p>Some languages call this operation flatmap.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T &&gt;">Option&lt;T &&gt;</a>
+          <a class="function-name" name="method.as_mut" href="#method.as_mut">as_mut</a>
+          <span class="function-params">()</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T &&gt;">Option&lt;T &&gt;</a>
+          <a class="function-name" name="method.as_mut" href="#method.as_mut">as_mut</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns an Option&lt;T&&gt; from this Option&lt;T&gt;, that either holds #None or a reference to the value in this Option.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;const std::remove_reference_t&lt;T&gt; &&gt;">Option&lt;const std::remove_reference_t&lt;T&gt; &&gt;</a>
+          <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
+          <span class="function-params">()</span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Option&lt;const std::remove_reference_t&lt;T&gt; &&gt;">Option&lt;const std::remove_reference_t&lt;T&gt; &&gt;</a>
+          <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
+          <span class="function-params">()</span>
+          <span class="const rref">
+            const&&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Option&lt;const std::remove_reference_t&lt;T&gt; &&gt;">Option&lt;const std::remove_reference_t&lt;T&gt; &&gt;</a>
+          <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
+          <span class="function-params">()</span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns an Option&lt;const T&&gt; from this Option&lt;T&gt;, that either holds #None or a reference to the value in this Option.</p><p>When not holding a <code>sus::mem::NeverValueField</code> type, the method can be evaluated in a constant expression.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.clone" href="#method.clone">clone</a>
+          <span class="function-params">()</span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="description">
+          <p>sus::mem::Clone trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="method.clone_from" href="#method.clone_from">clone_from</a>
+          <span class="function-params">(<a class="type-name" title="const Option&lt;T&gt; &" href="sus-option-Option.html">const Option&lt;T&gt; &</a>)</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>sus::mem::CloneInto trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;std::remove_const_t&lt;std::remove_reference_t&lt;T&gt; &gt; &gt;">Option&lt;std::remove_const_t&lt;std::remove_reference_t&lt;T&gt; &gt; &gt;</a>
+          <a class="function-name" name="method.cloned" href="#method.cloned">cloned</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Maps an <code>Option&lt;T&&gt;</code> to an <code>Option&lt;T&gt;</code> by cloning the referenced <code>T</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;std::remove_const_t&lt;std::remove_reference_t&lt;T&gt; &gt; &gt;">Option&lt;std::remove_const_t&lt;std::remove_reference_t&lt;T&gt; &gt; &gt;</a>
+          <a class="function-name" name="method.copied" href="#method.copied">copied</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Maps an <code>Option&lt;T&&gt;</code> to an <code>Option&lt;T&gt;</code> by copying the referenced <code>T</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.expect" href="#method.expect">expect</a>
+          <span class="function-params">(<a class="type-name" title="const char *">const char *</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the contained value inside the Option.</p><p>The function will panic with the given message if the Option's state is currently <code>None</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.filter" href="#method.filter">filter</a>
+          <span class="function-params">(<a class="type-name" title="Predicate">Predicate</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Consumes the Option and applies a predicate function to the value contained in the Option. Returns a new Option with the same value if the predicate returns true, otherwise returns an Option with its state set to</p><h6>#None.</h6><p></p><p>The predicate function must take <code>const T&</code> and return <code>bool</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.flatten" href="#method.flatten">flatten</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Maps an <code>Option&lt;Option&lt;T&gt;&gt;</code> to an <code>Option&lt;T&gt;</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &">T &</a>
+          <a class="function-name" name="method.get_or_insert" href="#method.get_or_insert">get_or_insert</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>If the Option holds a value, returns a mutable reference to it. Otherwise, stores <code>t</code> inside the Option and returns a mutable reference to the new value.</p><p>If it is non-trivial to construct <code>T</code>, the &lt;get_or_insert_with&gt;() method would be preferable, as it only constructs a <code>T</code> if needed.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &">T &</a>
+          <a class="function-name" name="method.get_or_insert_default" href="#method.get_or_insert_default">get_or_insert_default</a>
+          <span class="function-params">()</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>If the Option holds a value, returns a mutable reference to it. Otherwise, constructs a default value <code>T</code>, stores it inside the Option and returns a mutable reference to the new value.</p><p>This method differs from &lt;unwrap_or_default&gt;() in that it does not consume the Option, and instead it can not be called on rvalues.</p><p>This is a shorthand for <code>Option&lt;T&gt;::get_or_insert_default(Default&lt;T&gt;::make_default)</code>.</p><p>The Option's contained type <code>T</code> must be #Default, and will be constructed through that trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &">T &</a>
+          <a class="function-name" name="method.get_or_insert_with" href="#method.get_or_insert_with">get_or_insert_with</a>
+          <span class="function-params">(<a class="type-name" title="WithFn">WithFn</a>)</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>If the Option holds a value, returns a mutable reference to it. Otherwise, constructs a <code>T</code> by calling <code>f</code>, stores it inside the Option and returns a mutable reference to the new value.</p><p>This method differs from &lt;unwrap_or_else&gt;() in that it does not consume the Option, and instead it can not be called on rvalues.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &">T &</a>
+          <a class="function-name" name="method.insert" href="#method.insert">insert</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Stores the value <code>t</code> inside this Option, replacing any previous value, and returns a mutable reference to the new value.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Iterator&lt;Once&lt;T&gt; &gt;">Iterator&lt;Once&lt;T&gt; &gt;</a>
+          <a class="function-name" name="method.into_iter" href="#method.into_iter">into_iter</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="method.is_none" href="#method.is_none">is_none</a>
+          <span class="function-params">()</span>
+          <span class="const">
+            const
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns whether the Option is currently empty, containing no value.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="method.is_some" href="#method.is_some">is_some</a>
+          <span class="function-params">()</span>
+          <span class="const">
+            const
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="method.is_some" href="#method.is_some">is_some</a>
+          <span class="function-params">()</span>
+          <span class="const">
+            const
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns whether the Option currently contains a value.</p><p>If there is a value present, it can be extracted with <code>unwrap()</code> or <code>expect()</code>, or can be accessed through <code>operator-&gt;</code> and <code>operator*</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Iterator&lt;Once&lt;const std::remove_reference_t&lt;T&gt; &&gt; &gt;">Iterator&lt;Once&lt;const std::remove_reference_t&lt;T&gt; &&gt; &gt;</a>
+          <a class="function-name" name="method.iter" href="#method.iter">iter</a>
+          <span class="function-params">()</span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Iterator&lt;Once&lt;const std::remove_reference_t&lt;T&gt; &&gt; &gt;">Iterator&lt;Once&lt;const std::remove_reference_t&lt;T&gt; &&gt; &gt;</a>
+          <a class="function-name" name="method.iter" href="#method.iter">iter</a>
+          <span class="function-params">()</span>
+          <span class="const rref">
+            const&&
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Iterator&lt;Once&lt;T &&gt; &gt;">Iterator&lt;Once&lt;T &&gt; &gt;</a>
+          <a class="function-name" name="method.iter_mut" href="#method.iter_mut">iter_mut</a>
+          <span class="function-params">()</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;R&gt;">Option&lt;R&gt;</a>
+          <a class="function-name" name="method.map" href="#method.map">map</a>
+          <span class="function-params">(<a class="type-name" title="MapFn">MapFn</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Maps the Option's value through a function.</p><p>Consumes the Option, passing the value through the map function, and returning an <code>Option&lt;R&gt;</code> where <code>R</code> is the return type of the map function.</p><p>Returns an <code>Option&lt;R&gt;</code> in state #None if the current Option is in state</p><h6>#None.</h6><p></p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="R">R</a>
+          <a class="function-name" name="method.map_or" href="#method.map_or">map_or</a>
+          <span class="function-params">(<a class="type-name" title="D">D</a>, <a class="type-name" title="MapFn">MapFn</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the provided default result (if none), or applies a function to the contained value (if any).</p><p>Arguments passed to map_or are eagerly evaluated; if you are passing the result of a function call, it is recommended to use map_or_else, which is lazily evaluated.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="R">R</a>
+          <a class="function-name" name="method.map_or_else" href="#method.map_or_else">map_or_else</a>
+          <span class="function-params">(<a class="type-name" title="DefaultFn">DefaultFn</a>, <a class="type-name" title="MapFn">MapFn</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Computes a default function result (if none), or applies a different function to the contained value (if any).</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Result">Result</a>
+          <a class="function-name" name="method.ok_or" href="#method.ok_or">ok_or</a>
+          <span class="function-params">(<a class="type-name" title="E">E</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Transforms the <code>Option&lt;T&gt;</code> into a <code>Result&lt;T, E&gt;</code>, mapping <code>Some(v)</code> to <code>Ok(v)</code> and <code>None</code> to <code>Err(e)</code>.</p><p>Arguments passed to #ok_or are eagerly evaluated; if you are passing the result of a function call, it is recommended to use ok_or_else, which is lazily evaluated.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Result">Result</a>
+          <a class="function-name" name="method.ok_or_else" href="#method.ok_or_else">ok_or_else</a>
+          <span class="function-params">(<a class="type-name" title="ElseFn">ElseFn</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Transforms the <code>Option&lt;T&gt;</code> into a <code>Result&lt;T, E&gt;</code>, mapping <code>Some(v)</code> to <code>Ok(v)</code> and <code>None</code> to <code>Err(f())</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="const std::remove_reference_t&lt;T&gt; &">remove_reference_t&lt;T&gt; &</a>
+          <a class="function-name" name="method.operator*" href="#method.operator*">operator*</a>
+          <span class="function-params">()</span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="const std::remove_reference_t&lt;T&gt; &">remove_reference_t&lt;T&gt; &</a>
+          <a class="function-name" name="method.operator*" href="#method.operator*">operator*</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="const std::remove_reference_t&lt;T&gt; &">remove_reference_t&lt;T&gt; &</a>
+          <a class="function-name" name="method.operator*" href="#method.operator*">operator*</a>
+          <span class="function-params">()</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Implementation note: We don't allow calling this method on rvalue types, it would allow a reference to the inner object to escape from an rvalue in an unbounded way. When passing an rvalue as a function argument, <code>Option::unwrap()</code> does the right thing already and will convert to a reference implicitly.</p><p>Implementation note: This method is added in addition to the Rust Option API because: * C++ moving is verbose, making unwrap() on lvalues loud. * Unwrapping requires a new lvalue name since C++ doesn't allow name   reuse, making variable names bad. * It's expected due to std::optional and general container-of-one things   to provide access through operator* and operator-&gt;.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="const std::remove_reference_t&lt;T&gt; *">remove_reference_t&lt;T&gt; *</a>
+          <a class="function-name" name="method.operator-&gt;" href="#method.operator-&gt;">operator-&gt;</a>
+          <span class="function-params">()</span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="const std::remove_reference_t&lt;T&gt; *">remove_reference_t&lt;T&gt; *</a>
+          <a class="function-name" name="method.operator-&gt;" href="#method.operator-&gt;">operator-&gt;</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="const std::remove_reference_t&lt;T&gt; *">remove_reference_t&lt;T&gt; *</a>
+          <a class="function-name" name="method.operator-&gt;" href="#method.operator-&gt;">operator-&gt;</a>
+          <span class="function-params">()</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a pointer to the contained value inside the Option.</p><p>The pointer is const if the Option is const, and is mutable otherwise. This method allows calling methods directly on the type inside the Option without unwrapping.</p><p></p><h1>Panic</h1><p></p><p>The function will panic without a message if the Option's state is currently <code>None</code>.</p><p></p><h1>Implementation Notes</h1><p></p><p>Implementation note: We don't allow calling this method on rvalue types, it would allow a pointer to the inner object to escape from an rvalue. When using an rvalue, <code>Option::unwrap()</code> does the right thing already and will give access to the fields and methods of the inner type.</p><p>Implementation note: This method is added in addition to the Rust Option API because: * C++ moving is verbose, making unwrap() on lvalues loud. * Unwrapping requires a new lvalue name since C++ doesn't allow name   reuse, making variable names bad. * It's expected due to std::optional and general container-of-one things   to provide access through operator* and operator-&gt;.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt; &" href="sus-option-Option.html">Option&lt;T&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">(<a class="type-name" title="const Option&lt;T&gt; &" href="sus-option-Option.html">const Option&lt;T&gt; &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt; &" href="sus-option-Option.html">Option&lt;T&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">(<a class="type-name" title="const Option&lt;T&gt; &" href="sus-option-Option.html">const Option&lt;T&gt; &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt; &" href="sus-option-Option.html">Option&lt;T&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">(<a class="type-name" title="const Option&lt;T&gt; &" href="sus-option-Option.html">const Option&lt;T&gt; &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt; &" href="sus-option-Option.html">Option&lt;T&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">(<a class="type-name" title="Option&lt;T&gt; &&" href="sus-option-Option.html">Option&lt;T&gt; &&</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt; &" href="sus-option-Option.html">Option&lt;T&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">(<a class="type-name" title="Option&lt;T&gt; &&" href="sus-option-Option.html">Option&lt;T&gt; &&</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt; &" href="sus-option-Option.html">Option&lt;T&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">(<a class="type-name" title="Option&lt;T&gt; &&" href="sus-option-Option.html">Option&lt;T&gt; &&</a>)</span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.or_else" href="#method.or_else">or_else</a>
+          <span class="function-params">(<a class="type-name" title="ElseFn">ElseFn</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Consumes and returns an Option with the same value if this Option contains a value, otherwise returns the Option returned by <code>f</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.or_opt" href="#method.or_opt">or_opt</a>
+          <span class="function-params">(<a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Consumes and returns an Option with the same value if this Option contains a value, otherwise returns the given <code>opt</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.replace" href="#method.replace">replace</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Replaces whatever the Option is currently holding with #Some value <code>t</code> and returns an Option holding what was there previously.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.take" href="#method.take">take</a>
+          <span class="function-params">()</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a new Option containing whatever was inside the current Option.</p><p>If this Option contains #None then it is left unchanged and returns an Option containing #None. If this Option contains #Some with a value, the value is moved into the returned Option and this Option will contain #None afterward.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Result">Result</a>
+          <a class="function-name" name="method.transpose" href="#method.transpose">transpose</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Transposes an #Option of a #Result into a #Result of an #Option.</p><p><code>None</code> will be mapped to <code>Ok(None)</code>. <code>Some(Ok(_))</code> and <code>Some(Err(_))</code> will be mapped to <code>Ok(Some(_))</code> and <code>Err(_)</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.unwrap" href="#method.unwrap">unwrap</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.unwrap" href="#method.unwrap">unwrap</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the contained value inside the Option.</p><p>The function will panic without a message if the Option's state is currently <code>None</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.unwrap_or" href="#method.unwrap_or">unwrap_or</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the contained value inside the Option, if there is one. Otherwise, returns <code>default_result</code>.</p><p>Note that if it is non-trivial to construct a <code>default_result</code>, that &lt;unwrap_or_else&gt;() should be used instead, as it will only construct the default value if required.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.unwrap_or_default" href="#method.unwrap_or_default">unwrap_or_default</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the contained value inside the Option, if there is one. Otherwise, constructs a default value for the type and returns that.</p><p>The Option's contained type <code>T</code> must be #Default, and will be constructed through that trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.unwrap_or_else" href="#method.unwrap_or_else">unwrap_or_else</a>
+          <span class="function-params">(<a class="type-name" title="Functor">Functor</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the contained value inside the Option, if there is one. Otherwise, returns the result of the given function.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.unwrap_unchecked" href="#method.unwrap_unchecked">unwrap_unchecked</a>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="method.unwrap_unchecked" href="#method.unwrap_unchecked">unwrap_unchecked</a>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns the contained value inside the Option.</p><p></p><h1>Safety</h1><p></p><p>It is Undefined Behaviour to call this function when the Option's state is <code>None</code>. The caller is responsible for ensuring the Option contains a value beforehand, and the safer &lt;unwrap&gt;() or &lt;expect&gt;() should almost always be preferred.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.unzip" href="#method.unzip">unzip</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Unzips an Option holding a Tuple of two values into a Tuple of two Options.</p><p><code>Option&lt;Tuple&lt;i32, u32&gt;&gt;</code> is unzipped to <code>Tuple&lt;Option&lt;i32&gt;, Option&lt;u32&gt;&gt;</code>.</p><p>If self is Some, the result is a Tuple with both Options holding the values from self. Otherwise, the result is a Tuple of two Options set to None.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
+          <a class="function-name" name="method.xor_opt" href="#method.xor_opt">xor_opt</a>
+          <span class="function-params">(<a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Consumes this Option and returns an Option, holding the value from either this Option <code>opt</code>, if exactly one of them holds a value, otherwise returns an Option that holds #None.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;Tuple&gt;">Option&lt;Tuple&gt;</a>
+          <a class="function-name" name="method.zip" href="#method.zip">zip</a>
+          <span class="function-params">(<a class="type-name" title="Option&lt;U&gt;">Option&lt;U&gt;</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Zips self with another Option.</p><p>If self is <code>Some(s)</code> and other is <code>Some(o)</code>, this method returns <code>Some((s, o))</code>. Otherwise, <code>None</code> is returned.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

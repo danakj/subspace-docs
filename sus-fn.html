@@ -1,0 +1,88 @@
+<head>
+  <title>
+    sus::fn
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="namespace">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Namespace
+        </span>
+        <a class="namespace-name" href="#">sus::fn</a>
+      </div>
+    </div>
+    <div class="section namespaces">
+      <div class="section-header">
+        Namespaces
+      </div>
+      <div class="section-item">
+        <a class="namespace-name" href="sus-fn-callable.html">callable</a>
+      </div>
+    </div>
+    <div class="section records classes">
+      <div class="section-header">
+        Classes
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-fn-Fn.html">Fn</a>
+        </div>
+        <div class="description">
+          <p>A closure that erases the type of the internal callable object (lambda). A Fn may be called a multiple times, and will not mutate its storage.</p><p>Fn can be used as a FnMut, which can be used as a FnOnce.</p><p>Lambdas without captures can be converted into a FnOnce, FnMut, or Fn directly. If the lambda has captured, it must be given to one of:</p><p>- <code>sus_bind(sus_store(..captures..), lambda)</code> to bind a const lambda which captures variables from local state. Variables to be captured in the lambda must also be named in sus_store(). <code>sus_bind()</code> only allows those named variables to be captured, and ensures they are stored by value instead of by reference.</p><p>- <code>sus_bind0(lambda)</code> to bind a const lambda which has bound variables that don't capture state from outside the lambda, such as <code>[i = 2]() { return i; }</code>.</p><p>- <code>sus_bind_mut(sus_store(...captures...), lambda)</code> to bind a mutable lambda which captures variables from local state.</p><p>- <code>sus_bind0_mut(lambda)</code> to bind a mutable lambda which has bound variables that don't capture state from outside the lambda, such as <code>[i = 2]() { return ++i; }</code>.</p><p>Within sus_store(), a variable name can be wrapped with a helper to capture in different ways:</p><p>- <code>sus_take(x)</code> will move <code>x</code> into the closure instead of copying it.</p><p>- <code>sus_unsafe_pointer(x)</code> will allow capturing a pointer. Otherwise it be disallowed, and it is strongly discouraged as it requires careful present and future understanding of the pointee's lifetime.</p><p></p><h1>Example</h1><p></p><p>Moves <code>a</code> into the closure's storage, and copies b. The lambda then refers to the closure's stored values by reference.</p><p></p><pre><code>int a = 1;
+int b = 2;
+Fn&lt;int()&gt; f = sus_bind(
+  sus_store(sus_take(a), b), [&a, &b]() { return a + b; }
+);
+</code></pre><p></p><p></p><h1>Why can a "const" Fn convert to a mutable FnMut or FnOnce?</h1><p></p><p>A FnMut or FnOnce is _allowed_ to mutate its storage, but a "const" Fn closure would just choose not to do so.</p><p>However, a <code>const Fn</code> requires that the storage is not mutated, so it is not useful if converted to a <code>const FnMut</code> or <code>const FnOnce</code> which are only callable as mutable objects.</p><p></p><h1>Null pointers</h1><p></p><p>A null function pointer is not allowed, constructing a Fn from a null pointer will panic.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-fn-FnMut.html">FnMut</a>
+        </div>
+        <div class="description">
+          <p>A closure that erases the type of the internal callable object (lambda). A FnMut may be called a multiple times, and may mutate its storage.</p><p>Fn can be used as a FnMut, which can be used as a FnOnce.</p><p>Lambdas without captures can be converted into a FnOnce, FnMut, or Fn directly. If the lambda has captured, it must be given to one of:</p><p>- <code>sus_bind(sus_store(..captures..), lambda)</code> to bind a const lambda which captures variables from local state. Variables to be captured in the lambda must also be named in sus_store(). <code>sus_bind()</code> only allows those named variables to be captured, and ensures they are stored by value instead of by reference.</p><p>- <code>sus_bind0(lambda)</code> to bind a const lambda which has bound variables that don't capture state from outside the lambda, such as <code>[i = 2]() { return i; }</code>.</p><p>- <code>sus_bind_mut(sus_store(...captures...), lambda)</code> to bind a mutable lambda which captures variables from local state.</p><p>- <code>sus_bind0_mut(lambda)</code> to bind a mutable lambda which has bound variables that don't capture state from outside the lambda, such as <code>[i = 2]() { return ++i; }</code>.</p><p>Within sus_store(), a variable name can be wrapped with a helper to capture in different ways:</p><p>- <code>sus_take(x)</code> will move <code>x</code> into the closure instead of copying it.</p><p>- <code>sus_unsafe_pointer(x)</code> will allow capturing a pointer. Otherwise it be disallowed, and it is strongly discouraged as it requires careful present and future understanding of the pointee's lifetime.</p><p></p><h1>Example</h1><p></p><p>Moves <code>a</code> into the closure's storage, and copies b. The lambda then refers to the closure's stored values by reference.</p><p></p><pre><code>int a = 1;
+int b = 2;
+FnMut&lt;void()&gt; f = sus_bind_mut(
+  sus_store(sus_take(a), b), [&a, &b]() mutable { a += b; }
+);
+</code></pre><p></p><p></p><h1>Why can a "const" Fn convert to a mutable FnMut or FnOnce?</h1><p></p><p>A FnMut or FnOnce is _allowed_ to mutate its storage, but a "const" Fn closure would just choose not to do so.</p><p>However, a <code>const Fn</code> requires that the storage is not mutated, so it is not useful if converted to a <code>const FnMut</code> or <code>const FnOnce</code> which are only callable as mutable objects.</p><p></p><h1>Null pointers</h1><p></p><p>A null function pointer is not allowed, constructing a FnMut from a null pointer will panic.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-fn-FnOnce.html">FnOnce</a>
+        </div>
+        <div class="description">
+          <p>A closure that erases the type of the internal callable object (lambda). A FnOnce may only be called a single time.</p><p>Fn can be used as a FnMut, which can be used as a FnOnce.</p><p>Lambdas without captures can be converted into a FnOnce, FnMut, or Fn directly. If the lambda has captured, it must be given to one of:</p><p>- <code>sus_bind(sus_store(..captures..), lambda)</code> to bind a const lambda which captures variables from local state. Variables to be captured in the lambda must also be named in sus_store(). <code>sus_bind()</code> only allows those named variables to be captured, and ensures they are stored by value instead of by reference.</p><p>- <code>sus_bind0(lambda)</code> to bind a const lambda which has bound variables that don't capture state from outside the lambda, such as <code>[i = 2]() { return i; }</code>.</p><p>- <code>sus_bind_mut(sus_store(...captures...), lambda)</code> to bind a mutable lambda which captures variables from local state.</p><p>- <code>sus_bind0_mut(lambda)</code> to bind a mutable lambda which has bound variables that don't capture state from outside the lambda, such as <code>[i = 2]() { return ++i; }</code>.</p><p>Within sus_store(), a variable name can be wrapped with a helper to capture in different ways:</p><p>- <code>sus_take(x)</code> will move <code>x</code> into the closure instead of copying it.</p><p>- <code>sus_unsafe_pointer(x)</code> will allow capturing a pointer. Otherwise it be disallowed, and it is strongly discouraged as it requires careful present and future understanding of the pointee's lifetime.</p><p></p><h1>Example</h1><p></p><p>Moves <code>a</code> into the closure's storage, and copies b. The lambda then refers to the closure's stored values by reference.</p><p></p><pre><code>int a = 1;
+int b = 2;
+FnOnce&lt;void()&gt; f = sus_bind_mut(
+  sus_store(sus_take(a), b), [&a, &b]() mutable { a += b; }
+);
+</code></pre><p></p><p>Copies <code>a</code> into the closure's storage and defines a <code>b</code> from an rvalue. Since <code>b</code> isn't referred to outside the Fn it does not need to be bound.</p><p></p><pre><code>int a = 1;
+FnOnce&lt;void()&gt; f = sus_bind_mut(
+  sus_store(a), [&a, b = 2]() mutable { a += b; }
+);
+</code></pre><p></p><p>TODO: There's no way to do this currently, since it won't know what to name the <code>x.foo()</code> value.</p><p></p><pre><code>struct { int foo() { return 2; } } x;
+FnOnce&lt;void()&gt; f = sus_bind_mut(
+  sus_store(x.foo()), [&a]() mutable { a += 1; }
+);
+</code></pre><p></p><p></p><h1>Why can a "const" Fn convert to a mutable FnMut or FnOnce?</h1><p></p><p>A FnMut or FnOnce is _allowed_ to mutate its storage, but a "const" Fn closure would just choose not to do so.</p><p>However, a <code>const Fn</code> requires that the storage is not mutated, so it is not useful if converted to a <code>const FnMut</code> or <code>const FnOnce</code> which are only callable as mutable objects.</p><p></p><h1>Null pointers</h1><p></p><p>A null function pointer is not allowed, constructing a FnOnce from a null pointer will panic.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

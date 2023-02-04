@@ -1,0 +1,71 @@
+<head>
+  <title>
+    sus::tuple_type
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="namespace">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Namespace
+        </span>
+        <a class="namespace-name" href="#">sus::tuple_type</a>
+      </div>
+    </div>
+    <div class="section records classes">
+      <div class="section-header">
+        Classes
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-tuple_type-Tuple.html">Tuple</a>
+        </div>
+        <div class="description">
+          <p>A Tuple is a finite sequence of one or more heterogeneous values.</p><p></p><h1>Tail padding</h1><p>The Tuple's tail padding may be reused when the Tuple is marked as <code>[[no_unique_address]]</code>. The Tuple will have tail padding if the first type has a size that is not a multiple of the Tuple's alignment. For example if it's smaller than the alignment, such as <code>Tuple&lt;u8, u64&gt;</code> which has <code>(alignof(u64) == sizeof(u64)) - sizeof(u8)</code> or 7 bytes of tail padding.</p><p></p><pre><code>struct S {
+  [[no_unique_address]] Tuple&lt;u32, u64&gt; tuple;  // 16 bytes.
+  u32 val;  // 4 bytes.
+};  // 16 bytes, since `val` is stored inside `tuple`.
+</code></pre><p></p><p>However note that this behaviour is compiler-dependent, and MSVC does not use the <code>[[no_unique_address]]</code> hint.</p><p>Use <code>sus::data_size_of&lt;T&gt;()</code> to determine the size of T excluding its tail padding (so <code>sus::size_of&lt;T&gt;() - sus::data_size_of&lt;T&gt;()</code> is the tail padding), which can be useful to ensure you have the expected behaviour from your types.</p><p>Additionally types within the tuple may be placed inside the tail padding of other types in the tuple, should such padding exist.</p><p>Generally, but not always, use of tail padding in Tuple is optimized by ordering types (left-to-right in the template variables) from smallest-to- largest for simple types such as integers (which have no tail padding themselves), or in least-to-most tail-padding for more complex types. Elements in a Tuple are stored internally in reverse of the order they are specified, which is why the size of the *first* element matters for the Tuple's externally usable tail padding.</p><p></p><h1>Use after move</h1><p>Tuples optionally compile in checks against use-after-move to protect against using their internal values after they are moved. It is on by default and behind the <code>SUS_CONFIG_TUPLE_USE_AFTER_MOVE</code> define which can be true or false. When on, all Tuples are an extra 8 bytes larger.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section functions">
+      <div class="section-header">
+        Functions
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="decltype(auto)">decltype(auto)</a>
+          <a class="function-name" name="function.get" href="#function.get">get</a>
+          <span class="function-params">(<a class="type-name" title="const Tuple&lt;Ts...&gt; &">const Tuple&lt;Ts...&gt; &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="decltype(auto)">decltype(auto)</a>
+          <a class="function-name" name="function.get" href="#function.get">get</a>
+          <span class="function-params">(<a class="type-name" title="Tuple&lt;Ts...&gt; &">Tuple&lt;Ts...&gt; &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="decltype(auto)">decltype(auto)</a>
+          <a class="function-name" name="function.get" href="#function.get">get</a>
+          <span class="function-params">(<a class="type-name" title="Tuple&lt;Ts...&gt; &&">Tuple&lt;Ts...&gt; &&</a>)</span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.tuple" href="#function.tuple">tuple</a>
+          <span class="function-params">(<a class="type-name" title="Ts &&...">Ts &&...</a>)</span>
+        </div>
+        <div class="description">
+          <p>Used to construct a Tuple&lt;Ts...&gt; with the parameters as its values.</p><p>Calling tuple() produces a hint to make a Tuple&lt;Ts...&gt; but does not actually construct Tuple&lt;Ts...&gt;, as the types in <code>Ts...</code> are not known here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

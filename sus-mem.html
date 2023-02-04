@@ -1,0 +1,286 @@
+<head>
+  <title>
+    sus::mem
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="namespace">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Namespace
+        </span>
+        <a class="namespace-name" href="#">sus::mem</a>
+      </div>
+    </div>
+    <div class="section records classes">
+      <div class="section-header">
+        Classes
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-mem-NonNull.html">NonNull</a>
+        </div>
+        <div class="description">
+          <p>A pointer wrapper which holds a never-null pointer.</p><p>A NonNull can not be implicitly created from an array, as that would throw away the length information. Explicitly cast to a pointer to use NonNull with an array.</p><p>The NonNull type is trivially copyable and moveable.</p><p>TODO: Make a NonNullArray type? https://godbolt.org/z/3vW3xsz5h</p>
+        </div>
+      </div>
+    </div>
+    <div class="section functions">
+      <div class="section-header">
+        Functions
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T *">T *</a>
+          <a class="function-name" name="function.addressof" href="#function.addressof">addressof</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T *">T *</a>
+          <a class="function-name" name="function.addressof" href="#function.addressof">addressof</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T *">T *</a>
+          <a class="function-name" name="function.addressof" href="#function.addressof">addressof</a>
+          <span class="function-params">(<a class="type-name" title="T &&">T &&</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T *">T *</a>
+          <a class="function-name" name="function.addressof" href="#function.addressof">addressof</a>
+          <span class="function-params">(<a class="type-name" title="sus::result::__private::ResultState &">ResultState &</a>)</span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="typedef std::decay_t&lt;T&gt;">decay_t&lt;T&gt;</a>
+          <a class="function-name" name="function.clone" href="#function.clone">clone</a>
+          <span class="function-params">(<a class="type-name" title="const T &">const T &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Clones the input either by copying or cloning. Returns a new object of type <code>T</code>.</p><p>If <code>T</code> is a reference type, it will clone the underlying object.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="function.clone_into" href="#function.clone_into">clone_into</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="const T &">const T &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Performs copy-assignment from <code>source</code>.</p><p>Will perform a copy assignment if T is <code>Copy</code>. Otherwise will perform the equivalent of <code>dest = source.clone()</code>.</p><p>The <code>Clone</code> type may provide an implementation of <code>clone_from(const T& source)</code> to reuse its resources and avoid unnecessary allocations, which will be preferred over calling <code>source.clone()</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.clone_or_forward" href="#function.clone_or_forward">clone_or_forward</a>
+          <span class="function-params">(<a class="type-name" title="const std::remove_reference_t&lt;T&gt; &">remove_reference_t&lt;T&gt; &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Clones the input either by copying or cloning, producing an object of type T.</p><p>If <code>T</code> is a reference type, it copies and returns the reference instead of the underlying object.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="typedef size_t">size_t</a>
+          <a class="function-name" name="function.data_size_of" href="#function.data_size_of">data_size_of</a>
+          <span class="function-params">()</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="typedef size_t">size_t</a>
+          <a class="function-name" name="function.data_size_of" href="#function.data_size_of">data_size_of</a>
+          <span class="function-params">()</span>
+        </div>
+        <div class="description">
+          <p>Returns the data size of the type T.</p><p>This is the number of bytes for the type excluding any tail padding, which is the number of bytes that can be memcpy'd into the type without potentially overwriting other objects. This is due to the fact that other objects can be placed inside tail padding of an object in some scenarios.</p><p>Returns 0 for types where the tail padding can not be determined. In particular this is the case for union types unless and until compilers provide additional support to determine the maximum data size of all union members.</p><p>From @ssbr:</p><p>If type <code>T</code> has padding at its end, such as:</p><pre><code>class T { i64 a; i32 b; };
+</code></pre><p></p><p>Then there are two ways for another type to place a field inside the padding adjacent to <code>b</code> and inside area allocated for <code>sizeof(T)</code>:</p><p>1. A subclass of a non-POD type can insert its fields into the padding of the base class.</p><p>So a subclass of <code>T</code> may have its first field inside the padding adjacent to <code>b</code>:</p><pre><code>class S : T { i32 c; };
+</code></pre><p>In this example, <code>sizeof(S) == sizeof(T)</code> because <code>c</code> sits inside the trailing padding of <code>T</code>.</p><p>2. A class with a <code>[[no_unique_address]]</code> field may insert other fields below it into the padding of the <code>[[no_unique_address]]</code> field.</p><p>So a class that contains <code>T</code> as a field can insert another field into <code>T</code>:</p><pre><code>class S { [[no_unique_address]] T t; i32 c; };
+</code></pre><p>In this example, <code>sizeof(S) == sizeof(T)</code> because <code>c</code> sits inside the trailing padding of <code>T</code>.</p><p>So the dsizeof(T) algorithm [to determine how much to memcpy safely] is something like:</p><p>* A: find out how many bytes fit into the padding via inheritance   (<code>struct S : T { bytes }</code> for all <code>bytes</code> until   <code>sizeof(T) != sizeof(S)</code>). * B: find out how many bytes fit into the padding via no_unique_address   (<code>struct S { [[no_unique_address]] T x; bytes }</code> for all <code>bytes</code> until   <code>sizeof(T) != sizeof(S)</code>).</p><p></p><pre><code>return sizeof(T) - max(A, B)
+</code></pre><p></p><p>And I think on every known platform, A == B. It might even be guaranteed by the standard, but I wouldn't know how to check.</p><p>From @danakj:</p><p>On MSVC 19, an empty class has size 1, but with the above formula: * A = 1, as the 1 byte gets reused by a subclass. * B = 0, as [[no_unique_address]] does not reuse the one byte of the empty   class.</p><p>The result is that the data_size_of&lt;T&gt; should be 0, since the 1 byte _can_ be reused.</p><p>In general, [[no_unique_address]] and [[msvc::no_unique_address]] doesn't appear do anything on MSVC 19, and subclasses also do not use padding bytes of the base class, with the exception of the base class being empty.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &&">T &&</a>
+          <a class="function-name" name="function.forward" href="#function.forward">forward</a>
+          <span class="function-params">(<a class="type-name" title="std::remove_reference_t&lt;T&gt; &">remove_reference_t&lt;T&gt; &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &&">T &&</a>
+          <a class="function-name" name="function.forward" href="#function.forward">forward</a>
+          <span class="function-params">(<a class="type-name" title="std::remove_reference_t&lt;T&gt; &&">remove_reference_t&lt;T&gt; &&</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &&">T &&</a>
+          <a class="function-name" name="function.forward" href="#function.forward">forward</a>
+          <span class="function-params">(<a class="type-name" title="std::remove_reference_t&lt;StoragePointer&lt;const int &&gt; &gt; &">remove_reference_t&lt;StoragePointer&lt;const int &&gt; &gt; &</a>)</span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto &&">auto &&</a>
+          <a class="function-name" name="function.move" href="#function.move">move</a>
+          <span class="function-params">(<a class="type-name" title="T &&">T &&</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto &&">auto &&</a>
+          <a class="function-name" name="function.move" href="#function.move">move</a>
+          <span class="function-params">(<a class="type-name" title="sus::result::__private::ResultState &">ResultState &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Cast <code>t</code> to an r-value reference so that it can be used to construct or be assigned to a (non-reference) object of type <code>T</code>.</p><p><code>move()</code> requires that <code>t</code> can be moved from, so it requires that <code>t</code> is non-const. This differs from <code>std::move()</code>.</p><p>The <code>move()</code> call itself does nothing to <code>t</code>, as it is just a cast, similar to <code>std::move()</code>. It enables an lvalue (a named object) to be used as an rvalue. The function does not require <code>T</code> to be <code>Move</code>, in order to call rvalue-qualified methods on <code>T</code> even if it is not <code>Move</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T &">T &</a>
+          <a class="function-name" name="function.mref" href="#function.mref">mref</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T &">T &</a>
+          <a class="function-name" name="function.mref" href="#function.mref">mref</a>
+          <span class="function-params">(<a class="type-name" title="_Bool &">_Bool &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Annotate an lvalue usage, for static analysis.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="__private::NonNullMarker&lt;T&gt;">NonNullMarker&lt;T&gt;</a>
+          <a class="function-name" name="function.nonnull" href="#function.nonnull">nonnull</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Used to construct a NonNull&lt;T&gt;, while providing type deduction.</p><p>Calling nonnull() produces a hint to make an NonNull&lt;T&gt; but does not actually construct NonNull&lt;T&gt;. This is because the type <code>T</code> is not known until the construction is explicitly requested.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
+          <span class="function-params">(<a class="type-name" title="const NonNull&lt;T&gt; &">const NonNull&lt;T&gt; &</a>, <a class="type-name" title="const NonNull&lt;U&gt; &">const NonNull&lt;U&gt; &</a>)</span>
+        </div>
+        <div class="description">
+          <p>sus::ops::Ord&lt;NonNull&lt;T&gt;&gt; trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="bool">bool</a>
+          <a class="function-name" name="function.operator==" href="#function.operator==">operator==</a>
+          <span class="function-params">(<a class="type-name" title="const NonNull&lt;T&gt; &">const NonNull&lt;T&gt; &</a>, <a class="type-name" title="const NonNull&lt;U&gt; &">const NonNull&lt;U&gt; &</a>)</span>
+        </div>
+        <div class="description">
+          <p>sus::ops::Eq&lt;NonNull&lt;T&gt;&gt; trait.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.replace" href="#function.replace">replace</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="const T &">const T &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.replace" href="#function.replace">replace</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="T &&">T &&</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.replace" href="#function.replace">replace</a>
+          <span class="function-params">(<a class="type-name" title="sus::result::__private::ResultState &">ResultState &</a>, <a class="type-name" title="sus::result::__private::ResultState &&">ResultState &&</a>)</span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="function.replace_and_discard" href="#function.replace_and_discard">replace_and_discard</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="const T &">const T &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="function.replace_and_discard" href="#function.replace_and_discard">replace_and_discard</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="T &&">T &&</a>)</span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T *">T *</a>
+          <a class="function-name" name="function.replace_ptr" href="#function.replace_ptr">replace_ptr</a>
+          <span class="function-params">(<a class="type-name" title="T *&">T *&</a>, <a class="type-name" title="T *">T *</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T *">T *</a>
+          <a class="function-name" name="function.replace_ptr" href="#function.replace_ptr">replace_ptr</a>
+          <span class="function-params">(<a class="type-name" title="T *&">T *&</a>, <a class="type-name" title="typedef std::nullptr_t">nullptr_t</a>)</span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="typedef size_t">size_t</a>
+          <a class="function-name" name="function.size_of" href="#function.size_of">size_of</a>
+          <span class="function-params">()</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="typedef size_t">size_t</a>
+          <a class="function-name" name="function.size_of" href="#function.size_of">size_of</a>
+          <span class="function-params">()</span>
+        </div>
+        <div class="description">
+          <p>Returns the size of the type T.</p><p>This is the number of bytes that will be allocated for a type T, and includes any tail padding.</p><p>Disallows calls with a reference type, since C++ does a surprising thing, where <code>sizeof(T&) == sizeof(T)</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="function.swap" href="#function.swap">swap</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="T &">T &</a>)</span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.take" href="#function.take">take</a>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Moves from <code>t</code> and constructs a new <code>T</code> in its place. Returns the old value of <code>t</code>.</p><p>Requires that the type is <code>final</code> because calling take() on a base class could lead to Undefined Behaviour if the now-reconstructed object is accessed without std::launder thereafter, as replacing a subclass with the base class would change the underlying storage.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.take_and_destruct" href="#function.take_and_destruct">take_and_destruct</a>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="T &">T &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.take_and_destruct" href="#function.take_and_destruct">take_and_destruct</a>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="sus::num::u32 &" href="sus-num-u32.html">u32 &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Moves from <code>t</code> and destroys the object at <code>t</code>. Returns the old value of <code>t</code>.</p><p>SAFETY: This does *not* re-construct the object pointed to by <code>t</code>. It must not be used (or destructed again) afterward.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.take_copy_and_destruct" href="#function.take_copy_and_destruct">take_copy_and_destruct</a>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="const T &">const T &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Copies from <code>t</code> and destroys the object at <code>t</code>. Returns the old value of <code>t</code>.</p><p>SAFETY: This does *not* re-construct the object pointed to by <code>t</code>. It must not be used (or destructed again) afterward.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

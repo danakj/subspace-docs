@@ -1,0 +1,94 @@
+<head>
+  <title>
+    sus::construct
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="namespace">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Namespace
+        </span>
+        <a class="namespace-name" href="#">sus::construct</a>
+      </div>
+    </div>
+    <div class="section functions">
+      <div class="section-header">
+        Functions
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.array_into" href="#function.array_into">array_into</a>
+          <span class="function-params">(<a class="type-name" title="FromType (&)[N]">FromType (&)[N]</a>)</span>
+        </div>
+        <div class="description">
+          <p>Converts from the given array to whatever a receiver requires.</p><p>The result will be receivable if <code>Into&lt;GivenType, ReceiverType[]&gt;</code> is satisfied.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.into" href="#function.into">into</a>
+          <span class="function-params">(<a class="type-name" title="FromType &&">FromType &&</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.into" href="#function.into">into</a>
+          <span class="function-params">(<a class="type-name" title="const FromType &">const FromType &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.into" href="#function.into">into</a>
+          <span class="function-params">(<a class="type-name" title="FromType &">FromType &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.into" href="#function.into">into</a>
+          <span class="function-params">(<a class="type-name" title="const int &">const int &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.into" href="#function.into">into</a>
+          <span class="function-params">(<a class="type-name" title="int &">int &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.into" href="#function.into">into</a>
+          <span class="function-params">(<a class="type-name" title="int &&">int &&</a>)</span>
+        </div>
+        <div class="description">
+          <p>Converts from the given value to whatever a receiver requires.</p><p>The result will be receivable if <code>Into&lt;GivenType, ReceiverType&gt;</code> is satisfied.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.move_into" href="#function.move_into">move_into</a>
+          <span class="function-params">(<a class="type-name" title="FromType &">FromType &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.move_into" href="#function.move_into">move_into</a>
+          <span class="function-params">(<a class="type-name" title="FromType &&">FromType &&</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.move_into" href="#function.move_into">move_into</a>
+          <span class="function-params">(<a class="type-name" title="int &">int &</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.move_into" href="#function.move_into">move_into</a>
+          <span class="function-params">(<a class="type-name" title="int &&">int &&</a>)</span>
+        </div>
+        <div class="description">
+          <p>Moves from and converts from the given value to whatever a receiver requires.</p><p>This is sugar for <code>sus::into(sus::move(x))</code>, which can be written as <code>sus::move_into(x)</code>.</p><p>The result will be receivable if <code>Into&lt;GivenType, ReceiverType&gt;</code> is satisfied.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

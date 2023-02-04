@@ -1,0 +1,94 @@
+<head>
+  <title>
+    sus::ops
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="namespace">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Namespace
+        </span>
+        <a class="namespace-name" href="#">sus::ops</a>
+      </div>
+    </div>
+    <div class="section functions">
+      <div class="section-header">
+        Functions
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.clamp" href="#function.clamp">clamp</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>, <a class="type-name" title="T">T</a>, <a class="type-name" title="T">T</a>)</span>
+        </div>
+        <div class="description">
+          <p>Restrict a value to a certain interval.</p><p>Returns <code>max</code> if <code>v</code> is greater than <code>max</code>, and <code>min</code> if <code>v</code> is less than <code>min</code>. Otherwise this returns <code>v</code>.</p><p>By default this receives and returns objects by value. To receive and return references, specify the type parameter, such as: <code>sus::ops::clamp&lt;i32&&gt;(a, min, max)</code>. Note that if any input is a temporary object this can return a reference to an object past its lifetime.</p><p></p><h1>Panics</h1><p>Panics if <code>min &gt; max</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.max" href="#function.max">max</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>, <a class="type-name" title="T">T</a>)</span>
+        </div>
+        <div class="description">
+          <p>Compares and returns the maximum of two values.</p><p>Returns the second argument if the comparison determines them to be equal.</p><p>By default this receives and returns objects by value. To receive and return references, specify the type parameter, such as: <code>sus::ops::max&lt;i32&&gt;(a, b)</code>. Note that if either input is a temporary object this can return a reference to an object past its lifetime.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.max_by" href="#function.max_by">max_by</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>, <a class="type-name" title="T">T</a>, <a class="type-name" title="F">F</a>)</span>
+        </div>
+        <div class="description">
+          <p>Compares and returns the maximum of two values with respect to the specified comparison function.</p><p>Returns the second argument if the comparison determines them to be equal.</p><p>By default this receives and returns objects by value. To receive and return references, specify the type parameter, such as: <code>sus::ops::max_by&lt;i32&&gt;(a, b, c)</code>. Note that if either input is a temporary object this can return a reference to an object past its lifetime.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.max_by_key" href="#function.max_by_key">max_by_key</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>, <a class="type-name" title="T">T</a>, <a class="type-name" title="F">F</a>)</span>
+        </div>
+        <div class="description">
+          <p>Returns the element that gives the maximum value from the specified function.</p><p>Returns the second argument if the comparison determines them to be equal.</p><p>By default this receives and returns objects by value. To receive and return references, specify the type parameter, such as: <code>sus::ops::max_by_key&lt;i32&&gt;(a, b, k)</code>. Note that if either input is a temporary object this can return a reference to an object past its lifetime.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.min" href="#function.min">min</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>, <a class="type-name" title="T">T</a>)</span>
+        </div>
+        <div class="description">
+          <p>Compares and returns the minimum of two values.</p><p>Returns the first argument if the comparison determines them to be equal.</p><p>By default this receives and returns objects by value. To receive and return references, specify the type parameter, such as: <code>sus::ops::min&lt;i32&&gt;(a, b)</code>. Note that if either input is a temporary object this can return a reference to an object past its lifetime.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.min_by" href="#function.min_by">min_by</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>, <a class="type-name" title="T">T</a>, <a class="type-name" title="F">F</a>)</span>
+        </div>
+        <div class="description">
+          <p>Compares and returns the minimum of two values with respect to the specified comparison function.</p><p>Returns the first argument if the comparison determines them to be equal.</p><p>By default this receives and returns objects by value. To receive and return references, specify the type parameter, such as: <code>sus::ops::min_by&lt;i32&&gt;(a, b, c)</code>. Note that if either input is a temporary object this can return a reference to an object past its lifetime.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="T">T</a>
+          <a class="function-name" name="function.min_by_key" href="#function.min_by_key">min_by_key</a>
+          <span class="function-params">(<a class="type-name" title="T">T</a>, <a class="type-name" title="T">T</a>, <a class="type-name" title="F">F</a>)</span>
+        </div>
+        <div class="description">
+          <p>Returns the element that gives the minimum value from the specified function.</p><p>Returns the first argument if the comparison determines them to be equal.</p><p>By default this receives and returns objects by value. To receive and return references, specify the type parameter, such as: <code>sus::ops::min_by_key&lt;i32&&gt;(a, b, k)</code>. Note that if either input is a temporary object this can return a reference to an object past its lifetime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
