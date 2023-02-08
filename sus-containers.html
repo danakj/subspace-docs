@@ -73,7 +73,7 @@
           <a class="type-name" href="sus-containers-Vec.html">Vec</a>
         </div>
         <div class="description">
-          <p>A resizeable contiguous buffer of type <code>T</code>.</p><p>Vec requires Move for its items: - They can't be references as a pointer to reference is not valid. - On realloc, items need to be moved between allocations.</p>
+          <p>A resizeable contiguous buffer of type <code>T</code>.</p><p>Vec requires Move for its items: - They can't be references as a pointer to reference is not valid. - On realloc, items need to be moved between allocations. Vec requires items are not references: - References can not be moved in the vector as assignment modifies the   pointee, and Vec does not wrap references to store them as pointers   (for now).</p>
         </div>
       </div>
       <div class="section-item">

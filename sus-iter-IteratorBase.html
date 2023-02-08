@@ -66,6 +66,16 @@
           <p>Gets the next element from the iterator, if there is one. Otherwise, it returns an Option holding #None.</p>
         </div>
       </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="struct SizeHint" href="sus-iter-SizeHint.html">SizeHint</a>
+          <a class="function-name" name="method.size_hint" href="#method.size_hint">size_hint</a>
+          <span class="function-params">()</span>
+        </div>
+        <div class="description">
+          <p>Returns the bounds on the remaining length of the iterator.</p><p>Specifically, <code>size_hint()</code> returns a <code>SizeHint</code> with a lower and upper bound.</p><p>The upper bound is an Option&lt;usize&gt;. A None here means that either there is no known upper bound, or the upper bound is larger than usize.</p><p></p><h1>Implementation notes</h1><p></p><p>It is not enforced that an iterator implementation yields the declared number of elements. A buggy iterator may yield less than the lower bound or more than the upper bound of elements.</p><p><code>size_hint()</code> is primarily intended to be used for optimizations such as reserving space for the elements of the iterator, but must not be trusted to e.g., omit bounds checks in unsafe code. An incorrect implementation of <code>size_hint()</code> should not lead to memory safety violations.</p><p>That said, the implementation should provide a correct estimation, because otherwise it would be a violation of the <code>Iterator</code> concept's protocol.</p><p>The default implementation returns <code>lower = 0</code> and <code>upper = None</code> which is correct for any iterator.</p>
+        </div>
+      </div>
     </div>
   </div>
 </body>

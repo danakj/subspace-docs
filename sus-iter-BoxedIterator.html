@@ -6,23 +6,41 @@
 </head>
 
 <body>
-  <div class="type record struct">
+  <div class="type record class">
     <div class="section overview">
       <div class="section-header">
         <span>
-          Struct
+          Class
         </span>
         <span><a>sus</a>::<a>iter</a>::<a class="type-name" href="#">BoxedIterator</a></span>
       </div>
       <div class="type-signature">
-        <span class="struct">
-          struct
+        <span class="class">
+          class
         </span>
         <span class="type-name">
           BoxedIterator
         </span>
         <div class="record-body">
           { ... };
+        </div>
+      </div>
+      <div class="description">
+        <p>A BoxedIterator wraps another Iterator but pushes it onto the heap.</p><p>This makes the BoxedIterator itself be trivially relocatable, as it's just some pointers to the heap.</p><p>BoxedIterator is only constructible from an iterator that is not trivially relocatable.</p>
+      </div>
+    </div>
+    <div class="section methods static">
+      <div class="section-header">
+        Static Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="BoxedIterator&lt;ItemT, SubclassSize, SubclassAlign&gt;" href="sus-iter-BoxedIterator.html">BoxedIterator&lt;ItemT, SubclassSize, SubclassAlign&gt;</a>
+          <a class="function-name" name="method.static.with" href="#method.static.with">with</a>
+          <span class="function-params">(<a class="type-name" title="IteratorSubclass &&">IteratorSubclass &&</a>)</span>
         </div>
       </div>
     </div>
@@ -39,9 +57,9 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="BoxedIterator&lt;Item, SubclassSize, SubclassAlign&gt; &" href="sus-iter-BoxedIterator.html">BoxedIterator&lt;Item, SubclassSize, SubclassAlign&gt; &</a>
+          <a class="type-name" title="BoxedIterator&lt;ItemT, SubclassSize, SubclassAlign&gt; &" href="sus-iter-BoxedIterator.html">BoxedIterator&lt;ItemT, SubclassSize, SubclassAlign&gt; &</a>
           <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
-          <span class="function-params">(<a class="type-name" title="BoxedIterator&lt;Item, SubclassSize, SubclassAlign&gt; &&" href="sus-iter-BoxedIterator.html">BoxedIterator&lt;Item, SubclassSize, SubclassAlign&gt; &&</a>)</span>
+          <span class="function-params">(<a class="type-name" title="BoxedIterator&lt;ItemT, SubclassSize, SubclassAlign&gt; &&" href="sus-iter-BoxedIterator.html">BoxedIterator&lt;ItemT, SubclassSize, SubclassAlign&gt; &&</a>)</span>
         </div>
       </div>
     </div>

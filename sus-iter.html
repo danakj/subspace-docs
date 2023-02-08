@@ -21,10 +21,24 @@
       </div>
       <div class="section-item">
         <div class="type-signature">
-          <span class="struct">
-            struct
+          <span class="class">
+            class
           </span>
           <a class="type-name" href="sus-iter-BoxedIterator.html">BoxedIterator</a>
+        </div>
+        <div class="description">
+          <p>A BoxedIterator wraps another Iterator but pushes it onto the heap.</p><p>This makes the BoxedIterator itself be trivially relocatable, as it's just some pointers to the heap.</p><p>BoxedIterator is only constructible from an iterator that is not trivially relocatable.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-iter-Empty.html">Empty</a>
+        </div>
+        <div class="description">
+          <p>An Iterator that never returns an <code>Item</code>.</p>
         </div>
       </div>
       <div class="section-item">
@@ -40,7 +54,7 @@
           <span class="class">
             class
           </span>
-          <a class="type-name" href="sus-iter-Iterator.html">Iterator</a>
+          <a class="type-name" href="sus-iter-IteratorBase.html">IteratorBase</a>
         </div>
       </div>
       <div class="section-item">
@@ -48,7 +62,7 @@
           <span class="class">
             class
           </span>
-          <a class="type-name" href="sus-iter-IteratorBase.html">IteratorBase</a>
+          <a class="type-name" href="sus-iter-IteratorImpl.html">IteratorImpl</a>
         </div>
       </div>
       <div class="section-item">
@@ -67,7 +81,15 @@
           <a class="type-name" href="sus-iter-Once.html">Once</a>
         </div>
         <div class="description">
-          <p>An IteratorBase implementation that walks over at most a single Item.</p>
+          <p>An Iterator that walks over at most a single Item.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="struct">
+            struct
+          </span>
+          <a class="type-name" href="sus-iter-SizeHint.html">SizeHint</a>
         </div>
       </div>
       <div class="section-item">
@@ -85,12 +107,16 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="BoxedIteratorType">BoxedIteratorType</a>
-          <a class="function-name" name="function.make_boxed_iterator" href="#function.make_boxed_iterator">make_boxed_iterator</a>
-          <span class="function-params">(<a class="type-name" title="IteratorSubclass &&">IteratorSubclass &&</a>)</span>
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.begin" href="#function.begin">begin</a>
+          <span class="function-params">(<a class="type-name" title="const T &">const T &</a>)</span>
         </div>
-        <div class="description">
-          <p>Make a BoxedIterator.</p><p>The BoxedIterator's internals will be on the heap, making the BoxedIterator itself be trivially relocatable, as it's just some pointers to the heap.</p>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.end" href="#function.end">end</a>
+          <span class="function-params">(<a class="type-name" title="const T &">const T &</a>)</span>
         </div>
       </div>
       <div class="section-item">
@@ -100,19 +126,7 @@
           <span class="function-params">(<a class="type-name" title="IteratorSubclass &&">IteratorSubclass &&</a>)</span>
         </div>
         <div class="description">
-          <p>Make a SizedIterator.</p><p>This overload is used when the IteratorSubclass can be trivially relocated. It stores the SubclassIterator directly into the SizedIterator, avoiding a heap allocation, since the SizedIterator can then be trivially relocated.</p>
-        </div>
-      </div>
-      <div class="section-item">
-        <div class="overload">
-          <a class="type-name" title="Iterator&lt;Once&lt;U&gt; &gt;">Iterator&lt;Once&lt;U&gt; &gt;</a>
-          <a class="function-name" name="function.once" href="#function.once">once</a>
-          <span class="function-params">(<a class="type-name" title="Option&lt;U&gt; &&">Option&lt;U&gt; &&</a>)</span>
-        </div>
-        <div class="overload">
-          <a class="type-name" title="Iterator&lt;Once&lt;U&gt; &gt;">Iterator&lt;Once&lt;U&gt; &gt;</a>
-          <a class="function-name" name="function.once" href="#function.once">once</a>
-          <span class="function-params">(<a class="type-name" title="Option&lt;Item&gt; &&">Option&lt;Item&gt; &&</a>)</span>
+          <p>Make a SizedIterator which wraps a trivially relocatable iterator and erases its type.</p><p>This type may only be used when the IteratorSubclass can be trivially relocated. It stores the SubclassIterator directly into the SizedIterator, erasing its type but remaining trivially relocatable.</p>
         </div>
       </div>
     </div>
