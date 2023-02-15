@@ -127,7 +127,7 @@
         <div class="overload">
           <a class="type-name" title="auto &&">auto &&</a>
           <a class="function-name" name="function.move" href="#function.move">move</a>
-          <span class="function-params">(<a class="type-name" title="sus::result::__private::ResultState &">ResultState &</a>)</span>
+          <span class="function-params">(<a class="type-name" title="sus::option::__private::NoneMarker &">NoneMarker &</a>)</span>
         </div>
         <div class="description">
           <p>Cast <code>t</code> to an r-value reference so that it can be used to construct or be assigned to a (non-reference) object of type <code>T</code>.</p><p><code>move()</code> requires that <code>t</code> can be moved from, so it requires that <code>t</code> is non-const. This differs from <code>std::move()</code>.</p><p>The <code>move()</code> call itself does nothing to <code>t</code>, as it is just a cast, similar to <code>std::move()</code>. It enables an lvalue (a named object) to be used as an rvalue. The function does not require <code>T</code> to be <code>Move</code>, in order to call rvalue-qualified methods on <code>T</code> even if it is not <code>Move</code>.</p>

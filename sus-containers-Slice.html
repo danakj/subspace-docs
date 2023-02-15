@@ -50,7 +50,7 @@
           </span>
           <a class="type-name" title="Slice&lt;T&gt;" href="sus-containers-Slice.html">Slice&lt;T&gt;</a>
           <a class="function-name" name="method.static.from_raw_parts" href="#method.static.from_raw_parts">from_raw_parts</a>
-          <span class="function-params">(<a class="type-name" title="T *">T *</a>, <a class="type-name" title="struct ::sus::usize" href="sus-num-usize.html">usize</a>)</span>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="T *">T *</a>, <a class="type-name" title="struct ::sus::usize" href="sus-num-usize.html">usize</a>)</span>
         </div>
       </div>
     </div>
@@ -80,16 +80,21 @@
             const&
           </span>
         </div>
+        <div class="description">
+          <p>Returns a const pointer to the first element in the slice.</p>
+        </div>
+      </div>
+      <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="const T *">const T *</a>
-          <a class="function-name" name="method.as_ptr" href="#method.as_ptr">as_ptr</a>
-          <span class="function-params">()</span>
-          <span class="mutable rref">
-            &&
+          <a class="type-name" title="Option&lt;const T &&gt;">Option&lt;const T &&gt;</a>
+          <a class="function-name" name="method.get" href="#method.get">get</a>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
+          <span class="const ref">
+            const&
           </span>
         </div>
         <div class="description">
-          <p>Returns a const pointer to the first element in the slice.</p>
+          <p>Returns a const reference to the element at index <code>i</code>, or <code>None</code> if <code>i</code> is beyond the end of the Slice.</p>
         </div>
       </div>
       <div class="section-item">
@@ -102,41 +107,33 @@
           </span>
         </div>
         <div class="description">
-          <p>Returns a mutable reference to the element at index <code>i</code>.</p>
+          <p>Returns a mutable reference to the element at index <code>i</code>, or <code>None</code> if <code>i</code> is beyond the end of the Slice.</p>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="Option&lt;Slice&lt;T&gt; &gt;">Option&lt;Slice&lt;T&gt; &gt;</a>
           <a class="function-name" name="method.get_range" href="#method.get_range">get_range</a>
-          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>, <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::ops::Range&lt;usize&gt;" href="sus-ops-Range.html">Range&lt;usize&gt;</a>)</span>
           <span class="const">
             const
           </span>
         </div>
         <div class="description">
-          <p>Returns a subslice which contains <code>len</code> many elements starting at <code>start</code>.</p><p>The <code>start</code> is the index of the first element to be returned in the subslice, and <code>len</code> is the number of elements in the output Slice. As such, <code>r.get_range(0u, r.len())</code> simply returns a copy of <code>r</code>.</p><p>Returns None if the <code>start</code> or <code>end</code> are out of bounds.</p>
+          <p>Returns a subslice which contains elements in <code>range</code>, which specifies a start and a length.</p><p>The start is the index of the first element to be returned in the subslice, and the length is the number of elements in the output Slice. As such, <code>r.get_range(Range(0u, r.len()))</code> simply returns a copy of <code>r</code>.</p><p>Returns None if the Range would otherwise contain an element that is out of bounds.</p>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="Option&lt;const T &&gt;">Option&lt;const T &&gt;</a>
-          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
-          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
-          <span class="const ref">
-            const&
-          </span>
-        </div>
-        <div class="overload">
-          <a class="type-name" title="Option&lt;const T &&gt;">Option&lt;const T &&gt;</a>
-          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
-          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
-          <span class="mutable rref">
-            &&
+          <a class="type-name" title="Slice&lt;T&gt;" href="sus-containers-Slice.html">Slice&lt;T&gt;</a>
+          <a class="function-name" name="method.get_range_unchecked" href="#method.get_range_unchecked">get_range_unchecked</a>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="struct ::sus::ops::Range&lt;usize&gt;" href="sus-ops-Range.html">Range&lt;usize&gt;</a>)</span>
+          <span class="const">
+            const
           </span>
         </div>
         <div class="description">
-          <p>Returns a const reference to the element at index <code>i</code>.</p>
+          <p>Returns a subslice which contains elements in <code>range</code>, which specifies a start and a length.</p><p>The start is the index of the first element to be returned in the subslice, and the length is the number of elements in the output Slice. As such, <code>r.get_range(Range(0u, r.len()))</code> simply returns a copy of <code>r</code>.</p><p></p><h1>Safety</h1><p>It is possible to specify a Range contains an element that is out of bounds of the Slice, which can result in Undefined Behaviour.</p>
         </div>
       </div>
       <div class="section-item">
@@ -148,16 +145,8 @@
             const&
           </span>
         </div>
-        <div class="overload">
-          <a class="type-name" title="const T &">const T &</a>
-          <a class="function-name" name="method.get_unchecked" href="#method.get_unchecked">get_unchecked</a>
-          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
-          <span class="mutable rref">
-            &&
-          </span>
-        </div>
         <div class="description">
-          <p>Returns a const reference to the element at index <code>i</code>.</p><p></p><h1>Safety</h1><p>The index <code>i</code> must be inside the bounds of the slice or Undefined Behaviour results. The size of the slice must therefore also be larger than 0.</p>
+          <p>Returns a const reference to the element at index <code>i</code>.</p><p></p><h1>Safety</h1><p>The index <code>i</code> must be inside the bounds of the slice or Undefined Behaviour results. The size of the slice must therefore also have a length of at least 1.</p>
         </div>
       </div>
       <div class="section-item">
@@ -170,7 +159,7 @@
           </span>
         </div>
         <div class="description">
-          <p>Returns a mutable reference to the element at index <code>i</code>.</p><p></p><h1>Safety</h1><p>The index <code>i</code> must be inside the bounds of the slice or Undefined Behaviour results. The size of the slice must therefore also be larger than 0.</p>
+          <p>Returns a mutable reference to the element at index <code>i</code>.</p><p></p><h1>Safety</h1><p>The index <code>i</code> must be inside the bounds of the slice or Undefined Behaviour results. The size of the slice must therefore also have a length of at least 1.</p>
         </div>
       </div>
       <div class="section-item">
@@ -252,29 +241,31 @@
             const&
           </span>
         </div>
-        <div class="overload">
-          <a class="type-name" title="const T &">const T &</a>
-          <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
-          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
-          <span class="mutable rref">
-            &&
-          </span>
+        <div class="description">
+          <p>Returns a reference to the element at position <code>i</code> in the Slice.</p><p></p><h1>Panics</h1><p>If the index <code>i</code> is beyond the end of the slice, the function will panic.</p>
         </div>
+      </div>
+      <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="const T &">const T &</a>
-          <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
+          <a class="type-name" title="T &">T &</a>
+          <a class="function-name" name="method.operator[].1" href="#method.operator[].1">operator[]</a>
           <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="mutable ref">
             &
           </span>
         </div>
+      </div>
+      <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="const T &">const T &</a>
-          <a class="function-name" name="method.operator[]" href="#method.operator[]">operator[]</a>
-          <span class="function-params">(<a class="type-name" title="struct Range" href="sus-containers-Slice-Range.html">Range</a>)</span>
+          <a class="type-name" title="Slice&lt;T&gt;" href="sus-containers-Slice.html">Slice&lt;T&gt;</a>
+          <a class="function-name" name="method.operator[].2" href="#method.operator[].2">operator[]</a>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::ops::Range&lt;usize&gt;" href="sus-ops-Range.html">Range&lt;usize&gt;</a>)</span>
           <span class="const">
             const
           </span>
+        </div>
+        <div class="description">
+          <p>Returns a subslice which contains elements in <code>range</code>, which specifies a start and a length.</p><p>The start is the index of the first element to be returned in the subslice, and the length is the number of elements in the output Slice. As such, <code>r.get_range(Range(0u, r.len()))</code> simply returns a copy of <code>r</code>.</p><p></p><h1>Panics</h1><p>If the Range would otherwise contain an element that is out of bounds, the function will panic.</p>
         </div>
       </div>
       <div class="section-item">

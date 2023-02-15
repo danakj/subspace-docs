@@ -30,22 +30,7 @@
   [[no_unique_address]] Tuple&lt;u32, u64&gt; tuple;  // 16 bytes.
   u32 val;  // 4 bytes.
 };  // 16 bytes, since `val` is stored inside `tuple`.
-</code></pre><p></p><p>However note that this behaviour is compiler-dependent, and MSVC does not use the <code>[[no_unique_address]]</code> hint.</p><p>Use <code>sus::data_size_of&lt;T&gt;()</code> to determine the size of T excluding its tail padding (so <code>sus::size_of&lt;T&gt;() - sus::data_size_of&lt;T&gt;()</code> is the tail padding), which can be useful to ensure you have the expected behaviour from your types.</p><p>Additionally types within the tuple may be placed inside the tail padding of other types in the tuple, should such padding exist.</p><p>Generally, but not always, use of tail padding in Tuple is optimized by ordering types (left-to-right in the template variables) from smallest-to- largest for simple types such as integers (which have no tail padding themselves), or in least-to-most tail-padding for more complex types. Elements in a Tuple are stored internally in reverse of the order they are specified, which is why the size of the *first* element matters for the Tuple's externally usable tail padding.</p><p></p><h1>Use after move</h1><p>Tuples optionally compile in checks against use-after-move to protect against using their internal values after they are moved. It is on by default and behind the <code>SUS_CONFIG_TUPLE_USE_AFTER_MOVE</code> define which can be true or false. When on, all Tuples are an extra 8 bytes larger.</p>
-      </div>
-    </div>
-    <div class="section fields static">
-      <div class="section-header">
-        Static Data Members
-      </div>
-      <div class="section-item">
-        <span class="static">
-          static
-        </span>
-        <span class="const">
-          const
-        </span>
-        <a class="type-name" title="bool">bool</a>
-        <a class="field-name" name="field.static.protects_uam" href="#field.static.protects_uam">protects_uam</a>
+</code></pre><p></p><p>However note that this behaviour is compiler-dependent, and MSVC does not use the <code>[[no_unique_address]]</code> hint.</p><p>Use <code>sus::data_size_of&lt;T&gt;()</code> to determine the size of T excluding its tail padding (so <code>sus::size_of&lt;T&gt;() - sus::data_size_of&lt;T&gt;()</code> is the tail padding), which can be useful to ensure you have the expected behaviour from your types.</p><p>Additionally types within the tuple may be placed inside the tail padding of other types in the tuple, should such padding exist.</p><p>Generally, but not always, use of tail padding in Tuple is optimized by ordering types (left-to-right in the template variables) from smallest-to- largest for simple types such as integers (which have no tail padding themselves), or in least-to-most tail-padding for more complex types. Elements in a Tuple are stored internally in reverse of the order they are specified, which is why the size of the *first* element matters for the Tuple's externally usable tail padding.</p>
       </div>
     </div>
     <div class="section methods static">
@@ -72,21 +57,37 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="Tuple&lt;T, Ts...&gt;" href="sus-tuple_type-Tuple.html">Tuple&lt;T, Ts...&gt;</a>
-          <a class="function-name" name="method.clone" href="#method.clone">clone</a>
+          <a class="type-name" title="const auto &">const auto &</a>
+          <a class="function-name" name="method.at" href="#method.at">at</a>
+          <span class="function-params">()</span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="const auto &">const auto &</a>
+          <a class="function-name" name="method.at" href="#method.at">at</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="const auto &">const auto &</a>
+          <a class="function-name" name="method.at" href="#method.at">at</a>
           <span class="function-params">()</span>
           <span class="const ref">
             const&
           </span>
         </div>
         <div class="description">
-          <p>sus::mem::Clone trait.</p>
+          <p>Gets a const reference to the <code>I</code>th element in the tuple.</p>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="auto &">auto &</a>
-          <a class="function-name" name="method.get_mut" href="#method.get_mut">get_mut</a>
+          <a class="function-name" name="method.at_mut" href="#method.at_mut">at_mut</a>
           <span class="function-params">()</span>
           <span class="mutable ref">
             &
@@ -98,23 +99,15 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="const auto &">const auto &</a>
-          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
+          <a class="type-name" title="Tuple&lt;T, Ts...&gt;" href="sus-tuple_type-Tuple.html">Tuple&lt;T, Ts...&gt;</a>
+          <a class="function-name" name="method.clone" href="#method.clone">clone</a>
           <span class="function-params">()</span>
           <span class="const ref">
             const&
           </span>
         </div>
-        <div class="overload">
-          <a class="type-name" title="const auto &">const auto &</a>
-          <a class="function-name" name="method.get_ref" href="#method.get_ref">get_ref</a>
-          <span class="function-params">()</span>
-          <span class="mutable rref">
-            &&
-          </span>
-        </div>
         <div class="description">
-          <p>Gets a const reference to the <code>I</code>th element in the tuple.</p>
+          <p>sus::mem::Clone trait.</p>
         </div>
       </div>
       <div class="section-item">
