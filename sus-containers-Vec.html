@@ -52,8 +52,24 @@
             static
           </span>
           <a class="type-name" title="Vec&lt;T&gt;" href="sus-containers-Vec.html">Vec&lt;T&gt;</a>
+          <a class="function-name" name="method.static.from_raw_parts" href="#method.static.from_raw_parts">from_raw_parts</a>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="T *">T *</a>, <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>, <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
+        </div>
+        <div class="description">
+          <p>Creates a Vec&lt;T&gt; directly from a pointer, a capacity, and a length.</p><p></p><h1>Safety</h1><p></p><p>This is highly unsafe, due to the number of invariants that aren’t checked:</p><p>* <code>T</code> needs to have an alignment no more than what <code>ptr</code> was allocated   with. * The size of <code>T</code> times the <code>capacity</code> (ie. the allocated size in bytes)   needs to be the same size the pointer was allocated with. * <code>length</code> needs to be less than or equal to <code>capacity</code>. * The first <code>length</code> values must be properly initialized values of type   <code>T</code>. * The allocated size in bytes must be no larger than <code>isize::MAX</code>. * If <code>ptr</code> is null, then <code>length</code> and <code>capacity</code> must be <code>0_usize</code>, and   vice versa.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="Vec&lt;T&gt;" href="sus-containers-Vec.html">Vec&lt;T&gt;</a>
           <a class="function-name" name="method.static.with_capacity" href="#method.static.with_capacity">with_capacity</a>
           <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
+        </div>
+        <div class="description">
+          <p>Creates a Vec&lt;T&gt; with at least the specified capacity.</p><p>The vector will be able to hold at least <code>capacity</code> elements without reallocating. This method is allowed to allocate for more elements than capacity. If capacity is 0, the vector will not allocate.</p><p>It is important to note that although the returned vector has the minimum capacity specified, the vector will have a zero length.</p><p></p><h1>Panics</h1><p>Panics if the capacity exceeds <code>isize::MAX</code> bytes.</p>
         </div>
       </div>
     </div>
@@ -265,6 +281,19 @@
         </div>
         <div class="description">
           <p>Converts the array into an iterator that consumes the array and returns each element in the same order they appear in the array.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="::sus::Tuple&lt;T *, usize, usize&gt;">Tuple&lt;T *, usize, usize&gt;</a>
+          <a class="function-name" name="method.into_raw_parts" href="#method.into_raw_parts">into_raw_parts</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Decomposes a <code>Vec&lt;T&gt;</code> into its raw components.</p><p>Returns the raw pointer to the underlying data, the length of the vector (in elements), and the allocated capacity of the data (in elements). These are the same arguments in the same order as the arguments to <code>from_raw_parts()</code>.</p><p>After calling this function, the caller is responsible for the memory previously managed by the <code>Vec</code>. The only way to do this is to convert the raw pointer, length, and capacity back into a <code>Vec</code> with the <code>from_raw_parts()</code> function, allowing the destructor to perform the cleanup.</p>
         </div>
       </div>
       <div class="section-item">
