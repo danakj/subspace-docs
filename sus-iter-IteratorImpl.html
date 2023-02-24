@@ -63,6 +63,19 @@
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.begin" href="#method.begin">begin</a>
+          <span class="function-params">()</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Adaptor for use in ranged for loops.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="method.box" href="#method.box">box</a>
           <span class="function-params">()</span>
           <span class="mutable rref">
@@ -142,6 +155,19 @@
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.end" href="#method.end">end</a>
+          <span class="function-params">()</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>Adaptor for use in ranged for loops.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="method.filter" href="#method.filter">filter</a>
           <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;">FnMut&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;</a>)</span>
           <span class="mutable rref">
@@ -158,6 +184,19 @@
         </div>
         <div class="description">
           <p>Creates an iterator which uses a closure to determine if an element should be yielded.</p><p>Given an element the closure must return true or false. The returned iterator will yield only the elements for which the closure returns true.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Iter &&">Iter &&</a>
+          <a class="function-name" name="method.into_iter" href="#method.into_iter">into_iter</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>An Iterator also satisfies IntoIterator, which simply returns itself.</p><p>sus::iter::IntoIterator trait implementation.</p>
         </div>
       </div>
       <div class="section-item">
@@ -179,6 +218,24 @@
         </div>
         <div class="description">
           <p>Creates an iterator which uses a closure to map each element to another type.</p><p>The returned iterator's type is whatever is returned by the closure.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.reverse" href="#method.reverse">reverse</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.reverse" href="#method.reverse">reverse</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
         </div>
       </div>
     </div>

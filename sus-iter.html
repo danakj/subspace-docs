@@ -86,6 +86,17 @@
       </div>
       <div class="section-item">
         <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-iter-Reverse.html">Reverse</a>
+        </div>
+        <div class="description">
+          <p>An iterator that iterates over another iterator but in reverse.</p><p>The iterator wrapped by Reverse must be a DoubleEndedIterator.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
           <span class="struct">
             struct
           </span>
@@ -98,6 +109,14 @@
             struct
           </span>
           <a class="type-name" href="sus-iter-SizedIterator.html">SizedIterator</a>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="struct">
+            struct
+          </span>
+          <a class="type-name" href="sus-iter-SizedIteratorType.html">SizedIteratorType</a>
         </div>
       </div>
     </div>
@@ -121,9 +140,9 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="SizedIteratorType">SizedIteratorType</a>
+          <a class="type-name" title="typename SizedIteratorType&lt;Iter&gt;::type">typename SizedIteratorType&lt;Iter&gt;::type</a>
           <a class="function-name" name="function.make_sized_iterator" href="#function.make_sized_iterator">make_sized_iterator</a>
-          <span class="function-params">(<a class="type-name" title="IteratorSubclass &&">IteratorSubclass &&</a>)</span>
+          <span class="function-params">(<a class="type-name" title="Iter &&">Iter &&</a>)</span>
         </div>
         <div class="description">
           <p>Make a SizedIterator which wraps a trivially relocatable iterator and erases its type.</p><p>This type may only be used when the IteratorSubclass can be trivially relocated. It stores the SubclassIterator directly into the SizedIterator, erasing its type but remaining trivially relocatable.</p>
