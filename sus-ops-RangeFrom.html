@@ -1,6 +1,6 @@
 <head>
   <title>
-    sus::ops::Range
+    sus::ops::RangeFrom
   </title>
   <link rel="stylesheet" href="subdoc-test-style.css">
 </head>
@@ -12,21 +12,21 @@
         <span>
           Class
         </span>
-        <span><a>sus</a>::<a>ops</a>::<a class="type-name" href="#">Range</a></span>
+        <span><a>sus</a>::<a>ops</a>::<a class="type-name" href="#">RangeFrom</a></span>
       </div>
       <div class="type-signature">
         <span class="class">
           class
         </span>
         <span class="type-name">
-          Range
+          RangeFrom
         </span>
         <div class="record-body">
           { ... };
         </div>
       </div>
       <div class="description">
-        <p>A (half-open) range bounded inclusively below and exclusively above (<code>start..end</code>).</p><p>The range <code>start..end</code> contains all values with <code>start &lt;= x &lt; end</code>. It is empty if <code>start &gt;= end</code>.</p><p>A Range&lt;usize&gt; can be constructed as a literal as <code>"start..end"_r</code>.</p>
+        <p>A range only bounded inclusively below (<code>start..</code>).</p><p>The RangeFrom <code>start..</code> contains all values with <code>x &gt;= start</code>.</p><p>A RangeFrom&lt;usize&gt; can be constructed as a literal as <code>"start.."_r</code>.</p><p>Note: Overflow in the <code>Iterator</code> implementation returned by <code>iter()</code> and <code>into_iter()</code> (when the contained data type reaches its numerical limit) is allowed to panic, wrap, or saturate. For integer types like <code>usize</code> integers, this follows the normal rules will panic if <code>usize + 1_usize</code> would otherwise panic in the build configuration. Note also that overflow happens earlier than you might assume: the overflow happens in the call to next that yields the maximum value, as the range must be set to a state to yield the next value.</p>
       </div>
     </div>
     <div class="section fields static">
@@ -50,13 +50,6 @@
       </div>
       <div class="section-item">
         <a class="type-name" title="T">T</a>
-        <a class="field-name" name="field.finish" href="#field.finish">finish</a>
-        <div class="description">
-          <p>The end of the range, exclusive of the given value.</p>
-        </div>
-      </div>
-      <div class="section-item">
-        <a class="type-name" title="T">T</a>
         <a class="field-name" name="field.start" href="#field.start">start</a>
         <div class="description">
           <p>The beginning of the range, inclusive of the given value.</p>
@@ -77,12 +70,12 @@
           </span>
         </div>
         <div class="description">
-          <p>Returns true if <code>item</code> is contained in the range.</p>
+          <p>Returns true if <code>item</code> is contained in the range.</p><p>Part of the sus::ops::RangeBounds&lt;T&gt; trait.</p>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="Range&lt;T&gt;" href="sus-ops-Range.html">Range&lt;T&gt;</a>
+          <a class="type-name" title="Range&lt;T&gt;">Range&lt;T&gt;</a>
           <a class="function-name" name="method.end_at" href="#method.end_at">end_at</a>
           <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
           <span class="mutable rref">
@@ -90,7 +83,7 @@
           </span>
         </div>
         <div class="overload">
-          <a class="type-name" title="Range&lt;T&gt;" href="sus-ops-Range.html">Range&lt;T&gt;</a>
+          <a class="type-name" title="Range&lt;T&gt;">Range&lt;T&gt;</a>
           <a class="function-name" name="method.end_at" href="#method.end_at">end_at</a>
           <span class="function-params">(<a class="type-name" title="struct sus::num::usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="mutable rref">
@@ -127,27 +120,14 @@
           </span>
         </div>
         <div class="description">
-          <p>Returns the end of the RangeBounds, exclusive of its own value.</p><p>Part of the sus::ops::RangeBounds&lt;T&gt; trait.</p>
-        </div>
-      </div>
-      <div class="section-item">
-        <div class="overload">
-          <a class="type-name" title="bool">bool</a>
-          <a class="function-name" name="method.is_empty" href="#method.is_empty">is_empty</a>
-          <span class="function-params">()</span>
-          <span class="const">
-            const
-          </span>
-        </div>
-        <div class="description">
-          <p>Returns true if the range contains no items.</p><p>The range is empty if either side is incomparable, such as <code>f32::NAN</code>.</p>
+          <p>Returns <code>None</code> for the end of the RangeBounds.</p><p>Part of the sus::ops::RangeBounds&lt;T&gt; trait.</p>
         </div>
       </div>
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.operator==" href="#method.operator==">operator==</a>
-          <span class="function-params">(<a class="type-name" title="const Range&lt;T&gt; &" href="sus-ops-Range.html">const Range&lt;T&gt; &</a>)</span>
+          <span class="function-params">(<a class="type-name" title="const RangeFrom&lt;T&gt; &" href="sus-ops-RangeFrom.html">const RangeFrom&lt;T&gt; &</a>)</span>
           <span class="const">
             const
           </span>
@@ -155,7 +135,7 @@
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.operator==" href="#method.operator==">operator==</a>
-          <span class="function-params">(<a class="type-name" title="const Range&lt;usize&gt; &" href="sus-ops-Range.html">const Range&lt;usize&gt; &</a>)</span>
+          <span class="function-params">(<a class="type-name" title="const RangeFrom&lt;usize&gt; &" href="sus-ops-RangeFrom.html">const RangeFrom&lt;usize&gt; &</a>)</span>
           <span class="const">
             const
           </span>
@@ -163,7 +143,7 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="Range&lt;T&gt;" href="sus-ops-Range.html">Range&lt;T&gt;</a>
+          <a class="type-name" title="RangeFrom&lt;T&gt;" href="sus-ops-RangeFrom.html">RangeFrom&lt;T&gt;</a>
           <a class="function-name" name="method.start_at" href="#method.start_at">start_at</a>
           <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
           <span class="mutable rref">
@@ -171,7 +151,7 @@
           </span>
         </div>
         <div class="overload">
-          <a class="type-name" title="Range&lt;T&gt;" href="sus-ops-Range.html">Range&lt;T&gt;</a>
+          <a class="type-name" title="RangeFrom&lt;T&gt;" href="sus-ops-RangeFrom.html">RangeFrom&lt;T&gt;</a>
           <a class="function-name" name="method.start_at" href="#method.start_at">start_at</a>
           <span class="function-params">(<a class="type-name" title="struct sus::num::usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="mutable rref">
@@ -179,7 +159,7 @@
           </span>
         </div>
         <div class="description">
-          <p>Return a new Range that starts at <code>t</code> and ends where the original Range did.</p>
+          <p>Return a new RangeFrom that starts at <code>t</code> and still has no end.</p>
         </div>
       </div>
       <div class="section-item">

@@ -27,7 +27,7 @@
           <a class="type-name" href="sus-option-Option.html">Option</a>
         </div>
         <div class="description">
-          <p>A type which either holds #Some value of type <code>T</code>, or #None.</p><p><code>Option&lt;const T&gt;</code> for non-reference-type <code>T</code> is disallowed, as the Option owns the <code>T</code> in that case and it ensures the <code>Option</code> and the <code>T</code> are both accessed with the same const-ness.</p><p>If a type provides a never-value field (see mem/never_value.h), and is a [standard-layout type](https://en.cppreference.com/w/cpp/named_req/StandardLayoutType), then Option&lt;T&gt; will have the same size as T.</p><p>However the never-value field places some limitations on what can be constexpr in the Option type. Because it is not possible to query the state of the Option in a constant evaluation context, state-querying methods can not be constexpr, nor any method that branches based on the current state, such as <code>unwrap_or()</code>.</p>
+          <p>A type which either holds #Some value of type <code>T</code>, or #None.</p><p><code>Option&lt;const T&gt;</code> for non-reference-type <code>T</code> is disallowed, as the Option owns the <code>T</code> in that case and it ensures the <code>Option</code> and the <code>T</code> are both accessed with the same const-ness.</p><p>If a type <code>T</code> satisties <code>sus::mem::NeverValueField</code>, then Option&lt;T&gt; will have the same size as T.</p>
         </div>
       </div>
     </div>

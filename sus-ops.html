@@ -21,13 +21,46 @@
       </div>
       <div class="section-item">
         <div class="type-signature">
-          <span class="struct">
-            struct
+          <span class="class">
+            class
           </span>
           <a class="type-name" href="sus-ops-Range.html">Range</a>
         </div>
         <div class="description">
-          <p>A (half-open) range bounded inclusively below and exclusively above <code>(start..end)</code>.</p><p>The range <code>start..end</code> contains all values with <code>start &lt;= x &lt; end</code>. It is empty if <code>start &gt;= end</code>.</p><p>In most cases a Range is passed as an argument to a function or operator[] call, and it can be constructed simply as <code>{start, end}</code>.</p>
+          <p>A (half-open) range bounded inclusively below and exclusively above (<code>start..end</code>).</p><p>The range <code>start..end</code> contains all values with <code>start &lt;= x &lt; end</code>. It is empty if <code>start &gt;= end</code>.</p><p>A Range&lt;usize&gt; can be constructed as a literal as <code>"start..end"_r</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-ops-RangeFrom.html">RangeFrom</a>
+        </div>
+        <div class="description">
+          <p>A range only bounded inclusively below (<code>start..</code>).</p><p>The RangeFrom <code>start..</code> contains all values with <code>x &gt;= start</code>.</p><p>A RangeFrom&lt;usize&gt; can be constructed as a literal as <code>"start.."_r</code>.</p><p>Note: Overflow in the <code>Iterator</code> implementation returned by <code>iter()</code> and <code>into_iter()</code> (when the contained data type reaches its numerical limit) is allowed to panic, wrap, or saturate. For integer types like <code>usize</code> integers, this follows the normal rules will panic if <code>usize + 1_usize</code> would otherwise panic in the build configuration. Note also that overflow happens earlier than you might assume: the overflow happens in the call to next that yields the maximum value, as the range must be set to a state to yield the next value.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-ops-RangeFull.html">RangeFull</a>
+        </div>
+        <div class="description">
+          <p>An unbounded range (<code>..</code>).</p><p>RangeFull is primarily used as a slicing index. It cannot serve as an Iterator because it doesn't have a starting point.</p><p>A RangeFull&lt;usize&gt; can be constructed as a literal as <code>".."_r</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="type-signature">
+          <span class="class">
+            class
+          </span>
+          <a class="type-name" href="sus-ops-RangeTo.html">RangeTo</a>
+        </div>
+        <div class="description">
+          <p>A range only bounded exclusively above (<code>..end</code>).</p><p>The RangeTo <code>..end</code> contains all values with <code>x &lt; end</code>. It cannot serve as an Iterator because it doesn't have a starting point.</p><p>A RangeTo&lt;usize&gt; can be constructed as a literal as <code>"..end"_r</code>.</p>
         </div>
       </div>
     </div>
