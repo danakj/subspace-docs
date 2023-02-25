@@ -8371,7 +8371,17 @@
           <span class="function-params">()</span>
         </div>
         <div class="description">
-          <p>Returns a range that satisfies the <code>RangeBounds&lt;usize&gt;</code> concept.</p><p>The syntax is: * <code>start..end</code> for a range including start and excluding end. * <code>start..=end</code> for a range including start and including end. * <code>start..</code> for a range including start and never ending. * <code>..</code> for a range that has no bounds at all. Typically for a slicing range   to indicate the entire slice.</p>
+          <p>Returns a range that satisfies the <code>RangeBounds&lt;usize&gt;</code> concept.</p><p>Because <code>usize</code> is unsigned, numbers may not be negative.</p><p>The syntax is: * <code>start..end</code> for a range including start and excluding end. This returns a   <code>sus::ops::Range&lt;usize&gt;</code>. * <code>start..=end</code> for a range including start and including end. This returns   a <code>sus::ops::Range&lt;usize&gt;</code>. * <code>start..</code> for a range including start and never ending. This returns a   <code>sus::ops::RangeFrom&lt;usize&gt;</code>. * <code>..end</code> for a range including everything up end. This returns a   <code>sus::ops::RangeTo&lt;usize&gt;</code>. * <code>..=end</code> for a range including everything up and including end. This   returns a <code>sus::ops::RangeTo&lt;usize&gt;</code>. * <code>..</code> for a range that has no bounds at all. Typically for a slicing range   to indicate the entire slice. This returns a <code>sus::ops::RangeFull&lt;usize&gt;</code>.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="function.operator""_rs" href="#function.operator""_rs">operator""_rs</a>
+          <span class="function-params">()</span>
+        </div>
+        <div class="description">
+          <p>Returns a range that satisfies the <code>RangeBounds&lt;isize&gt;</code> concept.</p><p>Numbers may be positive or negative.</p><p>The syntax is: * <code>start..end</code> for a range including start and excluding end. This returns a   <code>sus::ops::Range&lt;isize&gt;</code>. * <code>start..=end</code> for a range including start and including end. This returns   a <code>sus::ops::Range&lt;isize&gt;</code>. * <code>start..</code> for a range including start and never ending. This returns a   <code>sus::ops::RangeFrom&lt;isize&gt;</code>. * <code>..end</code> for a range including everything up end. This returns a   <code>sus::ops::RangeTo&lt;isize&gt;</code>. * <code>..=end</code> for a range including everything up and including end. This   returns a <code>sus::ops::RangeTo&lt;isize&gt;</code>. * <code>..</code> for a range that has no bounds at all. Typically for a slicing range   to indicate the entire slice. This returns a <code>sus::ops::RangeFull&lt;isize&gt;</code>.</p>
         </div>
       </div>
       <div class="section-item">
