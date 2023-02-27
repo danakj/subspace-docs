@@ -240,6 +240,19 @@
           <a class="function-name" name="function.swap" href="#function.swap">swap</a>
           <span class="function-params">(<a class="type-name" title="T &">T &</a>, <a class="type-name" title="T &">T &</a>)</span>
         </div>
+        <div class="description">
+          <p>Swaps the objects <code>lhs</code> and <code>rhs</code>.</p><p>If both inputs point to the same object, no swap takes place, so no move constructor/operator is called.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="void">void</a>
+          <a class="function-name" name="function.swap_no_alias_unchecked" href="#function.swap_no_alias_unchecked">swap_no_alias_unchecked</a>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="T &">T &</a>, <a class="type-name" title="T &">T &</a>)</span>
+        </div>
+        <div class="description">
+          <p>Swaps the objects <code>lhs</code> and <code>rhs</code>.</p><p></p><h1>Safety</h1><p>The inputs must not both refer to the same object, or Undefined Behaviour may result.</p>
+        </div>
       </div>
       <div class="section-item">
         <div class="overload">
