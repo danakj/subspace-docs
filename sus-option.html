@@ -27,7 +27,7 @@
           <a class="type-name" href="sus-option-Option.html">Option</a>
         </div>
         <div class="description">
-          <p>A type which either holds #Some value of type <code>T</code>, or #None.</p><p><code>Option&lt;const T&gt;</code> for non-reference-type <code>T</code> is disallowed, as the Option owns the <code>T</code> in that case and it ensures the <code>Option</code> and the <code>T</code> are both accessed with the same const-ness.</p><p>If a type <code>T</code> satisties <code>sus::mem::NeverValueField</code>, then Option&lt;T&gt; will have the same size as T.</p>
+          <p>A type which either holds <code>Some</code> value of type <code>T</code>, or <code>None</code>.</p><p>To immediately pull the inner value out of an Option, use <code>unwrap()</code>. If the <code>Option</code> is an lvalue, use <code>operator*</code> and <code>operator-&gt;</code> to access the inner value. However if doing this many times, consider doing <code>unwrap()</code> a single time up front.</p><p><code>Option&lt;const T&gt;</code> for non-reference-type <code>T</code> is disallowed, as the Option owns the <code>T</code> in that case and it ensures the <code>Option</code> and the <code>T</code> are both accessed with the same const-ness.</p><p>If a type <code>T</code> satisties <code>sus::mem::NeverValueField</code>, then <code>Option&lt;T&gt;</code> will have the same size as T.</p>
         </div>
       </div>
     </div>
@@ -65,16 +65,6 @@
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
           <span class="function-params">(<a class="type-name" title="const Option&lt;T&gt; &">const Option&lt;T&gt; &</a>, <a class="type-name" title="const Option&lt;U&gt; &">const Option&lt;U&gt; &</a>)</span>
-        </div>
-        <div class="overload">
-          <a class="type-name" title="auto">auto</a>
-          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
-          <span class="function-params">(<a class="type-name" title="const Option&lt;const int &&gt; &" href="sus-option-Option.html">const Option&lt;const int &&gt; &</a>, <a class="type-name" title="const Option&lt;const int &&gt; &" href="sus-option-Option.html">const Option&lt;const int &&gt; &</a>)</span>
-        </div>
-        <div class="overload">
-          <a class="type-name" title="auto">auto</a>
-          <a class="function-name" name="function.operator&lt;=&gt;" href="#function.operator&lt;=&gt;">operator&lt;=&gt;</a>
-          <span class="function-params">(<a class="type-name" title="const Option&lt;const float &&gt; &" href="sus-option-Option.html">const Option&lt;const float &&gt; &</a>, <a class="type-name" title="const Option&lt;const float &&gt; &" href="sus-option-Option.html">const Option&lt;const float &&gt; &</a>)</span>
         </div>
         <div class="description">
           <p>Compares two Options.</p><p>Satisfies sus::ops::Ord&lt;Option&lt;U&gt;&gt; if sus::ops::Ord&lt;U&gt;.</p><p>Satisfies sus::ops::WeakOrd&lt;Option&lt;U&gt;&gt; if sus::ops::WeakOrd&lt;U&gt;.</p><p>Satisfies sus::ops::PartialOrd&lt;Option&lt;U&gt;&gt; if sus::ops::PartialOrd&lt;U&gt;.</p>

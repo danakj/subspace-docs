@@ -34,17 +34,17 @@
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.all" href="#method.all">all</a>
-          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (Item)&gt;">FnMut&lt;_Bool (Item)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMutRef&lt;_Bool (Item)&gt;">FnMutRef&lt;_Bool (Item)&gt;</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.all" href="#method.all">all</a>
-          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (Item)&gt;">FnMut&lt;_Bool (Item)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMutRef&lt;_Bool (Item)&gt;">FnMutRef&lt;_Bool (Item)&gt;</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.all" href="#method.all">all</a>
-          <span class="function-params">(<a class="type-name" title="class ::sus::fn::FnMut&lt;_Bool (Item)&gt;" href="sus-fn-FnMut.html">FnMut&lt;_Bool (Item)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="class ::sus::fn::FnMutRef&lt;_Bool (Item)&gt;" href="sus-fn-FnMutRef.html">FnMutRef&lt;_Bool (Item)&gt;</a>)</span>
         </div>
         <div class="description">
           <p>Tests whether all elements of the iterator match a predicate.</p><p>If the predicate returns <code>true</code> for all elements in the iterator, this functions returns <code>true</code>, otherwise <code>false</code>. The function is short-circuiting; it stops iterating on the first <code>false</code> returned from the predicate.</p><p>Returns <code>true</code> if the iterator is empty.</p>
@@ -54,17 +54,17 @@
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.any" href="#method.any">any</a>
-          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (Item)&gt;">FnMut&lt;_Bool (Item)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMutRef&lt;_Bool (Item)&gt;">FnMutRef&lt;_Bool (Item)&gt;</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.any" href="#method.any">any</a>
-          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (Item)&gt;">FnMut&lt;_Bool (Item)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMutRef&lt;_Bool (Item)&gt;">FnMutRef&lt;_Bool (Item)&gt;</a>)</span>
         </div>
         <div class="overload">
           <a class="type-name" title="bool">bool</a>
           <a class="function-name" name="method.any" href="#method.any">any</a>
-          <span class="function-params">(<a class="type-name" title="class ::sus::fn::FnMut&lt;_Bool (Item)&gt;" href="sus-fn-FnMut.html">FnMut&lt;_Bool (Item)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="class ::sus::fn::FnMutRef&lt;_Bool (Item)&gt;" href="sus-fn-FnMutRef.html">FnMutRef&lt;_Bool (Item)&gt;</a>)</span>
         </div>
         <div class="description">
           <p>Tests whether any elements of the iterator match a predicate.</p><p>If the predicate returns <code>true</code> for any elements in the iterator, this functions returns <code>true</code>, otherwise <code>false</code>. The function is short-circuiting; it stops iterating on the first <code>true</code> returned from the predicate.</p><p>Returns <code>false</code> if the iterator is empty.</p>
@@ -201,7 +201,7 @@
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="method.filter" href="#method.filter">filter</a>
-          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;">FnMut&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMutBox&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;">FnMutBox&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -209,7 +209,7 @@
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="method.filter" href="#method.filter">filter</a>
-          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;">FnMut&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMutBox&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;">FnMutBox&lt;_Bool (const std::remove_reference_t&lt;Item&gt; &)&gt;</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -235,7 +235,7 @@
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="method.map" href="#method.map">map</a>
-          <span class="function-params">(<a class="type-name" title="MapFn">MapFn</a>)</span>
+          <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -243,7 +243,7 @@
         <div class="overload">
           <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="method.map" href="#method.map">map</a>
-          <span class="function-params">(<a class="type-name" title="MapFn">MapFn</a>)</span>
+          <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
           <span class="mutable rref">
             &&
           </span>

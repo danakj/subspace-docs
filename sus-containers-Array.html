@@ -37,7 +37,7 @@
           </span>
           <a class="type-name" title="Array&lt;T, N&gt;" href="sus-containers-Array.html">Array&lt;T, N&gt;</a>
           <a class="function-name" name="method.static.with_initializer" href="#method.static.with_initializer">with_initializer</a>
-          <span class="function-params">(<a class="type-name" title="InitializerFn">InitializerFn</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnMut&lt;T (void)&gt; auto">FnMut&lt;T (void)&gt; auto</a>)</span>
         </div>
       </div>
       <div class="section-item">
@@ -77,16 +77,6 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="Slice&lt;T&gt;">Slice&lt;T&gt;</a>
-          <a class="function-name" name="method.as_mut" href="#method.as_mut">as_mut</a>
-          <span class="function-params">()</span>
-          <span class="mutable ref">
-            &
-          </span>
-        </div>
-      </div>
-      <div class="section-item">
-        <div class="overload">
           <a class="type-name" title="T *">T *</a>
           <a class="function-name" name="method.as_mut_ptr" href="#method.as_mut_ptr">as_mut_ptr</a>
           <span class="function-params">()</span>
@@ -96,6 +86,16 @@
         </div>
         <div class="description">
           <p>Returns a mutable pointer to the first element in the array.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Slice&lt;T&gt;">Slice&lt;T&gt;</a>
+          <a class="function-name" name="method.as_mut_slice" href="#method.as_mut_slice">as_mut_slice</a>
+          <span class="function-params">()</span>
+          <span class="mutable ref">
+            &
+          </span>
         </div>
       </div>
       <div class="section-item">
@@ -122,7 +122,7 @@
       <div class="section-item">
         <div class="overload">
           <a class="type-name" title="Slice&lt;const T&gt;">Slice&lt;const T&gt;</a>
-          <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
+          <a class="function-name" name="method.as_slice" href="#method.as_slice">as_slice</a>
           <span class="function-params">()</span>
           <span class="const ref">
             const&
@@ -130,40 +130,11 @@
         </div>
         <div class="overload">
           <a class="type-name" title="Slice&lt;const T&gt;">Slice&lt;const T&gt;</a>
-          <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
+          <a class="function-name" name="method.as_slice" href="#method.as_slice">as_slice</a>
           <span class="function-params">()</span>
           <span class="mutable rref">
             &&
           </span>
-        </div>
-      </div>
-      <div class="section-item">
-        <div class="overload">
-          <a class="type-name" title="Option&lt;const T &&gt;">Option&lt;const T &&gt;</a>
-          <a class="function-name" name="method.at" href="#method.at">at</a>
-          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
-          <span class="const ref">
-            const&
-          </span>
-        </div>
-        <div class="overload">
-          <a class="type-name" title="Option&lt;const T &&gt;">Option&lt;const T &&gt;</a>
-          <a class="function-name" name="method.at" href="#method.at">at</a>
-          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
-          <span class="mutable rref">
-            &&
-          </span>
-        </div>
-        <div class="overload">
-          <a class="type-name" title="Option&lt;const T &&gt;">Option&lt;const T &&gt;</a>
-          <a class="function-name" name="method.at" href="#method.at">at</a>
-          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
-          <span class="const ref">
-            const&
-          </span>
-        </div>
-        <div class="description">
-          <p>Returns a const reference to the element at index <code>i</code>.</p>
         </div>
       </div>
       <div class="section-item">
@@ -184,6 +155,27 @@
           <span class="mutable ref">
             &
           </span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="Option&lt;const T &&gt;">Option&lt;const T &&gt;</a>
+          <a class="function-name" name="method.get" href="#method.get">get</a>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
+          <span class="const ref">
+            const&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="Option&lt;const T &&gt;">Option&lt;const T &&gt;</a>
+          <a class="function-name" name="method.get" href="#method.get">get</a>
+          <span class="function-params">(<a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Returns a const reference to the element at index <code>i</code>.</p>
         </div>
       </div>
       <div class="section-item">
@@ -214,6 +206,14 @@
           <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
           <span class="mutable rref">
             &&
+          </span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="const T &">const T &</a>
+          <a class="function-name" name="method.get_unchecked" href="#method.get_unchecked">get_unchecked</a>
+          <span class="function-params">(<a class="type-name" title="struct ::sus::marker::UnsafeFnMarker" href="sus-marker-UnsafeFnMarker.html">UnsafeFnMarker</a>, <a class="type-name" title="struct usize" href="sus-num-usize.html">usize</a>)</span>
+          <span class="const ref">
+            const&
           </span>
         </div>
         <div class="description">

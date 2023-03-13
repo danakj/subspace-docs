@@ -1,0 +1,102 @@
+<head>
+  <title>
+    sus::fn::FnOnceRef
+  </title>
+  <link rel="stylesheet" href="subdoc-test-style.css">
+</head>
+
+<body>
+  <div class="type record class">
+    <div class="section overview">
+      <div class="section-header">
+        <span>
+          Class
+        </span>
+        <span><a>sus</a>::<a>fn</a>::<a class="type-name" href="#">FnOnceRef</a></span>
+      </div>
+      <div class="type-signature">
+        <span class="class">
+          class
+        </span>
+        <span class="type-name">
+          FnOnceRef
+        </span>
+        <div class="record-body">
+          { ... };
+        </div>
+      </div>
+      <div class="description">
+        <p>A closure that erases the type of the internal callable object (lambda). A FnOnceRef may only be called a single time.</p><p>FnRef can be used as a FnMutRef, which can be used as a FnOnceRef. Lambdas can be converted into a FnOnceRef, FnMutRef, or FnRef directly.</p><p>FnOnceRef, FnMutRef and FnRef are only safe to appear as lvalues when they are a function parameter, and a clang-tidy check is provided to enforce this. They only hold a reference to the underlying lambda so they must not outlive the lambda.</p><p></p><h1>Why can a "const" FnRef convert to a mutable FnMutRef or FnOnceRef?</h1><p></p><p>A FnMutRef or FnOnceRef is _allowed_ to mutate its storage, but a "const" FnRef closure would just choose not to do so.</p><p>However, a <code>const FnRef</code> requires that the storage is not mutated, so it is not useful if converted to a <code>const FnMutRef</code> or <code>const FnOnceRef</code> which are only callable as mutable objects.</p><p></p><h1>Null pointers</h1><p></p><p>A null function pointer is not allowed, constructing a FnOnceRef from a null pointer will panic.</p>
+      </div>
+    </div>
+    <div class="section methods static">
+      <div class="section-header">
+        Static Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.static.from" href="#method.static.from">from</a>
+          <span class="function-params">(<a class="type-name" title="__private::FunctionPointer&lt;RCallArgs...&gt; auto">FunctionPointer&lt;RCallArgs...&gt; auto</a>)</span>
+        </div>
+        <div class="overload">
+          <span class="static">
+            static
+          </span>
+          <a class="type-name" title="auto">auto</a>
+          <a class="function-name" name="method.static.from" href="#method.static.from">from</a>
+          <span class="function-params">(<a class="type-name" title="F &&">F &&</a>)</span>
+        </div>
+        <div class="description">
+          <p><code>sus::construct::From</code> trait implementation.</p><p>FnOnceRef satisfies <code>From&lt;T&gt;</code> for the same types that it is constructible from: function pointers that exactly match its own signature, and callable objects (lambdas) that are compatible with its signature.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section methods nonstatic">
+      <div class="section-header">
+        Methods
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="R">R</a>
+          <a class="function-name" name="method.operator()" href="#method.operator()">operator()</a>
+          <span class="function-params">(<a class="type-name" title="CallArgs...">CallArgs...</a>)</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
+        <div class="description">
+          <p>Runs and consumes the closure.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="FnOnceRef&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &" href="sus-fn-FnOnceRef.html">FnOnceRef&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">(<a class="type-name" title="FnOnceRef&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &&" href="sus-fn-FnOnceRef.html">FnOnceRef&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &&</a>)</span>
+        </div>
+        <div class="overload">
+          <a class="type-name" title="FnOnceRef&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &" href="sus-fn-FnOnceRef.html">FnOnceRef&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &</a>
+          <a class="function-name" name="method.operator=" href="#method.operator=">operator=</a>
+          <span class="function-params">(<a class="type-name" title="const FnOnceRef&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &" href="sus-fn-FnOnceRef.html">const FnOnceRef&lt;type-parameter-0-0 (type-parameter-0-1...)&gt; &</a>)</span>
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="overload">
+          <a class="type-name" title="class Split" href="sus-fn-FnOnceRef-Split.html">Split</a>
+          <a class="function-name" name="method.split" href="#method.split">split</a>
+          <span class="function-params">()</span>
+          <span class="mutable ref">
+            &
+          </span>
+        </div>
+        <div class="description">
+          <p>A <code>FnOnceRef</code> can be split into any number of <code>FnOnceRef</code> objects, while enforcing that the underlying function is only called a single time.</p><p>This method returns a type that can convert into any number of <code>FnOnceRef</code> objects. If two of them are called, the second call will panic.</p><p>The returned object must not outlive the <code>FnOnceRef</code> object it is constructed from, this is normally enforced by only using the <code>FnOnceRef</code> type in function parameters, which ensures it lives for the entire function body, and calling <code>split()</code> to construct temporary objects for passing to other functions that receive a <code>FnOnceRef</code>. The result of <code>split()</code> should never be stored as a member of an object.</p><p>Only callable on an lvalue FnOnceRef (typically written as a function parameter) as an rvalue can be simply passed along without splitting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

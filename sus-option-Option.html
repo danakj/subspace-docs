@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="description">
-        <p>A type which either holds #Some value of type <code>T</code>, or #None.</p><p><code>Option&lt;const T&gt;</code> for non-reference-type <code>T</code> is disallowed, as the Option owns the <code>T</code> in that case and it ensures the <code>Option</code> and the <code>T</code> are both accessed with the same const-ness.</p><p>If a type <code>T</code> satisties <code>sus::mem::NeverValueField</code>, then Option&lt;T&gt; will have the same size as T.</p>
+        <p>A type which either holds <code>Some</code> value of type <code>T</code>, or <code>None</code>.</p><p>To immediately pull the inner value out of an Option, use <code>unwrap()</code>. If the <code>Option</code> is an lvalue, use <code>operator*</code> and <code>operator-&gt;</code> to access the inner value. However if doing this many times, consider doing <code>unwrap()</code> a single time up front.</p><p><code>Option&lt;const T&gt;</code> for non-reference-type <code>T</code> is disallowed, as the Option owns the <code>T</code> in that case and it ensures the <code>Option</code> and the <code>T</code> are both accessed with the same const-ness.</p><p>If a type <code>T</code> satisties <code>sus::mem::NeverValueField</code>, then <code>Option&lt;T&gt;</code> will have the same size as T.</p>
       </div>
     </div>
     <div class="section methods static">
@@ -90,7 +90,7 @@
           </span>
           <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
           <a class="function-name" name="method.static.some" href="#method.static.some">some</a>
-          <span class="function-params">(<a class="type-name" title="T">T</a>)</span>
+          <span class="function-params">(<a class="type-name" title="T &">T &</a>)</span>
         </div>
         <div class="overload">
           <span class="static">
@@ -132,15 +132,15 @@
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="Option&lt;InnerR&gt;">Option&lt;InnerR&gt;</a>
+          <a class="type-name" title="Option&lt;U&gt;">Option&lt;U&gt;</a>
           <a class="function-name" name="method.and_then" href="#method.and_then">and_then</a>
-          <span class="function-params">(<a class="type-name" title="AndFn">AndFn</a>)</span>
+          <span class="function-params">(<a class="type-name" title="AndFn &&">AndFn &&</a>)</span>
           <span class="mutable rref">
             &&
           </span>
         </div>
         <div class="description">
-          <p>Consumes this Option and returns an Option with #None if this Option holds</p><h6>#None, otherwise calls `f` with the contained value and returns an Option</h6><p>with the result.</p><p>Some languages call this operation flatmap.</p>
+          <p>Consumes this Option and returns an Option with #None if this Option holds</p><h6>#None, otherwise calls `f` with the contained value and returns the</h6><p>result.</p><p>The function <code>f</code> receives the Option's inner <code>T</code> and can return any <code>Option&lt;U&gt;</code>.</p><p>Some languages call this operation flatmap.</p>
         </div>
       </div>
       <div class="section-item">
@@ -177,16 +177,8 @@
           <a class="type-name" title="Option&lt;const std::remove_reference_t&lt;T&gt; &&gt;">Option&lt;const std::remove_reference_t&lt;T&gt; &&gt;</a>
           <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
           <span class="function-params">()</span>
-          <span class="const rref">
-            const&&
-          </span>
-        </div>
-        <div class="overload">
-          <a class="type-name" title="Option&lt;const std::remove_reference_t&lt;T&gt; &&gt;">Option&lt;const std::remove_reference_t&lt;T&gt; &&gt;</a>
-          <a class="function-name" name="method.as_ref" href="#method.as_ref">as_ref</a>
-          <span class="function-params">()</span>
-          <span class="const ref">
-            const&
+          <span class="mutable rref">
+            &&
           </span>
         </div>
         <div class="description">
@@ -262,7 +254,7 @@
         <div class="overload">
           <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
           <a class="function-name" name="method.filter" href="#method.filter">filter</a>
-          <span class="function-params">(<a class="type-name" title="Predicate">Predicate</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnOnce&lt;_Bool (const T &)&gt; auto &&">FnOnce&lt;_Bool (const T &)&gt; auto &&</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -314,7 +306,7 @@
         <div class="overload">
           <a class="type-name" title="T &">T &</a>
           <a class="function-name" name="method.get_or_insert_with" href="#method.get_or_insert_with">get_or_insert_with</a>
-          <span class="function-params">(<a class="type-name" title="WithFn">WithFn</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnOnce&lt;T (void)&gt; auto &&">FnOnce&lt;T (void)&gt; auto &&</a>)</span>
           <span class="mutable ref">
             &
           </span>
@@ -376,14 +368,6 @@
             const
           </span>
         </div>
-        <div class="overload">
-          <a class="type-name" title="bool">bool</a>
-          <a class="function-name" name="method.is_some" href="#method.is_some">is_some</a>
-          <span class="function-params">()</span>
-          <span class="const">
-            const
-          </span>
-        </div>
         <div class="description">
           <p>Returns whether the Option currently contains a value.</p><p>If there is a value present, it can be extracted with <code>unwrap()</code> or <code>expect()</code>, or can be accessed through <code>operator-&gt;</code> and <code>operator*</code>.</p>
         </div>
@@ -401,8 +385,8 @@
           <a class="type-name" title="Once&lt;const std::remove_reference_t&lt;T&gt; &&gt;">Once&lt;const std::remove_reference_t&lt;T&gt; &&gt;</a>
           <a class="function-name" name="method.iter" href="#method.iter">iter</a>
           <span class="function-params">()</span>
-          <span class="const rref">
-            const&&
+          <span class="mutable rref">
+            &&
           </span>
         </div>
       </div>
@@ -415,12 +399,20 @@
             &
           </span>
         </div>
+        <div class="overload">
+          <a class="type-name" title="Once&lt;T &&gt;">Once&lt;T &&gt;</a>
+          <a class="function-name" name="method.iter_mut" href="#method.iter_mut">iter_mut</a>
+          <span class="function-params">()</span>
+          <span class="mutable rref">
+            &&
+          </span>
+        </div>
       </div>
       <div class="section-item">
         <div class="overload">
-          <a class="type-name" title="Option&lt;R&gt;">Option&lt;R&gt;</a>
+          <a class="type-name" title="auto">auto</a>
           <a class="function-name" name="method.map" href="#method.map">map</a>
-          <span class="function-params">(<a class="type-name" title="MapFn">MapFn</a>)</span>
+          <span class="function-params">(<a class="type-name" title="MapFn &&">MapFn &&</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -433,7 +425,7 @@
         <div class="overload">
           <a class="type-name" title="R">R</a>
           <a class="function-name" name="method.map_or" href="#method.map_or">map_or</a>
-          <span class="function-params">(<a class="type-name" title="D">D</a>, <a class="type-name" title="MapFn">MapFn</a>)</span>
+          <span class="function-params">(<a class="type-name" title="R">R</a>, <a class="type-name" title="MapFn &&">MapFn &&</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -446,7 +438,7 @@
         <div class="overload">
           <a class="type-name" title="R">R</a>
           <a class="function-name" name="method.map_or_else" href="#method.map_or_else">map_or_else</a>
-          <span class="function-params">(<a class="type-name" title="DefaultFn">DefaultFn</a>, <a class="type-name" title="MapFn">MapFn</a>)</span>
+          <span class="function-params">(<a class="type-name" title="DefaultFn &&">DefaultFn &&</a>, <a class="type-name" title="MapFn &&">MapFn &&</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -472,7 +464,7 @@
         <div class="overload">
           <a class="type-name" title="Result">Result</a>
           <a class="function-name" name="method.ok_or_else" href="#method.ok_or_else">ok_or_else</a>
-          <span class="function-params">(<a class="type-name" title="ElseFn">ElseFn</a>)</span>
+          <span class="function-params">(<a class="type-name" title="ElseFn &&">ElseFn &&</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -575,7 +567,7 @@
         <div class="overload">
           <a class="type-name" title="Option&lt;T&gt;" href="sus-option-Option.html">Option&lt;T&gt;</a>
           <a class="function-name" name="method.or_else" href="#method.or_else">or_else</a>
-          <span class="function-params">(<a class="type-name" title="ElseFn">ElseFn</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnOnce&lt;Option&lt;T&gt; (void)&gt; auto &&">FnOnce&lt;Option&lt;T&gt; (void)&gt; auto &&</a>)</span>
           <span class="mutable rref">
             &&
           </span>
@@ -687,7 +679,7 @@
         <div class="overload">
           <a class="type-name" title="T">T</a>
           <a class="function-name" name="method.unwrap_or_else" href="#method.unwrap_or_else">unwrap_or_else</a>
-          <span class="function-params">(<a class="type-name" title="Functor">Functor</a>)</span>
+          <span class="function-params">(<a class="type-name" title="::sus::fn::FnOnce&lt;T (void)&gt; auto &&">FnOnce&lt;T (void)&gt; auto &&</a>)</span>
           <span class="mutable rref">
             &&
           </span>
